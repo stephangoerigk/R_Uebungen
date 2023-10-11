@@ -1,6 +1,9 @@
 ---
 title: "Tutorial"
-output: learnr::tutorial
+output:
+  learnr::tutorial:
+    progressive: true
+    allow_skip: true
 runtime: shiny_prerendered
 ---
 
@@ -70,6 +73,16 @@ quiz(
     answer("stats"),
     answer("grid", correct = TRUE)
   )
+)
+```
+
+```{r logicals, echo = FALSE}
+question(" What will the following code return? `filter(flights, month == 11 | month == 12)`",
+         answer("Every flight that departed in November _or_ December", correct = TRUE),
+         answer("Every flight that departed in November _and_ December", message = "Technically a flight could not have departed in November _and_ December unless it departed twice."),
+         answer("Every flight _except for_ those that departed in November or December"),
+         answer("An error. This is an incorrect way to combine tests.", message = "The next section will say a little more about combining tests."),
+         allow_retry = TRUE
 )
 ```
 
