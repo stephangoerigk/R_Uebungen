@@ -14,7 +14,7 @@
 <meta name="allow-skip" content="false" />
 <meta name="learnr-version-prerender" content="0.11.3" />
 
-<title>R Übunug zu QMI</title>
+<title>R Übung - Quantitative Methoden I</title>
 
 <!-- header-includes START -->
 <!-- HEAD_CONTENT -->
@@ -114,46 +114,49 @@ if (window.hljs) {
 <div id="section-was-können-sie-von-dieser-übung-erwarten"
 class="section level3">
 <h3>Was können Sie von dieser Übung erwarten?</h3>
-<p>Mit dieser Übung möchten wir Ihnen eine erste Möglichkeit geben, sich
-mit dem Statistikprogramm R vertraut zu machen.</p>
+<p>Wir möchten Ihnen eine erste Möglichkeit geben, sich mit dem
+Statistikprogramm R vertraut zu machen.</p>
 <p>Dazu verwenden wir das Paket <code>learnr</code>.</p>
-<p>Dieses Paket gibt Ihnen die Möglichkeit, direkt über Ihren Browser R
-Codes anzuwenden, ohne die Programme <code>R</code> und
-<code>R Studio</code> auf Ihren Rechnern installieren zu müssen.</p>
-<p>Zunächst werden wir Ihnen eine Einführung in die grundlegende
-Codiersprache und Funktionalität von <code>R</code> geben damit Sie dann
-im späteren Verlauf des Semesters die behandelten statistischen Analysen
-direkt in R Codiersprache ausprobieren können.</p>
+<p>Dieses Paket gibt uns die Möglichkeit, direkt über Ihren Browser R
+Aufgaben zu üben, ohne die Programme <code>R</code> und
+<code>R Studio</code> auf dem eigenen Computer installieren zu
+müssen.</p>
+<p>Zunächst erhalten Sie eine Einführung in die grundlegende
+Funktionalität von <code>R</code>. So können Sie dann im späteren
+Verlauf des Semesters die behandelten statistischen Analysen direkt in R
+ausprobieren.</p>
+<p><img src="images/R_logo.png" width="150px" style="display: block; margin: auto;" /></p>
 </div>
 </div>
 <div id="section-grundlegende-arithmetik-in-r" class="section level2">
 <h2>Grundlegende Arithmetik in R</h2>
-<p>Selbstverständlich können wir in <code>R</code> alle mathematischen
-Grundrechenoperationen ausführen. Dazu tippen Sie einen Rechenbefehl in
-das Programmierfenster und drücken auf <code>Run Code</code>.</p>
-<p>Berechnen Sie: 2 + 3</p>
+<p>Wir können in <code>R</code>, ähnlich wie auf einem Taschenrechner,
+alle mathematischen Grundrechenoperationen ausführen.</p>
+<p>Dazu tippen Sie einen Rechenbefehl in das Programmierfenster und
+drücken auf <code>Run Code</code>.</p>
+<p>Berechnen Sie: <span class="math inline">\(2 + 3\)</span></p>
 <div class="tutorial-exercise" data-label="Addition" data-completion="1"
 data-diagnostics="1" data-startover="1" data-lines="0">
 <script type="application/json" data-ui-opts="1">{"engine":"r","has_checker":false,"caption":"<span data-i18n=\"text.enginecap\" data-i18n-opts=\"{&quot;engine&quot;:&quot;R&quot;}\">R Code<\/span>"}</script>
 </div>
-<p>Berechnen Sie: 7 - 3</p>
+<p>Berechnen Sie: <span class="math inline">\(7 - 3\)</span></p>
 <div class="tutorial-exercise" data-label="Subtraktion"
 data-completion="1" data-diagnostics="1" data-startover="1"
 data-lines="0">
 <script type="application/json" data-ui-opts="1">{"engine":"r","has_checker":false,"caption":"<span data-i18n=\"text.enginecap\" data-i18n-opts=\"{&quot;engine&quot;:&quot;R&quot;}\">R Code<\/span>"}</script>
 </div>
-<p>Berechnen Sie: 3 * 9</p>
+<p>Berechnen Sie: <span class="math inline">\(3 \cdot 9\)</span></p>
 <div class="tutorial-exercise" data-label="Multiplikation"
 data-completion="1" data-diagnostics="1" data-startover="1"
 data-lines="0">
 <script type="application/json" data-ui-opts="1">{"engine":"r","has_checker":false,"caption":"<span data-i18n=\"text.enginecap\" data-i18n-opts=\"{&quot;engine&quot;:&quot;R&quot;}\">R Code<\/span>"}</script>
 </div>
-<p>Berechnen Sie: 9 / 3</p>
+<p>Berechnen Sie: 9 <span class="math inline">\(\div\)</span> 3</p>
 <div class="tutorial-exercise" data-label="Division" data-completion="1"
 data-diagnostics="1" data-startover="1" data-lines="0">
 <script type="application/json" data-ui-opts="1">{"engine":"r","has_checker":false,"caption":"<span data-i18n=\"text.enginecap\" data-i18n-opts=\"{&quot;engine&quot;:&quot;R&quot;}\">R Code<\/span>"}</script>
 </div>
-<p>Berechnen Sie: 3 hoch 3</p>
+<p>Berechnen Sie: <span class="math inline">\(3^3\)</span></p>
 <div class="tutorial-exercise" data-label="Quadrieren"
 data-completion="1" data-diagnostics="1" data-startover="1"
 data-lines="0">
@@ -174,7 +177,8 @@ data-completion="1" data-diagnostics="1" data-startover="1"
 data-lines="0">
 <pre class="text"><code>sqrt(9)</code></pre>
 </div>
-<p>Berechnen Sie: √9 * (2+6)</p>
+<p>Berechnen Sie: <span class="math inline">\(\sqrt{9} \cdot
+(2+6)\)</span></p>
 <div class="tutorial-exercise" data-label="Arith" data-completion="1"
 data-diagnostics="1" data-startover="1" data-lines="0">
 <script type="application/json" data-ui-opts="1">{"engine":"r","has_checker":false,"caption":"<span data-i18n=\"text.enginecap\" data-i18n-opts=\"{&quot;engine&quot;:&quot;R&quot;}\">R Code<\/span>"}</script>
@@ -189,15 +193,15 @@ data-lines="0">
 <h2>Datenformate in R</h2>
 <div id="section-datenformate" class="section level3">
 <h3>Datenformate</h3>
-<p><img src="images/Datenformat_1.png" /></p>
+<p><img src="images/Datenformat_1.png" width="450px" style="display: block; margin: auto;" /></p>
 </div>
 <div id="section-skalar" class="section level3">
 <h3>Skalar</h3>
 <p>Der einfachste Objekttyp in R ist der <strong>Skalar</strong>. Ein
-Skalar Objekt ist einfach nur ein einzelner Wert, z.B. eine Zahl oder
-ein Wort.</p>
+Skalar ist einfach nur ein einzelner Wert, z.B. eine Zahl oder ein
+Wort.</p>
 <p>Nun wollen wir den Wert 100 einem Skalar mit dem Buchstaben
-<strong>a</strong> zuweisen.</p>
+<code>a</code> zuweisen.</p>
 <div class="tutorial-exercise" data-label="Skalar1" data-completion="1"
 data-diagnostics="1" data-startover="1" data-lines="0">
 <script type="application/json" data-ui-opts="1">{"engine":"r","has_checker":false,"caption":"<span data-i18n=\"text.enginecap\" data-i18n-opts=\"{&quot;engine&quot;:&quot;R&quot;}\">R Code<\/span>"}</script>
@@ -211,10 +215,10 @@ data-lines="0">
 Output. Dazu geben Sie nun lediglich den Namen des Skalars in das
 Eingabefeld unterhalb Ihres Codes ein und drücken erneut
 <code>Run Code</code>. Wir haben unserem Skalar mit dem Wert 100 den
-“Namen” <strong>a</strong> gegeben.</p>
+“Namen” <code>a</code> gegeben.</p>
 <p>Wir können einen Skalar auch mit dem Ergenbnis einer Rechenoperation
-belegen. Erstellen Sie bitte den Skalar <strong>b</strong>, welcher das
-Ergebnis der Rechnung <span class="math inline">\(3 / 100\)</span>
+belegen. Erstellen Sie bitte den Skalar <code>b</code>, welcher das
+Ergebnis der Rechnung <span class="math inline">\(3 \div 100\)</span>
 enthalten soll, und lassen Sie sich diesen direkt anzeigen.</p>
 <div class="tutorial-exercise" data-label="Skalar2" data-completion="1"
 data-diagnostics="1" data-startover="1" data-lines="0">
@@ -784,16 +788,16 @@ learnr:::store_exercise_cache(structure(list(label = "print-limit", global_setup
 
 <script type="application/shiny-prerendered" data-context="server">
 learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label = "quiz-1", question = structure("Which package contains functions for installing other R packages?", html = TRUE, class = c("html", 
-"character")), answers = list(structure(list(id = "lnr_ans_4b589d4", 
+"character")), answers = list(structure(list(id = "lnr_ans_1bf10fe", 
     option = "base", value = "base", label = structure("base", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_74e819c", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_75fee55", 
     option = "tools", value = "tools", label = structure("tools", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_4dc81cd", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_5cb6b2b", 
     option = "utils", value = "utils", label = structure("utils", html = TRUE, class = c("html", 
     "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_830c9c6", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_1d7fc80", 
     option = "codetools", value = "codetools", label = structure("codetools", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
 "tutorial_quiz_answer"))), button_labels = list(submit = structure("<span data-i18n=\"button.questionsubmit\">Submit Answer<\u002fspan>", html = TRUE, class = c("html", 
@@ -803,23 +807,23 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label 
 "character")), incorrect = structure("Incorrect", html = TRUE, class = c("html", 
 "character")), message = NULL, post_message = NULL), ids = list(
     answer = "quiz-1-answer", question = "quiz-1"), loading = NULL, 
-    random_answer_order = FALSE, allow_retry = FALSE, seed = 1339848017.87608, 
+    random_answer_order = FALSE, allow_retry = FALSE, seed = 766350719.64314, 
     options = list()), class = c("learnr_radio", "tutorial_question"
 )), session = session)
 </script>
  
 <script type="application/shiny-prerendered" data-context="server">
 learnr:::question_prerendered_chunk(structure(list(type = "learnr_checkbox", label = "quiz-2", question = structure("Which of the R packages listed below are used to create plots?", html = TRUE, class = c("html", 
-"character")), answers = list(structure(list(id = "lnr_ans_56394d1", 
+"character")), answers = list(structure(list(id = "lnr_ans_92dd54e", 
     option = "lattice", value = "lattice", label = structure("lattice", html = TRUE, class = c("html", 
     "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_5d263a", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_d178f6a", 
     option = "tools", value = "tools", label = structure("tools", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_e3365b5", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_ea560e3", 
     option = "stats", value = "stats", label = structure("stats", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_ff7eb8", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_88bae5d", 
     option = "grid", value = "grid", label = structure("grid", html = TRUE, class = c("html", 
     "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
 "tutorial_quiz_answer"))), button_labels = list(submit = structure("<span data-i18n=\"button.questionsubmit\">Submit Answer<\u002fspan>", html = TRUE, class = c("html", 
@@ -829,7 +833,7 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_checkbox", lab
 "character")), incorrect = structure("Incorrect", html = TRUE, class = c("html", 
 "character")), message = NULL, post_message = NULL), ids = list(
     answer = "quiz-2-answer", question = "quiz-2"), loading = NULL, 
-    random_answer_order = FALSE, allow_retry = FALSE, seed = 1342211725.87498, 
+    random_answer_order = FALSE, allow_retry = FALSE, seed = 370396254.827521, 
     options = list()), class = c("learnr_checkbox", "tutorial_question"
 )), session = session)
 </script>
@@ -837,23 +841,23 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_checkbox", lab
 
 <script type="application/shiny-prerendered" data-context="server">
 learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label = "logicals", question = structure("What will the following code return? <code>filter(flights, month == 11 | month == 12)<\u002fcode>", html = TRUE, class = c("html", 
-"character")), answers = list(structure(list(id = "lnr_ans_5c106f0", 
+"character")), answers = list(structure(list(id = "lnr_ans_889f678", 
     option = "Every flight that departed in November _or_ December", 
     value = "Every flight that departed in November _or_ December", 
     label = structure("Every flight that departed in November <em>or<\u002fem> December", html = TRUE, class = c("html", 
     "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_f79a513", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_bfc4cf6", 
     option = "Every flight that departed in November _and_ December", 
     value = "Every flight that departed in November _and_ December", 
     label = structure("Every flight that departed in November <em>and<\u002fem> December", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = structure("Technically a flight could not have departed in November <em>and<\u002fem> December unless it departed twice.", html = TRUE, class = c("html", 
     "character")), type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_ab22ae6", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_1d3f974", 
     option = "Every flight _except for_ those that departed in November or December", 
     value = "Every flight _except for_ those that departed in November or December", 
     label = structure("Every flight <em>except for<\u002fem> those that departed in November or December", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_3fc327b", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_69811c7", 
     option = "An error. This is an incorrect way to combine tests.", 
     value = "An error. This is an incorrect way to combine tests.", 
     label = structure("An error. This is an incorrect way to combine tests.", html = TRUE, class = c("html", 
@@ -866,7 +870,7 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label 
 "character")), incorrect = structure("Incorrect", html = TRUE, class = c("html", 
 "character")), message = NULL, post_message = NULL), ids = list(
     answer = "logicals-answer", question = "logicals"), loading = NULL, 
-    random_answer_order = FALSE, allow_retry = TRUE, seed = 783493204.635158, 
+    random_answer_order = FALSE, allow_retry = TRUE, seed = 1789081866.16689, 
     options = list()), class = c("learnr_radio", "tutorial_question"
 )), session = session)
 </script>
@@ -878,7 +882,7 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label 
 <!--/html_preserve-->
 <!--html_preserve-->
 <script type="application/shiny-prerendered" data-context="execution_dependencies">
-{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["packages"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["packages","version"]},"class":{"type":"character","attributes":{},"value":["data.frame"]},"row.names":{"type":"integer","attributes":{},"value":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47]}},"value":[{"type":"character","attributes":{},"value":["backports","base","bslib","cachem","checkmate","cli","commonmark","compiler","curl","datasets","digest","ellipsis","evaluate","fastmap","fontawesome","graphics","grDevices","htmltools","htmlwidgets","httpuv","jquerylib","jsonlite","knitr","later","learnr","lifecycle","magrittr","markdown","methods","mime","promises","R6","Rcpp","rlang","rmarkdown","rprojroot","rstudioapi","sass","shiny","stats","tools","utils","vctrs","withr","xfun","xtable","yaml"]},{"type":"character","attributes":{},"value":["1.4.1","4.3.1","0.5.1","1.0.8","2.2.0","3.6.1","1.9.0","4.3.1","5.0.2","4.3.1","0.6.33","0.3.2","0.21","1.1.1","0.5.2","4.3.1","4.3.1","0.5.6","1.6.2","1.6.11","0.1.4","1.8.7","1.43","1.3.1","0.11.3","1.0.3","2.0.3","1.7","4.3.1","0.12","1.2.1","2.5.1","1.0.11","1.1.1","2.24","2.0.3","0.15.0","0.4.7","1.7.5","4.3.1","4.3.1","4.3.1","0.6.3","2.5.0","0.40","1.8-4","2.3.7"]}]}]}
+{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["packages"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["packages","version"]},"class":{"type":"character","attributes":{},"value":["data.frame"]},"row.names":{"type":"integer","attributes":{},"value":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48]}},"value":[{"type":"character","attributes":{},"value":["backports","base","bslib","cachem","checkmate","cli","commonmark","compiler","curl","datasets","digest","ellipsis","evaluate","fastmap","fontawesome","graphics","grDevices","highr","htmltools","htmlwidgets","httpuv","jquerylib","jsonlite","knitr","later","learnr","lifecycle","magrittr","markdown","methods","mime","promises","R6","Rcpp","rlang","rmarkdown","rprojroot","rstudioapi","sass","shiny","stats","tools","utils","vctrs","withr","xfun","xtable","yaml"]},{"type":"character","attributes":{},"value":["1.4.1","4.3.1","0.5.1","1.0.8","2.2.0","3.6.1","1.9.0","4.3.1","5.0.2","4.3.1","0.6.33","0.3.2","0.21","1.1.1","0.5.2","4.3.1","4.3.1","0.10","0.5.6","1.6.2","1.6.11","0.1.4","1.8.7","1.43","1.3.1","0.11.3","1.0.3","2.0.3","1.7","4.3.1","0.12","1.2.1","2.5.1","1.0.11","1.1.1","2.24","2.0.3","0.15.0","0.4.7","1.7.5","4.3.1","4.3.1","4.3.1","0.6.3","2.5.0","0.40","1.8-4","2.3.7"]}]}]}
 </script>
 <!--/html_preserve-->
 </div>
@@ -893,7 +897,8 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label 
 
 <!-- begin doc-metadata -->
 <div id="doc-metadata">
-<h1 class="title toc-ignore" style="display:none;">R Übunug zu QMI</h1>
+<h1 class="title toc-ignore" style="display:none;">R Übung -
+Quantitative Methoden I</h1>
 </div>
 <!-- end doc-metadata -->
 

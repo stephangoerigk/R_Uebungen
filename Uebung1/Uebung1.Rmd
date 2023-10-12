@@ -1,5 +1,5 @@
 ---
-title: "R Übunug zu QMI"
+title: "R Übung - Quantitative Methoden I"
 output: 
   learnr::tutorial:
           progressive: true
@@ -17,43 +17,50 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ### Was können Sie von dieser Übung erwarten?
 
-Mit dieser Übung möchten wir Ihnen eine erste Möglichkeit geben, sich mit dem Statistikprogramm R vertraut zu machen. 
+Wir möchten Ihnen eine erste Möglichkeit geben, sich mit dem Statistikprogramm R vertraut zu machen. 
 
 Dazu verwenden wir das Paket `learnr`. 
 
-Dieses Paket gibt Ihnen die Möglichkeit, direkt über Ihren Browser R Codes anzuwenden, ohne die Programme `R` und `R Studio` auf Ihren Rechnern installieren zu müssen. 
+Dieses Paket gibt uns die Möglichkeit, direkt über Ihren Browser R Aufgaben zu üben, ohne die Programme `R` und `R Studio` auf dem eigenen Computer installieren zu müssen. 
 
-Zunächst werden wir Ihnen eine Einführung in die grundlegende Codiersprache und Funktionalität von `R` geben damit Sie dann im späteren Verlauf des Semesters die behandelten statistischen Analysen direkt in R Codiersprache ausprobieren können.
+Zunächst erhalten Sie eine Einführung in die grundlegende Funktionalität von `R`. So können Sie dann im späteren Verlauf des Semesters die behandelten statistischen Analysen direkt in R ausprobieren.
+
+
+```{r eval = TRUE, echo = F, out.width = "150px", fig.align='center'}
+knitr::include_graphics("images/R_logo.png")
+```
 
 ## Grundlegende Arithmetik in R
 
-Selbstverständlich können wir in `R` alle mathematischen Grundrechenoperationen ausführen. Dazu tippen Sie einen Rechenbefehl in das Programmierfenster und drücken auf `Run Code`.
+Wir können in `R`, ähnlich wie auf einem Taschenrechner, alle mathematischen Grundrechenoperationen ausführen. 
 
-Berechnen Sie: 2 + 3
+Dazu tippen Sie einen Rechenbefehl in das Programmierfenster und drücken auf `Run Code`.
+
+Berechnen Sie: $2 + 3$
 
 ```{r Addition, exercise=TRUE}
 
 ```
 
-Berechnen Sie: 7 - 3
+Berechnen Sie: $7 - 3$
 
 ```{r Subtraktion, exercise=TRUE}
 
 ```
 
-Berechnen Sie: 3 \* 9
+Berechnen Sie: $3 \cdot 9$
 
 ```{r Multiplikation, exercise=TRUE}
 
 ```
 
-Berechnen Sie: 9 / 3
+Berechnen Sie: 9 $\div$ 3
 
 ```{r Division, exercise=TRUE}
 
 ```
 
-Berechnen Sie: 3 hoch 3
+Berechnen Sie: $3^3$
 
 ```{r Quadrieren, exercise=TRUE}
 
@@ -73,7 +80,7 @@ Berechnen Sie: Wurzel aus 9
 sqrt(9)
 ```
 
-Berechnen Sie: √9 \* (2+6)
+Berechnen Sie: $\sqrt{9} \cdot (2+6)$
 
 ```{r Arith, exercise=TRUE}
 
@@ -91,13 +98,15 @@ sqrt(9) * (2+6)
 @STEPHAN: Wie können Wir das Bild kleiner anzeigen? 
 ```
 
-![](images/Datenformat_1.png) 
+```{r eval = TRUE, echo = F, out.width = "450px", fig.align='center'}
+knitr::include_graphics("images/Datenformat_1.png")
+```
 
 ### Skalar
 
-Der einfachste Objekttyp in R ist der **Skalar**. Ein Skalar Objekt ist einfach nur ein einzelner Wert, z.B. eine Zahl oder ein Wort.
+Der einfachste Objekttyp in R ist der **Skalar**. Ein Skalar ist einfach nur ein einzelner Wert, z.B. eine Zahl oder ein Wort.
 
-Nun wollen wir den Wert 100 einem Skalar mit dem Buchstaben **a** zuweisen.
+Nun wollen wir den Wert 100 einem Skalar mit dem Buchstaben `a` zuweisen.
 
 
 ```{r Skalar1, exercise=TRUE}
@@ -108,9 +117,9 @@ Nun wollen wir den Wert 100 einem Skalar mit dem Buchstaben **a** zuweisen.
 a = 100
 ```
 
-Wie Sie bemerken, erzeugt R, wenn Sie diesen Code ausführen, keinen Output. Dazu geben Sie nun lediglich den Namen des Skalars in das Eingabefeld unterhalb Ihres Codes ein und drücken erneut `Run Code`. Wir haben unserem Skalar mit dem Wert 100 den "Namen" **a** gegeben.
+Wie Sie bemerken, erzeugt R, wenn Sie diesen Code ausführen, keinen Output. Dazu geben Sie nun lediglich den Namen des Skalars in das Eingabefeld unterhalb Ihres Codes ein und drücken erneut `Run Code`. Wir haben unserem Skalar mit dem Wert 100 den "Namen" `a` gegeben.
 
-Wir können einen Skalar auch mit dem Ergenbnis einer Rechenoperation belegen. Erstellen Sie bitte den Skalar **b**, welcher das Ergebnis der Rechnung $3 / 100$ enthalten soll, und lassen Sie sich diesen direkt anzeigen.  
+Wir können einen Skalar auch mit dem Ergenbnis einer Rechenoperation belegen. Erstellen Sie bitte den Skalar `b`, welcher das Ergebnis der Rechnung $3 \div 100$ enthalten soll, und lassen Sie sich diesen direkt anzeigen.  
 
 
 ```{r Skalar2, exercise=TRUE}
@@ -127,7 +136,6 @@ b
 ```{r Skalar3, exercise=TRUE}
 
 ```
-
 
 
 *Here's an exercise with some prepopulated code as well as `exercise.lines = 5` to provide a bit more initial room to work.*
