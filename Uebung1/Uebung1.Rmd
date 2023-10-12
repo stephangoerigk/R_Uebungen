@@ -1,9 +1,10 @@
 ---
-title: "Tutorial"
-output:
+title: "R Übunug zu QMI"
+output: 
   learnr::tutorial:
-    progressive: true
-    allow_skip: true
+          progressive: true
+          allow_skip: false
+
 runtime: shiny_prerendered
 ---
 
@@ -12,20 +13,122 @@ library(learnr)
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
+## Einführung
 
-## Topic 1
+### Was können Sie von dieser Übung erwarten?
 
-### Exercise 
+Mit dieser Übung möchten wir Ihnen eine erste Möglichkeit geben, sich mit dem Statistikprogramm R vertraut zu machen. 
 
-*Here's a simple exercise with an empty code chunk provided for entering the answer.*
+Dazu verwenden wir das Paket `learnr`. 
 
-Write the R code required to add two plus two:
+Dieses Paket gibt Ihnen die Möglichkeit, direkt über Ihren Browser R Codes anzuwenden, ohne die Programme `R` und `R Studio` auf Ihren Rechnern installieren zu müssen. 
 
-```{r two-plus-two, exercise=TRUE}
+Zunächst werden wir Ihnen eine Einführung in die grundlegende Codiersprache und Funktionalität von `R` geben damit Sie dann im späteren Verlauf des Semesters die behandelten statistischen Analysen direkt in R Codiersprache ausprobieren können.
+
+## Grundlegende Arithmetik in R
+
+Selbstverständlich können wir in `R` alle mathematischen Grundrechenoperationen ausführen. Dazu tippen Sie einen Rechenbefehl in das Programmierfenster und drücken auf `Run Code`.
+
+Berechnen Sie: 2 + 3
+
+```{r Addition, exercise=TRUE}
 
 ```
 
-### Exercise with Code
+Berechnen Sie: 7 - 3
+
+```{r Subtraktion, exercise=TRUE}
+
+```
+
+Berechnen Sie: 3 \* 9
+
+```{r Multiplikation, exercise=TRUE}
+
+```
+
+Berechnen Sie: 9 / 3
+
+```{r Division, exercise=TRUE}
+
+```
+
+Berechnen Sie: 3 hoch 3
+
+```{r Quadrieren, exercise=TRUE}
+
+```
+
+```{r Quadrieren-hint}
+3^3
+```
+
+Berechnen Sie: Wurzel aus 9
+
+```{r Wurzel, exercise=TRUE}
+
+```
+
+```{r Wurzel-hint}
+sqrt(9)
+```
+
+Berechnen Sie: √9 \* (2+6)
+
+```{r Arith, exercise=TRUE}
+
+```
+
+```{r Arith-hint}
+sqrt(9) * (2+6)
+```
+
+## Datenformate in R
+
+### Datenformate
+
+```{r eval=FALSE, include=FALSE}
+@STEPHAN: Wie können Wir das Bild kleiner anzeigen? 
+```
+
+![](images/Datenformat_1.png) 
+
+### Skalar
+
+Der einfachste Objekttyp in R ist der **Skalar**. Ein Skalar Objekt ist einfach nur ein einzelner Wert, z.B. eine Zahl oder ein Wort.
+
+Nun wollen wir den Wert 100 einem Skalar mit dem Buchstaben **a** zuweisen.
+
+
+```{r Skalar1, exercise=TRUE}
+
+```
+
+```{r Skalar1-hint}
+a = 100
+```
+
+Wie Sie bemerken, erzeugt R, wenn Sie diesen Code ausführen, keinen Output. Dazu geben Sie nun lediglich den Namen des Skalars in das Eingabefeld unterhalb Ihres Codes ein und drücken erneut `Run Code`. Wir haben unserem Skalar mit dem Wert 100 den "Namen" **a** gegeben.
+
+Wir können einen Skalar auch mit dem Ergenbnis einer Rechenoperation belegen. Erstellen Sie bitte den Skalar **b**, welcher das Ergebnis der Rechnung $3 / 100$ enthalten soll, und lassen Sie sich diesen direkt anzeigen.  
+
+
+```{r Skalar2, exercise=TRUE}
+
+```
+
+```{r Skalar2-hint}
+b = 3 / 100
+b
+```
+
+
+
+```{r Skalar3, exercise=TRUE}
+
+```
+
+
 
 *Here's an exercise with some prepopulated code as well as `exercise.lines = 5` to provide a bit more initial room to work.*
 
@@ -75,6 +178,7 @@ quiz(
   )
 )
 ```
+<<<<<<< HEAD
 
 ```{r logicals, echo = FALSE}
 question(" What will the following code return? `filter(flights, month == 11 | month == 12)`",
@@ -86,3 +190,5 @@ question(" What will the following code return? `filter(flights, month == 11 | m
 )
 ```
 
+=======
+>>>>>>> ef31d91195a860ddc341d74ca368906db75fd797
