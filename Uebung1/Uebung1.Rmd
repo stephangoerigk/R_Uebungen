@@ -23,7 +23,7 @@ Dazu verwenden wir das Paket `learnr`.
 
 Dieses Paket gibt uns die Möglichkeit, direkt über Ihren Browser R Aufgaben zu üben, ohne die Programme `R` und `R Studio` auf dem eigenen Computer installieren zu müssen. 
 
-Zunächst erhalten Sie eine Einführung in die grundlegende Funktionalität von `R`. So können Sie dann im späteren Verlauf des Semesters die behandelten statistischen Analysen direkt in R ausprobieren.
+Zunächst erhalten Sie eine Einführung in die grundlegende Funktionalität von `R`. So können Sie dann im späteren Verlauf des Semesters die behandelten statistischen Analysen direkt in `R` ausprobieren.
 
 
 ```{r eval = TRUE, echo = F, out.width = "150px", fig.align='center'}
@@ -133,11 +133,70 @@ b = 3 / 100
 b
 ```
 
+Weiterführend können wir einen Skalar auch mit dem Ergebis einer Rechenoption bestehend aus anderen Skalaren belegen. Erstellen Sie hierzu den Skalar `a` mit dem Wert $50$, den Skalar `b` mit dem Wert $3$. Nun wollen wir einen dritten Skalar `c` mit dem Ergebnis der Rechenoperation $(a + b) \div b$ belegen. Lassen Sie sich das Ergebnis auch direkt ausgeben. 
 
-
-```{r Skalar3, exercise=TRUE}
+```{r Skalar3, exercise=TRUE, exercise.lines = 5}
 
 ```
+
+```{r Skalar3-hint}
+a = 50
+b = 3
+c = (a+b) / b
+c
+```
+
+*Hinweis: Wenn Sie in diesem Übungssheet Rechenoperationen ausführen, müssen Sie Ihre Datenobjekte in jedem Eingabefeld wieder neu "belegen". In der Vollversion von R, welche Sie im 2. Semester kennenlernen, merkt sich `R` diese Objekte. Wenn Sie also zum Beispiel den Skalar `a` mit einem beliebigen Wert belegen, merkt sich `R` dies und Sie können durch die Eingabe von `a` jederzeit wieder mit dem Wert des Skalars `a` weiterrechnen. Dies gilt auch für Vektoren oder ganze Datensätze* 
+
+Skalare müssen nicht numerisch sein, sondern können auch Worte beinhalten. Wortobjekte heißen in `R` **characters** (engl. strings). In `R` schreibt man Worte immer in Anführungszeichen `""`.
+
+Erstellen Sie nun den Skalar `a`, der das Wort `Charlotte Fresenius` und den Skalar `b`, der das Wort `Carl Remigius Fresenius` beinhaltet. Lassen Sie sich lediglich den Inhalt des Skalars `b` ausgeben. 
+
+```{r Skalar4, exercise=TRUE}
+
+```
+
+```{r Skalar4-hint}
+a = "Charlotte Fresenius"
+b = "Carl Remigius Fresenius"
+b
+```
+
+Wie Sie sich vermutlich vorstellen können, behandelt R numerische und character Skalare unterschiedlich. Zum Beispiel lassen sich mit numerischen Skalaren grundlegende arithmetische Operationen durchführen (Addition, Subtraktion, Multiplikation…) – das funktioniert mit character Skalaren nicht. Um das auszuprobieren gehen Sie einfach zurück in Ihr letztes Eingabefeld und versuchen die Rechenoperation $a + b$ auszuführen. `R` wird Ihnen hier die Fehlermeldung <span style="color:red">*non-numeric argument to binary operator*</span> ausgeben. 
+
+### Vektor
+
+Machen wir weiter mit `Vektoren`. Ein Vektor Objekt ist einfach eine Kombination mehrerer Skalare in einem einzelnen Objekt (z.B. eine Zahlen- oder Wortreihe). Zum Beispiel könnten die Zahlen von 1-10 in einen Vektor mit der Länge 10 kombiniert werden. Oder die Buchstaben des Alphabets könnten in einen Vektor mit der Länge 26 gespeichert werden. Genau wie Skalare, können Vektoren numerisch oder characters sein (Aber nicht beides auf einmal!)
+
+Die einfachste Art einen Vektor zu erstellen ist mit der `c()` Funktion. Das c steht für *“concatenate”*, was auf Englisch so viel heißt wie “zusammenbringen”. Die `c()` Funktion nimmt mehrere Skalare als Input und erstellt einen Vektor, der diese Objekte enthält.
+
+Wenn man `c()` benutzt, muss man immer ein **Komma** zwischen die Objekte setzen (Skalare oder Vektoren), die man kombinieren möchte.
+
+Lassen Sie uns die `c()` Funktion nutzen um einen **numerischen Vektor** zu erstellen der `a` heißt und die Zahlen von 1 bis 7 enthält. Lassen Sie sich das Ergebnis direkt ausgeben:
+
+```{r Vektor1, exercise=TRUE}
+
+```
+
+```{r Vektor1-hint}
+a = c(1, 2, 3, 4, 5, 6, 7)
+a
+```
+
+Sie können auch **character Vektoren** erstellen, indem Sie die `c()` Funktion auf einzelne character Skalare anwenden. Erstellen Sie einen Vektor, der die folgende Namen beinhaltet: `Freud`, `Wundt`, `Bandura`, `Watson`, `Jung`. Wir nennen diesen Vektor zur besseren Übersicht einmal `char.vec`. Lassen Sie sich den Inhalt des Vektors direkt ausgeben. 
+
+```{r Vektor2, exercise=TRUE}
+
+```
+
+```{r Vektor2-hint}
+char.vec = c("Freud", "Wundt", "Bandura", "Watson", "Jung")
+char.vec
+```
+
+
+
+
 
 
 *Here's an exercise with some prepopulated code as well as `exercise.lines = 5` to provide a bit more initial room to work.*
