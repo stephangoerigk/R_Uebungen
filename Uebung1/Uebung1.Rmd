@@ -1,5 +1,5 @@
 ---
-title: "R Übung - Quantitative Methoden I"
+title: "R Übungen - Quantitative Methoden I"
 output: 
   learnr::tutorial:
           progressive: true
@@ -90,12 +90,14 @@ Berechnen Sie: $\sqrt{9} \cdot (2+6)$
 sqrt(9) * (2+6)
 ```
 
-## Datenformate in R
+## Datenobjekte in R
 
-### Datenformate
+### Datenobjekte
 
 ```{r eval=FALSE, include=FALSE}
 @STEPHAN: Wie können Wir das Bild kleiner anzeigen? 
+  
+  # s.u.
 ```
 
 ```{r eval = TRUE, echo = F, out.width = "450px", fig.align='center'}
