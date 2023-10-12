@@ -3,7 +3,7 @@ title: "R Übungen - Quantitative Methoden I"
 output: 
   learnr::tutorial:
           progressive: true
-          allow_skip: false
+          allow_skip: true
 
 runtime: shiny_prerendered
 ---
@@ -194,9 +194,161 @@ char.vec = c("Freud", "Wundt", "Bandura", "Watson", "Jung")
 char.vec
 ```
 
+### Faktor Variablen
 
+Wir haben bereits gelernt, wie man einen Vektor aus character Objekten erstellt. Manchmal brauchen wir in R jedoch Variablen, die nicht nur Worte enthalten, sondern dem Programm mitteilen, dass es sich um feste Gruppen oder **Kategorien** handelt. Es geht also nicht nur um eine "Sammlung" von Worten (z.B. Nachnamen von Probanden), sondern um festgelegte Analyseeinheiten. Solche Variablen heißen in R `factor`. 
 
+In einer factor Variable ist jeder Kategorie eine Zahl zugeordnet (z.B. 1 = männlich, 2 = weiblich).
 
+Um Faktor Variablen zu erstellen, machen wie einen Vorgang, den man **Kodieren** nennt und das geht so:
+
+Wir haben einen Vektor mit Codes 1 und 2 für männlich und weiblich vorliegen:
+
+```{r echo=TRUE}
+geschlecht = c(1, 2, 2, 1, 2)
+# Das Ergebnis ausgeben
+geschlecht
+```
+
+In dieser Form erkennt R diesen Vektor als numerische Variable. Um Sie in einen Faktor umzuwandeln, definieren wir die Zahlen (1 und 2) als `levels` des Faktors und geben dann jedem level einen Namen (`labels`):
+
+```{r echo=TRUE}
+geschlecht = factor(geschlecht, levels = c(1,2), labels = c("männlich", "weiblich"))
+# Das Ergebnis ausgeben
+geschlecht
+```
+
+Das Ergebnis ist eine codierte Faktorvariable. Wenn wir Sie uns ausgeben lassen erhalten wir unter den Merkmalsausprägungen eine Liste mit den einzelnen Kategorien (levels) des Faktors.
+
+R wird uns für Faktoren alle Ergebnisse nach der **Reihenfolge** der levels anzeigen. Wenn wir keine Faktorvariable haben, sondern eine character Variable funktioniert die Reihenfolge immer alphabetisch.
+
+Erstellen Sie nun im folgenden Eingabefeld den Vektor `Wohnort` `c(1,2,1,3,2,1)` mit den Codes $1$ für `München`, $2$ für `Hamburg` und $3$ für `Köln`. Erstellen Sie erst einen numerischen Vektor und lassen diesen dann in einen Faktor umwandeln und anzeigen. 
+
+*Hinweis: Da `R` in dieser Übung keine Information zwischen den einzelnen Eingabefeldern überträgt, müssen Sie die beiden Schritte, die Ihnen in zwei unterschiedlichen Eingabefeldern gezeigt wurden, nun in einem kombinieren* 
+
+```{r Faktor, exercise=TRUE}
+
+```
+
+```{r Faktor-hint}
+Wohnort = c(1,2,1,3,2,1)
+Wohnort = factor(Wohnort, levels = c(1,2,3), labels = c("München", "Hamburg", "Köln"))
+Wohnort
+```
+
+*An dieser Stelle ein weiterer Hinweis: `R` ist "case sensitive". Das bedeutet, dass Groß- und Kleinschreibung relevant ist. Wenn Sie also beispielsweise den Vektor `Wohnort`erstellen, wird `R` diesen nicht wiederfinden, wenn Sie `wohnort` eingeben.*
+
+### Vektor Indizierung
+
+Manchmal möchten wir wieder einen einzelnen Skalar auswählen, der als Teil von einem Vektor gespeichert ist. Diese **Auswahl** eines Einzelelements nennt man **Indizierung**. Die Auswahl eines kleineren Objekts aus einem größeren Objekt funktioniert in `R` immer mit `[]`. 
+
+Benötigen wir aus einem Vektor z.B. genau den 3. Skalar, schreiben wir einfach eine 3 in eckige Klammern hinter den Vektor.
+
+Erstellen Sie nun den Vektor `color`, der die folgenden Farben enthält: `blau`, `rot`, `grün`, `gelb`. Lassen Sie sich lediglich die zweite Farbe ausgeben (In unserem Fall sollte in dem Ausgabefeld also "rot" erscheinen)
+
+```{r Indizierung1, exercise=TRUE}
+
+```
+
+```{r Indizierung1-hint}
+color = c("blau", "rot", "grün", "gelb")
+color[2]
+```
+
+### Erstellen von Datenmatrizen
+
+In der Psychologie beobachten wir für unsere Studien fast immer mehr als eine Variable. Wir könnten diese alle in einzelnen Vektoren speichern und uns die Objektnamen merken. Z.B.:
+
+```{r echo=TRUE}
+Name = c("Max", "Maja", "Mia", "Moritz", "Markus")
+Alter = c(20, 31, 25, 34, 51)
+Diagnose = c("Depression", "Zwangsstörung", "Depression", "Soziale Phobie", "Depression")
+```
+
+Praktischer ist es, die einzelnen Vektoren in Tabellenform zu speichern, der **Datenmatrix**. In R heißen Datenmatrizen `data.frame`. Wir können die Vektoren folgendermaßen zu einem data.frame kombinieren:
+
+```{r echo=TRUE}
+df = data.frame(Name, Alter, Diagnose)
+# Das Ergebnis ausgeben
+df
+```
+
+Dies wollen wir direkt einmal üben: 
+
+Erstellen Sie eine Datenmatrix mit dem Namen `Personen` mit folgenden Informationen: <br>
+*(Wir betrachten die Variablen `Name`, `Alter`, `Wohnort`)*
+
+`Peter, 41, Mainz` <br>
+`Susanne, 23, Regenburg` <br>
+`Hannes, 31, München` <br>
+`Jana, 43, Köln`
+
+Lassen Sie sich die Datenmatrix direkt ausgeben. 
+
+```{r df1, exercise=TRUE, exercise.lines = 5}
+
+```
+
+```{r df1-hint}
+Name = c("Peter", "Susanne", "Hannes", "Jana")
+Alter = c(41, 23, 31, 43)
+Wohnort = c("Mainz", "Regensburg", "München", "Köln")
+Personen = data.frame(Name, Alter, Wohnort)
+Personen
+```
+
+Wie in jeder Datenmatrix entsprechen die **Zeilen** den einzelnen Personen (Fällen) und die **Spalten** den Variablen. 
+
+`R` bezeichnet Zeilen und Spalten als **rows** und **columns**. Wollen wir z.B. wissen, wie viele Zeilen der data.frame hat, können wir `nrow()` benutzen. Für die Anzahl der Spalten nehmen wir `ncol()`:
+
+Probieren Sie dies einmal in Ihrem gerade erstellten Datensatz aus. Fügen Sie am Ende Ihres Codes einfach entweder `nrow(Personen)` oder `ncol(Personen)` ein.
+
+Wenn wir die einzelnen Vektoren nicht bereits vorher definiert haben, können wir auch alles in einem Schritt machen. Das Ergebnis ist das gleiche:
+
+```{r echo=TRUE}
+df = data.frame("Name" = c("Max", "Maja", "Mia", "Moritz", "Markus"),
+                "Alter" = c(20, 31, 25, 34, 51),
+                "Diagnose" = c("Depression", "Zwangsstörung", "Depression", "Soziale Phobie", "Depression")
+                )
+# Das Ergebnis ausgeben
+df
+```
+
+Wollen wir wieder eine einzelne Variable aus dem Datensatz benutzen, können wir diese über das `$` Zeichen anwählen:
+
+```{r echo=TRUE}
+df$Alter
+```
+
+### Indizierung
+
+Wollen wir aus dem data.frame wieder einzelne Elemente verwenden, nutzen wir wieder die Indizierung. Auch hier brauchen wir die `[]`. Da wir im data.frame Zeilen und Spalten haben, brauchen wir eine Möglichkeit, beides auszuwählen, wie ein Curser der von links nach rechts, bzw. von oben nach unten läuft. 
+
+Wir trennen dafür unsere `[]` mit einem Komma `[,]`. Alles, was **links vom Komma** steht, bezieht sich auf Zeilen alles **rechts vom Komma** bezieht sich auf Spalten.
+
+Um dies zu Üben erstellen Sie wieder eine Datenmatrix mit dem Namen `Personen` mit folgenden Informationen: <br>
+*(Wir betrachten die Variablen `Name`, `Alter`, `Wohnort`)*
+
+`Peter, 41, Mainz` <br>
+`Susanne, 23, Regenburg` <br>
+`Hannes, 31, München` <br>
+`Jana, 43, Köln`
+
+Lassen Sie sich im Ausgabefeld nun lediglich den Wohnort von Susanne anzeigen. 
+
+*Hinweis: Sie können den Code Ihres Datensatzes aus dem letzten Eingabefeld kopieren, um nicht alles neu schreiben zu müssen*
+
+```{r Indizierung_df, exercise=TRUE, exercise.lines = 5}
+
+```
+
+```{r Indizierung_df-hint}
+Name = c("Peter", "Susanne", "Hannes", "Jana")
+Alter = c(41, 23, 31, 43)
+Wohnort = c("Mainz", "Regensburg", "München", "Köln")
+Personen = data.frame(Name, Alter, Wohnort)
+Personen[2,3]
+```
 
 
 *Here's an exercise with some prepopulated code as well as `exercise.lines = 5` to provide a bit more initial room to work.*
