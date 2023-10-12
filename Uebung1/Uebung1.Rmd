@@ -194,6 +194,35 @@ char.vec = c("Freud", "Wundt", "Bandura", "Watson", "Jung")
 char.vec
 ```
 
+Mit Vektoren lassen sich auch Rechenoperationen ausführen. Erstellen Sie den Vektor `a` mit den Zahlen von 1 - 3 und den Vektor `b` mit den Zahlen von 4 - 6 und addieren diese zu einem neuen Vektor `c`. Lassen Sie sich den neuen Vektor `c` direkt anzeigen. Bei dieser Art der Addition wird jeweils die $n$te Zahl des Vektors `a` mit der $n$ten Zahl des Vektors `b` addiert. 
+
+```{r Vektor3, exercise=TRUE}
+
+```
+
+```{r Vektor3-hint}
+a = c(1, 2, 3)
+b = c(4, 5, 6)
+c = a + b 
+c
+```
+
+Vektoren lassen sich über die `c()` Funktion auch aneinanderhängen. Anders als bei den Rechenoperationen funktioniert dies auch mit character Vektoren. 
+
+Erstellen Sie die Vektoren `a` mit den Farben `blau` und `rot` sowie den Vektor `b` mit den Farben `gelb`und `grün`. Hängen Sie diese beiden Vektoren zu einem neuen Vektor `c` zusammen und lassen sich diesen anzeigen. 
+
+```{r Vektor4, exercise=TRUE}
+
+```
+
+```{r Vektor4-hint}
+a = c("blau", "rot")
+b = c("gelb", "grün")
+c = c(a, b) 
+c
+```
+
+
 ### Faktor Variablen
 
 Wir haben bereits gelernt, wie man einen Vektor aus character Objekten erstellt. Manchmal brauchen wir in R jedoch Variablen, die nicht nur Worte enthalten, sondern dem Programm mitteilen, dass es sich um feste Gruppen oder **Kategorien** handelt. Es geht also nicht nur um eine "Sammlung" von Worten (z.B. Nachnamen von Probanden), sondern um festgelegte Analyseeinheiten. Solche Variablen heißen in R `factor`. 
@@ -349,6 +378,11 @@ Wohnort = c("Mainz", "Regensburg", "München", "Köln")
 Personen = data.frame(Name, Alter, Wohnort)
 Personen[2,3]
 ```
+
+**Nun haben Sie bereits einige der wichtigsten Grundfunktionen von `R` kennengelernt und wir können dazu übergehen, vorlesungsbegleitende Übungsaufgaben zu erarbeiten.**
+
+
+## Vorlesung 1
 
 
 *Here's an exercise with some prepopulated code as well as `exercise.lines = 5` to provide a bit more initial room to work.*
