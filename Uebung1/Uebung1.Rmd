@@ -10,6 +10,7 @@ runtime: shiny_prerendered
 
 ```{r setup, include=FALSE}
 library(learnr)
+library(psych)
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
@@ -383,6 +384,151 @@ Personen[2,3]
 
 
 ## Vorlesung 1
+
+Nun wollen wir damit starten, die in den Vorlesungen vermittelten Inhalte direkt in `R` anzuwenden. Wir beginnen mit deskriptivstatistischen Analysen. Zunächst betrachten wir Möglichkeiten, wie wir numerische Daten beschreiben können. 
+
+### Lagemaße
+
+Lagemaße, auch bekannt als Maße der zentralen Tendenz, sind statistische Kennzahlen, die uns Informationen über die typische oder durchschnittliche Lage einer Verteilung geben. Sie helfen dabei, den Mittelpunkt oder die Mitte eines Datensatzes zu bestimmen. 
+
+Die gängigsten Lagemaße sind: 
+
+* Mittelwert (arithmetisches Mittel, engl. *mean*)
+* Median 
+* Modus (Modalwert).
+
+Lagemaße sind nützliche Werkzeuge, um einen Überblick über Daten zu gewinnen und Vergleiche zwischen verschiedenen Verteilungen anzustellen (z.B. bei Gruppenvergleichen). 
+
+Über folgende Befehle können Sie sich in `R` die eben beschriebenen Lagemaße berechnen lassen: 
+
+* Mittelwert mit der `mean()` Funktion 
+* Median mit der `median()` Funktion 
+* Um den Modalwert herauszufinden lassen Sie sich am besten eine Häufigkeitstabelle erstellen. Wie das funktioniert werden wir uns im nächsten Schritt anschauen
+
+Um das einmal praktisch umzusetzen, schauen wir uns folgende Aufgabe an: 
+
+Sie leiten als Psychotherapeut:in eine KVT (Kognitive Verhaltenstherapie) Gruppentherapie und interessieren sich für die Altersstruktur Ihrer Patient:innen. Folgende Teilnehmer:innen haben Sie in Ihrer Gruppe: 
+
+| ID|Alter 
+|:----------------------|:-----------------------
+|    1 |32  
+|    2 |23   
+|    3 |42
+|    4 |19
+|    5 |56
+
+Berechnen Sie nun sowohl den Mittelwert als auch den Median des Alters Ihrer Therapiegruppe.
+
+*Hinweis: Erstellen Sie hierzu zunächst lediglich einen Vektor namens `Alter`, der das Alter Ihrer Patient:innen enthält. Wie wir uns ganze Datensätze deskriptiv näher anschauen, betrachten wir im nächsten Schritt*
+
+```{r Lage1, exercise=TRUE}
+
+```
+
+```{r Lage1-hint}
+Alter = c(32,23,42,19,56)
+mean(Alter)
+median(Alter)
+```
+
+Erstellen Sie nun einen data.frame namens `df`, der die oben beschriebenen Informationen enthält. Also sowohl `ID`, als auch das dazugehörige `Alter`. Wie Sie bereits gelernt haben, können Sie sich mit Hilfe des `$` Symbols einzelne Spalten (Variablen) aus einem Datensatz ausgeben lassen. Versuchen Sie einmal, dieses Wissen zu transferieren, und sich aus dem Datensatz `df` den Mittelwert der Variable `Alter` ausgeben zu lassen. 
+
+```{r Lage2, exercise=TRUE}
+
+```
+
+```{r Lage2-hint}
+df = data.frame("ID" = c(1, 2, 3, 4, 5),
+                "Alter" = c(32, 23, 42, 19, 56)
+                )
+
+mean(df$Alter)
+```
+
+Diese Funktionen funktionieren nur für Vektoren, nicht für `data.frames()`.
+
+**Vorsicht:** Es kann vorkommen, dass wir in unseren Daten fehlende Werte (missings) haben. Dann funktionieren die Funktionen nicht mehr:
+
+```{r echo=TRUE}
+vektor = c(2, 4, NA, 1, 5, 2, 5, NA)
+
+mean(vektor)
+```
+
+Wir können das Problem jedoch mit einem kleinen Extra-Argument (`na.rm = T`) lösen. Die Statistik wird dann auf Basis aller verfügbaren Werte berechnet und die fehlenden Werte werden ignoriert:
+
+```{r echo=TRUE}
+mean(vektor, na.rm = T)
+```
+
+Manchmal wollen wir uns jedoch nicht die Mühe machen, die Deskriptivstatistiken alle einzeln und nacheinander zu berechnen. Schöner wäre es, mit einer Funktion alle relevanten Kennwerte auf einmal zu erhalten.
+
+Eine solche Funktion ist `describe()` aus dem `psych` Paket. Die `describe()` Funktion funktioniert sowohl bei Vektoren als auch bei ganzen Datensätzen. 
+
+*Hintergrund: Es gibt in `R` sognenannte Packages. Ein R-Package ist einfach ein Bündel von Funktionen (also bereits geschriebener Code), die in einem übersichtlichen Paket gespeichert sind. In dieser Übung haben wir bereits alle benötigten Pakete installiert. Wie Sie diese Pakete in der Vollversion von `R` installieren, werden Sie nächstes Semester im Rahmen der `R` Übung erfahren* 
+
+Um dies einmal zu verdeutlichen, kopieren Sie sich in das nachfolgende Eingabefeld wieder Ihren Vektor `Alter` und wenden die Funktion `describe()` an. 
+
+
+```{r Lage3, exercise=TRUE}
+
+```
+
+```{r Lage3-hint}
+Alter = c(32,23,42,19,56)
+describe(Alter)
+```
+
+Nun wollen wir die `describe()` Funktion auf einen Datensatz anwenden. Kopieren Sie dazu wieder Ihren Datensatz `df` in das nachfolgende Eingabefeld und wenden die Funktion an. 
+
+```{r Lage4, exercise=TRUE}
+
+```
+
+```{r Lage4-hint}
+df = data.frame("ID" = c(1, 2, 3, 4, 5),
+                "Alter" = c(32, 23, 42, 19, 56)
+                )
+
+describe(df)
+```
+
+Wir wir in `R` Streuungsmaße berechnen, schauen wir uns in der nächsten Vorlesung an. 
+
+### Kategorische Variablen
+
+Leider gibt es zum Zusammenfassen kategorialer (nominalskalierter) Variablen nicht so viele Möglichkeiten wie für die numerischen Variablen (die Mittelwert, Median, Standardabweichung... ermöglichen).
+
+#### Absolute Häufigkeiten
+
+Die gängigste Deskription einer kategorialen Variable ist die Erstellung einer Häufigkeitstabelle. Eine Häufigkeitstabelle mit absoluten Häufigkeiten lässt sich mit dem `table()` Befehl erstellen.
+
+Erstellen Sie zur Übung folgende Datenmatrix und lassen sich die absoluten Häufigkeiten der Diagnosen ausgeben
+
+| Geschlecht|Diagnose 
+|:----------------------|:-----------------------
+|   m | Depression
+|   w | Depression  
+|   w | Angststoerung
+|   w | Depression
+|   m | Soziale Phobie
+
+```{r Kat1, exercise=TRUE}
+
+```
+
+```{r Kat1-hint}
+df = data.frame("Geschlecht" = c("m", "w", "w", "w", "m"),
+                "Diagnose" = c("Depression", "Depression", "Angststoerung", "Depression", "Soziale Phobie")
+                )
+
+table(df$Diagnose)
+```
+
+#### Relative Häufigkeiten
+
+Wollen wir in einem Vektor, der viele Wiederholungen der selben Merkmalsausprägungen enthält, jede Ausprägung nur einmal anzeigen lassen, nutzen wir `unique()`:
+
 
 
 *Here's an exercise with some prepopulated code as well as `exercise.lines = 5` to provide a bit more initial room to work.*
