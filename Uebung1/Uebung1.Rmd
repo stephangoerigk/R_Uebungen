@@ -22,7 +22,7 @@ Wir möchten Ihnen eine erste Möglichkeit geben, sich mit dem Statistikprogramm
 
 Dazu verwenden wir das Paket `learnr`. 
 
-Dieses Paket gibt uns die Möglichkeit, direkt über Ihren Browser R Aufgaben zu üben, ohne die Programme `R` und `R Studio` auf dem eigenen Computer installieren zu müssen. 
+Dieses Paket gibt uns die Möglichkeit, `R` Aufgaben direkt über Ihren Browser  zu üben, ohne die Programme `R` und `R Studio` auf dem eigenen Computer installieren zu müssen. 
 
 Zunächst erhalten Sie eine Einführung in die grundlegende Funktionalität von `R`. So können Sie dann im späteren Verlauf des Semesters die behandelten statistischen Analysen direkt in `R` ausprobieren.
 

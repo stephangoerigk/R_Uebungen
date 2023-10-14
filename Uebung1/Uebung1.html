@@ -117,8 +117,8 @@ class="section level3">
 <p>Wir möchten Ihnen eine erste Möglichkeit geben, sich mit dem
 Statistikprogramm R vertraut zu machen.</p>
 <p>Dazu verwenden wir das Paket <code>learnr</code>.</p>
-<p>Dieses Paket gibt uns die Möglichkeit, direkt über Ihren Browser R
-Aufgaben zu üben, ohne die Programme <code>R</code> und
+<p>Dieses Paket gibt uns die Möglichkeit, <code>R</code> Aufgaben direkt
+über Ihren Browser zu üben, ohne die Programme <code>R</code> und
 <code>R Studio</code> auf dem eigenen Computer installieren zu
 müssen.</p>
 <p>Zunächst erhalten Sie eine Einführung in die grundlegende
@@ -773,7 +773,7 @@ Erstellung einer Häufigkeitstabelle. Eine Häufigkeitstabelle mit
 absoluten Häufigkeiten lässt sich mit dem <code>table()</code> Befehl
 erstellen.</p>
 <p>Erstellen Sie zur Übung folgende Datenmatrix und lassen sich die
-absoluten Häufigkeiten ausgeben</p>
+absoluten Häufigkeiten der Diagnosen ausgeben</p>
 <table>
 <thead>
 <tr class="header">
@@ -792,7 +792,7 @@ absoluten Häufigkeiten ausgeben</p>
 </tr>
 <tr class="odd">
 <td align="left">w</td>
-<td align="left">Angststörung</td>
+<td align="left">Angststoerung</td>
 </tr>
 <tr class="even">
 <td align="left">w</td>
@@ -813,11 +813,17 @@ data-pipe="|&gt;">
 data-completion="1" data-diagnostics="1" data-startover="1"
 data-lines="0" data-pipe="|&gt;">
 <pre class="text"><code>df = data.frame(&quot;Geschlecht&quot; = c(&quot;m&quot;, &quot;w&quot;, &quot;w&quot;, &quot;w&quot;, &quot;m&quot;),
-                &quot;Diagnose&quot; = c(&quot;Depression&quot;, &quot;Depression&quot;, &quot;Angststörung&quot; &quot;Depression&quot;, &quot;Soziale Phobie&quot;)
+                &quot;Diagnose&quot; = c(&quot;Depression&quot;, &quot;Depression&quot;, &quot;Angststoerung&quot;, &quot;Depression&quot;, &quot;Soziale Phobie&quot;)
                 )
 
-describe(df)</code></pre>
+table(df$Diagnose)</code></pre>
 </div>
+</div>
+<div id="section-relative-häufigkeiten" class="section level4">
+<h4>Relative Häufigkeiten</h4>
+<p>Wollen wir in einem Vektor, der viele Wiederholungen der selben
+Merkmalsausprägungen enthält, jede Ausprägung nur einmal anzeigen
+lassen, nutzen wir <code>unique()</code>:</p>
 <p><em>Here’s an exercise with some prepopulated code as well as
 <code>exercise.lines = 5</code> to provide a bit more initial room to
 work.</em></p>
@@ -1919,16 +1925,16 @@ learnr:::store_exercise_cache(structure(list(label = "print-limit", global_setup
 
 <script type="application/shiny-prerendered" data-context="server">
 learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label = "quiz-1", question = structure("Which package contains functions for installing other R packages?", html = TRUE, class = c("html", 
-"character")), answers = list(structure(list(id = "lnr_ans_5ce516f", 
+"character")), answers = list(structure(list(id = "lnr_ans_a071df1", 
     option = "base", value = "base", label = structure("base", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_133ba4c", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_da3bb0b", 
     option = "tools", value = "tools", label = structure("tools", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_353e670", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_e9e7b26", 
     option = "utils", value = "utils", label = structure("utils", html = TRUE, class = c("html", 
     "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_d6355a8", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_34b4216", 
     option = "codetools", value = "codetools", label = structure("codetools", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
 "tutorial_quiz_answer"))), button_labels = list(submit = structure("<span data-i18n=\"button.questionsubmit\">Submit Answer<\u002fspan>", html = TRUE, class = c("html", 
@@ -1938,23 +1944,23 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label 
 "character")), incorrect = structure("Incorrect", html = TRUE, class = c("html", 
 "character")), message = NULL, post_message = NULL), ids = list(
     answer = "quiz-1-answer", question = "quiz-1"), loading = NULL, 
-    random_answer_order = FALSE, allow_retry = FALSE, seed = 1917107845.10728, 
+    random_answer_order = FALSE, allow_retry = FALSE, seed = 16490498.492321, 
     options = list()), class = c("learnr_radio", "tutorial_question"
 )), session = session)
 </script>
  
 <script type="application/shiny-prerendered" data-context="server">
 learnr:::question_prerendered_chunk(structure(list(type = "learnr_checkbox", label = "quiz-2", question = structure("Which of the R packages listed below are used to create plots?", html = TRUE, class = c("html", 
-"character")), answers = list(structure(list(id = "lnr_ans_dda3c25", 
+"character")), answers = list(structure(list(id = "lnr_ans_ec7c18f", 
     option = "lattice", value = "lattice", label = structure("lattice", html = TRUE, class = c("html", 
     "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_825b21d", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_9be75c8", 
     option = "tools", value = "tools", label = structure("tools", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_b516805", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_2f4de9e", 
     option = "stats", value = "stats", label = structure("stats", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_fd21ba8", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_6955393", 
     option = "grid", value = "grid", label = structure("grid", html = TRUE, class = c("html", 
     "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
 "tutorial_quiz_answer"))), button_labels = list(submit = structure("<span data-i18n=\"button.questionsubmit\">Submit Answer<\u002fspan>", html = TRUE, class = c("html", 
@@ -1964,7 +1970,7 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_checkbox", lab
 "character")), incorrect = structure("Incorrect", html = TRUE, class = c("html", 
 "character")), message = NULL, post_message = NULL), ids = list(
     answer = "quiz-2-answer", question = "quiz-2"), loading = NULL, 
-    random_answer_order = FALSE, allow_retry = FALSE, seed = 1432365702.833, 
+    random_answer_order = FALSE, allow_retry = FALSE, seed = 290461838.364743, 
     options = list()), class = c("learnr_checkbox", "tutorial_question"
 )), session = session)
 </script>
@@ -1972,23 +1978,23 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_checkbox", lab
 
 <script type="application/shiny-prerendered" data-context="server">
 learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label = "logicals", question = structure("What will the following code return? <code>filter(flights, month == 11 | month == 12)<\u002fcode>", html = TRUE, class = c("html", 
-"character")), answers = list(structure(list(id = "lnr_ans_5e44f24", 
+"character")), answers = list(structure(list(id = "lnr_ans_35b72c1", 
     option = "Every flight that departed in November _or_ December", 
     value = "Every flight that departed in November _or_ December", 
     label = structure("Every flight that departed in November <em>or<\u002fem> December", html = TRUE, class = c("html", 
     "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_bc967ef", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_8508953", 
     option = "Every flight that departed in November _and_ December", 
     value = "Every flight that departed in November _and_ December", 
     label = structure("Every flight that departed in November <em>and<\u002fem> December", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = structure("Technically a flight could not have departed in November <em>and<\u002fem> December unless it departed twice.", html = TRUE, class = c("html", 
     "character")), type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_7ced625", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_80064a8", 
     option = "Every flight _except for_ those that departed in November or December", 
     value = "Every flight _except for_ those that departed in November or December", 
     label = structure("Every flight <em>except for<\u002fem> those that departed in November or December", html = TRUE, class = c("html", 
     "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-"tutorial_quiz_answer")), structure(list(id = "lnr_ans_2f0b7d0", 
+"tutorial_quiz_answer")), structure(list(id = "lnr_ans_5f4c96", 
     option = "An error. This is an incorrect way to combine tests.", 
     value = "An error. This is an incorrect way to combine tests.", 
     label = structure("An error. This is an incorrect way to combine tests.", html = TRUE, class = c("html", 
@@ -2001,7 +2007,7 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label 
 "character")), incorrect = structure("Incorrect", html = TRUE, class = c("html", 
 "character")), message = NULL, post_message = NULL), ids = list(
     answer = "logicals-answer", question = "logicals"), loading = NULL, 
-    random_answer_order = FALSE, allow_retry = TRUE, seed = 2081691090.03064, 
+    random_answer_order = FALSE, allow_retry = TRUE, seed = 1558406029.77431, 
     options = list()), class = c("learnr_radio", "tutorial_question"
 )), session = session)
 </script>
