@@ -22,7 +22,7 @@ Wir möchten Ihnen eine erste Möglichkeit geben, sich mit dem Statistikprogramm
 
 Dazu verwenden wir das Paket `learnr`. 
 
-Dieses Paket gibt uns die Möglichkeit, `R` Aufgaben direkt über Ihren Browser  zu üben, ohne die Programme `R` und `R Studio` auf dem eigenen Computer installieren zu müssen. 
+Dieses Paket gibt uns die Möglichkeit, `R` Aufgaben direkt über Ihren Browser  zu üben. Dafür müssen Sie die Programme `R` und `R Studio` nicht auf dem eigenen Computer installieren. 
 
 Zunächst erhalten Sie eine Einführung in die grundlegende Funktionalität von `R`. So können Sie dann im späteren Verlauf des Semesters die behandelten statistischen Analysen direkt in `R` ausprobieren.
 
@@ -63,6 +63,8 @@ Berechnen Sie: 9 $\div$ 3
 
 Berechnen Sie: $3^3$
 
+Falls Sie beim Schreiben eines der Befehle Hilfe benötigen, können Sie auf `Hint` klicken.
+
 ```{r Quadrieren, exercise=TRUE}
 
 ```
@@ -93,13 +95,25 @@ sqrt(9) * (2+6)
 
 ## Datenobjekte in R
 
+Natürlich wollen wir `R` nicht nur wie einen Taschenrechner verwenden, denn das Programm kann noch viel mehr.
+
+Einer der größten Vorteile von `R` ist es, dass wir **Objekte** definieren können. Mit diesen Objekten können wir im Rahmen von Analysen oder zu einem späteren Zeitpunkt weiterarbeiten.
+
 ### Datenobjekte
+
+Wir wollen 3 Arten von Datenobjekten kennenlernen:
+
+1. Skalar
+2. Vektor
+3. Matrix
 
 ```{r eval=FALSE, include=FALSE}
 @STEPHAN: Wie können Wir das Bild kleiner anzeigen? 
   
   # s.u.
 ```
+
+Die folgende Graphik zeigt Ihnen, wie die 3 Arten von Datenobjekten in einem Datensatz aussehen könnten:
 
 ```{r eval = TRUE, echo = F, out.width = "450px", fig.align='center'}
 knitr::include_graphics("images/Datenformat_1.png")
