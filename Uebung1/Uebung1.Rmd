@@ -493,7 +493,7 @@ df = data.frame("ID" = c(1, 2, 3, 4, 5),
 describe(df)
 ```
 
-Wir wir in `R` Streuungsmaße berechnen, schauen wir uns in der nächsten Vorlesung an. 
+Wie wir in `R` Streuungsmaße berechnen, schauen wir uns in der nächsten Vorlesung an. 
 
 ### Kategorische Variablen
 
@@ -529,6 +529,37 @@ table(df$Diagnose)
 
 Wollen wir in einem Vektor, der viele Wiederholungen der selben Merkmalsausprägungen enthält, jede Ausprägung nur einmal anzeigen lassen, nutzen wir `unique()`:
 
+```{r Kat2, exercise=TRUE}
+
+```
+
+```{r Kat2-hint}
+df = data.frame("Geschlecht" = c("m", "w", "w", "w", "m"),
+                "Diagnose" = c("Depression", "Depression", "Angststoerung", "Depression", "Soziale Phobie")
+                )
+
+table(df$Diagnose)
+```
+
+
+## Vorlesung 2
+
+### Streuungsmaße
+
+Streuungsmaße sind statistische Kennzahlen, die uns Auskunft über die Verteilung oder Streuung von Daten um die zentrale Tendenz geben. Sie helfen dabei, die Variabilität oder die Ausdehnung eines Datensatzes zu quantifizieren. 
+
+Die gängigsten Streuungsmaße sind: 
+
+* Spannweite (engl. *range*)
+* Varianz 
+* Standardabweichung (engl. *standard deviation*, SD)
+* Quartilabstand (engl. *inter-quartile-range*, IQR)
+
+Streuungsmaße helfen dabei, die Homogenität oder Heterogenität von Daten zu analysieren und den Grad der Variation zu verstehen.
+
+
+
+Lassen Sie sich nun sowohl die 
 
 
 *Here's an exercise with some prepopulated code as well as `exercise.lines = 5` to provide a bit more initial room to work.*
