@@ -544,6 +544,27 @@ table(df$Diagnose)
 
 ## Vorlesung 2
 
+### Graphische Darstellung von Häufigkeiten
+
+`R` liefert Ihnen in der Grundversion bereits einige Möglichkeiten, Daten graphisch darzustellen. 
+
+
+```{r eval=FALSE, include=FALSE}
+set.seed(123) 
+patienten_data <- data.frame(
+  Diagnose = sample(c("Angststörung", "Depression", "Schizophrenie", "PTBS", "Essstörung"), 100, replace = TRUE)
+)
+
+Diagnose = as.numeric(Diagnose)
+
+hist(Diagnose)
+
+
+```
+
+
+
+
 ### Streuungsmaße
 
 Streuungsmaße sind statistische Kennzahlen, die uns Auskunft über die Verteilung oder Streuung von Daten um die zentrale Tendenz geben. Sie helfen dabei, die Variabilität oder die Ausdehnung eines Datensatzes zu quantifizieren. 
