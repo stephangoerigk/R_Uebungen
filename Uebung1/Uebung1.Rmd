@@ -163,7 +163,7 @@ b = "Carl Remigius Fresenius"
 b
 ```
 
-Wie Sie sich vermutlich vorstellen können, behandelt R numerische und character Skalare unterschiedlich. Zum Beispiel lassen sich mit numerischen Skalaren grundlegende arithmetische Operationen durchführen (Addition, Subtraktion, Multiplikation…) – das funktioniert mit character Skalaren nicht. Um das auszuprobieren gehen Sie einfach zurück in Ihr letztes Eingabefeld und versuchen die Rechenoperation $a + b$ auszuführen. `R` wird Ihnen hier die Fehlermeldung <span style="color:red">*non-numeric argument to binary operator*</span> ausgeben. 
+Wie Sie sich vermutlich vorstellen können, behandelt R numerische und *character* Skalare unterschiedlich. Zum Beispiel lassen sich mit numerischen Skalaren grundlegende arithmetische Operationen durchführen (Addition, Subtraktion, Multiplikation…) – das funktioniert mit character Skalaren nicht. Um das auszuprobieren gehen Sie einfach zurück in Ihr letztes Eingabefeld und versuchen die Rechenoperation $a + b$ auszuführen. `R` wird Ihnen hier die Fehlermeldung <span style="color:red">*non-numeric argument to binary operator*</span> ausgeben. 
 
 ### Vektor
 
