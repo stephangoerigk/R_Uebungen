@@ -550,12 +550,50 @@ Streuungsmaße sind statistische Kennzahlen, die uns Auskunft über die Verteilu
 
 Die gängigsten Streuungsmaße sind: 
 
-* Spannweite (engl. *range*)
-* Varianz 
-* Standardabweichung (engl. *standard deviation*, SD)
-* Quartilabstand (engl. *inter-quartile-range*, IQR)
+* Spannweite (engl. *range*) 
+* Varianz `var()`
+* Standardabweichung (engl. *standard deviation*, SD) `sd()`
+* Quartilabstand (engl. *inter-quartile-range*, IQR) `IQR()`
 
-Streuungsmaße helfen dabei, die Homogenität oder Heterogenität von Daten zu analysieren und den Grad der Variation zu verstehen.
+Streuungsmaße helfen dabei, die Homogenität oder Heterogenität von Daten zu analysieren und den Grad der Variation zu verstehen. 
+
+Schauen wir uns hierzu einmal eine Übung an: 
+
+Ann ist eine Klinische Psychologin, die die Ergebnisse eines psychologischen Tests zur Messung der sozialen Angst bei ihren Patienten analysiert. Sie hat die Testergebnisse von 8 Patienten in einem Vektor gespeichert, wobei jeder Wert im Vektor die Schwere der sozialen Angst für einen Patienten darstellt. Ann möchte die Varianz und die Standardabweichung dieser Testergebnisse berechnen, um die Streuung und die durchschnittliche Abweichung von der durchschnittlichen sozialen Angst in ihrer Patientenstichprobe zu verstehen.
+
+Erstellen Sie in R einen Vektor mit den Testergebnissen und berechnen Sie die folgenden Statistiken:
+
+* Die Varianz der Testergebnisse.
+* Die Standardabweichung der Testergebnisse.
+
+Folgende Testergebnisse hat Ann vorliegen: 
+
+| ID|Testergebnis
+|:----------------------|:-----------------------
+|   1 | 52
+|   2 | 42  
+|   3 | 38
+|   4 | 56
+|   5 | 55
+|   6 | 29
+|   7 | 48
+|   8 | 34
+
+
+```{r t1vl2, exercise=TRUE}
+
+```
+
+```{r t1vl2-hint}
+angst = c(52, 42, 38, 56, 55, 29, 48, 34)
+
+var(angst)
+sd(angst)
+#auch über Funktion describe() möglich
+```
+
+
+
 
 
 
