@@ -317,6 +317,24 @@ df = data.frame(Name, Alter, Diagnose)
 df
 ```
 
+Geben Sie die Daten aus folgender Tabelle in einen data.frame ein:
+
+```{r echo = F}
+library(tidyverse)
+library(kableExtra)
+df %>%
+  kbl() %>%
+  kable_classic_2(full_width = F)
+```
+
+```{r echo = FALSE}
+knitr::kable(df)
+```
+
+
+
+
+
 Dies wollen wir direkt einmal üben: 
 
 Erstellen Sie eine Datenmatrix mit dem Namen `Personen` mit folgenden Informationen: <br>
