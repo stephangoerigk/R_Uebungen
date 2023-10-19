@@ -19,8 +19,9 @@ knitr::opts_chunk$set(echo = FALSE)
 set.seed(123) 
 patienten_Daten = data.frame(
   ID = sample(x = 10000 : 19999, size = 100),
-  Diagnose = sample(c("Angststörung", "Depression", "Schizophrenie", "PTBS", "Essstörung"), 100, replace = TRUE), 
+  Diagnose = sample(c("Angstst.", "Depression", "Schizophr.", "PTBS", "Essstoerung"), 100, replace = TRUE), 
   Geschlecht = sample(c("maennlich", "weiblich"), 100, replace = TRUE),
+  Alkohol = round(rexp(100, rate = 0.2), 0),
   PWB_ges = round(rnorm(n = 100, mean = 168, sd = 13),0)
 )
 
@@ -552,13 +553,13 @@ Die gängigste Deskription einer kategorialen Variable ist die Erstellung einer 
 #### Aufgabe 
 Erstellen Sie zur Übung folgende Datenmatrix und lassen sich die absoluten Häufigkeiten der Diagnosen ausgeben. Über eine Häufigkeitstabelle wie diese können Sie auch schnell den Modalwert ablesen. 
 
-| Geschlecht|Diagnose 
-|:----------------------|:-----------------------
-|   m | Depression
-|   w | Depression  
-|   w | Angststoerung
-|   w | Depression
-|   m | Soziale Phobie
+```{r echo=FALSE}
+df = data.frame("Geschlecht" = c("m", "w", "w", "w", "m"),
+                "Diagnose" = c("Depression", "Depression", "Angststoerung", "Depression", "Soziale Phobie")
+                )
+knitr::kable(df)
+
+```
 
 ```{r Kat1, exercise=TRUE}
 
@@ -597,8 +598,6 @@ prop.table(table(df$Diagnose))
 
 `R` liefert Ihnen in der Grundversion bereits einige Möglichkeiten, Daten graphisch darzustellen. Wir möchten uns zunächst die Funktionen `barplot()` und `hist()` anschauen. Wie die Namen bereits verraten, können wir mit der `barplot()` Funktion Balkendiagramme und mit der `hist()` Funktion Histogramme erstellen. 
 
-#### Noch einmal kurz zur Wiederholung...
-
 ```{r quiz1, echo = FALSE}
 quiz(
   question("Worin unterscheiden sich ein Histogramm und ein Balkendiagramm?",
@@ -626,7 +625,7 @@ quiz(
   question("Welche Aussagen zu den Ihnen angezeigten Daten stimmen?",
     answer("Jede Zeile steht für eine Person", correct = TRUE),
     answer("Jede Spalte steht für eine Person"),
-    answer("Der Datensatz enthält die Variablen ID, Diagnose, Geschlecht und PWB_ges", correct = TRUE),
+    answer("Der Datensatz enthält die Variablen ID, Diagnose, Geschlecht, Alkohol und PWB_ges", correct = TRUE),
     answer("Der Datensatz umfasst 10 Patient:Innen"),
     answer("Der Datensatz umfasst 100 Patient:Innen", correct = TRUE),
     allow_retry = TRUE
@@ -634,16 +633,41 @@ quiz(
     )
 ```
 
+Erstellen Sie nun zunächst eine (absolute) Häufigkeitstabelle der behandelten Diagnosen:
+
+```{r Hist2, exercise=TRUE}
+
+```
+
+```{r Hist2-hint}
+table(patienten_Daten$Diagnose)
+```
+
+Im nächste Schritt wollen Sie diese Daten in einer geeigneten Form grafisch darstellen, um Sie dem Klinikdirektor zu präsentieren.
+
+*Hinweis: Mittels der `hist()` Funktion können wir direkt die Häufigkeitsverteilung eines numerischen Vektors grafisch darstellen. Wenn wir die `barplot()` Funktion verwenden, müssen wir einen kleinen Umweg gehen. Wir müssen zunächst eine Häufigkeitstabelle erstellen und diese dann mittels der `barplot()` Funktion grafisch darstellen: `barplot(table())`*
+
+```{r Hist3, exercise=TRUE}
+
+```
+
+```{r Hist3-hint}
+barplot(table(patienten_Daten$Diagnose))
+```
+
+Johanna ist ganz begeistert davon, wie gut Sie schon mit `R` umgehen können. Sie erklärt Ihnen, dass die Spalte `Alkohol` in Ihrem Datensatz für den (vor der Aufnahme in die Klinik) wöchentlichen Alkoholkonsum der Patient:innen in Gläsern steht. Sie bittet Sie darum, diesen Konsum in einer geeigneten Darstellung zu visualisieren.
+
+```{r Hist4, exercise=TRUE}
+
+```
+
+```{r Hist4-hint}
+hist(patienten_Daten$Alkohol)
+```
 
 
 
-
-
-
-
-Johanna ist leitende Psychologin auf Station 3 einer großen Psychiatrie.  Der Klinikdirektor möchte nun von Johanna wissen
-
-
+## Vorlesung 3
 
 ### Streuungsmaße
 
