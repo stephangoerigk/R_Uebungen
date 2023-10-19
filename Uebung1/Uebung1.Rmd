@@ -317,24 +317,6 @@ df = data.frame(Name, Alter, Diagnose)
 df
 ```
 
-Geben Sie die Daten aus folgender Tabelle in einen data.frame ein:
-
-```{r echo = F}
-library(tidyverse)
-library(kableExtra)
-df %>%
-  kbl() %>%
-  kable_classic_2(full_width = F)
-```
-
-```{r echo = FALSE}
-knitr::kable(df)
-```
-
-
-
-
-
 Dies wollen wir direkt einmal üben: 
 
 Erstellen Sie eine Datenmatrix mit dem Namen `Personen` mit folgenden Informationen: <br>
@@ -578,18 +560,37 @@ table(df$Diagnose)
 
 ### Graphische Darstellung von Häufigkeiten
 
-`R` liefert Ihnen in der Grundversion bereits einige Möglichkeiten, Daten graphisch darzustellen. 
+`R` liefert Ihnen in der Grundversion bereits einige Möglichkeiten, Daten graphisch darzustellen. Wir möchten uns zunächst die Funktionen `barplot()` und `hist()` anschauen. Wie die Namen bereits verraten, können wir mit der `barplot()` Funktion Balkendiagramme und mit der `hist()` Funktion Histogramme erstellen. 
+
+Noch einmal kurz zur Wiederholung...
+
+```{r quiz1, echo = FALSE}
+quiz(
+  question("Worin unterscheiden sich ein Histogramm und ein Balkendiagramm?",
+    answer("Beide eignen sich zur grafischen Darstellung einer Häufigkeitstabelle", correct = TRUE),
+    answer("Histogramm für numerische Variablen", correct = TRUE),
+    answer("Histogramm für kategoriale Variablen"),
+    answer("Balkendiagramm für numerische Variablen"),
+    answer("Balkendiagramm für kategoriale Variablen", correct = TRUE),
+    allow_retry = TRUE
+  )
+    )
+```
 
 
-```{r eval=FALSE, include=FALSE}
+
+
+
+```{r include=FALSE}
 set.seed(123) 
-patienten_data <- data.frame(
-  Diagnose = sample(c("Angststörung", "Depression", "Schizophrenie", "PTBS", "Essstörung"), 100, replace = TRUE)
-)
+Diagnose = sample(c("Angststörung", "Depression", "Schizophrenie", "PTBS", "Essstörung"), 100, replace = TRUE)
 
-Diagnose = as.numeric(Diagnose)
 
-hist(Diagnose)
+
+
+barplot(table(Diagnose))
+
+knitr::kable(table(Diagnose))
 
 
 ```
@@ -685,22 +686,17 @@ head(mtcars)
 
 Some questions to verify that you understand the purposes of various base and recommended R packages:
 
-```{r quiz}
+```{r quiz, echo = FALSE}
 quiz(
   question("Which package contains functions for installing other R packages?",
     answer("base"),
     answer("tools"),
     answer("utils", correct = TRUE),
-    answer("codetools")
-  ),
-  question("Which of the R packages listed below are used to create plots?",
-    answer("lattice", correct = TRUE),
-    answer("tools"),
-    answer("stats"),
-    answer("grid", correct = TRUE)
+    answer("codetools"), allow_retry = TRUE
   )
-)
+    )
 ```
+
 <<<<<<< HEAD
 
 ```{r logicals, echo = FALSE}
