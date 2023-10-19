@@ -12,6 +12,18 @@ runtime: shiny_prerendered
 library(learnr)
 library(psych)
 knitr::opts_chunk$set(echo = FALSE)
+
+#Datensätze simulieren
+
+#patienten_Daten
+set.seed(123) 
+patienten_Daten = data.frame(
+  ID = sample(x = 10000 : 19999, size = 100),
+  Diagnose = sample(c("Angststörung", "Depression", "Schizophrenie", "PTBS", "Essstörung"), 100, replace = TRUE), 
+  Geschlecht = sample(c("maennlich", "weiblich"), 100, replace = TRUE),
+  PWB_ges = round(rnorm(n = 100, mean = 168, sd = 13),0)
+)
+
 ```
 
 ## Einführung
@@ -123,6 +135,7 @@ knitr::include_graphics("images/Datenformat_1.png")
 
 Der einfachste Objekttyp in R ist der **Skalar**. Ein Skalar ist einfach nur ein einzelner Wert, z.B. eine Zahl oder ein Wort.
 
+##### Aufgabe 
 Nun wollen wir den Wert 100 einem Skalar mit dem Buchstaben `a` zuweisen.
 
 
@@ -136,7 +149,10 @@ a = 100
 
 Wie Sie bemerken, erzeugt R, wenn Sie diesen Code ausführen, keinen Output. Dazu geben Sie nun lediglich den Namen des Skalars in das Eingabefeld unterhalb Ihres Codes ein und drücken erneut `Run Code`. Wir haben unserem Skalar mit dem Wert 100 den "Namen" `a` gegeben.
 
-Wir können einen Skalar auch mit dem Ergenbnis einer Rechenoperation belegen. Erstellen Sie bitte den Skalar `b`, welcher das Ergebnis der Rechnung $3 \div 100$ enthalten soll, und lassen Sie sich diesen direkt anzeigen.  
+Wir können einen Skalar auch mit dem Ergenbnis einer Rechenoperation belegen. 
+
+##### Aufgabe 
+Erstellen Sie bitte den Skalar `b`, welcher das Ergebnis der Rechnung $3 \div 100$ enthalten soll, und lassen Sie sich diesen direkt anzeigen.  
 
 
 ```{r Skalar2, exercise=TRUE}
@@ -148,7 +164,10 @@ b = 3 / 100
 b
 ```
 
-Weiterführend können wir einen Skalar auch mit dem Ergebis einer Rechenoption bestehend aus anderen Skalaren belegen. Erstellen Sie hierzu den Skalar `a` mit dem Wert $50$, den Skalar `b` mit dem Wert $3$. Nun wollen wir einen dritten Skalar `c` mit dem Ergebnis der Rechenoperation $(a + b) \div b$ belegen. Lassen Sie sich das Ergebnis auch direkt ausgeben. 
+Weiterführend können wir einen Skalar auch mit dem Ergebis einer Rechenoption bestehend aus anderen Skalaren belegen. 
+
+##### Aufgabe 
+Erstellen Sie hierzu den Skalar `a` mit dem Wert $50$, den Skalar `b` mit dem Wert $3$. Nun wollen wir einen dritten Skalar `c` mit dem Ergebnis der Rechenoperation $(a + b) \div b$ belegen. Lassen Sie sich das Ergebnis auch direkt ausgeben. 
 
 ```{r Skalar3, exercise=TRUE, exercise.lines = 5}
 
@@ -165,6 +184,7 @@ c
 
 Skalare müssen nicht numerisch sein, sondern können auch Worte beinhalten. Wortobjekte heißen in `R` **characters** (engl. strings). In `R` schreibt man Worte immer in Anführungszeichen `""`.
 
+##### Aufgabe 
 Erstellen Sie nun den Skalar `a`, der das Wort `Charlotte Fresenius` und den Skalar `b`, der das Wort `Carl Remigius Fresenius` beinhaltet. Lassen Sie sich lediglich den Inhalt des Skalars `b` ausgeben. 
 
 ```{r Skalar4, exercise=TRUE}
@@ -187,6 +207,7 @@ Die einfachste Art einen Vektor zu erstellen ist mit der `c()` Funktion. Das c s
 
 Wenn man `c()` benutzt, muss man immer ein **Komma** zwischen die Objekte setzen (Skalare oder Vektoren), die man kombinieren möchte.
 
+##### Aufgabe 
 Lassen Sie uns die `c()` Funktion nutzen um einen **numerischen Vektor** zu erstellen der `a` heißt und die Zahlen von 1 bis 7 enthält. Lassen Sie sich das Ergebnis direkt ausgeben:
 
 ```{r Vektor1, exercise=TRUE}
@@ -198,7 +219,10 @@ a = c(1, 2, 3, 4, 5, 6, 7)
 a
 ```
 
-Sie können auch **character Vektoren** erstellen, indem Sie die `c()` Funktion auf einzelne character Skalare anwenden. Erstellen Sie einen Vektor, der die folgende Namen beinhaltet: `Freud`, `Wundt`, `Bandura`, `Watson`, `Jung`. Wir nennen diesen Vektor zur besseren Übersicht einmal `char.vec`. Lassen Sie sich den Inhalt des Vektors direkt ausgeben. 
+Sie können auch **character Vektoren** erstellen, indem Sie die `c()` Funktion auf einzelne character Skalare anwenden. 
+
+##### Aufgabe 
+Erstellen Sie einen Vektor, der die folgende Namen beinhaltet: `Freud`, `Wundt`, `Bandura`, `Watson`, `Jung`. Wir nennen diesen Vektor zur besseren Übersicht einmal `char.vec`. Lassen Sie sich den Inhalt des Vektors direkt ausgeben. 
 
 ```{r Vektor2, exercise=TRUE}
 
@@ -209,7 +233,10 @@ char.vec = c("Freud", "Wundt", "Bandura", "Watson", "Jung")
 char.vec
 ```
 
-Mit Vektoren lassen sich auch Rechenoperationen ausführen. Erstellen Sie den Vektor `a` mit den Zahlen von 1 - 3 und den Vektor `b` mit den Zahlen von 4 - 6 und addieren diese zu einem neuen Vektor `c`. Lassen Sie sich den neuen Vektor `c` direkt anzeigen. Bei dieser Art der Addition wird jeweils die $n$te Zahl des Vektors `a` mit der $n$ten Zahl des Vektors `b` addiert. 
+Mit Vektoren lassen sich auch Rechenoperationen ausführen. 
+
+##### Aufgabe 
+Erstellen Sie den Vektor `a` mit den Zahlen von 1 - 3 und den Vektor `b` mit den Zahlen von 4 - 6 und addieren diese zu einem neuen Vektor `c`. Lassen Sie sich den neuen Vektor `c` direkt anzeigen. Bei dieser Art der Addition wird jeweils die $n$te Zahl des Vektors `a` mit der $n$ten Zahl des Vektors `b` addiert. 
 
 ```{r Vektor3, exercise=TRUE}
 
@@ -224,6 +251,7 @@ c
 
 Vektoren lassen sich über die `c()` Funktion auch aneinanderhängen. Anders als bei den Rechenoperationen funktioniert dies auch mit character Vektoren. 
 
+##### Aufgabe 
 Erstellen Sie die Vektoren `a` mit den Farben `blau` und `rot` sowie den Vektor `b` mit den Farben `gelb`und `grün`. Hängen Sie diese beiden Vektoren zu einem neuen Vektor `c` zusammen und lassen sich diesen anzeigen. 
 
 ```{r Vektor4, exercise=TRUE}
@@ -266,6 +294,7 @@ Das Ergebnis ist eine codierte Faktorvariable. Wenn wir Sie uns ausgeben lassen 
 
 R wird uns für Faktoren alle Ergebnisse nach der **Reihenfolge** der levels anzeigen. Wenn wir keine Faktorvariable haben, sondern eine character Variable funktioniert die Reihenfolge immer alphabetisch.
 
+##### Aufgabe 
 Erstellen Sie nun im folgenden Eingabefeld den Vektor `Wohnort` `c(1,2,1,3,2,1)` mit den Codes $1$ für `München`, $2$ für `Hamburg` und $3$ für `Köln`. Erstellen Sie erst einen numerischen Vektor und lassen diesen dann in einen Faktor umwandeln und anzeigen. 
 
 *Hinweis: Da `R` in dieser Übung keine Information zwischen den einzelnen Eingabefeldern überträgt, müssen Sie die beiden Schritte, die Ihnen in zwei unterschiedlichen Eingabefeldern gezeigt wurden, nun in einem kombinieren* 
@@ -288,6 +317,7 @@ Manchmal möchten wir wieder einen einzelnen Skalar auswählen, der als Teil von
 
 Benötigen wir aus einem Vektor z.B. genau den 3. Skalar, schreiben wir einfach eine 3 in eckige Klammern hinter den Vektor.
 
+##### Aufgabe 
 Erstellen Sie nun den Vektor `color`, der die folgenden Farben enthält: `blau`, `rot`, `grün`, `gelb`. Lassen Sie sich lediglich die zweite Farbe ausgeben (In unserem Fall sollte in dem Ausgabefeld also "rot" erscheinen)
 
 ```{r Indizierung1, exercise=TRUE}
@@ -319,6 +349,7 @@ df
 
 Dies wollen wir direkt einmal üben: 
 
+##### Aufgabe 
 Erstellen Sie eine Datenmatrix mit dem Namen `Personen` mit folgenden Informationen: <br>
 *(Wir betrachten die Variablen `Name`, `Alter`, `Wohnort`)*
 
@@ -370,6 +401,7 @@ Wollen wir aus dem data.frame wieder einzelne Elemente verwenden, nutzen wir wie
 
 Wir trennen dafür unsere `[]` mit einem Komma `[,]`. Alles, was **links vom Komma** steht, bezieht sich auf Zeilen alles **rechts vom Komma** bezieht sich auf Spalten.
 
+##### Aufgabe 
 Um dies zu Üben erstellen Sie wieder eine Datenmatrix mit dem Namen `Personen` mit folgenden Informationen: <br>
 *(Wir betrachten die Variablen `Name`, `Alter`, `Wohnort`)*
 
@@ -419,8 +451,8 @@ Lagemaße sind nützliche Werkzeuge, um einen Überblick über Daten zu gewinnen
 * Median mit der `median()` Funktion 
 * Um den Modalwert herauszufinden lassen Sie sich am besten eine Häufigkeitstabelle erstellen. Wie das funktioniert werden wir uns im nächsten Schritt anschauen
 
-Um das einmal praktisch umzusetzen, schauen wir uns folgende Aufgabe an: 
-
+ 
+##### Aufgabe 
 Sie leiten als Psychotherapeut:in eine KVT (Kognitive Verhaltenstherapie) Gruppentherapie und interessieren sich für die Altersstruktur Ihrer Patient:innen. Folgende Teilnehmer:innen haben Sie in Ihrer Gruppe: 
 
 | ID|Alter 
@@ -481,8 +513,8 @@ Eine solche Funktion ist `describe()` aus dem `psych` Paket. Die `describe()` Fu
 
 *Hintergrund: Es gibt in `R` sognenannte Packages. Ein R-Package ist einfach ein Bündel von Funktionen (also bereits geschriebener Code), die in einem übersichtlichen Paket gespeichert sind. In dieser Übung haben wir bereits alle benötigten Pakete installiert. Wie Sie diese Pakete in der Vollversion von `R` installieren, werden Sie nächstes Semester im Rahmen der `R` Übung erfahren* 
 
+##### Aufgabe 
 Um dies einmal zu verdeutlichen, kopieren Sie sich in das nachfolgende Eingabefeld wieder Ihren Vektor `Alter` und wenden die Funktion `describe()` an. 
-
 
 ```{r Lage3, exercise=TRUE}
 
@@ -517,7 +549,8 @@ Leider gibt es zum Zusammenfassen kategorialer (nominalskalierter) Variablen nic
 
 Die gängigste Deskription einer kategorialen Variable ist die Erstellung einer Häufigkeitstabelle. Eine Häufigkeitstabelle mit absoluten Häufigkeiten lässt sich mit dem `table()` Befehl erstellen.
 
-Erstellen Sie zur Übung folgende Datenmatrix und lassen sich die absoluten Häufigkeiten der Diagnosen ausgeben
+#### Aufgabe 
+Erstellen Sie zur Übung folgende Datenmatrix und lassen sich die absoluten Häufigkeiten der Diagnosen ausgeben. Über eine Häufigkeitstabelle wie diese können Sie auch schnell den Modalwert ablesen. 
 
 | Geschlecht|Diagnose 
 |:----------------------|:-----------------------
@@ -541,7 +574,10 @@ table(df$Diagnose)
 
 #### Relative Häufigkeiten
 
-Wollen wir in einem Vektor, der viele Wiederholungen der selben Merkmalsausprägungen enthält, jede Ausprägung nur einmal anzeigen lassen, nutzen wir `unique()`:
+Um unsere absoluten Häufigkeiten in relativen Häufigkeiten anzeigen zu lassen, können wir die Funktion `prop.table()` nutzen. Diesen Befehl müssen wir jedoch auf den `table()` Befehl anwenden. Unser Code sieht also so aus: `prop.table(table())`. 
+
+##### Aufgabe 
+Kopieren Sie nun wieder Ihren Datensatz aus der vorherigen Übung in das Eingabefeld und lassen Sie sich eine relative Häufigkeitstabelle der Diagnosen ausgeben. 
 
 ```{r Kat2, exercise=TRUE}
 
@@ -551,8 +587,7 @@ Wollen wir in einem Vektor, der viele Wiederholungen der selben Merkmalsauspräg
 df = data.frame("Geschlecht" = c("m", "w", "w", "w", "m"),
                 "Diagnose" = c("Depression", "Depression", "Angststoerung", "Depression", "Soziale Phobie")
                 )
-
-table(df$Diagnose)
+prop.table(table(df$Diagnose))
 ```
 
 
@@ -562,7 +597,7 @@ table(df$Diagnose)
 
 `R` liefert Ihnen in der Grundversion bereits einige Möglichkeiten, Daten graphisch darzustellen. Wir möchten uns zunächst die Funktionen `barplot()` und `hist()` anschauen. Wie die Namen bereits verraten, können wir mit der `barplot()` Funktion Balkendiagramme und mit der `hist()` Funktion Histogramme erstellen. 
 
-Noch einmal kurz zur Wiederholung...
+#### Noch einmal kurz zur Wiederholung...
 
 ```{r quiz1, echo = FALSE}
 quiz(
@@ -577,24 +612,36 @@ quiz(
     )
 ```
 
+#### Aufgabe 
+Stellen Sie sich vor, Sie befinden sich in Ihrem Orientierungspraktikum in einer Psychiatrie. Johanna ist leitende Psychologin der Station auf der Sie arbeiten. Auf Ihrer Station wird ein transdiagnostisches Behandlungsangebot gemacht - es werden also eine Vielzahl an unterschiedlichen Störungsbildern behandelt. Sie kriegen mit, dass der Klinikdirektor auf Johanna zugeht und Sie um eine Übersicht über Art und Häufigkeit der im letzten Quartal behandelten Störungsbilder bittet. Da Sie sich bereits etwas mit der Aufbereitung von Daten auskennen, bieten Sie Johanna Ihre Hilfe an.
 
+Johanna teilt Ihnen mit, dass Sie in `R` bereits einen Datensatz names `patienten_Daten` erstellt hat, der alle notwendigen Informationen enthält. Geben Sie in das nachfolgende Eingabefeld einfach mal `patienten_Daten` ein, und drücken auf `run code`. 
 
-
-
-```{r include=FALSE}
-set.seed(123) 
-Diagnose = sample(c("Angststörung", "Depression", "Schizophrenie", "PTBS", "Essstörung"), 100, replace = TRUE)
-
-
-
-
-barplot(table(Diagnose))
-
-knitr::kable(table(Diagnose))
-
+```{r Hist1, exercise=TRUE}
 
 ```
 
+```{r quiz2, echo = FALSE}
+quiz(
+  question("Welche Aussagen zu den Ihnen angezeigten Daten stimmen?",
+    answer("Jede Zeile steht für eine Person", correct = TRUE),
+    answer("Jede Spalte steht für eine Person"),
+    answer("Der Datensatz enthält die Variablen ID, Diagnose, Geschlecht und PWB_ges", correct = TRUE),
+    answer("Der Datensatz umfasst 10 Patient:Innen"),
+    answer("Der Datensatz umfasst 100 Patient:Innen", correct = TRUE),
+    allow_retry = TRUE
+  )
+    )
+```
+
+
+
+
+
+
+
+
+Johanna ist leitende Psychologin auf Station 3 einer großen Psychiatrie.  Der Klinikdirektor möchte nun von Johanna wissen
 
 
 
