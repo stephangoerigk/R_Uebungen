@@ -12,6 +12,7 @@ runtime: shiny_prerendered
 library(learnr)
 library(psych)
 library(shiny)
+library(faux)
 knitr::opts_chunk$set(echo = FALSE)
 
 #Datensätze simulieren
@@ -20,11 +21,22 @@ knitr::opts_chunk$set(echo = FALSE)
 set.seed(123) 
 patienten_Daten = data.frame(
   ID = sample(x = 10000 : 19999, size = 100),
-  Diagnose = sample(c("Angstst.", "Depression", "Schizophr.", "PTBS", "Essstoerung"), 100, replace = TRUE), 
+  Diagnose = sample(c("Angstst.", "Depression", "Schizophr.", "PTBS", "Essstoerung"), 100, 
+                    prob = c(0.3, 0.4, 0.05, 0.1, 0.15),  replace = TRUE), 
   Geschlecht = sample(c("maennlich", "weiblich"), 100, replace = TRUE),
-  Alkohol = round(rexp(100, rate = 0.2), 0),
-  PWB_ges = round(rnorm(n = 100, mean = 168, sd = 13),0)
+  Alkohol = round(rexp(100, rate = 0.2))
 )
+
+patienten_Daten$PWB_ges[patienten_Daten$Diagnose == "Angstst."] = round(rnorm(n = table(patienten_Daten$Diagnose)["Angstst."], mean = 168, sd = 13))
+patienten_Daten$PWB_ges[patienten_Daten$Diagnose == "Depression"] = round(rnorm(n = table(patienten_Daten$Diagnose)["Depression"], mean = 50, sd = 13))
+patienten_Daten$PWB_ges[patienten_Daten$Diagnose == "Schizophr."] = round(rnorm(n = table(patienten_Daten$Diagnose)["Schizophr."], mean = 70, sd = 13))
+patienten_Daten$PWB_ges[patienten_Daten$Diagnose == "PTBS"] = round(rnorm(n = table(patienten_Daten$Diagnose)["PTBS"], mean = 80, sd = 13))
+patienten_Daten$PWB_ges[patienten_Daten$Diagnose == "Essstoerung"] = round(rnorm(n = table(patienten_Daten$Diagnose)["Essstoerung"], mean = 40, sd = 13))
+
+# Korrelation simulieren: 
+# a = rnorm(100, 0, 1) 
+# b = rnorm_pre(a, mu = 5, sd = 2, r = 0,75, empirical = T)
+
 
 ```
 
@@ -605,7 +617,6 @@ quiz(
     )
 ```
 
-
 ```{r quiz1_2, echo = FALSE}
 quiz(
   question("Was sind Vorteile digitaler Datenanalyse?",
@@ -616,7 +627,6 @@ quiz(
   )
     )
 ```
-
 
 ```{r quiz1_3, echo = FALSE}
 quiz(
@@ -629,7 +639,6 @@ quiz(
     )
 ```
 
-
 ```{r quiz1_4, echo = FALSE}
 quiz(
   question("Welche sind wissenschaftliche Hypothesen?",
@@ -640,7 +649,6 @@ quiz(
   )
     )
 ```
-
 
 ```{r quiz1_5, echo = FALSE}
 quiz(
@@ -653,7 +661,6 @@ quiz(
     )
 ```
 
-
 ```{r quiz1_6, echo = FALSE}
 quiz(
   question("Gewicht [kg] ist eine..",
@@ -664,7 +671,6 @@ quiz(
   )
     )
 ```
-
 
 ```{r quiz1_7, echo = FALSE}
 quiz(
@@ -679,10 +685,9 @@ quiz(
     )
 ```
 
-
 ```{r quiz1_8, echo = FALSE}
 quiz(
-  question("In der Hypothese: (Männer schlafen morgens länger als Frauen.) ist Geschlecht die...",
+  question("In der Hypothese: <Männer schlafen morgens länger als Frauen.> ist Geschlecht die...",
     answer("Moderatorvariable"),
     answer("AV"),
     answer("Störvariable"),
@@ -690,7 +695,6 @@ quiz(
   )
     )
 ```
-
 
 ```{r quiz1_9, echo = FALSE}
 quiz(
@@ -703,7 +707,6 @@ quiz(
   )
     )
 ```
-
 
 ```{r quiz1_10, echo = FALSE}
 quiz(
@@ -753,7 +756,7 @@ quiz(
 
 ```{r quiz1_14, echo = FALSE}
 quiz(
-  question("Wir fertigen nach einer Befragung zu Lieblingshaustieren folgende Tabelle an. Welche Aussagen sind zutreffend? ![](images/Tabelle1.jpeg)",
+  question("Wir fertigen nach einer Befragung zu Lieblingshaustieren folgende Tabelle an. Welche Aussagen sind zutreffend? <br> ![](images/Tabelle1.jpeg){width=300px}",
     answer("20 Personen gaben an, dass Katzen ihre Lieblingshaustiere seien"),
     answer("Hund = Modus", correct = TRUE),
     answer("30% der befragten Personen gaben an, dass Hunde ihre Lieblingshaustiere seien", correct = TRUE),
@@ -763,7 +766,7 @@ quiz(
     )
 ```
 
-
+<img src="images/Tabelle1.jpeg" style="width: 80%"/>
 
 ## Vorlesung 2
 
@@ -836,6 +839,63 @@ Johanna ist ganz begeistert davon, wie gut Sie schon mit `R` umgehen können. Si
 
 ```{r Hist4-hint}
 hist(patienten_Daten$Alkohol)
+```
+
+### Wissensüberprüfung 2. Vorlesung 
+
+```{r quiz2_1, echo = FALSE}
+quiz(
+  question("Was trifft auf <Messen> zu?",
+    answer("Messen = Variablen in Zahlen darstellen", correct = TRUE),
+    answer("Daten erheben und Messen sind dasselbe"),
+    answer("Einzelne Ausprägungen werden Zahlen auf einer Skala zugeordnet", correct = TRUE),
+    answer("Messen ist homomorphe Abbildung eines empirischen Relativs in ein numerisches Relativ", correct = TRUE), allow_retry = TRUE
+  )
+    )
+```
+
+```{r quiz2_2, echo = FALSE}
+quiz(
+  question("Das Skalenniveau...",
+    answer("ist immer entweder nominal oder numerisch"),
+    answer("ist eindeutig durch das Merkmal definiert"),
+    answer("bestimmt welche Rechenoperationen möglich sind", correct = TRUE),
+    answer("eine der wichtigsten Eigenschaften einer Variable", correct = TRUE), allow_retry = TRUE
+  )
+    )
+```
+
+```{r quiz2_3, echo = FALSE}
+quiz(
+  question("Welches ist das niedrigste Skalenniveau?",
+    answer("ordinal"),
+    answer("nominal", correct = TRUE),
+    answer("metrisch"),
+    answer("intervall"), allow_retry = TRUE
+  )
+    )
+```
+
+```{r quiz2_4, echo = FALSE}
+quiz(
+  question("Das Lieblingsfußballteam ist ein Beispiel für eine Variable mit welchem Skalenniveau",
+    answer("nominal", correct = TRUE),
+    answer("metrisch"),
+    answer("Verhältnisskala"),
+    answer("intervall"), allow_retry = TRUE
+  )
+    )
+```
+
+```{r quiz2_5, echo = FALSE}
+quiz(
+  question("Der IQ ist ein Beispiel für eine Variable mit welchem Skalenniveau?",
+    answer("metrisch", correct = TRUE),
+    answer("Verhältnisskala"),
+    answer("intervall", correct = TRUE),
+    answer("ordinal"), allow_retry = TRUE
+  )
+    )
 ```
 
 
