@@ -21,8 +21,7 @@ knitr::opts_chunk$set(echo = FALSE)
 set.seed(123) 
 patienten_Daten = data.frame(
   ID = sample(x = 10000 : 19999, size = 100),
-  Diagnose = sample(c("Angstst.", "Depression", "Schizophr.", "PTBS", "Essstoerung"), 100, 
-                    prob = c(0.3, 0.4, 0.05, 0.1, 0.15),  replace = TRUE), 
+  Diagnose = sample(c("Angstst.", "Depression", "Schizophr.", "PTBS", "Essstoerung"), 100, prob = c(0.3, 0.4, 0.05, 0.1, 0.15),  replace = TRUE), 
   Geschlecht = sample(c("maennlich", "weiblich"), 100, replace = TRUE),
   Alkohol = round(rexp(100, rate = 0.2))
 )
@@ -745,7 +744,7 @@ quiz(
 
 ```{r quiz1_13, echo = FALSE}
 quiz(
-  question("Was ist zutreffend?  ![](images/Stoervariable.jpeg)",
+  question("Was ist zutreffend? <br> ![](images/Stoervariable.jpeg){width=400px}",
     answer("Störvariablen sind alle Einflussgrößen auf die AV, die in einer Untersuchung nicht erfasst werden", correct = TRUE),
     answer("Ziel ist es, Störvariablen möglichst zu kontrollieren und zu erfassen", correct = TRUE),
     answer("Bsp. im Sinne der Abbildung: Eine neue Unterrichtsmethode (UV) soll anhand des Notendurchschnitts (AV) evaluiert werden. Ein Teil der Klasse wiederholt das Jahr jedoch und es bleibt unberücksichtigt, dass sie den Stoff bereits im vergangenen Jahr durchgenommen haben.", correct = TRUE),
@@ -756,7 +755,7 @@ quiz(
 
 ```{r quiz1_14, echo = FALSE}
 quiz(
-  question("Wir fertigen nach einer Befragung zu Lieblingshaustieren folgende Tabelle an. Welche Aussagen sind zutreffend? <br> ![](images/Tabelle1.jpeg){width=300px}",
+  question("Wir fertigen nach einer Befragung zu Lieblingshaustieren folgende Tabelle an. Welche Aussagen sind zutreffend? <br> ![](images/Tabelle1.jpeg){width=400px}",
     answer("20 Personen gaben an, dass Katzen ihre Lieblingshaustiere seien"),
     answer("Hund = Modus", correct = TRUE),
     answer("30% der befragten Personen gaben an, dass Hunde ihre Lieblingshaustiere seien", correct = TRUE),
@@ -766,7 +765,7 @@ quiz(
     )
 ```
 
-<img src="images/Tabelle1.jpeg" style="width: 80%"/>
+
 
 ## Vorlesung 2
 
@@ -883,6 +882,83 @@ quiz(
     answer("metrisch"),
     answer("Verhältnisskala"),
     answer("intervall"), allow_retry = TRUE
+  )
+    )
+```
+
+```{r quiz2_5, echo = FALSE}
+quiz(
+  question("Der IQ ist ein Beispiel für eine Variable mit welchem Skalenniveau?",
+    answer("metrisch", correct = TRUE),
+    answer("Verhältnisskala"),
+    answer("intervall", correct = TRUE),
+    answer("ordinal"), allow_retry = TRUE
+  )
+    )
+```
+
+```{r quiz2_5, echo = FALSE}
+quiz(
+  question("Der IQ ist ein Beispiel für eine Variable mit welchem Skalenniveau?",
+    answer("metrisch", correct = TRUE),
+    answer("Verhältnisskala"),
+    answer("intervall", correct = TRUE),
+    answer("ordinal"), allow_retry = TRUE
+  )
+    )
+```
+
+```{r quiz2_5, echo = FALSE}
+quiz(
+  question("Der IQ ist ein Beispiel für eine Variable mit welchem Skalenniveau?",
+    answer("metrisch", correct = TRUE),
+    answer("Verhältnisskala"),
+    answer("intervall", correct = TRUE),
+    answer("ordinal"), allow_retry = TRUE
+  )
+    )
+```
+
+```{r quiz2_5, echo = FALSE}
+quiz(
+  question("Der IQ ist ein Beispiel für eine Variable mit welchem Skalenniveau?",
+    answer("metrisch", correct = TRUE),
+    answer("Verhältnisskala"),
+    answer("intervall", correct = TRUE),
+    answer("ordinal"), allow_retry = TRUE
+  )
+    )
+```
+
+```{r quiz2_5, echo = FALSE}
+quiz(
+  question("Der IQ ist ein Beispiel für eine Variable mit welchem Skalenniveau?",
+    answer("metrisch", correct = TRUE),
+    answer("Verhältnisskala"),
+    answer("intervall", correct = TRUE),
+    answer("ordinal"), allow_retry = TRUE
+  )
+    )
+```
+
+```{r quiz2_5, echo = FALSE}
+quiz(
+  question("Der IQ ist ein Beispiel für eine Variable mit welchem Skalenniveau?",
+    answer("metrisch", correct = TRUE),
+    answer("Verhältnisskala"),
+    answer("intervall", correct = TRUE),
+    answer("ordinal"), allow_retry = TRUE
+  )
+    )
+```
+
+```{r quiz2_5, echo = FALSE}
+quiz(
+  question("Der IQ ist ein Beispiel für eine Variable mit welchem Skalenniveau?",
+    answer("metrisch", correct = TRUE),
+    answer("Verhältnisskala"),
+    answer("intervall", correct = TRUE),
+    answer("ordinal"), allow_retry = TRUE
   )
     )
 ```
