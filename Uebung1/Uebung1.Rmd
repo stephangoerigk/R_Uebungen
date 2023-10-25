@@ -897,82 +897,119 @@ quiz(
     )
 ```
 
-```{r quiz2_5, echo = FALSE}
+```{r quiz2_6, echo = FALSE}
 quiz(
-  question("Der IQ ist ein Beispiel für eine Variable mit welchem Skalenniveau?",
-    answer("metrisch", correct = TRUE),
-    answer("Verhältnisskala"),
+  question("Welches Skalenniveau ist zur Berechnung des Mittelwerts mindestens notwendig?",
+    answer("nominal"),
     answer("intervall", correct = TRUE),
+    answer("Verhältnisskala"),
     answer("ordinal"), allow_retry = TRUE
   )
     )
 ```
 
-```{r quiz2_5, echo = FALSE}
+```{r quiz2_7, echo = FALSE}
 quiz(
-  question("Der IQ ist ein Beispiel für eine Variable mit welchem Skalenniveau?",
-    answer("metrisch", correct = TRUE),
-    answer("Verhältnisskala"),
-    answer("intervall", correct = TRUE),
-    answer("ordinal"), allow_retry = TRUE
+  question("Was trifft auf das Nominalskalenniveau zu?",
+    answer("Häufig wird hier mit einer Codierung gearbeitet", correct = TRUE),
+    answer("nur Beziehungen <gleich> , <ungleich> möglich", correct = TRUE),
+    answer("logische Reihenfolge ist möglich"),
+    answer("höchstes Skalenniveau"), 
+    answer("eindeutige Transformationen sind möglich", correct = TRUE), allow_retry = TRUE
   )
     )
 ```
 
-```{r quiz2_5, echo = FALSE}
+```{r quiz2_8, echo = FALSE}
 quiz(
-  question("Der IQ ist ein Beispiel für eine Variable mit welchem Skalenniveau?",
-    answer("metrisch", correct = TRUE),
-    answer("Verhältnisskala"),
-    answer("intervall", correct = TRUE),
-    answer("ordinal"), allow_retry = TRUE
+  question("Was trifft auf das Verhältnisskalenniveau zu?",
+    answer("Hat absoluten Nullpunkt", correct = TRUE),
+    answer("Temperatur waere ein Beispiel", correct = TRUE),
+    answer("Aussage über das Verhältnis zwischen zwei Werten ist moeglich", correct = TRUE),
+    answer("Selten in den Sozialwissenschaften", correct = TRUE), allow_retry = TRUE
   )
     )
 ```
 
-```{r quiz2_5, echo = FALSE}
+```{r quiz2_9, echo = FALSE}
 quiz(
-  question("Der IQ ist ein Beispiel für eine Variable mit welchem Skalenniveau?",
-    answer("metrisch", correct = TRUE),
-    answer("Verhältnisskala"),
-    answer("intervall", correct = TRUE),
-    answer("ordinal"), allow_retry = TRUE
+  question("Maße der zentralen Tendenz...",
+    answer("Sind z.B. Mittelwert und Median", correct = TRUE),
+    answer("Können nur sinnvoll in der Stichprobe verwendet werden (nicht in Population)"),
+    answer("geben Auskunft über Variation der Messwerte"),
+    answer("Werden mit Häufigkeiten angegeben"), 
+    answer("repraesentieren alle Einzelwerte der Verteilung zusammenfassend", correct = TRUE), allow_retry = TRUE
   )
     )
 ```
 
-```{r quiz2_5, echo = FALSE}
+```{r quiz2_10, echo = FALSE}
 quiz(
-  question("Der IQ ist ein Beispiel für eine Variable mit welchem Skalenniveau?",
-    answer("metrisch", correct = TRUE),
-    answer("Verhältnisskala"),
-    answer("intervall", correct = TRUE),
-    answer("ordinal"), allow_retry = TRUE
+  question("Der Modalwert...",
+    answer("ist der Durchschnitt einer Verteilung"),
+    answer("ist der häufigste Wert", correct = TRUE),
+    answer("Ist genau die Mitte der Verteilung"),
+    answer("ist in der Wertereihe [1,2,2,3,3,3,4,4,4,4] die 3"), allow_retry = TRUE
   )
     )
 ```
 
-```{r quiz2_5, echo = FALSE}
+```{r quiz2_11, echo = FALSE}
 quiz(
-  question("Der IQ ist ein Beispiel für eine Variable mit welchem Skalenniveau?",
-    answer("metrisch", correct = TRUE),
-    answer("Verhältnisskala"),
-    answer("intervall", correct = TRUE),
-    answer("ordinal"), allow_retry = TRUE
+  question("Was trifft auf den Median zu?",
+    answer("Benötigt mindestens nominal skalierte Variablen"),
+    answer("Ist der mittlere Wert der Verteilung", correct = TRUE),
+    answer("Ist robust gegenüber Ausreißern", correct = TRUE),
+    answer("Ist i.d.R. besser als der Mittelwert"), allow_retry = TRUE
   )
     )
 ```
 
-```{r quiz2_5, echo = FALSE}
+```{r quiz2_12, echo = FALSE}
 quiz(
-  question("Der IQ ist ein Beispiel für eine Variable mit welchem Skalenniveau?",
-    answer("metrisch", correct = TRUE),
-    answer("Verhältnisskala"),
-    answer("intervall", correct = TRUE),
-    answer("ordinal"), allow_retry = TRUE
+  question("Folgende Urliste sei gegeben. Welche Aussagen stimmen? 
+[2, 2, 3, 3, 4, 4, 4, 5, 6, 6, 6, 7, 8, 8, 9, 9] ",
+    answer("Der Modus ist der Wert 4 bzw. 6", correct = TRUE),
+    answer("Median = 5"),
+    answer("Median = 5,5", correct = TRUE),
+    answer("Arithmetisches Mittel = 5,5"), allow_retry = TRUE
   )
     )
 ```
+
+```{r quiz2_13, echo = FALSE}
+quiz(
+  question("Welche Aussagen stimmen?",
+    answer("Auf Ordinalskalenniveau ist es nicht möglich, Variablen in eine logische Reihenfolge zu bringen"),
+    answer("Der Sitz des Wohnsitzfinanzamtes ist ein Beispiel für nominalskalierte Daten", correct = TRUE),
+    answer("Die metrische Variable <Ergebnis in einem IQ Test> lässt sich auf ordinalskalenniveau runterskalieren", correct = TRUE),
+    answer("Viele Daten in den Sozialwissenschaften haben Intervallskalenniveau", correct = TRUE), allow_retry = TRUE
+  )
+    )
+```
+
+```{r quiz2_14, echo = FALSE}
+quiz(
+  question("Was trifft zu?",
+    answer("Bei einer linkssteilen Verteilung gilt: Modus < Median < Mittelwert", correct = TRUE),
+    answer("Bei einer linkssteilen Verteilung gilt: Modus = Median = Mittelwert"),
+    answer("Bei einer linkssteilen Verteilung gilt: Mittelwert < Modus < Median"),
+    answer("Keine dieser Aussagen ist richtig"), allow_retry = TRUE
+  )
+    )
+```
+
+```{r quiz2_15, echo = FALSE}
+quiz(
+  question("Welche Aussagen stimmen?",
+    answer("Häufigkeiten stellen wir in einem Histogramm dar", correct = TRUE),
+    answer("Kategorien stellen wir in einem Balkendiagramm dar", correct = TRUE),
+    answer("In einem Histogramm können auf der Y-Achse die absoluten Häufigkeiten der Ausprägungen dargestellt", correct = TRUE),
+    answer("Gesamtfläche eines Histogramms = 1 <relative Häufigkeit> bzw. N <Absolute Häufigkeit>", correct = TRUE), allow_retry = TRUE
+  )
+    )
+```
+
 
 
 
