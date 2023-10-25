@@ -26,15 +26,17 @@ patienten_Daten = data.frame(
   Alkohol = round(rexp(100, rate = 0.2))
 )
 
-patienten_Daten$PWB_ges[patienten_Daten$Diagnose == "Angstst."] = round(rnorm(n = table(patienten_Daten$Diagnose)["Angstst."], mean = 168, sd = 13))
-patienten_Daten$PWB_ges[patienten_Daten$Diagnose == "Depression"] = round(rnorm(n = table(patienten_Daten$Diagnose)["Depression"], mean = 50, sd = 13))
-patienten_Daten$PWB_ges[patienten_Daten$Diagnose == "Schizophr."] = round(rnorm(n = table(patienten_Daten$Diagnose)["Schizophr."], mean = 70, sd = 13))
-patienten_Daten$PWB_ges[patienten_Daten$Diagnose == "PTBS"] = round(rnorm(n = table(patienten_Daten$Diagnose)["PTBS"], mean = 80, sd = 13))
-patienten_Daten$PWB_ges[patienten_Daten$Diagnose == "Essstoerung"] = round(rnorm(n = table(patienten_Daten$Diagnose)["Essstoerung"], mean = 40, sd = 13))
+patienten_Daten$PWB_ges[patienten_Daten$Diagnose == "Angstst."] = round(rnorm(n = table(patienten_Daten$Diagnose)["Angstst."], mean = 65, sd = 15))
+patienten_Daten$PWB_ges[patienten_Daten$Diagnose == "Depression"] = round(rnorm(n = table(patienten_Daten$Diagnose)["Depression"], mean = 50, sd = 15))
+patienten_Daten$PWB_ges[patienten_Daten$Diagnose == "Schizophr."] = round(rnorm(n = table(patienten_Daten$Diagnose)["Schizophr."], mean = 70, sd = 15))
+patienten_Daten$PWB_ges[patienten_Daten$Diagnose == "PTBS"] = round(rnorm(n = table(patienten_Daten$Diagnose)["PTBS"], mean = 80, sd = 15))
+patienten_Daten$PWB_ges[patienten_Daten$Diagnose == "Essstoerung"] = round(rnorm(n = table(patienten_Daten$Diagnose)["Essstoerung"], mean = 40, sd = 15))
 
 # Korrelation simulieren: 
 # a = rnorm(100, 0, 1) 
 # b = rnorm_pre(a, mu = 5, sd = 2, r = 0,75, empirical = T)
+
+model = lm(PWB_ges ~ Diagnose, patienten_Daten)
 
 
 ```
@@ -1010,9 +1012,6 @@ quiz(
     )
 ```
 
-
-
-
 ## Vorlesung 3
 
 ### Streuungsmaße
@@ -1028,8 +1027,7 @@ Die gängigsten Streuungsmaße sind:
 
 Streuungsmaße helfen dabei, die Homogenität oder Heterogenität von Daten zu analysieren und den Grad der Variation zu verstehen. 
 
-Schauen wir uns hierzu einmal eine Übung an: 
-
+#### Aufgabe 
 Ann ist eine Klinische Psychologin, die die Ergebnisse eines psychologischen Tests zur Messung der sozialen Angst bei ihren Patienten analysiert. Sie hat die Testergebnisse von 8 Patienten in einem Vektor gespeichert, wobei jeder Wert im Vektor die Schwere der sozialen Angst für einen Patienten darstellt. Ann möchte die Varianz und die Standardabweichung dieser Testergebnisse berechnen, um die Streuung und die durchschnittliche Abweichung von der durchschnittlichen sozialen Angst in ihrer Patientenstichprobe zu verstehen.
 
 Erstellen Sie in R einen Vektor mit den Testergebnissen und berechnen Sie die folgenden Statistiken:
@@ -1061,6 +1059,60 @@ angst = c(52, 42, 38, 56, 55, 29, 48, 34)
 var(angst)
 sd(angst)
 #auch über Funktion describe() möglich
+```
+
+#### Aufgabe 
+Nun befinden Sie sich wieder in Ihrem Praktikum und die leitende Psychologin Johanna kommt mit einer erneuten Bitte auf Sie zu. In Ihrem Datensatz `patienten_Daten` gibt es die Spalte `PWB_ges`. Dieser Wert steht für den Gesamtscore des Psychological Well Being Fragebogens. Ein Fragebogen, der das Konstrukt Psychisches Wohlbefinden misst. Johanna möchte nun gerne wissen, wie hoch die Standardabweichung über alle PWB Werte hinweg ist und in welchem Bereich 50% der Werte liegen. 
+
+```{r t1vl3, exercise=TRUE}
+
+```
+
+```{r t1vl3-hint}
+sd(patienten_Daten$PWB_ges)
+IQR(patienten_Daten$PWB_ges)
+
+```
+
+```{r quiz3_1, echo = FALSE}
+quiz(
+  question("Welche Aussagen stimmen?",
+    answer("Die Standardabweichung beträgt 19.95", correct = TRUE),
+    answer("50% der Werte liegen zwischen 0 und 28"),
+    answer("50% der Werte liegen in einem Bereich um den Mittelwert mit der Spannweite 28"),
+    answer("50% der Werte liegen in einem Bereich um den Median, mit der Spannweite von 28", correct = TRUE),
+    answer("Die Standardabwichung beträgt 397.86"), allow_retry = TRUE
+  )
+    )
+```
+
+Während Sie diese Analyse rechnen, überkommt Sie die Frage, ob sich der Durchschnittsscore (Mittelwert) des `PWB` innerhalb der einzelnen Diagnosegruppen unterscheidet. Berechnen Sie dazu einmal den `PWB` Score nur für die Gruppe der Depressiven und der Patient:innen mit Angststörung. Beantworten Sie danach das nachfolgende Quiz. 
+
+*Hinweis: Sie wissen bereits, dass man mit den eckigen Klammern `[]` einzelne oder mehrere Objekte aus einem Datensatz oder Vektor "herausziehen" kann. Bei data.frames, die sowohl Zeilen als auch Spalten haben, trennen wir die eckigen Klammern mit einem Komma `[,]`. Alles vor dem Komma bezieht sich auf die Zeilen (Fälle), alles nach dem Komma auf die Spalten (Variablen). Anstatt mit Indizes zu arbeiten können wir Werte jedoch auch nach einer Logik auswählen. Dafür eigenen sich sogenannte Bool’sche Operatoren `=, >, <`. Um z.B. nur `PWB` Werte von Patient:innen mit der Diagnose `Depression` anzeigen zu lassen, können wir schreiben `patienten_Daten$PWB_ges[patienten_Daten$Diagnose == "Depression"]`*
+
+
+```{r t2vl3, exercise=TRUE, exercise.lines = 6}
+
+```
+
+```{r t2vl3-hint}
+mean(patienten_Daten$PWB_ges[patienten_Daten$Diagnose == "Depression"])
+mean(patienten_Daten$PWB_ges[patienten_Daten$Diagnose == "Angstst."])
+
+
+```
+
+```{r quiz3_2, echo = FALSE}
+quiz(
+  question("Welche Aussagen stimmen?",
+    answer("Der mittlere PWB Score aller Patient:innen mit Depression liegt bei 50.84", correct = TRUE),
+    answer("Der mittlere PWB Score aller Patient:innen mit Depression liegt bei 57.94"),
+    answer("Der mittlere PWB Score aller Patient:innen mit einer Angststörung liegt bei 50.84"),
+    answer("Der mittlere PWB Score aller Patient:innen mit einer Angststörung liegt bei 65.44", correct = TRUE),
+    answer("Patient:innen unserer Stichprobe mit der Diagnose Depression haben im Mittel einen um 14.60 Punkte niedrigeren Score im PWB als Patient:innen mit einer Angststörung", correct = TRUE),
+    answer("Patient:innen unserer Stichprobe mit der Diagnose Depression haben im Mittel einen um 14.60 Punkte höheren Score im PWB als Patient:innen mit einer Angststörung"), allow_retry = TRUE
+  )
+    )
 ```
 
 
