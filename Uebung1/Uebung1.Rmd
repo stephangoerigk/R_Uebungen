@@ -13,6 +13,7 @@ library(learnr)
 library(psych)
 library(shiny)
 library(faux)
+library(tidyverse)
 knitr::opts_chunk$set(echo = FALSE)
 
 #Datensätze simulieren
@@ -1115,9 +1116,216 @@ quiz(
     )
 ```
 
+Aufgabe Stichprobenbeschreibung (Work in progress...)
+
+
+Schiefe Verteilung (Work in progress....)
+
+```{r}
+set.seed(123)
+shape <- 2 
+scale <- 1
+n <- 10000
+data <- rgamma(n, shape = shape, scale = scale)
+df = data.frame(x = data)
+
+ggplot(data = df, aes(x = x)) +
+  geom_density(fill = "green", color = "black")
+
+```
 
 
 
+
+### Wissensüberprüfung 2. Vorlesung 
+
+```{r quiz3_3, echo = FALSE}
+quiz(
+  question("Was ist in Bezug auf Streuungsmaße korrekt?",
+    answer("Maße der zentralen Tendenz können eine Verteilung vollständig beschreiben."),
+    answer("Sie beschreiben wie stark die einzelnen Werte einer Verteilung von der zentralen Tendenz abweichen", correct = TRUE),
+    answer("Es handelt sich um Deskriptivstatistiken.", correct = TRUE),
+    answer("Die Streuung kann man im Histogramm sehen.", correct = TRUE), allow_retry = TRUE
+  )
+    )
+```
+
+```{r quiz3_4, echo = FALSE}
+quiz(
+  question("Woran kann es liegen wenn unimodale Verteilungen mit gleichem Mittelwert in ihrer Form verschieden sind?",
+    answer("Nominales Skalenniveau"),
+    answer("Median"),
+    answer("Streuung", correct = TRUE),
+    answer("Inferenzstatistik"), allow_retry = TRUE
+  )
+    )
+```
+
+```{r quiz3_5, echo = FALSE}
+quiz(
+  question("Die Spannweite...",
+    answer("beschreibt den Bereich in dem 50% der Werte liegen."),
+    answer("beschreibt die Mitte der Verteilung"),
+    answer("ist die Größe des Bereichs in dem alle Messwerte liegen", correct = TRUE),
+    answer("berechnet sich als  Differenz aus größtem und kleinstem Wert", correct = TRUE), allow_retry = TRUE
+  )
+    )
+```
+
+```{r quiz3_6, echo = FALSE}
+quiz(
+  question("Was trifft auf die Varianz zu?",
+    answer("Nur für metrische Daten sinnvoll.", correct = TRUE),
+    answer("Ist robust gegenüber Ausreißern."),
+    answer("Ist ein quadriertes Maß.", correct = TRUE),
+    answer("Nimmt größere Werte an, je stärker Messwerte vom Mittelwert abweichen.", correct = TRUE), allow_retry = TRUE
+  )
+    )
+```
+
+```{r quiz3_7, echo = FALSE}
+quiz(
+  question("Im Nenner der Varianz steht?",
+    answer("N"),
+    answer("N / 1"),
+    answer("N - 1", correct = TRUE),
+    answer("N + 1"), allow_retry = TRUE
+  )
+    )
+```
+
+```{r quiz3_8, echo = FALSE}
+quiz(
+  question("Die Varianz ist ein sinnvolles Streuungsmaß für folgende Variablen:",
+    answer("Nationalität"),
+    answer("Anzahl erinnerter Items in Gedächtnistest", correct = TRUE),
+    answer("Alter in Jahren", correct = TRUE),
+    answer("Platzierung in einem Rechenwettbewerb"), allow_retry = TRUE
+  )
+    )
+```
+
+```{r quiz3_9, echo = FALSE}
+quiz(
+  question("Was trifft auf die Standardabweichung zu",
+    answer("Lässt sich in der Einheit der Variable lesen.", correct = TRUE),
+    answer("Wurzel aus der Spannweite"),
+    answer("Wird stark von Ausreißern beeinflusst", correct = TRUE),
+    answer("Eignet sich besser als der Quartilabstand für normalverteilte metrische Variablen ohne Ausreißer", correct = TRUE),
+    answer("Streuung um den Mittelwert herum.", correct = TRUE),
+    allow_retry = TRUE
+  )
+    )
+```
+
+```{r quiz3_10, echo = FALSE}
+quiz(
+  question("Standardisierung...",
+    answer("benötigt zunächst Mittelwert und Standardabweichung der Gesamtvariable", correct = TRUE),
+    answer("benötigt Nominalskalenniveau"),
+    answer("Wird als Hypothesentest genutzt"),
+    answer("Kann zum Vergleich zweier auf unterschiedlichen Einheiten gemessenen Variablen genutzt werden", correct = TRUE), 
+    answer("Kann zum Inbezugsetzen von Individuen unterschiedlicher Gruppen genutzt werden.", correct = TRUE),
+    allow_retry = TRUE
+  )
+    )
+```
+
+```{r quiz3_11, echo = FALSE}
+quiz(
+  question("Die Spannweite folgender Messwerte [6,9, 100, 2, 5] ist",
+    answer("32"),
+    answer("54"),
+    answer("2"),
+    answer("98", correct = TRUE),
+    answer("10"),
+    allow_retry = TRUE
+  )
+    )
+```
+
+```{r quiz3_12, echo = FALSE}
+quiz(
+  question("Welche Aussagen sind korrekt? ",
+    answer("99,7% aller Daten liegen innerhalb 3 Standardabweichungen vom Mittelwert", correct = TRUE),
+    answer("68% aller Daten liegen innerhalb 1 Standardabweichung vom Mittelwert", correct = TRUE),
+    answer("95% aller Daten liegen innerhalb 2 Standardabweichungen vom Mittelwert", correct = TRUE),
+    answer("58% aller Daten liegen innerhalb 1 Standardabweichung vom Mittelwert"),
+    answer("68% aller Daten liegen innerhalb 2 Standardabweichung vom Mittelwert"),
+    allow_retry = TRUE
+  )
+    )
+```
+
+Gegeben sind folgende Werte: 
+
+```{r}
+df = data.frame(Wert = c(2, 3, 4, 5, 6, 6, 10, 12, 14, 18))
+df = as.data.frame(t(df))
+
+knitr::kable(df)
+```
+```{r quiz3_13, echo = FALSE}
+quiz(
+  question("Welche Aussagen stimmen? ",
+    answer("Das untere Quartil ist 3", correct = TRUE),
+    answer("Das untere Quartil ist 3,5"),
+    answer("IQR = 9", correct = TRUE),
+    answer("IQR = 9,5"), allow_retry = TRUE
+  )
+    )
+```
+
+```{r quiz3_15, echo = FALSE}
+quiz(
+  question("Uns liegen metrische Daten vor, die sich in einer eingipfeligen Verteilung visualisieren lassen. Wir erkennen jedoch einige Ausreißer in den Daten. Welche Kennwerte nutzen wir, um unsere Daten zu beschreiben? ",
+    answer("Das arithmetische Mittel ist das Maß der zentralen Tendenz unserer Wahl"),
+    answer("Um die Streuung der Daten auszudrücken, wählen wir die Varianz"),
+    answer("Der Median ist das Maß der zentralen Tendenz unserer Wahl", correct = TRUE),
+    answer("Um die Streuung der Daten auszudrücken, wählen wir den Quartilabstand", correct = TRUE),
+    answer("Um die Streuung der Daten auszudrücken, wählen wir die Standardabweichung"),
+    allow_retry = TRUE
+  )
+    )
+```
+
+
+
+## Vorlesung 6
+
+In folgender Tabelle sehen Sie, wie gut Person A und Person B in einem Leistungstest abgeschnitten haben. Wie sie erkennen können, haben sie jedoch unterschiedliche Tests absolviert. 
+
+```{r}
+df = data.frame(Person = c("A", "B"),
+                Leistungstest = c("SpeedA", "SpeedB"),
+                Punkte = c(108, 103)
+                )
+
+knitr::kable(df)
+```
+
+Der folgenden Tabelle können Sie Normwerte der beiden Tests entnehmen. 
+
+```{r}
+df = data.frame(Test = c("SpeedA", "SpeedB"),
+                Standardabweichung = c(5, 4),
+                Mittelwert = c(102, 100))
+
+knitr::kable(df)
+
+```
+
+
+```{r quiz3_14, echo = FALSE}
+quiz(
+  question("Welche der folgenden Aussagen trifft zu? ",
+    answer("", correct = TRUE),
+    answer(""),
+    answer(""),
+    answer(""), allow_retry = TRUE
+  )
+    )
+```
 
 
 Lassen Sie sich nun sowohl die 
