@@ -1373,18 +1373,6 @@ quiz(
     )
 ```
 
-```{r quiz4_8, echo = FALSE}
-quiz(
-  question("X ",
-    answer(""),
-    answer(""),
-    answer("", correct = TRUE),
-    answer(""),
-    allow_retry = TRUE
-  )
-    )
-```
-
 ```{r quiz4_9, echo = FALSE}
 quiz(
   question("Wenn die UV Nominalskalenniveau hat und die AV auch Nominalskalenniveau würde was auf der Y Achse dargestellt?",
@@ -1438,7 +1426,6 @@ quiz(
     )
 ```
 
-# Das hier noch reparieren. 
 ```{r}
 #set.seed(123)
 #N = 12
@@ -1452,30 +1439,16 @@ quiz(
 
 ```{r quiz4_13, echo = FALSE}
 quiz(
-  question("Hat die UV Nominalskalenniveau und die AV is metrisch, was repräsentieren dann die Balken im Balkendiagramm?",
-    answer("Median"),
-    answer("IQR mal 1.5"),
-    answer("Mittelwert", correct = TRUE),
-    answer("Relative Häufigkeit"),
-    answer("Maß der zentralen Tendenz", correct = TRUE),
+  question("Was können wir folgender Grafik entnehmen?  <br> ![](images/boxplot.png){width=400px}",
+    answer("IQR von Gruppe A ist größer als IQR von Gruppe B"),
+    answer("In den Daten gibt es extreme Ausreißer"),
+    answer("Die Streuung der Daten in Gruppe B ist größer als die Streuung der Daten in Gruppe A", correct = TRUE),
+    answer("In den Daten gibt es keine extremen Ausreißer", correct = TRUE),
     allow_retry = TRUE
   )
     )
 ```
 
-
-```{r quiz4_14, echo = FALSE}
-quiz(
-  question("Hat die UV Nominalskalenniveau und die AV is metrisch, was repräsentieren dann die Balken im Balkendiagramm?",
-    answer("Median"),
-    answer("IQR mal 1.5"),
-    answer("Mittelwert", correct = TRUE),
-    answer("Relative Häufigkeit"),
-    answer("Maß der zentralen Tendenz", correct = TRUE),
-    allow_retry = TRUE
-  )
-    )
-```
 
 
 
