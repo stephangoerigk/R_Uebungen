@@ -1441,9 +1441,9 @@ quiz(
 quiz(
   question("Was können wir folgender Grafik entnehmen?  <br> ![](images/boxplot.png){width=400px}",
     answer("IQR von Gruppe A ist größer als IQR von Gruppe B"),
-    answer("In den Daten gibt es extreme Ausreißer"),
+    answer("In den Daten gibt es Ausreißer"),
     answer("Die Streuung der Daten in Gruppe B ist größer als die Streuung der Daten in Gruppe A", correct = TRUE),
-    answer("In den Daten gibt es keine extremen Ausreißer", correct = TRUE),
+    answer("In den Daten gibt es keine Ausreißer", correct = TRUE),
     allow_retry = TRUE
   )
     )
@@ -1455,7 +1455,179 @@ quiz(
 
 ## Vorlesung 5
 
-Test
+### Wissensüberprüfung 5. Vorlesung 
+
+```{r quiz5_1, echo = FALSE}
+quiz(
+  question("Die Laplace-Wahrscheinlichkeit",
+    answer("Gilt bei Zufallsexperimenten, bei denen nur endlich viele, gleichwahrscheinliche Ergebnisse möglich sind",correct = TRUE),
+    answer("Wir mit dem Bayes Theorem berechnet"),
+    answer("Ergibt sich durch das Verhältnis aus möglichen Ereignissen zu günstigen Ereignissen"),
+    answer("Ergibt sich durch das Verhältnis aus günstigen Ereignissen zu möglichen Ereignissen", correct = TRUE),
+    allow_retry = TRUE
+  )
+    )
+```
+
+
+```{r quiz5_2, echo = FALSE}
+quiz(
+  question("Was sind Axiome der Wahrscheinlichkeitsrechnung nach Kolmogoroff?",
+    answer("Wahrscheinlichkeiten nehmen Werte zwischen 0 und 1 an.",correct = TRUE),
+    answer("Sichere Ereignisse haben eine Wahrscheinlichkeit von P=1.",correct = TRUE),
+    answer("Negative Wahrscheinlichkeiten beschreiben besonders seltene Ereignisse."),
+    answer("Gesamtwahrscheinlichkeit mehrere unabhängiger Ereignisse ist die Summe der Einzelwahrscheinlichkeiten", correct = TRUE),
+    allow_retry = TRUE
+  )
+    )
+```
+
+```{r quiz5_3, echo = FALSE}
+quiz(
+  question("Die bedingte Wahrscheinlichkeit P(A|B)",
+    answer("Die Wahrscheinlichkeit von Ereignis A unter der Bedingung, dass Ereignis B bereits eingetreten ist.", correct = TRUE),
+    answer("Die Wahrscheinlichkeit von Ereignis B unter der Bedingung, dass Ereignis A bereits eingetreten ist."),
+    answer("Die Korrelation von A und B."),
+    answer("Das Eintreten von B beeinflusst die Wahrscheinlichkeit von A.", correct = TRUE),
+    allow_retry = TRUE
+  )
+    )
+```
+
+```{r quiz5_4, echo = FALSE}
+quiz(
+  question("Zwei Ereignisse sind stochastisch unabhängig...",
+    answer("Wenn sie einander bedingen."),
+    answer("Wenn die Summe ihrer Einzelwahrscheinlichkeiten 1 ergibt"),
+    answer("Wenn das Eintreten des einen Ereignisses keinen Einfluss auf das Eintreten des anderen Ereignisses hat.", correct = TRUE),
+    answer("Qenn die Wahrscheinlichkeit für das gemeinsame Auftreten dem Produkt ihrer Einzelwahrscheinlichkeiten entspricht.", correct = TRUE),
+    allow_retry = TRUE
+  )
+    )
+```
+
+```{r quiz5_5, echo = FALSE}
+quiz(
+  question("Was stimmt hinsichtlich der Nomenklatur des Zufallsexperiments?",
+    answer("Jedes mögliche Ergebnis aus einem Zufallsexperiment nennen wir ein Elementarereignis ω.", correct = TRUE),
+    answer("Der Ereignisraum Ω heißt diskret, wenn er aus überabzählbar vielen Elementarereignissen besteht"),
+    answer("Die Menge aller möglichen Ereignisse ist definiert als der Ereignisraum Ω.", correct = TRUE),
+    answer("Zufallsexperiment ist ein allgemeiner Begriff, der Grundlage für die Inferenzstatistik ist", correct = TRUE),
+    allow_retry = TRUE
+  )
+    )
+```
+
+```{r quiz5_6, echo = FALSE}
+quiz(
+  question("Der Erwartungswert...",
+    answer("...ergibt sich als Durchschnitt, wenn man ein Zufallsexperiment sehr oft durchführt.", correct = TRUE),
+    answer("...einer ZV ist ein Maß für das Zentrum der Verteilung.", correct = TRUE),
+    answer("...ist die Streuung aller möglichen Ausprägungen einer ZV."),
+    answer("...ist die Gegenwahrscheinlichkeit vom Mittelwert."),
+    allow_retry = TRUE
+  )
+    )
+```
+
+```{r quiz5_7, echo = FALSE}
+quiz(
+  question("Das alpha-Quantil...",
+    answer("...ist immer das Signifikanzniveau."),
+    answer("...ist ein ein Wert bezeichnet, unterhalb dessen ein vorgegebener Anteil (alpha) aller Fälle der Verteilung liegen.", correct = TRUE),
+    answer("...muss bei diskreten ZV  zur nächsten ganzzahligen Ausprägung gerundet werden", correct = TRUE),
+    answer("...ist der Erwartungswert einer stetigen ZV."),
+    allow_retry = TRUE
+  )
+    )
+```
+
+```{r quiz5_8, echo = FALSE}
+quiz(
+  question("Was ist bezüglich der diskreten Gleichverteilung korrekt?",
+    answer("Verteilung ähnelt einer Glockenkurve."),
+    answer("Anwendung bei Zufallsexperimenten, deren Ergebnisse gleich häufig sind.", correct = TRUE),
+    answer("Enden der Verteilung sind weniger wahrscheinlich."),
+    answer("Beschreibt seltene Ereignisse"),
+    allow_retry = TRUE
+  )
+    )
+```
+
+```{r quiz5_9, echo = FALSE}
+quiz(
+  question("Was ist hinsichtlich der Normalverteilung (NV) korrekt?",
+    answer("Ist eine stetige Verteilung, die symmetrisch um den Erwartungswert verteilt ist.", correct = TRUE),
+    answer("Die Fläche zwischen den Standardabweichungen umfasst cs. 68% aller Fälle.", correct = TRUE),
+    answer("Wenn die Standardabweichung gering ist, ist die Verteilung breit und niedrig."),
+    answer("Die Standardabweichung gibt den Abstand zwischen Erwartungswert und den Wendepunkten der Dichtefunktion an.", correct = TRUE),
+    allow_retry = TRUE
+  )
+    )
+```
+
+```{r quiz5_10, echo = FALSE}
+quiz(
+  question("Es sei A = {1,2,3,4}.
+Welches ist das Gegenereignis zu A?",
+    answer("D = {-1,-2,-3,-4}"),
+    answer("B = {5,6,7,8,9,10}"),
+    answer("C = {4,3,2,1}"),
+    answer("Es gibt kein Gegenereignis, da kein Ergebnisraum spezifiziert ist.", correct = TRUE),
+answer("Es gibt kein Gegenereignis, da kein Ergebnisraum spezifiziert ist."),
+    allow_retry = TRUE
+  )
+    )
+```
+
+```{r quiz5_11, echo = FALSE}
+quiz(
+  question("Wann spricht man von unabhängigen Ereignissen?",
+    answer("Wenn zwei Ereignisse disjunkt sind, d.h. keine Schnittmenge haben."),
+    answer("Für das Bestimmen von P(A|B) hat P(B) keinen zusätzlichen Informationsgehalt.", correct = TRUE),
+    answer("Die Wahrscheinlichkeit für A gegeben B ändert sich nicht abhängig davon, ob A ein sicheres Ereignis ist."),
+    answer("Ob B stimmt oder nicht, ändert nichts an der Wahrscheinlichkeit von A.", correct = TRUE),
+    allow_retry = TRUE
+  )
+    )
+```
+
+```{r quiz5_12, echo = FALSE}
+quiz(
+  question("Was ist ein Elementarereignis?",
+    answer("ein mögliches Ereignis bei einem Zufallsexperiment", correct = TRUE),
+    answer("eine Teilmenge (aus zwei Elementen) des Ergebnisraums"),
+    answer("eine Menge aus mehreren Elementarereignissen"),
+    answer("Menge der geraden Zahlen beim Würfeln"),
+    allow_retry = TRUE
+  )
+    )
+```
+
+```{r quiz5_13, echo = FALSE}
+quiz(
+  question("Was könnte man als Ergebnisraum bezeichnen? ",
+    answer("{Erfolg, Misserfolg, weder noch} bei einer Therapie", correct = TRUE),
+    answer("Ω", correct = TRUE),
+    answer("eine Teilmenge der Menge der Elementarereignisse"),
+    answer("alles, was eintreten kann", correct = TRUE),
+    allow_retry = TRUE
+  )
+    )
+```
+
+```{r quiz5_14, echo = FALSE}
+quiz(
+  question("Was ist hinsichtlich der Standardnormalverteilung korrekt? ",
+    answer("Sie ist eine Normalverteilung mit μ = 1 und σ = 0"),
+    answer("Sie ist eine Normalverteilung mit μ = 0 und σ = 1", correct = TRUE),
+    answer("Ist X N(μ, σ²) verteilt, dann führt die z-Transformation auf eine N(0, 1) Verteilung", correct = TRUE),
+    answer("Wir können jede beliebige Normalverteilung in eine Standardnormalverteilung transformieren", correct = TRUE),
+    allow_retry = TRUE
+  )
+    )
+```
+
 
 
 ## Vorlesung 6
@@ -1476,25 +1648,442 @@ Der folgenden Tabelle können Sie Normwerte der beiden Tests entnehmen.
 ```{r}
 df = data.frame(Test = c("SpeedA", "SpeedB"),
                 Standardabweichung = c(5, 4),
-                Mittelwert = c(102, 100))
+                Erwartungswert = c(102, 100))
 
 knitr::kable(df)
 
 ```
 
 
-```{r quiz3_14, echo = FALSE}
+```{r vl6_1, echo = FALSE}
 quiz(
   question("Welche der folgenden Aussagen trifft zu? ",
-    answer("", correct = TRUE),
-    answer(""),
-    answer(""),
+    answer("Person A und B haben gleich gut abgeschnitten"),
+    answer("Person A hat besser abgeschnitten als Person B", correct = TRUE),
+    answer("Person B hat besser abgeschnitten als Person A"),
     answer(""), allow_retry = TRUE
   )
     )
 ```
 
+### Wissensüberprüfung 6. Vorlesung 
 
+```{r quiz6_1, echo = FALSE}
+quiz(
+  question("Die Population...",
+    answer("wird verwendet um auf Grundgesamtheit zu schließen."),
+    answer("Wird auch Grundgesamtheit genannt.", correct = TRUE),
+    answer("Ist eine zufällige Auswahl bestimmter Merkmalsträger:innen."),
+    answer("...ist die Gesamtheit aller Merkmalsträger:innen, auf die eine Untersuchungsfrage gerichtet ist", correct = TRUE),
+    allow_retry = TRUE
+  )
+    )
+```
+
+```{r quiz6_2, echo = FALSE}
+quiz(
+  question("Was sind häufig auftretende Probleme beim Ziehen von Zufallsstichproben?",
+    answer("Unterschiedliche Skalenniveaus."),
+    answer("Fehlende Repräsentativität", correct = TRUE),
+    answer("Eine bestimmte Teilgruppe von Personen in der Population hat eine höhere Wahrscheinlichkeit, in die Stichprobe gezogen zu werden, als andere Personen.", correct = TRUE),
+    answer("Unabhängigkeit der Ziehungen"),
+    allow_retry = TRUE
+  )
+    )
+```
+
+```{r quiz6_3, echo = FALSE}
+quiz(
+  question("μ>100 ist ein Beispiel für...",
+    answer("...eine Streuungsschätzung."),
+    answer("...eine Parameterschätzung."),
+    answer("...eine Hypothese, die mittels Hypothesentest überprüft werden kann.", correct = TRUE),
+    answer("...eine Intervallschätzung."),
+    allow_retry = TRUE
+  )
+    )
+```
+
+```{r quiz6_4, echo = FALSE}
+quiz(
+  question("Was ist ein naheliegender Schätzwert für π (Auftretenswahrscheinlichkeit in der Population)?",
+    answer("relative Häufigkeit in der Stichprobe", correct = TRUE),
+    answer("Mittelwert in der Stichprobe"),
+    answer("Varianz in der Stichprobe"),
+    answer("Median in der Stichprobe"),
+    allow_retry = TRUE
+  )
+    )
+```
+
+```{r quiz6_5, echo = FALSE}
+quiz(
+  question("Was ist hinsichtlich Schätzfunktionen zutreffend?",
+    answer("Realisation einer Schätzfunktion nennt sich Schätzwert.", correct = TRUE),
+    answer("Schätzfunktionen sind Ergebnisse eines Hypothesentests."),
+    answer("Zufallsvariable, die jedem möglichen Ergebnis des Zufallsexperiments den aus ihr berechneten Schätzwert zuweist.", correct = TRUE),
+    answer("Sind Ergebnisse in der Stichprobe"),
+    allow_retry = TRUE
+  )
+    )
+```
+
+```{r quiz6_6, echo = FALSE}
+quiz(
+  question("Was sind die Gütekriterien einer Schätzfunktion",
+    answer("Erwartungstreue (und Genauigkeit)", correct = TRUE),
+    answer("Effizienz", correct = TRUE),
+    answer("Konsistenz", correct = TRUE),
+    answer("Objektivität"),
+    allow_retry = TRUE
+  )
+    )
+```
+
+```{r quiz6_7, echo = FALSE}
+quiz(
+  question("Was versteht man unter der Genauigkeit einer Schätzfunktion?",
+    answer("Das ein möglichst großes Intervall bei der Schätzung herauskommt."),
+    answer("Dass sie zu möglichst „präzisen“ oder „genauen“ Schätzungen führen sollte.", correct = TRUE),
+    answer("Dass die Schätzwerte bei unendlicher Wiederholung des Zufallsexperiments im Mittel dem wahren Parameterwert entsprechen sollten"),
+    answer("Dass der Standardfehler bei wachsendem Stichprobenumfang immer kleiner wird."),
+    allow_retry = TRUE
+  )
+    )
+```
+
+```{r quiz6_8, echo = FALSE}
+quiz(
+  question("Was sind Vorteile der Standardnormalverteilung?",
+    answer("Sie ist symmetrischer als die Normalverteilung."),
+    answer("Erwartungswert liegt bei 1 und Standardabweichung bei 0."),
+    answer("Wahrscheinlichkeit für jeden z-Wert kann abgelesen werden.", correct = TRUE),
+    answer("Quantile der Standardnormalverteilung sind tabelliert.", correct = TRUE),
+    allow_retry = TRUE
+  )
+    )
+```
+
+```{r quiz6_9, echo = FALSE}
+quiz(
+  question("Wovon hängt die Breite des Konfidenzintervalls ab?",
+    answer("N", correct = TRUE),
+    answer("Streuung", correct = TRUE),
+    answer("Median"),
+    answer("Signifikanzniveau", correct = TRUE),
+    answer("Mittelwert"),
+    allow_retry = TRUE
+  )
+    )
+```
+
+```{r quiz6_10, echo = FALSE}
+quiz(
+  question("Was ist mit Bezug auf die t-Verteilung korrekt?",
+    answer("Ist Populationsvarianz jedoch nicht bekannt und muss geschätzt werden, dann ist der Quotient nicht standardnormalverteilt sondern t-verteilt", correct = TRUE),
+    answer("Die Form der t-Verteilung ist mitbestimmt durch Freiheitsgrade.", correct = TRUE),
+    answer("t-werte sind Quotienten aus zwei Varianzen."),
+    answer("Sie approximiert die NV mit zunehmender Stichprobengröße.", correct = TRUE),
+    answer("Die t-Verteilung ist wie die NV eingipfelig und symmetrisch", correct = TRUE),
+    allow_retry = TRUE
+  )
+    )
+```
+
+```{r quiz6_11, echo = FALSE}
+quiz(
+  question("Was ist hinsichtlich des Standardfehlers korrekt?",
+    answer("SE = Streuung der Stichprobenkennwerteverteilung", correct = TRUE),
+    answer("Je größer N, desto kleiner fällt er aus", correct = TRUE),
+    answer("Je größer σ in der Population, desto kleiner fällt er aus"),
+    answer("Er ist ein Maß für die Genauigkeit der Schätzung", correct = TRUE),
+    answer("Die Größe unserer Stichprobe hat keinen Einfluss auf den SE"),
+    allow_retry = TRUE
+  )
+    )
+```
+
+```{r quiz6_12, echo = FALSE}
+quiz(
+  question("Was trifft auf das Ziehen einer einfachen Zufallsstichprobe zu?",
+    answer("Der Vorgang ist ein Zufallsexperiment", correct = TRUE),
+    answer("Ein Teil der Population hat eine größere Wahrscheinlichkeit in die Stichprobe gezogen zu werden"),
+    answer("Wenn die Ziehung einer Person die Wahrscheinlichkeit der Ziehung einer anderen Person beeinflusst, können wir nicht mehr von einer einfachen Zufallsstichprobe sprechen", correct = TRUE),
+    answer("Ziehen einer Zufallsstichprobe = Zufällige Zuteilung den Personen einer Gruppe zu Eigenschaften", correct = TRUE),
+    allow_retry = TRUE
+  )
+    )
+```
+
+```{r quiz6_13, echo = FALSE}
+quiz(
+  question("Welche Aussagen sind korrekt? ",
+    answer("Das Ergebnis einer Punktschätzung ist ein Intervall von Zahlen"),
+    answer("Beispiel einer Punktschätzung: Wir gehen auf Basis unserer Stichprobe davon aus, dass der Parameter π gleich 0.45 ist", correct = TRUE),
+    answer("Beispiel einer Intervallschätzung: Wir gehen auf Basis unserer Stichprobe davon aus, dass die relative Häufigkeit der uns interessierenden Messwertausprägung in der Population gleich 0.43 ist"),
+    answer("Das Ergebnis einer Punktschätzung ist eine konkrete Zahl", correct = TRUE),
+    allow_retry = TRUE
+  )
+    )
+```
+
+```{r quiz6_14, echo = FALSE}
+quiz(
+  question("Welche Formel aus der Deskriptivstatistik verwenden wir als erwartungstreue Schätzung der Populationsvarianz? ",
+    answer("![](images/first.png){width=200px}"),
+    answer("![](images/second.png){width=200px}", correct = TRUE),
+    answer("![](images/third.png){width=200px}"),
+    allow_retry = TRUE
+  )
+    )
+```
+
+```{r quiz6_15, echo = FALSE}
+quiz(
+  question("Was versteht man unter Konsistenz einer Schätzfunktion?",
+    answer("Mit wachsendem Stichprobenumfang sollte die Schätzfunktion immer genauer werden", correct = TRUE),
+    answer("Die Schätzfunktion sollte einen geringeren Standardfehler als alle anderen erwartungstreuen Schätzfunktionen aufweisen"),
+    answer("![](images/lim.png){width=200px}", correct = TRUE),
+    answer("![](images/SD.png){width=200px}"),
+    allow_retry = TRUE
+  )
+    )
+```
+
+## Vorlesung 7
+
+### Wissensüberprüfung 7. Vorlesung 
+
+```{r quiz7_1, echo = FALSE}
+quiz(
+  question("Die Nullhypothese",
+    answer("Beinhaltet oft die neue Annahme, den angenommenen Effekt."),
+    answer("Ist das Gegenstück zur eigentlichen Untersuchungshypothese", correct = TRUE),
+    answer("Drückt eine Unterschiedlichkeit von einem Referenzwert aus"),
+    answer("Stellt meistens den aktuellen Zustand oder anders ausgedrückt den „Standard“ dar, gegen den getestet wird", correct = TRUE),
+    allow_retry = TRUE
+  )
+    )
+```
+
+```{r quiz7_2, echo = FALSE}
+quiz(
+  question("<Taxifahrer haben einen besseren Orientierungssinn als Nicht-Taxisfahrer> ist eine ",
+    answer("einseitige H0"),
+    answer("ungerichtete H1"),
+    answer("gerichtete H1", correct = TRUE),
+    answer("zweiseitige H0"),
+    allow_retry = TRUE
+  )
+    )
+```
+
+```{r quiz7_3, echo = FALSE}
+quiz(
+  question("Zur Prüfung der Hypothese <Es besteht ein Unterschied zwischen Frauen und Männern hinsichtlich der mentalen Drehung im 3D Raum> benötigt man",
+    answer("einen linksseitigen Test"),
+    answer("einen zweiseitigen Test", correct = TRUE),
+    answer("einen rechtsseitigen Test"),
+    answer("einen einseitigen Test"),
+    allow_retry = TRUE
+  )
+    )
+```
+
+```{r quiz7_4, echo = FALSE}
+quiz(
+  question("Wie und wann sollten Hypothesen formuliert werden?",
+    answer("vor der eigenen Untersuchung", correct = TRUE),
+    answer("mit Berücksichtigung der aktuellen Daten"),
+    answer("aufgrund inhaltlicher Kriterien", correct = TRUE),
+    answer("nach der Datenerhebung"),
+    allow_retry = TRUE
+  )
+    )
+```
+
+```{r quiz7_5, echo = FALSE}
+quiz(
+  question("Der kritische Wert",
+    answer("muss für ein signifikantes Ergebnis überschritten werden", correct = TRUE),
+    answer("muss für ein signifikantes Ergebnis unterschritten werden"),
+    answer("ist unabhängig vom Signifikanzniveau"),
+    answer("ist bei t-Verteilung und z-Verteilung identisch"),
+    allow_retry = TRUE
+  )
+    )
+```
+
+```{r quiz7_6, echo = FALSE}
+quiz(
+  question(" NV-Approximation der Binomialverteilung",
+    answer("Ist bei kleinen Stichproben gegeben"),
+    answer("erlaubt Gleichsetzung der NV Varianz mit np(1-p)",correct = TRUE),
+    answer("Ist bei großen Stichproben gegeben",correct = TRUE),
+    answer("erfordert eine Poisson Verteilung"),
+    allow_retry = TRUE
+  )
+    )
+```
+
+```{r quiz7_7, echo = FALSE}
+quiz(
+  question("Der p-Wert...",
+    answer("macht zusätzliche Prüfung erforderlich, wenn einseitige Hypothesen geprüft werden.", correct = TRUE),
+    answer("gibt die Wahrscheinlichkeit für den Fehler erster Art an.", correct = TRUE),
+    answer("muss durch 2 dividiert werden, wenn einseitiger p-Wert angegeben ist."),
+    answer("hat den Vorteil, dass bei der Entscheidung keine Tabelle der Verteilung der Teststatistik benötigt wird", correct = TRUE),
+    allow_retry = TRUE
+  )
+    )
+```
+
+```{r quiz7_8, echo = FALSE}
+quiz(
+  question("Was ist mit Bezug auf Fehler beim Hypothesentest korrekt?",
+    answer("Fehler 1. Art ist, wenn die Nullhypothese fälschlicherweise beibehalten wird, obwohl die Alternativhypothese wahr ist"),
+    answer("Fehler 2. Art ist, wenn die Nullhypothese fälschlicherweise beibehalten wird, obwohl die Alternativhypothese wahr ist", correct = TRUE),
+    answer("alpha--Fehler ist, wenn die Nullhypothese fälschlicherweise verworfen wird und die Alternativhypothese angenommen wird", correct = TRUE),
+    answer("Die statistische Power errechnet sich als 1-beta Fehlerwahrscheinlichkeit.", correct = TRUE),
+    allow_retry = TRUE
+  )
+    )
+```
+
+```{r quiz7_9, echo = FALSE}
+quiz(
+  question("Wovon hängt die Teststärke (Power) ab?",
+    answer("Signifikanzniveau", correct = TRUE),
+    answer("Größe des Effekts", correct = TRUE),
+    answer("Stichprobenumfang", correct = TRUE),
+    answer("Ein- oder zweiseitige Alternativhypothese", correct = TRUE),
+    allow_retry = TRUE
+  )
+    )
+```
+
+```{r quiz7_10, echo = FALSE}
+quiz(
+  question("Mit der Alpha-Fehler-Kumulierung ist gemeint, dass...",
+    answer("Der Fehler 2. Art mit Anzahl der Test wahrscheinlicher wird"),
+    answer("Die Testmacht sinkt"),
+    answer("Der Fehler 1. Art mit Anzahl der Test wahrscheinlicher wird", correct = TRUE),
+    answer("das Signifikanzniveau adjustiert werden muss", correct = TRUE),
+    allow_retry = TRUE
+  )
+    )
+```
+
+```{r quiz7_11, echo = FALSE}
+quiz(
+  question("Welche sind korrekte Schritte beim Durchführen von Hypothesentests",
+    answer("Aufstellen des Hypothesenpaars", correct = TRUE),
+    answer("Entscheidung: Test ist signifikant, nicht-signifikant oder leicht-signifikant"),
+    answer("Festlegung des Signifikanzniveaus", correct = TRUE),
+    answer("Berechnen des Signifikanzniveaus"),
+    answer("Vergleich kritischer Wert und empirischer (errechneter) Wert", correct = TRUE),
+    allow_retry = TRUE
+  )
+    )
+```
+
+```{r quiz7_12, echo = FALSE}
+quiz(
+  question("Welche sind Beispiele für Teststatistiken?",
+    answer("z-Wert", correct = TRUE),
+    answer("t-Wert", correct = TRUE),
+    answer("q-Wert"),
+    answer("F-Wert", correct = TRUE),
+    answer("r-Wert"),
+    answer("χ2-Wert", correct = TRUE),
+    allow_retry = TRUE
+  )
+    )
+```
+
+```{r quiz7_13, echo = FALSE}
+quiz(
+  question("Was sind Beispiele für gerichtete Hypothesen?",
+    answer("Männer sind größer als Frauen", correct = TRUE),
+    answer("Geld beeinflusst die Zufriedenheit von Menschen"),
+    answer("Die Durchschnittseinkommen von Männern und Frauen unterscheiden sich"),
+    answer("Eine Therapie kann depressive Symptome lindern"),
+    allow_retry = TRUE
+  )
+    )
+```
+
+```{r quiz7_14, echo = FALSE}
+quiz(
+  question("Was sind Beispiele für ungerichtete Hypothesen?",
+    answer("Eine Therapie kann depressive Symptome lindern"),
+    answer("Geld beeinflusst die Zufriedenheit von Menschen", correct = TRUE),
+    answer("Die Durchschnittseinkommen von Männern und Frauen unterscheiden sich", correct = TRUE),
+    answer("Die Lebenszufriedenheit von Menschen die in Hamburg wohnen unterscheidet sich von der Lebenszufriedenheit von Menschen die in München wohnen", correct = TRUE),
+    allow_retry = TRUE
+  )
+    )
+```
+
+```{r quiz7_15, echo = FALSE}
+quiz(
+  question("Was bedeutet ein Signifikanzniveau von α = .05",
+    answer("Durch die 5% wird ein bestimmter Verwerfungsbereich festgelegt", correct = TRUE),
+    answer("Wir erlauben uns eine 5%ige Wahrscheinlichkeit, einen α-Fehler zu begehen", correct = TRUE),
+    answer("Wir erlauben uns eine 5%ige Wahrscheinlichkeit, unsere Hypothese fälschlicherweise abzulehnen"),
+    answer("Ein Signifikanzniveau von α = .05 ist in der Wissenschaft eher unüblich"),
+    allow_retry = TRUE
+  )
+    )
+```
+
+## Vorlesung 8
+
+### Wissensüberprüfung 8. Vorlesung 
+
+```{r quiz8_1, echo = FALSE}
+quiz(
+  question("XY",
+    answer("XY"),
+    answer("XY"),
+    answer("XY"),
+    answer("XY", correct = TRUE),
+    allow_retry = TRUE
+  )
+    )
+```
+
+## Vorlesung 9
+
+### Wissensüberprüfung 9. Vorlesung 
+
+```{r quiz9_1, echo = FALSE}
+quiz(
+  question("XY",
+    answer("XY"),
+    answer("XY"),
+    answer("XY"),
+    answer("XY", correct = TRUE),
+    allow_retry = TRUE
+  )
+    )
+```
+
+## Vorlesung 10
+
+### Wissensüberprüfung 10. Vorlesung 
+
+```{r quiz10_1, echo = FALSE}
+quiz(
+  question("XY",
+    answer("XY"),
+    answer("XY"),
+    answer("XY"),
+    answer("XY", correct = TRUE),
+    allow_retry = TRUE
+  )
+    )
+```
 
 
 *Here's an exercise with some prepopulated code as well as `exercise.lines = 5` to provide a bit more initial room to work.*
