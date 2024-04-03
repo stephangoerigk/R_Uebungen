@@ -1,12 +1,12 @@
-name: Uebung1
-title: Uebung1
+name: Uebung1k
+title: Uebung1k
 username: daze02-stephan-goerigk
 account: daze02-stephan-goerigk
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
-appId: 10230606
-bundleId: 7818981
-url: https://daze02-stephan-goerigk.shinyapps.io/Uebung1/
+appId: 10550089
+bundleId: 7936362
+url: https://daze02-stephan-goerigk.shinyapps.io/Uebung1k/
 version: 1
 asMultiple: FALSE
 asStatic: FALSE
