@@ -215,8 +215,8 @@ quiz(
     answer("20 Personen gaben an, dass Katzen ihre Lieblingshaustiere seien"),
     answer("Hund = Modus", correct = TRUE),
     answer("30% der befragten Personen gaben an, dass Hunde ihre Lieblingshaustiere seien", correct = TRUE),
-    answer("N = 100"),
-    answer("N = 10", correct = TRUE), 
+    answer("N=100"),
+    answer("N=10", correct = TRUE), 
     allow_retry = TRUE
   ), caption = "Frage 14:"
     )
