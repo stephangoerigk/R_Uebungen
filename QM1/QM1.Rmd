@@ -54,7 +54,7 @@ quiz(
   question("Wofuer ist das Alter einer Versuchsperson ein Beispiel?",
     answer("Datensatz"),
     answer("Datenbank"),
-    answer("Statistik"),
+    answer("Variable", correct = TRUE),
     answer("Daten", correct = TRUE), 
     allow_retry = TRUE
   ), caption = "Frage 1:"
@@ -87,9 +87,9 @@ quiz(
 
 ```{r quiz1_4}
 quiz(
-  question("Welche sind wissenschaftliche Hypothesen?",
-    answer("Manche depressive Patienten schlafen schlechter.", correct = TRUE),
-    answer("Zwangspatienten machen häufiger sauber, als gesunde Kontrollprobanden."),
+  question("Welche der folgenden Sätze sind wissenschaftliche Hypothesen?",
+    answer("Manche depressive Patienten schlafen schlechter."),
+    answer("Zwangspatienten machen häufiger sauber, als gesunde Kontrollprobanden.", correct = TRUE),
     answer("Es gibt Menschen, die zum pathologischen Grübeln neigen."),
     answer("Es besteht ein Zusammenhand zwischen Angst und sozialer Netzwerkgröße.", correct = TRUE), 
     allow_retry = TRUE
@@ -99,7 +99,7 @@ quiz(
 
 ```{r quiz1_5}
 quiz(
-  question("Bei welchen handelt es sich um gerichtete Hypothesen?",
+  question("Bei welchen der folgenden Sätze handelt es sich um gerichtete Hypothesen?",
     answer("Frauen sind besser als Männer in mentalen Rotationsaufgaben.", correct = TRUE),
     answer("Es besteht ein Zusammenhang zwischen Schlafproblemen und Agitiertheit."),
     answer("Wenn man mehr Stress ausgesetzt ist entwickelt man leichter eine Psychose", correct = TRUE),
@@ -137,11 +137,11 @@ quiz(
 
 ```{r quiz1_8}
 quiz(
-  question("In der Hypothese: <Männer schlafen morgens länger als Frauen.> ist Geschlecht die...",
+  question("In der Hypothese: - Männer schlafen morgens länger als Frauen. - ist Geschlecht die...",
     answer("Moderatorvariable"),
-    answer("AV"),
+    answer("Abhängige Variable (AV)"),
     answer("Störvariable"),
-    answer("UV", correct = TRUE), 
+    answer("Unabhängige Variable (UV)", correct = TRUE), 
     allow_retry = TRUE
   ), caption = "Frage 8:"
     )
@@ -177,7 +177,7 @@ quiz(
 quiz(
   question(" Was macht Inferenzstatistik?",
     answer("Die Daten beschreiben"),
-    answer("Aussagen über die Population treffen", correct = TRUE),
+    answer("Auf die Population schließen", correct = TRUE),
     answer("Schließen von Population auf Stichprobe"),
     answer("Vorhersagen über die Stichprobe"), 
     allow_retry = TRUE
@@ -189,7 +189,6 @@ quiz(
 quiz(
   question("Was ist bezogen auf Hypothesen zutreffend?",
     answer("Die Nullhypothese besagt, dass der erwartete Effekt besteht"),
-    answer("H1: Der hypothetisierte Effekt besteht", correct = TRUE),
     answer("Wir versuchen die H0 zu verwerfen", correct = TRUE),
     answer("Wir versuchen die H1 zu verwerfen"),
     answer("Der angenommene Effekt wird durch die Alternativhypothese ausgedrückt", correct = TRUE), 
