@@ -1,5 +1,5 @@
 ---
-title: "R - Übung zur computergestützten Datenanalyse"
+title: "Übungsaufgaben - Übung zur computergestützten Datenanalyse"
 output: 
   learnr::tutorial:
           progressive: true
