@@ -43,6 +43,7 @@ knitr::include_graphics("images/R_logo.png")
 # hinter jede Einheit den Titel
 # Qquizfragen alle Einheiten aus Muster
 # QM1 spezifische Aufgaben hinzufügen - Interpretieren..
+# Evtl Aufgaben LMU hinzufügen? 
 # publishen 
 # in studynet verlinken 
 ```

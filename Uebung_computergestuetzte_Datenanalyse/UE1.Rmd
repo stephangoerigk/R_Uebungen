@@ -19,22 +19,13 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## Willkommen
 
-### Was können Sie von dieser Übung erwarten?
-
-Wir möchten Ihnen eine erste Möglichkeit geben, sich mit dem Statistikprogramm `R` vertraut zu machen. 
-
-Dazu verwenden wir das Paket `learnr`. 
-
-Dieses Paket gibt uns die Möglichkeit, `R` Aufgaben direkt über Ihren Browser zu üben. Dafür müssen Sie die Programme `R` und `RStudio` nicht auf dem eigenen Computer installieren. 
-
-Zunächst erhalten Sie eine Einführung in die grundlegende Funktionalität von `R`. So können Sie im Verlauf des Semesters die gelernten statistischen Analysen direkt in `R` ausprobieren.
-
-Zusätzlich finden Sie im Rahmen der Lektionen Quizaufgaben, um Ihr Wissen zu überprüfen. 
-
-
-```{r eval = TRUE, echo = F, out.width = "150px", fig.align='center'}
-knitr::include_graphics("images/R_logo.png")
+```{r}
+# Struktur anlegen analog zum Bookdown 
+# Nicos Aufgaben in Struktur einsortieren 
+# Bookdown Inhalte kürzegn, ggf. raus? 
+# 
 ```
+
 
 ## Grundlegende Arithmetik in R
 
