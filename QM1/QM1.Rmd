@@ -41,7 +41,7 @@ knitr::include_graphics("images/R_logo.png")
 
 ```{r eval=FALSE, include=FALSE}
 # hinter jede Einheit den Titel
-# Qquizfragen alle Einheiten aus Muster
+# Quizfragen alle Einheiten aus Muster
 # QM1 spezifische Aufgaben hinzufügen - Interpretieren..
 # Evtl Aufgaben LMU hinzufügen? 
 # publishen 
@@ -55,7 +55,8 @@ quiz(
     answer("Datensatz"),
     answer("Datenbank"),
     answer("Statistik"),
-    answer("Daten", correct = TRUE), allow_retry = TRUE
+    answer("Daten", correct = TRUE), 
+    allow_retry = TRUE
   )
     )
 ```
@@ -67,7 +68,8 @@ quiz(
     answer("Es können große Datensätze verarbeitet werden", correct = TRUE),
     answer("Kommt zu besseren Ergebnissen"),
     answer("Es werden weniger Flüchtigkeitsfehler gemacht", correct = TRUE),
-    answer("Iterationsbasierte Verfahren möglich", correct = TRUE), allow_retry = TRUE
+    answer("Iterationsbasierte Verfahren möglich", correct = TRUE), 
+    allow_retry = TRUE
   )
     )
 ```
@@ -78,7 +80,8 @@ quiz(
     answer("Falsifizierbarkeit", correct = TRUE),
     answer("Finalsatz"),
     answer("empirisch untersuchbar", correct = TRUE),
-    answer("Konditionalsatz", correct = TRUE), allow_retry = TRUE
+    answer("Konditionalsatz", correct = TRUE), 
+    allow_retry = TRUE
   )
     )
 ```
@@ -89,7 +92,8 @@ quiz(
     answer("Manche depressive Patienten schlafen schlechter.", correct = TRUE),
     answer("Zwangspatienten machen häufiger sauber, als gesunde Kontrollprobanden."),
     answer("Es gibt Menschen, die zum pathologischen Grübeln neigen."),
-    answer("Es besteht ein Zusammenhand zwischen Angst und sozialer Netzwerkgröße.", correct = TRUE), allow_retry = TRUE
+    answer("Es besteht ein Zusammenhand zwischen Angst und sozialer Netzwerkgröße.", correct = TRUE), 
+    allow_retry = TRUE
   )
     )
 ```
@@ -100,7 +104,8 @@ quiz(
     answer("Frauen sind besser als Männer in mentalen Rotationsaufgaben.", correct = TRUE),
     answer("Es besteht ein Zusammenhang zwischen Schlafproblemen und Agitiertheit."),
     answer("Wenn man mehr Stress ausgesetzt ist entwickelt man leichter eine Psychose", correct = TRUE),
-    answer("Es besteht ein negativer Zusammenhang zwischen Vermeidungsverhalten und beruflichem Erfolg.", correct = TRUE), allow_retry = TRUE
+    answer("Es besteht ein negativer Zusammenhang zwischen Vermeidungsverhalten und beruflichem Erfolg.", correct = TRUE), 
+    allow_retry = TRUE
   )
     )
 ```
@@ -111,7 +116,8 @@ quiz(
     answer("stetige Variable", correct = TRUE),
     answer("latente Variable"),
     answer("dichotome Variable"),
-    answer("manifeste Variable", correct = TRUE), allow_retry = TRUE
+    answer("manifeste Variable", correct = TRUE), 
+    allow_retry = TRUE
   )
     )
 ```
@@ -124,8 +130,8 @@ quiz(
     answer("Extraversion", correct = TRUE),
     answer("Zittern"),
     answer("Blutdruck"),
-    answer("Einsamkeit", correct = TRUE)
-    , allow_retry = TRUE
+    answer("Einsamkeit", correct = TRUE), 
+    allow_retry = TRUE
   )
     )
 ```
@@ -136,7 +142,8 @@ quiz(
     answer("Moderatorvariable"),
     answer("AV"),
     answer("Störvariable"),
-    answer("UV", correct = TRUE), allow_retry = TRUE
+    answer("UV", correct = TRUE), 
+    allow_retry = TRUE
   )
     )
 ```
@@ -148,7 +155,8 @@ quiz(
     answer("Population = Teilgruppe die das interessierende Merkmal hat."),
     answer("Population wird gezogen."),
     answer("Verteilung innerhalb der Population basiert auf Wahrscheinlichkeitsannahmen.", correct = TRUE),
-    answer("Verteilung innerhalb der Stichprobe basiert auf Beobachtung.", correct = TRUE), allow_retry = TRUE
+    answer("Verteilung innerhalb der Stichprobe basiert auf Beobachtung.", correct = TRUE), 
+    allow_retry = TRUE
   )
     )
 ```
@@ -160,7 +168,8 @@ quiz(
     answer("Mittelwert", correct = TRUE),
     answer("t-Test"),
     answer("Standardabweichung"),
-    answer("Median", correct = TRUE), allow_retry = TRUE
+    answer("Median", correct = TRUE), 
+    allow_retry = TRUE
   )
     )
 ```
@@ -171,7 +180,8 @@ quiz(
     answer("Die Daten beschreiben"),
     answer("Aussagen über die Population treffen", correct = TRUE),
     answer("Schließen von Population auf Stichprobe"),
-    answer("Vorhersagen über die Stichprobe"), allow_retry = TRUE
+    answer("Vorhersagen über die Stichprobe"), 
+    allow_retry = TRUE
   )
     )
 ```
@@ -183,7 +193,8 @@ quiz(
     answer("H1: Der hypothetisierte Effekt besteht", correct = TRUE),
     answer("Wir versuchen die H0 zu verwerfen", correct = TRUE),
     answer("Wir versuchen die H1 zu verwerfen"),
-    answer("Der angenommene Effekt wird durch die Alternativhypothese ausgedrückt", correct = TRUE), allow_retry = TRUE
+    answer("Der angenommene Effekt wird durch die Alternativhypothese ausgedrückt", correct = TRUE), 
+    allow_retry = TRUE
   )
     )
 ```
@@ -194,7 +205,8 @@ quiz(
     answer("Störvariablen sind alle Einflussgrößen auf die AV, die in einer Untersuchung nicht erfasst werden", correct = TRUE),
     answer("Ziel ist es, Störvariablen möglichst zu kontrollieren und zu erfassen", correct = TRUE),
     answer("Bsp. im Sinne der Abbildung: Eine neue Unterrichtsmethode (UV) soll anhand des Notendurchschnitts (AV) evaluiert werden. Ein Teil der Klasse wiederholt das Jahr jedoch und es bleibt unberücksichtigt, dass sie den Stoff bereits im vergangenen Jahr durchgenommen haben.", correct = TRUE),
-    answer("Bsp. im Sinne der Abbildung: Schulnote (UV) beeinflusst Selbstwertgefühl, Selbstwertgefühl beeinflusst Lebenszufriedenheit (AV)"), allow_retry = TRUE
+    answer("Bsp. im Sinne der Abbildung: Schulnote (UV) beeinflusst Selbstwertgefühl, Selbstwertgefühl beeinflusst Lebenszufriedenheit (AV)"), 
+    allow_retry = TRUE
   )
     )
 ```
@@ -206,7 +218,8 @@ quiz(
     answer("Hund = Modus", correct = TRUE),
     answer("30% der befragten Personen gaben an, dass Hunde ihre Lieblingshaustiere seien", correct = TRUE),
     answer("N = 100"),
-    answer("N = 10", correct = TRUE), allow_retry = TRUE
+    answer("N = 10", correct = TRUE), 
+    allow_retry = TRUE
   )
     )
 ```
