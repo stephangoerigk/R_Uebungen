@@ -10,10 +10,10 @@ runtime: shiny_prerendered
 
 ```{r setup, include=FALSE}
 library(learnr)
-library(psych)
-library(shiny)
-library(faux)
-library(tidyverse)
+# library(psych)
+# library(shiny)
+# library(faux)
+# library(tidyverse)
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
@@ -37,9 +37,9 @@ knitr::include_graphics("images/R_logo.png")
 ```
 
 
-## Einheit 1 - 
+## Einheit 1
 
-```{r}
+```{r eval=FALSE, include=FALSE}
 # hinter jede Einheit den Titel
 # Qquizfragen alle Einheiten aus Muster
 # QM1 spezifische Aufgaben hinzufügen - Interpretieren..
@@ -49,9 +49,7 @@ knitr::include_graphics("images/R_logo.png")
 # neuer test
 ```
 
-
-
-```{r quiz1_1, echo = FALSE}
+```{r quiz1_1}
 quiz(
   question("Wofuer ist das Alter einer Versuchsperson ein Beispiel?",
     answer("Datensatz"),
@@ -61,6 +59,7 @@ quiz(
   )
     )
 ```
+
 
 ```{r quiz1_2, echo = FALSE}
 quiz(
@@ -116,6 +115,7 @@ quiz(
   )
     )
 ```
+
 
 ```{r quiz1_7, echo = FALSE}
 quiz(
@@ -210,9 +210,6 @@ quiz(
   )
     )
 ```
-
-
-
 
 ## Einheit 2
 

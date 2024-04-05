@@ -1,0 +1,154 @@
+---
+title: "Tutorial"
+output: learnr::tutorial
+runtime: shiny_prerendered
+---
+
+```{r setup, include=FALSE}
+library(learnr)
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+## Topic 1
+
+### Exercise 
+
+*Here's a simple exercise with an empty code chunk provided for entering the answer.*
+
+Write the R code required to add two plus two:
+
+```{r two-plus-two, exercise=TRUE}
+
+```
+
+### Exercise with Code
+
+*Here's an exercise with some prepopulated code as well as `exercise.lines = 5` to provide a bit more initial room to work.*
+
+Now write a function that adds any two numbers and then call it:
+
+```{r add-function, exercise=TRUE, exercise.lines = 5}
+add <- function() {
+  
+}
+```
+
+```{r quiz1_1}
+quiz(
+  question("Wofuer ist das Alter einer Versuchsperson ein Beispiel?",
+    answer("Datensatz"),
+    answer("Datenbank"),
+    answer("Statistik"),
+    answer("Daten", correct = TRUE), allow_retry = TRUE
+  )
+    )
+```
+
+```{r quiz1_2, echo = FALSE}
+quiz(
+  question("Was sind Vorteile digitaler Datenanalyse?",
+    answer("Es können große Datensätze verarbeitet werden", correct = TRUE),
+    answer("Kommt zu besseren Ergebnissen"),
+    answer("Es werden weniger Flüchtigkeitsfehler gemacht", correct = TRUE),
+    answer("Iterationsbasierte Verfahren möglich", correct = TRUE), allow_retry = TRUE
+  )
+    )
+```
+
+```{r quiz1_3, echo = FALSE}
+quiz(
+  question("Was sind Kriterien für wissenschaftliche Hypothesen?",
+    answer("Falsifizierbarkeit", correct = TRUE),
+    answer("Finalsatz"),
+    answer("empirisch untersuchbar", correct = TRUE),
+    answer("Konditionalsatz", correct = TRUE), allow_retry = TRUE
+  )
+    )
+```
+
+```{r quiz1_4, echo = FALSE}
+quiz(
+  question("Welche sind wissenschaftliche Hypothesen?",
+    answer("Manche depressive Patienten schlafen schlechter.", correct = TRUE),
+    answer("Zwangspatienten machen häufiger sauber, als gesunde Kontrollprobanden."),
+    answer("Es gibt Menschen, die zum pathologischen Grübeln neigen."),
+    answer("Es besteht ein Zusammenhand zwischen Angst und sozialer Netzwerkgröße.", correct = TRUE), allow_retry = TRUE
+  )
+    )
+```
+
+```{r quiz1_5, echo = FALSE}
+quiz(
+  question("Bei welchen handelt es sich um gerichtete Hypothesen?",
+    answer("Frauen sind besser als Männer in mentalen Rotationsaufgaben.", correct = TRUE),
+    answer("Es besteht ein Zusammenhang zwischen Schlafproblemen und Agitiertheit."),
+    answer("Wenn man mehr Stress ausgesetzt ist entwickelt man leichter eine Psychose", correct = TRUE),
+    answer("Es besteht ein negativer Zusammenhang zwischen Vermeidungsverhalten und beruflichem Erfolg.", correct = TRUE), allow_retry = TRUE
+  )
+    )
+```
+
+```{r quiz1_6, echo = FALSE}
+quiz(
+  question("Gewicht [kg] ist eine..",
+    answer("stetige Variable", correct = TRUE),
+    answer("latente Variable"),
+    answer("dichotome Variable"),
+    answer("manifeste Variable", correct = TRUE), allow_retry = TRUE
+  )
+    )
+```
+
+```{r quiz1_7, echo = FALSE}
+quiz(
+  question("Welche der folgenden sind latente Variablen?",
+    answer("Persönlichkeit", correct = TRUE),
+    answer("Extraversion", correct = TRUE),
+    answer("Zittern"),
+    answer("Blutdruck"),
+    answer("Einsamkeit", correct = TRUE)
+    , allow_retry = TRUE
+  )
+    )
+```
+
+## Topic 2
+
+### Exercise with Hint
+
+*Here's an exercise where the chunk is pre-evaluated via the `exercise.eval` option (so the user can see the default output we'd like them to customize). We also add a "hint" to the correct solution via the chunk immediate below labeled `print-limit-hint`.*
+
+Modify the following code to limit the number of rows printed to 5:
+
+```{r print-limit, exercise=TRUE, exercise.eval=TRUE}
+mtcars
+```
+
+```{r print-limit-hint}
+head(mtcars)
+```
+
+### Quiz
+
+*You can include any number of single or multiple choice questions as a quiz. Use the `question` function to define a question and the `quiz` function for grouping multiple questions together.*
+
+Some questions to verify that you understand the purposes of various base and recommended R packages:
+
+```{r quiz}
+quiz(
+  question("Which package contains functions for installing other R packages?",
+    answer("base"),
+    answer("tools"),
+    answer("utils", correct = TRUE),
+    answer("codetools")
+  ),
+  question("Which of the R packages listed below are used to create plots?",
+    answer("lattice", correct = TRUE),
+    answer("tools"),
+    answer("stats"),
+    answer("grid", correct = TRUE)
+  )
+)
+```
+

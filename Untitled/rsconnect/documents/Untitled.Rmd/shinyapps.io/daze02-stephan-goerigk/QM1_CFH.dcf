@@ -1,12 +1,12 @@
-name: Uebung1k
-title: Uebung1k
+name: QM1_CFH
+title: QM1_CFH
 username: daze02-stephan-goerigk
 account: daze02-stephan-goerigk
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
-appId: 10550089
-bundleId: 7936362
-url: https://daze02-stephan-goerigk.shinyapps.io/Uebung1k/
+appId: 11678862
+bundleId: 8459070
+url: https://daze02-stephan-goerigk.shinyapps.io/QM1_CFH/
 version: 1
 asMultiple: FALSE
 asStatic: FALSE
