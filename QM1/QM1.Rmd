@@ -47,7 +47,7 @@ knitr::include_graphics("images/R_logo.png")
 # publishen 
 # in studynet verlinken 
 
-# Seinen Namen hinschreiben ##Test
+# hate it!
 ```
 
 
