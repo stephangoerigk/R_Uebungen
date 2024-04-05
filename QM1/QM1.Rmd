@@ -201,7 +201,7 @@ quiz(
 
 ```{r quiz1_14, echo = FALSE}
 quiz(
-  question("Wir fertigen nach einer Befragung zu Lieblingshaustieren folgende Tabelle an. Welche Aussagen sind zutreffend? <br> ![](images/Tabelle1.jpeg){width=400px}",
+  question("Wir fertigen nach einer Befragung zu Lieblingshaustieren folgende Tabelle an. Welche Aussagen sind zutreffend? <br><br> ![](images/Tabelle1.jpeg){width=400px}",
     answer("20 Personen gaben an, dass Katzen ihre Lieblingshaustiere seien"),
     answer("Hund = Modus", correct = TRUE),
     answer("30% der befragten Personen gaben an, dass Hunde ihre Lieblingshaustiere seien", correct = TRUE),
