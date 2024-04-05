@@ -61,7 +61,6 @@ quiz(
     )
 ```
 
-
 ```{r quiz1_2, echo = FALSE}
 quiz(
   question("Was sind Vorteile digitaler Datenanalyse?",
