@@ -57,11 +57,11 @@ quiz(
     answer("Statistik"),
     answer("Daten", correct = TRUE), 
     allow_retry = TRUE
-  )
+  ), caption = "Frage 1:"
     )
 ```
 
-```{r quiz1_2, echo = FALSE}
+```{r quiz1_2}
 quiz(
   question("Was sind Vorteile digitaler Datenanalyse?",
     answer("Es können große Datensätze verarbeitet werden", correct = TRUE),
@@ -69,11 +69,11 @@ quiz(
     answer("Es werden weniger Flüchtigkeitsfehler gemacht", correct = TRUE),
     answer("Iterationsbasierte Verfahren möglich", correct = TRUE), 
     allow_retry = TRUE
-  )
+  ), caption = "Frage 2:"
     )
 ```
 
-```{r quiz1_3, echo = FALSE}
+```{r quiz1_3}
 quiz(
   question("Was sind Kriterien für wissenschaftliche Hypothesen?",
     answer("Falsifizierbarkeit", correct = TRUE),
@@ -81,11 +81,11 @@ quiz(
     answer("empirisch untersuchbar", correct = TRUE),
     answer("Konditionalsatz", correct = TRUE), 
     allow_retry = TRUE
-  )
+  ), caption = "Frage 3:"
     )
 ```
 
-```{r quiz1_4, echo = FALSE}
+```{r quiz1_4}
 quiz(
   question("Welche sind wissenschaftliche Hypothesen?",
     answer("Manche depressive Patienten schlafen schlechter.", correct = TRUE),
@@ -93,11 +93,11 @@ quiz(
     answer("Es gibt Menschen, die zum pathologischen Grübeln neigen."),
     answer("Es besteht ein Zusammenhand zwischen Angst und sozialer Netzwerkgröße.", correct = TRUE), 
     allow_retry = TRUE
-  )
+  ), caption = "Frage 4:"
     )
 ```
 
-```{r quiz1_5, echo = FALSE}
+```{r quiz1_5}
 quiz(
   question("Bei welchen handelt es sich um gerichtete Hypothesen?",
     answer("Frauen sind besser als Männer in mentalen Rotationsaufgaben.", correct = TRUE),
@@ -105,11 +105,11 @@ quiz(
     answer("Wenn man mehr Stress ausgesetzt ist entwickelt man leichter eine Psychose", correct = TRUE),
     answer("Es besteht ein negativer Zusammenhang zwischen Vermeidungsverhalten und beruflichem Erfolg.", correct = TRUE), 
     allow_retry = TRUE
-  )
+  ), caption = "Frage 5:"
     )
 ```
 
-```{r quiz1_6, echo = FALSE}
+```{r quiz1_6}
 quiz(
   question("Gewicht [kg] ist eine..",
     answer("stetige Variable", correct = TRUE),
@@ -117,12 +117,12 @@ quiz(
     answer("dichotome Variable"),
     answer("manifeste Variable", correct = TRUE), 
     allow_retry = TRUE
-  )
+  ), caption = "Frage 6:"
     )
 ```
 
 
-```{r quiz1_7, echo = FALSE}
+```{r quiz1_7}
 quiz(
   question("Welche der folgenden sind latente Variablen?",
     answer("Persönlichkeit", correct = TRUE),
@@ -131,11 +131,11 @@ quiz(
     answer("Blutdruck"),
     answer("Einsamkeit", correct = TRUE), 
     allow_retry = TRUE
-  )
+  ), caption = "Frage 7:"
     )
 ```
 
-```{r quiz1_8, echo = FALSE}
+```{r quiz1_8}
 quiz(
   question("In der Hypothese: <Männer schlafen morgens länger als Frauen.> ist Geschlecht die...",
     answer("Moderatorvariable"),
@@ -143,11 +143,11 @@ quiz(
     answer("Störvariable"),
     answer("UV", correct = TRUE), 
     allow_retry = TRUE
-  )
+  ), caption = "Frage 8:"
     )
 ```
 
-```{r quiz1_9, echo = FALSE}
+```{r quiz1_9}
 quiz(
   question("Welche Aussagen sind hinsichtlich der Population und Stichprobe korrekt?",
     answer("Population wird auch als Grundgesamtheit bezeichnet", correct = TRUE),
@@ -156,11 +156,11 @@ quiz(
     answer("Verteilung innerhalb der Population basiert auf Wahrscheinlichkeitsannahmen.", correct = TRUE),
     answer("Verteilung innerhalb der Stichprobe basiert auf Beobachtung.", correct = TRUE), 
     allow_retry = TRUE
-  )
+  ), caption = "Frage 9:"
     )
 ```
 
-```{r quiz1_10, echo = FALSE}
+```{r quiz1_10}
 quiz(
   question("Welche sind Maße der zentralen Tendenz?",
     answer("Varianz"),
@@ -169,11 +169,11 @@ quiz(
     answer("Standardabweichung"),
     answer("Median", correct = TRUE), 
     allow_retry = TRUE
-  )
+  ), caption = "Frage 10:"
     )
 ```
 
-```{r quiz1_11, echo = FALSE}
+```{r quiz1_11}
 quiz(
   question(" Was macht Inferenzstatistik?",
     answer("Die Daten beschreiben"),
@@ -181,11 +181,11 @@ quiz(
     answer("Schließen von Population auf Stichprobe"),
     answer("Vorhersagen über die Stichprobe"), 
     allow_retry = TRUE
-  )
+  ), caption = "Frage 11:"
     )
 ```
 
-```{r quiz1_12, echo = FALSE}
+```{r quiz1_12}
 quiz(
   question("Was ist bezogen auf Hypothesen zutreffend?",
     answer("Die Nullhypothese besagt, dass der erwartete Effekt besteht"),
@@ -194,11 +194,11 @@ quiz(
     answer("Wir versuchen die H1 zu verwerfen"),
     answer("Der angenommene Effekt wird durch die Alternativhypothese ausgedrückt", correct = TRUE), 
     allow_retry = TRUE
-  )
+  ), caption = "Frage 12:"
     )
 ```
 
-```{r quiz1_13, echo = FALSE}
+```{r quiz1_13}
 quiz(
   question("Was ist zutreffend? <br> ![](images/Stoervariable.jpeg){width=400px}",
     answer("Störvariablen sind alle Einflussgrößen auf die AV, die in einer Untersuchung nicht erfasst werden", correct = TRUE),
@@ -206,11 +206,11 @@ quiz(
     answer("Bsp. im Sinne der Abbildung: Eine neue Unterrichtsmethode (UV) soll anhand des Notendurchschnitts (AV) evaluiert werden. Ein Teil der Klasse wiederholt das Jahr jedoch und es bleibt unberücksichtigt, dass sie den Stoff bereits im vergangenen Jahr durchgenommen haben.", correct = TRUE),
     answer("Bsp. im Sinne der Abbildung: Schulnote (UV) beeinflusst Selbstwertgefühl, Selbstwertgefühl beeinflusst Lebenszufriedenheit (AV)"), 
     allow_retry = TRUE
-  )
+  ), caption = "Frage 13:"
     )
 ```
 
-```{r quiz1_14, echo = FALSE}
+```{r quiz1_14}
 quiz(
   question("Wir fertigen nach einer Befragung zu Lieblingshaustieren folgende Tabelle an. Welche Aussagen sind zutreffend? <br><br> ![](images/Tabelle1.jpeg){width=400px}",
     answer("20 Personen gaben an, dass Katzen ihre Lieblingshaustiere seien"),
@@ -219,7 +219,7 @@ quiz(
     answer("N = 100"),
     answer("N = 10", correct = TRUE), 
     allow_retry = TRUE
-  )
+  ), caption = "Frage 14:"
     )
 ```
 
