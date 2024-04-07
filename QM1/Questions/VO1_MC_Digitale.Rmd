@@ -1,0 +1,29 @@
+Question
+========
+"Was sind Vorteile digitaler Datenanalyse?"
+
+Answerlist
+----------
+* Es können große Datensätze verarbeitet werden.
+* Man kommt zu besseren Ergebnissen.
+* Es werden weniger Übertragungsfehler gemacht.
+* Iterationsbasierte (data-driven) Verfahren möglich.
+
+
+Solution
+========
+
+Answerlist
+----------
+* Richtig. Sammlung und Speicherung großer Mengen von Daten wird ermöglicht.
+* Falsch. Digitale Datenanalyse führt nicht pauschal zu höherer Qualität.
+* Richtig. Schablonen und digitale Verarbeitung führen zu weniger Flüchtigkeitsfehlern.
+* Richtig. Durch schnelle Rechenprozesse können viele Lösungen probiert und miteinander verglichen werden.
+
+    
+Meta-information
+================
+exname: digidaten
+extype: mchoice 
+exsolution: 1011
+exshuffle: TRUE

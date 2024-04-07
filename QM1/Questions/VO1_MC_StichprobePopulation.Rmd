@@ -1,0 +1,31 @@
+Question
+========
+Welche Aussagen sind hinsichtlich der Population und Stichprobe korrekt?
+
+Answerlist
+----------
+* Die Population wird auch als Grundgesamtheit bezeichnet.
+* Population = Zufällig aufgewählte Teilgruppe die das interessierende Merkmal hat.
+* Die Population wird gezogen.
+* Verteilung einer Variable innerhalb der Stichprobe basiert auf Wahrscheinlichkeitsannahmen (z.B. Normalverteilung).
+* Verteilung einer Variable innerhalb der Stichprobe basiert auf Beobachtung.
+
+
+Solution
+========
+
+Answerlist
+----------
+* Richtig. Für eine Moderation brauchen wir minstestens 3 Variablen.
+* Falsch. Schlaf ist die Variable, die erklärt wird, bzw. sich in "Abhängigkeit" von Geschlecht verändert.
+* Falsch. Die Stichprobe wird aus der Population gezogen.
+* Falsch. Die Population ist i.d.R. zu groß, als dass wir alle Werte beobachten können, somit bleiben uns nur Wahrscheinlichkeitsannahmen auf Basis der kleineren Stichprobe(n).
+* Richtig. Die Stichprobe ist kleiner als die Population, weshalb wir alle Werte beobachten können.
+
+
+Meta-information
+================
+exname: StichprobePopulation
+extype: mchoice 
+exsolution: 10001
+exshuffle: TRUE

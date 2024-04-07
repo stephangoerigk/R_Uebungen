@@ -1,0 +1,29 @@
+Question
+========
+Welche der folgenden Sätze sind wissenschaftliche Hypothesen?
+
+Answerlist
+----------
+* Depressive Patienten schlafen schlecht.
+* Zwangspatienten machen häufiger sauber, als gesunde Kontrollprobanden.
+* Es gibt Menschen, die zum pathologischen Grübeln neigen.
+* Es besteht ein Zusammenhand zwischen Angst und sozialer Netzwerkgröße.
+
+
+Solution
+========
+
+Answerlist
+----------
+* Falsch. Wenn-dann Struktur nicht gegeben, daher nicht falsifizierbar.
+* Richtig. Dies ist ein Beispiel für eine Unterschiedshypothese.
+* Falsch. Kein All-Satz.
+* Richtig. Dies ist ein Beispiel für eine Zusammenhangshypothese.
+
+
+Meta-information
+================
+exname: Hypothesen2
+extype: mchoice 
+exsolution: 0101
+exshuffle: TRUE

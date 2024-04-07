@@ -1,0 +1,29 @@
+Question
+========
+Wofür ist das Alter einer Versuchsperson ein Beispiel?
+
+Answerlist
+----------
+* Datensatz
+* Datenbank
+* Variable
+* Daten
+
+
+Solution
+========
+
+Answerlist
+----------
+* Falsch. Datensätze haben in der Regel mehrere Variablen.
+* Falsch. Organisierte Sammlung von strukturierten Informationen oder Daten.
+* Richtig. Das Alter kann eine Varible sein und somit Teil eines Datensatzes.
+* Richtig. Die Altersangaben einzelner Fälle sind Daten.
+
+
+Meta-information
+================
+exname: Q1.1
+extype: mchoice 
+exsolution: 0011
+exshuffle: TRUE

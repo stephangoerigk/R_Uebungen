@@ -1,0 +1,29 @@
+Question
+========
+Was sind Kriterien für wissenschaftliche Hypothesen?
+
+Answerlist
+----------
+* Falsifizierbarkeit
+* Finalsatz
+* Empirisch untersuchbar
+* Konditionalsatz
+
+
+Solution
+========
+
+Answerlist
+----------
+* Richtig. Wiss. Hypothesen müssen durch Erfahrungen potenziell widerlegbar sein.
+* Falsch. Dieses Kriterium gibt es nicht.
+* Richtig. Wiss. Hypothesen müsen sich auf reale Sachverhalte beziehen, die empirisch untersuchbar sind.
+* Richtig. Wiss. Hypothesen solten zumindest implizit die Form eines Konditionalsatzes haben (wenn-dann, je-desto)
+
+
+Meta-information
+================
+exname: Hypothesen
+extype: mchoice 
+exsolution: 1011
+exshuffle: TRUE

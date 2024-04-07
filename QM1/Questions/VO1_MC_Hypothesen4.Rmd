@@ -1,0 +1,29 @@
+Question
+========
+Was ist bezogen auf Hypothesenpaare zutreffend?
+
+Answerlist
+----------
+* Die Nullhypothese $(H_0)$ besagt, dass ein Effekt besteht.
+* Beim Nullhypothesentesten versuchen wir die $H_0$ zu verwerfen.
+* Wir versuchen die Alternativhypothese $(H_1)$ zu verwerfen.
+* Der postulierte Effekt der Forschungsfrage wird i.d.R. durch die $H_1$ ausgedrückt.
+
+
+Solution
+========
+
+Answerlist
+----------
+* Falsch. Bei der $H_0$ wird i.d.R. von Gleichheit (kein Signal) ausgegangen.
+* Richtig. Wir testen "gegen die Nullhypothese".
+* Falsch. Wir versuchen die Nullhypothese $(H_0)$ zu verwerfen.
+* Richtig. Die $H_1$ entspricht dem Vorhandensein eines Signals.
+
+
+Meta-information
+================
+exname: Hypothesen4
+extype: mchoice 
+exsolution: 0101
+exshuffle: TRUE

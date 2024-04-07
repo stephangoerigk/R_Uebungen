@@ -1,0 +1,29 @@
+Question
+========
+Gewicht [kg] ist eine...
+
+Answerlist
+----------
+* Stetige Variable
+* Latente Variable
+* Dichotome Variable
+* Manifeste Variable
+
+
+Solution
+========
+
+Answerlist
+----------
+* Richtig. Jedes Intervall besitzt im Prinzip unendlich viele Merkmalsausprägungen.
+* Falsch. Gewicht [kg] ist direkt beobachtbar.
+* Falsch. Gewicht [kg] hat mehr als 2 Abstufungen.
+* Richtig. Gewicht [kg] ist direkt beobachtbar.
+
+
+Meta-information
+================
+exname: Variablenarten1
+extype: mchoice 
+exsolution: 1001
+exshuffle: TRUE

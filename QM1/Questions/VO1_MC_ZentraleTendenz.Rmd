@@ -1,0 +1,31 @@
+Question
+========
+Welches sind Maße der zentralen Tendenz?
+
+Answerlist
+----------
+* Varianz
+* Mittelwert
+* unabhängiger t-Test
+* Standardabweichung
+* Median
+
+
+Solution
+========
+
+Answerlist
+----------
+* Falsch. Varianz ist die Streuung der Werte um ein Maß der zentralen Tendenz (meist Mittelwert).
+* Richtig. Der Mittelwert ist der Durchschnitt aller Werte.
+* Falsch. Der unabhängige t-Test ist ein statistisches Verfahren zum Vergleich der zentralen Tendenzen (meist Mittelwerte) zweier Gruppen.
+* Falsch. Varianz ist die Streuung der Werte um ein Maß der zentralen Tendenz (meist Mittelwert).
+* Richtig. Median ist der Wert, der genau in der Mitte einer Datenverteilung liegt.
+
+
+Meta-information
+================
+exname: ZentraleTendenz
+extype: mchoice 
+exsolution: 01001
+exshuffle: TRUE

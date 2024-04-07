@@ -1,0 +1,29 @@
+Question
+========
+Bei welchen der folgenden Sätze handelt es sich um gerichtete Hypothesen?
+
+Answerlist
+----------
+* Frauen sind besser als Männer in mentalen Rotationsaufgaben.
+* Es besteht ein Zusammenhang zwischen Schlafproblemen und Agitiertheit.
+* Wenn man mehr Stress ausgesetzt ist entwickelt man leichter eine Psychose.
+* Es besteht ein negativer Zusammenhang zwischen Vermeidungsverhalten und beruflichem Erfolg.
+
+
+Solution
+========
+
+Answerlist
+----------
+* Richtig. Es handelt sich um eine gerichtete Unterschiedshypothese (Frauen > Männer).
+* Falsch. Dies ist ein Beispiel für eine ungerichtete Zusammenhangshypothese.
+* Richtig. Dies ist ein Beispiel für eine gerichtete Zusammenhangshypothese (positiver Zusammenhang).
+* Richtig. Dies ist ein Beispiel für eine gerichtete Zusammenhangshypothese (negativer Zusammenhang).
+
+
+Meta-information
+================
+exname: Hypothesen3
+extype: mchoice 
+exsolution: 1011
+exshuffle: TRUE

@@ -1,0 +1,124 @@
+---
+title: "Übungsaufgaben - Quantitative Methoden I"
+output: 
+  learnr::tutorial:
+          progressive: true
+          allow_skip: true
+
+runtime: shiny_prerendered
+---
+
+```{r setup, include=FALSE}
+library(learnr)
+library(psych)
+library(shiny)
+library(faux)
+library(tidyverse)
+library(exams2learnr)
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Willkommen
+
+### Was können Sie von dieser Übung erwarten?
+
+Im Folgenden finden Übungsaufgaben zur Vorlesung Vorlesung Statistik I (B-P 9.3-VO) im Modul Quantitative Methoden I (B-P 9.3). 
+
+Dazu verwenden wir das Paket `learnr`. 
+
+Dieses Paket gibt uns u.a. die Möglichkeit, `R` Aufgaben direkt über Ihren Browser zu üben. Dafür müssen Sie die Programme `R` und `RStudio` nicht auf dem eigenen Computer installieren. 
+
+Zusätzlich finden Sie im Rahmen der Lektionen Quizaufgaben, um Ihr Wissen zu überprüfen. 
+
+
+```{r eval = TRUE, echo = F, out.width = "150px", fig.align='center'}
+knitr::include_graphics("images/R_logo.png")
+```
+
+## Einheit 1
+
+```{r eval=FALSE, include=FALSE}
+# hinter jede Einheit den Titel
+# Quizfragen alle Einheiten aus Muster
+# QM1 spezifische Aufgaben hinzufügen - Interpretieren..
+# Evtl Aufgaben LMU hinzufügen? 
+# publishen 
+# in studynet verlinken 
+# neuer test
+```
+
+```{r VO1_MC_Alter, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO1_MC_Alter.Rmd", allow_retry = TRUE)
+```
+
+```{r VO1_MC_Digitale, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO1_MC_Digitale.Rmd", allow_retry = TRUE)
+```
+
+```{r VO1_MC_Hypothesen1, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO1_MC_Hypothesen1.Rmd", allow_retry = TRUE)
+```
+
+```{r VO1_MC_Hypothesen2, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO1_MC_Hypothesen2.Rmd", allow_retry = TRUE)
+```
+
+```{r VO1_MC_Hypothesen3, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO1_MC_Hypothesen3.Rmd", allow_retry = TRUE)
+```
+
+```{r VO1_MC_Variablenarten1, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO1_MC_Variablenarten1.Rmd", allow_retry = TRUE)
+```
+
+```{r VO1_MC_Variablenarten2, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO1_MC_Variablenarten2.Rmd", allow_retry = TRUE)
+```
+
+```{r VO1_MC_StichprobePopulation, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO1_MC_StichprobePopulation.Rmd", allow_retry = TRUE)
+```
+
+```{r VO1_MC_ZentraleTendenz, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO1_MC_ZentraleTendenz.Rmd", allow_retry = TRUE)
+```
+
+```{r VO1_MC_Inferenzstatistik, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO1_MC_Inferenzstatistik.Rmd", allow_retry = TRUE)
+```
+
+```{r VO1_MC_Hypothesen4, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO1_MC_Hypothesen4.Rmd", allow_retry = TRUE)
+```
+
+```{r VO1_MC_Stoervariable, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO1_MC_Stoervariable.Rmd", allow_retry = TRUE)
+```
+
+```{r VO1_MC_Haeufigkeitstabelle, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO1_MC_Haeufigkeitstabelle.Rmd", allow_retry = TRUE)
+```
+
+## Einheit 2
+
+## Einheit 3
+
+## Einheit 4
+
+## Einheit 5
+
+## Einheit 6
+
+## Einheit 7
+
+## Einheit 8
+
+## Einheit 9
+
+## Einheit 10
+
+## Einheit 11
+
+## Einheit 12
+
+## Einheit 13

@@ -1,0 +1,29 @@
+Question
+========
+Was ist das Ziel der Inferenzstatistik?
+
+Answerlist
+----------
+* Die beobachteten Daten beschreiben.
+* Auf Basis der beobachteten Daten auf die Population schließen.
+* Das Schließen von Population auf Stichprobe.
+* Vorhersagen über die Stichprobe machen.
+
+
+Solution
+========
+
+Answerlist
+----------
+* Falsch. Das wäre das Ziel der  Deskriptivstatistik 
+* Richtig. Da wir die Population aufgrund ihrer Größe nicht vollständig erheben können.
+* Falsch. Anders herum.
+* Falsch. Die Stichprobe liegt vollständig vor - Vorhersagen sind nicht notwendig.
+
+
+Meta-information
+================
+exname: Inferenzstatistik
+extype: mchoice 
+exsolution: 0100
+exshuffle: TRUE

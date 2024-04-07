@@ -1,0 +1,29 @@
+Question
+========
+In der Hypothese: - Männer schlafen morgens länger als Frauen. - ist Geschlecht die...
+
+Answerlist
+----------
+* Moderatorvariable
+* Abhängige Variable (AV)
+* Störvariable
+* Unabhängige Variable (UV)
+
+
+Solution
+========
+
+Answerlist
+----------
+* Falsch. Für eine Moderation brauchen wir minstestens 3 Variablen.
+* Falsch. Schlaf ist die Variable, die erklärt wird, bzw. sich in "Abhängigkeit" von Geschlecht verändert.
+* Falsch. In der Hypothese sind wir direkt an dem Einfluss von Geschlecht interessiert.
+* Richtig. Geschlecht wird genutzt um Unterschiede in Schlaf zu erklären.
+
+
+Meta-information
+================
+exname: Variablenrollen
+extype: mchoice 
+exsolution: 0001
+exshuffle: TRUE

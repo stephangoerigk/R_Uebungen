@@ -1,0 +1,30 @@
+Question
+========
+Welche der folgenden sind latente Variablen?
+
+Answerlist
+----------
+* Persönlichkeit
+* Extraversion
+* Zittern
+* Blutdruck
+* Einsamkeit
+
+Solution
+========
+
+Answerlist
+----------
+* Richtig. Persönlichkeit ist nicht unmittelbar beobachtbar.
+* Richtig. Extraversion ist nicht unmittelbar beobachtbar.
+* Falsch. Zittern ist Verhalten und somit direkt beobachtbar.
+* Falsch. Blutdruck ist direkt messbar
+* Richtig. Einsamkeit ist nicht unmittelbar beobachtbar.
+
+
+Meta-information
+================
+exname: Variablenarten2
+extype: mchoice 
+exsolution: 11001
+exshuffle: TRUE
