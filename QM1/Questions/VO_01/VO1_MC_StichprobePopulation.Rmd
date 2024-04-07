@@ -5,7 +5,7 @@ Welche Aussagen sind hinsichtlich der Population und Stichprobe korrekt?
 Answerlist
 ----------
 * Die Population wird auch als Grundgesamtheit bezeichnet.
-* Population = Zufällig aufgewählte Teilgruppe die das interessierende Merkmal hat.
+* Population = Zufällig aufgewählte Teilgruppe die das interessierende Merkmal aufweist.
 * Die Population wird gezogen.
 * Verteilung einer Variable innerhalb der Stichprobe basiert auf Wahrscheinlichkeitsannahmen (z.B. Normalverteilung).
 * Verteilung einer Variable innerhalb der Stichprobe basiert auf Beobachtung.
