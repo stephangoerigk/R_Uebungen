@@ -1,0 +1,32 @@
+Question
+========
+
+Wie interpretiert man die Effektstärke (η² - Eta-Quadrat) bei einer einfaktoriellen ANOVA?
+
+Answerlist
+----------
+
+* Ein η² von 0.01 wird als großer Effekt betrachtet.
+* Ein η² von 0.06 deutet auf einen mittleren Effekt hin.
+* Ein η² von 0.14 oder höher zeigt einen kleinen Effekt an.
+* Ein η² von 0.01 bis 0.05 gilt als kleiner Effekt. 0.06 bis 0.13 als mittlerer Effekt und 0.14 und höher als großer Effekt.
+* Ein η² von 0.40 oder höher wird als vernachlässigbarer Effekt betrachtet.
+
+Solution
+========
+
+Answerlist
+----------
+
+* Falsch. Ein η² von 0.01 gilt als kleiner Effekt, nicht als großer Effekt.
+* Richtig. Ein η² von 0.06 wird oft als Indikator für einen mittleren Effekt interpretiert.
+* Falsch. Ein η² von 0.14 oder höher wird üblicherweise als großer Effekt interpretiert.
+* Richtig. Diese Werte entsprechen den allgemeinen Konventionen für die Interpretation der Effektstärke in der ANOVA.
+* Falsch. Ein η² von 0.40 oder höher ist ein sehr großer Effekt, nicht vernachlässigbar.
+
+Meta-information
+================
+exname: EffektstaerkeInterpretation
+extype: mchoice 
+exsolution: 01010
+exshuffle: TRUE

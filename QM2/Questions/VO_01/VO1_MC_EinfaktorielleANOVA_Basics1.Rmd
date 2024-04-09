@@ -1,0 +1,32 @@
+Question 
+======== 
+
+Welche der folgenden Aussagen zur einfaktoriellen ANOVA sind korrekt?
+
+Answerlist
+----------
+
+* Sie wird eingesetzt, um die Mittelwerte von zwei oder mehr unabhängigen Gruppen zu vergleichen.
+* Sie benötigt mehr als eine abhängige Variable zum Vergleich der Gruppen.
+* Die Normalverteilung ist eine Voraussetzung für die Anwendung.
+* Alle Gruppen müssen die gleiche Anzahl von Beobachtungen haben.
+* Sie prüft, ob die Mittelwerte zwischen den Gruppen signifikant unterschiedlich sind.
+
+Solution
+========
+
+Answerlist
+----------
+
+* Richtig. Die einfaktorielle ANOVA vergleicht Mittelwerte von zwei oder mehr unabhängigen Gruppen.
+* Falsch. Sie benötigt nur eine abhängige Variable, um die Gruppenmittelwerte zu vergleichen.
+* Richtig. Die Normalverteilung is eine Voraussetzung für die Durchführung einer ANOVA.
+* Falsch. Es ist nicht erforderlich, dass alle Gruppen die gleiche Anzahl von Beobachtungen haben, obwohl dies die Rechnung vereinfachen kann.
+* Richtig. Das Hauptziel der einfaktoriellen ANOVA ist es zu testen, ob Unterschiede zwischen den Gruppenmittelwerten statistisch signifikant sind.
+
+Meta-information
+================
+exname: EinfaktorielleANOVA_Basics1
+extype: mchoice 
+exsolution: 10101
+exshuffle: TRUE

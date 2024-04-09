@@ -1,0 +1,32 @@
+Question
+========
+
+In einer Regressionsanalyse beträgt der geschätzte Steigungsparameter (b) für den Einfluss von Bildungsjahren auf das Einkommen 500 Euro pro Jahr, und der Standardfehler dieses Steigungsparameters (SE(b)) ist 100 Euro. Wie hoch ist der t-Wert für den Steigungsparameter?
+
+Answerlist
+----------
+
+* 0,2
+* 2
+* 5
+* 10
+* 20
+
+Solution
+========
+
+Answerlist
+----------
+
+* Falsch. Dies ist nicht der korrekte t-Wert, der aus den gegebenen Daten berechnet wird.
+* Falsch. Ein t-Wert von 2 würde sich aus einem anderen Verhältnis von Steigungsparameter zu Standardfehler ergeben.
+* Richtig. Der t-Wert wird berechnet als b / SE(b) = 500/100 = 5.
+* Falsch. Ein t-Wert von 10 würde sich aus einem anderen Verhältnis von Steigungsparameter zu Standardfehler ergeben.
+* Falsch. Ein t-Wert von 20 ist zu hoch für das gegebene Verhältnis von Steigungsparameter zu Standardfehler.
+
+Meta-information
+================
+exname: BerechnungT-WertSteigung
+extype: mchoice 
+exsolution: 00100
+exshuffle: TRUE

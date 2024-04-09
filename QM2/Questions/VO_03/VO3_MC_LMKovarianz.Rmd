@@ -1,0 +1,32 @@
+Question
+========
+
+Angenommen, in einer psychologischen Studie werden zwei Variablen gemessen: die Anzahl der Stunden, die Teilnehmer mit Entspannungstechniken verbringen (x), und deren gemessene Stressreduktion (y). Die Summe der Produkte der Abweichungen der Werte vom jeweiligen Mittelwert (Σ(xy)) beträgt 120, die Anzahl der Beobachtungen (n) ist 10. Wie hoch ist die Kovarianz zwischen diesen beiden Variablen.
+
+Answerlist
+----------
+
+* 13.33
+* 120
+* 0.33
+* 12
+* 15
+
+Solution
+========
+
+Answerlist
+----------
+
+* Richtig. Die Kovarianz wird als 120 / 9 berechnet, was  13.33 ergibt.
+* Falsch. 120 ist die Summe der Produkte der Abweichungen, nicht die Kovarianz selbst.
+* Falsch. Dies ist nicht die korrekte Kovarianz, die aus den gegebenen Werten berechnet wird.
+* Falsch. Dies wäre die Kovarianz, berechnet mit n, nicht mit n-1.
+* Falsch. Diese Zahl ist nicht das Ergebnis der korrekten Berechnung der Kovarianz.
+
+Meta-information
+================
+exname: KovarianzBerechnungNMinus1
+extype: mchoice 
+exsolution: 10000
+exshuffle: TRUE

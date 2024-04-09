@@ -1,0 +1,32 @@
+Question
+========
+
+Wie beeinflusst die Effektstärke die Interpretation von ANOVA-Ergebnissen?
+
+Answerlist
+----------
+
+* Eine große Effektstärke bedeutet automatisch, dass die Ergebnisse der ANOVA statistisch signifikant sind.
+* Effektstärke und Signifikanz der ANOVA sind direkt proportional zueinander.
+* Die Effektstärke gibt Aufschluss über die praktische Relevanz der Ergebnisse, unabhängig von deren statistischer Signifikanz.
+* Eine geringe Effektstärke deutet immer auf fehlende statistische Signifikanz hin.
+* Hohe Signifikanz bei geringer Effektstärke deutet oft auf eine große Stichprobe hin.
+
+Solution
+========
+
+Answerlist
+----------
+
+* Falsch. Eine große Effektstärke bedeutet nicht zwangsläufig, dass die ANOVA-Ergebnisse statistisch signifikant sind.
+* Falsch. Effektstärke und Signifikanz korrelieren nicht direkt; ein signifikanter p-Wert kann bei kleiner oder großer Effektstärke auftreten.
+* Richtig. Die Effektstärke misst die Größe des Effekts und kann wichtige Informationen liefern, selbst wenn die Ergebnisse statistisch signifikant sind.
+* Falsch. Eine geringe Effektstärke bedeutet nicht notwendigerweise fehlende statistische Signifikanz.
+* Richtig. Eine hohe statistische Signifikanz kann auch bei geringer Effektstärke auftreten, insbesondere wenn die Stichprobengröße groß ist.
+
+Meta-information
+================
+exname: EffektstaerkeInterpretationANOVA
+extype: mchoice 
+exsolution: 00101
+exshuffle: TRUE

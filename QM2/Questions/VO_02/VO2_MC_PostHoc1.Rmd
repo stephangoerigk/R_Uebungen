@@ -1,0 +1,32 @@
+Question
+========
+
+Warum sind Post-Hoc-Tests bei der ANOVA wichtig?
+
+Answerlist
+----------
+
+* Sie sind erforderlich, um die ANOVA-Ergebnisse statistisch zu validieren.
+* Sie helfen, spezifische Gruppenunterschiede zu identifizieren, nachdem ein signifikantes ANOVA-Ergebnis gefunden wurde.
+* Post-Hoc-Tests werden nur benötigt, wenn die ANOVA nicht signifikant ist.
+* Sie erhöhen die allgemeine Signifikanz des ANOVA-Tests.
+* Post-Hoc-Tests sind notwendig, um die Effektstärke der ANOVA zu berechnen.
+
+Solution
+========
+
+Answerlist
+----------
+
+* Falsch. Post-Hoc-Tests validieren nicht die ANOVA-Ergebnisse, sondern untersuchen spezifische Gruppenunterschiede.
+* Richtig. Post-Hoc-Tests werden durchgeführt, um zu ermitteln, zwischen welchen Gruppen signifikante Unterschiede bestehen, nachdem ein signifikantes ANOVA-Ergebnis festgestellt wurde.
+* Falsch. Post-Hoc-Tests sind relevant, wenn die ANOVA signifikant ist, um spezifische Gruppenvergleiche durchzuführen.
+* Falsch. Sie beeinflussen nicht die allgemeine Signifikanz des ANOVA-Tests, sondern dienen der weiteren Analyse der Gruppenunterschiede.
+* Falsch. Die Berechnung der Effektstärke ist unabhängig von Post-Hoc-Tests, die spezifische Gruppenvergleiche nach einer signifikanten ANOVA untersuchen.
+
+Meta-information
+================
+exname: PostHocTestsRelevanz
+extype: mchoice 
+exsolution: 01000
+exshuffle: TRUE

@@ -1,0 +1,39 @@
+```{r Summe1_data, include=FALSE}
+x = sample(1:10, 10, replace = T)
+```
+
+Question
+========
+Es ist eine Variable $X$ = `r paste0("[", paste(x, collapse = ", "), "]")` gegeben.
+
+Bitte berechnen Sie: 
+
+$$\sum_{i=1}^{10} x_i^2$$
+
+Answerlist
+----------
+* `r sum(x^2)`
+* `r sum(x^2) + 10`
+* `r sum(x)`
+* `r sum(x+2^2)`
+* `r sum(x-1^2)`
+
+
+Solution
+========
+
+Answerlist
+----------
+* Richtig. 
+* Falsch. 
+* Falsch. 
+* Falsch. 
+* Falsch. 
+
+
+Meta-information
+================
+exname: Summe1
+extype: mchoice 
+exsolution: 10000
+exshuffle: TRUE

@@ -1,0 +1,32 @@
+Question
+========
+
+Wie wird in der Regressionsanalyse entschieden, welche Variable als unabhängige Variable (Prädiktor) und welche als abhängige Variable (Kriterium) fungiert?
+
+Answerlist
+----------
+
+* Die Wahl basiert auf dem Wunsch des Forschers, ohne theoretische Rechtfertigung.
+* Die unabhängige Variable ist diejenige mit der größeren Varianz.
+* Die Entscheidung basiert auf der theoretischen oder kausalen Beziehung, wobei die unabhängige Variable die vermutete Ursache darstellt.
+* Die Variable mit der einfacheren Messung wird als unabhängige Variable gewählt.
+* Beide Variablen können abwechselnd als unabhängig oder abhängig betrachtet werden, ohne die Ergebnisse zu beeinflussen.
+
+Solution
+========
+
+Answerlist
+----------
+
+* Falsch. Die Entscheidung sollte auf einer theoretischen oder kausalen Grundlage und nicht nur auf persönlichen Vorlieben beruhen.
+* Falsch. Die Varianz der Variablen ist nicht das Kriterium für die Entscheidung, welche Variable als unabhängig gilt.
+* Richtig. Die unabhängige Variable wird typischerweise als die vermutete Ursache in der kausalen Beziehung gewählt. Dabei ist Kausalität jedoch zwingend nicht bewiesen.
+* Falsch. Die Komplexität der Messung bestimmt nicht, welche Variable als unabhängig oder abhängig betrachtet wird.
+* Falsch. Die Rollen von unabhängigen und abhängigen Variablen sind spezifisch und können nicht ohne Weiteres getauscht werden, da dies die Interpretation der Analyse beeinflusst.
+
+Meta-information
+================
+exname: EntscheidungUnabhaengigeAbhaengigeVariable
+extype: mchoice 
+exsolution: 00100
+exshuffle: TRUE

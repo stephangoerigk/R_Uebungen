@@ -1,0 +1,32 @@
+Question
+========
+
+Welche der folgenden Aussagen zu den Freiheitsgraden (df) einer einfaktoriellen ANOVA sind korrekt?
+
+Answerlist
+----------
+
+* Die Zählerfreiheitsgrade (df_zwischen) entsprechen der Anzahl der Gruppen minus eins.
+* Die Nennerfreiheitsgrade (df_innerhalb) entsprechen der Gesamtzahl der Beobachtungen minus eins.
+* Die Zählerfreiheitsgrade (df_zwischen) entsprechen der Gesamtzahl der Beobachtungen minus der Anzahl der Gruppen.
+* Die Nennerfreiheitsgrade (df_innerhalb) ergeben sich aus der Gesamtzahl der Beobachtungen minus 1 multipliziert mit der Anzahl der Gruppen.
+* Die Freiheitsgrade sind unabhängig von der Anzahl der Gruppen und Beobachtungen.
+
+Solution
+========
+
+Answerlist
+----------
+
+* Richtig. Die Zählerfreiheitsgrade (df_zwischen) werden durch die Anzahl der Gruppen minus eins bestimmt.
+* Falsch. Die Nennerfreiheitsgrade (df_innerhalb) ergeben sich aus der Gesamtzahl der Beobachtungen minus der Anzahl der Gruppen.
+* Falsch. Diese Aussage mischt die Definitionen für Zähler- und Nennerfreiheitsgrade.
+* Richtig. Genau so werden die Nennerfreiheitsgrade (df_innerhalb) berechnet.
+* Falsch. Die Freiheitsgrade hängen direkt von der Anzahl der Gruppen und der Gesamtzahl der Beobachtungen ab.
+
+Meta-information
+================
+exname: EinfaktorielleANOVA_df1
+extype: mchoice 
+exsolution: 10010
+exshuffle: TRUE

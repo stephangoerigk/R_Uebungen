@@ -1,0 +1,32 @@
+Question
+========
+
+Was wird bei einer einfaktoriellen ANOVA, durch die Analyse untersucht?
+
+Answerlist
+----------
+
+* Ob die Varianzen innerhalb der Gruppen gleich sind.
+* Ob es signifikante Unterschiede zwischen den Gruppenmittelwerten gibt.
+* Ob jede Gruppe mehr als 30 Beobachtungen hat.
+* Ob die Daten für jede Gruppe normalverteilt sind.
+* Ob die Interaktionen zwischen den Gruppen signifikant sind.
+
+Solution
+========
+
+Answerlist
+----------
+
+* Falsch. Die Varianzgleichheit innerhalb der Gruppen ist eine Voraussetzung, wird aber nicht direkt durch die ANOVA untersucht.
+* Richtig. Das Hauptziel der einfaktoriellen ANOVA ist es, signifikante Unterschiede zwischen den Gruppenmittelwerten zu identifizieren.
+* Falsch. Die Anzahl der Beobachtungen pro Gruppe betrifft die Teststärke, ist aber nicht der Hauptfokus der ANOVA.
+* Falsch. Die Normalverteilung der Daten ist eine Voraussetzung, aber die ANOVA untersucht die Mittelwertunterschiede, nicht die Verteilung.
+* Falsch. Interaktionen werden in der mehrfaktoriellen, nicht in der einfaktoriellen ANOVA untersucht.
+
+Meta-information
+================
+exname: EinfaktorielleANOVA_Basics2
+extype: mchoice 
+exsolution: 01000
+exshuffle: TRUE

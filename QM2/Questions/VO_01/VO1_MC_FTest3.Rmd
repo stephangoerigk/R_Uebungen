@@ -1,0 +1,32 @@
+Question
+========
+
+Für eine einfaktorielle ANOVA mit drei Gruppen (n1=10, n2=15, n3=20) sind die Quadratsummen gegeben: Zwischengruppen QS = 12 und Innergruppen QS = 180. Wie hoch ist der F-Wert?
+
+Answerlist
+----------
+
+* 2.52
+* 4,41
+* 3.02
+* 4.99
+* 60.22
+
+Solution
+========
+
+Answerlist
+----------
+
+* Falsch. Dieser Wert ergibt sich nicht aus den gegebenen Quadratsummen und Stichprobengrößen.
+* Richtig. Mit df_zwischen = 2 und df_innerhalb = 132 berechnet sich die Zwischengruppenvarianz als 12/2 = 6 und die Innergruppenvarianz als 180/132 ≈ 1.36, woraus sich der F-Wert 6/1.36 ≈ 4.41 ergibt.
+* Falsch. Dies ist nicht der korrekte F-Wert basierend auf den gegebenen Daten.
+* Falsch. Dieser Wert entspricht nicht der korrekten Berechnung des F-Werts aus den angegebenen Daten.
+* Falsch. Dies ist weit höher als der korrekte F-Wert für die gegebenen Quadratsummen und Stichprobengrößen.
+
+Meta-information
+================
+exname: FWertRechenaufgabe
+extype: mchoice 
+exsolution: 01000
+exshuffle: TRUE

@@ -1,0 +1,32 @@
+Question
+========
+
+Angenommen, Sie führen eine Reihe von 10 paarweisen Vergleichen im Rahmen einer ANOVA durch und möchten das Risiko von Typ-I-Fehlern mit der Bonferroni-Korrektur kontrollieren. Wenn das ursprüngliche Signifikanzniveau 0.05 ist, wie hoch ist das Bonferroni-korrigierte Signifikanzniveau pro Vergleich?
+
+Answerlist
+----------
+
+* 0.005
+* 0.05
+* 0.10
+* 0.50
+* 0.01
+
+Solution
+========
+
+Answerlist
+----------
+
+* Richtig. Das Bonferroni-korrigierte Signifikanzniveau berechnet sich als 0.05 / 10 = 0.005 pro Vergleich.
+* Falsch. Dies ist das ursprüngliche Signifikanzniveau, nicht das Bonferroni-korrigierte.
+* Falsch. Dieser Wert ist zu hoch und nicht das Ergebnis der Bonferroni-Korrektur.
+* Falsch. Dies ist viel zu hoch und hat nichts mit der Bonferroni-Korrektur zu tun.
+* Falsch. Obwohl 0.01 ein übliches Signifikanzniveau ist, ergibt es sich nicht aus der Bonferroni-Korrektur für 10 Vergleiche und einem Ausgangsniveau von 0.05.
+
+Meta-information
+================
+exname: BonferroniKorrekturRechnung
+extype: mchoice 
+exsolution: 10000
+exshuffle: TRUE

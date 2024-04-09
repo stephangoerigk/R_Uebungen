@@ -1,0 +1,32 @@
+Question
+========
+
+Gegeben ist ein F-Wert von 4.25 für eine einfaktorielle ANOVA mit 3 Gruppen und insgesamt 60 Beobachtungen. Wie hoch ist die Effektstärke omega Quadrat (ω²)?
+
+Answerlist
+----------
+
+* 0.10
+* 0.15
+* 0.20
+* 0.25
+* 0.30
+
+Solution
+========
+
+Answerlist
+----------
+
+* Richtig. Omega Quadrat (ω²) wird über Cohen's f² berechnet, was in diesem Fall 6.5 ist und nach Einsetzen in die Formel für ω² etwa 0.10 ergibt.
+* Falsch. Dies ist etwas zu hoch für die gegebenen Werte von F-Wert und Freiheitsgraden.
+* Falsch. Dieser Wert ist höher als das korrekte Ergebnis der Berechnung von ω².
+* Falsch. Dies überschätzt die Effektstärke für die gegebenen Werte.
+* Falsch. Dieser Wert ist deutlich zu hoch und entspricht nicht der korrekten Berechnung von ω².
+
+Meta-information
+================
+exname: OmegaQuadratBerechnung
+extype: mchoice 
+exsolution: 10000
+exshuffle: TRUE

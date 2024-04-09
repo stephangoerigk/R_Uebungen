@@ -1,0 +1,32 @@
+Question
+========
+
+In einer Studie zur Schizophrenie wird der Zusammenhang zwischen der Dauer der unbehandelten Psychose (unabhängige Variable in Monaten) und dem Schweregrad der Symptome bei der ersten Behandlung (abhängige Variable in Symptom-Schweregrad-Punkten) untersucht. Angenommen, der Mittelwert der Dauer der unbehandelten Psychose ist 8 Monate, der Mittelwert des Symptom-Schweregrads ist 24 Punkte, und der Steigungsparameter der Regressionsgeraden wurde als 0.83 berechnet. Wie hoch ist der Y-Achsenabschnitt der Regressionsgeraden?
+
+Answerlist
+----------
+
+* 6.36
+* 18.36
+* 24
+* 17.36
+* 33.64
+
+Solution
+========
+
+Answerlist
+----------
+
+* Falsch. Diese Zahl ergibt sich nicht aus der Berechnung des Y-Achsenabschnitts mit den gegebenen Daten.
+* Falsch. Diese Zahl ist nicht das Ergebnis der Berechnung des Y-Achsenabschnitts.
+* Falsch. Dies ist der Mittelwert des Symptom-Schweregrads, nicht der Y-Achsenabschnitt.
+* Richtig. Der Y-Achsenabschnitt wird berechnet als 24 - 0.83 * 8 = 17.36.
+* Falsch. Diese Zahl ist zu hoch, um aus den gegebenen Daten als Y-Achsenabschnitt berechnet zu werden.
+
+Meta-information
+================
+exname: YAchsenabschnittSchizophrenie
+extype: mchoice 
+exsolution: 00010
+exshuffle: TRUE

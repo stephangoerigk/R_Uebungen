@@ -1,0 +1,32 @@
+Question
+========
+
+Welche Vorteile bieten standardisierte Regressionsgewichte in der Regressionsanalyse?
+
+Answerlist
+----------
+
+* Sie ermöglichen den direkten Vergleich der Wichtigkeit verschiedener unabhängiger Variablen im Modell.
+* Sie erhöhen die Genauigkeit des Regressionsmodells.
+* Sie reduzieren die Notwendigkeit einer Regressionsanalyse.
+* Sie reduzieren die Anzahl der benötigten unabhängigen Variablen im Modell.
+* Sie garantieren, dass das Regressionsmodell alle Variablen als gleich wichtig betrachtet.
+
+Solution
+========
+
+Answerlist
+----------
+
+* Richtig. Standardisierte Regressionsgewichte erlauben es, die Einflussstärke verschiedener Variablen im Modell (oder über Modelle hinweg) direkt miteinander zu vergleichen, unabhängig von ihren Maßeinheiten.
+* Falsch. Die Genauigkeit des Modells hängt nicht von der Standardisierung der Gewichte ab, sondern von der Passung des Modells und der Datenqualität.
+* Falsch. Standardisierte Gewichte vereinfachen die Interpretation der Ergebnisse, ersetzen aber nicht die Notwendigkeit einer Regressionsanalyse.
+* Falsch. Standardisierte Regressionsgewichte ändern nicht die Anzahl der Variablen im Modell, sondern nur die Art, wie ihre Effekte interpretiert werden.
+* Falsch. Standardisierung bedeutet nicht, dass alle Variablen als gleich wichtig angesehen werden, sondern ermöglicht einen vergleichbaren Einfluss der Variablen zu bewerten.
+
+Meta-information
+================
+exname: VorteileStandardisierteRegressionsgewichte
+extype: mchoice 
+exsolution: 10000
+exshuffle: TRUE

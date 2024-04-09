@@ -37,13 +37,11 @@ knitr::include_graphics("images/R_logo.png")
 
 ## Einheit 1
 
-```{r eval=FALSE, include=FALSE}
+```{r xx, eval=FALSE, include=FALSE}
 # hinter jede Einheit den Titel
 # Quizfragen alle Einheiten aus Muster
 # QM1 spezifische Aufgaben hinzufügen - Interpretieren..
 # Evtl Aufgaben LMU hinzufügen? 
-# publishen 
-# in studynet verlinken 
 # neuer test
 ```
 
@@ -52,7 +50,7 @@ exams2learnr("Questions/VO_01/VO1_MC_Alter.Rmd", allow_retry = TRUE)
 ```
 
 ```{r VO1_MC_Digitale, message = FALSE, warning=FALSE}
-exams2learnr("Questions/VO_01VO1_MC_Digitale.Rmd", allow_retry = TRUE)
+exams2learnr("Questions/VO_01/VO1_MC_Digitale.Rmd", allow_retry = TRUE)
 ```
 
 ```{r VO1_MC_Hypothesen1, message = FALSE, warning=FALSE}
@@ -97,6 +95,22 @@ exams2learnr("Questions/VO_01/VO1_MC_Stoervariable.Rmd", allow_retry = TRUE)
 
 ```{r VO1_MC_Haeufigkeitstabelle, message = FALSE, warning=FALSE}
 exams2learnr("Questions/VO_01/VO1_MC_Haeufigkeitstabelle.Rmd", allow_retry = TRUE)
+```
+
+```{r VO1_Num_Summe1, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_01/VO1_Num_Summe1.Rmd", allow_retry = TRUE)
+```
+
+```{r VO1_Num_Summe2, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_01/VO1_Num_Summe2.Rmd", allow_retry = TRUE)
+```
+
+```{r VO1_MC_RelativeHaeufigkeit, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_01/VO1_MC_RelativeHaeufigkeit.Rmd", allow_retry = TRUE)
+```
+
+```{r VO1_MC_AbsoluteHaeufigkeit, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_01/VO1_MC_AbsoluteHaeufigkeit.Rmd", allow_retry = TRUE)
 ```
 
 ## Einheit 2
@@ -318,7 +332,7 @@ quiz(
 
 ```{r quiz3_7, echo = FALSE}
 quiz(
-  question("Im Nenner der Varianz steht?",
+  question("Im Nenner des Schätzers für die Populationsvarianz steht?",
     answer("N"),
     answer("N / 1"),
     answer("N - 1", correct = TRUE),

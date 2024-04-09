@@ -1,0 +1,40 @@
+```{r Summe2_data, include=FALSE}
+x = sample(1:10, 10, replace = T)
+sol = sum(x[3:8]-1)
+```
+
+Question
+========
+Es ist eine Variable $X$ = `r paste0("[", paste(x, collapse = ", "), "]")` gegeben.
+
+Bitte berechnen Sie: 
+
+$$\sum_{i=3}^{8} x_i -1$$
+
+Answerlist
+----------
+* `r sol`
+* `r sol + 2`
+* `r sol * 10`
+* `r sol + 4`
+* `r sol - 1`
+
+
+Solution
+========
+
+Answerlist
+----------
+* Richtig. 
+* Falsch. 
+* Falsch. 
+* Falsch. 
+* Falsch. 
+
+
+Meta-information
+================
+exname: Summe2
+extype: mchoice 
+exsolution: 10000
+exshuffle: TRUE

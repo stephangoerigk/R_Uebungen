@@ -1,0 +1,32 @@
+Question
+========
+
+Was bedeutet es bei der ANOVA, wenn der F-Wert gleich 1 ist?
+
+Answerlist
+----------
+
+* Es gibt keinen Unterschied zwischen den Varianzen innerhalb der Gruppen und zwischen den Gruppen.
+* Der F-Wert von 1 zeigt an, dass die Nullhypothese mit hoher Sicherheit abgelehnt werden kann.
+* Ein F-Wert von 1 bedeutet, dass die Gruppenmittelwerte identisch sind.
+* Der F-Wert von 1 deutet auf eine perfekte Passung des Modells zu den Daten hin.
+* Ein F-Wert von 1 zeigt an, dass die Stichprobenvarianzen exakt gleich sind.
+
+Solution
+========
+
+Answerlist
+----------
+
+* Richtig. Ein F-Wert von 1 weist darauf hin, dass die Varianzen zwischen den Gruppen und innerhalb der Gruppen gleich sind, was auf keine signifikanten Unterschiede zwischen den Gruppen hindeutet.
+* Falsch. Ein F-Wert von 1 bedeutet nicht, dass die Nullhypothese mit hoher Sicherheit abgelehnt werden kann; es deutet eher darauf hin, dass kein signifikanter Unterschied besteht.
+* Falsch. Der F-Wert bezieht sich auf die Varianzen, nicht direkt auf die Gleichheit der Mittelwerte der Gruppen.
+* Falsch. Ein F-Wert von 1 sagt nichts über die Passung des Modells aus; er bezieht sich auf das Verhältnis der Varianzen.
+* Falsch. Der F-Wert bezieht sich auf das Verhältnis der Varianzen zwischen den Gruppen und innerhalb der Gruppen, nicht auf die Gleichheit der Stichprobenvarianzen.
+
+Meta-information
+================
+exname: Fgleich1
+extype: mchoice 
+exsolution: 10000
+exshuffle: TRUE

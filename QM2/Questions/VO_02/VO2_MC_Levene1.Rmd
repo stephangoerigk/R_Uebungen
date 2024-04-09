@@ -1,0 +1,32 @@
+Question
+========
+
+Wofür wird der Levene-Test in der Statistik verwendet?
+
+Answerlist
+----------
+
+* Zum Vergleich der Mittelwerte zwischen den Gruppen.
+* Zum Testen der Homogenität der Varianzen zwischen den Gruppen.
+* Zur Bestimmung der Effektstärke einer ANOVA.
+* Zur Berechnung des p-Werts für die ANOVA.
+* Zur Korrektur von Typ-I-Fehlern bei multiplen Vergleichen.
+
+Solution
+========
+
+Answerlist
+----------
+
+* Falsch. Der Levene-Test wird nicht verwendet, um Mittelwerte zu vergleichen, sondern um Varianzen zu testen.
+* Richtig. Der Levene-Test prüft die Homogenität der Varianzen zwischen den Gruppen, was eine Voraussetzung für viele parametrische Tests ist.
+* Falsch. Die Effektstärke wird nicht mit dem Levene-Test bestimmt.
+* Falsch. Der p-Wert für die ANOVA wird nicht durch den Levene-Test berechnet.
+* Falsch. Der Levene-Test wird nicht zur Korrektur von Typ-I-Fehlern verwendet, sondern um zu prüfen, ob die Annahme gleicher Varianzen gerechtfertigt ist.
+
+Meta-information
+================
+exname: LeveneTest
+extype: mchoice 
+exsolution: 01000
+exshuffle: TRUE

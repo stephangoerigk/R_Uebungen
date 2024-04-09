@@ -1,0 +1,32 @@
+Question
+========
+
+Wie wird die Effektstärke bei einer einfaktoriellen ANOVA typischerweise gemessen?
+
+Answerlist
+----------
+
+* Durch den Mittelwert aller Gruppenmittelwerte.
+* Mit der Quadratsumme zwischen den Gruppen dividiert durch die Gesamtquadratsumme.
+* Durch das Verhältnis der Varianz zwischen den Gruppen zur Gesamtvarianz.
+* Mit der Wurzel aus dem F-Wert.
+* Durch das Verhältnis der Zwischengruppenvarianz zur Innergruppenvarianz.
+
+Solution
+========
+
+Answerlist
+----------
+
+* Falsch. Der Mittelwert der Gruppenmittelwerte ist kein Maß für die Effektstärke.
+* Richtig. Die Effektstärke wird als Verhältnis der Quadratsumme zwischen den Gruppen zur Gesamtquadratsumme berechnet, was das Maß η² (Eta-Quadrat) ergibt.
+* Falsch. Dies beschreibt eher den F-Wert und nicht die Effektstärke direkt.
+* Falsch. Die Wurzel aus dem F-Wert ist nicht das übliche Maß für die Effektstärke in der ANOVA.
+* Falsch. Dies beschreibt die Berechnung des F-Werts, nicht die Effektstärke.
+
+Meta-information
+================
+exname: EffektstaerkeANOVA
+extype: mchoice 
+exsolution: 01000
+exshuffle: TRUE

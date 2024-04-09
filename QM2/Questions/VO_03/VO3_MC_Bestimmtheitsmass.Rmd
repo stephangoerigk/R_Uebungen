@@ -1,0 +1,32 @@
+Question
+========
+
+Was repräsentiert das Bestimmtheitsmaß (R²) in der linearen Regression?
+
+Answerlist
+----------
+
+* Den Prozentsatz der Varianz in der abhängigen Variable, der durch die unabhängige Variable erklärt wird.
+* Die Korrelation zwischen der unabhängigen und der abhängigen Variable.
+* Die Steigung der Regressionsgeraden.
+* Den Y-Achsenabschnitt der Regressionsgeraden.
+* Die Summe der quadrierten Abweichungen der beobachteten Werte von ihren Mittelwerten.
+
+Solution
+========
+
+Answerlist
+----------
+
+* Richtig. R² gibt an, welcher Anteil der Varianz in der abhängigen Variable durch die unabhängigen Variablen im Modell erklärt wird.
+* Falsch. Obwohl R² auf der Korrelation basiert, misst es den Anteil der erklärten Varianz, nicht die Korrelation selbst.
+* Falsch. Die Steigung der Regressionsgeraden wird durch den Steigungsparameter, nicht durch R² angegeben.
+* Falsch. Der Y-Achsenabschnitt wird durch die Regressionsgleichung angegeben, nicht durch R².
+* Falsch. R² bezieht sich nicht direkt auf die Summe der quadrierten Abweichungen, sondern auf den Anteil der durch das Modell erklärten Varianz.
+
+Meta-information
+================
+exname: Bestimmtheitsmass
+extype: mchoice 
+exsolution: 10000
+exshuffle: TRUE

@@ -1,0 +1,32 @@
+Question
+========
+
+Ein Forscher führt fünf unabhängige Tests mit einem α-Niveau von 0,05 für jeden Test durch. Wie hoch ist die kumulierte Wahrscheinlichkeit eines Typ-I-Fehlers (α-Fehler) für alle fünf Tests?
+
+Answerlist
+----------
+
+* 0.05
+* 0.31
+* 0.52
+* 0.40
+* `r round(1 - (0.95)^5, 2)`
+
+Solution
+========
+
+Answerlist
+----------
+
+* Falsch. Dies ist der α-Fehler für einen einzelnen Test, nicht die kumulierte Wahrscheinlichkeit über mehrere Tests.
+* Falsch. Dies ist eine ungenaue Schätzung und berücksichtigt nicht die korrekte Berechnung der kumulierten Wahrscheinlichkeit.
+* Falsch. Dies ist eine spezifische Zahl, die nicht die korrekte Berechnung der kumulierten Wahrscheinlichkeit widerspiegelt.
+* Falsch. Dies überschätzt die kumulierte Wahrscheinlichkeit, da die korrekte Berechnung eine andere Formel verwendet.
+* Richtig. Die kumulierte Wahrscheinlichkeit eines Typ-I-Fehlers für alle fünf Tests wird als 1 - (0.95)^5 berechnet, was die Wahrscheinlichkeit darstellt, mindestens einen Typ-I-Fehler über die fünf Tests zu begehen.
+
+Meta-information
+================
+exname: AlphaFehlerBerechnung
+extype: mchoice 
+exsolution: 00001
+exshuffle: TRUE

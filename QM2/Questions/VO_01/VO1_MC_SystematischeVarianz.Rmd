@@ -1,0 +1,32 @@
+Question
+========
+
+Wie wird die systematische Varianz bei der ANOVA geschätzt?
+
+Answerlist
+----------
+
+* Durch die Summe der quadrierten Differenzen zwischen den Gruppenmittelwerten und dem Gesamtmittelwert.
+* Durch die durchschnittliche quadrierte Differenz zwischen den Gruppenmittelwerten und den Einzelwerten.
+* Durch Division der Summe der quadrierten Abweichungen der Gruppenmittel vom Gesamtmittelwert durch die Anzahl der Gruppen.
+* Durch Multiplikation der durchschnittlichen quadrierten Abweichung der Beobachtungen innerhalb der Gruppen mit der Anzahl der Gruppen.
+* Durch die Summe der quadrierten Differenzen zwischen den Einzelwerten innerhalb einer Gruppe und dem Gruppenmittelwert.
+
+Solution
+========
+
+Answerlist
+----------
+
+* Richtig. Die systematische Varianz wird als Summe der quadrierten Differenzen zwischen den Gruppenmittelwerten und dem Gesamtmittelwert berechnet, gewichtet durch die Anzahl der Beobachtungen in jeder Gruppe.
+* Falsch. Das beschreibt nicht die korrekte Berechnung der systematischen Varianz in der ANOVA.
+* Falsch. Die Anzahl der Gruppen wird in der Formel für die systematische Varianz als Freiheitsgrade berücksichtigt, nicht durch direkte Division.
+* Falsch. Dies beschreibt nicht die Methode zur Berechnung der systematischen Varianz, sondern könnte eine Beschreibung der Residualvarianz sein.
+* Falsch. Dies beschreibt die Berechnung der Residualvarianz, nicht der systematischen Varianz.
+
+Meta-information
+================
+exname: SystematischeVarianzANOVA
+extype: mchoice 
+exsolution: 10000
+exshuffle: TRUE

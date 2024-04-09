@@ -1,0 +1,32 @@
+Question
+========
+
+Wie funktioniert die Codierung einer kategorialen Variablen in der einfachen linearen Regression?
+
+Answerlist
+----------
+
+* Jede Kategorie wird durch einen numerischen Wert ersetzt, der ihrer Reihenfolge in der Datenmenge entspricht.
+* Eine kategoriale Variable wird in mehrere binäre Dummy-Variablen umgewandelt, eine für jede Kategorie außer der Referenzkategorie.
+* Kategoriale Variablen werden in der einfachen linearen Regression nicht verwendet und müssen vor der Analyse entfernt werden.
+* Die Codierung ändert die kategoriale Variable in eine stetige Variable, indem jede Kategorie durch ihren Durchschnittswert ersetzt wird.
+* Kategorien werden basierend auf ihrer Häufigkeit im Datensatz codiert, wobei häufigeren Kategorien höhere Werte zugewiesen werden.
+
+Solution
+========
+
+Answerlist
+----------
+
+* Falsch. Die Reihenfolge in der Datenmenge ist normalerweise nicht relevant für die Codierung in der Regression.
+* Richtig. In der einfachen linearen Regression wird eine kategoriale Variable in binäre Dummy-Variablen umgewandelt, wobei jede Kategorie (außer einer Referenzkategorie) ihre eigene binäre Variable erhält.
+* Falsch. Kategoriale Variablen können in der Regression verwendet werden, wenn sie entsprechend codiert sind.
+* Falsch. Die Codierung macht eine kategoriale Variable nicht stetig, sondern sie erstellt binäre Variablen für jede Kategorie.
+* Falsch. Die Häufigkeit der Kategorien ist nicht die Basis für die Codierung in der linearen Regression; vielmehr wird jede Kategorie in eine binäre Variable umgewandelt.
+
+Meta-information
+================
+exname: KategorialeVariableCodierung
+extype: mchoice 
+exsolution: 01000
+exshuffle: TRUE

@@ -1,6 +1,6 @@
 Question
 ========
-"Was sind Vorteile digitaler Datenanalyse?"
+Was sind Vorteile digitaler Datenanalyse?
 
 Answerlist
 ----------

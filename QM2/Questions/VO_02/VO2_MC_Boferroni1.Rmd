@@ -1,0 +1,32 @@
+Question
+========
+
+Was charakterisiert den Bonferroni-Test in der statistischen Analyse?
+
+Answerlist
+----------
+
+* Der Bonferroni-Test erhöht das Signifikanzniveau für jeden Vergleich, um das Risiko von Typ-I-Fehlern zu verringern.
+* Der Bonferroni-Test teilt das Signifikanzniveau durch die Anzahl der Vergleiche, um das Risiko von Typ-I-Fehlern zu kontrollieren.
+* Der Bonferroni-Test wird verwendet, um die Mittelwerte aller Gruppen zu vergleichen, ohne das Risiko von Typ-I-Fehlern zu berücksichtigen.
+* Der Bonferroni-Test ist nur bei nicht signifikanten ANOVA-Ergebnissen anwendbar.
+* Der Bonferroni-Test kann das Risiko von Typ-II-Fehlern erhöhen, indem er das Signifikanzniveau für einzelne Vergleiche zu stark reduziert.
+
+Solution
+========
+
+Answerlist
+----------
+
+* Falsch. Der Bonferroni-Test verringert das Signifikanzniveau für jeden Vergleich, nicht erhöht.
+* Richtig. Beim Bonferroni-Test wird das gesamte Signifikanzniveau durch die Anzahl der Vergleiche geteilt, um das Risiko von Typ-I-Fehlern zu minimieren.
+* Falsch. Der Bonferroni-Test wird speziell verwendet, um das Risiko von Typ-I-Fehlern bei multiplen Vergleichen zu kontrollieren.
+* Falsch. Der Bonferroni-Test ist relevant, wenn multiple Vergleiche nach einer signifikanten ANOVA durchgeführt werden.
+* Richtig. Eine konservative Korrektur wie beim Bonferroni-Test kann tatsächlich das Risiko von Typ-II-Fehlern erhöhen, da es schwieriger wird, signifikante Ergebnisse zu finden.
+
+Meta-information
+================
+exname: BonferroniTest
+extype: mchoice 
+exsolution: 01001
+exshuffle: TRUE

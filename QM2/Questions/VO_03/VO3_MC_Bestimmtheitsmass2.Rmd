@@ -1,0 +1,32 @@
+Question
+========
+
+In einer Studie zum Zusammenhang zwischen Studienzeit (in Stunden) und Prüfungserfolg (in Punkten) wurde eine Kovarianz von 16 zwischen den beiden Variablen festgestellt. Wenn die Standardabweichung der Studienzeit 4 Stunden und die Standardabweichung des Prüfungserfolgs 8 Punkte beträgt, wie hoch ist das Bestimmtheitsmaß (R²)?
+
+Answerlist
+----------
+
+* 0.50
+* 0.25
+* 0.75
+* 1.00
+* 1.25
+
+Solution
+========
+
+Answerlist
+----------
+
+* Falsch. Dies ist nicht das korrekte Bestimmtheitsmaß, das aus den gegebenen Statistiken berechnet wird.
+* Richtig. R² wird als Quadrat von 16 geteilt durch 4 * 8 berechnet und ergibt 0.25
+* Falsch. Dieser Wert ist zu hoch für das Bestimmtheitsmaß, basierend auf den gegebenen Daten.
+* Falsch. Ein R² von 1 würde bedeuten, dass 100% der Varianz in den Prüfungsergebnissen durch die Studienzeit erklärt wird, was hier nicht der Fall ist.
+* Falsch. Ein Bestimmtheitsmaß größer als 1 ist nicht möglich, da R² maximal 1 sein kann.
+
+Meta-information
+================
+exname: BerechnungBestimmtheitsmass
+extype: mchoice 
+exsolution: 01000
+exshuffle: TRUE

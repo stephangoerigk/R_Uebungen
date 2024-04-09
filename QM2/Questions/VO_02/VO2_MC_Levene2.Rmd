@@ -1,0 +1,32 @@
+Question
+========
+
+Wie interpretiert man die Ergebnisse des Levene-Tests in der ANOVA?
+
+Answerlist
+----------
+
+* Ein signifikantes Ergebnis beim Levene-Test zeigt an, dass die Gruppen homogene Varianzen haben.
+* Ein nicht signifikantes Ergebnis beim Levene-Test deutet darauf hin, dass die Varianzen zwischen den Gruppen gleich sind.
+* Der Levene-Test bestimmt, ob die Gruppenmittelwerte statistisch signifikant sind.
+* Ein signifikantes Ergebnis beim Levene-Test bedeutet, dass die ANOVA-Ergebnisse ungültig sind.
+* Der Levene-Test muss immer signifikant sein, um die ANOVA durchführen zu können.
+
+Solution
+========
+
+Answerlist
+----------
+
+* Falsch. Ein signifikantes Ergebnis beim Levene-Test deutet auf ungleiche Varianzen zwischen den Gruppen hin, was gegen die Homogenität spricht.
+* Richtig. Ein nicht signifikantes Ergebnis im Levene-Test bedeutet, dass keine signifikanten Unterschiede in den Varianzen zwischen den Gruppen bestehen, was auf Homogenität der Varianzen hindeutet.
+* Falsch. Der Levene-Test prüft die Homogenität der Varianzen, nicht die Signifikanz der Gruppenmittelwerte.
+* Falsch. Ein signifikantes Ergebnis im Levene-Test betrifft nur die Varianzhomogenität und macht die ANOVA nicht automatisch ungültig.
+* Falsch. Der Levene-Test sollte nicht signifikant sein, um die Annahme gleicher Varianzen zu bestätigen, die für die Durchführung einer ANOVA erforderlich ist.
+
+Meta-information
+================
+exname: LeveneTestInterpretation
+extype: mchoice 
+exsolution: 01000
+exshuffle: TRUE

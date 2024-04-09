@@ -1,0 +1,32 @@
+Question
+========
+
+Welche Entscheidungsregel gilt bei der Verwendung der F-Verteilung in einem statistischen Test?
+
+Answerlist
+----------
+
+* Wenn der berechnete F-Wert kleiner als der kritische F-Wert ist, lehnen wir die Nullhypothese ab.
+* Wenn der berechnete F-Wert größer als der kritische F-Wert ist, lehnen wir die Nullhypothese ab.
+* Die Entscheidungsregel für die F-Verteilung hängt von der Anzahl der Stichproben ab.
+* Ein hoher F-Wert deutet auf eine geringe Varianz in den Daten hin.
+* Der kritische F-Wert ist unabhängig vom Signifikanzniveau des Tests.
+
+Solution
+========
+
+Answerlist
+----------
+
+* Falsch. Wenn der berechnete F-Wert kleiner als der kritische F-Wert ist, behalten wir die Nullhypothese bei.
+* Richtig. Ein berechneter F-Wert, der größer als der kritische F-Wert ist, führt zur Ablehnung der Nullhypothese.
+* Falsch. Die Entscheidungsregel für die F-Verteilung hängt nicht direkt von der Anzahl der Stichproben ab, sondern von den Freiheitsgraden und dem Signifikanzniveau.
+* Falsch. Ein hoher F-Wert deutet auf einen signifikanten Unterschied zwischen den Varianzen bzw. den Gruppen hin, nicht notwendigerweise auf eine geringe Varianz in den Daten.
+* Falsch. Der kritische F-Wert hängt vom gewählten Signifikanzniveau des Tests ab.
+
+Meta-information
+================
+exname: FTest
+extype: mchoice 
+exsolution: 01000
+exshuffle: TRUE

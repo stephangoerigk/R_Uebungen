@@ -1,0 +1,32 @@
+Question
+========
+
+In einer klinisch-psychologischen Studie wird der Zusammenhang zwischen der Anzahl der Therapiesitzungen (unabhängige Variable) und der Verbesserung der Lebensqualität (abhängige Variable) untersucht. Die Standardabweichung der Anzahl der Therapiesitzungen beträgt 4 Sitzungen, die Standardabweichung der Lebensqualitätspunkte beträgt 10 Punkte, und die Kovarianz zwischen den beiden Variablen beträgt 20. Wie hoch ist der Steigungsparameter der Regressionsgeraden?
+
+Answerlist
+----------
+
+* 0.5
+* 1.25
+* 2
+* 5
+* 10
+
+Solution
+========
+
+Answerlist
+----------
+
+* Falsch. Dies entspricht nicht dem berechneten Steigungsparameter aus den gegebenen Statistiken.
+* Richtig. Der Steigungsparameter berechnet sich aus der Kovarianz geteilt durch die Quadrat der Standardabweichung der unabhängigen Variable, also 20 / (4^2) = 1.25.
+* Falsch. Dies ist nicht das korrekte Ergebnis basierend auf den gegebenen Standardabweichungen und der Kovarianz.
+* Falsch. Dieser Wert ist zu hoch für den berechneten Steigungsparameter.
+* Falsch. Dieser Wert überschreitet weit den aus den gegebenen Daten berechneten Steigungsparameter.
+
+Meta-information
+================
+exname: BerechnungSteigungsparameterKlinisch
+extype: mchoice 
+exsolution: 01000
+exshuffle: TRUE

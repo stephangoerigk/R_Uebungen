@@ -1,0 +1,32 @@
+Question
+========
+
+Was ist der Zweck der Dummy-Codierung einer unabhängigen Variablen in der linearen Regression?
+
+Answerlist
+----------
+
+* Um kategoriale Variablen in numerische Werte umzuwandeln, sodass sie in der Regression verwendet werden können.
+* Um die Korrelation zwischen unabhängigen und abhängigen Variablen zu erhöhen.
+* Um die Anzahl der Variablen im Regressionsmodell zu verringern.
+* Um den Einfluss jeder Kategorie auf die abhängige Variable zu eliminieren.
+* Um die Varianz der unabhängigen Variablen zu maximieren.
+
+Solution
+========
+
+Answerlist
+----------
+
+* Richtig. Die Dummy-Codierung wird verwendet, um kategoriale Variablen in numerische Werte umzuwandeln, damit sie in der linearen Regression analysiert werden können.
+* Falsch. Dummy-Codierung ändert nicht die Korrelation zwischen Variablen; sie ermöglicht die Analyse kategorialer Variablen.
+* Falsch. Dummy-Codierung reduziert nicht die Anzahl der Variablen, sondern erstellt binäre Variablen für kategoriale Daten.
+* Falsch. Die Dummy-Codierung eliminiert nicht den Einfluss jeder Kategorie, sondern ermöglicht es, ihren Einfluss zu messen.
+* Falsch. Das Ziel der Dummy-Codierung ist nicht, die Varianz der unabhängigen Variablen zu maximieren, sondern kategoriale Variablen für die Analyse zugänglich zu machen.
+
+Meta-information
+================
+exname: DummyCodierungZweck
+extype: mchoice 
+exsolution: 10000
+exshuffle: TRUE

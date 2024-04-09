@@ -1,12 +1,12 @@
-name: QM1_CFH
-title:
+name: QM2_CFH
+title: QM2_CFH
 username: daze02-stephan-goerigk
 account: daze02-stephan-goerigk
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
-appId: 11678862
-bundleId: 8468550
-url: https://daze02-stephan-goerigk.shinyapps.io/QM1_CFH/
+appId: 11688752
+bundleId: 8468539
+url: https://daze02-stephan-goerigk.shinyapps.io/QM2_CFH/
 version: 1
 asMultiple: FALSE
 asStatic: FALSE

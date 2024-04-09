@@ -1,0 +1,32 @@
+Question
+========
+
+Wie wird in der linearen Regression eine optimale Gerade gefunden?
+
+Answerlist
+----------
+
+* Durch Maximierung der Summe der quadrierten Abstände zwischen den beobachteten und vorhergesagten Werten.
+* Durch Minimierung der Summe der quadrierten Differenzen zwischen den beobachteten und vorhergesagten Werten.
+* Durch Auswahl der Geraden, die durch die meisten Datenpunkte verläuft.
+* Durch Maximierung der Korrelation zwischen den beobachteten und vorhergesagten Werten.
+* Durch Minimierung der absoluten Differenzen zwischen den beobachteten und vorhergesagten Werten.
+
+Solution
+========
+
+Answerlist
+----------
+
+* Falsch. Die optimale Gerade wird gefunden, indem die Summe der quadrierten Abstände minimiert und nicht maximiert wird.
+* Richtig. Die Methode der kleinsten Quadrate minimiert die Summe der quadrierten Differenzen zwischen den beobachteten und vorhergesagten Werten, um die optimale Gerade zu finden.
+* Falsch. Die optimale Gerade muss nicht durch die meisten Datenpunkte verlaufen, sondern sollte die Abstände zwischen den Datenpunkten und der Geraden minimieren.
+* Falsch. Obwohl eine hohe Korrelation ein Ziel ist, wird die optimale Gerade durch Minimierung der quadrierten Abstände und nicht durch Maximierung der Korrelation gefunden.
+* Falsch. Die Minimierung der absoluten Differenzen ist eine andere Methode (wie bei der robusten Regression), aber in der klassischen linearen Regression wird die Summe der quadrierten Differenzen minimiert.
+
+Meta-information
+================
+exname: OptimaleGeradeLineareRegression
+extype: mchoice 
+exsolution: 01000
+exshuffle: TRUE

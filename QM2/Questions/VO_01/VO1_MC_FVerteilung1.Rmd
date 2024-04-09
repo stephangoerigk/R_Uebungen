@@ -1,0 +1,32 @@
+Question
+========
+
+Welche Aussagen über die F-Verteilung in der Statistik sind zutreffend?
+
+Answerlist
+----------
+
+* Die F-Verteilung wird verwendet, um 2 Varianzen miteinander zu vergleichen.
+* Die F-Verteilung ist immer linksschief.
+* Die F-Verteilung hat zwei Freiheitsgradparameter: einen für den Zähler und einen für den Nenner.
+* Die F-Verteilung wird nur in der Regressionsanalyse verwendet.
+* Die F-Verteilung ist symmetrisch um ihren Mittelwert.
+
+Solution
+========
+
+Answerlist
+----------
+
+* Richtig. Die F-Verteilung wird verwendet, um das Verhältnis der Varianzen zweier Stichproben zu testen und ist zentral in der Varianzanalyse.
+* Falsch. Die F-Verteilung ist rechtsschief/linkssteil, nicht linksschief.
+* Richtig. Die F-Verteilung ist durch zwei Freiheitsgrade definiert: einen für den Zähler (Zwischen-Gruppen-Varianz) und einen für den Nenner (Innerhalb-Gruppen-Varianz).
+* Falsch. Die F-Verteilung wird in verschiedenen statistischen Tests verwendet, einschließlich ANOVA und Regressionsanalyse.
+* Falsch. Die F-Verteilung ist aufgrund ihrer Schiefe nicht symmetrisch.
+
+Meta-information
+================
+exname: FVerteilung1
+extype: mchoice 
+exsolution: 10100
+exshuffle: TRUE

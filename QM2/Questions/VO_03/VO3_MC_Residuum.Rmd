@@ -1,0 +1,32 @@
+Question
+========
+
+Was ist ein Residuum in der linearen Regression?
+
+Answerlist
+----------
+
+* Der maximale Wert, den die abhängige Variable annehmen kann.
+* Der durchschnittliche Wert aller beobachteten Werte der abhängigen Variablen.
+* Die Differenz zwischen einem beobachteten Wert und dem durch die Regressionsgleichung vorhergesagten Wert.
+* Der Prozentsatz der Varianz, der durch die unabhängige Variable erklärt wird.
+* Der Abstand zwischen der Regressionsgeraden und dem Ursprung des Koordinatensystems.
+
+Solution
+========
+
+Answerlist
+----------
+
+* Falsch. Das Residuum bezieht sich nicht auf den maximalen Wert der abhängigen Variable.
+* Falsch. Das Residuum ist nicht der Durchschnittswert der beobachteten Werte.
+* Richtig. Ein Residuum ist die Differenz zwischen dem beobachteten Wert der abhängigen Variable und dem durch das Regressionsmodell vorhergesagten Wert.
+* Falsch. Der Prozentsatz der Varianz, der erklärt wird, bezieht sich auf das Bestimmtheitsmaß (R²), nicht auf das Residuum.
+* Falsch. Das Residuum ist nicht der Abstand zwischen der Regressionsgeraden und dem Ursprung des Koordinatensystems.
+
+Meta-information
+================
+exname: WasIstResiduum
+extype: mchoice 
+exsolution: 00100
+exshuffle: TRUE

@@ -1,0 +1,32 @@
+Question
+========
+
+Was sind die Grundlagen der einfachen linearen Regression?
+
+Answerlist
+----------
+
+* Sie berücksichtigt mehrere unabhängige Variablen, um die abhängige Variable vorherzusagen.
+* Sie verwendet eine lineare Gleichung, um die Beziehung zwischen einer unabhängigen und einer abhängigen Variable zu modellieren.
+* Sie erfordert, dass beide Variablen, unabhängige und abhängige, kategorial sind.
+* Sie kann nur verwendet werden, wenn die Beziehung zwischen den Variablen perfekt linear ist.
+* Sie schätzt die Steigung und den Achsenabschnitt der Geraden, die am besten zu den Daten passt.
+
+Solution
+========
+
+Answerlist
+----------
+
+* Falsch. Die einfache lineare Regression bezieht sich nur auf eine unabhängige Variable zur Vorhersage der abhängigen Variable.
+* Richtig. Die einfache lineare Regression modelliert die Beziehung zwischen einer unabhängigen und einer abhängigen Variable mit einer linearen Gleichung.
+* Falsch. In der einfachen linearen Regression ist die unabhängige Variable typischerweise kontinuierlich, und die abhängige Variable ist ebenfalls kontinuierlich.
+* Falsch. Die einfache lineare Regression kann auch bei nicht perfekt linearen Beziehungen angewendet werden, solange die Annäherung linear ist.
+* Richtig. Ein Hauptziel der einfachen linearen Regression ist es, die Steigung und den Achsenabschnitt zu schätzen, um die Gerade zu finden, die die Daten am besten repräsentiert.
+
+Meta-information
+================
+exname: LineareRegressionGrundlagen
+extype: mchoice 
+exsolution: 01001
+exshuffle: TRUE

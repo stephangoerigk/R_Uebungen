@@ -1,0 +1,32 @@
+Question
+========
+
+Wie beeinflusst der Stichprobenumfang die Teststärke (Power) bei einer einfaktoriellen ANOVA?
+
+Answerlist
+----------
+
+* Ein größerer Stichprobenumfang verringert generell die Teststärke der ANOVA.
+* Ein größerer Stichprobenumfang erhöht die Teststärke, was die Wahrscheinlichkeit erhöht, einen tatsächlichen Effekt zu entdecken.
+* Der Stichprobenumfang hat keinen Einfluss auf die Teststärke der ANOVA.
+* Nur wenn der Stichprobenumfang extrem groß ist, erhöht sich die Teststärke signifikant.
+* Ein kleinerer Stichprobenumfang ist vorzuziehen, da er zu präziseren Schätzungen führt.
+
+Solution
+========
+
+Answerlist
+----------
+
+* Falsch. Ein größerer Stichprobenumfang erhöht in der Regel die Teststärke der ANOVA, nicht das Gegenteil.
+* Richtig. Ein größerer Stichprobenumfang verbessert die Fähigkeit der ANOVA, einen tatsächlichen Effekt zu erkennen, was die Teststärke erhöht.
+* Falsch. Der Stichprobenumfang hat einen direkten Einfluss auf die Teststärke, größere Stichproben erhöhen sie.
+* Falsch. Die Teststärke erhöht sich mit zunehmendem Stichprobenumfang, nicht nur bei extrem großen Stichproben.
+* Falsch. Ein kleinerer Stichprobenumfang führt nicht zu präziseren Schätzungen und kann die Teststärke verringern.
+
+Meta-information
+================
+exname: StichprobenumfangTeststaerkeANOVA
+extype: mchoice 
+exsolution: 01000
+exshuffle: TRUE

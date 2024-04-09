@@ -1,0 +1,32 @@
+Question
+========
+
+Angenommen, bei einem Tukey-HSD-Test beträgt die durchschnittliche quadrierte Abweichung (MSW) 2.5 und es gibt insgesamt 30 Beobachtungen, die sich gleichmäßig auf drei Gruppen verteilen. Was ist der HSD-Wert bei einem Signifikanzniveau von 0,05?
+
+Answerlist
+----------
+
+* 1.45
+* 1.96
+* 1.01
+* 2.87
+* 3.16
+
+Solution
+========
+
+Answerlist
+----------
+
+* Falsch. Diese Zahl entspricht nicht dem korrekten Tukey-HSD-Wert für die gegebenen Bedingungen.
+* Falsch. Dies scheint eher ein z-Wert für ein Signifikanzniveau von 0.05 zu sein, nicht der Tukey-HSD-Wert.
+* Richtig. Angenommen, der kritische Wert des Tukey-Tests (q-Wert) ist ungefähr 3.4 für die gegebenen Freiheitsgrade und Signifikanzniveau, würde der HSD-Wert ungefähr 1.01 betragen.
+* Falsch. Dieser Wert ist zu hoch für die gegebenen Daten und den üblichen kritischen Wert des Tukey-Tests.
+* Falsch. Dieser Wert überschreitet die typische Range für einen HSD-Wert unter den gegebenen Bedingungen.
+
+Meta-information
+================
+exname: TukeyHSDRechnung
+extype: mchoice 
+exsolution: 00100
+exshuffle: TRUE

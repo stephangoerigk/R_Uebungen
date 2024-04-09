@@ -1,0 +1,38 @@
+```{r RelativeHaeufigkeit_data, include=FALSE}
+x = sample(c("A", "B", "C"), 10, replace = T)
+sol = prop.table(table(x))["C"] * 100
+```
+
+Question
+========
+Es ist eine nominalskalierte Variable $X$ = `r paste0("[", paste(x, collapse = ", "), "]")` gegeben.
+
+Bitte berechnen Sie die relative Häufigkeit von C: 
+
+Answerlist
+----------
+* `r sol`
+* `r sol + 2`
+* `r sol * 3`
+* `r sol + 5`
+* `r sol - 12`
+
+
+Solution
+========
+
+Answerlist
+----------
+* Richtig. 
+* Falsch. 
+* Falsch. 
+* Falsch. 
+* Falsch. 
+
+
+Meta-information
+================
+exname: RelativeHaeufigkeit
+extype: mchoice 
+exsolution: 10000
+exshuffle: TRUE

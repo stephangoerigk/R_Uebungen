@@ -1,0 +1,32 @@
+Question
+========
+
+Ein Psychologe führt eine Studie zur Wirkung von Schlaf auf die Gedächtnisleistung durch. Die Regressionsergebnisse zeigen, dass die Geradengleichung für den Zusammenhang zwischen Schlafstunden (x) und Gedächtnisleistungspunkten (y) durch y = 5x + 30 gegeben ist. Wie viele Gedächtnisleistungspunkte werden vorhergesagt, wenn eine Person 8 Stunden schläft?
+
+Answerlist
+----------
+
+* 50 Punkte
+* 70 Punkte
+* 40 Punkte
+* 80 Punkte
+* 90 Punkte
+
+Solution
+========
+
+Answerlist
+----------
+
+* Falsch. Dieses Ergebnis entspricht nicht der angegebenen Geradengleichung für 8 Stunden Schlaf.
+* Richtig. Setzt man 8 Stunden in die Gleichung ein, ergibt sich y = 5 * 8 + 30 = 70 Punkte.
+* Falsch. Diese Zahl entspricht nicht der korrekten Berechnung basierend auf der gegebenen Geradengleichung.
+* Falsch. Obwohl 80 Punkte nah am Ergebnis sind, ist es nicht die genaue Zahl, die sich aus der Geradengleichung ergibt.
+* Falsch. Dies überschreitet das Ergebnis, das sich aus der Geradengleichung für 8 Stunden Schlaf ergibt.
+
+Meta-information
+================
+exname: SchlafGedaechtnisleistung
+extype: mchoice 
+exsolution: 01000
+exshuffle: TRUE

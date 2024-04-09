@@ -1,0 +1,32 @@
+Question
+========
+
+Was sind die Hauptunterschiede zwischen einem unabhängigen t-Test und einer einfaktoriellen ANOVA?
+
+Answerlist
+----------
+
+* Ein unabhängiger t-Test wird verwendet, um die Mittelwerte von zwei Gruppen zu vergleichen, während eine einfaktorielle ANOVA für zwei oder mehr Gruppen verwendet wird.
+* Ein unabhängiger t-Test kann mit nicht-normalverteilten Daten verwendet werden, aber eine einfaktorielle ANOVA erfordert normalverteilte Daten.
+* Ein unabhängiger t-Test vergleicht die Varianzen innerhalb der Gruppen, während eine einfaktorielle ANOVA die Varianzen zwischen den Gruppen vergleicht.
+* Eine einfaktorielle ANOVA kann verwendet werden, um die Mittelwerte von zwei Gruppen zu vergleichen und ist genauer als der t-Test.
+* Ein unabhängiger t-Test setzt homogene Varianzen voraus, während für eine einfaktorielle ANOVA keine solche Annahme notwendig ist.
+
+Solution
+========
+
+Answerlist
+----------
+
+* Richtig. Der wesentliche Unterschied ist, dass der t-Test für zwei Gruppen und die ANOVA für zwei oder mehr Gruppen angewendet wird.
+* Falsch. Sowohl der unabhängige t-Test als auch die einfaktorielle ANOVA setzen normalverteilte Daten voraus.
+* Falsch. Beide Tests vergleichen die Mittelwerte zwischen den Gruppen, nicht die Varianzen innerhalb der Gruppen.
+* Falsch. Die einfaktorielle ANOVA wird typischerweise für mehr als zwei Gruppen verwendet, obwohl sie auch für zwei Gruppen anwendbar ist, aber nicht genauer als der t-Test.
+* Falsch. Sowohl der unabhängige t-Test als auch die einfaktorielle ANOVA setzen homogene Varianzen voraus.
+
+Meta-information
+================
+exname: tTestVsANOVA
+extype: mchoice 
+exsolution: 10000
+exshuffle: TRUE

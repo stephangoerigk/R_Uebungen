@@ -37,25 +37,216 @@ knitr::include_graphics("images/R_logo.png")
 
 ## Einheit 1
 
-```{r eval=FALSE, include=FALSE}
-# hinter jede Einheit den Titel
-# Quizfragen alle Einheiten aus Muster
-# QM1 spezifische Aufgaben hinzufügen - Interpretieren..
-# Evtl Aufgaben LMU hinzufügen? 
-# publishen 
-# in studynet verlinken 
-# neuer test
+```{r VO1_MC_Varianz_Rev, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_01/VO1_MC_Varianz_Rev.Rmd", allow_retry = TRUE)
 ```
 
-```{r VO1_MC_Alter, message = FALSE, warning=FALSE}
-exams2learnr("Questions/VO_01/VO1_MC_Alter.Rmd", allow_retry = TRUE)
+```{r VO1_MC_tTestVsANOVA, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_01/VO1_MC_tTestVsANOVA.Rmd", allow_retry = TRUE)
+```
+
+```{r VO1_MC_alphaKumulierung1, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_01/VO1_MC_alphaKumulierung1.Rmd", allow_retry = TRUE)
+```
+
+```{r VO1_MC_alphaKumulierung2, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_01/VO1_MC_alphaKumulierung2.Rmd", allow_retry = TRUE)
+```
+
+```{r VO1_MC_EinfaktorielleANOVA_Basics1, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_01/VO1_MC_EinfaktorielleANOVA_Basics1.Rmd", allow_retry = TRUE)
+```
+
+```{r VO1_MC_EinfaktorielleANOVA_Basics2, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_01/VO1_MC_EinfaktorielleANOVA_Basics2.Rmd", allow_retry = TRUE)
+```
+
+```{r VO1_MC_EinfaktorielleANOVA_df1, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_01/VO1_MC_EinfaktorielleANOVA_df1.Rmd", allow_retry = TRUE)
+```
+
+```{r VO1_MC_Fgleich1, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_01/VO1_MC_Fgleich1.Rmd", allow_retry = TRUE)
+```
+
+```{r VO1_MC_FTest, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_01/VO1_MC_FTest.Rmd", allow_retry = TRUE)
+```
+
+```{r VO1_MC_FVerteilung1, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_01/VO1_MC_FVerteilung1.Rmd", allow_retry = TRUE)
+```
+
+```{r VO1_MC_FVerteilung2, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_01/VO1_MC_FVerteilung2.Rmd", allow_retry = TRUE)
+```
+
+```{r VO1_MC_Residualvarianz, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_01/VO1_MC_Residualvarianz.Rmd", allow_retry = TRUE)
+```
+
+```{r VO1_MC_SystematischeVarianz, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_01/VO1_MC_SystematischeVarianz.Rmd", allow_retry = TRUE)
+```
+
+```{r VO1_MC_FTest2, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_01/VO1_MC_FTest2.Rmd", allow_retry = TRUE)
+```
+
+```{r VO1_MC_FTest3, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_01/VO1_MC_FTest3.Rmd", allow_retry = TRUE)
 ```
 
 ## Einheit 2
+
+```{r VO2_MC_ANOVAPower, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_02/VO2_MC_ANOVAPower.Rmd", allow_retry = TRUE)
+```
+
+```{r VO2_MC_Boferroni1, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_02/VO2_MC_Boferroni1.Rmd", allow_retry = TRUE)
+```
+
+```{r VO2_MC_Boferroni2, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_02/VO2_MC_Boferroni2.Rmd", allow_retry = TRUE)
+```
+
+```{r VO2_MC_ES, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_02/VO2_MC_ES.Rmd", allow_retry = TRUE)
+```
+
+```{r VO2_MC_eta1, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_02/VO2_MC_eta1.Rmd", allow_retry = TRUE)
+```
+
+```{r VO2_MC_eta2, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_02/VO2_MC_eta2.Rmd", allow_retry = TRUE)
+```
+
+```{r VO2_MC_eta3, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_02/VO2_MC_eta3.Rmd", allow_retry = TRUE)
+```
+
+```{r VO2_MC_Levene1, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_02/VO2_MC_Levene1.Rmd", allow_retry = TRUE)
+```
+
+```{r VO2_MC_Levene2, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_02/VO2_MC_Levene2.Rmd", allow_retry = TRUE)
+```
+
+```{r VO2_MC_omega, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_02/VO2_MC_omega.Rmd", allow_retry = TRUE)
+```
+
+```{r VO2_MC_PostHoc1, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_02/VO2_MC_PostHoc1.Rmd", allow_retry = TRUE)
+```
+
+```{r VO2_MC_PostHoc2, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_02/VO2_MC_PostHoc2.Rmd", allow_retry = TRUE)
+```
+
+```{r VO2_MC_Tukey1, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_02/VO2_MC_Tukey1.Rmd", allow_retry = TRUE)
+```
+
+```{r VO2_MC_Tukey2, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_02/VO2_MC_Tukey2.Rmd", allow_retry = TRUE)
+```
+
 ## Einheit 3
+
+```{r VO3_MC_KorrelationvsRegeression, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_03/VO3_MC_KorrelationvsRegeression.Rmd", allow_retry = TRUE)
+```
+
+```{r VO3_MC_LinReg, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_03/VO3_MC_LinReg.Rmd", allow_retry = TRUE)
+```
+
+```{r VO3_MC_UVAV, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_03/VO3_MC_UVAV.Rmd", allow_retry = TRUE)
+```
+
+```{r VO3_MC_UVAV2, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_03/VO3_MC_UVAV2.Rmd", allow_retry = TRUE)
+```
+
+```{r VO3_MC_LMKovarianz, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_03/VO3_MC_LMKovarianz.Rmd", allow_retry = TRUE)
+```
+
+```{r VO3_MC_LS, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_03/VO3_MC_LS.Rmd", allow_retry = TRUE)
+```
+
+```{r VO3_MC_LMEinsetzen, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_03/VO3_MC_LMEinsetzen.Rmd", allow_retry = TRUE)
+```
+
+```{r VO3_MC_LMInterpretation, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_03/VO3_MC_LMInterpretation.Rmd", allow_retry = TRUE)
+```
+
+```{r VO3_MC_Residuum, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_03/VO3_MC_Residuum.Rmd", allow_retry = TRUE)
+```
+
+```{r VO3_MC_LMEinsetzen2, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_03/VO3_MC_LMEinsetzen2.Rmd", allow_retry = TRUE)
+```
+
+```{r VO3_MC_SteigungBerechnen, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_03/VO3_MC_SteigungBerechnen.Rmd", allow_retry = TRUE)
+```
+
+```{r VO3_MC_InterceptBerechnen, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_03/VO3_MC_InterceptBerechnen.Rmd", allow_retry = TRUE)
+```
+
+```{r VO3_MC_Bestimmtheitsmass, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_03/VO3_MC_Bestimmtheitsmass.Rmd", allow_retry = TRUE)
+```
+
+```{r VO3_MC_Bestimmtheitsmass2, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_03/VO3_MC_Bestimmtheitsmass2.Rmd", allow_retry = TRUE)
+```
+
 ## Einheit 4
+
+```{r VO4_MC_Dummy1, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_04/VO4_MC_Dummy1.Rmd", allow_retry = TRUE)
+```
+
+```{r VO4_MC_ttestregression, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_04/VO4_MC_ttestregression.Rmd", allow_retry = TRUE)
+```
+
+```{r VO4_MC_Dummy2, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_04/VO4_MC_Dummy2.Rmd", allow_retry = TRUE)
+```
+
+```{r VO4_MC_Dummy3, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_04/VO4_MC_Dummy3.Rmd", allow_retry = TRUE)
+```
+
+```{r VO4_MC_StandardisierteReg, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_04/VO4_MC_StandardisierteReg.Rmd", allow_retry = TRUE)
+```
+
+```{r VO4_MC_StandardisierteReg2, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_04/VO4_MC_StandardisierteReg2.Rmd", allow_retry = TRUE)
+```
+
+```{r VO4_MC_tWertSteigung, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_04/VO4_MC_tWertSteigung.Rmd", allow_retry = TRUE)
+```
+
 ## Einheit 5
+
 ## Einheit 6
+
 ## Einheit 7
 
 ## Einheit 8

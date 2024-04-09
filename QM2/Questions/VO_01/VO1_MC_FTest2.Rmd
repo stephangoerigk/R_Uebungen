@@ -1,0 +1,32 @@
+Question
+========
+
+Gegeben sind drei Gruppen mit jeweils 10, 12 und 8 Beobachtungen. Die Zwischengruppenvarianz beträgt 20 und die Innergruppenvarianz 5. Wie hoch ist der F-Wert?
+
+Answerlist
+----------
+
+* 2
+* 4
+* 10
+* 20
+* 40
+
+Solution
+========
+
+Answerlist
+----------
+
+* Falsch. Dieser Wert ist nicht das Ergebnis der korrekten Berechnung des F-Werts.
+* Richtig. Der F-Wert wird als Quotient aus der Zwischengruppenvarianz und der Innergruppenvarianz berechnet, also 20/5 = 4.
+* Falsch. Dieser Wert ist zu hoch und nicht das korrekte Ergebnis der F-Wert-Berechnung.
+* Falsch. Dies entspricht der Zwischengruppenvarianz, nicht dem berechneten F-Wert.
+* Falsch. Dieser Wert ist weit höher als der korrekte F-Wert für die gegebenen Varianzen.
+
+Meta-information
+================
+exname: FWertBerechnung
+extype: mchoice 
+exsolution: 01000
+exshuffle: TRUE

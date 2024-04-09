@@ -1,0 +1,32 @@
+Question
+========
+
+In einer psychologischen Studie wird der Einfluss von regelmäßiger Meditation (0 = keine Meditation, 1 = regelmäßige Meditation) auf das Stresslevel untersucht. Die Regressionsgleichung lautet: Stresslevel = 50 - 8 * x. Wie interpretiert man den Steigungskoeffizienten für Meditation und den Intercept (Y-Achsenabschnitt)?
+
+Answerlist
+----------
+
+* Der Intercept von 50 bedeutet, dass Personen ohne Meditation ein Stresslevel von 50 haben, und regelmäßige Meditation reduziert das Stresslevel um 8 Punkte.
+* Der Intercept von 50 bedeutet, dass Meditation das Stresslevel um 50 Punkte erhöht, unabhängig von der Meditationspraxis.
+* Der Koeffizient von -8 für Meditation zeigt an, dass Meditation keinen Einfluss auf das Stresslevel hat, da der Wert negativ ist.
+* Regelmäßige Meditation erhöht das Stresslevel um 8 Punkte, und der Intercept von 50 ist der maximale Effekt der Meditation.
+* Der Intercept von 50 ist irrelevant, und nur der Koeffizient von -8 zeigt die Änderung des Stresslevels durch Meditation an.
+
+Solution
+========
+
+Answerlist
+----------
+
+* Richtig. Der Intercept von 50 gibt das erwartete Stresslevel für Personen ohne Meditation an, und der Koeffizient von -8 zeigt die durchschnittliche Reduktion im Stresslevel bei regelmäßiger Meditation.
+* Falsch. Der Intercept zeigt das Basis-Stresslevel ohne Meditation, nicht die Erhöhung durch Meditation.
+* Falsch. Ein negativer Koeffizient für Meditation bedeutet, dass regelmäßige Meditation das Stresslevel senkt.
+* Falsch. Der Koeffizient von -8 bedeutet eine Reduktion, nicht eine Erhöhung des Stresslevels durch Meditation, und der Intercept von 50 repräsentiert das Stresslevel ohne Meditation.
+* Falsch. Der Intercept ist sehr relevant, da er das Stresslevel für Personen angibt, die nicht meditieren.
+
+Meta-information
+================
+exname: InterpretationRegressionMeditation
+extype: mchoice 
+exsolution: 10000
+exshuffle: TRUE

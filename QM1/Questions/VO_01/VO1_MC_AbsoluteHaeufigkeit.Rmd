@@ -1,0 +1,38 @@
+```{r AbsoluteHaeufigkeit_data, include=FALSE}
+x = sample(c("Sonne", "Mond", "Sterne"), 10, replace = T)
+sol = table(x)["Mond"]
+```
+
+Question
+========
+Es ist eine nominalskalierte Variable $X$ = `r paste0("[", paste(x, collapse = ", "), "]")` gegeben.
+
+Bitte berechnen Sie die absolute Häufigkeit von Mond: 
+
+Answerlist
+----------
+* `r sol`
+* `r sol + 5`
+* `r sol - 1`
+* `r sol + 2`
+* `r sol * 2`
+
+
+Solution
+========
+
+Answerlist
+----------
+* Richtig. 
+* Falsch. 
+* Falsch. 
+* Falsch. 
+* Falsch. 
+
+
+Meta-information
+================
+exname: AbsoluteHaeufigkeit
+extype: mchoice 
+exsolution: 10000
+exshuffle: TRUE

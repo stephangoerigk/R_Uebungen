@@ -1,0 +1,32 @@
+Question
+========
+
+Was versteht man unter α-Fehlerkumulierung in der Statistik?
+
+Answerlist
+----------
+
+* α-Fehlerkumulierung tritt auf, wenn die Wahrscheinlichkeit eines Typ-I-Fehlers mit jeder zusätzlichen Hypothesentestung abnimmt.
+* α-Fehlerkumulierung bedeutet, dass die Gesamtwahrscheinlichkeit eines Typ-I-Fehlers über mehrere Hypothesentests hinweg steigt.
+* α-Fehlerkumulierung ist irrelevant, wenn die Testergebnisse unabhängig voneinander sind.
+* Die α-Fehlerkumulierung wird reduziert, indem man den p-Wert für jeden einzelnen Test erhöht.
+* α-Fehlerkumulierung bezieht sich auf die Zunahme der Wahrscheinlichkeit eines Typ-II-Fehlers über mehrere Tests hinweg.
+
+Solution
+========
+
+Answerlist
+----------
+
+* Falsch. Die Wahrscheinlichkeit eines Typ-I-Fehlers (α-Fehler) nimmt mit jeder zusätzlichen Hypothesentestung zu, nicht ab.
+* Richtig. Die α-Fehlerkumulierung beschreibt das Phänomen, dass die Gesamtwahrscheinlichkeit eines Typ-I-Fehlers mit der Anzahl der durchgeführten Tests zunimmt.
+* Falsch. Die α-Fehlerkumulierung ist auch bei unabhängigen Tests relevant, da sie sich auf die Gesamtwahrscheinlichkeit von Fehlern in mehreren Tests bezieht.
+* Falsch. Die α-Fehlerkumulierung wird typischerweise durch Anpassung des α-Niveaus mittels Bonferroni-Korrektur oder ähnlichen Verfahren reduziert, nicht durch Erhöhung des p-Werts.
+* Falsch. Die α-Fehlerkumulierung betrifft den Typ-I-Fehler, nicht den Typ-II-Fehler.
+
+Meta-information
+================
+exname: AlphaFehlerkumulierung
+extype: mchoice 
+exsolution: 01000
+exshuffle: TRUE

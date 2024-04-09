@@ -1,0 +1,32 @@
+Question
+========
+
+Was bedeutet ein signifikanter F-Test bei der ANOVA für die Notwendigkeit von Post-Hoc-Tests?
+
+Answerlist
+----------
+
+* Ein signifikanter F-Test bedeutet, dass keine weiteren Post-Hoc-Tests erforderlich sind.
+* Ein signifikanter F-Test zeigt, dass alle Gruppenmittelwerte gleich sind.
+* Ein signifikanter F-Test deutet darauf hin, dass mindestens zwei Gruppenmittelwerte sich signifikant unterscheiden, was Post-Hoc-Tests erforderlich macht.
+* Ein signifikanter F-Test ist ausreichend, um die genauen Gruppenunterschiede zu bestimmen.
+* Post-Hoc-Tests sind nur notwendig, wenn der F-Test nicht signifikant ist.
+
+Solution
+========
+
+Answerlist
+----------
+
+* Falsch. Ein signifikanter F-Test zeigt nur an, dass mindestens ein signifikanter Unterschied vorliegt, aber nicht, zwischen welchen Gruppen dieser besteht, was Post-Hoc-Tests erforderlich macht.
+* Falsch. Ein signifikanter F-Test bedeutet das Gegenteil, nämlich dass nicht alle Gruppenmittelwerte gleich sind.
+* Richtig. Ein signifikanter F-Test deutet darauf hin, dass Unterschiede zwischen den Gruppen bestehen und Post-Hoc-Tests notwendig sind, um zu klären, zwischen welchen Gruppen diese Unterschiede bestehen.
+* Falsch. Ein signifikanter F-Test zeigt nur an, dass ein Unterschied besteht, aber nicht, zwischen welchen spezifischen Gruppen.
+* Falsch. Post-Hoc-Tests sind erforderlich, wenn der F-Test signifikant ist, um spezifische Gruppenunterschiede zu identifizieren.
+
+Meta-information
+================
+exname: SignifikanterFTestPosthoc
+extype: mchoice 
+exsolution: 00100
+exshuffle: TRUE

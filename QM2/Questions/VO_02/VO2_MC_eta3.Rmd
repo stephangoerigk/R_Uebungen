@@ -1,0 +1,32 @@
+Question
+========
+
+Angenommen, in einer einfaktoriellen ANOVA betragen die Quadratsumme zwischen den Gruppen (QS_zwischen) 150 und die gesamte Quadratsumme (QS_gesamt) 250. Wie hoch ist die Effektstärke (η²)?
+
+Answerlist
+----------
+
+* 0,25
+* 0,60
+* 0,50
+* 0,75
+* 1,00
+
+Solution
+========
+
+Answerlist
+----------
+
+* Falsch. Dies ist nicht die korrekte Effektstärke basierend auf den gegebenen Quadratsummen.
+* Richtig. Die Effektstärke η² wird als QS_zwischen/QS_gesamt berechnet, also 150/250 = 0,60.
+* Falsch. Dies ist nicht die korrekte Effektstärke für die gegebenen Quadratsummen.
+* Falsch. Dies ist nicht die korrekte Effektstärke für die gegebenen Quadratsummen.
+* Falsch. Eine Effektstärke von 1,00 würde bedeuten, dass 100% der Varianz zwischen den Gruppen liegen, was nicht den gegebenen Quadratsummen entspricht.
+
+Meta-information
+================
+exname: EffektstaerkeBerechnung
+extype: mchoice 
+exsolution: 01000
+exshuffle: TRUE

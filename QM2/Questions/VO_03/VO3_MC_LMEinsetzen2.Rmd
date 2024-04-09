@@ -1,0 +1,32 @@
+Question
+========
+
+In einer Studie zur Untersuchung der Beziehung zwischen Stresslevel (x) und der Anzahl der erlebten gesundheitlichen Beschwerden (y) ergab die lineare Regression die Gleichung y = 2x + 5. Wie viele gesundheitliche Beschwerden werden für eine Person mit einem Stresslevel von 7 vorhergesagt?
+
+Answerlist
+----------
+
+* 10 Beschwerden
+* 14 Beschwerden
+* 19 Beschwerden
+* 24 Beschwerden
+* 29 Beschwerden
+
+Solution
+========
+
+Answerlist
+----------
+
+* Falsch. Diese Zahl wird nicht durch Einsetzen von 7 in die Gleichung erhalten.
+* Falsch. Dies ist nicht das Ergebnis der Berechnung gemäß der gegebenen Gleichung.
+* Richtig. Wenn man 7 für x in die Gleichung einsetzt, erhält man y = 2 * 7 + 5 = 19.
+* Falsch. Dies liegt nahe am korrekten Wert, ist aber nicht das exakte Ergebnis.
+* Falsch. Dies überschreitet das Ergebnis, das sich aus der Gleichung für einen Stresslevel von 7 ergibt.
+
+Meta-information
+================
+exname: StressGesundheitsbeschwerden
+extype: mchoice 
+exsolution: 00100
+exshuffle: TRUE

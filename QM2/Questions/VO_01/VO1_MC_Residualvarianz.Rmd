@@ -1,0 +1,32 @@
+Question
+========
+
+Wie wird die Residualvarianz bei der ANOVA geschätzt?
+
+Answerlist
+----------
+
+* Durch Summierung der quadrierten Abweichungen der Einzelwerte vom Gesamtmittelwert.
+* Durch die durchschnittliche quadrierte Abweichung der Beobachtungen innerhalb jeder Gruppe vom Gruppenmittelwert.
+* Durch Division der Gesamtvarianz durch die Anzahl der Gruppen.
+* Durch die Summe der quadrierten Differenzen zwischen den Gruppenmittelwerten und dem Gesamtmittelwert.
+* Durch die durchschnittliche quadrierte Abweichung aller Gruppenmittelwerte vom Gesamtmittelwert.
+
+Solution
+========
+
+Answerlist
+----------
+
+* Falsch. Das beschreibt eher die Gesamtvarianz, nicht die Residualvarianz.
+* Richtig. Die Residualvarianz in der ANOVA wird als durchschnittliche quadrierte Abweichung der Beobachtungen innerhalb jeder Gruppe vom jeweiligen Gruppenmittelwert berechnet.
+* Falsch. Das ist nicht die korrekte Methode zur Berechnung der Residualvarianz in der ANOVA.
+* Falsch. Das beschreibt die Berechnung der Varianz zwischen den Gruppen, nicht die Residualvarianz.
+* Falsch. Dies ist nicht die Methode zur Berechnung der Residualvarianz in der ANOVA.
+
+Meta-information
+================
+exname: ResidualvarianzANOVA
+extype: mchoice 
+exsolution: 01000
+exshuffle: TRUE

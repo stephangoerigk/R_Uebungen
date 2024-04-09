@@ -1,0 +1,32 @@
+Question
+========
+
+Was charakterisiert die F-Verteilung in statistischen Analysen?
+
+Answerlist
+----------
+
+* Die F-Verteilung ist immer symmetrisch um ihren Mittelwert.
+* Sie wird hauptsächlich zur Bestimmung der Signifikanz in Korrelationsanalysen verwendet.
+* Die F-Verteilung hat eine untere Grenze bei 0, aber keine obere Grenze.
+* Ein F-Wert nahe 1 deutet darauf hin, dass die Varianzen gleich sind.
+* Die F-Verteilung wird verwendet, um die Homogenität von zwei Stichproben zu testen.
+
+Solution
+========
+
+Answerlist
+----------
+
+* Falsch. Die F-Verteilung ist rechtsschief und nicht symmetrisch.
+* Falsch. Sie wird typischerweise in der Varianzanalyse (ANOVA) zur Prüfung der Gleichheit der Gruppenmittelwerte verwendet, nicht in Korrelationsanalysen.
+* Richtig. Die F-Verteilung beginnt bei 0 und erstreckt sich nach rechts ohne obere Grenze.
+* Richtig. Ein F-Wert nahe 1 suggeriert, dass keine signifikanten Unterschiede zwischen den Varianzen bestehen.
+* Falsch. Die F-Verteilung wird genutzt, um die Homogenität von zwei Varianzen, nicht die Homogenität von zwei Stichproben, zu testen.
+
+Meta-information
+================
+exname: FVerteilung2
+extype: mchoice 
+exsolution: 00110
+exshuffle: TRUE

@@ -1,0 +1,32 @@
+Question
+========
+
+In der Regressionsanalyse, wie werden unabhängige und abhängige Variablen definiert?
+
+Answerlist
+----------
+
+* Die unabhängige Variable ist die, die von anderen Variablen im Modell beeinflusst wird.
+* Die abhängige Variable ist die, die vorhergesagt oder erklärt werden soll.
+* Die unabhängige Variable ist immer eine Konstante im Regressionsmodell.
+* Die abhängige Variable ist die, die zur Vorhersage der unabhängigen Variable verwendet wird.
+* Die unabhängige Variable ist die, die zur Vorhersage oder Erklärung der abhängigen Variable verwendet wird.
+
+Solution
+========
+
+Answerlist
+----------
+
+* Falsch. Die unabhängige Variable beeinflusst die abhängige Variable, nicht umgekehrt.
+* Richtig. Die abhängige Variable ist diejenige, die in der Regressionsanalyse vorhergesagt oder erklärt werden soll.
+* Falsch. Die unabhängige Variable ist nicht immer eine Konstante; sie ist ein Prädiktor oder erklärende Variable im Modell.
+* Falsch. In der Regression wird die abhängige Variable durch die unabhängigen Variablen vorhergesagt, nicht umgekehrt.
+* Richtig. Die unabhängige Variable wird zur Vorhersage oder Erklärung der abhängigen Variable in der Regressionsanalyse verwendet.
+
+Meta-information
+================
+exname: UnabhaengigeAbhaengigeVariable
+extype: mchoice 
+exsolution: 01001
+exshuffle: TRUE

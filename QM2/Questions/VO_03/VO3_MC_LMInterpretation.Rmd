@@ -1,0 +1,32 @@
+Question
+========
+
+In einer psychologischen Studie untersucht man den Einfluss von Studienzeit (x in Stunden) auf die Testergebnisse (y in Punkten). Die resultierende Regressionsgleichung lautet y = 4x + 50. Was bedeuten die Steigung und der Y-Achsenabschnitt in diesem Kontext?
+
+Answerlist
+----------
+
+* Die Steigung von 4 bedeutet, dass für jede Stunde Studienzeit die Testergebnisse um 4 Punkte steigen; der Y-Achsenabschnitt von 50 bedeutet die Mindestpunktzahl.
+* Die Steigung von 4 bedeutet, dass für jede Stunde Studienzeit die Testergebnisse um 50 Punkte steigen.
+* Der Y-Achsenabschnitt von 50 zeigt die maximale Punktzahl an, die erreicht werden kann.
+* Die Steigung von 4 deutet darauf hin, dass mit jeder zusätzlichen Studienstunde die Testergebnisse um 50 Punkte sinken.
+* Der Y-Achsenabschnitt von 50 bedeutet, dass ohne Studienzeit 50 Punkte erreicht werden; die Steigung zeigt die Zunahme der Punkte pro Studienstunde.
+
+Solution
+========
+
+Answerlist
+----------
+
+* Richtig. Die Steigung von 4 zeigt die Zunahme der Testergebnisse pro Studienstunde, und der Y-Achsenabschnitt von 50 repräsentiert die erwartete Punktzahl ohne Studienzeit.
+* Falsch. Die Steigung gibt an, wie viele Punkte die Testergebnisse pro Stunde Studienzeit steigen, nicht der Y-Achsenabschnitt.
+* Falsch. Der Y-Achsenabschnitt repräsentiert die erwartete Punktzahl ohne Studienzeit, nicht die maximale Punktzahl.
+* Falsch. Die Steigung von 4 bedeutet eine Zunahme, nicht eine Abnahme der Testergebnisse pro Studienstunde.
+* Richtig. Der Y-Achsenabschnitt zeigt die erwartete Punktzahl ohne Studienzeit, und die Steigung repräsentiert die Zunahme der Punkte pro zusätzlicher Studienstunde.
+
+Meta-information
+================
+exname: SteigungYAchsenabschnittInterpretation
+extype: mchoice 
+exsolution: 10001
+exshuffle: TRUE

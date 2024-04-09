@@ -1,0 +1,32 @@
+Question
+========
+
+Was ist der Unterschied zwischen Korrelation und Regression in der Statistik?
+
+Answerlist
+----------
+
+* Korrelation misst die Stärke und Richtung einer linearen Beziehung zwischen zwei Variablen, während Regression die Art dieser Beziehung quantifiziert.
+* Korrelation impliziert Kausalität, während Regression nur die Stärke der Beziehung misst.
+* Regression kann mit mehr als zwei Variablen durchgeführt werden, Korrelation jedoch nur mit zwei.
+* Regression ist nur für lineare Beziehungen anwendbar, Korrelation auch für nicht-lineare.
+* Korrelation und Regression sind identisch; es gibt keinen Unterschied zwischen ihnen.
+
+Solution
+========
+
+Answerlist
+----------
+
+* Richtig. Korrelation misst die Stärke und Richtung der Beziehung zwischen zwei Variablen, während Regression die spezifische Beziehung modelliert und Vorhersagen ermöglicht.
+* Falsch. Korrelation impliziert keine Kausalität, und Regression wird verwendet, um die Beziehung zwischen unabhängigen und abhängigen Variablen zu modellieren und kann kausale Beziehungen implizieren, wenn sie richtig angewendet wird.
+* Richtig. Regression kann tatsächlich mit mehreren Variablen durchgeführt werden (multiple Regression), und Korrelation kann paarweise zwischen mehreren Variablen berechnet werden.
+* Falsch. Sowohl Korrelation als auch Regression können für lineare und nicht-lineare Beziehungen angewendet werden, abhängig von der Art des Regressionsmodells oder Korrelationskoeffizienten.
+* Falsch. Korrelation und Regression unterscheiden sich in Zweck und Anwendung; Korrelation misst die Beziehungsstärke, während Regression die Beziehung modelliert und Vorhersagen ermöglicht.
+
+Meta-information
+================
+exname: KorrelationVsRegression
+extype: mchoice 
+exsolution: 10100
+exshuffle: TRUE
