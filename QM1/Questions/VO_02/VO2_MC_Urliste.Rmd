@@ -1,0 +1,32 @@
+
+Question
+========
+
+Folgende Urliste sei gegeben. Welche Aussagen stimmen?
+2, 2, 3, 3, 4, 4, 4, 5, 6, 6, 6, 7, 8, 8, 9, 9
+
+Answerlist
+----------
+
+* Der Modus ist der Wert 4 bzw. 6
+* Median = 5
+* Median = 5,5
+* Arithmetisches Mittel = 5,5
+
+Solution
+========
+
+Answerlist
+----------
+
+* Richtig.
+* Falsch.
+* Richtig.
+* Falsch.
+
+Meta-information
+================
+exname: UrlisteAussagen
+extype: mchoice 
+exsolution: 1010
+exshuffle: TRUE

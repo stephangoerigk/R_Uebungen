@@ -1,0 +1,31 @@
+
+Question
+========
+
+Was trifft auf das Verhältnisskalenniveau zu?
+
+Answerlist
+----------
+
+* Hat absoluten Nullpunkt
+* Länge wäre ein Beispiel
+* Aussage über das Verhältnis zwischen zwei Werten ist möglich
+* Selten in den Sozialwissenschaften
+
+Solution
+========
+
+Answerlist
+----------
+
+* Richtig. 
+* Richtig. Länge hat einen absoluten Nullpunkt von dem aus wir messen
+* Richtig.
+* Richtig. Wir verwenden häufig latente Variablen (z.B. Ergebnisse aus psychologischen Tests), die keinen logischen Nullpunkt haben, und damit nicht verhältnisskaliert sind. Beispiel IQ: einen IQ von 0 gibt es nicht. 
+
+Meta-information
+================
+exname: Verhältnisskalenniveau
+extype: mchoice 
+exsolution: 1111
+exshuffle: TRUE

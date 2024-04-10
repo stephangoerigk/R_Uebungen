@@ -1,0 +1,32 @@
+Question
+========
+
+Was trifft auf den Begriff Messen zu?
+
+Answerlist
+----------
+
+* Es ist ein Verfahren zur Erfassung von Daten.
+* Es kann quantitative Informationen liefern.
+* Messungen sind präzise und fehlerfrei.
+* Messen ist ein zentraler Schritt in der Datenerhebung.
+* Es gibt verschiedene Skalenniveaus in der Messung.
+
+Solution
+========
+
+Answerlist
+----------
+
+* Richtig. Messen ist ein Verfahren zur Erfassung von Daten.
+* Richtig. Es kann quantitative Informationen liefern.
+* Falsch. Messungen können Fehler enthalten.
+* Richtig. Messen ist ein zentraler Schritt in der Datenerhebung.
+* Richtig. Es gibt verschiedene Skalenniveaus in der Messung.
+
+Meta-information
+================
+exname: Messen
+extype: mchoice 
+exsolution: 11011
+exshuffle: TRUE

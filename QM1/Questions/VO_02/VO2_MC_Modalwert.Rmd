@@ -1,0 +1,33 @@
+
+Question
+========
+
+Der Modalwert...?
+
+Answerlist
+----------
+
+* Ist der häufigste Wert in einer Datenmenge.
+* Ist eine Maßzahl für die Streuung von Daten.
+* Ist gleich dem Median, wenn die Verteilung symmetrisch ist.
+* Ist ein statistisches Maß für die zentrale Tendenz.
+* Ist der niedrigste Wert in einer Datenmenge.
+
+Solution
+========
+
+Answerlist
+----------
+
+* Richtig. Der Modalwert ist der häufigste Wert in einer Datenmenge.
+* Falsch. Der Modalwert ist keine Maßzahl für die Streuung von Daten; er gibt lediglich den am häufigsten vorkommenden Wert an.
+* Richtig. Bei einer symmetrischen Verteilung gilt: Modus = Mittelwert = Median
+* Richtig. 
+* Falsch. 
+
+Meta-information
+================
+exname: Modalwert
+extype: mchoice 
+exsolution: 10110
+exshuffle: TRUE

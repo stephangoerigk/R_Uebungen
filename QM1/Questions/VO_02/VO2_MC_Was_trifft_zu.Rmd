@@ -1,0 +1,31 @@
+
+Question
+========
+
+Was trifft zu?
+
+Answerlist
+----------
+
+* Bei einer linkssteilen Verteilung gilt: Modus < Median < Mittelwert
+* Bei einer linkssteilen Verteilung gilt: Modus = Median = Mittelwert
+* Bei einer linkssteilen Verteilung gilt: Mittelwert < Modus < Median
+* Keine dieser Aussagen ist richtig
+
+Solution
+========
+
+Answerlist
+----------
+
+* Richtig. 
+* Falsch.
+* Falsch. 
+* Falsch. 
+
+Meta-information
+================
+exname: ZentraleTendenz
+extype: mchoice 
+exsolution: 1000
+exshuffle: TRUE

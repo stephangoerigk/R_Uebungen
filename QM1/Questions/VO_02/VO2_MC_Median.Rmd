@@ -1,0 +1,31 @@
+
+Question
+========
+
+Was trifft auf den Median zu? 
+
+Answerlist
+----------
+
+* Benötigt mindestens nominal skalierte Variablen
+* Ist der mittlere Wert der Verteilung
+* Ist robust gegenüber Ausreißern
+* Ist i.d.R. besser als der Mittelwert
+
+Solution
+========
+
+Answerlist
+----------
+
+* Falsch. Für die Berechnung des Medians muss mindstens Ordinalskalenniveau vorliegen
+* Richtig.
+* Richtig. Bei Ausreißern in den Daten kann sich der Median besser als der Mittelwert eignen, um Aussagen über die zentrale Tendenz der Daten zu treffen. 
+* Falsch. 
+
+Meta-information
+================
+exname: ZentraleTendenz
+extype: mchoice 
+exsolution: 0110
+exshuffle: TRUE

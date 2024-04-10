@@ -1,0 +1,33 @@
+
+Question
+========
+
+Das Lieblingsfußballteam ist ein Beispiel für eine Variable mit welchem Skalenniveau?
+
+Answerlist
+----------
+
+* Ordinales Skalenniveau
+* Nominales Skalenniveau
+* Metrisches Skalenniveau
+* Intervallskalenniveau
+* Verhältnisskalenniveau
+
+Solution
+========
+
+Answerlist
+----------
+
+* Falsch. Ordinales Skalenniveau bezieht sich auf eine Rangordnung.
+* Richtig. Das Lieblingsfußballteam ist eine Variable auf nominalem Skalenniveau.
+* Falsch. Metrisches Skalenniveau bezieht sich auf eine messbare Größe. Die Abstände zwischen den Ausprägungen können berechnet werden.
+* Falsch. 
+* Falsch. 
+
+Meta-information
+================
+exname: Lieblingsfußballteam
+extype: mchoice 
+exsolution: 01000
+exshuffle: TRUE

@@ -1,0 +1,33 @@
+
+Question
+========
+
+Was trifft auf das Nominalskalenniveau zu?
+
+Answerlist
+----------
+
+* Die Werte sind geordnet.
+* Die Werte können als Zahlen interpretiert werden.
+* Häufig wird hier mit einer Codierung gearbeitet.
+* Die Werte repräsentieren Kategorien oder Labels.
+* Die Werte haben einen absoluten Nullpunkt.
+
+Solution
+========
+
+Answerlist
+----------
+
+* Falsch. Beim Nominalskalenniveau sind die Werte nicht geordnet.
+* Falsch. Beim Nominalskalenniveau können die Werte nicht als Zahlen interpretiert werden.
+* Richtig. 
+* Richtig. Das Nominalskalenniveau repräsentiert Kategorien oder Labels, ohne dass eine Rangfolge oder numerische Interpretation gegeben ist.
+* Falsch. Beim Nominalskalenniveau existiert kein absoluter Nullpunkt.
+
+Meta-information
+================
+exname: Nominalskalenniveau
+extype: mchoice 
+exsolution: 00110
+exshuffle: TRUE
