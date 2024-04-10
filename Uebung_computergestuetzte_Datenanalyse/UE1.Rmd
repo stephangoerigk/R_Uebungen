@@ -9,176 +9,224 @@ runtime: shiny_prerendered
 ---
 
 ```{r setup, include=FALSE}
+
 library(learnr)
 library(psych)
 library(shiny)
 library(faux)
 library(tidyverse)
 knitr::opts_chunk$set(echo = FALSE)
+
 ```
 
-## Willkommen
+## Einführung
 
-```{r}
-# Struktur anlegen analog zum Bookdown 
-# Nicos Aufgaben in Struktur einsortieren 
-# Bookdown Inhalte kürzegn, ggf. raus? 
-# 
-```
+Herzlichen Willkommen!
+
+Diese interaktive Plattform wurde speziell für den Kurs **R - Übung zur computergestützten Datenanalyse** entwickelt, um Ihnen eine praktische und anschauliche Lernumgebung zu bieten. Mit dieser Oberfläche haben Sie die Möglichkeit, die im Seminar erworbenen Fähigkeiten unmittelbar anzuwenden und zu vertiefen.
+
+Auf dieser Plattform finden Sie eine Vielzahl von Beispielen und Übungen, die darauf ausgelegt sind, Ihr Verständnis von R zu verbessern. Jede Übung ist darauf ausgerichtet, spezifische Konzepte und Techniken zu vermitteln, sodass Sie Ihr Wissen erweitern und festigen können.
+
+**Die learnR Oberfläche wird kontinuierlich erweitert, um Ihnen immer neue Lerninhalte anbieten zu können. Zudem bieten wir Ihnen die Möglichkeit, Ihren Namen in einem Google-Doc zu vermerken. Dadurch wird festgehalten, wer die Übungen zu welchen Themengebieten erfolgreich abgeschlossen hat."**
+
+Beginnen Sie nun, indem Sie eine der verfügbaren Übungen auswählen. Die interaktive Oberfläche ermöglicht es Ihnen, sofort Feedback zu Ihren Lösungen zu erhalten und bei Bedarf Änderungen vorzunehmen. Nutzen Sie diese Gelegenheit, um in Ihrem eigenen Tempo zu üben und zu lernen.
+
+Viel Erfolg und Spaß beim Entdecken der Möglichkeiten mit R! 
+
+Stephan Goerigk und Team
 
 
 ## Grundlegende Arithmetik in R
 
-Wir können in `R`, ähnlich wie auf einem Taschenrechner, alle mathematischen Grundrechenoperationen ausführen. 
+Willkommen im Abschnitt **Grundlegende Arithmetik in R**! 
 
-Dazu tippen Sie einen Rechenbefehl in das Programmierfenster und drücken auf `Run Code`.
+In diesem Tel der learnR Oberfläche haben Sie die Möglichkeit, grundlegende arithmetische Operationen wie Addition, Subtraktion, Multiplikation und Division in R praktisch anzuwenden. 
 
-Berechnen Sie: $2 + 3$
+
+1. Berechnen Sie das Ergebnis der Subtraktion $534 + 16$:
 
 ```{r Addition, exercise=TRUE}
 
 ```
 
-Berechnen Sie: $7 - 3$
+
+2. Berechnen Sie das Ergebnis der Subtraktion $7 - 3$:
 
 ```{r Subtraktion, exercise=TRUE}
 
 ```
 
-Berechnen Sie: $3 \cdot 9$
+
+3. Berechnen Sie das Ergebnis der Multiplikation $3 \cdot 9$:
 
 ```{r Multiplikation, exercise=TRUE}
 
 ```
 
-Berechnen Sie: 9 $\div$ 3
+
+4. Berechnen Sie das Ergebnis der Division 9 $\div$ 3:
 
 ```{r Division, exercise=TRUE}
 
 ```
 
-Berechnen Sie: $3^3$
 
-Falls Sie beim Schreiben eines der Befehle Hilfe benötigen, können Sie auf `Hint` klicken.
+4. Berechnen Sie das Ergebnis der Potenz $3^3$:
+
+Anmerkung: Falls Sie beim Schreiben eines der Befehle Hilfe benötigen, können Sie auf `Hint` klicken.
 
 ```{r Quadrieren, exercise=TRUE}
 
 ```
 
 ```{r Quadrieren-hint}
+
 3^3
+
 ```
 
-Berechnen Sie: Wurzel aus 9
+
+4. Berechnen Sie das Ergebnis der Wurzel aus 9:
 
 ```{r Wurzel, exercise=TRUE}
 
 ```
 
 ```{r Wurzel-hint}
+
 sqrt(9)
+
 ```
 
-Berechnen Sie: $\sqrt{9} \cdot (2+6)$
+
+5. Berechnen Sie das Ergebnis des Ausdrucks $\sqrt{9} \cdot (2+6)$
 
 ```{r Arith, exercise=TRUE}
 
 ```
 
 ```{r Arith-hint}
+
 sqrt(9) * (2+6)
+
 ```
 
-## Datenobjekte in R
 
-Natürlich wollen wir `R` nicht nur wie einen Taschenrechner verwenden, denn das Programm kann noch viel mehr.
+## Datenformate in R
 
-Einer der größten Vorteile von `R` ist es, dass wir **Objekte** definieren können. Mit diesen Objekten können wir im Rahmen von Analysen oder zu einem späteren Zeitpunkt weiterarbeiten.
+Willkommen im Abschnitt **Datenformate in R**! 
 
-### Datenobjekte
+In diesem Bereich erkunden Sie die grundlegenden Datenstrukturen, die in der Programmiersprache R verwendet werden: **Skalare, Vektoren, Matrizen und Data Frames.** Jede dieser Strukturen spielt eine wichtige Rolle in der Datenverarbeitung und -analyse.
 
-Wir wollen 3 Arten von Datenobjekten kennenlernen:
 
-1. Skalar
-2. Vektor
-3. Matrix
-
-```{r eval=FALSE, include=FALSE}
-@STEPHAN: Wie können Wir das Bild kleiner anzeigen? 
-  
-  # s.u.
-```
-
-Die folgende Graphik zeigt Ihnen, wie die 3 Arten von Datenobjekten in einem Datensatz aussehen könnten:
-
-```{r eval = TRUE, echo = F, out.width = "450px", fig.align='center'}
-knitr::include_graphics("images/Datenformat_1.png")
-```
-
-### Skalar
-
-Der einfachste Objekttyp in R ist der **Skalar**. Ein Skalar ist einfach nur ein einzelner Wert, z.B. eine Zahl oder ein Wort.
-
-##### Aufgabe 
-Nun wollen wir den Wert 100 einem Skalar mit dem Buchstaben `a` zuweisen.
-
+1. Weisen Sie den Wert 100 dem Skalar `a` zu:
 
 ```{r Skalar1, exercise=TRUE}
 
 ```
 
 ```{r Skalar1-hint}
+
 a = 100
+
 ```
 
-Wie Sie bemerken, erzeugt R, wenn Sie diesen Code ausführen, keinen Output. Dazu geben Sie nun lediglich den Namen des Skalars in das Eingabefeld unterhalb Ihres Codes ein und drücken erneut `Run Code`. Wir haben unserem Skalar mit dem Wert 100 den "Namen" `a` gegeben.
-
-Wir können einen Skalar auch mit dem Ergenbnis einer Rechenoperation belegen. 
-
-##### Aufgabe 
-Erstellen Sie bitte den Skalar `b`, welcher das Ergebnis der Rechnung $3 \div 100$ enthalten soll, und lassen Sie sich diesen direkt anzeigen.  
-
+ 
+2. Weisen Sie dem Skalar `b` das Ergebnis der Rechnung $3 \div 100$ zu und lassen Sie sich diesen ausgeben. Führen Sie die Zuweisung mit einem Befehl (ohne Zwischenergebnisse) durch.
 
 ```{r Skalar2, exercise=TRUE}
 
 ```
 
 ```{r Skalar2-hint}
+
 b = 3 / 100
 b
+
 ```
 
-Weiterführend können wir einen Skalar auch mit dem Ergebis einer Rechenoption bestehend aus anderen Skalaren belegen. 
 
-##### Aufgabe 
-Erstellen Sie hierzu den Skalar `a` mit dem Wert $50$, den Skalar `b` mit dem Wert $3$. Nun wollen wir einen dritten Skalar `c` mit dem Ergebnis der Rechenoperation $(a + b) \div b$ belegen. Lassen Sie sich das Ergebnis auch direkt ausgeben. 
+3. Weisen Sie dem Skalar `c` den Wert $50$, dem Skalar `d` den Wert $3$ und dem Skalar `e` das Ergebnis der Rechenoperation $(c + d) \div d$ zu. Lassen Sie sich das Ergebnis zudem ausgeben.
 
 ```{r Skalar3, exercise=TRUE, exercise.lines = 5}
 
 ```
 
 ```{r Skalar3-hint}
-a = 50
-b = 3
-c = (a+b) / b
-c
+
+c = 50
+d = 3
+e = (c+d) / d
+e
+
 ```
 
-*Hinweis: Wenn Sie in diesem Übungssheet Rechenoperationen ausführen, müssen Sie Ihre Datenobjekte in jedem Eingabefeld wieder neu "belegen". In der Vollversion von R, welche Sie im 2. Semester kennenlernen, merkt sich `R` diese Objekte. Wenn Sie also zum Beispiel den Skalar `a` mit einem beliebigen Wert belegen, merkt sich `R` dies und Sie können durch die Eingabe von `a` jederzeit wieder mit dem Wert des Skalars `a` weiterrechnen. Dies gilt auch für Vektoren oder ganze Datensätze* 
 
-Skalare müssen nicht numerisch sein, sondern können auch Worte beinhalten. Wortobjekte heißen in `R` **characters** (engl. strings). In `R` schreibt man Worte immer in Anführungszeichen `""`.
+4. Weisen Sie dem Skalar `f` das Ergebnis der Rechnoperation $5 + 4$, dem Skalar `g` den Wert $10$ zu und überprüfen Sie unter Verwendung der beiden Skala, ob diese gleich sind.
 
-##### Aufgabe 
-Erstellen Sie nun den Skalar `a`, der das Wort `Charlotte Fresenius` und den Skalar `b`, der das Wort `Carl Remigius Fresenius` beinhaltet. Lassen Sie sich lediglich den Inhalt des Skalars `b` ausgeben. 
-
-```{r Skalar4, exercise=TRUE}
+```{r Skalar4, exercise=TRUE, exercise.lines = 5}
 
 ```
 
 ```{r Skalar4-hint}
+
+f = 5+4
+g = 10
+f == g
+
+```
+
+
+5. Erstellen Sie den Skalar `a`, der das Wort `Charlotte Fresenius` und den Skalar `b`, der das Wort `Carl Remigius Fresenius` beinhaltet. Lassen Sie sich lediglich den Inhalt des Skalars `b` ausgeben. 
+
+```{r Skalar5, exercise=TRUE}
+
+```
+
+```{r Skalar5-hint}
+
 a = "Charlotte Fresenius"
 b = "Carl Remigius Fresenius"
 b
+
+```
+
+
+6. Speichern Sie die drei Grundfarben "blau", "gelb" und "rot" in einem Vektor mit dem Namen *Farben* und lassen sich diesen ausgeben.
+
+Wählen Sie aus dem Vektor anschließend die Farbe Blau aus und speichern Sie diese als Objekt mit dem Namen *Wasser*. Lassen Sie sich diesen zudem ausgeben:
+
+```{r Vektor1, exercise=TRUE}
+
+```
+
+```{r Vektor1-hint}
+
+Farben = c("blau", "gelb", "rot")
+Farben
+
+Wasser = Farben[1]
+Wasser
+
+```
+
+
+7. Erstellen Sie den Character-Vektor *Freunde* mit den Namen *Florian*, *Eva* und *Philipp* und lassen sich diesen ausgeben. 
+
+Fügen Sie anschließend den Namen "Tanja" hinzu und überprüfen Sie Ihre Ergänzung.
+
+```{r Vektor2, exercise=TRUE}
+
+```
+
+```{r Vektor2-hint}
+
+Freunde <- c("Florian", "Eva", "Philipp")
+Freunde
+
+Freunde <- c(Freunde, "Tanja")
+Freunde
+
 ```
 
 Wie Sie sich vermutlich vorstellen können, behandelt R numerische und *character* Skalare unterschiedlich. Zum Beispiel lassen sich mit numerischen Skalaren grundlegende arithmetische Operationen durchführen (Addition, Subtraktion, Multiplikation…) – das funktioniert mit character Skalaren nicht. Um das auszuprobieren gehen Sie einfach zurück in Ihr letztes Eingabefeld und versuchen die Rechenoperation $a + b$ auszuführen. `R` wird Ihnen hier die Fehlermeldung <span style="color:red">*non-numeric argument to binary operator*</span> ausgeben. 
@@ -194,11 +242,11 @@ Wenn man `c()` benutzt, muss man immer ein **Komma** zwischen die Objekte setzen
 ##### Aufgabe 
 Lassen Sie uns die `c()` Funktion nutzen um einen **numerischen Vektor** zu erstellen der `a` heißt und die Zahlen von 1 bis 7 enthält. Lassen Sie sich das Ergebnis direkt ausgeben:
 
-```{r Vektor1, exercise=TRUE}
+```{r Vektor111, exercise=TRUE}
 
 ```
 
-```{r Vektor1-hint}
+```{r Vektor111-hint}
 a = c(1, 2, 3, 4, 5, 6, 7)
 a
 ```
@@ -208,11 +256,11 @@ Sie können auch **character Vektoren** erstellen, indem Sie die `c()` Funktion 
 ##### Aufgabe 
 Erstellen Sie einen Vektor, der die folgende Namen beinhaltet: `Freud`, `Wundt`, `Bandura`, `Watson`, `Jung`. Wir nennen diesen Vektor zur besseren Übersicht einmal `char.vec`. Lassen Sie sich den Inhalt des Vektors direkt ausgeben. 
 
-```{r Vektor2, exercise=TRUE}
+```{r Vektor222, exercise=TRUE}
 
 ```
 
-```{r Vektor2-hint}
+```{r Vektor222-hint}
 char.vec = c("Freud", "Wundt", "Bandura", "Watson", "Jung")
 char.vec
 ```
@@ -222,11 +270,11 @@ Mit Vektoren lassen sich auch Rechenoperationen ausführen.
 ##### Aufgabe 
 Erstellen Sie den Vektor `a` mit den Zahlen von 1 - 3 und den Vektor `b` mit den Zahlen von 4 - 6 und addieren diese zu einem neuen Vektor `c`. Lassen Sie sich den neuen Vektor `c` direkt anzeigen. Bei dieser Art der Addition wird jeweils die $n$te Zahl des Vektors `a` mit der $n$ten Zahl des Vektors `b` addiert. 
 
-```{r Vektor3, exercise=TRUE}
+```{r Vektor333, exercise=TRUE}
 
 ```
 
-```{r Vektor3-hint}
+```{r Vektor333-hint}
 a = c(1, 2, 3)
 b = c(4, 5, 6)
 c = a + b 
@@ -238,11 +286,11 @@ Vektoren lassen sich über die `c()` Funktion auch aneinanderhängen. Anders als
 ##### Aufgabe 
 Erstellen Sie die Vektoren `a` mit den Farben `blau` und `rot` sowie den Vektor `b` mit den Farben `gelb`und `grün`. Hängen Sie diese beiden Vektoren zu einem neuen Vektor `c` zusammen und lassen sich diesen anzeigen. 
 
-```{r Vektor4, exercise=TRUE}
+```{r Vektor444, exercise=TRUE}
 
 ```
 
-```{r Vektor4-hint}
+```{r Vektor444-hint}
 a = c("blau", "rot")
 b = c("gelb", "grün")
 c = c(a, b) 
