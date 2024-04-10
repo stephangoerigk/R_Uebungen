@@ -22,20 +22,19 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ### Was können Sie von dieser Übung erwarten?
 
-Im Folgenden finden Übungsaufgaben zur Vorlesung Vorlesung Statistik I (B-P 9.3-VO) im Modul Quantitative Methoden I (B-P 9.3). 
+Im Folgenden finden Sie Übungsaufgaben zur Vorlesung Statistik I (B-P 9.3-VO) im Modul Quantitative Methoden I (B-P 9.3).
 
-Dazu verwenden wir das Paket `learnr`. 
+Dazu verwenden wir das Paket `learnr`.
 
-Dieses Paket gibt uns u.a. die Möglichkeit, `R` Aufgaben direkt über Ihren Browser zu üben. Sie müssen dafür die Programme `R` und `RStudio` nicht auf dem eigenen Computer installieren. 
+Dieses Paket gibt uns u.a. die Möglichkeit, `R` Aufgaben direkt über Ihren Browser zu üben. Sie müssen dafür die Programme `R` und `RStudio` nicht auf dem eigenen Computer installieren.
 
-Zusätzlich finden Sie im Rahmen der Lektionen Quizaufgaben, um Ihr Wissen zu überprüfen. 
-
+Zusätzlich finden Sie im Rahmen der Lektionen Quizaufgaben, um Ihr Wissen zu überprüfen.
 
 ```{r eval = TRUE, echo = F, out.width = "150px", fig.align='center'}
 knitr::include_graphics("images/R_logo.png")
 ```
 
-## Einheit 1
+## Einheit 1 - Grundlagen der Datenanalyse
 
 ```{r xx, eval=FALSE, include=FALSE}
 # hinter jede Einheit den Titel
@@ -113,7 +112,7 @@ exams2learnr("Questions/VO_01/VO1_MC_RelativeHaeufigkeit.Rmd", allow_retry = TRU
 exams2learnr("Questions/VO_01/VO1_MC_AbsoluteHaeufigkeit.Rmd", allow_retry = TRUE)
 ```
 
-## Einheit 2
+## Einheit 2 - Skalenniveaus und statistische Kennwerte
 
 ```{r quiz2_1, echo = FALSE}
 quiz(
@@ -283,8 +282,7 @@ quiz(
     )
 ```
 
-## Einheit 3
-
+## Einheit 3 - Statistische Kennwerte (2)
 
 ```{r quiz3_3, echo = FALSE}
 quiz(
@@ -391,7 +389,7 @@ quiz(
     )
 ```
 
-Gegeben sind folgende Werte: 
+Gegeben sind folgende Werte:
 
 ```{r}
 df = data.frame(ID = c(1: 10),
@@ -399,6 +397,7 @@ df = data.frame(ID = c(1: 10),
 df = as.data.frame(t(df))
 knitr::kable(df)
 ```
+
 ```{r quiz3_13, echo = FALSE}
 quiz(
   question("Welche Aussagen stimmen? ",
@@ -423,8 +422,7 @@ quiz(
     )
 ```
 
-## Einheit 4
-
+## Einheit 4 - Visualisierung
 
 ```{r quiz4_1, echo = FALSE}
 quiz(
@@ -535,7 +533,6 @@ quiz(
     )
 ```
 
-
 ```{r quiz4_11, echo = FALSE}
 quiz(
   question("Wann benutzen wir Graphen in der Statistik?",
@@ -548,7 +545,6 @@ quiz(
   )
     )
 ```
-
 
 ```{r quiz4_12, echo = FALSE}
 quiz(
@@ -573,7 +569,6 @@ quiz(
 #boxplot(Tremor ~ Entzug, data = df2, cex.lab = 2.5, cex.axis = 2.5)
 ```
 
-
 ```{r quiz4_13, echo = FALSE}
 quiz(
   question("Was können wir folgender Grafik entnehmen?  <br> ![](images/boxplot.png){width=400px}",
@@ -586,9 +581,7 @@ quiz(
     )
 ```
 
-
-## Einheit 5
-
+## Einheit 5 - Wahrscheinlichkeitstheorie und Verteilungen
 
 ```{r quiz5_1, echo = FALSE}
 quiz(
@@ -601,7 +594,6 @@ quiz(
   )
     )
 ```
-
 
 ```{r quiz5_2, echo = FALSE}
 quiz(
@@ -761,9 +753,7 @@ quiz(
     )
 ```
 
-
-## Einheit 6
-
+## Einheit 6 - Stichprobe, Grundgesamtheit und Stichprobenfehler
 
 ```{r quiz6_1, echo = FALSE}
 quiz(
@@ -947,9 +937,7 @@ quiz(
     )
 ```
 
-
-## Einheit 7
-
+## Einheit 7 - Hypothesen und Hypothesentests
 
 ```{r quiz7_1, echo = FALSE}
 quiz(
@@ -1134,14 +1122,14 @@ quiz(
     )
 ```
 
-## Einheit 8
+## Einheit 8 - *t*-Test
 
-## Einheit 9
+## Einheit 9 - *t*-Test (Übungsaufgaben Schritt-für-Schritt)
 
-## Einheit 10
+## Einheit 10 - Korrelation
 
-## Einheit 11
+## Einheit 11 - Korrelation (2)
 
-## Einheit 12
+## Einheit 12 - Effektstärke und Powerberechnung
 
-## Einheit 13
+
