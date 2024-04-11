@@ -1,0 +1,60 @@
+```{r num3, include=FALSE}
+
+set.seed(123)
+N = 12
+df = data.frame(ID = paste0(rep(1:N)),
+                 Stunden = round(rnorm(N, 10, 4))
+                  )
+
+df2 = df
+df = as.data.frame(t(df))
+colnames(df) = NULL
+#kable(df[,], col.names = NULL)
+table = df %>%
+  kbl() %>%
+  kable_styling()
+
+```
+
+
+Question
+======== 
+
+In der folgenden Tabelle sehen Sie, die wöchentliche Fernsehzeit in Stunden von 12 Schülern.
+
+```{r num4}
+table
+```
+
+Welche Aussagen zu dieser Tabelle sind zutreffend? 
+
+
+Answerlist
+----------
+
+* Der Median beträgt `r median(df2$Stunden)`
+* Der Median beträgt `r median(df2$Stunden) + 0.5`
+* Das untere Quartil beträgt 8
+* Das obere Quartil beträgt 15
+* Der Interquartilabstand beträgt 5,5
+
+Solution
+========
+
+Answerlist
+----------
+
+* Richtig.
+* Falsch.
+* Richtig.
+* Falsch.
+* Richtig.
+
+Meta-information
+================
+exname: Num1
+extype: mchoice 
+exsolution: 10101
+exshuffle: TRUE
+
+

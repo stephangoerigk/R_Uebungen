@@ -1,0 +1,33 @@
+
+Question
+========
+
+Was ist in Bezug auf Streuungsmaße korrekt?
+
+Answerlist
+----------
+
+* Die Standardabweichung ist ein robustes Streuungsmaß und wird nicht durch Ausreißer beeinflusst.
+* Der Interquartilsabstand ist ein Maß für die Streuung und gibt die Spannweite zwischen dem ersten und dritten Quartil an.
+* Eine hohe Varianz bedeutet, dass die Daten stark um den Mittelwert streuen.
+* Der Bereich (Range) ist definiert als die Differenz zwischen dem größten und dem kleinsten Wert in einer Datenmenge.
+* Der Median ist ein Maß für die Streuung und wird häufig verwendet, um die Variabilität der Daten zu messen.
+
+Solution
+========
+
+Answerlist
+----------
+
+* Falsch. Die Standardabweichung ist anfällig für Ausreißer und wird durch extreme Werte beeinflusst.
+* Richtig. Der Interquartilsabstand ist ein robustes Streuungsmaß, das die Spannweite zwischen dem ersten und dritten Quartil angibt und weniger empfindlich gegenüber Ausreißern ist.
+* Richtig. Eine hohe Varianz bedeutet, dass die Daten weit gestreut sind um den Mittelwert.
+* Richtig. Der Bereich (Range) ist definiert als die Differenz zwischen dem größten und dem kleinsten Wert in einer Datenmenge und gibt somit die Streuung an.
+* Falsch. Der Median ist ein Maß für die zentrale Tendenz, nicht für die Streuung.
+
+Meta-information
+================
+exname: Streuungsmaße
+extype: mchoice 
+exsolution: 01110
+exshuffle: TRUE

@@ -1,0 +1,56 @@
+
+Question
+======== 
+
+Gegeben sind folgende Werte:
+
+```{r code_spannweite, include=FALSE}
+set.seed(123)
+N = 11
+df = data.frame(ID = paste0(rep(1:N)),
+                Werte = c(2, 3, 3, 4, 5, 8, 8, 10, 12, 14, 18))
+df = as.data.frame(t(df))
+colnames(df) = NULL
+
+table = df %>%
+  kbl() %>%
+  kable_styling()
+
+
+```
+
+
+```{r code_spannweite2, echo=FALSE}
+table
+```
+
+Welche Aussagen stimmen? 
+
+
+Answerlist
+----------
+
+* Das untere Quartil ist 3
+* Das untere Quartil ist 3,5
+* IQR = 9
+* IQR = 9,5
+
+Solution
+========
+
+Answerlist
+----------
+
+* Richtig.
+* Falsch.
+* Richtig.
+* Falsch.
+
+Meta-information
+================
+exname: Spannweite2
+extype: mchoice 
+exsolution: 1010
+exshuffle: TRUE
+
+

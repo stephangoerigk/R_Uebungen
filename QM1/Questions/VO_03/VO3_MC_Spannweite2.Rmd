@@ -1,0 +1,48 @@
+
+Question
+======== 
+
+Die Spannweite folgender Messerte ist...?
+
+```{r code_spannweite, include=FALSE}
+set.seed(123)
+N = 5
+df = data.frame(ID = paste0(rep(1:N)),
+                Messwerte = c(6, 9, 100, 2, 5))
+df = as.data.frame(t(df))
+colnames(df) = NULL
+
+table = df %>%
+  kbl() %>%
+  kable_styling()
+
+
+```
+
+
+```{r code_spannweite2, echo=FALSE}
+table
+```
+
+
+
+Answerlist
+----------
+
+* 32
+* 54
+* 2
+* 98
+* 10
+
+
+
+
+Meta-information
+================
+exname: Spannweite2
+extype: mchoice 
+exsolution: 00010
+exshuffle: TRUE
+
+

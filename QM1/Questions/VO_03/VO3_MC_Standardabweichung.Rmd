@@ -1,0 +1,32 @@
+Question
+========
+
+Was trifft auf die Standardabweichung zu?
+
+Answerlist
+----------
+
+* Lässt sich in der Einheit der Variable lesen.
+* Wurzel aus der Spannweite
+* Wird stark von Ausreißern beeinflusst
+* Eignet sich besser als der Quartilabstand für normalverteilte metrische Variablen ohne Ausreißer
+* Streuung um den Mittelwert herum.
+
+Solution
+========
+
+Answerlist
+----------
+
+* Richtig. Anders als die Varianz lässt sich die Standardabweichung in der Einheit der Variable lesen. 
+* Falsch. 
+* Richtig. Ausreißer haben einen starken Einfluss auf die Varianz, weshalb sich im Fall von Ausreißern die Berechnung des IQR anbieten kann 
+* Richtig. 
+* Richtig.
+
+Meta-information
+================
+exname: Standardabweichung
+extype: mchoice 
+exsolution: 10111
+exshuffle: TRUE

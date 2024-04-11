@@ -1,0 +1,34 @@
+
+Question
+========
+
+Im Nenner der Varianz steht
+
+Answerlist
+----------
+
+* ... die Summe der quadrierten Abweichungen der Datenwerte vom Mittelwert.
+* ... die Standardabweichung.
+* ... der Mittelwert der Daten.
+* ... die Anzahl der Beobachtungen minus 1.
+* ... die Varianz selbst.
+
+Solution
+========
+
+Answerlist
+----------
+
+
+* Falsch. Dies beschreibt den Zähler (den Zähler ist die Summe der quadrierten Abweichungen).
+* Falsch. Die Standardabweichung ist die Quadratwurzel der Varianz.
+* Falsch. Der Mittelwert ist nicht im Nenner der Varianz.
+* Richtig. Im Nenner der Varianz steht die Anzahl der Beobachtungen minus 1 (degrees of freedom).
+* Falsch. Die Varianz selbst ist das Ergebnis der Berechnung.
+
+Meta-information
+================
+exname: VarianzNenner
+extype: mchoice 
+exsolution: 00010
+exshuffle: TRUE

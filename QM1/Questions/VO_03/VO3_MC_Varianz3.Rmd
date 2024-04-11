@@ -1,0 +1,32 @@
+Question
+========
+
+Die Varianz ist ein sinnvolles Streuungsmaß für folgende Variablen:
+
+Answerlist
+----------
+
+* Körpergröße in Zentimetern
+* Wohnort
+* Bildungsabschluss (z.B. Grundschule, Gymnasium, Universität)
+* Geschlecht (männlich/weiblich)
+* Anzahl erinnerter Items in Gedächtnistest
+
+Solution
+========
+
+Answerlist
+----------
+
+* Richtig. Die Varianz ist ein sinnvolles Streuungsmaß für metrisch-skalierte Variablen.
+* Falsch. Die Varianz ist weniger sinnvoll für nominal-skalierte oder dichotome Variablen, da diese keine sinnvolle Mittelwertinterpretation haben.
+* Falsch. Für ordinal-skalierte Variablen ist die Varianz weniger aussagekräftig, da die Abstände zwischen den Kategorien nicht gleichmäßig sind.
+* Falsch. Die Varianz ist weniger geeignet für dichotome Variablen (zwei Kategorien), da sie wenig über die Streuung aussagt.
+* Richtig. Die Varianz ist ein sinnvolles Streuungsmaß für metrisch-skalierte Variablen
+
+Meta-information
+================
+exname: VarianzSinnvoll
+extype: mchoice 
+exsolution: 10001
+exshuffle: TRUE
