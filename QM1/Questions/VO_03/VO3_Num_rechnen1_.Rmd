@@ -1,0 +1,64 @@
+```{r num1, include=FALSE}
+set.seed(123)
+N = 6
+df = data.frame(ID = paste0(rep(1:N)),
+                 Geschlecht = c("männlich", "männlich", "weiblich", "weiblich", "männlich", "weiblich"),
+                Alter = sample(17:65, 6, replace =TRUE),
+                BDI = round(rnorm(N, 20, 5)),
+                Behandlungsgruppe = c("B", "B", "B", "A", "A", "B")
+)
+x = df$Meter_m
+n = length(x)
+df2 = df
+df = as.data.frame(t(df))
+colnames(df) = NULL
+#kable(df[,], col.names = NULL)
+table = df %>%
+  kbl() %>%
+  kable_styling()
+
+```
+
+
+Question
+======== 
+
+Welche Aussagen zu nachfolgender Tabelle sind zutreffend? 
+
+```{r num2}
+table
+```
+
+
+
+
+Answerlist
+----------
+
+* Die Varianz der Variable BDI ist `r round(sd(df2$BDI),2)`
+* Die Varianz der Variable BDI ist `r round(var(df2$BDI),2)`
+* Der Median des Alters ist `r round(mean(df2$Alter))`
+* Anhand der vorliegenden Daten können wir eine Stichprobenbeschreibungstabelle erstellen.
+* Der durchschnittliche BDI Score von Personen aus Gruppe B ist `r mean(dplyr::filter(df2, Behandlungsgruppe == "B")$BDI)`
+
+Solution
+========
+
+Answerlist
+----------
+
+* Falsch.
+* Richtig.
+* Falsch.
+* Richtig.
+* Richtig.
+
+
+Meta-information
+================
+exname: Num1
+extype: mchoice 
+exsolution: 01011
+exshuffle: TRUE
+
+

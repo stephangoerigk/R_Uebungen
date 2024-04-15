@@ -1,0 +1,31 @@
+
+Question
+========
+
+Woran kann es liegen, wenn unimodale Normalverteilungen mit gleichem Mittelwert in ihrer Form verschieden sind?
+
+Answerlist
+----------
+
+* Nominales Skalenniveau
+* Median
+* Streuung
+* Inferenzstatistik
+
+Solution
+========
+
+Answerlist
+----------
+
+* Falsch. 
+* Falsch. 
+* Richtig. Die Form einer Normalerteilung wird durch zwei Werte definiert: Mittelwert und Standardabweichung. Zwei unterschiedliche Normalverteilungen mit gleichem Mittelwert müssen sich daher in Ihrer Streuung unterscheiden. 
+* Falsch. Mit der Inferenzstatistik ("schließende Statistik") werden wir uns in diesem Semester noch ausführlich beschäftigen. Wir benötigen Sie, um anhand von Stichproben Aussagen über eine Population (Gesamtheit) treffen zu können. 
+
+Meta-information
+================
+exname: UnimodaleVerteilungen
+extype: mchoice 
+exsolution: 0010
+exshuffle: TRUE

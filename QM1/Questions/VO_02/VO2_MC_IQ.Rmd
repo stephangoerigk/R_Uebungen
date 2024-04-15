@@ -1,0 +1,34 @@
+
+Question
+========
+
+Der IQ ist ein Beispiel für eine Variable mit welchem Skalenniveau?
+
+Answerlist
+----------
+
+* Nominales Skalenniveau
+* Ordinales Skalenniveau
+* Metrisches Skalenniveau
+* Intervallskalenniveau
+* Verhältnisskalenniveau
+
+Solution
+========
+
+Answerlist
+----------
+
+* Falsch. Der IQ ist keine Variable auf nominalem Skalenniveau.
+* Falsch. Der IQ ist keine Variable auf ordinalem Skalenniveau.
+* Richtig. Der IQ ist eine Variable auf metrischem Skalenniveau.
+* Richtig. Der IQ hat Intervallskalenniveau.
+* Falsch. Der IQ ist keine Variable auf Verhältnisskalenniveau, da ein IQ von 0 nicht das vollständige Fehlen der Intelligenz bedeutet.
+
+Meta-information
+================
+exname: IQSkalenniveau
+extype: mchoice 
+exsolution: 00110
+exshuffle: TRUE
+```

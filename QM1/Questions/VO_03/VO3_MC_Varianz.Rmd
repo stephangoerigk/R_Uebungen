@@ -1,0 +1,33 @@
+
+Question
+========
+
+Was trifft auf die Varianz zu?
+
+Answerlist
+----------
+
+* ... nur für metrische Daten sinnvoll
+* ... ist ein Maß für die durchschnittliche Abweichung der Datenwerte vom Mittelwert.
+* ... ist dasselbe wie der Median.
+* ... wird in derselben Einheit wie die Daten gemessen.
+* ... ist ein robustes Maß für die Streuung.
+
+Solution
+========
+
+Answerlist
+----------
+
+* Richtig. Die Berechnung der Varianz ist nur für metrische Daten sinnvoll. 
+* Richtig. Die Varianz ist ein Maß für die durchschnittliche Abweichung der Datenwerte vom Mittelwert. Sie misst die Streuung der Daten.
+* Falsch. Der Median ist ein Lageparameter, während die Varianz ein Streuungsmaß ist.
+* Falsch. Die Varianz wird in Quadrat-Einheiten der Daten gemessen, nicht in denselben Einheiten.
+* Falsch. Obwohl die Varianz ein Streuungsmaß ist, ist sie nicht robust gegen Ausreißer.
+
+Meta-information
+================
+exname: Varianz
+extype: mchoice 
+exsolution: 11000
+exshuffle: TRUE

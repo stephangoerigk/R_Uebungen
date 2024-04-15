@@ -1,0 +1,33 @@
+
+Question
+======== 
+
+Die Spannweite...
+
+Answerlist
+----------
+
+* ... ist definiert als die Differenz zwischen dem größten und dem kleinsten Wert einer Datenmenge.
+* ... gibt die Streuung der Daten um den Mittelwert an.
+* ... ist das Maß für die Symmetrie einer Verteilung.
+* ... ist dasselbe wie die Standardabweichung.
+* ... ist ein robustes Maß für die Streuung.
+
+Solution
+========
+
+Answerlist
+----------
+
+* Richtig. Die Spannweite einer Datenmenge ist die Differenz zwischen dem größten und dem kleinsten Wert und gibt somit die Ausdehnung der Datenmenge an.
+* Falsch. Die Spannweite bezieht sich auf die Ausdehnung der Daten und nicht auf die Streuung um den Mittelwert.
+* Falsch. Die Symmetrie einer Verteilung wird durch andere Maße wie die Schiefe (Skewness) beschrieben, nicht durch die Spannweite.
+* Falsch. Die Spannweite ist nicht dasselbe wie die Standardabweichung.
+* Falsch. Die Spannweite ist ein einfaches Maß für die Streuung, aber es ist nicht robust gegen Ausreißer.
+
+Meta-information
+================
+exname: Spannweite
+extype: mchoice 
+exsolution: 10000
+exshuffle: TRUE

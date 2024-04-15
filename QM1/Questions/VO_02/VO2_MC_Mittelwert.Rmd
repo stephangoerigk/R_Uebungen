@@ -1,0 +1,34 @@
+
+Question
+========
+
+Welches Skalenniveau ist zur Berechnung des Mittelwerts mindestens notwendig?
+
+Answerlist
+----------
+
+* Nominales Skalenniveau
+* Ordinales Skalenniveau
+* Metrisches Skalenniveau
+* Intervallskalenniveau
+* Verhältnisskalenniveau
+
+Solution
+========
+
+Answerlist
+----------
+
+* Falsch. Ein Mittelwert kann nicht auf der Grundlage von nominalen Daten berechnet werden.
+* Falsch. Ein Mittelwert kann nicht auf der Grundlage von ordinalen Daten berechnet werden.
+* Richtig. Zur Berechnung des Mittelwerts ist mindestens ein metrisches (oder auch Intervall-) Skalenniveau notwendig.
+* Richtig. Zur Berechnung des Mittelwerts ist mindestens ein metrisches (oder auch Intervall-) Skalenniveau notwendig.
+* Falsch. Das Verhältnisskalenniveau ist nicht notwendig für die Berechnung des Mittelwerts.
+
+Meta-information
+================
+exname: MittelwertSkalenniveau
+extype: mchoice 
+exsolution: 00110
+exshuffle: TRUE
+```

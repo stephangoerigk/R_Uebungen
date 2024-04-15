@@ -15,6 +15,9 @@ library(shiny)
 library(faux)
 library(tidyverse)
 library(exams2learnr)
+library(knitr)
+library(kableExtra)
+library(moments)
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
@@ -22,27 +25,24 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ### Was können Sie von dieser Übung erwarten?
 
-Im Folgenden finden Übungsaufgaben zur Vorlesung Vorlesung Statistik I (B-P 9.3-VO) im Modul Quantitative Methoden I (B-P 9.3). 
+Im Folgenden finden Sie Übungsaufgaben zur Vorlesung Statistik I (B-P 9.3-VO) im Modul Quantitative Methoden I (B-P 9.3).
 
-Dazu verwenden wir das Paket `learnr`. 
+Dazu verwenden wir das Paket `learnr`.
 
-Dieses Paket gibt uns u.a. die Möglichkeit, `R` Aufgaben direkt über Ihren Browser zu üben. Sie müssen dafür die Programme `R` und `RStudio` nicht auf dem eigenen Computer installieren. 
+Dieses Paket gibt uns u.a. die Möglichkeit, `R` Aufgaben direkt über Ihren Browser zu üben. Sie müssen dafür die Programme `R` und `RStudio` nicht auf dem eigenen Computer installieren.
 
-Zusätzlich finden Sie im Rahmen der Lektionen Quizaufgaben, um Ihr Wissen zu überprüfen. 
-
+Zusätzlich finden Sie im Rahmen der Lektionen Quizaufgaben, um Ihr Wissen zu überprüfen.
 
 ```{r eval = TRUE, echo = F, out.width = "150px", fig.align='center'}
 knitr::include_graphics("images/R_logo.png")
 ```
 
-## Einheit 1
+## Einheit 1 - Grundlagen der Datenanalyse
 
 ```{r xx, eval=FALSE, include=FALSE}
-# hinter jede Einheit den Titel
 # Quizfragen alle Einheiten aus Muster
 # QM1 spezifische Aufgaben hinzufügen - Interpretieren..
 # Evtl Aufgaben LMU hinzufügen? 
-# neuer test
 ```
 
 ```{r VO1_MC_Alter, message = FALSE, warning=FALSE}
@@ -113,318 +113,123 @@ exams2learnr("Questions/VO_01/VO1_MC_RelativeHaeufigkeit.Rmd", allow_retry = TRU
 exams2learnr("Questions/VO_01/VO1_MC_AbsoluteHaeufigkeit.Rmd", allow_retry = TRUE)
 ```
 
-## Einheit 2
+## Einheit 2 - Skalenniveaus und statistische Kennwerte
 
-```{r quiz2_1, echo = FALSE}
-quiz(
-  question("Was trifft auf den Begriff Messen zu?",
-    answer("Messen = Variablen in Zahlen darstellen", correct = TRUE),
-    answer("Daten erheben und Messen sind dasselbe"),
-    answer("Einzelne Ausprägungen werden Zahlen auf einer Skala zugeordnet", correct = TRUE),
-    answer("Messen ist homomorphe Abbildung eines empirischen Relativs in ein numerisches Relativ", correct = TRUE), allow_retry = TRUE
-  )
-    )
+```{r VO2_MC_Messen, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_02/VO2_MC_Messen.Rmd", allow_retry = TRUE)
 ```
 
-```{r quiz2_2, echo = FALSE}
-quiz(
-  question("Das Skalenniveau...",
-    answer("ist immer entweder nominal oder numerisch"),
-    answer("ist eindeutig durch das Merkmal definiert"),
-    answer("bestimmt welche Rechenoperationen möglich sind", correct = TRUE),
-    answer("eine der wichtigsten Eigenschaften einer Variable", correct = TRUE), allow_retry = TRUE
-  )
-    )
+```{r VO2_MC_Skalenniveau, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_02/VO2_MC_Skalenniveau.Rmd", allow_retry = TRUE)
 ```
 
-```{r quiz2_3, echo = FALSE}
-quiz(
-  question("Welches ist das niedrigste Skalenniveau?",
-    answer("ordinal"),
-    answer("nominal", correct = TRUE),
-    answer("metrisch"),
-    answer("intervall"), allow_retry = TRUE
-  )
-    )
+```{r VO2_MC_Fussballteam, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_02/VO2_MC_Fussballteam.Rmd", allow_retry = TRUE)
 ```
 
-```{r quiz2_4, echo = FALSE}
-quiz(
-  question("Das Lieblingsfußballteam ist ein Beispiel für eine Variable mit welchem Skalenniveau",
-    answer("nominal", correct = TRUE),
-    answer("metrisch"),
-    answer("Verhältnisskala"),
-    answer("intervall"), allow_retry = TRUE
-  )
-    )
+```{r VO2_MC_IQ, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_02/VO2_MC_IQ.Rmd", allow_retry = TRUE)
 ```
 
-```{r quiz2_5, echo = FALSE}
-quiz(
-  question("Der IQ ist ein Beispiel für eine Variable mit welchem Skalenniveau?",
-    answer("metrisch", correct = TRUE),
-    answer("Verhältnisskala"),
-    answer("intervall", correct = TRUE),
-    answer("ordinal"), allow_retry = TRUE
-  )
-    )
+```{r VO2_MC_Mittelwert, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_02/VO2_MC_Mittelwert.Rmd", allow_retry = TRUE)
 ```
 
-```{r quiz2_6, echo = FALSE}
-quiz(
-  question("Welches Skalenniveau ist zur Berechnung des Mittelwerts mindestens notwendig?",
-    answer("nominal"),
-    answer("intervall", correct = TRUE),
-    answer("Verhältnisskala"),
-    answer("ordinal"), allow_retry = TRUE
-  )
-    )
+```{r VO2_MC_Zentrale, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_02/VO2_MC_Zentrale.Rmd", allow_retry = TRUE)
 ```
 
-```{r quiz2_7, echo = FALSE}
-quiz(
-  question("Was trifft auf das Nominalskalenniveau zu?",
-    answer("Häufig wird hier mit einer Codierung gearbeitet", correct = TRUE),
-    answer("nur Beziehungen <gleich> , <ungleich> möglich", correct = TRUE),
-    answer("logische Reihenfolge ist möglich"),
-    answer("höchstes Skalenniveau"), 
-    answer("eindeutige Transformationen sind möglich", correct = TRUE), allow_retry = TRUE
-  )
-    )
+```{r VO2_MC_Verhaeltnis, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_02/VO2_MC_Verhaeltnis.Rmd", allow_retry = TRUE)
 ```
 
-```{r quiz2_8, echo = FALSE}
-quiz(
-  question("Was trifft auf das Verhältnisskalenniveau zu?",
-    answer("Hat absoluten Nullpunkt", correct = TRUE),
-    answer("Temperatur waere ein Beispiel", correct = TRUE),
-    answer("Aussage über das Verhältnis zwischen zwei Werten ist moeglich", correct = TRUE),
-    answer("Selten in den Sozialwissenschaften", correct = TRUE), allow_retry = TRUE
-  )
-    )
+```{r VO2_MC_Nominal, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_02/VO2_MC_Nominal.Rmd", allow_retry = TRUE)
 ```
 
-```{r quiz2_9, echo = FALSE}
-quiz(
-  question("Maße der zentralen Tendenz...",
-    answer("Sind z.B. Mittelwert und Median", correct = TRUE),
-    answer("Können nur sinnvoll in der Stichprobe verwendet werden (nicht in Population)"),
-    answer("geben Auskunft über Variation der Messwerte"),
-    answer("Werden mit Häufigkeiten angegeben"), 
-    answer("repraesentieren alle Einzelwerte der Verteilung zusammenfassend", correct = TRUE), allow_retry = TRUE
-  )
-    )
+```{r VO2_MC_Modalwert, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_02/VO2_MC_Modalwert.Rmd", allow_retry = TRUE)
 ```
 
-```{r quiz2_10, echo = FALSE}
-quiz(
-  question("Der Modalwert...",
-    answer("ist der Durchschnitt einer Verteilung"),
-    answer("ist der häufigste Wert", correct = TRUE),
-    answer("Ist genau die Mitte der Verteilung"),
-    answer("ist in der Wertereihe [1,2,2,3,3,3,4,4,4,4] die 3"), allow_retry = TRUE
-  )
-    )
+```{r VO2_MC_Median, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_02/VO2_MC_Median.Rmd", allow_retry = TRUE)
 ```
 
-```{r quiz2_11, echo = FALSE}
-quiz(
-  question("Was trifft auf den Median zu?",
-    answer("Benötigt mindestens nominal skalierte Variablen"),
-    answer("Ist der mittlere Wert der Verteilung", correct = TRUE),
-    answer("Ist robust gegenüber Ausreißern", correct = TRUE),
-    answer("Ist i.d.R. besser als der Mittelwert"), allow_retry = TRUE
-  )
-    )
+```{r VO2_MC_Urliste, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_02/VO2_MC_Urliste.Rmd", allow_retry = TRUE)
 ```
 
-```{r quiz2_12, echo = FALSE}
-quiz(
-  question("Folgende Urliste sei gegeben. Welche Aussagen stimmen? 
-[2, 2, 3, 3, 4, 4, 4, 5, 6, 6, 6, 7, 8, 8, 9, 9] ",
-    answer("Der Modus ist der Wert 4 bzw. 6", correct = TRUE),
-    answer("Median = 5"),
-    answer("Median = 5,5", correct = TRUE),
-    answer("Arithmetisches Mittel = 5,5"), allow_retry = TRUE
-  )
-    )
+```{r VO2_MC_Aussagen, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_02/VO2_MC_Aussagen.Rmd", allow_retry = TRUE)
 ```
 
-```{r quiz2_13, echo = FALSE}
-quiz(
-  question("Welche Aussagen stimmen?",
-    answer("Auf Ordinalskalenniveau ist es nicht möglich, Variablen in eine logische Reihenfolge zu bringen"),
-    answer("Der Sitz des Wohnsitzfinanzamtes ist ein Beispiel für nominalskalierte Daten", correct = TRUE),
-    answer("Die metrische Variable <Ergebnis in einem IQ Test> lässt sich auf ordinalskalenniveau runterskalieren", correct = TRUE),
-    answer("Viele Daten in den Sozialwissenschaften haben Intervallskalenniveau", correct = TRUE), allow_retry = TRUE
-  )
-    )
+```{r VO2_MC_Was_trifft_zu, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_02/VO2_MC_Was_trifft_zu.Rmd", allow_retry = TRUE)
 ```
 
-```{r quiz2_14, echo = FALSE}
-quiz(
-  question("Was trifft zu?",
-    answer("Bei einer linkssteilen Verteilung gilt: Modus < Median < Mittelwert", correct = TRUE),
-    answer("Bei einer linkssteilen Verteilung gilt: Modus = Median = Mittelwert"),
-    answer("Bei einer linkssteilen Verteilung gilt: Mittelwert < Modus < Median"),
-    answer("Keine dieser Aussagen ist richtig"), allow_retry = TRUE
-  )
-    )
+```{r VO2_MC_Welche_Aussagen, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_02/VO2_MC_Welche_Aussagen_Stimmen.Rmd", allow_retry = TRUE)
 ```
 
-```{r quiz2_15, echo = FALSE}
-quiz(
-  question("Welche Aussagen stimmen?",
-    answer("Häufigkeiten stellen wir in einem Histogramm dar", correct = TRUE),
-    answer("Kategorien stellen wir in einem Balkendiagramm dar", correct = TRUE),
-    answer("In einem Histogramm können auf der Y-Achse die absoluten Häufigkeiten der Ausprägungen dargestellt", correct = TRUE),
-    answer("Gesamtfläche eines Histogramms = 1 <relative Häufigkeit> bzw. N <Absolute Häufigkeit>", correct = TRUE), allow_retry = TRUE
-  )
-    )
+
+## Einheit 3 - Statistische Kennwerte (2)
+
+
+```{r VO3_MC_Streuungsmasse, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_03/VO3_MC_Streuungsmaße.Rmd", allow_retry = TRUE)
 ```
 
-## Einheit 3
-
-
-```{r quiz3_3, echo = FALSE}
-quiz(
-  question("Was ist in Bezug auf Streuungsmaße korrekt?",
-    answer("Maße der zentralen Tendenz können eine Verteilung vollständig beschreiben."),
-    answer("Sie beschreiben wie stark die einzelnen Werte einer Verteilung von der zentralen Tendenz abweichen", correct = TRUE),
-    answer("Es handelt sich um Deskriptivstatistiken.", correct = TRUE),
-    answer("Die Streuung kann man im Histogramm sehen.", correct = TRUE), allow_retry = TRUE
-  )
-    )
+```{r VO3_MC_Unimodal, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_03/VO3_MC_Unimodal.Rmd", allow_retry = TRUE)
 ```
 
-```{r quiz3_4, echo = FALSE}
-quiz(
-  question("Woran kann es liegen wenn unimodale Verteilungen mit gleichem Mittelwert in ihrer Form verschieden sind?",
-    answer("Nominales Skalenniveau"),
-    answer("Median"),
-    answer("Streuung", correct = TRUE),
-    answer("Inferenzstatistik"), allow_retry = TRUE
-  )
-    )
+```{r VO3_MC_Spannweite2, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_03/VO3_MC_Spannweite2.Rmd", allow_retry = TRUE)
 ```
 
-```{r quiz3_5, echo = FALSE}
-quiz(
-  question("Die Spannweite...",
-    answer("beschreibt den Bereich in dem 50% der Werte liegen."),
-    answer("beschreibt die Mitte der Verteilung"),
-    answer("ist die Größe des Bereichs in dem alle Messwerte liegen", correct = TRUE),
-    answer("berechnet sich als  Differenz aus größtem und kleinstem Wert", correct = TRUE), allow_retry = TRUE
-  )
-    )
+```{r VO3_MC_Standardabweichung, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_03/VO3_MC_Standardabweichung.Rmd", allow_retry = TRUE)
 ```
 
-```{r quiz3_6, echo = FALSE}
-quiz(
-  question("Was trifft auf die Varianz zu?",
-    answer("Nur für metrische Daten sinnvoll.", correct = TRUE),
-    answer("Ist robust gegenüber Ausreißern."),
-    answer("Ist ein quadriertes Maß.", correct = TRUE),
-    answer("Nimmt größere Werte an, je stärker Messwerte vom Mittelwert abweichen.", correct = TRUE), allow_retry = TRUE
-  )
-    )
+```{r VO3_MC_Varianz, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_03/VO3_MC_Varianz.Rmd", allow_retry = TRUE)
 ```
 
-```{r quiz3_7, echo = FALSE}
-quiz(
-  question("Im Nenner des Schätzers für die Populationsvarianz steht?",
-    answer("N"),
-    answer("N / 1"),
-    answer("N - 1", correct = TRUE),
-    answer("N + 1"), allow_retry = TRUE
-  )
-    )
+```{r VO3_MC_Varianz2, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_03/VO3_MC_Varianz2.Rmd", allow_retry = TRUE)
 ```
 
-```{r quiz3_8, echo = FALSE}
-quiz(
-  question("Die Varianz ist ein sinnvolles Streuungsmaß für folgende Variablen:",
-    answer("Nationalität"),
-    answer("Anzahl erinnerter Items in Gedächtnistest", correct = TRUE),
-    answer("Alter in Jahren", correct = TRUE),
-    answer("Platzierung in einem Rechenwettbewerb"), allow_retry = TRUE
-  )
-    )
+```{r VO3_MC_Varianz3, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_03/VO3_MC_Varianz3.Rmd", allow_retry = TRUE)
 ```
 
-```{r quiz3_9, echo = FALSE}
-quiz(
-  question("Was trifft auf die Standardabweichung zu",
-    answer("Lässt sich in der Einheit der Variable lesen.", correct = TRUE),
-    answer("Wurzel aus der Spannweite"),
-    answer("Wird stark von Ausreißern beeinflusst", correct = TRUE),
-    answer("Eignet sich besser als der Quartilabstand für normalverteilte metrische Variablen ohne Ausreißer", correct = TRUE),
-    answer("Streuung um den Mittelwert herum.", correct = TRUE),
-    allow_retry = TRUE
-  )
-    )
+```{r VO3_MC_Spannweite, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_03/VO3_MC_Spannweite.Rmd", allow_retry = TRUE)
 ```
 
-```{r quiz3_11, echo = FALSE}
-quiz(
-  question("Die Spannweite folgender Messwerte [6,9, 100, 2, 5] ist",
-    answer("32"),
-    answer("54"),
-    answer("2"),
-    answer("98", correct = TRUE),
-    answer("10"),
-    allow_retry = TRUE
-  )
-    )
+```{r VO3_MC_Aussagen, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_03/VO3_MC_Aussagen.Rmd", allow_retry = TRUE)
 ```
 
-```{r quiz3_12, echo = FALSE}
-quiz(
-  question("Welche Aussagen sind korrekt? ",
-    answer("99,7% aller Daten liegen innerhalb 3 Standardabweichungen vom Mittelwert", correct = TRUE),
-    answer("68% aller Daten liegen innerhalb 1 Standardabweichung vom Mittelwert", correct = TRUE),
-    answer("95% aller Daten liegen innerhalb 2 Standardabweichungen vom Mittelwert", correct = TRUE),
-    answer("58% aller Daten liegen innerhalb 1 Standardabweichung vom Mittelwert"),
-    answer("68% aller Daten liegen innerhalb 2 Standardabweichung vom Mittelwert"),
-    allow_retry = TRUE
-  )
-    )
+```{r VO3_MC_Werte, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_03/VO3_MC_Werte.Rmd", allow_retry = TRUE)
 ```
 
-Gegeben sind folgende Werte: 
-
-```{r}
-df = data.frame(ID = c(1: 10),
-                Wert = c(2, 3, 4, 5, 6, 6, 10, 12, 14, 18))
-df = as.data.frame(t(df))
-knitr::kable(df)
-```
-```{r quiz3_13, echo = FALSE}
-quiz(
-  question("Welche Aussagen stimmen? ",
-    answer("Das untere Quartil ist 3", correct = TRUE),
-    answer("Das untere Quartil ist 3,5"),
-    answer("IQR = 9", correct = TRUE),
-    answer("IQR = 9,5"), allow_retry = TRUE
-  )
-    )
+```{r VO3_MC_Leistungstest, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_03/VO3_MC_Leistungstest.Rmd", allow_retry = TRUE)
 ```
 
-```{r quiz3_15, echo = FALSE}
-quiz(
-  question("Uns liegen metrische Daten vor, die sich in einer eingipfeligen Verteilung visualisieren lassen. Wir erkennen jedoch einige Ausreißer in den Daten. Welche Kennwerte nutzen wir, um unsere Daten zu beschreiben?",
-    answer("Das arithmetische Mittel ist das Maß der zentralen Tendenz unserer Wahl"),
-    answer("Um die Streuung der Daten auszudrücken, wählen wir die Varianz"),
-    answer("Der Median ist das Maß der zentralen Tendenz unserer Wahl", correct = TRUE),
-    answer("Um die Streuung der Daten auszudrücken, wählen wir den Quartilabstand", correct = TRUE),
-    answer("Um die Streuung der Daten auszudrücken, wählen wir die Standardabweichung"),
-    allow_retry = TRUE
-  )
-    )
+```{r VO3_Num_rechnen1, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_03/VO3_Num_rechnen1_.Rmd", allow_retry = TRUE)
 ```
 
-## Einheit 4
+```{r VO3_Num_Rechnen2, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_03/VO3_Num_Rechnen2.Rmd", allow_retry = TRUE)
+```
 
+
+
+## Einheit 4 - Visualisierung
 
 ```{r quiz4_1, echo = FALSE}
 quiz(
@@ -535,7 +340,6 @@ quiz(
     )
 ```
 
-
 ```{r quiz4_11, echo = FALSE}
 quiz(
   question("Wann benutzen wir Graphen in der Statistik?",
@@ -548,7 +352,6 @@ quiz(
   )
     )
 ```
-
 
 ```{r quiz4_12, echo = FALSE}
 quiz(
@@ -573,7 +376,6 @@ quiz(
 #boxplot(Tremor ~ Entzug, data = df2, cex.lab = 2.5, cex.axis = 2.5)
 ```
 
-
 ```{r quiz4_13, echo = FALSE}
 quiz(
   question("Was können wir folgender Grafik entnehmen?  <br> ![](images/boxplot.png){width=400px}",
@@ -586,9 +388,7 @@ quiz(
     )
 ```
 
-
-## Einheit 5
-
+## Einheit 5 - Wahrscheinlichkeitstheorie und Verteilungen
 
 ```{r quiz5_1, echo = FALSE}
 quiz(
@@ -601,7 +401,6 @@ quiz(
   )
     )
 ```
-
 
 ```{r quiz5_2, echo = FALSE}
 quiz(
@@ -761,9 +560,7 @@ quiz(
     )
 ```
 
-
-## Einheit 6
-
+## Einheit 6 - Stichprobe, Grundgesamtheit und Stichprobenfehler
 
 ```{r quiz6_1, echo = FALSE}
 quiz(
@@ -947,9 +744,7 @@ quiz(
     )
 ```
 
-
-## Einheit 7
-
+## Einheit 7 - Hypothesen und Hypothesentests
 
 ```{r quiz7_1, echo = FALSE}
 quiz(
@@ -1134,14 +929,14 @@ quiz(
     )
 ```
 
-## Einheit 8
+## Einheit 8 - *t*-Test
 
-## Einheit 9
+## Einheit 9 - *t*-Test (Übungsaufgaben Schritt-für-Schritt)
 
-## Einheit 10
+## Einheit 10 - Korrelation
 
-## Einheit 11
+## Einheit 11 - Korrelation (2)
 
-## Einheit 12
+## Einheit 12 - Effektstärke und Powerberechnung
 
-## Einheit 13
+

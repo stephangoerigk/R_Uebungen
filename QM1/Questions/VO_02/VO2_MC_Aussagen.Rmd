@@ -1,0 +1,31 @@
+
+Question
+========
+
+Welche Aussagen stimmen?
+
+Answerlist
+----------
+
+* Auf Ordinalskalenniveau ist es nicht möglich, Variablen in eine logische Reihenfolge zu bringen
+* Der Sitz des Wohnsitzfinanzamtes ist ein Beispiel für nominalskalierte Daten
+* Die metrische Variable "Ergebnis in einem IQ Test" lässt sich auf ordinalskalenniveau runterskalieren
+* Viele Daten in den Sozialwissenschaften haben Intervallskalenniveau
+
+Solution
+========
+
+Answerlist
+----------
+
+* Falsch. 
+* Richtig. 
+* Richtig. 
+* Richtig. 
+
+Meta-information
+================
+exname: AussagenStatistik
+extype: mchoice 
+exsolution: 0111
+exshuffle: TRUE

@@ -1,0 +1,32 @@
+
+Question
+========
+
+Welche Aussagen stimmen? 
+
+Answerlist
+----------
+
+* Häufigkeiten stellen wir in einem Histogramm dar
+* Kategorien stellen wir in einem Balkendiagramm dar
+* In einem Histogramm können auf der Y-Achse die absoluten Häufigkeiten der Ausprägungen dargestellt
+* Gesamtfläche eines Histogramms = 1 (relative Häufigkeit) bzw. N (Absolute Häufigkeit)
+
+Solution
+========
+
+Answerlist
+----------
+
+* Richtig.
+* Richtig.
+* Richtig.
+* Richtig.
+ 
+
+Meta-information
+================
+exname: ZentraleTendenz
+extype: mchoice 
+exsolution: 1111
+exshuffle: TRUE

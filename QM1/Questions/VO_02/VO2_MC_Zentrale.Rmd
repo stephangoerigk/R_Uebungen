@@ -1,0 +1,33 @@
+
+Question
+========
+
+Maße der zentralen Tendenz...?
+
+Answerlist
+----------
+
+* Sind statistische Kennwerte, die die Mitte einer Verteilung darstellen.
+* Umfassen den Median, den Modus und den Interquartilsabstand.
+* Werden verwendet, um die Streuung von Daten zu messen.
+* Schließen den Mittelwert, den Median und den Modus ein.
+* Beschreiben die Verteilung einer Variable.
+
+Solution
+========
+
+Answerlist
+----------
+
+* Richtig. Maße der zentralen Tendenz sind statistische Kennwerte, die die Mitte oder den Schwerpunkt einer Verteilung darstellen, wie z.B. der Mittelwert, der Median und der Modus.
+* Falsch. Der Interquartilsabstand ist ein Maß für die Streuung, nicht für die zentrale Tendenz.
+* Falsch. Maße der zentralen Tendenz messen nicht die Streuung von Daten, sondern den zentralen Wert einer Verteilung.
+* Richtig. Maße der zentralen Tendenz schließen typischerweise den Mittelwert, den Median und den Modus ein.
+* Falsch. Maße der zentralen Tendenz beschreiben nicht die Verteilung einer Variable, sondern ihren zentralen Wert.
+
+Meta-information
+================
+exname: ZentraleTendenz
+extype: mchoice 
+exsolution: 10010
+exshuffle: TRUE

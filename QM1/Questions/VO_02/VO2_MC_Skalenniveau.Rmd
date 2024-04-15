@@ -1,0 +1,33 @@
+
+Question
+========
+
+Welches ist das niedrigste Skalenniveau?
+
+Answerlist
+----------
+
+* Nominales Skalenniveau
+* Ordinales Skalenniveau
+* Metrisches Skalenniveau
+* Intervallskalenniveau
+* Verhältnisskalenniveau
+
+Solution
+========
+
+Answerlist
+----------
+
+* Richtig. Nominales Skalenniveau ist das niedrigste Skalenniveau.
+* Falsch. Ordinales Skalenniveau ist höher als nominales.
+* Falsch. Metrisches Skalenniveau ist höher als nominales.
+* Falsch. Intervallskalenniveau ist höher als nominales.
+* Falsch. Verhältnisskalenniveau ist höher als nominales.
+
+Meta-information
+================
+exname: niedrigstesSkalenniveau
+extype: mchoice 
+exsolution: 10000
+exshuffle: TRUE

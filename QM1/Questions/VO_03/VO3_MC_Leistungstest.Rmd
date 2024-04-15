@@ -1,0 +1,36 @@
+
+Question
+======== 
+
+Uns liegen metrische Daten vor, die sich in einer eingipfeligen Verteilung visualisieren lassen. Wir erkennen jedoch einige Ausreißer in den Daten. Welche Kennwerte nutzen wir, um unsere Daten zu beschreiben? 
+
+
+Answerlist
+----------
+
+* Das arithmetische Mittel ist das Maß der zentralen Tendenz unserer Wahl
+* Um die Streuung der Daten auszudrücken, wählen wir die Varianz
+* Der Median ist das Maß der zentralen Tendenz unserer Wahl
+* Um die Streuung der Daten auszudrücken, wählen wir den Quartilabstand
+* Um die Streuung der Daten auszudrücken, wählen wir die Standardabweichung
+
+Solution
+========
+
+Answerlist
+----------
+
+* Falsch. Der Mittelwert ist anfällig gegenüber Ausreißern.
+* Falsch. Die Varianz ist anfällig gegenüber Ausreißern.
+* Richtig. Der Median ist robust gegenüber Ausreißern. 
+* Richtig. Der IQR ist robust gegenüber Ausreißern.
+* Falsch. Die Standardabweichung ist anfällig gegenüber Ausreißern.
+
+Meta-information
+================
+exname: Spannweite2
+extype: mchoice 
+exsolution: 00110
+exshuffle: TRUE
+
+
