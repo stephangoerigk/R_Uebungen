@@ -1,0 +1,30 @@
+Question 
+======== 
+
+Das Histogramm...?
+
+Answerlist
+----------
+
+* eignet sich zur Darstellung multivariater Zusammenhänge
+* stellt Verteilung einer Variable dar
+* Hat die Mittelwerte der Merkmalsausprägungen auf der Y-Achse
+* Hat Merkmalsausprägungen auf der X-Achse
+
+Solution
+========
+
+Answerlist
+----------
+
+* Falsch. 
+* Richtig. Ein Histogramm kann lediglich eine Variable darstellen
+* Falsch. Auf der Y-Achse ist beim Histogramm die Häufigkeit abgebildet
+* Richtig. Die möglichen Merkmalsausprägungen der Variable finden wir beim Histogramm auf der Y-Achse
+
+Meta-information
+================
+exname: name
+extype: mchoice 
+exsolution: 0101
+exshuffle: TRUE

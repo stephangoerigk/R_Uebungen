@@ -18,6 +18,9 @@ library(exams2learnr)
 library(knitr)
 library(kableExtra)
 library(moments)
+library(magrittr)
+library(kableExtra)
+library(ggplot2)
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
@@ -227,144 +230,85 @@ exams2learnr("Questions/VO_03/VO3_Num_rechnen1_.Rmd", allow_retry = TRUE)
 exams2learnr("Questions/VO_03/VO3_Num_Rechnen2.Rmd", allow_retry = TRUE)
 ```
 
+Sie analysieren und visualisieren Daten und erhalten folgende Verteilung: 
+```{r graph, echo=FALSE}
+set.seed(123)
+shape <- 2 
+scale <- 1
+n <- 100000
+data <- rgamma(n, shape = shape, scale = scale)
+df = data.frame(x = data)
+
+ggplot(data = df, aes(x = x)) +
+  stat_function(fun = dgamma, n = 10000, args = list(shape = shape, scale = scale)) +
+  geom_density(fill = "darkgreen", color = "black") + 
+  labs(x = "Variable X", y = "Häufigkeit")
+
+```
+```{r VO3_Graph, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_03/VO3_Graph.Rmd", allow_retry = TRUE)
+```
+
 
 
 ## Einheit 4 - Visualisierung
 
-```{r quiz4_1, echo = FALSE}
-quiz(
-  question("Das Histogramm...",
-    answer("eignet sich zur Darstellung multivariater Zusammenhänge"),
-    answer("stellt Verteilung einer Variable dar", correct = TRUE),
-    answer("Hat die Mittelwerte der Merkmalsausprägungen auf der Y-Achse"),
-    answer("Hat Merkmalsausprägungen auf der X-Achse", correct = TRUE),
-    allow_retry = TRUE
-  )
-    )
+```{r VO4_1, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_04/VO4_Histogramm.Rmd", allow_retry = TRUE)
 ```
 
-```{r quiz4_2, echo = FALSE}
-quiz(
-  question("Die Box des Boxplots",
-    answer("benötigt Intervallskalenniveau"),
-    answer("Ist die IQR mal 1.5"),
-    answer("Umfasst 50% aller Werte", correct = TRUE),
-    answer("entspricht der Spannweite"),
-    allow_retry = TRUE
-  )
-    )
+```{r VO4_2, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_04/VO4_Boxplot.Rmd", allow_retry = TRUE)
 ```
 
-```{r quiz4_3, echo = FALSE}
-quiz(
-  question("Welche sind Vorteile des Boxplots?",
-    answer("Zeigt ein Maß der zentralen Tendenz", correct = TRUE),
-    answer("Zeit die Standardabweichung"),
-    answer("Lässt sich auf bei Ordinalskalenniveau verwenden", correct = TRUE),
-    answer("Zeigt Ausreißer", correct = TRUE),
-    allow_retry = TRUE
-  )
-    )
+```{r VO4_3, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_04/VO4_Boxplot2.Rmd", allow_retry = TRUE)
 ```
 
-```{r quiz4_4, echo = FALSE}
-quiz(
-  question("Was trifft auf das Streudiagramm zu?",
-    answer("Jeder Punkt entspricht einem Fall", correct = TRUE),
-    answer("Punkte zeigen Mittelwerte an"),
-    answer("Kann Zusammenhang zwischen 2 numerischen Variablen visualisieren", correct = TRUE),
-    answer("Nicht für metrische Variablen geeignet"),
-    allow_retry = TRUE
-  )
-    )
+```{r VO4_4, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_04/VO4_Streudiagramm.Rmd", allow_retry = TRUE)
 ```
 
-```{r quiz4_5, echo = FALSE}
-quiz(
-  question("Die maximale Länge der Whiskers berechnet sich aus",
-    answer("IQR multipliziert mit 1.5", correct = TRUE),
-    answer("Standardabweichung + 1.5"),
-    answer("IQR + 1.5"),
-    answer("IQR + Maximum der Verteilung"),
-    allow_retry = TRUE
-  )
-    )
+```{r VO4_5, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_04/VO4_Whisker.Rmd", allow_retry = TRUE)
 ```
 
-```{r quiz4_6, echo = FALSE}
-quiz(
-  question("Im Streudiagramm",
-    answer("Lassen sich keine standardisierten Variablen darstellen"),
-    answer("Kann die Regressionsgerade visualisiert werden", correct = TRUE),
-    answer("Kann man ggf. positive/negative Trends zwischen Variablen erkennen", correct = TRUE),
-    answer("Lassen sich Mittelwertsunterschiede besonders gut erkennen"),
-    allow_retry = TRUE
-  )
-    )
+```{r VO4_6, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_04/VO4_Streudiagramm2.Rmd", allow_retry = TRUE)
 ```
 
-```{r quiz4_7, echo = FALSE}
-quiz(
-  question("Welcher Graph wäre geeignet, wenn die UV Nominalskalenniveau hat und die AV auch Nominalskalenniveau hat?",
-    answer("Streudiagramm"),
-    answer("Balkendiagramm", correct = TRUE),
-    answer("Boxplot"),
-    answer("Line Graph"),
-    allow_retry = TRUE
-  )
-    )
+```{r VO4_7, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_04/VO4_Graph.Rmd", allow_retry = TRUE)
 ```
 
-```{r quiz4_9, echo = FALSE}
-quiz(
-  question("Wenn die UV Nominalskalenniveau hat und die AV auch Nominalskalenniveau würde was auf der Y Achse dargestellt?",
-    answer("Mittelwerte"),
-    answer("Streuung"),
-    answer("Häufigkeiten", correct = TRUE),
-    answer("Mediane"),
-    allow_retry = TRUE
-  )
-    )
+```{r VO4_8, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_04/VO4_YAchse.Rmd", allow_retry = TRUE)
 ```
 
-```{r quiz4_10, echo = FALSE}
-quiz(
-  question("Hat die UV Nominalskalenniveau und die AV is metrisch, was repräsentieren dann die Balken im Balkendiagramm?",
-    answer("Median"),
-    answer("IQR mal 1.5"),
-    answer("Mittelwert", correct = TRUE),
-    answer("Relative Häufigkeit"),
-    answer("Maß der zentralen Tendenz", correct = TRUE),
-    allow_retry = TRUE
-  )
-    )
+```{r VO4_9, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_04/VO4_Graphen.Rmd", allow_retry = TRUE)
 ```
 
-```{r quiz4_11, echo = FALSE}
-quiz(
-  question("Wann benutzen wir Graphen in der Statistik?",
-    answer("Zur schnellen Datenexploration", correct = TRUE),
-    answer("Zur Identifikation von Extremwerten (Ausreißern)", correct = TRUE),
-    answer("Zur Inspektion der Verteilung einer Variable", correct = TRUE),
-    answer("Zur Darstellung von Gruppenunterschieden", correct = TRUE),
-    answer("Zur Verdeutlichung der Ergebnisses eines Hypothesentests", correct = TRUE),
-    allow_retry = TRUE
-  )
-    )
+```{r VO4_10, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_04/VO4_Grafik.Rmd", allow_retry = TRUE)
 ```
 
-```{r quiz4_12, echo = FALSE}
-quiz(
-  question("Welchen Aussagen stimmen Sie zu?",
-    answer("Zur Darstellung einer numerischen Variable nutzen wir das Histogramm", correct = TRUE),
-    answer("Zur Darstellung zweier numerischer Variablen nutzen wir das Balkendiagramm"),
-    answer("Zur Darstellung zweier kategorialer Variablen nutzen wir das Balkendiagramm", correct = TRUE),
-    answer("Zur Darstellung einer kategorialen Variable nutzen wir das Histogramm"),
-    answer("Bei einer ordinalen und einer kategorialen Variable eignet sich das Box Plot zur Darstellung", correct = TRUE),
-    allow_retry = TRUE
-  )
-    )
+```{r VO4_11, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_04/VO4_Aussagen.Rmd", allow_retry = TRUE)
 ```
+
+```{r VO4_12, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_04/VO4_Graph.Rmd", allow_retry = TRUE)
+```
+
+
+
+
+
+
+
+
+
 
 ```{r}
 #set.seed(123)
