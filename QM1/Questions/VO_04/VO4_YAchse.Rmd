@@ -1,0 +1,32 @@
+Question 
+======== 
+
+Wenn die unabhängige Variable (UV) Nominalskalenniveau hat und die abhängige Variable (AV) auch Nominalskalenniveau hat, was würde auf der Y-Achse dargestellt?
+
+Answerlist
+----------
+
+* Absolute Häufigkeiten 
+* Relative Häufigkeiten 
+* Die einzelnen Kategorien
+* Mediane
+* Die Stichprobengröße
+
+Solution
+========
+
+Answerlist
+----------
+
+* Richtig. Auf der Y-Achse würden die absoluten oder relativen Häufigkeiten dargestellt.
+* Richtig. Auf der Y-Achse würden die absoluten oder relativen Häufigkeiten dargestellt.
+* Falsch. Die einzelnen Kategorien werden typischerweise auf der X-Achse dargestellt.
+* Falsch. Mediane können wir bei Nominaldten nicht bestimmen
+* Falsch. Die Stichprobengröße ist ebenfalls nicht auf der Y-Achse dargestellt, sondern ist eine Gesamtzahl, die oft außerhalb des Diagramms angegeben wird.
+
+Meta-information
+================
+exname: nominal_y_axis
+extype: mchoice 
+exsolution: 11000
+exshuffle: TRUE

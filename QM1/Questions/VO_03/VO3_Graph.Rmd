@@ -1,0 +1,33 @@
+
+Question 
+======== 
+
+Welche der folgenden Aussagen treffen zu?
+
+Answerlist
+----------
+
+* Wir sehen hier eine rechtssteile Verteilung
+* Wir sehen hier eine rechtsschiefe Verteilung
+* Die Verteilung ist unimodal 
+* Die Verteilung ist symmetrisch 
+* Mittelwert, Median und Modus verhalten sich: Modalwert < Median < Mittelwert
+
+Solution
+========
+
+Answerlist
+----------
+
+* Falsch. Die Verteilung ist linkssteil / rechtsschief 
+* Richtig. Die Verteilung ist linkssteil / rechtsschief 
+* Richtig. 
+* Falsch. Diese Verteilung ist nicht symmetrisch
+* Richtig. Bei einer linkssteilen Verteilung gilt: Modus < Median < Mittelwert. Bei einer rechtssteilen Verteilung gilt: Mittelwert < Median < Modalwert
+
+Meta-information
+================
+exname: name
+extype: mchoice 
+exsolution: 01101
+exshuffle: TRUE

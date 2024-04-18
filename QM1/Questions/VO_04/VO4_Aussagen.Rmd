@@ -1,0 +1,32 @@
+Question 
+======== 
+
+Welchen Aussagen stimmen Sie zu? 
+
+Answerlist
+----------
+
+* Zur Darstellung einer numerischen Variable nutzen wir das Histogramm
+* Zur Darstellung zweier numerischer Variablen nutzen wir das Balkendiagramm
+* Zur Darstellung zweier kategorialer Variablen nutzen wir das Balkendiagramm
+* Zur Darstellung einer kategorialen Variable nutzen wir das Histogramm
+* Bei einer ordinalen und einer kategorialen Variable eignet sich das Box Plot zur Darstellung
+
+Solution
+========
+
+Answerlist
+----------
+
+* Richtig. Histogramme eignen sich zur Darstellung von numerischen Variablen.
+* Falsch. Zur Darstellung zweier numerischer Variablen wird normalerweise ein Streudiagramm verwendet.
+* Richtig. Zur Darstellung zweier kategorialer Variablen eignet sich ein Balkendiagramm.
+* Falsch. Zur Darstellung einer kategorialen Variable ist ein Balkendiagramm typischerweise geeigneter als ein Histogramm.
+* Richtig. Ein Boxplot eignet sich gut zur Darstellung der Verteilung einer ordinalen Variable in Bezug auf eine kategoriale Variable.
+
+Meta-information
+================
+exname: name
+extype: mchoice 
+exsolution: 10101
+exshuffle: TRUE

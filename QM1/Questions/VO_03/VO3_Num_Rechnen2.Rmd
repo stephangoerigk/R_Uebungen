@@ -44,11 +44,15 @@ Solution
 Answerlist
 ----------
 
+* Richtig. 
+$$q_{0.5} = \frac{x_{(I_{0.5})} + x_{(I_{0.5}+1)}}{2} = \frac{x_{(6)} + x_{(7)}}{2} = \frac{10 + 11}{2} = 10.5$$
+* Falsch. Siehe hierzu Formel zur Berechnung des Medians / Formel zur Berechnung der Quartile 
 * Richtig.
+$$q_{0.25} = \frac{x_{(I_{0.25})} + x_{(I_{0.25}+1)}}{2} = \frac{x_{(3)} + x_{(4)}}{2} = \frac{8 + 8}{2} = 8$$
 * Falsch.
+$$q_{0.75} = \frac{x_{(I_{0.75})} + x_{(I_{0.75}+1)}}{2} = \frac{x_{(9)} + x_{(10)}}{2} = \frac{12 + 15}{2} = 13.5$$
 * Richtig.
-* Falsch.
-* Richtig.
+$$q_{A}= \widetilde{x}_{0.75} - \widetilde{x}_{0.25} = 13.5 - 8 =  5.5$$
 
 Meta-information
 ================

@@ -1,0 +1,32 @@
+Question 
+======== 
+
+Hat die UV Nominalskalenniveau und die AV is metrisch, was repräsentieren dann die Balken im Balkendiagramm?
+
+Answerlist
+----------
+
+* Median
+* IQR mal 1.5
+* Mittelwert
+* Relative Häufigkeit
+* Maß der zentralen Tendenz
+
+Solution
+========
+
+Answerlist
+----------
+
+* Falsch. Bei einer metrischen AV steht die Balkenhöhe im Balkendiagramm oft für den Mittelwert (Y-Achse)
+* Falsch. Bei einer metrischen AV steht die Balkenhöhe im Balkendiagramm oft für den Mittelwert (Y-Achse)
+* Richtig. Bei einer metrischen AV steht die Balkenhöhe im Balkendiagramm oft für den Mittelwert (Y-Achse)
+* Falsch. Bei einer metrischen AV steht die Balkenhöhe im Balkendiagramm oft für den Mittelwert (Y-Achse)
+* Richtig. Bei einer metrischen AV steht die Balkenhöhe im Balkendiagramm oft für den Mittelwert (Y-Achse)
+
+Meta-information
+================
+exname: name
+extype: mchoice 
+exsolution: 00101
+exshuffle: TRUE

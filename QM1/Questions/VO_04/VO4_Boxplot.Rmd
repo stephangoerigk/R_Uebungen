@@ -1,0 +1,32 @@
+Question 
+======== 
+
+Die Box des Boxplots...?
+
+Answerlist
+----------
+
+* benötigt Intervallskalenniveau
+* Ist die IQR mal 1.5
+* Umfasst 50% aller Werte
+* entspricht der Spannweite
+* liegt um den Median herum, welcher wiederum genau in der Mitte der Box ist.
+
+Solution
+========
+
+Answerlist
+----------
+
+* Falsch. Ein Boxplot kann man auch mit ordinalen Daten erstellen 
+* Falsch. IQR * 1,5 entspricht der maximalen Länge der Whisker. Die Box des Boxplots entspricht der IQR
+* Richtig. Die Box des Boxplots umfasst alle Werte die zwischen dem unteren und oberen Quartil liegen. Dies entspricht 50% der Werte.
+* Falsch. Die Spannweite ist definiert als $$ x_n - x_1 $$ 
+* Falsch. Der Median liegt nicht zwangsläufig genau in der Mitte der Box
+
+Meta-information
+================
+exname: name
+extype: mchoice 
+exsolution: 00100
+exshuffle: TRUE
