@@ -1,16 +1,16 @@
 Question 
 ======== 
 
-Fragentext hier einfügen
+Im Streudiagramm...
 
 Answerlist
 ----------
 
-* Antwortoption 1
-* Antwortoption 2
-* Antwortoption 3
-* Antwortoption 4
-* Antwortoption 5
+* Lassen sich keine standardisierten Variablen darstellen
+* Kann die Regressionsgerade visualisiert werden
+* Kann man ggf. positive/negative Trends zwischen Variablen erkennen
+* Lassen sich Mittelwertsunterschiede besonders gut erkennen
+
 
 Solution
 ========
@@ -18,15 +18,15 @@ Solution
 Answerlist
 ----------
 
-* Rückmeldung 1
-* Rückmeldung 2
-* Rückmeldung 3
-* Rückmeldung 4
-* Rückmeldung 5
+* Falsch. Ob eine Variable standardisiert ist oder nicht hat zunächst keinen Einfluss auf die möglichen Formen der Visualisierung.
+* Richtig. Wie das genau funktioniert werden wir im 2. Semester lernen.
+* Richtig. Hierfür eignet sich das Streudiagramm besonders gut.
+* Falsch. Mittelwerte können wir in einem Streuduagramm nicht erkennen und damit auch keine Mittelwertsunterschiede. 
+
 
 Meta-information
 ================
 exname: name
 extype: mchoice 
-exsolution: 10000
+exsolution: 0110
 exshuffle: TRUE

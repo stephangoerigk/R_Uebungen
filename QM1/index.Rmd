@@ -174,9 +174,7 @@ exams2learnr("Questions/VO_02/VO2_MC_Was_trifft_zu.Rmd", allow_retry = TRUE)
 exams2learnr("Questions/VO_02/VO2_MC_Welche_Aussagen_Stimmen.Rmd", allow_retry = TRUE)
 ```
 
-
 ## Einheit 3 - Statistische Kennwerte (2)
-
 
 ```{r VO3_MC_Streuungsmasse, message = FALSE, warning=FALSE}
 exams2learnr("Questions/VO_03/VO3_MC_Streuungsmaße.Rmd", allow_retry = TRUE)
@@ -230,7 +228,8 @@ exams2learnr("Questions/VO_03/VO3_Num_rechnen1_.Rmd", allow_retry = TRUE)
 exams2learnr("Questions/VO_03/VO3_Num_Rechnen2.Rmd", allow_retry = TRUE)
 ```
 
-Sie analysieren und visualisieren Daten und erhalten folgende Verteilung: 
+**Sie analysieren und visualisieren Daten und erhalten folgende Verteilung:**
+
 ```{r graph, echo=FALSE}
 set.seed(123)
 shape <- 2 
@@ -245,11 +244,10 @@ ggplot(data = df, aes(x = x)) +
   labs(x = "Variable X", y = "Häufigkeit")
 
 ```
+
 ```{r VO3_Graph, message = FALSE, warning=FALSE}
 exams2learnr("Questions/VO_03/VO3_Graph.Rmd", allow_retry = TRUE)
 ```
-
-
 
 ## Einheit 4 - Visualisierung
 
@@ -290,47 +288,34 @@ exams2learnr("Questions/VO_04/VO4_Graphen.Rmd", allow_retry = TRUE)
 ```
 
 ```{r VO4_10, message = FALSE, warning=FALSE}
-exams2learnr("Questions/VO_04/VO4_Grafik.Rmd", allow_retry = TRUE)
-```
-
-```{r VO4_11, message = FALSE, warning=FALSE}
 exams2learnr("Questions/VO_04/VO4_Aussagen.Rmd", allow_retry = TRUE)
 ```
 
+**Welche Aussagen, bezogen auf die nachfolgende Grafik können Sie treffen?** 
+```{r box, echo=FALSE}
+set.seed(123)
+N = 20
+df8 = data.frame(ID = c(1:N),
+                Gruppe = c(rep("A", N/2), rep("B", N/2)),
+                Tremor = round(c(rnorm(N/2, 6, 5), rnorm(N/2, 12, 8))))
+
+#box = boxplot(Tremor ~ Entzug, data = df, cex.lab = 2.5, cex.axis = 2.5)
+
+ggplot2::ggplot(data = df8, aes(x = Gruppe, y = Tremor)) + 
+                  geom_boxplot()
+```
+```{r VO4_11, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_04/VO4_Boxplot4.Rmd", allow_retry = TRUE)
+```
+
 ```{r VO4_12, message = FALSE, warning=FALSE}
-exams2learnr("Questions/VO_04/VO4_Graph.Rmd", allow_retry = TRUE)
+exams2learnr("Questions/VO_04/VO4_Balken.Rmd", allow_retry = TRUE)
 ```
 
-
-
-
-
-
-
-
-
-
-```{r}
-#set.seed(123)
-#N = 12
-#df2 = data.frame(ID = c(1:N),
-                #Entzug = c(rep("A", N/2), rep("B", N/2), "B"),
-                #Tremor = round(c(rnorm(N/2, 4, 3), rnorm(N/2, 10, 4), 20))
-
-#boxplot(Tremor ~ Entzug, data = df2, cex.lab = 2.5, cex.axis = 2.5)
+```{r VO4_13, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_04/VO4_13.Rmd", allow_retry = TRUE)
 ```
 
-```{r quiz4_13, echo = FALSE}
-quiz(
-  question("Was können wir folgender Grafik entnehmen?  <br> ![](images/boxplot.png){width=400px}",
-    answer("IQR von Gruppe A ist größer als IQR von Gruppe B"),
-    answer("In den Daten gibt es Ausreißer"),
-    answer("Die Streuung der Daten in Gruppe B ist größer als die Streuung der Daten in Gruppe A", correct = TRUE),
-    answer("In den Daten gibt es keine Ausreißer", correct = TRUE),
-    allow_retry = TRUE
-  )
-    )
-```
 
 ## Einheit 5 - Wahrscheinlichkeitstheorie und Verteilungen
 
@@ -882,5 +867,3 @@ quiz(
 ## Einheit 11 - Korrelation (2)
 
 ## Einheit 12 - Effektstärke und Powerberechnung
-
-

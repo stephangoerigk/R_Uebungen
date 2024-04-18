@@ -1,16 +1,16 @@
 Question 
 ======== 
 
-Fragentext hier einfügen
+Wann benutzen wir Graphen in der Statistik?
 
 Answerlist
 ----------
 
-* Antwortoption 1
-* Antwortoption 2
-* Antwortoption 3
-* Antwortoption 4
-* Antwortoption 5
+* Um Daten zu sammeln
+* Um Daten zu analysieren
+* Um Daten zu präsentieren
+* Um Hypothesen zu formulieren
+* Um statistische Tests durchzuführen
 
 Solution
 ========
@@ -18,15 +18,15 @@ Solution
 Answerlist
 ----------
 
-* Rückmeldung 1
-* Rückmeldung 2
-* Rückmeldung 3
-* Rückmeldung 4
-* Rückmeldung 5
+* Falsch. Graphen werden normalerweise verwendet, um bereits vorhandene Daten zu visualisieren und zu interpretieren, nicht um Daten zu sammeln.
+* Richtig. Graphen werden verwendet, um Daten zu analysieren, indem Muster, Trends und Beziehungen visualisiert werden.
+* Richtig. Graphen werden verwendet, um Daten präsentabel und verständlich darzustellen.
+* Falsch. Die Formulierung von Hypothesen basiert eher auf theoretischen Überlegungen und Literaturstudien.
+* Falsch. Graphen sind nicht direkt erforderlich, um statistische Tests durchzuführen, obwohl sie oft verwendet werden, um die Voraussetzungen von Tests zu überprüfen und Ergebnisse zu veranschaulichen.
 
 Meta-information
 ================
-exname: name
+exname: use_of_graphs
 extype: mchoice 
-exsolution: 10000
+exsolution: 01100
 exshuffle: TRUE

@@ -1,16 +1,16 @@
 Question 
 ======== 
 
-Fragentext hier einfügen
+Welcher Graph wäre geeignet, wenn die UV Nominalskalenniveau hat und die AV auch Nominalskalenniveau hat?
 
 Answerlist
 ----------
 
-* Antwortoption 1
-* Antwortoption 2
-* Antwortoption 3
-* Antwortoption 4
-* Antwortoption 5
+* Balkendiagramm
+* Streudiagramm
+* Boxplot
+* Säulendiagramm
+* Netzwerkdiagramm
 
 Solution
 ========
@@ -18,15 +18,15 @@ Solution
 Answerlist
 ----------
 
-* Rückmeldung 1
-* Rückmeldung 2
-* Rückmeldung 3
-* Rückmeldung 4
-* Rückmeldung 5
+* Richtig. Ein Balkendiagramm ist geeignet, um die Verteilung von kategorialen Variablen darzustellen.
+* Falsch. Ein Streudiagramm ist besser für die Darstellung der Beziehung zwischen zwei metrischen Variablen geeignet.
+* Falsch. Ein Boxplot zeigt Verteilungen und Ausreißer von metrischen Variablen.
+* Richtig. Ein Säulendiagramm ist ebenfalls gut zur Darstellung von kategorialen Variablen geeignet.
+* Falsch. Ein Netzwerkdiagramm ist eher zur Darstellung von Beziehungen zwischen Knoten in einem Netzwerk geeignet.
 
 Meta-information
 ================
-exname: name
+exname: nominal_graph
 extype: mchoice 
-exsolution: 10000
+exsolution: 10010
 exshuffle: TRUE

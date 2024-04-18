@@ -1,16 +1,16 @@
 Question 
 ======== 
 
-Fragentext hier einfügen
+Die maximale Länge der Whiskers berechnet sich aus
 
 Answerlist
 ----------
 
-* Antwortoption 1
-* Antwortoption 2
-* Antwortoption 3
-* Antwortoption 4
-* Antwortoption 5
+* IQR multipliziert mit 1.5
+* Standardabweichung + 1.5
+* IQR + 1.5
+* IQR + Maximum der Verteilung
+* IQR * 2
 
 Solution
 ========
@@ -18,11 +18,11 @@ Solution
 Answerlist
 ----------
 
-* Rückmeldung 1
-* Rückmeldung 2
-* Rückmeldung 3
-* Rückmeldung 4
-* Rückmeldung 5
+* Richtig.
+* Falsch.
+* Falsch.
+* Falsch.
+* Falsch.
 
 Meta-information
 ================
