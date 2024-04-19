@@ -1,0 +1,50 @@
+Question 
+======== 
+
+Sie haben recherchiert, dass die durchschnittliche Körpergröße eines männlichen NBA Basketballprofis bei 198,6 cm liegt. Dabei streuen die Werte mit einer Standardabweichung von 8,3 cm. Wie groß muss ein Basketballspieler sein, damit er zu den größten 5% der NBA Spieler gehört?
+
+Answerlist
+----------
+
+* 211,5 cm
+* 212,6 cm
+* 192,1 cm
+* 212,3 cm
+* 214,8 cm
+
+Solution
+========
+
+Answerlist
+----------
+
+* Falsch. 
+* Falsch. 
+* Falsch. 
+* Richtig. 
+Beschreibung der Rechenschritte: <br>
+1. **Z-Transformation:**
+   Wir verwenden die z-Transformation, um die Körpergröße in eine Standardnormalverteilung zu überführen.
+   Die z-Transformation ist definiert als:
+   $$ z = \frac{x - \mu}{\sigma} $$
+   Dabei ist x die Körpergröße, μ = 198,6 cm der Mittelwert und σ = 8,3 cm die Standardabweichung.
+<br>
+2. **Berechnung des z-Wertes für das 95. Perzentil:**
+   Da wir die größten 5% der NBA-Spieler betrachten, beträgt der z-Wert für das 95. Perzentil in einer Standardnormalverteilung ungefähr $$ z = 1,645 $$.
+<br>
+3. **Rücktransformation zur Körpergröße x:**
+   Setzen wir $$ z = 1,645 $$ in die z-Transformationsformel ein, um x zu berechnen:
+   $$ 1.645 = \frac{x - 198.6}{8.3} $$
+   $$ x = 1.645 \times 8.3 + 198.6 $$
+   $$ x \approx 212.3 \text{ cm} $$
+
+Daher muss ein Basketballspieler mindestens etwa 212,3 cm groß sein, um zu den größten 5% der NBA-Spieler zu gehören.
+
+* Falsch. 
+
+Meta-information
+================
+exname: nba_player_height_z
+extype: mchoice 
+exsolution: 00010
+exshuffle: TRUE
