@@ -319,6 +319,23 @@ exams2learnr("Questions/VO_04/VO4_13.Rmd", allow_retry = TRUE)
 
 ## Einheit 5 - Wahrscheinlichkeitstheorie und Verteilungen
 
+```{r VO5_13, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_05/VO5_13.Rmd", allow_retry = TRUE)
+```
+
+```{r VO5_14, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_05/VO5_14.Rmd", allow_retry = TRUE)
+```
+
+```{r VO5_15, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_05/VO5_15.Rmd", allow_retry = TRUE)
+```
+
+
+
+
+
+
 ```{r quiz5_1, echo = FALSE}
 quiz(
   question("Die Laplace-Wahrscheinlichkeit",
