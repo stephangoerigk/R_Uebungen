@@ -1,16 +1,16 @@
 Question 
 ======== 
 
-text
+Was sind Axiome der Wahrscheinlichkeitsrechnung nach Kolmogorov?
 
 Answerlist
 ----------
 
-* Histogramm
-* Balkendiagramm
-* Boxplot
-* Streudiagramm
-* Säulendiagramm
+* Wahrscheinlichkeiten nehmen Werte zwischen 0 und 1 an.
+* Sichere Ereignisse haben eine Wahrscheinlichkeit von P=1.
+* Negative Wahrscheinlichkeiten beschreiben besonders seltene Ereignisse.
+* Gesamtwahrscheinlichkeit mehrere unabhängiger Ereignisse ist die Summe der Einzelwahrscheinlichkeiten
+
 
 Solution
 ========
@@ -18,15 +18,15 @@ Solution
 Answerlist
 ----------
 
-* Falsch. Ein Histogramm ist eher zur Darstellung der Verteilung einer einzelnen metrischen Variable geeignet.
-* Falsch. Ein Balkendiagramm eignet sich besser zur Darstellung von kategorialen Daten oder Häufigkeiten.
-* Falsch. Ein Boxplot eignet sich zur Darstellung einer kategorialen und einer (mindestens) ordinalen Variable.
-* Richtig. Ein Streudiagramm eignet sich am besten, um die Beziehung zwischen einer metrischen und einer ordinalen Variable zu visualisieren.
-* Falsch. Säulendiagramme sind gut zur Darstellung von Häufigkeiten kategorialer Variablen, aber weniger geeignet für die Visualisierung der Beziehung zwischen metrischen und ordinalen Variablen.
+* Richtig. Die Axiome besagen, dass Wahrscheinlichkeiten immer Werte zwischen 0 und 1 annehmen.
+* Richtig. Nach den Axiomen ist die Wahrscheinlichkeit des sicheren Ereignisses gleich 1.
+* Falsch. Negative Wahrscheinlichkeiten sind in der Wahrscheinlichkeitstheorie nicht sinnvoll und werden nicht verwendet.
+* Richtig. Die Gesamtwahrscheinlichkeit mehrerer unabhängiger Ereignisse ist die Summe der Einzelwahrscheinlichkeiten gemäß den Axiomen.
+
 
 Meta-information
 ================
-exname: age_satisfaction_relationship_updated
+exname: kolmogorov_axioms_extended
 extype: mchoice 
-exsolution: 00100
+exsolution: 1101
 exshuffle: TRUE

@@ -16,7 +16,6 @@ library(faux)
 library(tidyverse)
 library(exams2learnr)
 library(knitr)
-library(kableExtra)
 library(moments)
 library(magrittr)
 library(kableExtra)
@@ -317,7 +316,55 @@ exams2learnr("Questions/VO_04/VO4_13.Rmd", allow_retry = TRUE)
 ```
 
 
-## Einheit 5 - Wahrscheinlichkeitstheorie und Verteilungen
+## Einheit 5 - Stichprobe, Grundgesamtheit - Wahrscheinlichkeitstheorie und Verteilungen
+
+```{r VO5_1, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_05/VO5_1.Rmd", allow_retry = TRUE)
+```
+
+```{r VO5_2, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_05/VO5_2.Rmd", allow_retry = TRUE)
+```
+
+```{r VO5_3, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_05/VO5_3.Rmd", allow_retry = TRUE)
+```
+
+```{r VO5_4, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_05/VO5_4.Rmd", allow_retry = TRUE)
+```
+
+```{r VO5_5, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_05/VO5_5.Rmd", allow_retry = TRUE)
+```
+
+```{r VO5_6, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_05/VO5_6.Rmd", allow_retry = TRUE)
+```
+
+```{r VO5_7, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_05/VO5_7.Rmd", allow_retry = TRUE)
+```
+
+```{r VO5_8, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_05/VO5_8.Rmd", allow_retry = TRUE)
+```
+
+```{r VO5_9, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_05/VO5_9.Rmd", allow_retry = TRUE)
+```
+
+```{r VO5_10, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_05/VO5_10.Rmd", allow_retry = TRUE)
+```
+
+```{r VO5_11, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_05/VO5_11.Rmd", allow_retry = TRUE)
+```
+
+```{r VO5_12, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_05/VO5_12.Rmd", allow_retry = TRUE)
+```
 
 ```{r VO5_13, message = FALSE, warning=FALSE}
 exams2learnr("Questions/VO_05/VO5_13.Rmd", allow_retry = TRUE)
@@ -331,182 +378,22 @@ exams2learnr("Questions/VO_05/VO5_14.Rmd", allow_retry = TRUE)
 exams2learnr("Questions/VO_05/VO5_15.Rmd", allow_retry = TRUE)
 ```
 
-
-
-
-
-
-```{r quiz5_1, echo = FALSE}
-quiz(
-  question("Die Laplace-Wahrscheinlichkeit",
-    answer("Gilt bei Zufallsexperimenten, bei denen nur endlich viele, gleichwahrscheinliche Ergebnisse möglich sind",correct = TRUE),
-    answer("Wir mit dem Bayes Theorem berechnet"),
-    answer("Ergibt sich durch das Verhältnis aus möglichen Ereignissen zu günstigen Ereignissen"),
-    answer("Ergibt sich durch das Verhältnis aus günstigen Ereignissen zu möglichen Ereignissen", correct = TRUE),
-    allow_retry = TRUE
-  )
-    )
+```{r VO5_16, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_05/VO5_16.Rmd", allow_retry = TRUE)
 ```
 
-```{r quiz5_2, echo = FALSE}
-quiz(
-  question("Was sind Axiome der Wahrscheinlichkeitsrechnung nach Kolmogoroff?",
-    answer("Wahrscheinlichkeiten nehmen Werte zwischen 0 und 1 an.",correct = TRUE),
-    answer("Sichere Ereignisse haben eine Wahrscheinlichkeit von P=1.",correct = TRUE),
-    answer("Negative Wahrscheinlichkeiten beschreiben besonders seltene Ereignisse."),
-    answer("Gesamtwahrscheinlichkeit mehrere unabhängiger Ereignisse ist die Summe der Einzelwahrscheinlichkeiten", correct = TRUE),
-    allow_retry = TRUE
-  )
-    )
+
+## Einheit 6 - Schätzungen und Stichprobenfehler
+
+```{r VO6_16, message = FALSE, warning=FALSE}
+#exams2learnr("Questions/VO_06/VO6_16.Rmd", allow_retry = TRUE)
 ```
 
-```{r quiz5_3, echo = FALSE}
-quiz(
-  question("Die bedingte Wahrscheinlichkeit P(A|B)",
-    answer("Die Wahrscheinlichkeit von Ereignis A unter der Bedingung, dass Ereignis B bereits eingetreten ist.", correct = TRUE),
-    answer("Die Wahrscheinlichkeit von Ereignis B unter der Bedingung, dass Ereignis A bereits eingetreten ist."),
-    answer("Die Korrelation von A und B."),
-    answer("Das Eintreten von B beeinflusst die Wahrscheinlichkeit von A.", correct = TRUE),
-    allow_retry = TRUE
-  )
-    )
-```
 
-```{r quiz5_4, echo = FALSE}
-quiz(
-  question("Zwei Ereignisse sind stochastisch unabhängig...",
-    answer("Wenn sie einander bedingen."),
-    answer("Wenn die Summe ihrer Einzelwahrscheinlichkeiten 1 ergibt"),
-    answer("Wenn das Eintreten des einen Ereignisses keinen Einfluss auf das Eintreten des anderen Ereignisses hat.", correct = TRUE),
-    answer("Qenn die Wahrscheinlichkeit für das gemeinsame Auftreten dem Produkt ihrer Einzelwahrscheinlichkeiten entspricht.", correct = TRUE),
-    allow_retry = TRUE
-  )
-    )
-```
 
-```{r quiz5_5, echo = FALSE}
-quiz(
-  question("Was stimmt hinsichtlich der Nomenklatur des Zufallsexperiments?",
-    answer("Jedes mögliche Ergebnis aus einem Zufallsexperiment nennen wir ein Elementarereignis ω.", correct = TRUE),
-    answer("Der Ereignisraum Ω heißt diskret, wenn er aus überabzählbar vielen Elementarereignissen besteht"),
-    answer("Die Menge aller möglichen Ereignisse ist definiert als der Ereignisraum Ω.", correct = TRUE),
-    answer("Zufallsexperiment ist ein allgemeiner Begriff, der Grundlage für die Inferenzstatistik ist", correct = TRUE),
-    allow_retry = TRUE
-  )
-    )
-```
 
-```{r quiz5_6, echo = FALSE}
-quiz(
-  question("Der Erwartungswert...",
-    answer("...ergibt sich als Durchschnitt, wenn man ein Zufallsexperiment sehr oft durchführt.", correct = TRUE),
-    answer("...einer ZV ist ein Maß für das Zentrum der Verteilung.", correct = TRUE),
-    answer("...ist die Streuung aller möglichen Ausprägungen einer ZV."),
-    answer("...ist die Gegenwahrscheinlichkeit vom Mittelwert."),
-    allow_retry = TRUE
-  )
-    )
-```
 
-```{r quiz5_7, echo = FALSE}
-quiz(
-  question("Das alpha-Quantil...",
-    answer("...ist immer das Signifikanzniveau."),
-    answer("...ist ein ein Wert bezeichnet, unterhalb dessen ein vorgegebener Anteil (alpha) aller Fälle der Verteilung liegen.", correct = TRUE),
-    answer("...muss bei diskreten ZV  zur nächsten ganzzahligen Ausprägung gerundet werden", correct = TRUE),
-    answer("...ist der Erwartungswert einer stetigen ZV."),
-    allow_retry = TRUE
-  )
-    )
-```
 
-```{r quiz5_8, echo = FALSE}
-quiz(
-  question("Was ist bezüglich der diskreten Gleichverteilung korrekt?",
-    answer("Verteilung ähnelt einer Glockenkurve."),
-    answer("Anwendung bei Zufallsexperimenten, deren Ergebnisse gleich häufig sind.", correct = TRUE),
-    answer("Enden der Verteilung sind weniger wahrscheinlich."),
-    answer("Beschreibt seltene Ereignisse"),
-    allow_retry = TRUE
-  )
-    )
-```
-
-```{r quiz5_9, echo = FALSE}
-quiz(
-  question("Was ist hinsichtlich der Normalverteilung (NV) korrekt?",
-    answer("Ist eine stetige Verteilung, die symmetrisch um den Erwartungswert verteilt ist.", correct = TRUE),
-    answer("Die Fläche zwischen den Standardabweichungen umfasst cs. 68% aller Fälle.", correct = TRUE),
-    answer("Wenn die Standardabweichung gering ist, ist die Verteilung breit und niedrig."),
-    answer("Die Standardabweichung gibt den Abstand zwischen Erwartungswert und den Wendepunkten der Dichtefunktion an.", correct = TRUE),
-    allow_retry = TRUE
-  )
-    )
-```
-
-```{r quiz5_10, echo = FALSE}
-quiz(
-  question("Es sei A = {1,2,3,4}.
-Welches ist das Gegenereignis zu A?",
-    answer("D = {-1,-2,-3,-4}"),
-    answer("B = {5,6,7,8,9,10}"),
-    answer("C = {4,3,2,1}"),
-    answer("Es gibt kein Gegenereignis, da kein Ergebnisraum spezifiziert ist.", correct = TRUE),
-answer("Es gibt kein Gegenereignis, da kein Ergebnisraum spezifiziert ist."),
-    allow_retry = TRUE
-  )
-    )
-```
-
-```{r quiz5_11, echo = FALSE}
-quiz(
-  question("Wann spricht man von unabhängigen Ereignissen?",
-    answer("Wenn zwei Ereignisse disjunkt sind, d.h. keine Schnittmenge haben."),
-    answer("Für das Bestimmen von P(A|B) hat P(B) keinen zusätzlichen Informationsgehalt.", correct = TRUE),
-    answer("Die Wahrscheinlichkeit für A gegeben B ändert sich nicht abhängig davon, ob A ein sicheres Ereignis ist."),
-    answer("Ob B stimmt oder nicht, ändert nichts an der Wahrscheinlichkeit von A.", correct = TRUE),
-    allow_retry = TRUE
-  )
-    )
-```
-
-```{r quiz5_12, echo = FALSE}
-quiz(
-  question("Was ist ein Elementarereignis?",
-    answer("ein mögliches Ereignis bei einem Zufallsexperiment", correct = TRUE),
-    answer("eine Teilmenge (aus zwei Elementen) des Ergebnisraums"),
-    answer("eine Menge aus mehreren Elementarereignissen"),
-    answer("Menge der geraden Zahlen beim Würfeln"),
-    allow_retry = TRUE
-  )
-    )
-```
-
-```{r quiz5_13, echo = FALSE}
-quiz(
-  question("Was könnte man als Ergebnisraum bezeichnen? ",
-    answer("{Erfolg, Misserfolg, weder noch} bei einer Therapie", correct = TRUE),
-    answer("Ω", correct = TRUE),
-    answer("eine Teilmenge der Menge der Elementarereignisse"),
-    answer("alles, was eintreten kann", correct = TRUE),
-    allow_retry = TRUE
-  )
-    )
-```
-
-```{r quiz5_14, echo = FALSE}
-quiz(
-  question("Was ist hinsichtlich der Standardnormalverteilung korrekt? ",
-    answer("Sie ist eine Normalverteilung mit μ = 1 und σ = 0"),
-    answer("Sie ist eine Normalverteilung mit μ = 0 und σ = 1", correct = TRUE),
-    answer("Ist X N(μ, σ²) verteilt, dann führt die z-Transformation auf eine N(0, 1) Verteilung", correct = TRUE),
-    answer("Wir können jede beliebige Normalverteilung in eine Standardnormalverteilung transformieren", correct = TRUE),
-    allow_retry = TRUE
-  )
-    )
-```
-
-## Einheit 6 - Stichprobe, Grundgesamtheit und Stichprobenfehler
 
 ```{r quiz6_1, echo = FALSE}
 quiz(

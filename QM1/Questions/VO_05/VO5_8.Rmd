@@ -1,16 +1,16 @@
 Question 
 ======== 
 
-text
+Was ist bezüglich der diskreten Gleichverteilung korrekt?
 
 Answerlist
 ----------
 
-* Histogramm
-* Balkendiagramm
-* Boxplot
-* Streudiagramm
-* Säulendiagramm
+* Verteilung ähnelt einer Glockenkurve.
+* Anwendung bei Zufallsexperimenten, deren Ergebnisse gleich häufig sind.
+* Enden der Verteilung sind weniger wahrscheinlich.
+* Beschreibt seltene Ereignisse.
+* Die Wahrscheinlichkeit für jedes mögliche Ergebnis ist gleich.
 
 Solution
 ========
@@ -18,15 +18,15 @@ Solution
 Answerlist
 ----------
 
-* Falsch. Ein Histogramm ist eher zur Darstellung der Verteilung einer einzelnen metrischen Variable geeignet.
-* Falsch. Ein Balkendiagramm eignet sich besser zur Darstellung von kategorialen Daten oder Häufigkeiten.
-* Falsch. Ein Boxplot eignet sich zur Darstellung einer kategorialen und einer (mindestens) ordinalen Variable.
-* Richtig. Ein Streudiagramm eignet sich am besten, um die Beziehung zwischen einer metrischen und einer ordinalen Variable zu visualisieren.
-* Falsch. Säulendiagramme sind gut zur Darstellung von Häufigkeiten kategorialer Variablen, aber weniger geeignet für die Visualisierung der Beziehung zwischen metrischen und ordinalen Variablen.
+* Falsch. Eine diskrete Gleichverteilung ist keine Glockenkurve, sondern charakterisiert sich durch gleichwahrscheinliche Ergebnisse.
+* Richtig. Die diskrete Gleichverteilung wird angewendet, wenn die Ergebnisse eines Zufallsexperiments alle gleich häufig auftreten. Zum Beispiel bei einem fairen Würfel, wo jede Augenzahl mit der gleichen Wahrscheinlichkeit auftritt.
+* Falsch. Bei der diskreten Gleichverteilung sind alle möglichen Ergebnisse gleich wahrscheinlich, einschließlich der Enden der Verteilung.
+* Falsch. Die diskrete Gleichverteilung beschreibt nicht speziell seltene Ereignisse, sondern gleichwahrscheinliche Ergebnisse.
+* Richtig. Bei der diskreten Gleichverteilung ist die Wahrscheinlichkeit für jedes mögliche Ergebnis gleich, was sie von anderen Verteilungen unterscheidet.
 
 Meta-information
 ================
-exname: age_satisfaction_relationship_updated
+exname: discrete_uniform_distribution_correctness
 extype: mchoice 
-exsolution: 00100
+exsolution: 01001
 exshuffle: TRUE
