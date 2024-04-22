@@ -1,16 +1,16 @@
 Question 
 ======== 
 
-text
+Was ist ein Elementarereignis?
 
 Answerlist
 ----------
 
-* Histogramm
-* Balkendiagramm
-* Boxplot
-* Streudiagramm
-* Säulendiagramm
+* Ein Ereignis, das immer eintritt.
+* Ein Ereignis, das nie eintritt.
+* Ein einzelnes Ergebnis eines Zufallsexperiments.
+* Ein Ereignis, das immer gleichzeitig mit einem anderen Ereignis auftritt.
+* Ein Ereignis, das eine Wahrscheinlichkeit von 0 hat.
 
 Solution
 ========
@@ -18,15 +18,15 @@ Solution
 Answerlist
 ----------
 
-* Falsch. Ein Histogramm ist eher zur Darstellung der Verteilung einer einzelnen metrischen Variable geeignet.
-* Falsch. Ein Balkendiagramm eignet sich besser zur Darstellung von kategorialen Daten oder Häufigkeiten.
-* Falsch. Ein Boxplot eignet sich zur Darstellung einer kategorialen und einer (mindestens) ordinalen Variable.
-* Richtig. Ein Streudiagramm eignet sich am besten, um die Beziehung zwischen einer metrischen und einer ordinalen Variable zu visualisieren.
-* Falsch. Säulendiagramme sind gut zur Darstellung von Häufigkeiten kategorialer Variablen, aber weniger geeignet für die Visualisierung der Beziehung zwischen metrischen und ordinalen Variablen.
+* Falsch. Ein Elementarereignis ist nicht immer garantiert, sondern kann eintreten oder auch nicht.
+* Falsch. Ein Elementarereignis tritt ein, wenn das zugehörige Ergebnis eines Zufallsexperiments eintritt.
+* Richtig. Ein Elementarereignis ist ein einzelnes Ergebnis eines Zufallsexperiments, das nicht weiter in einzelne Ereignisse zerlegt werden kann.
+* Falsch. Ein Elementarereignis ist ein einzelnes Ergebnis und tritt nicht notwendigerweise gleichzeitig mit einem anderen Ereignis auf.
+* Falsch. Ein Elementarereignis hat eine Wahrscheinlichkeit größer als 0, da es eintreten kann.
 
 Meta-information
 ================
-exname: age_satisfaction_relationship_updated
+exname: elementary_event_definition
 extype: mchoice 
 exsolution: 00100
 exshuffle: TRUE

@@ -1,16 +1,16 @@
 Question 
 ======== 
 
-text
+Was stimmt hinsichtlich der Nomenklatur des Zufallsexperiments?
 
 Answerlist
 ----------
 
-* Histogramm
-* Balkendiagramm
-* Boxplot
-* Streudiagramm
-* Säulendiagramm
+* Jedes mögliche Ergebnis aus einem Zufallsexperiment nennen wir ein Elementarereignis ω.
+* Der Ereignisraum Ω heißt diskret, wenn er aus überabzählbar vielen Elementarereignissen besteht.
+* Die Menge aller möglichen Ereignisse ist definiert als der Ereignisraum Ω.
+* Zufallsexperiment ist ein allgemeiner Begriff, der Grundlage für die Inferenzstatistik ist.
+* Ein Zufallsexperiment ist immer deterministisch und vorhersehbar.
 
 Solution
 ========
@@ -18,15 +18,15 @@ Solution
 Answerlist
 ----------
 
-* Falsch. Ein Histogramm ist eher zur Darstellung der Verteilung einer einzelnen metrischen Variable geeignet.
-* Falsch. Ein Balkendiagramm eignet sich besser zur Darstellung von kategorialen Daten oder Häufigkeiten.
-* Falsch. Ein Boxplot eignet sich zur Darstellung einer kategorialen und einer (mindestens) ordinalen Variable.
-* Richtig. Ein Streudiagramm eignet sich am besten, um die Beziehung zwischen einer metrischen und einer ordinalen Variable zu visualisieren.
-* Falsch. Säulendiagramme sind gut zur Darstellung von Häufigkeiten kategorialer Variablen, aber weniger geeignet für die Visualisierung der Beziehung zwischen metrischen und ordinalen Variablen.
+* Richtig. Jedes mögliche Ergebnis aus einem Zufallsexperiment wird als Elementarereignis ω bezeichnet.
+* Falsch. Der Ereignisraum Ω heißt diskret, wenn er aus endlich vielen oder abzählbar unendlich vielen Elementarereignissen besteht.
+* Richtig. Die Menge aller möglichen Ereignisse wird durch den Ereignisraum Ω definiert.
+* Richtig. Ein Zufallsexperiment ist die Grundlage für die Wahrscheinlichkeitstheorie und statistische Inferenz.
+* Falsch. Ein Zufallsexperiment ist per Definition nicht deterministisch und kann nicht immer vorhergesagt werden.
 
 Meta-information
 ================
-exname: age_satisfaction_relationship_updated
+exname: random_experiment_nomenclature
 extype: mchoice 
-exsolution: 00100
+exsolution: 10110
 exshuffle: TRUE

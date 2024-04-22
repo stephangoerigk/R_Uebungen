@@ -1,16 +1,16 @@
 Question 
 ======== 
 
-text
+Welche Aussage trifft auf die bedingte Wahrscheinlichkeit zu?
 
 Answerlist
 ----------
 
-* Histogramm
-* Balkendiagramm
-* Boxplot
-* Streudiagramm
-* Säulendiagramm
+* Sie gibt die Wahrscheinlichkeit eines Ereignisses A an, unabhängig von einem anderen Ereignis B.
+* Sie beschreibt die Wahrscheinlichkeit, dass zwei Ereignisse gleichzeitig eintreten.
+* Sie gibt die Wahrscheinlichkeit eines Ereignisses A an, unter der Bedingung, dass ein anderes Ereignis B bereits eingetreten ist.
+* Sie ist immer gleich der Wahrscheinlichkeit des Komplementärereignisses.
+* Sie ist nur für stetige Zufallsvariablen definiert.
 
 Solution
 ========
@@ -18,15 +18,15 @@ Solution
 Answerlist
 ----------
 
-* Falsch. Ein Histogramm ist eher zur Darstellung der Verteilung einer einzelnen metrischen Variable geeignet.
-* Falsch. Ein Balkendiagramm eignet sich besser zur Darstellung von kategorialen Daten oder Häufigkeiten.
-* Falsch. Ein Boxplot eignet sich zur Darstellung einer kategorialen und einer (mindestens) ordinalen Variable.
-* Richtig. Ein Streudiagramm eignet sich am besten, um die Beziehung zwischen einer metrischen und einer ordinalen Variable zu visualisieren.
-* Falsch. Säulendiagramme sind gut zur Darstellung von Häufigkeiten kategorialer Variablen, aber weniger geeignet für die Visualisierung der Beziehung zwischen metrischen und ordinalen Variablen.
+* Falsch. Die bedingte Wahrscheinlichkeit bezieht sich auf die Wahrscheinlichkeit eines Ereignisses A unter der Bedingung, dass ein anderes Ereignis B bereits eingetreten ist.
+* Falsch. Die Wahrscheinlichkeit, dass zwei Ereignisse gleichzeitig eintreten, wird durch die Schnittmenge der Ereignisse beschrieben.
+* Richtig. Die bedingte Wahrscheinlichkeit gibt die Wahrscheinlichkeit eines Ereignisses A an, unter der Bedingung, dass ein anderes Ereignis B bereits eingetreten ist.
+* Falsch. Die bedingte Wahrscheinlichkeit ist nicht immer gleich der Wahrscheinlichkeit des Komplementärereignisses.
+* Falsch. Die bedingte Wahrscheinlichkeit ist sowohl für diskrete als auch für stetige Zufallsvariablen definiert.
 
 Meta-information
 ================
-exname: age_satisfaction_relationship_updated
+exname: conditional_probability_definition
 extype: mchoice 
 exsolution: 00100
 exshuffle: TRUE
