@@ -1,0 +1,49 @@
+Question 
+======== 
+
+Welche Hypothese würde am besten zu der Fragestellung passen: 
+
+Unterscheiden sich Menschen mit höherem Bildungsabschluss signifikant in ihrer Lebenszufriedenheit im Vergleich zu Menschen mit niedrigerem Bildungsabschluss?
+
+Answerlist
+----------
+
+* <br>
+H0: μhoch <br>
+H1: μ
+
+* <br>
+H0:  <br>
+H1: 
+
+* <br>
+H0:  <br>
+H1: 
+
+* <br>
+H0:  <br>
+H1: 
+
+* <br>
+H0:  <br>
+H1: 
+
+Solution
+========
+
+Answerlist
+----------
+
+* Richtig: 
+* Falsch: 
+* Falsch: 
+* Falsch: 
+* Falsch: 
+
+
+Meta-information
+================
+exname: Hypothese_1
+extype: mchoice 
+exsolution: 10000
+exshuffle: TRUE

@@ -1,138 +1,16 @@
-```{r d6_1, include=FALSE}
-
-library(magrittr)
-library(kableExtra)
-
-
-set.seed(1234)
-N = 10
-df = data.frame(ID = paste0(rep(1:N)),
-                Test1 = round(rnorm(N, 112, 18)),
-                Test2 = round(rnorm(N, 20, 5))
-               )
-
-df2 = df
-df = as.data.frame(t(df))
-colnames(df) = NULL
-#kable(df[,], col.names = NULL)
-table = df %>%
-  kbl() %>%
-  kable_styling()
-
-
-
-
-
-
-
-```
-
-```{r t-intervall, include=FALSE}
-#Test2
-
-x_bar <- mean(df2$Test2)
-s <- sd(df2$Test2)
-
-# Konfidenzniveau (z.B. 95%)
-confidence_level <- 0.95
-
-# Freiheitsgrade für t-Verteilung (n-1)
-df <- N - 1
-
-# Kritischer t-Wert für das gegebene Konfidenzniveau und Freiheitsgrade
-t_critical <- abs(qt(p = ((1 - confidence_level) / 2), df))
-
-
-# Konfidenzintervall mit der t-Statistik berechnen
-margin_of_error_t <- t_critical * (s / sqrt(N))
-lower_bound <- round(x_bar - margin_of_error_t, 2)
-upper_bound <- round(x_bar + margin_of_error_t, 2)
-
-# Ausgabe des Konfidenzintervalls
-#cat(sprintf("Das %d%% Konfidenzintervall für den Mittelwert ist [%.2f, %.2f]\n", confidence_level * 100, lower_bound, upper_bound))
-
-
-```
-
-```{r z-intervall, include=FALSE}
-#Test1
-
-# Stichprobenmittelwert und Standardabweichung
-y_bar <- mean(df2$Test1)
-sigma <- round(sd(df2$Test1)*1.2,2)
-
-# Konfidenzniveau (z.B. 95%)
-confidence_level <- 0.95
-
-# Kritischer z-Wert für das gegebene Konfidenzniveau (z.B. 95%)
-z_critical <- abs(qnorm((1 - confidence_level) / 2))
-
-# Konfidenzintervall mit der z-Statistik berechnen
-margin_of_error_z <- z_critical * (sigma / sqrt(N))
-lower_bound_z <- round(y_bar - margin_of_error_z, 2)
-upper_bound_z <- round(y_bar + margin_of_error_z, 2)
-
-# Ausgabe des Konfidenzintervalls
-#cat(sprintf("Das %d%% Konfidenzintervall für den Mittelwert ist [%.2f, %.2f]\n", confidence_level * 100, lower_bound_z, upper_bound_z))
-
-```
-
-```{r wrong intervals, include=FALSE}
-# T2 mit z-Wert statt t-Wert
-
-# Konfidenzintervall mit der z-Statistik berechnen
-margin_of_error_w <- z_critical * (s / sqrt(N))
-lower_bound_w <- round(x_bar - margin_of_error_w, 2)
-upper_bound_w <- round(x_bar + margin_of_error_w, 2)
-
-# T1 mit eigener Varianz statt Pop Varianz
-
-# Konfidenzintervall mit der z-Statistik berechnen
-margin_of_error_w2 <- z_critical * (sd(df2$Test1) / sqrt(N))
-lower_bound_w2 <- round(y_bar - margin_of_error_w2, 2)
-upper_bound_w2 <- round(y_bar + margin_of_error_w2, 2)
-
-# T1 mit Pop Mittelwert statt mit Stichprobe
-
-w_bar = mean(df2$Test1)-3.2
-
-lower_bound_w3 <- round(w_bar - margin_of_error_z, 2)
-upper_bound_w3 <- round(w_bar + margin_of_error_z, 2)
-
-
-
-```
-
-
-
-
-
 Question 
 ======== 
 
-Sie haben mit einer Gruppe von Studierenden im Rahmen eines Seminars zwei unterschiedliche Tests durchgeführt. Die Ergebnisse der Tests finden Sie in nachfolgender Tabelle:
-
-```{r d6_2, echo=FALSE}
-table
-```
-
-Für Test1 können Sie zusätzliche Informationen aus einem Testmanual entnehmen: 
-
-Populationsmittelwert: μ = `r round(mean(df2$Test1)-3.2,2)`
-Pupulationsstreuung: σ = `r round(sd(df2$Test1)*1.2,2)`
-
-Für Test2 gibt es leider keine normativen Daten. 
-
-Welche der folgenden Aussagen sind korrekt? 
+Was trifft auf das Ziehen einer einfachen Zufallsstichprobe zu?
 
 Answerlist
 ----------
 
-* Das 95% Konfidenzintervall für den Mittelwert von Test 2 ist [`r lower_bound`; `r upper_bound`]
-* Das 95% Konfidenzintervall für den Mittelwert von Test 1 ist [`r lower_bound_z`; `r upper_bound_z`]
-* Das 95% Konfidenzintervall für den Mittelwert von Test 2 ist [`r lower_bound_w`; `r upper_bound_w`]
-* Das 95% Konfidenzintervall für den Mittelwert von Test 1 ist [`r lower_bound_w2`; `r upper_bound_w2`] 
-* Das 95% Konfidenzintervall für den Mittelwert von Test 1 ist [`r lower_bound_w3`; `r upper_bound_w3`] 
+* Der Vorgang ist ein Zufallsexperiment
+* Ein Teil der Population hat eine größere Wahrscheinlichkeit in die Stichprobe gezogen zu werden
+* Wenn die Ziehung einer Person die Wahrscheinlichkeit der Ziehung einer anderen Person beeinflusst, können wir nicht mehr von einer einfachen Zufallsstichprobe sprechen
+* Ziehen einer Zufallsstichprobe = Zufällige Zuteilung der Personen einer Gruppe zu Eigenschaften
+* Jedes Element der Population hat die gleiche Wahrscheinlichkeit, in die Stichprobe aufgenommen zu werden
 
 Solution
 ========
@@ -140,15 +18,15 @@ Solution
 Answerlist
 ----------
 
-* Richtig.
-* Richtig.
-* Falsch. Hier wurde das Konfidenzintervall für Test2 mit z-Werten anstatt t-Werten berechnet.
-* Falsch. Hier wurde das Konfidenzintervall für Test1 mit der empirischen Varianz anstelle der Populationsvarianz berechnet.
-* Falsch. Hier wurde das Konfidenzintervall für Test1 nicht um den Mittelwert von Test1, sondern den Populationsmittelwert berechnet.
+* Richtig. (Der Vorgang des Ziehens einer Stichprobe kann als Zufallsexperiment betrachtet werden.)
+* Falsch. (In einer einfachen Zufallsstichprobe hat jedes Element der Population die gleiche Wahrscheinlichkeit, in die Stichprobe aufgenommen zu werden.)
+* Richtig. (Wenn die Ziehung einer Person die Wahrscheinlichkeit einer anderen beeinflusst, ist es keine einfache Zufallsstichprobe mehr.)
+* Richtig. (Eine Zufallsstichprobe bedeutet, dass die Personen zufällig ausgewählt werden.)
+* Richtig. (In einer einfachen Zufallsstichprobe hat jedes Element der Population die gleiche Chance, ausgewählt zu werden.)
 
 Meta-information
 ================
-exname: ki
+exname: laplace_probability_explanation
 extype: mchoice 
-exsolution: 11000
+exsolution: 10111
 exshuffle: TRUE

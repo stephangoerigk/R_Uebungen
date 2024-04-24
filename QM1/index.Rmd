@@ -441,200 +441,18 @@ exams2learnr("Questions/VO_06/VO6_13.Rmd", allow_retry = TRUE)
 exams2learnr("Questions/VO_06/VO6_14.Rmd", allow_retry = TRUE)
 ```
 
-```{r VO6_15, message = FALSE, warning=FALSE}
-exams2learnr("Questions/VO_06/VO6_15.Rmd", allow_retry = TRUE)
-```
-
-
-
-
-
-
-
-
-```{r quiz6_1, echo = FALSE}
-quiz(
-  question("Die Population...",
-    answer("wird verwendet um auf Grundgesamtheit zu schließen."),
-    answer("Wird auch Grundgesamtheit genannt.", correct = TRUE),
-    answer("Ist eine zufällige Auswahl bestimmter Merkmalsträger:innen."),
-    answer("...ist die Gesamtheit aller Merkmalsträger:innen, auf die eine Untersuchungsfrage gerichtet ist", correct = TRUE),
-    allow_retry = TRUE
-  )
-    )
-```
-
-```{r quiz6_2, echo = FALSE}
-quiz(
-  question("Was sind häufig auftretende Probleme beim Ziehen von Zufallsstichproben?",
-    answer("Unterschiedliche Skalenniveaus."),
-    answer("Fehlende Repräsentativität", correct = TRUE),
-    answer("Eine bestimmte Teilgruppe von Personen in der Population hat eine höhere Wahrscheinlichkeit, in die Stichprobe gezogen zu werden, als andere Personen.", correct = TRUE),
-    answer("Unabhängigkeit der Ziehungen"),
-    allow_retry = TRUE
-  )
-    )
-```
-
-```{r quiz6_3, echo = FALSE}
-quiz(
-  question("μ>100 ist ein Beispiel für...",
-    answer("...eine Streuungsschätzung."),
-    answer("...eine Parameterschätzung."),
-    answer("...eine Hypothese, die mittels Hypothesentest überprüft werden kann.", correct = TRUE),
-    answer("...eine Intervallschätzung."),
-    allow_retry = TRUE
-  )
-    )
-```
-
-```{r quiz6_4, echo = FALSE}
-quiz(
-  question("Was ist ein naheliegender Schätzwert für π (Auftretenswahrscheinlichkeit in der Population)?",
-    answer("relative Häufigkeit in der Stichprobe", correct = TRUE),
-    answer("Mittelwert in der Stichprobe"),
-    answer("Varianz in der Stichprobe"),
-    answer("Median in der Stichprobe"),
-    allow_retry = TRUE
-  )
-    )
-```
-
-```{r quiz6_5, echo = FALSE}
-quiz(
-  question("Was ist hinsichtlich Schätzfunktionen zutreffend?",
-    answer("Realisation einer Schätzfunktion nennt sich Schätzwert.", correct = TRUE),
-    answer("Schätzfunktionen sind Ergebnisse eines Hypothesentests."),
-    answer("Zufallsvariable, die jedem möglichen Ergebnis des Zufallsexperiments den aus ihr berechneten Schätzwert zuweist.", correct = TRUE),
-    answer("Sind Ergebnisse in der Stichprobe"),
-    allow_retry = TRUE
-  )
-    )
-```
-
-```{r quiz6_6, echo = FALSE}
-quiz(
-  question("Was sind die Gütekriterien einer Schätzfunktion",
-    answer("Erwartungstreue (und Genauigkeit)", correct = TRUE),
-    answer("Effizienz", correct = TRUE),
-    answer("Konsistenz", correct = TRUE),
-    answer("Objektivität"),
-    allow_retry = TRUE
-  )
-    )
-```
-
-```{r quiz6_7, echo = FALSE}
-quiz(
-  question("Was versteht man unter der Genauigkeit einer Schätzfunktion?",
-    answer("Das ein möglichst großes Intervall bei der Schätzung herauskommt."),
-    answer("Dass sie zu möglichst „präzisen“ oder „genauen“ Schätzungen führen sollte.", correct = TRUE),
-    answer("Dass die Schätzwerte bei unendlicher Wiederholung des Zufallsexperiments im Mittel dem wahren Parameterwert entsprechen sollten"),
-    answer("Dass der Standardfehler bei wachsendem Stichprobenumfang immer kleiner wird."),
-    allow_retry = TRUE
-  )
-    )
-```
-
-```{r quiz6_8, echo = FALSE}
-quiz(
-  question("Was sind Vorteile der Standardnormalverteilung?",
-    answer("Sie ist symmetrischer als die Normalverteilung."),
-    answer("Erwartungswert liegt bei 1 und Standardabweichung bei 0."),
-    answer("Wahrscheinlichkeit für jeden z-Wert kann abgelesen werden.", correct = TRUE),
-    answer("Quantile der Standardnormalverteilung sind tabelliert.", correct = TRUE),
-    allow_retry = TRUE
-  )
-    )
-```
-
-```{r quiz6_9, echo = FALSE}
-quiz(
-  question("Wovon hängt die Breite des Konfidenzintervalls ab?",
-    answer("N", correct = TRUE),
-    answer("Streuung", correct = TRUE),
-    answer("Median"),
-    answer("Signifikanzniveau", correct = TRUE),
-    answer("Mittelwert"),
-    allow_retry = TRUE
-  )
-    )
-```
-
-```{r quiz6_10, echo = FALSE}
-quiz(
-  question("Was ist mit Bezug auf die t-Verteilung korrekt?",
-    answer("Ist Populationsvarianz jedoch nicht bekannt und muss geschätzt werden, dann ist der Quotient nicht standardnormalverteilt sondern t-verteilt", correct = TRUE),
-    answer("Die Form der t-Verteilung ist mitbestimmt durch Freiheitsgrade.", correct = TRUE),
-    answer("t-werte sind Quotienten aus zwei Varianzen."),
-    answer("Sie approximiert die NV mit zunehmender Stichprobengröße.", correct = TRUE),
-    answer("Die t-Verteilung ist wie die NV eingipfelig und symmetrisch", correct = TRUE),
-    allow_retry = TRUE
-  )
-    )
-```
-
-```{r quiz6_11, echo = FALSE}
-quiz(
-  question("Was ist hinsichtlich des Standardfehlers korrekt?",
-    answer("SE = Streuung der Stichprobenkennwerteverteilung", correct = TRUE),
-    answer("Je größer N, desto kleiner fällt er aus", correct = TRUE),
-    answer("Je größer σ in der Population, desto kleiner fällt er aus"),
-    answer("Er ist ein Maß für die Genauigkeit der Schätzung", correct = TRUE),
-    answer("Die Größe unserer Stichprobe hat keinen Einfluss auf den SE"),
-    allow_retry = TRUE
-  )
-    )
-```
-
-```{r quiz6_12, echo = FALSE}
-quiz(
-  question("Was trifft auf das Ziehen einer einfachen Zufallsstichprobe zu?",
-    answer("Der Vorgang ist ein Zufallsexperiment", correct = TRUE),
-    answer("Ein Teil der Population hat eine größere Wahrscheinlichkeit in die Stichprobe gezogen zu werden"),
-    answer("Wenn die Ziehung einer Person die Wahrscheinlichkeit der Ziehung einer anderen Person beeinflusst, können wir nicht mehr von einer einfachen Zufallsstichprobe sprechen", correct = TRUE),
-    answer("Ziehen einer Zufallsstichprobe = Zufällige Zuteilung den Personen einer Gruppe zu Eigenschaften", correct = TRUE),
-    allow_retry = TRUE
-  )
-    )
-```
-
-```{r quiz6_13, echo = FALSE}
-quiz(
-  question("Welche Aussagen sind korrekt? ",
-    answer("Das Ergebnis einer Punktschätzung ist ein Intervall von Zahlen"),
-    answer("Beispiel einer Punktschätzung: Wir gehen auf Basis unserer Stichprobe davon aus, dass der Parameter π gleich 0.45 ist", correct = TRUE),
-    answer("Beispiel einer Intervallschätzung: Wir gehen auf Basis unserer Stichprobe davon aus, dass die relative Häufigkeit der uns interessierenden Messwertausprägung in der Population gleich 0.43 ist"),
-    answer("Das Ergebnis einer Punktschätzung ist eine konkrete Zahl", correct = TRUE),
-    allow_retry = TRUE
-  )
-    )
-```
-
-```{r quiz6_14, echo = FALSE}
-quiz(
-  question("Welche Formel aus der Deskriptivstatistik verwenden wir als erwartungstreue Schätzung der Populationsvarianz? ",
-    answer("![](images/first.png){width=200px}"),
-    answer("![](images/second.png){width=200px}", correct = TRUE),
-    answer("![](images/third.png){width=200px}"),
-    allow_retry = TRUE
-  )
-    )
-```
-
-```{r quiz6_15, echo = FALSE}
-quiz(
-  question("Was versteht man unter Konsistenz einer Schätzfunktion?",
-    answer("Mit wachsendem Stichprobenumfang sollte die Schätzfunktion immer genauer werden", correct = TRUE),
-    answer("Die Schätzfunktion sollte einen geringeren Standardfehler als alle anderen erwartungstreuen Schätzfunktionen aufweisen"),
-    answer("![](images/lim.png){width=200px}", correct = TRUE),
-    answer("![](images/SD.png){width=200px}"),
-    allow_retry = TRUE
-  )
-    )
-```
-
 ## Einheit 7 - Hypothesen und Hypothesentests
+
+```{r VO7_11, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_07/VO7_11.Rmd", allow_retry = TRUE)
+```
+
+```{r VO7_12, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_07/VO7_12.Rmd", allow_retry = TRUE)
+```
+
+
+
 
 ```{r quiz7_1, echo = FALSE}
 quiz(
@@ -821,7 +639,13 @@ quiz(
 
 ## Einheit 8 - *t*-Test
 
-## Einheit 9 - *t*-Test (Übungsaufgaben Schritt-für-Schritt)
+## Einheit 9 - Übungsaufgaben t-Test
+
+```{r VO9_2, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_09/VO9_2.Rmd", allow_retry = TRUE)
+```
+
+
 
 ## Einheit 10 - Korrelation
 

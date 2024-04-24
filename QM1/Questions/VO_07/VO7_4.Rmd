@@ -1,0 +1,32 @@
+Question 
+======== 
+
+Wie und wann sollten Hypothesen formuliert werden?
+
+Answerlist
+----------
+
+* Hypothesen sollten vor Beginn der Datenerhebung formuliert werden, basierend auf vorhandener Literatur und theoretischem Wissen.
+* Hypothesen sollten nach Abschluss der Datenanalyse formuliert werden, um die Ergebnisse besser zu interpretieren.
+* Hypothesen sollten nicht formuliert werden, da sie die Objektivität der Forschung beeinflussen können.
+* Hypothesen sollten immer formuliert werden, nachdem die Rohdaten vorliegen, um sie empirisch zu validieren.
+* Hypothesen sollten beliebig formuliert werden, um eine maximale Flexibilität bei der Datenauswertung zu gewährleisten.
+
+Solution
+========
+
+Answerlist
+----------
+
+* Richtig. (Hypothesen sollten vor Beginn der Datenerhebung formuliert werden, basierend auf vorhandener Literatur und theoretischem Wissen.)
+* Falsch. (Hypothesen sollten vor Beginn der Datenerhebung formuliert werden, basierend auf vorhandener Literatur und theoretischem Wissen.)
+* Falsch. (Hypothesen sollten vor Beginn der Datenerhebung formuliert werden, basierend auf vorhandener Literatur und theoretischem Wissen.)
+* Falsch. (Hypothesen sollten vor Beginn der Datenerhebung formuliert werden, basierend auf vorhandener Literatur und theoretischem Wissen.)
+* Falsch. (Hypothesen sollten vor Beginn der Datenerhebung formuliert werden, basierend auf vorhandener Literatur und theoretischem Wissen.)
+
+Meta-information
+================
+exname: hypothesis_formulation
+extype: mchoice 
+exsolution: 10000
+exshuffle: TRUE
