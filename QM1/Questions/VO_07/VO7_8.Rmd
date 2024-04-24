@@ -1,0 +1,32 @@
+Question 
+======== 
+
+Was ist mit Bezug auf Fehler beim Hypothesentest korrekt?
+
+Answerlist
+----------
+
+* Fehler 1. Art ist, wenn die Nullhypothese fälschlicherweise beibehalten wird, obwohl die Alternativhypothese wahr ist
+* Fehler 2. Art ist, wenn die Nullhypothese fälschlicherweise beibehalten wird, obwohl die Alternativhypothese wahr ist
+* Alpha-Fehler ist, wenn die Nullhypothese fälschlicherweise verworfen wird und die Alternativhypothese angenommen wird
+* Die statistische Power errechnet sich als 1-beta Fehlerwahrscheinlichkeit.
+* Beta-Fehler ist, wenn die Nullhypothese fälschlicherweise beibehalten wird, obwohl die Alternativhypothese wahr ist
+
+Solution
+========
+
+Answerlist
+----------
+
+* Falsch. Fehler 1. Art ist nicht, wenn die Nullhypothese fälschlicherweise beibehalten wird, sondern wenn sie fälschlicherweise abgelehnt wird, obwohl die Alternativhypothese wahr ist.
+* Richtig. Fehler 2. Art ist, wenn die Nullhypothese fälschlicherweise beibehalten wird, obwohl die Alternativhypothese wahr ist. Das bedeutet, dass wir die Nullhypothese nicht ablehnen, obwohl es tatsächlich Gründe gibt, dies zu tun.
+* Richtig. Alpha-Fehler ist, wenn die Nullhypothese fälschlicherweise verworfen wird und die Alternativhypothese angenommen wird. Dies ist der Fehler, den wir machen, wenn wir fälschlicherweise die Nullhypothese ablehnen.
+* Richtig. Die statistische Power (auch Teststärke genannt) errechnet sich als 1 minus die Wahrscheinlichkeit eines Beta-Fehlers, was die Wahrscheinlichkeit ist, die Nullhypothese fälschlicherweise beizubehalten, obwohl die Alternativhypothese wahr ist.
+* Richtig. Ein Beta-Fehler ist, wenn die Nullhypothese fälschlicherweise beibehalten wird, obwohl die Alternativhypothese wahr ist. Es ist das Gegenteil des Alpha-Fehlers.
+
+Meta-information
+================
+exname: laplace_probability_explanation
+extype: mchoice 
+exsolution: 01111
+exshuffle: TRUE

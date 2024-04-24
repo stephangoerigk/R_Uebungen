@@ -1,0 +1,30 @@
+Question 
+======== 
+
+Mit der Alpha-Fehler-Kumulierung ist gemeint, dass...
+
+Answerlist
+----------
+
+* Der Fehler 2. Art mit Anzahl der Tests wahrscheinlicher wird
+* Die Testmacht sinkt
+* Der Fehler 1. Art mit Anzahl der Tests wahrscheinlicher wird
+* Das Signifikanzniveau adjustiert werden muss
+
+Solution
+========
+
+Answerlist
+----------
+
+* Falsch. Die Kumulierung von Alpha-Fehlern bedeutet nicht, dass der Fehler 2. Art (Beta-Fehler) mit der Anzahl der Tests wahrscheinlicher wird.
+* Falsch. Die Testmacht (Power) ist nicht direkt von der Alpha-Fehler-Kumulierung betroffen.
+* Richtig. Die Alpha-Fehler-Kumulierung bedeutet, dass der Fehler 1. Art (Alpha-Fehler) mit der Anzahl der Tests wahrscheinlicher wird. Wenn mehrere Hypothesentests durchgeführt werden, steigt die Gesamtwahrscheinlichkeit, mindestens einmal fälschlicherweise die Nullhypothese abzulehnen.
+* Richtig. Bei der Alpha-Fehler-Kumulierung muss das Signifikanzniveau (das üblicherweise für einen einzelnen Test festgelegt wird) angepasst werden, um die Wahrscheinlichkeit eines Alpha-Fehlers insgesamt zu kontrollieren.
+
+Meta-information
+================
+exname: alpha_error_cumulation
+extype: mchoice 
+exsolution: 0011
+exshuffle: TRUE
