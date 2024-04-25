@@ -1,16 +1,16 @@
 Question 
 ======== 
 
-In einem Experiment zur Untersuchung der Auswirkungen von Schlafentzug auf die kognitive Leistungsfähigkeit wurde festgestellt, dass die durchschnittliche Reaktionszeit bei ausgeschlafenen Personen 250 Millisekunden beträgt, mit einer Standardabweichung von 30 Millisekunden. Wie schnell muss die Reaktionszeit eines Teilnehmers sein, damit er/sie zu den schnellsten 30% der Personen im Experiment gehört? Geben Sie das Ergebnis auf Milisekunden gerundet an. 
+Was ist hinsichtlich der Standardnormalverteilung korrekt?
 
 Answerlist
 ----------
 
-* 234 Millisekunden
-* 240 Millisekunden
-* 232 Millisekunden
-* 266 Millisekunden
-* 265 Millisekunden
+* Sie ist eine Normalverteilung mit μ = 1 und σ = 0.
+* Sie ist eine Normalverteilung mit μ = 0 und σ = 1.
+* Ist X N(μ, σ²) verteilt, dann führt die z-Transformation auf eine N(0, 1) Verteilung.
+* Wir können jede beliebige Normalverteilung in eine Standardnormalverteilung transformieren.
+* Die Standardnormalverteilung hat eine positive Schiefe.
 
 Solution
 ========
@@ -18,35 +18,15 @@ Solution
 Answerlist
 ----------
 
-* Richtig. Bei dieser Aufgabenstellung muss man im Vergelich zu den vorherigen Aufgaben ein wenig umdenken. Schneller sein bedeutet weniger Milisekunden benötigen. Wenn man zu den 30% schnellsten gehören möchte, muss der gesuchte Wert also auf jeden Fall unterhalb von 250 Milisekunden liegen. <br>
-
-Beschreibung der Rechenschritte: <br>
-
-1. **Z-Transformation:** <br>
-   Wir verwenden die z-Transformation, um die Reaktionszeit in eine Standardnormalverteilung zu überführen.
-   Die z-Transformation ist definiert als:
-   $$ z = \frac{x - \mu}{\sigma} $$
-   Dabei ist x die Reaktionszeit, μ = 250 Millisekunden der Mittelwert σ = 30 Millisekunden die Standardabweichung.
-<br>
-2. **Berechnung des z-Wertes für das 70. Perzentil:**
-   Da wir die schnellsten 30% der Personen betrachten (Also die 30% mit den geringsten Milisekunden), beträgt der z-Wert für das 30. Perzentil in einer Standardnormalverteilung ungefähr $$ z = -0.53 $$.
-<br>
-3. **Rücktransformation zur Reaktionszeit x:**
-   Setzen wir z = -0.53 in die z-Transformationsformel ein, um x zu berechnen:
-   $$ -0.53 = \frac{x - 250}{30} $$
-   $$ x = -0.53 \times 30 + 250 $$
-   $$ x \approx 234.1 \text{ Millisekunden} $$
-
-Daher muss die Reaktionszeit eines Teilnehmers etwa 234.1 Millisekunden betragen, um zu den schnellsten 30% der Personen im Experiment zu gehören.
-
-* Falsch.
-* Falsch.
-* Falsch.
-* Falsch.
+* Falsch. Die Standardnormalverteilung hat einen Erwartungswert (μ) von 0 und eine Standardabweichung (σ) von 1.
+* Richtig. Die Standardnormalverteilung ist eine Normalverteilung mit einem Erwartungswert von 0 und einer Standardabweichung von 1.
+* Richtig. Wenn X eine Normalverteilung N(μ, σ²) hat, dann wird X nach der z-Transformation zu einer Standardnormalverteilung N(0, 1).
+* Richtig. Durch die z-Transformation kann jede beliebige Normalverteilung in eine Standardnormalverteilung transformiert werden.
+* Falsch. Die Standardnormalverteilung ist symmetrisch um ihren Erwartungswert und hat keine Schiefe.
 
 Meta-information
 ================
-exname: reaction_time_sleep_deprivation
+exname: standard_normal_distribution_properties
 extype: mchoice 
-exsolution: 10000
+exsolution: 01110
 exshuffle: TRUE

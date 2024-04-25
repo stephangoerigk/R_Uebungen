@@ -229,7 +229,7 @@ exams2learnr("Questions/VO_03/VO3_Num_Rechnen2.Rmd", allow_retry = TRUE)
 
 **Sie analysieren und visualisieren Daten und erhalten folgende Verteilung:**
 
-```{r graph, echo=FALSE}
+```{r graph2, echo=FALSE}
 set.seed(123)
 shape <- 2 
 scale <- 1
@@ -246,6 +246,10 @@ ggplot(data = df, aes(x = x)) +
 
 ```{r VO3_Graph, message = FALSE, warning=FALSE}
 exams2learnr("Questions/VO_03/VO3_Graph.Rmd", allow_retry = TRUE)
+```
+
+```{r VO3_test, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_03/VO3_Test.Rmd", allow_retry = TRUE)
 ```
 
 ## Einheit 4 - Visualisierung
@@ -370,17 +374,26 @@ exams2learnr("Questions/VO_05/VO5_12.Rmd", allow_retry = TRUE)
 exams2learnr("Questions/VO_05/VO5_13.Rmd", allow_retry = TRUE)
 ```
 
-```{r VO5_14, message = FALSE, warning=FALSE}
-exams2learnr("Questions/VO_05/VO5_14.Rmd", allow_retry = TRUE)
+
+#### Übungen zur z-Standardisierung 
+
+```{r VO5_zsd1, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_05/VO5_zsd1.Rmd", allow_retry = TRUE)
 ```
 
-```{r VO5_15, message = FALSE, warning=FALSE}
-exams2learnr("Questions/VO_05/VO5_15.Rmd", allow_retry = TRUE)
+```{r VO5_zsd2, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_05/VO5_zsd2.Rmd", allow_retry = TRUE)
 ```
 
-```{r VO5_16, message = FALSE, warning=FALSE}
-exams2learnr("Questions/VO_05/VO5_16.Rmd", allow_retry = TRUE)
+```{r VO5_zsd3, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_05/VO5_zsd3.Rmd", allow_retry = TRUE)
 ```
+
+```{r VO5_zsd14, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_05/VO5_zsd4.Rmd", allow_retry = TRUE)
+```
+
+
 
 
 ## Einheit 6 - Schätzungen und Stichprobenfehler
