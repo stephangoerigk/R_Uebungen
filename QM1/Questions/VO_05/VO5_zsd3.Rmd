@@ -1,0 +1,51 @@
+Question 
+======== 
+
+In einem Mathetest beträgt die durchscnittliche Punktezahl 75, mit einer Standardabweichung von 10. Wie niedrig muss die Punktzahl eines Schülers sein, damit er zu den schlechtesten 10% in der Klasse gehört? Runden Sie auf ganze Punkte
+
+Answerlist
+----------
+
+* 62 Punkte
+* 63 Punkte
+* 88 Punkte
+* 60 Punkte
+* 65 Punkte
+
+Solution
+========
+
+Answerlist
+----------
+
+* Richtig. 
+Beschreibung der Rechenschritte:<br>
+1. **Z-Transformation:**
+   Wir verwenden die z-Transformation, um die Punktzahl in eine Standardnormalverteilung zu überführen.
+   Die z-Transformation ist definiert als:
+   $$ z = \frac{x - \mu}{\sigma} $$
+   Dabei ist x die Punktzahl, μ = 75 der Mittelwert und σ = 10 die Standardabweichung.
+<br>
+2. **Berechnung des z-Wertes für das 10. Perzentil:**
+   Da wir die untersten 10% der Schüler betrachten, beträgt der z-Wert für das 10. Perzentil in einer Standardnormalverteilung ungefähr $$ z = -1.29 $$.
+<br>
+3. **Rücktransformation zur Punktzahl x:**
+   Setzen wir $$ z = -1.29 $$ in die z-Transformationsformel ein, um x zu berechnen:
+   $$ -1.29 = \frac{x - 75}{10} $$
+   $$ x = -1.29 \times 10 + 75 $$
+   $$ x \approx 62 \text{ Punkte} $$
+
+Daher muss die Punktzahl eines Schülers 62 Punkte oder schlechter sein, um zu den schlechtesten 10% in der Klasse zu gehören.
+
+* Falsch.
+* Falsch.
+* Falsch.
+* Falsch.
+* Falsch.
+
+Meta-information
+================
+exname: math_test_score_z
+extype: mchoice 
+exsolution: 10000
+exshuffle: TRUE

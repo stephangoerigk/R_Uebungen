@@ -1,0 +1,32 @@
+Question 
+======== 
+
+Was ist ein naheliegender Schätzwert für π (Auftretenswahrscheinlichkeit in der Population)?
+
+Answerlist
+----------
+
+* relative Häufigkeit in der Stichprobe
+* Mittelwert in der Stichprobe
+* Varianz in der Stichprobe
+* Median in der Stichprobe
+* Modus in der Stichprobe
+
+Solution
+========
+
+Answerlist
+----------
+
+* Richtig. Die relative Häufigkeit in der Stichprobe ist ein Schätzwert für die Wahrscheinlichkeit in der Population.
+* Falsch. Der Mittelwert in der Stichprobe bezieht sich auf den Durchschnitt der beobachteten Werte, nicht auf die Wahrscheinlichkeit.
+* Falsch. Die Varianz in der Stichprobe ist ein Maß für die Streuung der Daten, nicht für die Wahrscheinlichkeit.
+* Falsch. Der Median in der Stichprobe ist der mittlere Wert in sortierten Daten.
+* Falsch. Der Modus in der Stichprobe ist der am häufigsten vorkommende Wert in den Daten.
+
+Meta-information
+================
+exname: estimate_pi_probability
+extype: mchoice 
+exsolution: 10000
+exshuffle: TRUE

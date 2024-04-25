@@ -1,0 +1,32 @@
+Question 
+======== 
+
+Was sind die Gütekriterien einer Schätzfunktion?
+
+Answerlist
+----------
+
+* Erwartungstreue (und Genauigkeit)
+* Effizienz
+* Konsistenz
+* Objektivität
+* Validität
+
+Solution
+========
+
+Answerlist
+----------
+
+* Richtig. Erwartungstreue bedeutet, dass die Schätzwerte bei unendlicher Wiederholung des Zufallsexperiments im Mittel dem wahren Parameter entsprechen sollten. Genauigkeit ist ein verwandtes Konzept, das die Nähe des Schätzwerts zum wahren Parameter beschreibt.
+* Richtig. Effizienz bedeutet, dass die Schätzfunktion erwartungstreu ist und einen geringeren Standardfehler als alle anderen erwartungstreuen Schätzfunktionen aufweist. 
+* Richtig. Konsistenz bedeutet, dass der Schätzwert mit zunehmender Stichprobengröße gegen den wahren Parameter konvergiert.
+* Falsch. Objektivität ist kein typisches Gütekriterium einer Schätzfunktion. Objektivität ist jedoch ein Hauptgütekriterium psychodiagnostischer Verfahren. 
+* Falsch. Validität ist ebenfalls kein typisches Gütekriterium einer Schätzfunktion. Validität ist jedoch ein Hauptgütekriterium psychodiagnostischer Verfahren. 
+
+Meta-information
+================
+exname: estimator_criteria
+extype: mchoice 
+exsolution: 11100
+exshuffle: TRUE

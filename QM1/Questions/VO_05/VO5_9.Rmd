@@ -1,0 +1,32 @@
+Question 
+======== 
+
+Welche Aussage trifft auf die bedingte Wahrscheinlichkeit zu?
+
+Answerlist
+----------
+
+* Sie gibt die Wahrscheinlichkeit eines Ereignisses A an, unabhängig von einem anderen Ereignis B.
+* Sie beschreibt die Wahrscheinlichkeit, dass zwei Ereignisse gleichzeitig eintreten.
+* Sie gibt die Wahrscheinlichkeit eines Ereignisses A an, unter der Bedingung, dass ein anderes Ereignis B bereits eingetreten ist.
+* Sie ist immer gleich der Wahrscheinlichkeit des Komplementärereignisses.
+* Sie ist nur für stetige Zufallsvariablen definiert.
+
+Solution
+========
+
+Answerlist
+----------
+
+* Falsch. Die bedingte Wahrscheinlichkeit bezieht sich auf die Wahrscheinlichkeit eines Ereignisses A unter der Bedingung, dass ein anderes Ereignis B bereits eingetreten ist.
+* Falsch. Die Wahrscheinlichkeit, dass zwei Ereignisse gleichzeitig eintreten, wird durch die Schnittmenge der Ereignisse beschrieben.
+* Richtig. Die bedingte Wahrscheinlichkeit gibt die Wahrscheinlichkeit eines Ereignisses A an, unter der Bedingung, dass ein anderes Ereignis B bereits eingetreten ist.
+* Falsch. Die bedingte Wahrscheinlichkeit ist nicht immer gleich der Wahrscheinlichkeit des Komplementärereignisses.
+* Falsch. Die bedingte Wahrscheinlichkeit ist sowohl für diskrete als auch für stetige Zufallsvariablen definiert.
+
+Meta-information
+================
+exname: conditional_probability_definition
+extype: mchoice 
+exsolution: 00100
+exshuffle: TRUE

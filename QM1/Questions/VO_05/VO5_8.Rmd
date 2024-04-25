@@ -1,0 +1,32 @@
+Question 
+======== 
+
+Was ist bezüglich der diskreten Gleichverteilung korrekt?
+
+Answerlist
+----------
+
+* Verteilung ähnelt einer Glockenkurve.
+* Anwendung bei Zufallsexperimenten, deren Ergebnisse gleich häufig sind.
+* Enden der Verteilung sind weniger wahrscheinlich.
+* Beschreibt seltene Ereignisse.
+* Die Wahrscheinlichkeit für jedes mögliche Ergebnis ist gleich.
+
+Solution
+========
+
+Answerlist
+----------
+
+* Falsch. Eine diskrete Gleichverteilung ist keine Glockenkurve, sondern charakterisiert sich durch gleichwahrscheinliche Ergebnisse.
+* Richtig. Die diskrete Gleichverteilung wird angewendet, wenn die Ergebnisse eines Zufallsexperiments alle gleich häufig auftreten. Zum Beispiel bei einem fairen Würfel, wo jede Augenzahl mit der gleichen Wahrscheinlichkeit auftritt.
+* Falsch. Bei der diskreten Gleichverteilung sind alle möglichen Ergebnisse gleich wahrscheinlich, einschließlich der Enden der Verteilung.
+* Falsch. Die diskrete Gleichverteilung beschreibt nicht speziell seltene Ereignisse, sondern gleichwahrscheinliche Ergebnisse.
+* Richtig. Bei der diskreten Gleichverteilung ist die Wahrscheinlichkeit für jedes mögliche Ergebnis gleich, was sie von anderen Verteilungen unterscheidet.
+
+Meta-information
+================
+exname: discrete_uniform_distribution_correctness
+extype: mchoice 
+exsolution: 01001
+exshuffle: TRUE

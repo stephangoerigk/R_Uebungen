@@ -22,20 +22,19 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ### Was können Sie von dieser Übung erwarten?
 
-Im Folgenden finden Übungsaufgaben zur Vorlesung Statistik II (B-P 9.4-VO) im Modul Quantitative Methoden II (B-P 9.4). 
+Im Folgenden finden Übungsaufgaben zur Vorlesung Statistik II (B-P 9.4-VO) im Modul Quantitative Methoden II (B-P 9.4).
 
-Dazu verwenden wir das Paket `learnr`. 
+Dazu verwenden wir das Paket `learnr`.
 
-Dieses Paket gibt uns u.a. die Möglichkeit, `R` Aufgaben direkt über Ihren Browser zu üben. Sie müssen dafür die Programme `R` und `RStudio` nicht auf dem eigenen Computer installieren. 
+Dieses Paket gibt uns u.a. die Möglichkeit, `R` Aufgaben direkt über Ihren Browser zu üben. Sie müssen dafür die Programme `R` und `RStudio` nicht auf dem eigenen Computer installieren.
 
-Zusätzlich finden Sie im Rahmen der Lektionen Quizaufgaben, um Ihr Wissen zu überprüfen. 
-
+Zusätzlich finden Sie im Rahmen der Lektionen Quizaufgaben, um Ihr Wissen zu überprüfen.
 
 ```{r eval = TRUE, echo = F, out.width = "150px", fig.align='center'}
 knitr::include_graphics("images/R_logo.png")
 ```
 
-## Einheit 1
+## Einheit 1 - Einfaktorielle Varianzanalyse (1)
 
 
 ```{r VO1_MC_Varianz_Rev, message = FALSE, warning=FALSE}
@@ -98,7 +97,7 @@ exams2learnr("Questions/VO_01/VO1_MC_FTest2.Rmd", allow_retry = TRUE)
 exams2learnr("Questions/VO_01/VO1_MC_FTest3.Rmd", allow_retry = TRUE)
 ```
 
-## Einheit 2
+## Einheit 2 - Einfaktorielle Varianzanalyse (2)
 
 ```{r VO2_MC_ANOVAPower, message = FALSE, warning=FALSE}
 exams2learnr("Questions/VO_02/VO2_MC_ANOVAPower.Rmd", allow_retry = TRUE)
@@ -156,7 +155,7 @@ exams2learnr("Questions/VO_02/VO2_MC_Tukey1.Rmd", allow_retry = TRUE)
 exams2learnr("Questions/VO_02/VO2_MC_Tukey2.Rmd", allow_retry = TRUE)
 ```
 
-## Einheit 3
+## Einheit 3 - Einfache lineare Regression (1)
 
 ```{r VO3_MC_KorrelationvsRegeression, message = FALSE, warning=FALSE}
 exams2learnr("Questions/VO_03/VO3_MC_KorrelationvsRegeression.Rmd", allow_retry = TRUE)
@@ -214,7 +213,7 @@ exams2learnr("Questions/VO_03/VO3_MC_Bestimmtheitsmass.Rmd", allow_retry = TRUE)
 exams2learnr("Questions/VO_03/VO3_MC_Bestimmtheitsmass2.Rmd", allow_retry = TRUE)
 ```
 
-## Einheit 4
+## Einheit 4 - Einfache lineare Regression (2)
 
 ```{r VO4_MC_Dummy1, message = FALSE, warning=FALSE}
 exams2learnr("Questions/VO_04/VO4_MC_Dummy1.Rmd", allow_retry = TRUE)
@@ -244,20 +243,19 @@ exams2learnr("Questions/VO_04/VO4_MC_StandardisierteReg2.Rmd", allow_retry = TRU
 exams2learnr("Questions/VO_04/VO4_MC_tWertSteigung.Rmd", allow_retry = TRUE)
 ```
 
-## Einheit 5
+## Einheit 5 - Mehrfaktorielle ANOVA
 
-## Einheit 6
+## Einheit 6 - Multiple Regression
 
-## Einheit 7
+## Einheit 7 - Regressionsmodelle mit Interaktion
 
-## Einheit 8
+## Einheit 8 - ANOVA mit Messwiederholung
 
-## Einheit 9
+## Einheit 9 - Mixed Designs
 
-## Einheit 10
+## Einheit 10 - Verfahren für Nominaldaten - χ<sup>2</sup>-Test
 
-## Einheit 11
+## Einheit 11 - Verfahren für Nominaldaten (2)
 
-## Einheit 12
+## Einheit 12 - Robuste Tests
 
-## Einheit 13

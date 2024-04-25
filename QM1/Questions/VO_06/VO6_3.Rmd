@@ -1,0 +1,32 @@
+Question 
+======== 
+
+μ > 100 ist ein Beispiel für...
+
+Answerlist
+----------
+
+* ...eine Streuungsschätzung.
+* ...eine Parameterschätzung.
+* ...eine Hypothese, die mittels Hypothesentest überprüft werden kann.
+* ...eine Intervallschätzung.
+* ...eine bedingte Wahrscheinlichkeit.
+
+Solution
+========
+
+Answerlist
+----------
+
+* Falsch. Eine Streuungsschätzung bezieht sich auf die Varianz oder Standardabweichung, nicht auf den Mittelwert.
+* Falsch. Eine Parameterschätzung kann sich auf verschiedene Parameter beziehen, μ ist spezifisch der Populationsmittelwert.
+* Richtig. Eine Hypothese wie μ > 100 kann mittels Hypothesentest überprüft werden.
+* Falsch. Eine Intervallschätzung bezieht sich auf einen Bereich, in dem der wahre Parameter mit einer gewissen Wahrscheinlichkeit liegt.
+* Falsch. Eine bedingte Wahrscheinlichkeit bezieht sich auf das Eintreten eines Ereignisses unter einer bestimmten Bedingung.
+
+Meta-information
+================
+exname: mu_greater_than_100_example
+extype: mchoice 
+exsolution: 00100
+exshuffle: TRUE

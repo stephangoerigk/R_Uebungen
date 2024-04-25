@@ -1,0 +1,33 @@
+Question 
+======== 
+
+"Taxifahrer haben einen besseren Orientierungssinn als Nicht-Taxisfahrer" ist eine 
+
+Answerlist
+----------
+
+* einseitige H0
+* ungerichtete H1
+* gerichtete H1
+* zweiseitige H0
+* einseitige H1
+
+
+Solution
+========
+
+Answerlist
+----------
+
+* Falsch. 
+* Falsch. 
+* Richtig. 
+* Falsch.
+* Richtig. 
+
+Meta-information
+================
+exname: hypothesen_1
+extype: mchoice 
+exsolution: 00101
+exshuffle: TRUE

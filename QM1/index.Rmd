@@ -16,8 +16,10 @@ library(faux)
 library(tidyverse)
 library(exams2learnr)
 library(knitr)
-library(kableExtra)
 library(moments)
+library(magrittr)
+library(kableExtra)
+library(ggplot2)
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
@@ -171,9 +173,7 @@ exams2learnr("Questions/VO_02/VO2_MC_Was_trifft_zu.Rmd", allow_retry = TRUE)
 exams2learnr("Questions/VO_02/VO2_MC_Welche_Aussagen_Stimmen.Rmd", allow_retry = TRUE)
 ```
 
-
 ## Einheit 3 - Statistische Kennwerte (2)
-
 
 ```{r VO3_MC_Streuungsmasse, message = FALSE, warning=FALSE}
 exams2learnr("Questions/VO_03/VO3_MC_Streuungsmaße.Rmd", allow_retry = TRUE)
@@ -227,524 +227,245 @@ exams2learnr("Questions/VO_03/VO3_Num_rechnen1_.Rmd", allow_retry = TRUE)
 exams2learnr("Questions/VO_03/VO3_Num_Rechnen2.Rmd", allow_retry = TRUE)
 ```
 
+**Sie analysieren und visualisieren Daten und erhalten folgende Verteilung:**
 
+```{r graph2, echo=FALSE}
+set.seed(123)
+shape <- 2 
+scale <- 1
+n <- 100000
+data <- rgamma(n, shape = shape, scale = scale)
+df = data.frame(x = data)
+
+ggplot(data = df, aes(x = x)) +
+  stat_function(fun = dgamma, n = 10000, args = list(shape = shape, scale = scale)) +
+  geom_density(fill = "darkgreen", color = "black") + 
+  labs(x = "Variable X", y = "Häufigkeit")
+
+```
+
+```{r VO3_Graph, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_03/VO3_Graph.Rmd", allow_retry = TRUE)
+```
+
+```{r VO3_test, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_03/VO3_Test.Rmd", allow_retry = TRUE)
+```
 
 ## Einheit 4 - Visualisierung
 
-```{r quiz4_1, echo = FALSE}
-quiz(
-  question("Das Histogramm...",
-    answer("eignet sich zur Darstellung multivariater Zusammenhänge"),
-    answer("stellt Verteilung einer Variable dar", correct = TRUE),
-    answer("Hat die Mittelwerte der Merkmalsausprägungen auf der Y-Achse"),
-    answer("Hat Merkmalsausprägungen auf der X-Achse", correct = TRUE),
-    allow_retry = TRUE
-  )
-    )
+```{r VO4_1, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_04/VO4_Histogramm.Rmd", allow_retry = TRUE)
 ```
 
-```{r quiz4_2, echo = FALSE}
-quiz(
-  question("Die Box des Boxplots",
-    answer("benötigt Intervallskalenniveau"),
-    answer("Ist die IQR mal 1.5"),
-    answer("Umfasst 50% aller Werte", correct = TRUE),
-    answer("entspricht der Spannweite"),
-    allow_retry = TRUE
-  )
-    )
+```{r VO4_2, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_04/VO4_Boxplot.Rmd", allow_retry = TRUE)
 ```
 
-```{r quiz4_3, echo = FALSE}
-quiz(
-  question("Welche sind Vorteile des Boxplots?",
-    answer("Zeigt ein Maß der zentralen Tendenz", correct = TRUE),
-    answer("Zeit die Standardabweichung"),
-    answer("Lässt sich auf bei Ordinalskalenniveau verwenden", correct = TRUE),
-    answer("Zeigt Ausreißer", correct = TRUE),
-    allow_retry = TRUE
-  )
-    )
+```{r VO4_3, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_04/VO4_Boxplot2.Rmd", allow_retry = TRUE)
 ```
 
-```{r quiz4_4, echo = FALSE}
-quiz(
-  question("Was trifft auf das Streudiagramm zu?",
-    answer("Jeder Punkt entspricht einem Fall", correct = TRUE),
-    answer("Punkte zeigen Mittelwerte an"),
-    answer("Kann Zusammenhang zwischen 2 numerischen Variablen visualisieren", correct = TRUE),
-    answer("Nicht für metrische Variablen geeignet"),
-    allow_retry = TRUE
-  )
-    )
+```{r VO4_4, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_04/VO4_Streudiagramm.Rmd", allow_retry = TRUE)
 ```
 
-```{r quiz4_5, echo = FALSE}
-quiz(
-  question("Die maximale Länge der Whiskers berechnet sich aus",
-    answer("IQR multipliziert mit 1.5", correct = TRUE),
-    answer("Standardabweichung + 1.5"),
-    answer("IQR + 1.5"),
-    answer("IQR + Maximum der Verteilung"),
-    allow_retry = TRUE
-  )
-    )
+```{r VO4_5, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_04/VO4_Whisker.Rmd", allow_retry = TRUE)
 ```
 
-```{r quiz4_6, echo = FALSE}
-quiz(
-  question("Im Streudiagramm",
-    answer("Lassen sich keine standardisierten Variablen darstellen"),
-    answer("Kann die Regressionsgerade visualisiert werden", correct = TRUE),
-    answer("Kann man ggf. positive/negative Trends zwischen Variablen erkennen", correct = TRUE),
-    answer("Lassen sich Mittelwertsunterschiede besonders gut erkennen"),
-    allow_retry = TRUE
-  )
-    )
+```{r VO4_6, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_04/VO4_Streudiagramm2.Rmd", allow_retry = TRUE)
 ```
 
-```{r quiz4_7, echo = FALSE}
-quiz(
-  question("Welcher Graph wäre geeignet, wenn die UV Nominalskalenniveau hat und die AV auch Nominalskalenniveau hat?",
-    answer("Streudiagramm"),
-    answer("Balkendiagramm", correct = TRUE),
-    answer("Boxplot"),
-    answer("Line Graph"),
-    allow_retry = TRUE
-  )
-    )
+```{r VO4_7, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_04/VO4_Graph.Rmd", allow_retry = TRUE)
 ```
 
-```{r quiz4_9, echo = FALSE}
-quiz(
-  question("Wenn die UV Nominalskalenniveau hat und die AV auch Nominalskalenniveau würde was auf der Y Achse dargestellt?",
-    answer("Mittelwerte"),
-    answer("Streuung"),
-    answer("Häufigkeiten", correct = TRUE),
-    answer("Mediane"),
-    allow_retry = TRUE
-  )
-    )
+```{r VO4_8, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_04/VO4_YAchse.Rmd", allow_retry = TRUE)
 ```
 
-```{r quiz4_10, echo = FALSE}
-quiz(
-  question("Hat die UV Nominalskalenniveau und die AV is metrisch, was repräsentieren dann die Balken im Balkendiagramm?",
-    answer("Median"),
-    answer("IQR mal 1.5"),
-    answer("Mittelwert", correct = TRUE),
-    answer("Relative Häufigkeit"),
-    answer("Maß der zentralen Tendenz", correct = TRUE),
-    allow_retry = TRUE
-  )
-    )
+```{r VO4_9, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_04/VO4_Graphen.Rmd", allow_retry = TRUE)
 ```
 
-```{r quiz4_11, echo = FALSE}
-quiz(
-  question("Wann benutzen wir Graphen in der Statistik?",
-    answer("Zur schnellen Datenexploration", correct = TRUE),
-    answer("Zur Identifikation von Extremwerten (Ausreißern)", correct = TRUE),
-    answer("Zur Inspektion der Verteilung einer Variable", correct = TRUE),
-    answer("Zur Darstellung von Gruppenunterschieden", correct = TRUE),
-    answer("Zur Verdeutlichung der Ergebnisses eines Hypothesentests", correct = TRUE),
-    allow_retry = TRUE
-  )
-    )
+```{r VO4_10, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_04/VO4_Aussagen.Rmd", allow_retry = TRUE)
 ```
 
-```{r quiz4_12, echo = FALSE}
-quiz(
-  question("Welchen Aussagen stimmen Sie zu?",
-    answer("Zur Darstellung einer numerischen Variable nutzen wir das Histogramm", correct = TRUE),
-    answer("Zur Darstellung zweier numerischer Variablen nutzen wir das Balkendiagramm"),
-    answer("Zur Darstellung zweier kategorialer Variablen nutzen wir das Balkendiagramm", correct = TRUE),
-    answer("Zur Darstellung einer kategorialen Variable nutzen wir das Histogramm"),
-    answer("Bei einer ordinalen und einer kategorialen Variable eignet sich das Box Plot zur Darstellung", correct = TRUE),
-    allow_retry = TRUE
-  )
-    )
+**Welche Aussagen, bezogen auf die nachfolgende Grafik können Sie treffen?** 
+```{r box, echo=FALSE}
+set.seed(123)
+N = 20
+df8 = data.frame(ID = c(1:N),
+                Gruppe = c(rep("A", N/2), rep("B", N/2)),
+                Tremor = round(c(rnorm(N/2, 6, 5), rnorm(N/2, 12, 8))))
+
+#box = boxplot(Tremor ~ Entzug, data = df, cex.lab = 2.5, cex.axis = 2.5)
+
+ggplot2::ggplot(data = df8, aes(x = Gruppe, y = Tremor)) + 
+                  geom_boxplot()
+```
+```{r VO4_11, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_04/VO4_Boxplot4.Rmd", allow_retry = TRUE)
 ```
 
-```{r}
-#set.seed(123)
-#N = 12
-#df2 = data.frame(ID = c(1:N),
-                #Entzug = c(rep("A", N/2), rep("B", N/2), "B"),
-                #Tremor = round(c(rnorm(N/2, 4, 3), rnorm(N/2, 10, 4), 20))
-
-#boxplot(Tremor ~ Entzug, data = df2, cex.lab = 2.5, cex.axis = 2.5)
+```{r VO4_12, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_04/VO4_Balken.Rmd", allow_retry = TRUE)
 ```
 
-```{r quiz4_13, echo = FALSE}
-quiz(
-  question("Was können wir folgender Grafik entnehmen?  <br> ![](images/boxplot.png){width=400px}",
-    answer("IQR von Gruppe A ist größer als IQR von Gruppe B"),
-    answer("In den Daten gibt es Ausreißer"),
-    answer("Die Streuung der Daten in Gruppe B ist größer als die Streuung der Daten in Gruppe A", correct = TRUE),
-    answer("In den Daten gibt es keine Ausreißer", correct = TRUE),
-    allow_retry = TRUE
-  )
-    )
+```{r VO4_13, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_04/VO4_13.Rmd", allow_retry = TRUE)
 ```
 
-## Einheit 5 - Wahrscheinlichkeitstheorie und Verteilungen
 
-```{r quiz5_1, echo = FALSE}
-quiz(
-  question("Die Laplace-Wahrscheinlichkeit",
-    answer("Gilt bei Zufallsexperimenten, bei denen nur endlich viele, gleichwahrscheinliche Ergebnisse möglich sind",correct = TRUE),
-    answer("Wir mit dem Bayes Theorem berechnet"),
-    answer("Ergibt sich durch das Verhältnis aus möglichen Ereignissen zu günstigen Ereignissen"),
-    answer("Ergibt sich durch das Verhältnis aus günstigen Ereignissen zu möglichen Ereignissen", correct = TRUE),
-    allow_retry = TRUE
-  )
-    )
+## Einheit 5 - Stichprobe, Grundgesamtheit - Wahrscheinlichkeitstheorie und Verteilungen
+
+```{r VO5_1, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_05/VO5_1.Rmd", allow_retry = TRUE)
 ```
 
-```{r quiz5_2, echo = FALSE}
-quiz(
-  question("Was sind Axiome der Wahrscheinlichkeitsrechnung nach Kolmogoroff?",
-    answer("Wahrscheinlichkeiten nehmen Werte zwischen 0 und 1 an.",correct = TRUE),
-    answer("Sichere Ereignisse haben eine Wahrscheinlichkeit von P=1.",correct = TRUE),
-    answer("Negative Wahrscheinlichkeiten beschreiben besonders seltene Ereignisse."),
-    answer("Gesamtwahrscheinlichkeit mehrere unabhängiger Ereignisse ist die Summe der Einzelwahrscheinlichkeiten", correct = TRUE),
-    allow_retry = TRUE
-  )
-    )
+```{r VO5_2, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_05/VO5_2.Rmd", allow_retry = TRUE)
 ```
 
-```{r quiz5_3, echo = FALSE}
-quiz(
-  question("Die bedingte Wahrscheinlichkeit P(A|B)",
-    answer("Die Wahrscheinlichkeit von Ereignis A unter der Bedingung, dass Ereignis B bereits eingetreten ist.", correct = TRUE),
-    answer("Die Wahrscheinlichkeit von Ereignis B unter der Bedingung, dass Ereignis A bereits eingetreten ist."),
-    answer("Die Korrelation von A und B."),
-    answer("Das Eintreten von B beeinflusst die Wahrscheinlichkeit von A.", correct = TRUE),
-    allow_retry = TRUE
-  )
-    )
+```{r VO5_3, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_05/VO5_3.Rmd", allow_retry = TRUE)
 ```
 
-```{r quiz5_4, echo = FALSE}
-quiz(
-  question("Zwei Ereignisse sind stochastisch unabhängig...",
-    answer("Wenn sie einander bedingen."),
-    answer("Wenn die Summe ihrer Einzelwahrscheinlichkeiten 1 ergibt"),
-    answer("Wenn das Eintreten des einen Ereignisses keinen Einfluss auf das Eintreten des anderen Ereignisses hat.", correct = TRUE),
-    answer("Qenn die Wahrscheinlichkeit für das gemeinsame Auftreten dem Produkt ihrer Einzelwahrscheinlichkeiten entspricht.", correct = TRUE),
-    allow_retry = TRUE
-  )
-    )
+```{r VO5_4, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_05/VO5_4.Rmd", allow_retry = TRUE)
 ```
 
-```{r quiz5_5, echo = FALSE}
-quiz(
-  question("Was stimmt hinsichtlich der Nomenklatur des Zufallsexperiments?",
-    answer("Jedes mögliche Ergebnis aus einem Zufallsexperiment nennen wir ein Elementarereignis ω.", correct = TRUE),
-    answer("Der Ereignisraum Ω heißt diskret, wenn er aus überabzählbar vielen Elementarereignissen besteht"),
-    answer("Die Menge aller möglichen Ereignisse ist definiert als der Ereignisraum Ω.", correct = TRUE),
-    answer("Zufallsexperiment ist ein allgemeiner Begriff, der Grundlage für die Inferenzstatistik ist", correct = TRUE),
-    allow_retry = TRUE
-  )
-    )
+```{r VO5_5, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_05/VO5_5.Rmd", allow_retry = TRUE)
 ```
 
-```{r quiz5_6, echo = FALSE}
-quiz(
-  question("Der Erwartungswert...",
-    answer("...ergibt sich als Durchschnitt, wenn man ein Zufallsexperiment sehr oft durchführt.", correct = TRUE),
-    answer("...einer ZV ist ein Maß für das Zentrum der Verteilung.", correct = TRUE),
-    answer("...ist die Streuung aller möglichen Ausprägungen einer ZV."),
-    answer("...ist die Gegenwahrscheinlichkeit vom Mittelwert."),
-    allow_retry = TRUE
-  )
-    )
+```{r VO5_6, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_05/VO5_6.Rmd", allow_retry = TRUE)
 ```
 
-```{r quiz5_7, echo = FALSE}
-quiz(
-  question("Das alpha-Quantil...",
-    answer("...ist immer das Signifikanzniveau."),
-    answer("...ist ein ein Wert bezeichnet, unterhalb dessen ein vorgegebener Anteil (alpha) aller Fälle der Verteilung liegen.", correct = TRUE),
-    answer("...muss bei diskreten ZV  zur nächsten ganzzahligen Ausprägung gerundet werden", correct = TRUE),
-    answer("...ist der Erwartungswert einer stetigen ZV."),
-    allow_retry = TRUE
-  )
-    )
+```{r VO5_7, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_05/VO5_7.Rmd", allow_retry = TRUE)
 ```
 
-```{r quiz5_8, echo = FALSE}
-quiz(
-  question("Was ist bezüglich der diskreten Gleichverteilung korrekt?",
-    answer("Verteilung ähnelt einer Glockenkurve."),
-    answer("Anwendung bei Zufallsexperimenten, deren Ergebnisse gleich häufig sind.", correct = TRUE),
-    answer("Enden der Verteilung sind weniger wahrscheinlich."),
-    answer("Beschreibt seltene Ereignisse"),
-    allow_retry = TRUE
-  )
-    )
+```{r VO5_8, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_05/VO5_8.Rmd", allow_retry = TRUE)
 ```
 
-```{r quiz5_9, echo = FALSE}
-quiz(
-  question("Was ist hinsichtlich der Normalverteilung (NV) korrekt?",
-    answer("Ist eine stetige Verteilung, die symmetrisch um den Erwartungswert verteilt ist.", correct = TRUE),
-    answer("Die Fläche zwischen den Standardabweichungen umfasst cs. 68% aller Fälle.", correct = TRUE),
-    answer("Wenn die Standardabweichung gering ist, ist die Verteilung breit und niedrig."),
-    answer("Die Standardabweichung gibt den Abstand zwischen Erwartungswert und den Wendepunkten der Dichtefunktion an.", correct = TRUE),
-    allow_retry = TRUE
-  )
-    )
+```{r VO5_9, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_05/VO5_9.Rmd", allow_retry = TRUE)
 ```
 
-```{r quiz5_10, echo = FALSE}
-quiz(
-  question("Es sei A = {1,2,3,4}.
-Welches ist das Gegenereignis zu A?",
-    answer("D = {-1,-2,-3,-4}"),
-    answer("B = {5,6,7,8,9,10}"),
-    answer("C = {4,3,2,1}"),
-    answer("Es gibt kein Gegenereignis, da kein Ergebnisraum spezifiziert ist.", correct = TRUE),
-answer("Es gibt kein Gegenereignis, da kein Ergebnisraum spezifiziert ist."),
-    allow_retry = TRUE
-  )
-    )
+```{r VO5_10, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_05/VO5_10.Rmd", allow_retry = TRUE)
 ```
 
-```{r quiz5_11, echo = FALSE}
-quiz(
-  question("Wann spricht man von unabhängigen Ereignissen?",
-    answer("Wenn zwei Ereignisse disjunkt sind, d.h. keine Schnittmenge haben."),
-    answer("Für das Bestimmen von P(A|B) hat P(B) keinen zusätzlichen Informationsgehalt.", correct = TRUE),
-    answer("Die Wahrscheinlichkeit für A gegeben B ändert sich nicht abhängig davon, ob A ein sicheres Ereignis ist."),
-    answer("Ob B stimmt oder nicht, ändert nichts an der Wahrscheinlichkeit von A.", correct = TRUE),
-    allow_retry = TRUE
-  )
-    )
+```{r VO5_11, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_05/VO5_11.Rmd", allow_retry = TRUE)
 ```
 
-```{r quiz5_12, echo = FALSE}
-quiz(
-  question("Was ist ein Elementarereignis?",
-    answer("ein mögliches Ereignis bei einem Zufallsexperiment", correct = TRUE),
-    answer("eine Teilmenge (aus zwei Elementen) des Ergebnisraums"),
-    answer("eine Menge aus mehreren Elementarereignissen"),
-    answer("Menge der geraden Zahlen beim Würfeln"),
-    allow_retry = TRUE
-  )
-    )
+```{r VO5_12, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_05/VO5_12.Rmd", allow_retry = TRUE)
 ```
 
-```{r quiz5_13, echo = FALSE}
-quiz(
-  question("Was könnte man als Ergebnisraum bezeichnen? ",
-    answer("{Erfolg, Misserfolg, weder noch} bei einer Therapie", correct = TRUE),
-    answer("Ω", correct = TRUE),
-    answer("eine Teilmenge der Menge der Elementarereignisse"),
-    answer("alles, was eintreten kann", correct = TRUE),
-    allow_retry = TRUE
-  )
-    )
+```{r VO5_13, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_05/VO5_13.Rmd", allow_retry = TRUE)
 ```
 
-```{r quiz5_14, echo = FALSE}
-quiz(
-  question("Was ist hinsichtlich der Standardnormalverteilung korrekt? ",
-    answer("Sie ist eine Normalverteilung mit μ = 1 und σ = 0"),
-    answer("Sie ist eine Normalverteilung mit μ = 0 und σ = 1", correct = TRUE),
-    answer("Ist X N(μ, σ²) verteilt, dann führt die z-Transformation auf eine N(0, 1) Verteilung", correct = TRUE),
-    answer("Wir können jede beliebige Normalverteilung in eine Standardnormalverteilung transformieren", correct = TRUE),
-    allow_retry = TRUE
-  )
-    )
+
+#### Übungen zur z-Standardisierung 
+
+```{r VO5_zsd1, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_05/VO5_zsd1.Rmd", allow_retry = TRUE)
 ```
 
-## Einheit 6 - Stichprobe, Grundgesamtheit und Stichprobenfehler
-
-```{r quiz6_1, echo = FALSE}
-quiz(
-  question("Die Population...",
-    answer("wird verwendet um auf Grundgesamtheit zu schließen."),
-    answer("Wird auch Grundgesamtheit genannt.", correct = TRUE),
-    answer("Ist eine zufällige Auswahl bestimmter Merkmalsträger:innen."),
-    answer("...ist die Gesamtheit aller Merkmalsträger:innen, auf die eine Untersuchungsfrage gerichtet ist", correct = TRUE),
-    allow_retry = TRUE
-  )
-    )
+```{r VO5_zsd2, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_05/VO5_zsd2.Rmd", allow_retry = TRUE)
 ```
 
-```{r quiz6_2, echo = FALSE}
-quiz(
-  question("Was sind häufig auftretende Probleme beim Ziehen von Zufallsstichproben?",
-    answer("Unterschiedliche Skalenniveaus."),
-    answer("Fehlende Repräsentativität", correct = TRUE),
-    answer("Eine bestimmte Teilgruppe von Personen in der Population hat eine höhere Wahrscheinlichkeit, in die Stichprobe gezogen zu werden, als andere Personen.", correct = TRUE),
-    answer("Unabhängigkeit der Ziehungen"),
-    allow_retry = TRUE
-  )
-    )
+```{r VO5_zsd3, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_05/VO5_zsd3.Rmd", allow_retry = TRUE)
 ```
 
-```{r quiz6_3, echo = FALSE}
-quiz(
-  question("μ>100 ist ein Beispiel für...",
-    answer("...eine Streuungsschätzung."),
-    answer("...eine Parameterschätzung."),
-    answer("...eine Hypothese, die mittels Hypothesentest überprüft werden kann.", correct = TRUE),
-    answer("...eine Intervallschätzung."),
-    allow_retry = TRUE
-  )
-    )
+```{r VO5_zsd14, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_05/VO5_zsd4.Rmd", allow_retry = TRUE)
 ```
 
-```{r quiz6_4, echo = FALSE}
-quiz(
-  question("Was ist ein naheliegender Schätzwert für π (Auftretenswahrscheinlichkeit in der Population)?",
-    answer("relative Häufigkeit in der Stichprobe", correct = TRUE),
-    answer("Mittelwert in der Stichprobe"),
-    answer("Varianz in der Stichprobe"),
-    answer("Median in der Stichprobe"),
-    allow_retry = TRUE
-  )
-    )
+
+
+
+## Einheit 6 - Schätzungen und Stichprobenfehler
+
+```{r VO6_1, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_06/VO6_1.Rmd", allow_retry = TRUE)
 ```
 
-```{r quiz6_5, echo = FALSE}
-quiz(
-  question("Was ist hinsichtlich Schätzfunktionen zutreffend?",
-    answer("Realisation einer Schätzfunktion nennt sich Schätzwert.", correct = TRUE),
-    answer("Schätzfunktionen sind Ergebnisse eines Hypothesentests."),
-    answer("Zufallsvariable, die jedem möglichen Ergebnis des Zufallsexperiments den aus ihr berechneten Schätzwert zuweist.", correct = TRUE),
-    answer("Sind Ergebnisse in der Stichprobe"),
-    allow_retry = TRUE
-  )
-    )
+```{r VO6_2, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_06/VO6_2.Rmd", allow_retry = TRUE)
 ```
 
-```{r quiz6_6, echo = FALSE}
-quiz(
-  question("Was sind die Gütekriterien einer Schätzfunktion",
-    answer("Erwartungstreue (und Genauigkeit)", correct = TRUE),
-    answer("Effizienz", correct = TRUE),
-    answer("Konsistenz", correct = TRUE),
-    answer("Objektivität"),
-    allow_retry = TRUE
-  )
-    )
+```{r VO6_3, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_06/VO6_3.Rmd", allow_retry = TRUE)
 ```
 
-```{r quiz6_7, echo = FALSE}
-quiz(
-  question("Was versteht man unter der Genauigkeit einer Schätzfunktion?",
-    answer("Das ein möglichst großes Intervall bei der Schätzung herauskommt."),
-    answer("Dass sie zu möglichst „präzisen“ oder „genauen“ Schätzungen führen sollte.", correct = TRUE),
-    answer("Dass die Schätzwerte bei unendlicher Wiederholung des Zufallsexperiments im Mittel dem wahren Parameterwert entsprechen sollten"),
-    answer("Dass der Standardfehler bei wachsendem Stichprobenumfang immer kleiner wird."),
-    allow_retry = TRUE
-  )
-    )
+```{r VO6_4, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_06/VO6_4.Rmd", allow_retry = TRUE)
 ```
 
-```{r quiz6_8, echo = FALSE}
-quiz(
-  question("Was sind Vorteile der Standardnormalverteilung?",
-    answer("Sie ist symmetrischer als die Normalverteilung."),
-    answer("Erwartungswert liegt bei 1 und Standardabweichung bei 0."),
-    answer("Wahrscheinlichkeit für jeden z-Wert kann abgelesen werden.", correct = TRUE),
-    answer("Quantile der Standardnormalverteilung sind tabelliert.", correct = TRUE),
-    allow_retry = TRUE
-  )
-    )
+```{r VO6_5, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_06/VO6_5.Rmd", allow_retry = TRUE)
 ```
 
-```{r quiz6_9, echo = FALSE}
-quiz(
-  question("Wovon hängt die Breite des Konfidenzintervalls ab?",
-    answer("N", correct = TRUE),
-    answer("Streuung", correct = TRUE),
-    answer("Median"),
-    answer("Signifikanzniveau", correct = TRUE),
-    answer("Mittelwert"),
-    allow_retry = TRUE
-  )
-    )
+```{r VO6_6, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_06/VO6_6.Rmd", allow_retry = TRUE)
 ```
 
-```{r quiz6_10, echo = FALSE}
-quiz(
-  question("Was ist mit Bezug auf die t-Verteilung korrekt?",
-    answer("Ist Populationsvarianz jedoch nicht bekannt und muss geschätzt werden, dann ist der Quotient nicht standardnormalverteilt sondern t-verteilt", correct = TRUE),
-    answer("Die Form der t-Verteilung ist mitbestimmt durch Freiheitsgrade.", correct = TRUE),
-    answer("t-werte sind Quotienten aus zwei Varianzen."),
-    answer("Sie approximiert die NV mit zunehmender Stichprobengröße.", correct = TRUE),
-    answer("Die t-Verteilung ist wie die NV eingipfelig und symmetrisch", correct = TRUE),
-    allow_retry = TRUE
-  )
-    )
+```{r VO6_7, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_06/VO6_7.Rmd", allow_retry = TRUE)
 ```
 
-```{r quiz6_11, echo = FALSE}
-quiz(
-  question("Was ist hinsichtlich des Standardfehlers korrekt?",
-    answer("SE = Streuung der Stichprobenkennwerteverteilung", correct = TRUE),
-    answer("Je größer N, desto kleiner fällt er aus", correct = TRUE),
-    answer("Je größer σ in der Population, desto kleiner fällt er aus"),
-    answer("Er ist ein Maß für die Genauigkeit der Schätzung", correct = TRUE),
-    answer("Die Größe unserer Stichprobe hat keinen Einfluss auf den SE"),
-    allow_retry = TRUE
-  )
-    )
+```{r VO6_8, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_06/VO6_8.Rmd", allow_retry = TRUE)
 ```
 
-```{r quiz6_12, echo = FALSE}
-quiz(
-  question("Was trifft auf das Ziehen einer einfachen Zufallsstichprobe zu?",
-    answer("Der Vorgang ist ein Zufallsexperiment", correct = TRUE),
-    answer("Ein Teil der Population hat eine größere Wahrscheinlichkeit in die Stichprobe gezogen zu werden"),
-    answer("Wenn die Ziehung einer Person die Wahrscheinlichkeit der Ziehung einer anderen Person beeinflusst, können wir nicht mehr von einer einfachen Zufallsstichprobe sprechen", correct = TRUE),
-    answer("Ziehen einer Zufallsstichprobe = Zufällige Zuteilung den Personen einer Gruppe zu Eigenschaften", correct = TRUE),
-    allow_retry = TRUE
-  )
-    )
+```{r VO6_9, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_06/VO6_9.Rmd", allow_retry = TRUE)
 ```
 
-```{r quiz6_13, echo = FALSE}
-quiz(
-  question("Welche Aussagen sind korrekt? ",
-    answer("Das Ergebnis einer Punktschätzung ist ein Intervall von Zahlen"),
-    answer("Beispiel einer Punktschätzung: Wir gehen auf Basis unserer Stichprobe davon aus, dass der Parameter π gleich 0.45 ist", correct = TRUE),
-    answer("Beispiel einer Intervallschätzung: Wir gehen auf Basis unserer Stichprobe davon aus, dass die relative Häufigkeit der uns interessierenden Messwertausprägung in der Population gleich 0.43 ist"),
-    answer("Das Ergebnis einer Punktschätzung ist eine konkrete Zahl", correct = TRUE),
-    allow_retry = TRUE
-  )
-    )
+```{r VO6_10, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_06/VO6_10.Rmd", allow_retry = TRUE)
 ```
 
-```{r quiz6_14, echo = FALSE}
-quiz(
-  question("Welche Formel aus der Deskriptivstatistik verwenden wir als erwartungstreue Schätzung der Populationsvarianz? ",
-    answer("![](images/first.png){width=200px}"),
-    answer("![](images/second.png){width=200px}", correct = TRUE),
-    answer("![](images/third.png){width=200px}"),
-    allow_retry = TRUE
-  )
-    )
+```{r VO6_11, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_06/VO6_11.Rmd", allow_retry = TRUE)
 ```
 
-```{r quiz6_15, echo = FALSE}
-quiz(
-  question("Was versteht man unter Konsistenz einer Schätzfunktion?",
-    answer("Mit wachsendem Stichprobenumfang sollte die Schätzfunktion immer genauer werden", correct = TRUE),
-    answer("Die Schätzfunktion sollte einen geringeren Standardfehler als alle anderen erwartungstreuen Schätzfunktionen aufweisen"),
-    answer("![](images/lim.png){width=200px}", correct = TRUE),
-    answer("![](images/SD.png){width=200px}"),
-    allow_retry = TRUE
-  )
-    )
+```{r VO6_12, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_06/VO6_12.Rmd", allow_retry = TRUE)
+```
+
+```{r VO6_13, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_06/VO6_13.Rmd", allow_retry = TRUE)
+```
+
+```{r VO6_14, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_06/VO6_14.Rmd", allow_retry = TRUE)
 ```
 
 ## Einheit 7 - Hypothesen und Hypothesentests
+
+```{r VO7_11, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_07/VO7_11.Rmd", allow_retry = TRUE)
+```
+
+```{r VO7_12, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_07/VO7_12.Rmd", allow_retry = TRUE)
+```
+
+
+
 
 ```{r quiz7_1, echo = FALSE}
 quiz(
@@ -931,12 +652,16 @@ quiz(
 
 ## Einheit 8 - *t*-Test
 
-## Einheit 9 - *t*-Test (Übungsaufgaben Schritt-für-Schritt)
+## Einheit 9 - Übungsaufgaben t-Test
+
+```{r VO9_2, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_09/VO9_2.Rmd", allow_retry = TRUE)
+```
+
+
 
 ## Einheit 10 - Korrelation
 
 ## Einheit 11 - Korrelation (2)
 
 ## Einheit 12 - Effektstärke und Powerberechnung
-
-

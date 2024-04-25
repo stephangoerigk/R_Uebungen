@@ -1,0 +1,32 @@
+Question 
+======== 
+
+Der kritische Wert...
+
+Answerlist
+----------
+
+* muss für ein signifikantes Ergebnis überschritten werden
+* muss für ein signifikantes Ergebnis unterschritten werden
+* ist unabhängig vom Signifikanzniveau
+* ist bei t-Verteilung und z-Verteilung identisch
+* kann abhängig vom Signifikanzniveau variieren
+
+Solution
+========
+
+Answerlist
+----------
+
+* Richtig. Der kritische Wert muss für ein signifikantes Ergebnis überschritten werden.
+* Falsch. Der kritische Wert muss nicht für ein signifikantes Ergebnis unterschritten werden.
+* Falsch. Der kritische Wert ist nicht unabhängig vom Signifikanzniveau.
+* Falsch. Der kritische Wert ist bei t-Verteilung und z-Verteilung nicht identisch.
+* Richtig. Der kritische Wert kann abhängig vom Signifikanzniveau variieren.
+
+Meta-information
+================
+exname: laplace_probability_explanation
+extype: mchoice 
+exsolution: 10001
+exshuffle: TRUE

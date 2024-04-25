@@ -1,0 +1,30 @@
+Question 
+======== 
+
+Answerlist
+----------
+
+* Der Bereich, in dem die mittleren 50% der Werte liegen, ist in Gruppe A kleiner als in Gruppe B.
+* Die Messwerte beider Gruppen sind normalverteilt.
+* In den vorliegenden Daten könnte man auch das arithmetische Mittel bedenkenlos berechnen.
+* Der Median der Variable Tremor ist in Gruppe B höher als in Gruppe A.
+* Die Messwerte in Grupppe B weisen eine größere Spannweite als in Gruppe A auf.
+
+Solution
+========
+
+Answerlist
+----------
+
+* Richtig. Dieser Bereich wird durch die Box des Boxplots gekennzeichnet (IQR) und ist in Gruppe A deutlich kleiner als in Gruppe B 
+* Flasch. Es kann natürlich durchaus sein, dass die Daten normalverteilt sind, hierzu können wir jedoch anhand des Boxplots allein keine Aussage treffen. 
+* Falsch. Die Ausreißer in den Daten (in dieser Darstellung durch schwarze Punkte gekennzeichnet) haben einen starken Einfluss auf den Mittelwert. Der Median hingegen ist robuster gegenüber Ausreißern.
+* Richtig. 
+* Richtig. Die Spannweite ergibt sich aus der Differenz des größten und kleinsten Werts. Diese liegen in Gruppe B eindeutig weiter auseinander als in Gruppe A. 
+
+Meta-information
+================
+exname: scatterplot_properties
+extype: mchoice 
+exsolution: 10011
+exshuffle: TRUE

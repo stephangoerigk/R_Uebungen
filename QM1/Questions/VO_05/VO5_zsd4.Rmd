@@ -1,0 +1,32 @@
+```{r}
+
+z = 1.29
+
+res = (z * 15) + 100
+  
+```
+
+
+
+Question 
+======== 
+
+Wie hoch muss der IQ einer Person sein, um zu den 10 schlausten % der Bevölkerung zu gehören? Runden Sie auf ganze IQ
+
+
+Solution
+========
+
+Formel für z-Transformation: 
+$$ z_i = \frac{x_i-\mu}{s} $$
+1. Schritt: Ablesen z-Wert für Fläche 0.9 -> $$z_{0.9015} = 1.29$$ 
+$$\rightarrow$$ Warum nehmen wir 0.9015 und nicht 0.8997
+
+
+Meta-information
+================
+exname: laplace_probability_explanation
+extype: num
+exsolution: `r round(res,)`
+extol: 0.00
+

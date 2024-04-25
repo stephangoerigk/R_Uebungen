@@ -1,0 +1,33 @@
+Question 
+======== 
+
+
+
+Answerlist
+----------
+
+* 
+*
+* 
+*
+*
+
+
+Solution
+========
+
+Answerlist
+----------
+
+* Falsch. 
+* Richtig. 
+* Falsch. 
+*
+*
+
+Meta-information
+================
+exname: laplace_probability_explanation
+extype: mchoice 
+exsolution: 010
+exshuffle: FALSE

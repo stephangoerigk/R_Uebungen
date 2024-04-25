@@ -1,0 +1,32 @@
+Question 
+======== 
+
+Was ist hinsichtlich der Normalverteilung (NV) korrekt?
+
+Answerlist
+----------
+
+* Die Normalverteilung ist eine diskrete Wahrscheinlichkeitsverteilung.
+* Die NV ist symmetrisch um ihren Erwartungswert.
+* Die NV kann keine negativen Werte annehmen.
+* Die Fläche zwischen einer Standardabweichung umfasst ca. 68% aller Fälle.
+* Die Standardnormalverteilung hat einen Erwartungswert von 0 und eine Varianz von 1.
+
+Solution
+========
+
+Answerlist
+----------
+
+* Falsch. Die Normalverteilung ist eine kontinuierliche Wahrscheinlichkeitsverteilung.
+* Richtig. Die Normalverteilung ist symmetrisch um ihren Erwartungswert, was bedeutet, dass sie eine glockenförmige Kurve ist.
+* Falsch. Die Normalverteilung kann sowohl positive als auch negative Werte annehmen, da sie eine kontinuierliche Verteilung ist.
+* Richtig. Die Fläche zwischen einer Standardabweichung umfasst ca. 68% aller Fälle bei einer Normalverteilung.
+* Richtig. Die Standardnormalverteilung (Z-Verteilung) hat einen Erwartungswert von 0 und eine Varianz von 1, was ihre Standardisierung ermöglicht.
+
+Meta-information
+================
+exname: normal_distribution_properties
+extype: mchoice 
+exsolution: 01011
+exshuffle: TRUE

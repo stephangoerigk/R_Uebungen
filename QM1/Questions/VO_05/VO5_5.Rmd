@@ -1,0 +1,32 @@
+Question 
+======== 
+
+Was stimmt hinsichtlich der Nomenklatur des Zufallsexperiments?
+
+Answerlist
+----------
+
+* Jedes mögliche Ergebnis aus einem Zufallsexperiment nennen wir ein Elementarereignis ω.
+* Der Ereignisraum Ω heißt diskret, wenn er aus überabzählbar vielen Elementarereignissen besteht.
+* Die Menge aller möglichen Ereignisse ist definiert als der Ereignisraum Ω.
+* Zufallsexperiment ist ein allgemeiner Begriff, der Grundlage für die Inferenzstatistik ist.
+* Ein Zufallsexperiment ist immer deterministisch und vorhersehbar.
+
+Solution
+========
+
+Answerlist
+----------
+
+* Richtig. Jedes mögliche Ergebnis aus einem Zufallsexperiment wird als Elementarereignis ω bezeichnet.
+* Falsch. Der Ereignisraum Ω heißt diskret, wenn er aus endlich vielen oder abzählbar unendlich vielen Elementarereignissen besteht.
+* Richtig. Die Menge aller möglichen Ereignisse wird durch den Ereignisraum Ω definiert.
+* Richtig. Ein Zufallsexperiment ist die Grundlage für die Wahrscheinlichkeitstheorie und statistische Inferenz.
+* Falsch. Ein Zufallsexperiment ist per Definition nicht deterministisch und kann nicht immer vorhergesagt werden.
+
+Meta-information
+================
+exname: random_experiment_nomenclature
+extype: mchoice 
+exsolution: 10110
+exshuffle: TRUE

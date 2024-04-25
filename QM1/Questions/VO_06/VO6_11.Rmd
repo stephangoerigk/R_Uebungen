@@ -1,0 +1,32 @@
+Question 
+======== 
+
+Was trifft auf das Ziehen einer einfachen Zufallsstichprobe zu?
+
+Answerlist
+----------
+
+* Der Vorgang ist ein Zufallsexperiment
+* Ein Teil der Population hat eine größere Wahrscheinlichkeit in die Stichprobe gezogen zu werden
+* Wenn die Ziehung einer Person die Wahrscheinlichkeit der Ziehung einer anderen Person beeinflusst, können wir nicht mehr von einer einfachen Zufallsstichprobe sprechen
+* Ziehen einer Zufallsstichprobe = Zufällige Zuteilung der Personen einer Gruppe zu Eigenschaften
+* Jedes Element der Population hat die gleiche Wahrscheinlichkeit, in die Stichprobe aufgenommen zu werden
+
+Solution
+========
+
+Answerlist
+----------
+
+* Richtig. (Der Vorgang des Ziehens einer Stichprobe kann als Zufallsexperiment betrachtet werden.)
+* Falsch. (In einer einfachen Zufallsstichprobe hat jedes Element der Population die gleiche Wahrscheinlichkeit, in die Stichprobe aufgenommen zu werden.)
+* Richtig. (Wenn die Ziehung einer Person die Wahrscheinlichkeit einer anderen beeinflusst, ist es keine einfache Zufallsstichprobe mehr.)
+* Richtig. (Eine Zufallsstichprobe bedeutet, dass die Personen zufällig ausgewählt werden.)
+* Richtig. (In einer einfachen Zufallsstichprobe hat jedes Element der Population die gleiche Chance, ausgewählt zu werden.)
+
+Meta-information
+================
+exname: laplace_probability_explanation
+extype: mchoice 
+exsolution: 10111
+exshuffle: TRUE

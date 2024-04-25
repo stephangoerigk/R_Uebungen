@@ -1,0 +1,32 @@
+Question 
+======== 
+
+Was sind Axiome der Wahrscheinlichkeitsrechnung nach Kolmogorov?
+
+Answerlist
+----------
+
+* Wahrscheinlichkeiten nehmen Werte zwischen 0 und 1 an.
+* Sichere Ereignisse haben eine Wahrscheinlichkeit von P=1.
+* Negative Wahrscheinlichkeiten beschreiben besonders seltene Ereignisse.
+* Gesamtwahrscheinlichkeit mehrere unabhängiger Ereignisse ist die Summe der Einzelwahrscheinlichkeiten
+
+
+Solution
+========
+
+Answerlist
+----------
+
+* Richtig. Die Axiome besagen, dass Wahrscheinlichkeiten immer Werte zwischen 0 und 1 annehmen.
+* Richtig. Nach den Axiomen ist die Wahrscheinlichkeit des sicheren Ereignisses gleich 1.
+* Falsch. Negative Wahrscheinlichkeiten sind in der Wahrscheinlichkeitstheorie nicht sinnvoll und werden nicht verwendet.
+* Richtig. Die Gesamtwahrscheinlichkeit mehrerer unabhängiger Ereignisse ist die Summe der Einzelwahrscheinlichkeiten gemäß den Axiomen.
+
+
+Meta-information
+================
+exname: kolmogorov_axioms_extended
+extype: mchoice 
+exsolution: 1101
+exshuffle: TRUE

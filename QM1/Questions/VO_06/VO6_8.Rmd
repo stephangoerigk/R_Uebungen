@@ -1,0 +1,32 @@
+Question 
+======== 
+
+Was sind Vorteile der Standardnormalverteilung?
+
+Answerlist
+----------
+
+* Sie ist symmetrischer als die Normalverteilung.
+* Erwartungswert liegt bei 1 und Standardabweichung bei 0.
+* Wahrscheinlichkeit für jeden z-Wert kann abgelesen werden.
+* Quantile der Standardnormalverteilung sind tabelliert.
+* Sie kann verwendet werden, um Wahrscheinlichkeiten für jede beliebige Normalverteilung zu berechnen.
+
+Solution
+========
+
+Answerlist
+----------
+
+* Falsch. Die Standardnormalverteilung ist genauso symmetrisch wie jede andere Normalverteilung.
+* Falsch. Der Erwartungswert der Standardnormalverteilung ist 0 und die Standardabweichung ist 1.
+* Richtig. Man kann aus der Standardnormalverteilung ablesen, wie wahrscheinlich ein bestimmter Wert ist.
+* Richtig. Quantile der Standardnormalverteilung sind in Tabellen oder Software verfügbar.
+* Richtig. Die Standardnormalverteilung ermöglicht die Standardisierung von Normalverteilungen beliebiger Parameter.
+
+Meta-information
+================
+exname: advantages_of_standard_normal
+extype: mchoice 
+exsolution: 00111
+exshuffle: TRUE

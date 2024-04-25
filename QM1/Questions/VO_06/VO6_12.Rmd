@@ -1,0 +1,32 @@
+Question 
+======== 
+
+Welche Aussagen sind korrekt? 
+
+Answerlist
+----------
+
+* Das Ergebnis einer Punktschätzung ist ein Intervall von Zahlen
+* Beispiel einer Punktschätzung: Wir gehen auf Basis unserer Stichprobe davon aus, dass der Parameter π gleich 0.45 ist
+* Beispiel einer Intervallschätzung: Wir gehen auf Basis unserer Stichprobe davon aus, dass die relative Häufigkeit der uns interessierenden Messwertausprägung in der Population gleich 0.43 ist
+* Das Ergebnis einer Punktschätzung ist eine konkrete Zahl
+* Eine Punktschätzung ist immer ein statistisches Intervall
+
+Solution
+========
+
+Answerlist
+----------
+
+* Falsch. (Das Ergebnis einer Punktschätzung ist eine konkrete Zahl, nicht ein Intervall von Zahlen.)
+* Richtig. (Ein Beispiel für eine Punktschätzung ist die Annahme, dass der Parameter π gleich 0.45 ist.)
+* Falsch. (Eine Intervallschätzung gibt ein Intervall von möglichen Werten an, nicht eine relative Häufigkeit.)
+* Richtig. (Das Ergebnis einer Punktschätzung ist eine spezifische Schätzung, keine Intervallangabe.)
+* Falsch. (Eine Punktschätzung ist eine einzelne Schätzung, keine Intervallangabe.)
+
+Meta-information
+================
+exname: laplace_probability_explanation
+extype: mchoice 
+exsolution: 01010
+exshuffle: TRUE

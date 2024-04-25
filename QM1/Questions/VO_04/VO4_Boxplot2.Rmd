@@ -1,0 +1,32 @@
+Question 
+======== 
+
+Welche sind die Vorteile des Boxplots?
+
+Answerlist
+----------
+
+* Einfache Darstellung von Durchschnittswerten
+* Zeigt die Standardabweichung
+* Lässt sich auf bei Nominalskalenniveau verwenden
+* Gute Visualisierung von Ausreißern in den Daten 
+* Zeigt ein Maß der zentralen Tendenz
+
+Solution
+========
+
+Answerlist
+----------
+
+* Falsch. Boxplots zeigen keine Durchschnittswerte an.
+* Falsch Boxplots zeigen keine SD an.
+* Falsch Boxplots lassen sich ab Ordinalskalenniveau verwenden
+* Richtig. Wir können Ausreißer in Boxplots schnell und auf einen Blick erkennen. 
++ Richtig. Zeigt den Median.
+
+Meta-information
+================
+exname: name
+extype: mchoice 
+exsolution: 00011
+exshuffle: TRUE

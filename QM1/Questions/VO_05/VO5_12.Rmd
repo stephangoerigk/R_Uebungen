@@ -1,0 +1,32 @@
+Question 
+======== 
+
+Was ist ein Elementarereignis?
+
+Answerlist
+----------
+
+* Ein Ereignis, das immer eintritt.
+* Ein Ereignis, das nie eintritt.
+* Ein einzelnes Ergebnis eines Zufallsexperiments.
+* Ein Ereignis, das immer gleichzeitig mit einem anderen Ereignis auftritt.
+* Ein Ereignis, das eine Wahrscheinlichkeit von 0 hat.
+
+Solution
+========
+
+Answerlist
+----------
+
+* Falsch. Ein Elementarereignis ist nicht immer garantiert, sondern kann eintreten oder auch nicht.
+* Falsch. Ein Elementarereignis tritt ein, wenn das zugehörige Ergebnis eines Zufallsexperiments eintritt.
+* Richtig. Ein Elementarereignis ist ein einzelnes Ergebnis eines Zufallsexperiments, das nicht weiter in einzelne Ereignisse zerlegt werden kann.
+* Falsch. Ein Elementarereignis ist ein einzelnes Ergebnis und tritt nicht notwendigerweise gleichzeitig mit einem anderen Ereignis auf.
+* Falsch. Ein Elementarereignis hat eine Wahrscheinlichkeit größer als 0, da es eintreten kann.
+
+Meta-information
+================
+exname: elementary_event_definition
+extype: mchoice 
+exsolution: 00100
+exshuffle: TRUE

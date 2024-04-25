@@ -1,0 +1,32 @@
+Question 
+======== 
+
+Was sind häufig auftretende Probleme beim Ziehen von Zufallsstichproben?
+
+Answerlist
+----------
+
+* Unterschiedliche Skalenniveaus.
+* Fehlende Repräsentativität
+* Eine bestimmte Teilgruppe von Personen in der Population hat eine höhere Wahrscheinlichkeit, in die Stichprobe gezogen zu werden, als andere Personen.
+* Unabhängigkeit der Ziehungen
+* Nichtzufällige Auswahlverfahren
+
+Solution
+========
+
+Answerlist
+----------
+
+* Falsch. Unterschiedliche Skalenniveaus beziehen sich auf andere Aspekte der Daten.
+* Richtig. Fehlende Repräsentativität kann zu verzerrten Ergebnissen führen.
+* Richtig. Eine bestimmte Teilgruppe von Personen mit höherer Ziehwahrscheinlichkeit kann zu Verzerrungen führen.
+* Falsch. Die Unabhängigkeit der Ziehungen ist ein Grundprinzip für Zufallsstichproben.
+* Richtig. Nichtzufällige Auswahlverfahren führen zu Verzerrungen und Ungenauigkeiten.
+
+Meta-information
+================
+exname: sampling_problems
+extype: mchoice 
+exsolution: 01101
+exshuffle: TRUE

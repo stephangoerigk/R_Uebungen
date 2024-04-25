@@ -1,0 +1,32 @@
+Question 
+======== 
+
+Die Population...
+
+Answerlist
+----------
+
+* wird verwendet, um auf die Grundgesamtheit zu schließen.
+* Wird auch Grundgesamtheit genannt.
+* Ist eine zufällige Auswahl bestimmter Merkmalsträger:innen.
+* ...ist die Gesamtheit aller Merkmalsträger:innen, auf die eine Untersuchungsfrage gerichtet ist.
+* Ist die Stichprobe, die für statistische Analysen verwendet wird.
+
+Solution
+========
+
+Answerlist
+----------
+
+* Falsch. Die Population wird auch als Grundgesamtheit bezeichnet.
+* Richtig. Die Population wird auch als Grundgesamtheit bezeichnet.
+* Falsch. Eine zufällige Auswahl bestimmter Merkmalsträger:innen ist eine Stichprobe.
+* Richtig. Die Population ist die Gesamtheit aller Merkmalsträger:innen, auf die eine Untersuchungsfrage gerichtet ist.
+* Falsch. Die Stichprobe ist eine Teilmenge der Population, nicht die Population selbst.
+
+Meta-information
+================
+exname: laplace_probability_explanation
+extype: mchoice 
+exsolution: 01010
+exshuffle: TRUE

@@ -1,0 +1,33 @@
+Question 
+======== 
+
+Es sei A = {1,2,3,4}.
+Welches ist das Gegenereignis zu A?
+
+Answerlist
+----------
+
+* Das leere Ereignis.
+* Das sichere Ereignis.
+* Das Ereignis A selbst.
+* Das Ereignis aller geraden Zahlen.
+* Es enthält alle Zahlen, die nicht in A enthalten sind. Da hier kein Ergebnisraus definiert ist, können wir das Gegenereignis zu A nicht bestimmten.
+
+Solution
+========
+
+Answerlist
+----------
+
+* Falsch. Das leere Ereignis ist das Ereignis, das niemals eintritt.
+* Falsch. Das sichere Ereignis ist das Ereignis, das immer eintritt.
+* Falsch. Das Ereignis A selbst ist identisch mit A.
+* Falsch. Das Ereignis aller geraden Zahlen ist nicht das Gegenereignis von A.
+* Richtig. Das Komplementäreignis von A enthält alle Elemente, die nicht in A enthalten sind.
+
+Meta-information
+================
+exname: complement_of_set_A
+extype: mchoice 
+exsolution: 00001
+exshuffle: TRUE

@@ -1,0 +1,32 @@
+Question 
+======== 
+
+Was ist mit Bezug auf die t-Verteilung korrekt?
+
+Answerlist
+----------
+
+* Ist Populationsvarianz jedoch nicht bekannt und muss geschätzt werden, dann ist der Quotient nicht standardnormalverteilt sondern t-verteilt.
+* Die Form der t-Verteilung ist mitbestimmt durch Freiheitsgrade.
+* t-Werte sind Quotienten aus zwei Varianzen.
+* Sie approximiert die NV mit zunehmender Stichprobengröße.
+* Die t-Verteilung ist wie die NV eingipfelig und symmetrisch
+
+Solution
+========
+
+Answerlist
+----------
+
+* Richtig. In der Praxis wird die t-Verteilung verwendet, wenn die Populationenvarianz nicht bekannt ist und durch die Stichprobenvarianz geschätzt werden muss.
+* Richtig. Die t-Verteilung wird durch die Anzahl der Freiheitsgrade bestimmt, was die Anzahl der Beobachtungen in der Stichprobe minus 1 ist.
+* Falsch. Hiermit wäre zum Beispiel der F Wert beschrieben. Im Zähler von t-Wert Brüchen stehen Mittelwertsunterschiede.
+* Richtig. Die t-Verteilung nähert sich mit wachsender Stichprobengröße der Standardnormalverteilung an.
+* Richtig. 
+
+Meta-information
+================
+exname: t_distribution_properties
+extype: mchoice 
+exsolution: 11011
+exshuffle: TRUE

@@ -1,0 +1,32 @@
+Question 
+======== 
+
+Zwei Ereignisse sind stochastisch unabhängig...
+
+Answerlist
+----------
+
+* Wenn sie immer gemeinsam auftreten.
+* Wenn ihre Wahrscheinlichkeit gleich ist.
+* Wenn das Eintreten des einen Ereignisses das Eintreten des anderen Ereignisses beeinflusst.
+* Wenn ihre gemeinsame Wahrscheinlichkeit gleich der Summe ihrer Einzelwahrscheinlichkeiten ist.
+* Wenn das Eintreten des einen Ereignisses keinen Einfluss auf das Eintreten des anderen Ereignisses hat.
+
+Solution
+========
+
+Answerlist
+----------
+
+* Falsch. Stochastische Unabhängigkeit bedeutet nicht, dass die Ereignisse immer gemeinsam auftreten.
+* Falsch. Die Gleichheit der Wahrscheinlichkeit ist nicht das Kriterium für stochastische Unabhängigkeit.
+* Falsch. Stochastische Unabhängigkeit bedeutet genau das Gegenteil.
+* Falsch. Qenn die Wahrscheinlichkeit für das gemeinsame Auftreten dem *Produkt* ihrer Einzelwahrscheinlichkeiten entspricht.
+* Richtig. Zwei Ereignisse sind stochastisch unabhängig, wenn das Eintreten des einen Ereignisses keinen Einfluss auf das Eintreten des anderen Ereignisses hat.
+
+Meta-information
+================
+exname: independent_events_definition
+extype: mchoice 
+exsolution: 00001
+exshuffle: TRUE

@@ -1,0 +1,32 @@
+Question 
+======== 
+
+ NV-Approximation der Binomialverteilung
+
+Answerlist
+----------
+
+* Ist bei kleinen Stichproben gegeben
+* erlaubt Gleichsetzung der NV Varianz mit np(1-p)
+* Ist bei großen Stichproben gegeben
+* erfordert eine Poisson Verteilung
+
+
+
+Solution
+========
+
+Answerlist
+----------
+
+* Falsch. 
+* Richtig. s. Formel
+* Richtig. 
+* Falsch. 
+
+Meta-information
+================
+exname: laplace_probability_explanation
+extype: mchoice 
+exsolution: 0110
+exshuffle: TRUE

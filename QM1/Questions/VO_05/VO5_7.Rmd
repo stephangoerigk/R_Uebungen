@@ -1,0 +1,32 @@
+Question 
+======== 
+
+Das alpha-Quantil...
+
+Answerlist
+----------
+
+* ...ist immer das Signifikanzniveau.
+* ...ist ein Wert, unterhalb dessen ein vorgegebener Anteil (alpha) aller Fälle der Verteilung liegen.
+* ...muss bei diskreten ZV zur nächsten ganzzahligen Ausprägung gerundet werden.
+* ...ist der Erwartungswert einer stetigen ZV.
+* ...gibt den Median der Verteilung an.
+
+Solution
+========
+
+Answerlist
+----------
+
+* Falsch. Das alpha-Quantil ist nicht dasselbe wie das Signifikanzniveau.
+* Richtig. Das alpha-Quantil ist der Wert, unterhalb dessen ein vorgegebener Anteil (alpha) aller Fälle der Verteilung liegt.
+* Richtig. Bei diskreten Zufallsvariablen muss das alpha-Quantil zur nächsten ganzzahligen Ausprägung gerundet werden.
+* Falsch. Der Erwartungswert einer stetigen Zufallsvariablen ist nicht das alpha-Quantil.
+* Falsch. Das alpha-Quantil gibt nicht den Median der Verteilung an.
+
+Meta-information
+================
+exname: alpha_quantile_definition
+extype: mchoice 
+exsolution: 01100
+exshuffle: TRUE

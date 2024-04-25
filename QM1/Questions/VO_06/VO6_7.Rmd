@@ -1,0 +1,31 @@
+Question 
+======== 
+
+Was versteht man unter der Genauigkeit einer Schätzfunktion?
+
+Answerlist
+----------
+
+* Das ein möglichst großes Intervall bei der Schätzung herauskommt.
+* Dass sie zu möglichst „präzisen“ oder „genauen“ Schätzungen führen sollte.
+* Dass die Schätzwerte bei unendlicher Wiederholung des Zufallsexperiments im Mittel dem wahren Parameterwert entsprechen sollten
+* Dass der Standardfehler bei wachsendem Stichprobenumfang immer kleiner wird.
+
+
+Solution
+========
+
+Answerlist
+----------
+
+* Falsch. 
+* Richtig. Die Genauigkeit einer Schätzfunktion beschreibt die Nähe der Schätzwerte zum wahren Parameterwert.
+* Falsch. 
+* Falsch. 
+
+Meta-information
+================
+exname: laplace_probability_explanation
+extype: mchoice 
+exsolution: 0100
+exshuffle: TRUE

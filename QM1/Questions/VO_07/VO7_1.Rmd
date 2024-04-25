@@ -1,0 +1,32 @@
+Question 
+======== 
+
+Die Nullhypothese
+
+Answerlist
+----------
+
+* Beinhaltet oft die neue Annahme, den "Effekt".
+* Ist das Gegenstück zur eigentlichen Untersuchungshypothese
+* Drückt eine "Unterschiedlichkeit" von einem Referenzwert aus
+* Stellt meistens den aktuellen Zustand oder anders ausgedrückt den „Standard“ dar, gegen den getestet wird
+* Beschreibt den Status quo oder die Annahme, dass es keinen Effekt gibt
+
+Solution
+========
+
+Answerlist
+----------
+
+* Falsch. (Die Nullhypothese ist das Gegenstück zur eigentlichen Untersuchungshypothese.)
+* Richtig. (Die Nullhypothese ist das Gegenstück zur eigentlichen Untersuchungshypothese.)
+* Falsch. (Die Nullhypothese beschreibt den Status quo oder die Annahme, dass es keinen Effekt gibt.)
+* Richtig. (Die Nullhypothese beschreibt den Status quo oder die Annahme, dass es keinen Effekt gibt.)
+* Richtig. (Die Nullhypothese beschreibt den Status quo oder die Annahme, dass es keinen Effekt gibt.)
+
+Meta-information
+================
+exname: laplace_probability_explanation
+extype: mchoice 
+exsolution: 01011
+exshuffle: TRUE

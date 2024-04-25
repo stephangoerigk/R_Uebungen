@@ -1,0 +1,30 @@
+Question 
+======== 
+
+Die Laplace-Wahrscheinlichkeit...?
+
+Answerlist
+----------
+
+* Gilt bei Zufallsexperimenten, bei denen nur endlich viele, gleichwahrscheinliche Ergebnisse möglich sind
+* Wird mit dem Bayes Theorem berechnet
+* Ergibt sich durch das Verhältnis aus möglichen Ereignissen zu günstigen Ereignissen
+* Ergibt sich durch das Verhältnis aus günstigen Ereignissen zu möglichen Ereignissen
+
+Solution
+========
+
+Answerlist
+----------
+
+* Richtig. Die Laplace-Wahrscheinlichkeit gilt bei Zufallsexperimenten, bei denen nur endlich viele, gleichwahrscheinliche Ergebnisse möglich sind. Sie beruht auf der Annahme, dass jedes Ergebnis die gleiche Wahrscheinlichkeit hat.
+* Falsch. Die Laplace-Wahrscheinlichkeit wird nicht mit dem Bayes-Theorem berechnet. Das Bayes-Theorem ist ein mathematischer Satz, der die Wahrscheinlichkeit eines Ereignisses unter Berücksichtigung des Wissens über vorherige Ereignisse berechnet.
+* Falsch. Diese Beschreibung ist nicht korrekt für die Laplace-Wahrscheinlichkeit.
+* Richtig. Die Laplace-Wahrscheinlichkeit ergibt sich tatsächlich aus dem Verhältnis von günstigen Ereignissen zu möglichen Ereignissen.
+
+Meta-information
+================
+exname: laplace_probability_explanation
+extype: mchoice 
+exsolution: 1001
+exshuffle: TRUE

@@ -1,0 +1,32 @@
+Question 
+======== 
+
+Was ist hinsichtlich Schätzfunktionen zutreffend?
+
+Answerlist
+----------
+
+* Realisation einer Schätzfunktion nennt sich Schätzwert.
+* Schätzfunktionen sind Ergebnisse eines Hypothesentests.
+* Eine Schätzfunktion ist eine Zufallsvariable, die jedem möglichen Ergebnis des Zufallsexperiments den aus ihr berechneten Schätzwert zuweist.
+* Sind Ergebnisse in der Stichprobe
+* Schätzfunktionen sind mathematische Regeln oder Verfahren, die auf Basis von Stichprobendaten verwendet werden, um unbekannte Parameter oder Eigenschaften einer Population zu schätzen.
+
+Solution
+========
+
+Answerlist
+----------
+
+* Richtig. Die Realisation einer Schätzfunktion wird als Schätzwert bezeichnet.
+* Falsch. Schätzfunktionen sind keine Ergebnisse eines Hypothesentests, sondern dienen der Schätzung von Parametern oder Eigenschaften.
+* Richtig. Eine Schätzfunktion ist eine Zufallsvariable, die jedem möglichen Ergebnis des Zufallsexperiments den aus ihr berechneten Schätzwert zuweist.
+* Falsch. Ergebnisse in der Stichprobe sind keine Schätzfunktionen, sondern konkrete beobachtete Werte.
+* Richtig. Schätzfunktionen sind mathematische Regeln oder Verfahren, die verwendet werden, um unbekannte Parameter oder Eigenschaften einer Population basierend auf Stichprobendaten zu schätzen.
+
+Meta-information
+================
+exname: estimator_functions
+extype: mchoice 
+exsolution: 10101
+exshuffle: TRUE

@@ -1,0 +1,32 @@
+Question 
+======== 
+
+Der Erwartungswert...
+
+Answerlist
+----------
+
+* ...ergibt sich als Durchschnitt, wenn man ein Zufallsexperiment sehr oft durchführt.
+* ...einer ZV ist ein Maß für das Zentrum der Verteilung.
+* ...ist die Streuung aller möglichen Ausprägungen einer ZV.
+* ...ist die Gegenwahrscheinlichkeit vom Mittelwert.
+* ...ist der mittlere Wert einer Zufallsvariablen über viele Realisierungen hinweg.
+
+Solution
+========
+
+Answerlist
+----------
+
+* Richtig. Der Erwartungswert einer Zufallsvariablen (ZV) entspricht dem Durchschnittswert, den die ZV ergibt, wenn das Zufallsexperiment unendlich oft wiederholt wird.
+* Richtig. Der Erwartungswert einer ZV ist ein Maß für das Zentrum der Verteilung und gibt den durchschnittlichen Wert der ZV an.
+* Falsch. Der Erwartungswert ist kein Maß für die Streuung, sondern für die zentrale Tendenz.
+* Falsch. Die Beschreibung als Gegenwahrscheinlichkeit vom Mittelwert ist nicht korrekt.
+* Richtig. Der Erwartungswert ist der mittlere Wert einer Zufallsvariablen über viele Realisierungen hinweg.
+
+Meta-information
+================
+exname: expectation_value_definition
+extype: mchoice 
+exsolution: 11001
+exshuffle: TRUE

@@ -1,0 +1,36 @@
+Question 
+======== 
+
+Wovon hängt die Breite des Konfidenzintervalls ab?
+
+Answerlist
+----------
+
+* N
+* Streuung
+* Median
+* Signifikanzniveau
+* Mittelwert
+* Standardfehler
+
+Solution
+========
+
+Answerlist
+----------
+
+* Richtig. s. Formel KI
+* Richtig. s. Formel KI
+* Falsch. 
+* Richtig. s. Formel KI
+* Falsch. Das KI legt einen Bereich um den Mittelwert fest. Der Mittelwert selbst hat aber keinen Einfluss auf die Breite. 
+* Richtig. Der Standardfehler ist Teil des KIs 
+$$ SE = \frac{\sigma}{\sqrt{n}} $$
+
+
+Meta-information
+================
+exname: laplace_probability_explanation
+extype: mchoice 
+exsolution: 110101
+exshuffle: TRUE

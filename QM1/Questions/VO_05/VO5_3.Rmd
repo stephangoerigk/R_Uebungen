@@ -1,0 +1,32 @@
+Question 
+======== 
+
+Die bedingte Wahrscheinlichkeit P(A|B) ...
+
+Answerlist
+----------
+
+* Die Wahrscheinlichkeit von Ereignis A unter der Bedingung, dass Ereignis B bereits eingetreten ist.
+* Die Wahrscheinlichkeit von Ereignis B unter der Bedingung, dass Ereignis A bereits eingetreten ist.
+* Die Korrelation von A und B.
+* Das Eintreten von B beeinflusst die Wahrscheinlichkeit von A.
+* Die Wahrscheinlichkeit, dass sowohl A als auch B eintreten.
+
+Solution
+========
+
+Answerlist
+----------
+
+* Richtig. Die bedingte Wahrscheinlichkeit P(A|B) ist die Wahrscheinlichkeit von Ereignis A unter der Bedingung, dass Ereignis B bereits eingetreten ist.
+* Falsch. Diese Antwort beschreibt nicht die bedingte Wahrscheinlichkeit P(A|B).
+* Falsch. Die Korrelation von A und B ist nicht dasselbe wie die bedingte Wahrscheinlichkeit.
+* Richtig. Das Eintreten von B beeinflusst die Wahrscheinlichkeit von A, was die bedingte Wahrscheinlichkeit P(A|B) beschreibt.
+* Falsch. Diese Antwort beschreibt nicht die bedingte Wahrscheinlichkeit P(A|B).
+
+Meta-information
+================
+exname: conditional_probability_definition
+extype: mchoice 
+exsolution: 10010
+exshuffle: TRUE

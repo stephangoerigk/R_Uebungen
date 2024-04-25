@@ -1,0 +1,36 @@
+Question 
+======== 
+
+Welche Formel aus der Deskriptivstatistik verwenden wir als erwartungstreue Schätzung der Populationsvarianz? 
+
+A: $$ h_A = \frac{H_A}{n} $$
+B: $$ s^2 = \frac {\sum_{i=1}^{n} (x_i-\bar{x})^2}{n-1} $$
+C: $$ \bar{x} = \frac {\sum_{i=1}^{n} x_i}{n} $$
+
+
+Answerlist
+----------
+
+* A: 
+* B:
+* C:
+
+
+
+
+Solution
+========
+
+Answerlist
+----------
+
+* Falsch. 
+* Richtig. 
+* Falsch. 
+
+Meta-information
+================
+exname: laplace_probability_explanation
+extype: mchoice 
+exsolution: 010
+exshuffle: FALSE
