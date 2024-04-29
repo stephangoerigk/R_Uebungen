@@ -445,6 +445,7 @@ mean(sales_data$Verkaufszahlen[sales_data$Produkt == "Produkt A" & sales_data$Re
 
 
 hallo jani
+hallo stephan
 
 
 
