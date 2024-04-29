@@ -1,5 +1,5 @@
 ---
-title: "Übungsaufgaben - Übung zur computergestützten Datenanalyse"
+title: "R - Übung zur computergestützten Datenanalyse"
 output: 
   learnr::tutorial:
           progressive: true
@@ -9,420 +9,442 @@ runtime: shiny_prerendered
 ---
 
 ```{r setup, include=FALSE}
+
 library(learnr)
 library(psych)
 library(shiny)
 library(faux)
 library(tidyverse)
 knitr::opts_chunk$set(echo = FALSE)
-```
-
-## Willkommen
-
-```{r}
-# Struktur anlegen analog zum Bookdown 
-# Nicos Aufgaben in Struktur einsortieren 
-# Bookdown Inhalte kürzegn, ggf. raus? 
-# 
-```
-
-## Willkommen
-
-### Was können Sie von dieser Übung erwarten?
-
-Wir möchten Ihnen eine erste Möglichkeit geben, sich mit dem Statistikprogramm `R` vertraut zu machen. 
-
-Dazu verwenden wir das Paket `learnr`. 
-
-Dieses Paket gibt uns die Möglichkeit, `R` Aufgaben direkt über Ihren Browser zu üben. Dafür müssen Sie die Programme `R` und `RStudio` nicht auf dem eigenen Computer installieren. 
-
-Zunächst erhalten Sie eine Einführung in die grundlegende Funktionalität von `R`. So können Sie im Verlauf des Semesters die gelernten statistischen Analysen direkt in `R` ausprobieren.
-
-Zusätzlich finden Sie im Rahmen der Lektionen Quizaufgaben, um Ihr Wissen zu überprüfen. 
-
-## Grundlegende Arithmetik in R
-
-Wir können in `R`, ähnlich wie auf einem Taschenrechner, alle mathematischen Grundrechenoperationen ausführen. 
-
-Dazu tippen Sie einen Rechenbefehl in das Programmierfenster und drücken auf `Run Code`.
-
-Berechnen Sie: $2 + 3$
-
-```{r Addition, exercise=TRUE}
 
 ```
 
-Berechnen Sie: $7 - 3$
+## Herzlich Willkommen!
 
-```{r Subtraktion, exercise=TRUE}
+Diese interaktive Plattform wurde speziell für den Kurs **R - Übung zur computergestützten Datenanalyse** entwickelt, um Ihnen eine praktische und anschauliche Lernumgebung zu bieten. Mit dieser Oberfläche haben Sie die Möglichkeit, die im Seminar erworbenen Fähigkeiten unmittelbar anzuwenden und zu vertiefen.
 
-```
+Auf dieser Plattform finden Sie eine Vielzahl von Beispielen und Übungen, die darauf ausgelegt sind, Ihr Verständnis von R zu verbessern. Jede Übung ist darauf ausgerichtet, spezifische Konzepte und Techniken zu vermitteln, sodass Sie Ihr Wissen erweitern und festigen können.
 
-Berechnen Sie: $3 \cdot 9$
+Beginnen Sie nun, indem Sie eine der verfügbaren Übungen auswählen. Die interaktive Oberfläche ermöglicht es Ihnen, sofort Feedback zu Ihren Lösungen zu erhalten und bei Bedarf Änderungen vorzunehmen. Nutzen Sie diese Gelegenheit, um in Ihrem eigenen Tempo zu üben und zu lernen.
 
-```{r Multiplikation, exercise=TRUE}
+**Bitte beachten Sie, dass die learnR Oberfläche kontinuierlich erweitert wird, sodass Ihnen immer neue Lerninhalte zur Verfügung stehen. Entsprechende Änderungen werden Ihnen im Seminar angekündigt.**
 
-```
+Viel Erfolg und Spaß beim Entdecken der Möglichkeiten mit R! 
 
-Berechnen Sie: 9 $\div$ 3
+Stephan Goerigk und Team
 
-```{r Division, exercise=TRUE}
 
-```
+## Grundlegende Arithmetik
 
-Berechnen Sie: $3^3$
+Willkommen im Abschnitt **Grundlegende Arithmetik in R und RStudio**! 
 
-Falls Sie beim Schreiben eines der Befehle Hilfe benötigen, können Sie auf `Hint` klicken.
+In diesem Tel der learnR Oberfläche haben Sie die Möglichkeit, grundlegende arithmetische Operationen wie Addition, Subtraktion, Multiplikation und Division in R praktisch anzuwenden. 
 
-```{r Quadrieren, exercise=TRUE}
+Anmerkung: Falls Sie die Lösung der Befehle aufrufen wollen, können Sie auf `Solution` klicken. Sie finden dabei unter Umständen auch Anmerkungen zu den spezifischen Herausforderungen einzelner Aufgaben.
 
-```
+<hr> <!-- Horizontale Trennlinie -->
 
-```{r Quadrieren-hint}
-3^3
-```
+**Aufgabe 1:** Berechnen Sie das Ergebnis der Subtraktion $534 + 16$.
+```{r Arithmetik1, exercise=TRUE}
 
-Berechnen Sie: Wurzel aus 9
-
-```{r Wurzel, exercise=TRUE}
 
 ```
 
-```{r Wurzel-hint}
-sqrt(9)
+
+
+<hr> <!-- Horizontale Trennlinie -->
+
+**Aufgabe 2:** Berechnen Sie das Ergebnis der Subtraktion $7 - 3$.
+```{r Arithmetik2, exercise=TRUE}
+
 ```
 
-Berechnen Sie: $\sqrt{9} \cdot (2+6)$
+```{r Arithmetik2-solution}
 
-```{r Arith, exercise=TRUE}
+7-3
 
 ```
 
-```{r Arith-hint}
-sqrt(9) * (2+6)
+<hr> <!-- Horizontale Trennlinie -->
+
+**Aufgabe 3:** Berechnen Sie das Ergebnis der Multiplikation $3 \cdot 9$.
+```{r Arithmetik3, exercise=TRUE}
+
 ```
 
-## Datenobjekte in R
+```{r Arithmetik3-solution}
 
-Natürlich wollen wir `R` nicht nur wie einen Taschenrechner verwenden, denn das Programm kann noch viel mehr.
+3*9
 
-Einer der größten Vorteile von `R` ist es, dass wir **Objekte** definieren können. Mit diesen Objekten können wir im Rahmen von Analysen oder zu einem späteren Zeitpunkt weiterarbeiten.
+```
 
-### Datenobjekte
+<hr> <!-- Horizontale Trennlinie -->
 
-Wir wollen 3 Arten von Datenobjekten kennenlernen:
+**Aufgabe 4:** Berechnen Sie den Mittelwert der Messwerte 11, 18, 32, 10, 33, 18, 25, 69, 39, 12. Verwenden Sie dafür keine fertigen Funktionen, sondern nur Grundrechenarten. 
+Führen Sie die Berechnung mit einem Befehl (ohne Zwischenergebnisse) durch.
+```{r Arithmetik4, exercise=TRUE}
 
-1. Skalar
-2. Vektor
-3. Matrix
+```
 
-```{r eval=FALSE, include=FALSE}
-@STEPHAN: Wie können Wir das Bild kleiner anzeigen? 
+```{r Arithmetik4-solution}
+
+(11+18+32+10+33+18+25+69+39+12)/10
+
+```
+
+<hr> <!-- Horizontale Trennlinie -->
+
+**Aufgabe 5:** Berechnen Sie das Ergebnis der Division 1 $\div$ 7 und runden Sie das Ergebnis auf zwei Nachkommastellen.
+
+<font color='darkred'>Hinweis: Zum Runden von Zahlen (sowie Ergebnissen einfacher arithmetischer Operationen) können Sie die Funktion "round()" verwenden.</font>
+
+```{r Arithmetik5, exercise=TRUE}
+
+```
+
+```{r Arithmetik5-solution}
   
-  # s.u.
-```
-
-Die folgende Graphik zeigt Ihnen, wie die 3 Arten von Datenobjekten in einem Datensatz aussehen könnten:
-
-```{r eval = TRUE, echo = F, out.width = "450px", fig.align='center'}
-knitr::include_graphics("images/Datenformat_1.png")
-```
-
-### Skalar
-
-Der einfachste Objekttyp in R ist der **Skalar**. Ein Skalar ist einfach nur ein einzelner Wert, z.B. eine Zahl oder ein Wort.
-
-##### Aufgabe 
-Nun wollen wir den Wert 100 einem Skalar mit dem Buchstaben `a` zuweisen.
-
-
-```{r Skalar1, exercise=TRUE}
+round(1/7, digits = 2)
 
 ```
 
-```{r Skalar1-hint}
-a = 100
-```
+<hr> <!-- Horizontale Trennlinie -->
 
-Wie Sie bemerken, erzeugt R, wenn Sie diesen Code ausführen, keinen Output. Dazu geben Sie nun lediglich den Namen des Skalars in das Eingabefeld unterhalb Ihres Codes ein und drücken erneut `Run Code`. Wir haben unserem Skalar mit dem Wert 100 den "Namen" `a` gegeben.
-
-Wir können einen Skalar auch mit dem Ergenbnis einer Rechenoperation belegen. 
-
-##### Aufgabe 
-Erstellen Sie bitte den Skalar `b`, welcher das Ergebnis der Rechnung $3 \div 100$ enthalten soll, und lassen Sie sich diesen direkt anzeigen.  
-
-
-```{r Skalar2, exercise=TRUE}
+**Aufgabe 6:** Berechnen Sie das Ergebnis der Potenz $3^3$.
+```{r Arithmetik6, exercise=TRUE}
 
 ```
 
-```{r Skalar2-hint}
-b = 3 / 100
+```{r Arithmetik6-solution}
+
+3^3
+
+Alternative: 3**3
+
+```
+
+<hr> <!-- Horizontale Trennlinie -->
+
+**Aufgabe 7:** Berechnen Sie das Ergebnis der Wurzel aus 324.
+```{r Arithmetik7, exercise=TRUE}
+
+```
+
+```{r Arithmetik7-solution}
+
+sqrt(324)
+
+```
+
+<hr> <!-- Horizontale Trennlinie -->
+
+**Aufgabe 8:** Berechnen Sie das Ergebnis des Ausdrucks $\sqrt{9} \cdot (2+6)$.
+```{r Arithmetik8, exercise=TRUE}
+
+```
+
+```{r Arithmetik8-solution}
+
+sqrt(9)*(2+6)
+
+```
+
+<hr> <!-- Horizontale Trennlinie -->
+
+**Aufgabe 9:** Berechnen Sie das Ergebnis des Ausdrucks \( \sqrt{4} \cdot \frac{8^3 - \pi \cdot 8}{\frac{4}{2} + 16.75 \cdot 8^{\frac{4}{3}}} \). 
+
+<font color='darkred'>Hinweis: Verwenden Sie den ausgeschriebenen Begriff 'pi', um die Zahl zu repräsentieren.</font>
+```{r Arithmetik9, exercise=TRUE}
+
+```
+
+```{r Arithmetik9-solution}
+
+sqrt(4) * ((8^3 - pi * 8) / ((4/2) + 16.75 * 8^(4/3)))
+
+```
+
+<hr> <!-- Horizontale Trennlinie -->
+
+**Aufgabe 10:** Überprüfen Sie folgende Aussage: $4^2 + 3^2 = 7^2$
+```{r Arithmetik10, exercise=TRUE}
+
+```
+
+```{r Arithmetik10-solution}
+
+4^2 + 3^2 == 7^2
+
+```
+
+<hr> <!-- Horizontale Trennlinie -->
+
+**Aufgabe 11:** Überprüfen Sie folgende Aussage: $4^2 \neq \frac{{43 - 11}}{{2}}$
+```{r Arithmetik11, exercise=TRUE}
+
+```
+
+```{r Arithmetik11-solution}
+
+4^2 != ((43-11)/2)
+
+```
+
+<hr> <!-- Horizontale Trennlinie -->
+
+**Aufgabe 12:** Rufen Sie die Hilfe zur Funktion `summary` unter Verwendung zwei unterschiedlicher Methoden auf. 
+```{r Arithmetik12, exercise=TRUE}
+
+```
+
+```{r Arithmetik12-solution}
+
+?summary
+help(summary)
+
+```
+
+
+
+## Datenformate
+
+Willkommen im Abschnitt **Datenformate in R und RStudio**! 
+
+In diesem Bereich werden Ihnen Übungen zu den grundlegenden Datenstrukturen begegnen, die in der Programmiersprache R verwendet werden: **Skalare, Vektoren und Data.Frames.** Jede dieser Strukturen spielt eine wichtige Rolle in der Datenverarbeitung und -analyse. Viel Erfolg!
+
+<hr> <!-- Horizontale Trennlinie -->
+
+**Aufgabe 1:** Weisen Sie dem Skalar `a` den Wert 150 zu:
+```{r Datenformate1, exercise=TRUE}
+
+```
+
+```{r Datenformate1-solution}
+
+a = 150
+
+Alternative: a <- 150
+
+```
+
+<hr> <!-- Horizontale Trennlinie -->
+
+**Aufgabe 2:** Weisen Sie dem Skalar `b` das Ergebnis der Rechnung $3 \div 100$ zu und lassen Sie sich dieses zudem ausgeben. 
+
+<font color='darkred'>Achtung: Bitte führen Sie die Zuweisung mit einem Befehl (ohne Zwischenergebnisse) durch.</font>
+```{r Datenformate2, exercise=TRUE}
+
+```
+
+```{r Datenformate2-solution}
+
+b = 3/100
 b
-```
-
-Weiterführend können wir einen Skalar auch mit dem Ergebis einer Rechenoption bestehend aus anderen Skalaren belegen. 
-
-##### Aufgabe 
-Erstellen Sie hierzu den Skalar `a` mit dem Wert $50$, den Skalar `b` mit dem Wert $3$. Nun wollen wir einen dritten Skalar `c` mit dem Ergebnis der Rechenoperation $(a + b) \div b$ belegen. Lassen Sie sich das Ergebnis auch direkt ausgeben. 
-
-```{r Skalar3, exercise=TRUE, exercise.lines = 5}
 
 ```
 
-```{r Skalar3-hint}
-a = 50
-b = 3
-c = (a+b) / b
-c
-```
+<hr> <!-- Horizontale Trennlinie -->
 
-*Hinweis: Wenn Sie in diesem Übungssheet Rechenoperationen ausführen, müssen Sie Ihre Datenobjekte in jedem Eingabefeld wieder neu "belegen". In der Vollversion von R, welche Sie im 2. Semester kennenlernen, merkt sich `R` diese Objekte. Wenn Sie also zum Beispiel den Skalar `a` mit einem beliebigen Wert belegen, merkt sich `R` dies und Sie können durch die Eingabe von `a` jederzeit wieder mit dem Wert des Skalars `a` weiterrechnen. Dies gilt auch für Vektoren oder ganze Datensätze* 
-
-Skalare müssen nicht numerisch sein, sondern können auch Worte beinhalten. Wortobjekte heißen in `R` **characters** (engl. strings). In `R` schreibt man Worte immer in Anführungszeichen `""`.
-
-##### Aufgabe 
-Erstellen Sie nun den Skalar `a`, der das Wort `Charlotte Fresenius` und den Skalar `b`, der das Wort `Carl Remigius Fresenius` beinhaltet. Lassen Sie sich lediglich den Inhalt des Skalars `b` ausgeben. 
-
-```{r Skalar4, exercise=TRUE}
+**Aufgabe 3:** Weisen Sie dem Skalar `c` den Wert $50$, dem Skalar `d` den Wert $3$ und dem Skalar `e` das Ergebnis der Rechenoperation $(c + d) \div d$ zu. Lassen Sie sich das Ergebnis von `e` zudem ausgeben.
+```{r Datenformate3, exercise=TRUE}
 
 ```
 
-```{r Skalar4-hint}
-a = "Charlotte Fresenius"
-b = "Carl Remigius Fresenius"
-b
-```
+```{r Datenformate3-solution}
 
-Wie Sie sich vermutlich vorstellen können, behandelt R numerische und *character* Skalare unterschiedlich. Zum Beispiel lassen sich mit numerischen Skalaren grundlegende arithmetische Operationen durchführen (Addition, Subtraktion, Multiplikation…) – das funktioniert mit character Skalaren nicht. Um das auszuprobieren gehen Sie einfach zurück in Ihr letztes Eingabefeld und versuchen die Rechenoperation $a + b$ auszuführen. `R` wird Ihnen hier die Fehlermeldung <span style="color:red">*non-numeric argument to binary operator*</span> ausgeben. 
-
-### Vektor
-
-Machen wir weiter mit `Vektoren`. Ein Vektor Objekt ist einfach eine Kombination mehrerer Skalare in einem einzelnen Objekt (z.B. eine Zahlen- oder Wortreihe). Zum Beispiel könnten die Zahlen von 1-10 in einen Vektor mit der Länge 10 kombiniert werden. Oder die Buchstaben des Alphabets könnten in einen Vektor mit der Länge 26 gespeichert werden. Genau wie Skalare, können Vektoren numerisch oder characters sein (Aber nicht beides auf einmal!)
-
-Die einfachste Art einen Vektor zu erstellen ist mit der `c()` Funktion. Das c steht für *“concatenate”*, was auf Englisch so viel heißt wie “zusammenbringen”. Die `c()` Funktion nimmt mehrere Skalare als Input und erstellt einen Vektor, der diese Objekte enthält.
-
-Wenn man `c()` benutzt, muss man immer ein **Komma** zwischen die Objekte setzen (Skalare oder Vektoren), die man kombinieren möchte.
-
-##### Aufgabe 
-Lassen Sie uns die `c()` Funktion nutzen um einen **numerischen Vektor** zu erstellen der `a` heißt und die Zahlen von 1 bis 7 enthält. Lassen Sie sich das Ergebnis direkt ausgeben:
-
-```{r Vektor1, exercise=TRUE}
+c = 50
+d = 3
+e = (c+d) / d
+e
 
 ```
 
-```{r Vektor1-hint}
-a = c(1, 2, 3, 4, 5, 6, 7)
-a
-```
+<hr> <!-- Horizontale Trennlinie -->
 
-Sie können auch **character Vektoren** erstellen, indem Sie die `c()` Funktion auf einzelne character Skalare anwenden. 
-
-##### Aufgabe 
-Erstellen Sie einen Vektor, der die folgende Namen beinhaltet: `Freud`, `Wundt`, `Bandura`, `Watson`, `Jung`. Wir nennen diesen Vektor zur besseren Übersicht einmal `char.vec`. Lassen Sie sich den Inhalt des Vektors direkt ausgeben. 
-
-```{r Vektor2, exercise=TRUE}
+**Aufgabe 4:** Weisen Sie dem Skalar `f` das Ergebnis der Rechnoperation $5 + 4$, dem Skalar `g` den Wert $10$ zu und überprüfen Sie unter Verwendung der beiden Skalare, ob diese gleich sind.
+```{r Datenformate4, exercise=TRUE}
 
 ```
 
-```{r Vektor2-hint}
-char.vec = c("Freud", "Wundt", "Bandura", "Watson", "Jung")
-char.vec
-```
+```{r Datenformate4-solution}
 
-Mit Vektoren lassen sich auch Rechenoperationen ausführen. 
-
-##### Aufgabe 
-Erstellen Sie den Vektor `a` mit den Zahlen von 1 - 3 und den Vektor `b` mit den Zahlen von 4 - 6 und addieren diese zu einem neuen Vektor `c`. Lassen Sie sich den neuen Vektor `c` direkt anzeigen. Bei dieser Art der Addition wird jeweils die $n$te Zahl des Vektors `a` mit der $n$ten Zahl des Vektors `b` addiert. 
-
-```{r Vektor3, exercise=TRUE}
+f = 5+4
+g = 10
+f == g
 
 ```
 
-```{r Vektor3-hint}
-a = c(1, 2, 3)
-b = c(4, 5, 6)
-c = a + b 
-c
-```
+<hr> <!-- Horizontale Trennlinie -->
 
-Vektoren lassen sich über die `c()` Funktion auch aneinanderhängen. Anders als bei den Rechenoperationen funktioniert dies auch mit character Vektoren. 
-
-##### Aufgabe 
-Erstellen Sie die Vektoren `a` mit den Farben `blau` und `rot` sowie den Vektor `b` mit den Farben `gelb`und `grün`. Hängen Sie diese beiden Vektoren zu einem neuen Vektor `c` zusammen und lassen sich diesen anzeigen. 
-
-```{r Vektor4, exercise=TRUE}
+**Aufgabe 5:** Erstellen Sie den Skalar `h`, der das Wort `Charlotte Fresenius` und den Skalar `i`, der das Wort `Carl Remigius Fresenius` beinhaltet. Lassen Sie sich lediglich den Inhalt des Skalars `i` ausgeben. 
+```{r Datenformate5, exercise=TRUE}
 
 ```
 
-```{r Vektor4-hint}
-a = c("blau", "rot")
-b = c("gelb", "grün")
-c = c(a, b) 
-c
-```
+```{r Datenformate5-hint}
 
-
-### Faktor Variablen
-
-Wir haben bereits gelernt, wie man einen Vektor aus character Objekten erstellt. Manchmal brauchen wir in R jedoch Variablen, die nicht nur Worte enthalten, sondern dem Programm mitteilen, dass es sich um feste Gruppen oder **Kategorien** handelt. Es geht also nicht nur um eine "Sammlung" von Worten (z.B. Nachnamen von Probanden), sondern um festgelegte Analyseeinheiten. Solche Variablen heißen in R `factor`. 
-
-In einer factor Variable ist jeder Kategorie eine Zahl zugeordnet (z.B. 1 = männlich, 2 = weiblich).
-
-Um Faktor Variablen zu erstellen, machen wie einen Vorgang, den man **Kodieren** nennt und das geht so:
-
-Wir haben einen Vektor mit Codes 1 und 2 für männlich und weiblich vorliegen:
-
-```{r echo=TRUE}
-geschlecht = c(1, 2, 2, 1, 2)
-# Das Ergebnis ausgeben
-geschlecht
-```
-
-In dieser Form erkennt R diesen Vektor als numerische Variable. Um Sie in einen Faktor umzuwandeln, definieren wir die Zahlen (1 und 2) als `levels` des Faktors und geben dann jedem level einen Namen (`labels`):
-
-```{r echo=TRUE}
-geschlecht = factor(geschlecht, levels = c(1,2), labels = c("männlich", "weiblich"))
-# Das Ergebnis ausgeben
-geschlecht
-```
-
-Das Ergebnis ist eine codierte Faktorvariable. Wenn wir Sie uns ausgeben lassen erhalten wir unter den Merkmalsausprägungen eine Liste mit den einzelnen Kategorien (levels) des Faktors.
-
-R wird uns für Faktoren alle Ergebnisse nach der **Reihenfolge** der levels anzeigen. Wenn wir keine Faktorvariable haben, sondern eine character Variable funktioniert die Reihenfolge immer alphabetisch.
-
-##### Aufgabe 
-Erstellen Sie nun im folgenden Eingabefeld den Vektor `Wohnort` `c(1,2,1,3,2,1)` mit den Codes $1$ für `München`, $2$ für `Hamburg` und $3$ für `Köln`. Erstellen Sie erst einen numerischen Vektor und lassen diesen dann in einen Faktor umwandeln und anzeigen. 
-
-*Hinweis: Da `R` in dieser Übung keine Information zwischen den einzelnen Eingabefeldern überträgt, müssen Sie die beiden Schritte, die Ihnen in zwei unterschiedlichen Eingabefeldern gezeigt wurden, nun in einem kombinieren* 
-
-```{r Faktor, exercise=TRUE}
+h = "Charlotte Fresenius"
+i = "Carl Remigius Fresenius"
+i
 
 ```
 
-```{r Faktor-hint}
-Wohnort = c(1,2,1,3,2,1)
-Wohnort = factor(Wohnort, levels = c(1,2,3), labels = c("München", "Hamburg", "Köln"))
-Wohnort
-```
+<hr> <!-- Horizontale Trennlinie -->
 
-*An dieser Stelle ein weiterer Hinweis: `R` ist "case sensitive". Das bedeutet, dass Groß- und Kleinschreibung relevant ist. Wenn Sie also beispielsweise den Vektor `Wohnort`erstellen, wird `R` diesen nicht wiederfinden, wenn Sie `wohnort` eingeben.*
-
-### Vektor Indizierung
-
-Manchmal möchten wir wieder einen einzelnen Skalar auswählen, der als Teil von einem Vektor gespeichert ist. Diese **Auswahl** eines Einzelelements nennt man **Indizierung**. Die Auswahl eines kleineren Objekts aus einem größeren Objekt funktioniert in `R` immer mit `[]`. 
-
-Benötigen wir aus einem Vektor z.B. genau den 3. Skalar, schreiben wir einfach eine 3 in eckige Klammern hinter den Vektor.
-
-##### Aufgabe 
-Erstellen Sie nun den Vektor `color`, der die folgenden Farben enthält: `blau`, `rot`, `grün`, `gelb`. Lassen Sie sich lediglich die zweite Farbe ausgeben (In unserem Fall sollte in dem Ausgabefeld also "rot" erscheinen)
-
-```{r Indizierung1, exercise=TRUE}
+**Aufgabe 6:** Speichern Sie die drei Grundfarben `blau`, `gelb` und `rot` in einem Vektor mit dem Namen `Farben` und lassen sich diesen ausgeben. Wählen Sie aus dem Vektor anschließend die Farbe `blau` aus und speichern Sie diese als Objekt mit dem Namen `Wasser`. Lassen Sie sich diesen zudem ausgeben.
+```{r Datenformate6, exercise=TRUE}
 
 ```
 
-```{r Indizierung1-hint}
-color = c("blau", "rot", "grün", "gelb")
-color[2]
-```
+```{r Datenformate6-solution}
 
-### Erstellen von Datenmatrizen
+Farben = c("blau", "gelb", "rot")
+Farben
 
-In der Psychologie beobachten wir für unsere Studien fast immer mehr als eine Variable. Wir könnten diese alle in einzelnen Vektoren speichern und uns die Objektnamen merken. Z.B.:
-
-```{r echo=TRUE}
-Name = c("Max", "Maja", "Mia", "Moritz", "Markus")
-Alter = c(20, 31, 25, 34, 51)
-Diagnose = c("Depression", "Zwangsstörung", "Depression", "Soziale Phobie", "Depression")
-```
-
-Praktischer ist es, die einzelnen Vektoren in Tabellenform zu speichern, der **Datenmatrix**. In R heißen Datenmatrizen `data.frame`. Wir können die Vektoren folgendermaßen zu einem data.frame kombinieren:
-
-```{r echo=TRUE}
-df = data.frame(Name, Alter, Diagnose)
-# Das Ergebnis ausgeben
-df
-```
-
-Dies wollen wir direkt einmal üben: 
-
-##### Aufgabe 
-Erstellen Sie eine Datenmatrix mit dem Namen `Personen` mit folgenden Informationen: <br>
-*(Wir betrachten die Variablen `Name`, `Alter`, `Wohnort`)*
-
-`Peter, 41, Mainz` <br>
-`Susanne, 23, Regenburg` <br>
-`Hannes, 31, München` <br>
-`Jana, 43, Köln`
-
-Lassen Sie sich die Datenmatrix direkt ausgeben. 
-
-```{r df1, exercise=TRUE, exercise.lines = 5}
+Wasser = Farben[1]
+Wasser
 
 ```
 
-```{r df1-hint}
-Name = c("Peter", "Susanne", "Hannes", "Jana")
-Alter = c(41, 23, 31, 43)
-Wohnort = c("Mainz", "Regensburg", "München", "Köln")
-Personen = data.frame(Name, Alter, Wohnort)
-Personen
-```
+<hr> <!-- Horizontale Trennlinie -->
 
-Wie in jeder Datenmatrix entsprechen die **Zeilen** den einzelnen Personen (Fällen) und die **Spalten** den Variablen. 
-
-`R` bezeichnet Zeilen und Spalten als **rows** und **columns**. Wollen wir z.B. wissen, wie viele Zeilen der data.frame hat, können wir `nrow()` benutzen. Für die Anzahl der Spalten nehmen wir `ncol()`:
-
-Probieren Sie dies einmal in Ihrem gerade erstellten Datensatz aus. Fügen Sie am Ende Ihres Codes einfach entweder `nrow(Personen)` oder `ncol(Personen)` ein.
-
-Wenn wir die einzelnen Vektoren nicht bereits vorher definiert haben, können wir auch alles in einem Schritt machen. Das Ergebnis ist das gleiche:
-
-```{r echo=TRUE}
-df = data.frame("Name" = c("Max", "Maja", "Mia", "Moritz", "Markus"),
-                "Alter" = c(20, 31, 25, 34, 51),
-                "Diagnose" = c("Depression", "Zwangsstörung", "Depression", "Soziale Phobie", "Depression")
-                )
-# Das Ergebnis ausgeben
-df
-```
-
-Wollen wir wieder eine einzelne Variable aus dem Datensatz benutzen, können wir diese über das `$` Zeichen anwählen:
-
-```{r echo=TRUE}
-df$Alter
-```
-
-### Indizierung
-
-Wollen wir aus dem data.frame wieder einzelne Elemente verwenden, nutzen wir wieder die Indizierung. Auch hier brauchen wir die `[]`. Da wir im data.frame Zeilen und Spalten haben, brauchen wir eine Möglichkeit, beides auszuwählen, wie ein Curser der von links nach rechts, bzw. von oben nach unten läuft. 
-
-Wir trennen dafür unsere `[]` mit einem Komma `[,]`. Alles, was **links vom Komma** steht, bezieht sich auf Zeilen alles **rechts vom Komma** bezieht sich auf Spalten.
-
-##### Aufgabe 
-Um dies zu Üben erstellen Sie wieder eine Datenmatrix mit dem Namen `Personen` mit folgenden Informationen: <br>
-*(Wir betrachten die Variablen `Name`, `Alter`, `Wohnort`)*
-
-`Peter, 41, Mainz` <br>
-`Susanne, 23, Regenburg` <br>
-`Hannes, 31, München` <br>
-`Jana, 43, Köln`
-
-Lassen Sie sich im Ausgabefeld nun lediglich den Wohnort von Susanne anzeigen. 
-
-*Hinweis: Sie können den Code Ihres Datensatzes aus dem letzten Eingabefeld kopieren, um nicht alles neu schreiben zu müssen*
-
-```{r Indizierung_df, exercise=TRUE, exercise.lines = 5}
+**Aufgabe 7:** Erstellen Sie den Character-Vektor `Freunde` mit den Namen `Florian`, `Eva` und `Philipp` und lassen sich diesen ausgeben. Fügen Sie anschließend den Namen `Tanja` hinzu und überprüfen Sie Ihre Ergänzung.
+```{r Datenformate7, exercise=TRUE}
 
 ```
 
-```{r Indizierung_df-hint}
-Name = c("Peter", "Susanne", "Hannes", "Jana")
-Alter = c(41, 23, 31, 43)
-Wohnort = c("Mainz", "Regensburg", "München", "Köln")
-Personen = data.frame(Name, Alter, Wohnort)
-Personen[2,3]
+```{r Datenformate7-hint}
+
+Freunde <- c("Florian", "Eva", "Philipp")
+Freunde
+
+Freunde <- c(Freunde, "Tanja")
+Freunde
+
 ```
 
-**Nun haben Sie bereits einige der wichtigsten Grundfunktionen von `R` kennengelernt und wir können dazu übergehen, vorlesungsbegleitende Übungsaufgaben zu erarbeiten.**
+<hr> <!-- Horizontale Trennlinie -->
+
+**Aufgabe 8:** Erstellen Sie einen Vektor `j`, der die Werte der ganzen Zahlen von 1 bis 7 enthält. Erstellen Sie anschließend eine Matrix `k`, welche die Werte des Vektors `j` in 3 Zeilen und 6 Spalten enthält. Wählen Sie zuletzt die dritte Zeile der Matrix aus und weisen Sie diese dem Vektor `l` zu.
+```{r Datenformate8, exercise=TRUE}
+
+```
+
+```{r Datenformate8-solution}
+
+j = c(1, 2, 3, 4, 5, 6, 7)
+j
+
+(Alternative: j = c(1:7))
+
+k <- matrix(j, nrow = 3, ncol = 6)
+
+l = m[3, ]
+
+```
+
+<hr> <!-- Horizontale Trennlinie -->
+
+**Aufgabe 9:** Bitte erstellen Sie den Vektor `m`, der die Werte 15, 30, NA, 40 und 80 enthält. Anschließend berechnen Sie den Mittelwert von m mithilfe der Funktion `mean`. 
+
+<font color='darkred'>Hinweis: Bitte sehen Sie in der Hilfe zum Befehl nach, wie Sie fehlende Werte bei der Berechnung ignorieren können, und führen Sie die Berechnung mit dem entsprechenden optionalen Argument durch.</font>
+```{r Datenformate9, exercise=TRUE}
+
+```
+
+```{r Datenformate9-solution}
+
+m = c(15, 30, NA, 40, 80)
+mean(m) # Ergebnis ist NA
+mean(m, na.rm=TRUE) # Fehlende Werte (NAs) werden ignoriert
+
+```
+
+<hr> <!-- Horizontale Trennlinie -->
+
+**Aufgabe 10:** Erstellen Sie den Vektor `sd`, der die Standardabweichungen 5.8, 11.5, 3.4 und 1 verschiedener Variablen enthält. Berechnen Sie anschließend (in einem Schritt) die Varianzen dieser Variablen.
+```{r Datenformate10, exercise=TRUE}
+
+```
+
+```{r Datenformate10-solution}
+
+sd = c(5.8, 11.5, 3.4, 1)
+sd^2
+
+```
+
+<hr> <!-- Horizontale Trennlinie -->
+
+**Aufgabe 11:** Erstellen Sie einen Vektor mit dem Namen `MeineListe`, welche die folgenden Elemente enthält: "Apfel", "Banane", "Orange", 10, 20, 40. Wählen Sie anschließend das dritte Element der Liste aus und lassen Sie es sich ausgeben.
+```{r Datenformate11, exercise=TRUE}
+
+```
+
+```{r Datenformate11-solution}
+
+MeineListe = c("Apfel", "Banane", "Orange", 10, 20, 30)
+MeineListe[3]
+
+```
+
+<hr> <!-- Horizontale Trennlinie -->
+
+**Aufgabe 12:** Erstellen Sie einen Data.Frame mit dem Namen `Studierende`, welcher die Vektoren `Vornamen`, `Nachnamen` und `Alter` beinhaltet. Füllen Sie entsprechende Vektoren mit den entsprechenden Daten: Anna, Max, Lena - Müller, Schmidt, Meier - 25, 22, 28. Greifen Sie nun auf den Nachnamen der zweiten Person zu und lassen Sie sich diesen ausgeben.
+```{r Datenformate12, exercise=TRUE}
+
+```
+
+```{r Datenformate12-solution}
+
+Studierende = data.frame(Vornamen = c("Anna", "Max", "Lena"),
+                            Nachnamen = c("Müller", "Schmidt", "Meier"),
+                            Alter = c(25, 22, 28))
+
+Studierende[2, 2]
+                    
+```
+
+<hr> <!-- Horizontale Trennlinie -->
+
+**Aufgabe 13:** Erstellen Sie einen leeren Vektor mit dem Namen `Einkaufsliste`. Fügen Sie nun die folgenden Elemente hinzu, indem Sie den Befehl `append()` verwenden: Milch, Eier, Brot. Lassen Sie sich anschließend die aktualisierte Einkaufsliste ausgeben.
+```{r Datenformate13, exercise=TRUE}
+
+```
+
+```{r Datenformate13-solution}
+
+Einkaufsliste = c()
+
+Einkaufsliste = append(Einkaufsliste, "Milch")
+Einkaufsliste = append(Einkaufsliste, "Eier")
+Einkaufsliste = append(Einkaufsliste, "Brot")
+Einkaufsliste
+                    
+```
+
+<hr> <!-- Horizontale Trennlinie -->
+
+**Aufgabe 14:** Ihnen liegt ein Dataframe mit dem Namen `sales_data` mit Verkaufsdaten für verschiedene Produkte und Regionen vor: Produkt = c("Produkt A", "Produkt B", "Produkt A", "Produkt B", "Produkt A"), Region = c("Nord", "Süd", "Nord", "Süd", "West"), Verkaufszahlen = c(100, 150, 200, 120, 180). Erstellen Sie den Data.Frame und wählen Sie die Verkaufszahlen für Produkt A in der Nord-Region aus und lassen Sie sich lediglich den Mittelwert dieser ausgeben. 
+
+<font color='darkred'>Hinweis: Verwenden Sie bitte verschiedene Indizierungstechniken, um die benötigten Daten in einem Schritt auszuwählen und verwenden Sie entsprechende Indizierung als Element der zusätzlich notwendigen Funktion.</font>
+```{r Datenformate14, exercise=TRUE}
+
+```
+
+```{r Datenformate14-solution}
+
+sales_data = data.frame(Produkt = c("Produkt A", "Produkt B", "Produkt A", "Produkt B", "Produkt A"),
+                        Region = c("Nord", "Süd", "Nord", "Süd", "West"), 
+                        Verkaufszahlen = c(100, 150, 200, 120, 180)
+                        )
+
+mean(sales_data$Verkaufszahlen[sales_data$Produkt == "Produkt A" & sales_data$Region == "Nord"])
+
+```
+
+
+hallo jani
+
 
 
