@@ -1,0 +1,27 @@
+```{r}
+
+res = 1 - (1 - 0.05)^(1/5)
+
+```
+
+
+
+Question 
+======== 
+
+In einem weiteren Schritt möchten wir nun für die Kumulierung der α-Fehler korrigieren. Dafür verwenden wir die Adjustierung nach Boferroni. Wie lautet das auf drei Nachkommastellen gerundete adjustierte α-Fehler Niveau, welches wir den einzelnen Tests zugrunde legen müssten? 
+
+
+Solution
+========
+
+$$ α_{adj} = 1 − (1 − α)^{1/k} $$
+
+
+Meta-information
+================
+exname: Alpha
+extype: num
+exsolution: `r round(res,3)`
+extol: 0.000
+

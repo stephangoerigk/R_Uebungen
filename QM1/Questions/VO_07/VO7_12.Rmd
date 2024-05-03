@@ -1,27 +1,33 @@
-```{r}
-
-res = 1 - (1 - 0.05)^(1/5)
-
-```
-
-
 
 Question 
 ======== 
 
-In einem weiteren Schritt möchten wir nun für die Kumulierung der α-Fehler korrigieren. Dafür verwenden wir die Adjustierung nach Boferroni. Wie lautet das auf drei Nachkommastellen gerundete adjustierte α-Fehler Niveau, welches wir den einzelnen Tests zugrunde legen müssten? 
+Was bedeutet ein Signifikanzniveau von α = .05?
 
+Answerlist
+----------
+ 
+* Durch die 5% wird ein bestimmter Verwerfungsbereich festgelegt
+* Wir erlauben uns eine 5%ige Wahrscheinlichkeit, einen α-Fehler zu begehen
+* Wir erlauben uns eine 5%ige Wahrscheinlichkeit, unsere Hypothese fälschlicherweise abzulehnen
+* Ein Signifikanzniveau von α = .05 ist in der Wissenschaft eher unüblich
+* Es bedeutet, dass der p-Wert unter 0,05 liegen muss, um die Nullhypothese abzulehnen
 
 Solution
 ========
 
-$$ α_{adj} = 1 − (1 − α)^{1/k} $$
+Answerlist
+----------
 
+* Richtig. Durch die Festlegung eines Signifikanzniveaus von 0,05 werden 5% der Wahrscheinlichkeit auf beiden Seiten des Verwerfungsbereichs festgelegt.
+* Richtig. Das Signifikanzniveau von 0,05 bedeutet, dass wir uns eine 5%ige Wahrscheinlichkeit (oder weniger) erlauben, die Nullhypothese fälschlicherweise abzulehnen, wenn sie tatsächlich wahr ist.
+* Falsch. Ein Signifikanzniveau von 0,05 bedeutet nicht, dass wir uns eine 5%ige Wahrscheinlichkeit erlauben, unsere Hypothese fälschlicherweise abzulehnen. Es bezieht sich auf die Wahrscheinlichkeit eines Fehlers vom Typ I.
+* Falsch. Ein Signifikanzniveau von α = .05 ist ein gängiges Niveau, das in der Wissenschaft häufig verwendet wird.
+* Richtig. Ein Signifikanzniveau von α = .05 bedeutet, dass der p-Wert unter 0,05 liegen muss, um die Nullhypothese abzulehnen.
 
 Meta-information
 ================
-exname: Alpha
-extype: num
-exsolution: `r round(res,3)`
-extol: 0.000
-
+exname: significance_level_explanation
+extype: mchoice 
+exsolution: 11001
+exshuffle: TRUE

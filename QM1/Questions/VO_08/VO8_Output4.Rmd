@@ -1,0 +1,82 @@
+```{r data generation, echo = FALSE, results = "hide"}
+## data
+n <- 40 + sample(1:12, 2) * 3
+Wartezeit <- rnorm(sum(n), sd = sample(30:40, 1)/10) + rep(sample(30:80, 2)/10, n)
+Wartezeit[Wartezeit < 0] <- 0
+dat <- data.frame(
+  Wartezeit = Wartezeit,
+  Supermarkt = factor(rep(1:2, c(n[1], n[2])), levels = 1:2, labels = c("REWE", "LIDL"))
+)
+
+## questions/answer
+questions <- character(5)
+solutions <- logical(5)
+explanations <- character(5)
+
+tt <- t.test(Wartezeit ~ Supermarkt, data = dat, var.equal = TRUE,
+  alternative = sample(c("less", "greater", "two.sided"), 1))
+
+questions[1] <- "Der absolute Wert der Teststatistik ist größer als 1.96."
+solutions[1] <- abs(tt$statistic) > 1.96
+explanations[1] <- paste("Der absolute Wert der Teststatistik ist", 
+  round(abs(tt$statistic), digits = 3), ".", sep = "")
+
+questions[2] <- "Es wurde ein einseitiger Test durchgeführt."
+solutions[2] <- tt$alternative != "two.sided"
+explanations[2] <- paste("Der Test soll zeigen, dass die Differenz der Mittelwerte ",
+  switch(tt$alternative, "two.sided" = "ungleich", "less" = "kleiner als", 
+  "greater" = "größer als"), "0 ist.")
+
+questions[3] <- "Der p-Wert ist größer als 0.05"
+solutions[3] <- tt$p.value > 0.05
+explanations[3] <- paste("Der p-Wert isr", format.pval(tt$p.value, digits = 3),
+  ".", sep = "")
+
+questions[4] <- paste("Der Test zeigt, dass die Wartezeit bei REWE länger ist ",
+  "als bei LIDL")
+solutions[4] <- tt$p.value < 0.05 & tt$alternative != "less" & diff(tt$estimate) < 0
+explanations[4] <- if (solutions[4]) paste("Der Test ist signifikant ($p < 0.05$)",
+  "und somit wird gezeigt, dass die Differenz der Mittelwerte",
+  ifelse(tt$alternative == "two.sided", "unequal to ", "larger than"), "0.") else 
+  paste(ifelse(tt$alternative != "less", "", paste("Der Test soll zeigen, dass",
+  "die Wartezeit bei REWE kürzer ist als bei LIDL")),
+  ifelse(tt$p.value < 0.05, "", "Der Test ist nicht signifikant ($p \\ge 0.05$)."))
+
+questions[5] <- paste("Der Test zeigt, dass die Wartezeit bei LIDL länger ist ",
+  "als bei REWE")
+solutions[5] <- tt$p.value < 0.05 & tt$alternative != "greater" & diff(tt$estimate) > 0
+explanations[5] <- if (solutions[5]) paste("Der Test ist nicht signifikant ($p < 0.05$)",
+  "und somit wird gezeigt, dass die Differenz der Mittelwerte",
+  ifelse(tt$alternative == "two.sided", "unequal to", "smaller than"),
+  "0.") else paste(ifelse(tt$alternative != "greater", "", 
+  paste("Der Test soll zeigen, dass die Wartezeit bei REWE länger ist als bei LIDL")),
+  ifelse(tt$p.value < 0.05, "", "Das Testergebnis ist nicht signifikant ($p \\ge 0.05$)."))
+```
+
+Question
+========
+
+Verglichen wird die Wartezeit (in Minuten) an der Kasse von zwei Supermarktketten mit unterschiedlichen Kassensystemen. Der folgende statistische Test wurde durchgeführt:
+
+```{r test output, echo = FALSE, comment = NA}
+print(tt)
+```
+
+Welche Aussagen sind korrekt? (Significance level 5%)
+
+```{r questionlist, echo = FALSE, results = "asis"}
+answerlist(questions, markup = "markdown")
+```
+
+Solution
+========
+
+```{r solutionlist, echo = FALSE, results = "asis"}
+answerlist(ifelse(solutions, "True", "False"), explanations, markup = "markdown")
+```
+
+Meta-information
+================
+extype: mchoice
+exsolution: `r mchoice2string(solutions)`
+exname: 2-sample t-test

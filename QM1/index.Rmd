@@ -456,6 +456,46 @@ exams2learnr("Questions/VO_06/VO6_14.Rmd", allow_retry = TRUE)
 
 ## Einheit 7 - Hypothesen und Hypothesentests
 
+```{r VO7_1, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_07/VO7_1.Rmd", allow_retry = TRUE)
+```
+
+```{r VO7_2, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_07/VO7_2.Rmd", allow_retry = TRUE)
+```
+
+```{r VO7_3, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_07/VO7_3.Rmd", allow_retry = TRUE)
+```
+
+```{r VO7_4, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_07/VO7_4.Rmd", allow_retry = TRUE)
+```
+
+```{r VO7_5, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_07/VO7_5.Rmd", allow_retry = TRUE)
+```
+
+```{r VO7_6, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_07/VO7_6.Rmd", allow_retry = TRUE)
+```
+
+```{r VO7_7, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_07/VO7_7.Rmd", allow_retry = TRUE)
+```
+
+```{r VO7_8, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_07/VO7_8.Rmd", allow_retry = TRUE)
+```
+
+```{r VO7_9, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_07/VO7_9.Rmd", allow_retry = TRUE)
+```
+
+```{r VO7_10, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_07/VO7_10.Rmd", allow_retry = TRUE)
+```
+
 ```{r VO7_11, message = FALSE, warning=FALSE}
 exams2learnr("Questions/VO_07/VO7_11.Rmd", allow_retry = TRUE)
 ```
@@ -464,204 +504,47 @@ exams2learnr("Questions/VO_07/VO7_11.Rmd", allow_retry = TRUE)
 exams2learnr("Questions/VO_07/VO7_12.Rmd", allow_retry = TRUE)
 ```
 
-
-
-
-```{r quiz7_1, echo = FALSE}
-quiz(
-  question("Die Nullhypothese",
-    answer("Beinhaltet oft die neue Annahme, den angenommenen Effekt."),
-    answer("Ist das Gegenstück zur eigentlichen Untersuchungshypothese", correct = TRUE),
-    answer("Drückt eine Unterschiedlichkeit von einem Referenzwert aus"),
-    answer("Stellt meistens den aktuellen Zustand oder anders ausgedrückt den „Standard“ dar, gegen den getestet wird", correct = TRUE),
-    allow_retry = TRUE
-  )
-    )
+```{r VO7_13, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_07/VO7_13.Rmd", allow_retry = TRUE)
 ```
 
-```{r quiz7_2, echo = FALSE}
-quiz(
-  question("<Taxifahrer haben einen besseren Orientierungssinn als Nicht-Taxisfahrer> ist eine ",
-    answer("einseitige H0"),
-    answer("ungerichtete H1"),
-    answer("gerichtete H1", correct = TRUE),
-    answer("zweiseitige H0"),
-    allow_retry = TRUE
-  )
-    )
+#### Weitere Übungsaufgaben
+```{r VO7_uebung1, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_07/VO7_uebung_1.Rmd", allow_retry = TRUE)
 ```
 
-```{r quiz7_3, echo = FALSE}
-quiz(
-  question("Zur Prüfung der Hypothese <Es besteht ein Unterschied zwischen Frauen und Männern hinsichtlich der mentalen Drehung im 3D Raum> benötigt man",
-    answer("einen linksseitigen Test"),
-    answer("einen zweiseitigen Test", correct = TRUE),
-    answer("einen rechtsseitigen Test"),
-    answer("einen einseitigen Test"),
-    allow_retry = TRUE
-  )
-    )
+```{r VO7_uebung2, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_07/VO7_uebung2.Rmd", allow_retry = TRUE)
 ```
 
-```{r quiz7_4, echo = FALSE}
-quiz(
-  question("Wie und wann sollten Hypothesen formuliert werden?",
-    answer("vor der eigenen Untersuchung", correct = TRUE),
-    answer("mit Berücksichtigung der aktuellen Daten"),
-    answer("aufgrund inhaltlicher Kriterien", correct = TRUE),
-    answer("nach der Datenerhebung"),
-    allow_retry = TRUE
-  )
-    )
-```
-
-```{r quiz7_5, echo = FALSE}
-quiz(
-  question("Der kritische Wert",
-    answer("muss für ein signifikantes Ergebnis überschritten werden", correct = TRUE),
-    answer("muss für ein signifikantes Ergebnis unterschritten werden"),
-    answer("ist unabhängig vom Signifikanzniveau"),
-    answer("ist bei t-Verteilung und z-Verteilung identisch"),
-    allow_retry = TRUE
-  )
-    )
-```
-
-```{r quiz7_6, echo = FALSE}
-quiz(
-  question(" NV-Approximation der Binomialverteilung",
-    answer("Ist bei kleinen Stichproben gegeben"),
-    answer("erlaubt Gleichsetzung der NV Varianz mit np(1-p)",correct = TRUE),
-    answer("Ist bei großen Stichproben gegeben",correct = TRUE),
-    answer("erfordert eine Poisson Verteilung"),
-    allow_retry = TRUE
-  )
-    )
-```
-
-```{r quiz7_7, echo = FALSE}
-quiz(
-  question("Der p-Wert...",
-    answer("macht zusätzliche Prüfung erforderlich, wenn einseitige Hypothesen geprüft werden.", correct = TRUE),
-    answer("gibt die Wahrscheinlichkeit für den Fehler erster Art an.", correct = TRUE),
-    answer("muss durch 2 dividiert werden, wenn einseitiger p-Wert angegeben ist."),
-    answer("hat den Vorteil, dass bei der Entscheidung keine Tabelle der Verteilung der Teststatistik benötigt wird", correct = TRUE),
-    allow_retry = TRUE
-  )
-    )
-```
-
-```{r quiz7_8, echo = FALSE}
-quiz(
-  question("Was ist mit Bezug auf Fehler beim Hypothesentest korrekt?",
-    answer("Fehler 1. Art ist, wenn die Nullhypothese fälschlicherweise beibehalten wird, obwohl die Alternativhypothese wahr ist"),
-    answer("Fehler 2. Art ist, wenn die Nullhypothese fälschlicherweise beibehalten wird, obwohl die Alternativhypothese wahr ist", correct = TRUE),
-    answer("alpha--Fehler ist, wenn die Nullhypothese fälschlicherweise verworfen wird und die Alternativhypothese angenommen wird", correct = TRUE),
-    answer("Die statistische Power errechnet sich als 1-beta Fehlerwahrscheinlichkeit.", correct = TRUE),
-    allow_retry = TRUE
-  )
-    )
-```
-
-```{r quiz7_9, echo = FALSE}
-quiz(
-  question("Wovon hängt die Teststärke (Power) ab?",
-    answer("Signifikanzniveau", correct = TRUE),
-    answer("Größe des Effekts", correct = TRUE),
-    answer("Stichprobenumfang", correct = TRUE),
-    answer("Ein- oder zweiseitige Alternativhypothese", correct = TRUE),
-    allow_retry = TRUE
-  )
-    )
-```
-
-```{r quiz7_10, echo = FALSE}
-quiz(
-  question("Mit der Alpha-Fehler-Kumulierung ist gemeint, dass...",
-    answer("Der Fehler 2. Art mit Anzahl der Test wahrscheinlicher wird"),
-    answer("Die Testmacht sinkt"),
-    answer("Der Fehler 1. Art mit Anzahl der Test wahrscheinlicher wird", correct = TRUE),
-    answer("das Signifikanzniveau adjustiert werden muss", correct = TRUE),
-    allow_retry = TRUE
-  )
-    )
-```
-
-```{r quiz7_11, echo = FALSE}
-quiz(
-  question("Welche sind korrekte Schritte beim Durchführen von Hypothesentests",
-    answer("Aufstellen des Hypothesenpaars", correct = TRUE),
-    answer("Entscheidung: Test ist signifikant, nicht-signifikant oder leicht-signifikant"),
-    answer("Festlegung des Signifikanzniveaus", correct = TRUE),
-    answer("Berechnen des Signifikanzniveaus"),
-    answer("Vergleich kritischer Wert und empirischer (errechneter) Wert", correct = TRUE),
-    allow_retry = TRUE
-  )
-    )
-```
-
-```{r quiz7_12, echo = FALSE}
-quiz(
-  question("Welche sind Beispiele für Teststatistiken?",
-    answer("z-Wert", correct = TRUE),
-    answer("t-Wert", correct = TRUE),
-    answer("q-Wert"),
-    answer("F-Wert", correct = TRUE),
-    answer("r-Wert"),
-    answer("χ2-Wert", correct = TRUE),
-    allow_retry = TRUE
-  )
-    )
-```
-
-```{r quiz7_13, echo = FALSE}
-quiz(
-  question("Was sind Beispiele für gerichtete Hypothesen?",
-    answer("Männer sind größer als Frauen", correct = TRUE),
-    answer("Geld beeinflusst die Zufriedenheit von Menschen"),
-    answer("Die Durchschnittseinkommen von Männern und Frauen unterscheiden sich"),
-    answer("Eine Therapie kann depressive Symptome lindern"),
-    allow_retry = TRUE
-  )
-    )
-```
-
-```{r quiz7_14, echo = FALSE}
-quiz(
-  question("Was sind Beispiele für ungerichtete Hypothesen?",
-    answer("Eine Therapie kann depressive Symptome lindern"),
-    answer("Geld beeinflusst die Zufriedenheit von Menschen", correct = TRUE),
-    answer("Die Durchschnittseinkommen von Männern und Frauen unterscheiden sich", correct = TRUE),
-    answer("Die Lebenszufriedenheit von Menschen die in Hamburg wohnen unterscheidet sich von der Lebenszufriedenheit von Menschen die in München wohnen", correct = TRUE),
-    allow_retry = TRUE
-  )
-    )
-```
-
-```{r quiz7_15, echo = FALSE}
-quiz(
-  question("Was bedeutet ein Signifikanzniveau von α = .05",
-    answer("Durch die 5% wird ein bestimmter Verwerfungsbereich festgelegt", correct = TRUE),
-    answer("Wir erlauben uns eine 5%ige Wahrscheinlichkeit, einen α-Fehler zu begehen", correct = TRUE),
-    answer("Wir erlauben uns eine 5%ige Wahrscheinlichkeit, unsere Hypothese fälschlicherweise abzulehnen"),
-    answer("Ein Signifikanzniveau von α = .05 ist in der Wissenschaft eher unüblich"),
-    allow_retry = TRUE
-  )
-    )
-```
 
 ## Einheit 8 - *t*-Test
 
-## Einheit 9 - Übungsaufgaben t-Test
 
-```{r VO9_2, message = FALSE, warning=FALSE}
-exams2learnr("Questions/VO_09/VO9_2.Rmd", allow_retry = TRUE)
+
+#### Weitere Übungsaufgaben Hypothesentests
+
+
+```{r VO8_Output2, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_08/VO8_Output2.Rmd", allow_retry = TRUE)
+```
+
+```{r VO8_Output3, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_08/VO8_Output3.Rmd", allow_retry = TRUE)
+```
+
+```{r VO8_Output4, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_08/VO8_Output4.Rmd", allow_retry = TRUE)
+```
+
+```{r VO8_Output5, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_08/VO8_Output5.Rmd", allow_retry = TRUE)
 ```
 
 
 
-## Einheit 10 - Korrelation
+## Einheit 9 - Korrelation
 
-## Einheit 11 - Korrelation (2)
+## Einheit 10 - Verfahren für Nominaldaten - χ2 Test
 
-## Einheit 12 - Effektstärke und Powerberechnung
+## Einheit 11 - Effektstärke und Power

@@ -20,10 +20,10 @@ Solution
 Answerlist
 ----------
 
-* Richtig. 
-* Richtig. 
-* Richtig. 
-* Richtig. 
+* Richtig. (Je kleiner α, desto weniger Power)
+* Richtig. (-> des Unterschiedes zwischen Beobachtungs- und Referenzwerts)
+* Richtig. (je größer n, desto mehr Power)
+* Richtig. (bei einseitiger H1 höhere Power)
 
 Meta-information
 ================

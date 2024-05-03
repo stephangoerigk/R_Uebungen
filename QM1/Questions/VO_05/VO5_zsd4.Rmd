@@ -19,8 +19,14 @@ Solution
 
 Formel für z-Transformation: 
 $$ z_i = \frac{x_i-\mu}{s} $$
-1. Schritt: Ablesen z-Wert für Fläche 0.9 -> $$z_{0.9015} = 1.29$$ 
-$$\rightarrow$$ Warum nehmen wir 0.9015 und nicht 0.8997
+1. Schritt: Ablesen z-Wert für Fläche 0.9: $$z_{0.9015} = 1.29$$ 
+
+Warum nehmen wir 0.9015 und nicht 0.8997? Wenn wir uns für 0.8997 entscheiden würden, würde die Person lediglich zu den 10,03 schlausten % gehören. Es gibt also eine 0,07%ige Wahrscheinlichkeit, dass die Person nicht zu den 10 schlausten % gehört. 
+
+2. Schritt: In Formel einsetzen 
+$$ 1.29 = \frac{x_i-100}{15} $$
+$$ 1.29 * 15 + 100 = x_i$$
+$$ x_i = 119.35 \approx 119$$
 
 
 Meta-information
