@@ -1,26 +1,42 @@
-```{r}
-
-res = 1 - (1-0.05)^5
-
-```
-
-
-
 Question 
 ======== 
 
-Angenommen wir führen 5 unabhängige statistische Tests zur Überprüfung einer H0 an denselben Daten durch. Jeden Test rechnen wir mit einem α-Fehler von 5%. Wie hoch wäre der tatsächliche α-Fehler unter Berücksichtigung der α-Fehler Kumulierung? Runden Sie auf 2 Nachkommastellen.
+Welche sind Beispiele für Teststatistiken?
+
+Answerlist
+----------
+
+* z-Wert 
+* t-Wert
+* q-Wert
+* F-Wert
+* r-Wert
+* χ2-Wert
+
 
 
 Solution
 ========
 
-$$ \alpha´= 1-(1-\alpha)^k $$
+Answerlist
+----------
 
+
+*Richtig. Mittelwertsvergleiche Z.B. z-Test bei bekannter Populationsstreuung, oder großen Stichproben. -> Bei großen Stichproben nähert sich die t-Verteilung an die z-Verteilung an. 
+
+*Richtig. Mittelwertsvergleiche z.B. Einstichproben t-Test (Unbekannte Populationsstreuung), Abhängiger t-Test und Unabhängiger t-Test.
+
+*Falsch. Es gibt keine Teststatistik namens q-Wert.
+
+*Richtig. Varianzanalytische Verfahren. z.B. ANOVA oder MANOVA; Oder aber auch Levene Test zur Varianzhomogenität
+
+*Falsch. Es gibt keine Teststatistik namens r-Wert.
+
+*Richtig. Bei kategorialen AV's
 
 Meta-information
 ================
 exname: laplace_probability_explanation
-extype: num
-exsolution: `r fmt(res)`
-extol: 0.01
+extype: mchoice 
+exsolution: 110101
+exshuffle: TRUE

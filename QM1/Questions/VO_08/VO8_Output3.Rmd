@@ -1,0 +1,39 @@
+```{r simulation}
+set.seed(123)
+
+N = 100
+df = data.frame(Testergebnis = c(round(rnorm(N/2, 100, 10)), round(rnorm(N/2, 96, 10))),Semester = c(rep("1. Semester", N/2), rep("2. Semester", N/2)))    
+
+```
+
+
+Question 
+======== 
+
+Im Rahmen einer Studie haben die Studierenden des 1. und 2. Semesters einer Universität an einem Test zur Merkfähigkeit teilgenommen. 
+
+Sie haben in R überprüft, ob sich die Mittelwerte der beiden Semester signifikant voneinander unterscheiden und erhalten folgenden Output: 
+
+```{r output, echo=FALSE}
+t.test(Testergebnis ~ Semester, data = df, var.equal = T) 
+```
+
+Welche Aussagen sind zutreffend? 
+
+Answerlist
+----------
+
+* N = 98
+* Der deskriptive Mittelwertsunterschied zwischen beiden Semestern lag bei 2.86
+* Es konnte ein signifikanter Mittelwertsunterschied festgestellt werden
+* Die H1 lautet: μ1 ≠ μ2 oder μ1 - μ2 ≠ 0
+* N = 100
+
+
+
+Meta-information
+================
+exname: Output t-Test
+extype: mchoice 
+exsolution: 01011
+exshuffle: TRUE

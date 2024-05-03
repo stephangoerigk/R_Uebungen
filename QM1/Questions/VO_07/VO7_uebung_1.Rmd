@@ -1,0 +1,26 @@
+```{r}
+
+res = 1 - (1-0.05)^5
+
+```
+
+
+
+Question 
+======== 
+
+Angenommen wir führen 5 unabhängige statistische Tests zur Überprüfung einer H0 an denselben Daten durch. Jeden Test rechnen wir mit einem α-Fehler von 5%. Wie hoch wäre der tatsächliche α-Fehler unter Berücksichtigung der α-Fehler Kumulierung? Runden Sie auf 2 Nachkommastellen.
+
+
+Solution
+========
+
+$$ \alpha´= 1-(1-\alpha)^k $$
+
+
+Meta-information
+================
+exname: laplace_probability_explanation
+extype: num
+exsolution: `r fmt(res)`
+extol: 0.01
