@@ -36,6 +36,7 @@ knitr::include_graphics("images/R_logo.png")
 
 ## Einheit 1 - Einfaktorielle Varianzanalyse (1)
 
+
 ```{r VO1_MC_Varianz_Rev, message = FALSE, warning=FALSE}
 exams2learnr("Questions/VO_01/VO1_MC_Varianz_Rev.Rmd", allow_retry = TRUE)
 ```

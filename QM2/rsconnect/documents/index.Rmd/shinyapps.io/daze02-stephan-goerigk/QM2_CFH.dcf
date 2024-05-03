@@ -5,7 +5,7 @@ account: daze02-stephan-goerigk
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 11688752
-bundleId: 8468539
+bundleId: 8535206
 url: https://daze02-stephan-goerigk.shinyapps.io/QM2_CFH/
 version: 1
 asMultiple: FALSE
