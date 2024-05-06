@@ -34,7 +34,9 @@ Viel Erfolg und Spaß beim Entdecken der Möglichkeiten mit R!
 Stephan Goerigk und Team
 
 
-## Grundlegende Arithmetik
+## Einheit 1
+
+### Grundlegende Arithmetik
 
 Willkommen im Abschnitt **Grundlegende Arithmetik in R und RStudio**! 
 
@@ -49,8 +51,6 @@ Anmerkung: Falls Sie die Lösung der Befehle aufrufen wollen, können Sie auf `S
 
 
 ```
-
-
 
 <hr> <!-- Horizontale Trennlinie -->
 
@@ -204,9 +204,7 @@ help(summary)
 
 ```
 
-
-
-## Datenformate
+### Datenformate
 
 Willkommen im Abschnitt **Datenformate in R und RStudio**! 
 
@@ -442,6 +440,29 @@ sales_data = data.frame(Produkt = c("Produkt A", "Produkt B", "Produkt A", "Prod
 mean(sales_data$Verkaufszahlen[sales_data$Produkt == "Produkt A" & sales_data$Region == "Nord"])
 
 ```
+
+
+## Einheit 2
+
+### Einheit 2: Übungen
+
+### Einheit 2: Projekt
+
+```{r Projekt2, exercise=TRUE}
+smartphone = read.csv("https://raw.githubusercontent.com/stephangoerigk/WAF_Folien/master/Smartphone_addiction.csv")
+
+```
+
+
+
+## Einheit 3
+
+## Einheit 4
+
+## Einheit 5
+
+## Einheit 6
+
 
 
 
