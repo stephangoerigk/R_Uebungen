@@ -1,16 +1,17 @@
 Question 
 ======== 
 
+Welche sind korrekte Schritte beim Durchführen von Hypothesentests
 
 
 Answerlist
 ----------
 
-* 
-*
-*
-*
-*
+* Aufstellen des Hypothesenpaars
+* Entscheidung: Test ist signifikant, nicht-signifikant oder leicht-signifikant
+* Festlegung des Signifikanzniveaus
+* Berechnen des Signifikanzniveaus
+* Vergleich kritischer Wert und empirischer (errechneter) Wert
 
 
 
@@ -20,13 +21,15 @@ Solution
 Answerlist
 ----------
 
-* Falsch. 
-* Richtig. 
-* Falsch. 
+* Richtig. Das Aufstellen des Hypothesenpaars sollte immer Ihr erster Schritt sein
+* Falsch. Wir unterscheiden lediglich zwischen signifikant und nicht signifikant.
+* Richtig. Diese Entscheidung muss bereits vor der Datenauswertung geschehen. Im Idealfall bereits vor der Datenerhebung im Rahmen einer Pre-Registrierung.
+* Falsch. Das Signifikanzniveau wird festgelegt - nicht berechnet.
+* Richtig. Dieser Schritt liefert uns das Ergebnis unseres Hypothesentests
 
 Meta-information
 ================
 exname: laplace_probability_explanation
 extype: mchoice 
-exsolution: 010
+exsolution: 10101
 exshuffle: TRUE
