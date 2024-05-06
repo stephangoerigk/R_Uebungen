@@ -453,7 +453,9 @@ smartphone = read.csv("https://raw.githubusercontent.com/stephangoerigk/WAF_Foli
 
 ```
 
-
+```{r Projekt2-solution}
+# Aufgabe 1
+```
 
 ## Einheit 3
 
