@@ -52,6 +52,12 @@ Anmerkung: Falls Sie die Lösung der Befehle aufrufen wollen, können Sie auf `S
 
 ```
 
+```{r Arithmetik1-solution}
+
+534+16
+
+```
+
 <hr> <!-- Horizontale Trennlinie -->
 
 **Aufgabe 2:** Berechnen Sie das Ergebnis der Subtraktion $7 - 3$.
@@ -444,9 +450,77 @@ mean(sales_data$Verkaufszahlen[sales_data$Produkt == "Produkt A" & sales_data$Re
 
 ## Einheit 2
 
-### Einheit 2: Übungen
+#### Grundlagen der Datenanalyse in RStudio
 
-### Einheit 2: Projekt
+Willkommen im Abschnitt **Grundlagen der Datenanalyse in RStudio**! 
+
+In diesem Kapitel der learnR Oberfläche werden Sie durch praktische Übungen in die Methoden der deskriptiven Statistik und der Analyse von Fragebogendaten in RStudio eingeführt. 
+
+Das Kapitel ist in zwei Hauptteile gegliedert, um Ihnen sowohl Einzelübungen als auch ein umfassenderes Projekt zu bieten. Ziel ist es, Ihnen sowohl konkrete Fähigkeiten in der Datenanalyse zu vermitteln, als auch einen realistischen Einblick in den Forschungsprozess zu geben.
+
+
+##### Teil 1: Einzelübungen
+
+Im ersten Teil des Kapitels werden Sie durch eine Reihe von Einzelübungen geführt. Diese dienen dazu, Ihr Verständnis für die grundlegenden Prinzipien der deskriptiven Statistik zu festigen und Ihre Fähigkeiten in der Analyse von Forschungsdaten zu schärfen. Durch praktische Anwendungen lernen Sie, statistische Maße zu berechnen und zu interpretieren.
+
+<hr> <!-- Horizontale Trennlinie -->
+
+Der Iris-Datensatz von R.A. Fisher ist einer der bekanntesten Datensätze aus dem Bereich des maschinellen Lernens. Er enthält Messungen verschiedener Merkmale der Iris-Pflanze und klassifiziert diese in drei Spezies. Der Datensatz ist in R standardmäßig im Data.Frame `iris` verfügbar.
+
+**Aufgabe 1:** Ermitteln Sie die Gesamtanzahl der Pflanzen im Iris-Datensatz. Verwenden Sie dafür eine Funktion, die Ihnen zusätzliche Informationen über die Art der im Datensatz enthaltenen Variablen und deren Typen gibt. Geben Sie Ihre Beobachtungen zu den Variablentypen in Ihrer Antwort an.
+```{r Datenanalyse1, exercise=TRUE}
+
+
+```
+
+```{r Datenanalyse1-solution}
+
+str(iris) 
+
+# Gesamtzahl der Beobachtungen: 150 Pflanzen
+
+# Variablen: Der Datensatz enthält fünf Variablen:
+## "Sepal.Length": Numerische Variable, welche die Länge des Kelchblatts (Sepal) angibt.
+## "Sepal.Width": Numerische Variable, welche die Breite des Kelchblatts angibt.
+## "Petal.Length": Numerische Variable, welche die Länge des Blütenblatts (Petal) angibt.
+## "Petal.Width": Numerische Variable, welche die Breite des Blütenblatts angibt.
+## "Species": Faktorvariable mit drei Levels, welche die Spezies der Iris-Pflanze angibt.
+
+```
+
+**Aufgabe 2:** Berechnen Sie die deskriptiven Statistiken der Sepal-Länge (Variable "Sepal.Length") der drei verschiedenen Arten von Irisblumen: `setosa`, `versicolor` und `virginica`.
+
+<font color='darkred'>Hinweis: Verwenden Sie die Funktion **summary()**, um die deskriptiven Statistiken zu berechnen. Nutzen Sie die Indizierung, um die Daten nach der Faktorvariablen "Species" zu gruppieren.</font>
+
+```{r Datenanalyse2, exercise=TRUE}
+
+```
+
+```{r Datenanalyse2-solution}
+
+summary(iris$Sepal.Length[iris$Species == "setosa"])
+summary(iris$Sepal.Length[iris$Species == "versicolor"])
+summary(iris$Sepal.Length[iris$Species == "virginica"])
+
+```
+
+
+<hr> <!-- Horizontale Trennlinie -->
+
+**Aufgabe 3:** Berechnen Sie ...
+```{r Datenanalyse3, exercise=TRUE}
+
+```
+
+```{r Datenanalyse3-solution}
+
+
+```
+
+
+##### Einheit 2: Projektarbeit mit einem externen Datensatz
+
+Der zweite Teil des Kapitels führt Sie in ein umfangreicheres Projekt ein, bei dem Sie, wie bereits im Zuge der Seminareinheiten, mit einem simulierten Datensatz arbeiten, der speziell für diesen Zweck bereitgestellt wird. Dieser Teil der learnR Oberfläche ist darauf ausgerichtet, den typischen Forschungsprozess nachzuempfinden, den Forschende erleben, wenn sie zum ersten Mal mit neuen Daten konfrontiert sind.
 
 ```{r Projekt2, exercise=TRUE}
 smartphone = read.csv("https://raw.githubusercontent.com/stephangoerigk/WAF_Folien/master/Smartphone_addiction.csv")
