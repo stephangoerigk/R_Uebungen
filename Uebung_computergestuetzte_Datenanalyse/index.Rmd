@@ -623,10 +623,14 @@ smartphone = read.csv("https://raw.githubusercontent.com/stephangoerigk/WAF_Foli
 
 ```
 
-```{r Projekt1-solution}
-
-# Aufgabe 1
-
+```{r quiz_projekt_1, echo = FALSE}
+quiz(
+  question("Wie viele Zeilen und Spalten hat der Datensatz?",
+    answer("128 Zeilen, 124 Spalten", correct = TRUE),
+    answer("128 Spalten, 124 Zeilen"),
+    allow_retry = TRUE
+  )
+    )
 ```
 
 ## Einheit 3
