@@ -1,0 +1,32 @@
+Question 
+======== 
+
+Wann ist ein t-Test signifikant?
+
+Answerlist
+----------
+
+* Wenn der p-Wert kleiner als 0.05 ist
+* Wenn der p-Wert größer als 0.05 ist
+* Wenn die Teststatistik größer als der kritische Wert ist
+* Wenn die Teststatistik kleiner als der kritische Wert ist
+* Wenn der Konfidenzintervall den Nullwert einschließt
+
+Solution
+========
+
+Answerlist
+----------
+
+* Richtig. Wenn der p-Wert kleiner als 0.05 ist, wird das Ergebnis als signifikant angesehen.
+* Falsch. Ein p-Wert größer als 0.05 bedeutet, dass das Ergebnis nicht signifikant ist.
+* Richtig. Wenn die Teststatistik größer als der kritische Wert ist, wird das Ergebnis als signifikant angesehen.
+* Falsch. Eine Teststatistik, die kleiner als der kritische Wert ist, zeigt keine Signifikanz.
+* Falsch. Wenn der Konfidenzintervall den Nullwert einschließt, wird das Ergebnis als nicht signifikant angesehen.
+
+Meta-information
+================
+exname: tTestSignifikanz
+extype: mchoice 
+exsolution: 10100
+exshuffle: TRUE

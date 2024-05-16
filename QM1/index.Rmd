@@ -520,6 +520,31 @@ exams2learnr("Questions/VO_07/VO7_uebung2.Rmd", allow_retry = TRUE)
 
 ## Einheit 8 - *t*-Test
 
+```{r VO8_01, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_08/VO8_1.Rmd", allow_retry = TRUE)
+```
+
+```{r VO8_02, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_08/VO8_2.Rmd", allow_retry = TRUE)
+```
+
+```{r VO8_03, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_08/VO8_3.Rmd", allow_retry = TRUE)
+```
+
+```{r VO8_04, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_08/VO8_4.Rmd", allow_retry = TRUE)
+```
+
+```{r VO8_05, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_08/VO8_5.Rmd", allow_retry = TRUE)
+```
+
+```{r VO8_06, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_08/VO8_6.Rmd", allow_retry = TRUE)
+```
+
+
 
 
 #### Weitere Übungsaufgaben Hypothesentests

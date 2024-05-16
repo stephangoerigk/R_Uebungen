@@ -11,7 +11,7 @@ Answerlist
 * q-Wert
 * F-Wert
 * r-Wert
-* χ2-Wert
+* Chi^2-Wert
 
 
 

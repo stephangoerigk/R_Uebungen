@@ -1,0 +1,32 @@
+Question 
+======== 
+
+Was steht im Zähler der Formel des unabhängigen t-Tests?
+
+Answerlist
+----------
+
+* Differenz der Mittelwerte der beiden Gruppen
+* Summe der Mittelwerte der beiden Gruppen
+* Differenz der Varianzen der beiden Gruppen
+* Summe der Standardabweichungen der beiden Gruppen
+* Produkt der Standardabweichungen der beiden Gruppen
+
+Solution
+========
+
+Answerlist
+----------
+
+* Richtig. Die Differenz der Mittelwerte der beiden Gruppen steht im Zähler der Formel des unabhängigen t-Tests.
+* Falsch. Die Summe der Mittelwerte der beiden Gruppen steht nicht im Zähler der Formel des unabhängigen t-Tests.
+* Falsch. Die Differenz der Varianzen der beiden Gruppen steht nicht im Zähler der Formel des unabhängigen t-Tests.
+* Falsch. Die Summe der Standardabweichungen der beiden Gruppen steht nicht im Zähler der Formel des unabhängigen t-Tests.
+* Falsch. Das Produkt der Standardabweichungen der beiden Gruppen steht nicht im Zähler der Formel des unabhängigen t-Tests.
+
+Meta-information
+================
+exname: UnabhaengigerTTestZaehler
+extype: mchoice 
+exsolution: 10000
+exshuffle: TRUE

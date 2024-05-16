@@ -1,0 +1,32 @@
+Question 
+======== 
+
+Was sind Beispiele für abhängige Stichproben
+
+Answerlist
+----------
+
+* 
+*
+*
+*
+*
+
+Solution
+========
+
+Answerlist
+----------
+
+*
+*
+*
+*
+*
+
+Meta-information
+================
+exname: 
+extype: mchoice 
+exsolution: 
+exshuffle: TRUE
