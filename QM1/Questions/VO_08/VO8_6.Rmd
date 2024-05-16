@@ -1,0 +1,32 @@
+Question 
+======== 
+
+Was sind Voraussetzungen für den t-Test für unabhängige Stichproben?
+
+Answerlist
+----------
+
+* Die abhängige Variable muss auf intervallskalenniveau oder höher sein
+* Die Stichproben müssen unabhängig voneinander sein
+* Die abhängige Variable muss normalverteilt sein
+* Die Varianzen der beiden Gruppen müssen ungefähr gleich sein
+* Die Stichproben müssen mindestens 30 Beobachtungen enthalten
+
+Solution
+========
+
+Answerlist
+----------
+
+* Richtig. Die abhängige Variable muss auf intervallskalenniveau oder höher sein.
+* Richtig. Die Stichproben müssen unabhängig voneinander sein.
+* Richtig. Die abhängige Variable muss normalverteilt sein. 
+* Richtig. Die Varianzen der beiden Gruppen müssen ungefährt gleich sein.
+* Falsch. Die Stichproben müssen nicht unbedingt mindestens 30 Beobachtungen enthalten.
+
+Meta-information
+================
+exname: TTestUnabhaengigeStichprobenVoraussetzungen
+extype: mchoice 
+exsolution: 11110
+exshuffle: TRUE

@@ -1,0 +1,32 @@
+Question 
+======== 
+
+Welche der folgenden Situationen sind Beispiele für abhängige Stichproben?
+
+Answerlist
+----------
+
+* Vorher-Nachher-Messungen der Symptomschwere bei Patienten nach einer Therapie
+* Vergleich der Herzfrequenz bei Patienten in zwei verschiedenen Altersgruppen
+* Messungen der Stresslevel bei denselben Patienten vor und nach einer Meditationsübung
+* Vergleich der Blutdruckwerte von Patienten in unterschiedlichen Behandlungsgruppen
+* Vergleich der Depressionswerte von Patienten verschiedener Kliniken
+
+Solution
+========
+
+Answerlist
+----------
+
+* Richtig. Vorher-Nachher-Messungen der Symptomschwere bei Patienten nach einer Therapie sind ein Beispiel für abhängige Stichproben.
+* Falsch. Vergleich der Herzfrequenz bei Patienten in zwei verschiedenen Altersgruppen sind unabhängige Stichproben.
+* Richtig. Messungen der Stresslevel bei denselben Patienten vor und nach einer Meditationsübung sind ein Beispiel für abhängige Stichproben.
+* Falsch. Vergleich der Blutdruckwerte von Patienten in unterschiedlichen Behandlungsgruppen sind unabhängige Stichproben.
+* Falsch. Vergleich der Depressionswerte von Patienten verschiedener Kliniken sind unabhängige Stichproben.
+
+Meta-information
+================
+exname: KlinischeAbhaengigeStichproben
+extype: mchoice 
+exsolution: 10100
+exshuffle: TRUE

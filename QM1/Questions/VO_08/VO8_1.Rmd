@@ -1,0 +1,32 @@
+Question 
+======== 
+
+Beim t-Test werden
+
+Answerlist
+----------
+
+* Standardabweichungen verglichen 
+* Mittelwerte verglichen 
+* Mediane verglichen 
+* Varianzen verglichen 
+* Personen verglichen 
+
+Solution
+========
+
+Answerlist
+----------
+
+* Falsch. Standardabweichungen werden nicht direkt verglichen.
+* Richtig. Beim t-Test werden Mittelwerte verglichen.
+* Falsch. Mediane werden nicht beim t-Test verglichen.
+* Falsch. Varianzen werden beim t-Test nicht verglichen.
+* Falsch. Personen werden nicht direkt verglichen.
+
+Meta-information
+================
+exname: tTestVergleich
+extype: mchoice 
+exsolution: 01000
+exshuffle: TRUE
