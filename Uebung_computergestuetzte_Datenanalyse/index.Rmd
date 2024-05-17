@@ -20,7 +20,7 @@ library(moments)
 library(magrittr)
 library(kableExtra)
 library(ggplot2)
-knitr::opts_chunk$set(echo = FALSE)
+
 ```
 
 ## Herzlich Willkommen!
@@ -634,25 +634,16 @@ table(smartphone$groups)
 table(smartphone$Gender[smartphone$groups == "No Training"])
 table(smartphone$Gender[smartphone$groups == "Training"])
 
-
-
-
 ```
 
-
-```{r setup, include = FALSE}
-library("exams2learnr")
-```
-
-## Knowledge quiz (single-choice)
+<hr> <!-- Horizontale Trennlinie -->
 
 ```{r Einheit_2_MC_1, message = FALSE, warning=FALSE}
-exams2learnr("/Questions/Einheit_2/Einheit_2_MC_1.Rmd", allow_retry = TRUE)
+exams2learnr("/Uebung_computergestuetzte_Datenanalyse/Questions/Einheit_2/Einheit_2_MC_1.Rmd", allow_retry = TRUE)
 ```
 
-
 ```{r Einheit_2_MC_2, echo = FALSE}
-exams2learnr("/Questions/Einheit_2/Einheit_2_MC_2.Rmd", allow_retry = TRUE)
+exams2learnr("/Uebung_computergestuetzte_Datenanalyse/Questions/Einheit_2_MC_2.Rmd", allow_retry = TRUE)
 ```
 
 ## Einheit 3
