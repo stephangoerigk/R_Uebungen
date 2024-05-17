@@ -639,22 +639,20 @@ table(smartphone$Gender[smartphone$groups == "Training"])
 
 ```
 
+
+```{r setup, include = FALSE}
+library("exams2learnr")
+```
+
+## Knowledge quiz (single-choice)
+
 ```{r Einheit_2_MC_1, message = FALSE, warning=FALSE}
 exams2learnr("/Questions/Einheit_2/Einheit_2_MC_1.Rmd", allow_retry = TRUE)
 ```
 
-```{r quiz_projekt_2, echo = FALSE}
 
-quiz(
-  question("**Aufgabe 2:** Bestimmen Sie - differenziert nach den jeweiligen Gruppen *Training* und *No Training* - das durchschnittliche Alter der ProbandInnen. Wählen Sie im Folgenden die Antwortalternative aus, die diesen Wert im wissenschaftlichen Kontext korrekt und vollständig darstellt.",
-    answer(""),
-    answer("", correct = TRUE),
-    answer(""),
-    answer(""),
-    allow_retry = TRUE
-  )
-    )
-
+```{r Einheit_2_MC_2, echo = FALSE}
+exams2learnr("/Questions/Einheit_2/Einheit_2_MC_2.Rmd", allow_retry = TRUE)
 ```
 
 ## Einheit 3
