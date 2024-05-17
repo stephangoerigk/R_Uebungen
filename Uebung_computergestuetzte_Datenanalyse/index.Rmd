@@ -9,14 +9,18 @@ runtime: shiny_prerendered
 ---
 
 ```{r setup, include=FALSE}
-
 library(learnr)
 library(psych)
 library(shiny)
 library(faux)
 library(tidyverse)
+library(exams2learnr)
+library(knitr)
+library(moments)
+library(magrittr)
+library(kableExtra)
+library(ggplot2)
 knitr::opts_chunk$set(echo = FALSE)
-
 ```
 
 ## Herzlich Willkommen!
@@ -544,7 +548,7 @@ round(sd(iris$Sepal.Ratio), 2)
 
 **Aufgabe 5:** Berechnen Sie die Spannweite (engl. Range) der Petal-Länge für jede der drei Iris-Arten. 
 
-<font color='darkred'>Hinweis: Die range()-Funktion in R ist darauf ausgelegt, die beiden Extremwerte (Minimum und Maximum) eines numerischen Vektors zurückzugeben. Um die **tatsächliche Spannweite zu berechnen, welche als Differenz zwischen Maximum und Minimum** definiert ist, können Sie die Funktion **diff()** verwenden und sich auf die berechneten Extremwerte beziehen.</font>
+<font color='darkred'>Hinweis: Die range()-Funktion in R ist darauf ausgelegt, die beiden Extremwerte (Minimum und Maximum) eines numerischen Vektors zurückzugeben. Um die **tatsächliche Spannweite zu berechnen, welche als Differenz zwischen Maximum und Minimum** definiert ist, können Sie die Funktion **diff()** mit der range()-Funktion kombinieren.</font>
 
 ```{r Datenanalyse5, exercise=TRUE}
 
@@ -552,14 +556,9 @@ round(sd(iris$Sepal.Ratio), 2)
 
 ```{r Datenanalyse5-solution}
 
-extrema_setosa = range(iris$Petal.Length[iris$Species == "setosa"])
-diff(extrema_setosa)
-
-extrema_versicolor = range(iris$Petal.Length[iris$Species == "versicolor"])
-diff(extrema_versicolor)
-
-extrema_virginica = range(iris$Petal.Length[iris$Species == "virginica"])
-diff(extrema_virginica)
+diff(range(iris$Petal.Length[iris$Species == "setosa"]))
+diff(range(iris$Petal.Length[iris$Species == "versicolor"]))
+diff(range(iris$Petal.Length[iris$Species == "virginica"]))
 
 ```
 
@@ -569,7 +568,7 @@ diff(extrema_virginica)
 
 Der zweite Teil des Kapitels führt Sie in ein umfangreicheres Projekt ein, bei dem Sie mit einem speziell für diesen Zweck bereitgestellten, simulierten Datensatz arbeiten. Wie bereits in den Seminareinheiten, wird dieser Teil der learnR-Oberfläche darauf abzielen, den typischen Forschungsprozess nachzubilden, den Forschende durchlaufen, wenn sie zum ersten Mal neue Daten analysieren.
 
-**Die Aufgaben zur Projektarbeit werden als Multiple-Choice-Fragen gestellt. Unter der ausführlichen Beschreibung des Projekts steht Ihnen ein R-Source-Feld zur Verfügung, in dem sämtliche Aufgaben berechnet werden können (und sollen), sodass die darunterstehenden MC-Aufgaben korrekt beantwortet werden können. Die im Source-Feld bereits vorhandene Code-Zeile ermöglicht es, den Datensatz zu laden. Behalten Sie diese bitte bei und beginnen Sie mit Ihren Berechnungen in der Zeile darunter. Das Source-Feld kann beliebig erweitert werden. Drücken Sie dazu einfach die Eingabetaste, um die Source-Box zu vergrößern.**
+**Die Aufgaben zur Projektarbeit werden als Multiple-Choice-Fragen gestellt. Unter der ausführlichen Beschreibung des Projekts steht Ihnen ein R-Source-Feld zur Verfügung, in dem sämtliche Aufgaben berechnet werden können, sodass Sie die darunterstehenden MC-Aufgaben beantworten können. Die im Source-Feld bereits vorhandene Code-Zeile ermöglicht es Ihnen, den Datensatz zu laden. Behalten Sie diese bitte bei und beginnen Sie mit Ihren Berechnungen in der Zeile darunter. Das Source-Feld kann beliebig erweitert werden. Drücken Sie dazu einfach die Eingabetaste, um die Source-Box zu vergrößern.**
 
 <hr> <!-- Horizontale Trennlinie -->
 
@@ -577,8 +576,7 @@ Der zweite Teil des Kapitels führt Sie in ein umfangreicheres Projekt ein, bei 
 
 ##### Hintergrund
 
-Prokrastination ist ein verbreitetes Phänomen, das sich durch das Aufschieben von Aufgaben und das Hinauszögern von Handlungen auszeichnet. Menschen, die unter Prokrastination leiden, verschieben regelmäßig wichtige oder unangenehme Aufgaben auf später, obwohl sie sich bewusst sind, dass dies negative Auswirkungen haben kann. Die Gründe für Prokrastination können vielfältig sein, einschließlich Angst vor Versagen, Perfektionismus oder mangelnder Motivation. Die Bewältigung von Prokrastination erfordert oft eine bewusste Auseinandersetzung mit den zugrunde liegenden Ursachen, das Setzen von klaren Zielen und das Entwickeln effektiver Zeitmanagement-Strategien.
-Smartphone-Sucht und Prokrastination können eng miteinander verbunden sein. Die ständige Verfügbarkeit von Smartphones und die Fülle an Ablenkungen, wie soziale Medien, Spiele und Internetzugang, können dazu führen, dass Menschen ihre Zeit unproduktiv verbringen und wichtige Aufgaben aufschieben. Der ständige Reiz des Smartphones kann zu einer Sucht führen, bei der die Betroffenen immer wieder zum Handy greifen, um kurzfristige Befriedigung zu erlangen, anstatt sich den eigentlichen Aufgaben zu widmen. Die ständige Ablenkung durch das Smartphone kann die Konzentration beeinträchtigen und die Prokrastination verstärken, da die Betroffenen Schwierigkeiten haben, sich auf eine Sache zu fokussieren und ihre Zeit effektiv zu nutzen.
+**Prokrastination** ist ein verbreitetes Phänomen, das sich durch das Aufschieben von Aufgaben und das Hinauszögern von Handlungen auszeichnet. Menschen, die unter Prokrastination leiden, verschieben regelmäßig wichtige oder unangenehme Aufgaben auf später, obwohl sie sich bewusst sind, dass dies negative Auswirkungen haben kann. Die Gründe für Prokrastination können vielfältig sein, einschließlich Angst vor Versagen, Perfektionismus oder mangelnder Motivation. Die Bewältigung von Prokrastination erfordert oft eine bewusste Auseinandersetzung mit den zugrunde liegenden Ursachen, das Setzen von klaren Zielen und das Entwickeln effektiver Zeitmanagement-Strategien. **Smartphone-Sucht** und Prokrastination können eng miteinander verbunden sein. Die ständige Verfügbarkeit von Smartphones und die Fülle an Ablenkungen, wie soziale Medien, Spiele und Internetzugang, können dazu führen, dass Menschen ihre Zeit unproduktiv verbringen und wichtige Aufgaben aufschieben. Der ständige Reiz des Smartphones kann zu einer Sucht führen, bei der die Betroffenen immer wieder zum Handy greifen, um kurzfristige Befriedigung zu erlangen, anstatt sich den eigentlichen Aufgaben zu widmen. Die ständige Ablenkung durch das Smartphone kann die Konzentration beeinträchtigen und die Prokrastination verstärken, da die Betroffenen Schwierigkeiten haben, sich auf eine Sache zu fokussieren und ihre Zeit effektiv zu nutzen.
 
 In einer neuen Studie soll die Wirksamkeit eines speziellen Trainings gegen Smartphone-Sucht untersucht werden, mit dem zusätzlichen Ziel, den Einfluss auf die Prokrastination zu untersuchen. Teilnehmer werden zufällig in zwei Gruppen eingeteilt: eine Gruppe, die das Training gegen Smartphone-Sucht erhält, und eine Kontrollgruppe, die keine spezifische Intervention erhält. Das Training umfasst verschiedene Module, die darauf abzielen, ein bewusstes und kontrolliertes Smartphone-Nutzungsverhalten zu entwickeln, Strategien zur Reduzierung der Nutzung zu erlernen und alternative Aktivitäten zu fördern. Die Ergebnisse dieser Studie sollen Erkenntnisse darüber liefern, ob ein gezieltes Training gegen Smartphone-Sucht nicht nur die Abhängigkeit reduzieren, sondern auch positive Auswirkungen auf die Prokrastination der Teilnehmer haben kann.
 
@@ -588,7 +586,7 @@ In einer neuen Studie soll die Wirksamkeit eines speziellen Trainings gegen Smar
 
 General Procrastination Scale (GPS). Die General Procrastination Scale wurde von Lodha et al. (2016) entwickelt. Mit insgesamt 23 Items misst die Skala Prokrastination in vier Bereichen: akademische, berufliche, medizinische und bürgerschaftliche Pflichten. Alle Items müssen auf einer 5-Punkte-Likert-Skala gerated werden, die von 1 bis 5 reicht. Eine Umkodierung ist teilweise erforderlich.
 
-<font color='darkred'>Hinweis: Den vollständigen Fragebogen inkl. Auswertungsanleitung finden Sie auf studynet im Ordner "Fragebögen".</font>
+**Hinweis: Den vollständigen Fragebogen inkl. Auswertungsanleitung finden Sie auf studynet im Ordner "Fragebögen".**
 
 <hr> <!-- Horizontale Trennlinie -->
 
@@ -601,7 +599,7 @@ Aktiv manipuliert: Training (nein vs. ja)
 
 Die Smartphone Addiction Scale (SAS) ist ein Messinstrument, das entwickelt wurde, um den Grad der Smartphone-Sucht bei Individuen zu erfassen. Die Skala basiert auf einem Fragebogen, der aus verschiedenen Items besteht, die das Verhalten und die Einstellungen der Betroffenen in Bezug auf ihre Smartphone-Nutzung bewerten. Die SAS misst auf 33 Items verschiedene Aspekte der Sucht, darunter die Auswirkungen der Smartphone-Nutzung auf das tägliche Leben, Entzugserscheinungen, Toleranzentwicklung und Kontrollverlust. Die Bewertung erfolgt anhand einer Likert-Skala, bei der die Teilnehmer ihre Zustimmung zu den Aussagen angeben. Die Smartphone Addiction Scale hat sich als zuverlässiges Instrument erwiesen, um das Ausmaß der Smartphone-Sucht zu messen und ermöglicht es Forschern und Klinikern, das Phänomen genauer zu erforschen und geeignete Interventionen zu entwickeln.
 
-<font color='darkred'>Hinweis: Auch die SAS finden Sie auf studynet im Ordner "Fragebögen".</font>
+**Hinweis: Auch die SAS finden Sie auf studynet im Ordner "Fragebögen".*</font>**
 
 <hr> <!-- Horizontale Trennlinie -->
 
@@ -623,14 +621,40 @@ smartphone = read.csv("https://raw.githubusercontent.com/stephangoerigk/WAF_Foli
 
 ```
 
-```{r quiz_projekt_1, echo = FALSE}
+```{r Projekt1-solution}
+smartphone = read.csv("https://raw.githubusercontent.com/stephangoerigk/WAF_Folien/master/Smartphone_addiction.csv")
+
+# Aufgabe 1
+dim(smartphone)
+nrow(smartphone) # Alternative Funktion, falls Unsicherheiten darüber bestehen, welche Zahl des dim()-Ergebnisses sich auf die Anzahl der Zeilen (engl. rows) bezieht
+ncol(smartphone) # Alternative Funktion, falls Unsicherheiten darüber bestehen, welche Zahl des dim()-Ergebnisses sich auf die Anzahl der Spalten (engl. columns) bezieht
+
+table(smartphone$groups)
+
+table(smartphone$Gender[smartphone$groups == "No Training"])
+table(smartphone$Gender[smartphone$groups == "Training"])
+
+
+
+
+```
+
+```{r Einheit_2_MC_1, message = FALSE, warning=FALSE}
+exams2learnr("/Questions/Einheit_2/Einheit_2_MC_1.Rmd", allow_retry = TRUE)
+```
+
+```{r quiz_projekt_2, echo = FALSE}
+
 quiz(
-  question("Wie viele Zeilen und Spalten hat der Datensatz?",
-    answer("128 Zeilen, 124 Spalten", correct = TRUE),
-    answer("128 Spalten, 124 Zeilen"),
+  question("**Aufgabe 2:** Bestimmen Sie - differenziert nach den jeweiligen Gruppen *Training* und *No Training* - das durchschnittliche Alter der ProbandInnen. Wählen Sie im Folgenden die Antwortalternative aus, die diesen Wert im wissenschaftlichen Kontext korrekt und vollständig darstellt.",
+    answer(""),
+    answer("", correct = TRUE),
+    answer(""),
+    answer(""),
     allow_retry = TRUE
   )
     )
+
 ```
 
 ## Einheit 3

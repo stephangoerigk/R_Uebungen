@@ -771,8 +771,7 @@ ausgelegt, die beiden Extremwerte (Minimum und Maximum) eines
 numerischen Vektors zurückzugeben. Um die <strong>tatsächliche
 Spannweite zu berechnen, welche als Differenz zwischen Maximum und
 Minimum</strong> definiert ist, können Sie die Funktion
-<strong>diff()</strong> verwenden und sich auf die berechneten
-Extremwerte beziehen.</font></p>
+<strong>diff()</strong> mit der range()-Funktion kombinieren.</font></p>
 <div class="tutorial-exercise" data-label="Datenanalyse5"
 data-completion="1" data-diagnostics="1" data-startover="1"
 data-lines="0" data-pipe="|&gt;">
@@ -782,14 +781,9 @@ data-lines="0" data-pipe="|&gt;">
 data-label="Datenanalyse5-solution" data-completion="1"
 data-diagnostics="1" data-startover="1" data-lines="0"
 data-pipe="|&gt;">
-<pre class="text"><code>extrema_setosa = range(iris$Petal.Length[iris$Species == &quot;setosa&quot;])
-diff(extrema_setosa)
-
-extrema_versicolor = range(iris$Petal.Length[iris$Species == &quot;versicolor&quot;])
-diff(extrema_versicolor)
-
-extrema_virginica = range(iris$Petal.Length[iris$Species == &quot;virginica&quot;])
-diff(extrema_virginica)</code></pre>
+<pre class="text"><code>diff(range(iris$Petal.Length[iris$Species == &quot;setosa&quot;]))
+diff(range(iris$Petal.Length[iris$Species == &quot;versicolor&quot;]))
+diff(range(iris$Petal.Length[iris$Species == &quot;virginica&quot;]))</code></pre>
 </div>
 <hr>
 <!-- Horizontale Trennlinie -->
@@ -806,10 +800,10 @@ ersten Mal neue Daten analysieren.</p>
 <p><strong>Die Aufgaben zur Projektarbeit werden als
 Multiple-Choice-Fragen gestellt. Unter der ausführlichen Beschreibung
 des Projekts steht Ihnen ein R-Source-Feld zur Verfügung, in dem
-sämtliche Aufgaben berechnet werden können (und sollen), sodass die
-darunterstehenden MC-Aufgaben korrekt beantwortet werden können. Die im
-Source-Feld bereits vorhandene Code-Zeile ermöglicht es, den Datensatz
-zu laden. Behalten Sie diese bitte bei und beginnen Sie mit Ihren
+sämtliche Aufgaben berechnet werden können, sodass Sie die
+darunterstehenden MC-Aufgaben beantworten können. Die im Source-Feld
+bereits vorhandene Code-Zeile ermöglicht es Ihnen, den Datensatz zu
+laden. Behalten Sie diese bitte bei und beginnen Sie mit Ihren
 Berechnungen in der Zeile darunter. Das Source-Feld kann beliebig
 erweitert werden. Drücken Sie dazu einfach die Eingabetaste, um die
 Source-Box zu vergrößern.</strong></p>
@@ -820,27 +814,28 @@ Source-Box zu vergrößern.</strong></p>
 <h4>Smartphone und Prokrastination</h4>
 <div id="section-hintergrund" class="section level5">
 <h5>Hintergrund</h5>
-<p>Prokrastination ist ein verbreitetes Phänomen, das sich durch das
-Aufschieben von Aufgaben und das Hinauszögern von Handlungen
-auszeichnet. Menschen, die unter Prokrastination leiden, verschieben
-regelmäßig wichtige oder unangenehme Aufgaben auf später, obwohl sie
-sich bewusst sind, dass dies negative Auswirkungen haben kann. Die
-Gründe für Prokrastination können vielfältig sein, einschließlich Angst
-vor Versagen, Perfektionismus oder mangelnder Motivation. Die
-Bewältigung von Prokrastination erfordert oft eine bewusste
-Auseinandersetzung mit den zugrunde liegenden Ursachen, das Setzen von
-klaren Zielen und das Entwickeln effektiver Zeitmanagement-Strategien.
-Smartphone-Sucht und Prokrastination können eng miteinander verbunden
-sein. Die ständige Verfügbarkeit von Smartphones und die Fülle an
-Ablenkungen, wie soziale Medien, Spiele und Internetzugang, können dazu
-führen, dass Menschen ihre Zeit unproduktiv verbringen und wichtige
-Aufgaben aufschieben. Der ständige Reiz des Smartphones kann zu einer
-Sucht führen, bei der die Betroffenen immer wieder zum Handy greifen, um
-kurzfristige Befriedigung zu erlangen, anstatt sich den eigentlichen
-Aufgaben zu widmen. Die ständige Ablenkung durch das Smartphone kann die
-Konzentration beeinträchtigen und die Prokrastination verstärken, da die
-Betroffenen Schwierigkeiten haben, sich auf eine Sache zu fokussieren
-und ihre Zeit effektiv zu nutzen.</p>
+<p><strong>Prokrastination</strong> ist ein verbreitetes Phänomen, das
+sich durch das Aufschieben von Aufgaben und das Hinauszögern von
+Handlungen auszeichnet. Menschen, die unter Prokrastination leiden,
+verschieben regelmäßig wichtige oder unangenehme Aufgaben auf später,
+obwohl sie sich bewusst sind, dass dies negative Auswirkungen haben
+kann. Die Gründe für Prokrastination können vielfältig sein,
+einschließlich Angst vor Versagen, Perfektionismus oder mangelnder
+Motivation. Die Bewältigung von Prokrastination erfordert oft eine
+bewusste Auseinandersetzung mit den zugrunde liegenden Ursachen, das
+Setzen von klaren Zielen und das Entwickeln effektiver
+Zeitmanagement-Strategien. <strong>Smartphone-Sucht</strong> und
+Prokrastination können eng miteinander verbunden sein. Die ständige
+Verfügbarkeit von Smartphones und die Fülle an Ablenkungen, wie soziale
+Medien, Spiele und Internetzugang, können dazu führen, dass Menschen
+ihre Zeit unproduktiv verbringen und wichtige Aufgaben aufschieben. Der
+ständige Reiz des Smartphones kann zu einer Sucht führen, bei der die
+Betroffenen immer wieder zum Handy greifen, um kurzfristige Befriedigung
+zu erlangen, anstatt sich den eigentlichen Aufgaben zu widmen. Die
+ständige Ablenkung durch das Smartphone kann die Konzentration
+beeinträchtigen und die Prokrastination verstärken, da die Betroffenen
+Schwierigkeiten haben, sich auf eine Sache zu fokussieren und ihre Zeit
+effektiv zu nutzen.</p>
 <p>In einer neuen Studie soll die Wirksamkeit eines speziellen Trainings
 gegen Smartphone-Sucht untersucht werden, mit dem zusätzlichen Ziel, den
 Einfluss auf die Prokrastination zu untersuchen. Teilnehmer werden
@@ -865,9 +860,9 @@ misst die Skala Prokrastination in vier Bereichen: akademische,
 berufliche, medizinische und bürgerschaftliche Pflichten. Alle Items
 müssen auf einer 5-Punkte-Likert-Skala gerated werden, die von 1 bis 5
 reicht. Eine Umkodierung ist teilweise erforderlich.</p>
-<p><font color='darkred'>Hinweis: Den vollständigen Fragebogen inkl.
+<p><strong>Hinweis: Den vollständigen Fragebogen inkl.
 Auswertungsanleitung finden Sie auf studynet im Ordner
-“Fragebögen”.</font></p>
+“Fragebögen”.</strong></p>
 <hr>
 <!-- Horizontale Trennlinie -->
 </div>
@@ -893,8 +888,8 @@ Aussagen angeben. Die Smartphone Addiction Scale hat sich als
 zuverlässiges Instrument erwiesen, um das Ausmaß der Smartphone-Sucht zu
 messen und ermöglicht es Forschern und Klinikern, das Phänomen genauer
 zu erforschen und geeignete Interventionen zu entwickeln.</p>
-<p><font color='darkred'>Hinweis: Auch die SAS finden Sie auf studynet
-im Ordner “Fragebögen”.</font></p>
+<p>**Hinweis: Auch die SAS finden Sie auf studynet im Ordner
+“Fragebögen”.*</font>**</p>
 <hr>
 <!-- Horizontale Trennlinie -->
 </div>
@@ -917,6 +912,21 @@ data-diagnostics="1" data-startover="1" data-lines="0"
 data-pipe="|&gt;">
 <pre class="text"><code>smartphone = read.csv(&quot;https://raw.githubusercontent.com/stephangoerigk/WAF_Folien/master/Smartphone_addiction.csv&quot;)</code></pre>
 <script type="application/json" data-ui-opts="1">{"engine":"r","has_checker":false,"caption":"<span data-i18n=\"text.enginecap\" data-i18n-opts=\"{&quot;engine&quot;:&quot;R&quot;}\">R Code<\/span>"}</script>
+</div>
+<div class="tutorial-exercise-support" data-label="Projekt1-solution"
+data-completion="1" data-diagnostics="1" data-startover="1"
+data-lines="0" data-pipe="|&gt;">
+<pre class="text"><code>smartphone = read.csv(&quot;https://raw.githubusercontent.com/stephangoerigk/WAF_Folien/master/Smartphone_addiction.csv&quot;)
+
+# Aufgabe 1
+dim(smartphone)
+nrow(smartphone) # Alternative Funktion, falls Unsicherheiten darüber bestehen, welche Zahl des dim()-Ergebnisses sich auf die Anzahl der Zeilen (engl. rows) bezieht
+ncol(smartphone) # Alternative Funktion, falls Unsicherheiten darüber bestehen, welche Zahl des dim()-Ergebnisses sich auf die Anzahl der Spalten (engl. columns) bezieht
+
+table(smartphone$groups)
+
+table(smartphone$Gender[smartphone$groups == &quot;No Training&quot;])
+table(smartphone$Gender[smartphone$groups == &quot;Training&quot;])</code></pre>
 </div>
 <div class="panel-heading tutorial-quiz-title"><span data-i18n="text.quiz">Quiz</span></div>
 <div class="panel panel-default tutorial-question-container">
@@ -2217,10 +2227,10 @@ learnr:::store_exercise_cache(structure(list(label = "Datenanalyse5", global_set
     chunks = list(list(label = "Datenanalyse5", code = "", opts = list(
         label = "\"Datenanalyse5\"", exercise = "TRUE"), engine = "r")), 
     code_check = NULL, error_check = NULL, check = NULL, solution = structure(c("", 
-    "extrema_setosa = range(iris$Petal.Length[iris$Species == \"setosa\"])", 
-    "diff(extrema_setosa)", "", "extrema_versicolor = range(iris$Petal.Length[iris$Species == \"versicolor\"])", 
-    "diff(extrema_versicolor)", "", "extrema_virginica = range(iris$Petal.Length[iris$Species == \"virginica\"])", 
-    "diff(extrema_virginica)", ""), chunk_opts = list(label = "Datenanalyse5-solution")), 
+    "diff(range(iris$Petal.Length[iris$Species == \"setosa\"]))", 
+    "diff(range(iris$Petal.Length[iris$Species == \"versicolor\"]))", 
+    "diff(range(iris$Petal.Length[iris$Species == \"virginica\"]))", 
+    ""), chunk_opts = list(label = "Datenanalyse5-solution")), 
     tests = NULL, options = list(eval = FALSE, echo = TRUE, results = "markup", 
         tidy = FALSE, tidy.opts = NULL, collapse = FALSE, prompt = FALSE, 
         comment = NA, highlight = FALSE, size = "normalsize", 
@@ -2257,17 +2267,23 @@ learnr:::store_exercise_cache(structure(list(label = "Projekt1", global_setup = 
 "library(learnr)", "library(psych)", "library(shiny)", "library(faux)", 
 "library(tidyverse)", "knitr::opts_chunk$set(echo = FALSE)", 
 ""), chunk_opts = list(label = "setup", include = FALSE)), setup = NULL, 
-    chunks = list(list(label = "Projekt1", code = "smartphone = read.csv(\"https://raw.githubusercontent.com/stephangoerigk/WAF_Folien/master/Smartphone_addiction.csv\")\n\n", 
+    chunks = list(list(label = "Projekt1", code = "smartphone = read.csv(\"https://raw.githubusercontent.com/stephangoerigk/WAF_Folien/master/Smartphone_addiction.csv\")\n", 
         opts = list(label = "\"Projekt1\"", exercise = "TRUE"), 
         engine = "r")), code_check = NULL, error_check = NULL, 
-    check = NULL, solution = NULL, tests = NULL, options = list(
-        eval = FALSE, echo = TRUE, results = "markup", tidy = FALSE, 
-        tidy.opts = NULL, collapse = FALSE, prompt = FALSE, comment = NA, 
-        highlight = FALSE, size = "normalsize", background = "#F7F7F7", 
-        strip.white = TRUE, cache = 0, cache.path = "index_cache/html/", 
-        cache.vars = NULL, cache.lazy = TRUE, dependson = NULL, 
-        autodep = FALSE, cache.rebuild = FALSE, fig.keep = "high", 
-        fig.show = "asis", fig.align = "default", fig.path = "index_files/figure-html/", 
+    check = NULL, solution = structure(c("smartphone = read.csv(\"https://raw.githubusercontent.com/stephangoerigk/WAF_Folien/master/Smartphone_addiction.csv\")", 
+    "", "# Aufgabe 1", "dim(smartphone)", "nrow(smartphone) # Alternative Funktion, falls Unsicherheiten darüber bestehen, welche Zahl des dim()-Ergebnisses sich auf die Anzahl der Zeilen (engl. rows) bezieht", 
+    "ncol(smartphone) # Alternative Funktion, falls Unsicherheiten darüber bestehen, welche Zahl des dim()-Ergebnisses sich auf die Anzahl der Spalten (engl. columns) bezieht", 
+    "", "table(smartphone$groups)", "", "table(smartphone$Gender[smartphone$groups == \"No Training\"])", 
+    "table(smartphone$Gender[smartphone$groups == \"Training\"])", 
+    "", "", "", ""), chunk_opts = list(label = "Projekt1-solution")), 
+    tests = NULL, options = list(eval = FALSE, echo = TRUE, results = "markup", 
+        tidy = FALSE, tidy.opts = NULL, collapse = FALSE, prompt = FALSE, 
+        comment = NA, highlight = FALSE, size = "normalsize", 
+        background = "#F7F7F7", strip.white = TRUE, cache = 0, 
+        cache.path = "index_cache/html/", cache.vars = NULL, 
+        cache.lazy = TRUE, dependson = NULL, autodep = FALSE, 
+        cache.rebuild = FALSE, fig.keep = "high", fig.show = "asis", 
+        fig.align = "default", fig.path = "index_files/figure-html/", 
         dev = "png", dev.args = NULL, dpi = 192, fig.ext = "png", 
         fig.width = 6.5, fig.height = 4, fig.env = "figure", 
         fig.cap = NULL, fig.scap = NULL, fig.lp = "fig:", fig.subcap = NULL, 
@@ -2278,7 +2294,7 @@ learnr:::store_exercise_cache(structure(list(label = "Projekt1", global_setup = 
         engine = "r", split = FALSE, include = TRUE, purl = TRUE, 
         max.print = 1000, label = "Projekt1", exercise = TRUE, 
         code = c("smartphone = read.csv(\"https://raw.githubusercontent.com/stephangoerigk/WAF_Folien/master/Smartphone_addiction.csv\")", 
-        "", ""), out.width.px = 624, out.height.px = 384, params.src = "Projekt1, exercise=TRUE", 
+        ""), out.width.px = 624, out.height.px = 384, params.src = "Projekt1, exercise=TRUE", 
         fig.num = 0, exercise.df_print = "paged", exercise.checker = "NULL"), 
     engine = "r", version = "4"), class = c("r", "tutorial_exercise"
 )))
@@ -2286,14 +2302,26 @@ learnr:::store_exercise_cache(structure(list(label = "Projekt1", global_setup = 
  
 <script type="application/shiny-prerendered" data-context="server">
 learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label = "quiz_projekt_1-1", 
-    question = structure("Wie viele Zeilen und Spalten hat der Datensatz?", html = TRUE, class = c("html", 
-    "character")), answers = list(structure(list(id = "lnr_ans_8ffe830", 
-        option = "128 Zeilen, 124 Spalten", value = "128 Zeilen, 124 Spalten", 
-        label = structure("128 Zeilen, 124 Spalten", html = TRUE, class = c("html", 
+    question = structure("<strong>Aufgabe 1:<\u002fstrong> Bitte verschaffen Sie sich mit den Ihnen bekannten Funktionen einen ersten Überblick über den Datensatz und geben Sie an, welche der folgenden Aussagen richtig sind.", html = TRUE, class = c("html", 
+    "character")), answers = list(structure(list(id = "lnr_ans_ff2e8", 
+        option = "Der Datensatz enthält Daten von insgesamt 130 ProbandInnen, welche im Rohdatensatz anhand von 120 Variablen beschrieben werden. Insgesamt 60 ProbandInnen (35 weiblich) erhielten im Zuge der Untersuchung ein Training gegen Smartphone-Sucht, 70 ProbandInnen (40 weiblich) wurden der Kontrollgruppe zugeteilt.", 
+        value = "Der Datensatz enthält Daten von insgesamt 130 ProbandInnen, welche im Rohdatensatz anhand von 120 Variablen beschrieben werden. Insgesamt 60 ProbandInnen (35 weiblich) erhielten im Zuge der Untersuchung ein Training gegen Smartphone-Sucht, 70 ProbandInnen (40 weiblich) wurden der Kontrollgruppe zugeteilt.", 
+        label = structure("Der Datensatz enthält Daten von insgesamt 130 ProbandInnen, welche im Rohdatensatz anhand von 120 Variablen beschrieben werden. Insgesamt 60 ProbandInnen (35 weiblich) erhielten im Zuge der Untersuchung ein Training gegen Smartphone-Sucht, 70 ProbandInnen (40 weiblich) wurden der Kontrollgruppe zugeteilt.", html = TRUE, class = c("html", 
+        "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_53da139", 
+        option = "Der Datensatz enthält Daten von insgesamt 128 ProbandInnen, welche im Rohdatensatz anhand von 124 Variablen beschrieben werden. Insgesamt 75 ProbandInnen (41 weiblich) erhielten im Zuge der Untersuchung ein Training gegen Smartphone-Sucht, 53 ProbandInnen (30 weiblich) wurden der Kontrollgruppe zugeteilt.", 
+        value = "Der Datensatz enthält Daten von insgesamt 128 ProbandInnen, welche im Rohdatensatz anhand von 124 Variablen beschrieben werden. Insgesamt 75 ProbandInnen (41 weiblich) erhielten im Zuge der Untersuchung ein Training gegen Smartphone-Sucht, 53 ProbandInnen (30 weiblich) wurden der Kontrollgruppe zugeteilt.", 
+        label = structure("Der Datensatz enthält Daten von insgesamt 128 ProbandInnen, welche im Rohdatensatz anhand von 124 Variablen beschrieben werden. Insgesamt 75 ProbandInnen (41 weiblich) erhielten im Zuge der Untersuchung ein Training gegen Smartphone-Sucht, 53 ProbandInnen (30 weiblich) wurden der Kontrollgruppe zugeteilt.", html = TRUE, class = c("html", 
         "character")), correct = TRUE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
-    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_e17b2a0", 
-        option = "128 Spalten, 124 Zeilen", value = "128 Spalten, 124 Zeilen", 
-        label = structure("128 Spalten, 124 Zeilen", html = TRUE, class = c("html", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_36f3e24", 
+        option = "Der Datensatz enthält Daten von insgesamt 100 ProbandInnen, welche im Rohdatensatz anhand von 100 Variablen beschrieben werden. Ein ausbalanciertes Verhältnis von 50 ProbandInnen (25 weiblich) erhielt im Zuge der Untersuchung ein Training gegen Smartphone-Sucht, 50 ProbandInnen (25 weiblich) wurden der Kontrollgruppe zugeteilt.", 
+        value = "Der Datensatz enthält Daten von insgesamt 100 ProbandInnen, welche im Rohdatensatz anhand von 100 Variablen beschrieben werden. Ein ausbalanciertes Verhältnis von 50 ProbandInnen (25 weiblich) erhielt im Zuge der Untersuchung ein Training gegen Smartphone-Sucht, 50 ProbandInnen (25 weiblich) wurden der Kontrollgruppe zugeteilt.", 
+        label = structure("Der Datensatz enthält Daten von insgesamt 100 ProbandInnen, welche im Rohdatensatz anhand von 100 Variablen beschrieben werden. Ein ausbalanciertes Verhältnis von 50 ProbandInnen (25 weiblich) erhielt im Zuge der Untersuchung ein Training gegen Smartphone-Sucht, 50 ProbandInnen (25 weiblich) wurden der Kontrollgruppe zugeteilt.", html = TRUE, class = c("html", 
+        "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
+    "tutorial_quiz_answer")), structure(list(id = "lnr_ans_db95476", 
+        option = "Der Datensatz enthält Daten von insgesamt 124 ProbandInnen, welche im Rohdatensatz anhand von 128 Variablen beschrieben werden. Insgesamt 53 ProbandInnen (30 weiblich) erhielten im Zuge der Untersuchung ein Training gegen Smartphone-Sucht, 75 ProbandInnen (41 weiblich) wurden der Kontrollgruppe zugeteilt.", 
+        value = "Der Datensatz enthält Daten von insgesamt 124 ProbandInnen, welche im Rohdatensatz anhand von 128 Variablen beschrieben werden. Insgesamt 53 ProbandInnen (30 weiblich) erhielten im Zuge der Untersuchung ein Training gegen Smartphone-Sucht, 75 ProbandInnen (41 weiblich) wurden der Kontrollgruppe zugeteilt.", 
+        label = structure("Der Datensatz enthält Daten von insgesamt 124 ProbandInnen, welche im Rohdatensatz anhand von 128 Variablen beschrieben werden. Insgesamt 53 ProbandInnen (30 weiblich) erhielten im Zuge der Untersuchung ein Training gegen Smartphone-Sucht, 75 ProbandInnen (41 weiblich) wurden der Kontrollgruppe zugeteilt.", html = TRUE, class = c("html", 
         "character")), correct = FALSE, message = NULL, type = "literal"), class = c("tutorial_question_answer", 
     "tutorial_quiz_answer"))), button_labels = list(submit = structure("<span data-i18n=\"button.questionsubmit\">Submit Answer<\u002fspan>", html = TRUE, class = c("html", 
     "character")), try_again = structure("<span data-i18n=\"button.questiontryagain\">Try Again<\u002fspan>", html = TRUE, class = c("html", 
@@ -2303,7 +2331,7 @@ learnr:::question_prerendered_chunk(structure(list(type = "learnr_radio", label 
     "character")), message = NULL, post_message = NULL), ids = list(
         answer = "quiz_projekt_1-1-answer", question = "quiz_projekt_1-1"), 
     loading = NULL, random_answer_order = FALSE, allow_retry = TRUE, 
-    seed = 2098951029.0226, options = list()), class = c("learnr_radio", 
+    seed = 2076194542.5332, options = list()), class = c("learnr_radio", 
 "tutorial_question")), session = session)
 </script>
 </p>

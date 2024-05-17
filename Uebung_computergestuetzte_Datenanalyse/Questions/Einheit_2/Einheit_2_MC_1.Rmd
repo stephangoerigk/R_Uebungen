@@ -1,0 +1,29 @@
+Question
+========
+**Aufgabe 1:** Bitte verschaffen Sie sich mit den Ihnen bekannten Funktionen einen ersten Überblick über den Datensatz und geben Sie an, welche der folgenden Aussagen richtig sind.
+
+Answerlist
+----------
+* `Der Datensatz enthält Daten von insgesamt 130 ProbandInnen, welche im Rohdatensatz anhand von 120 Variablen beschrieben werden. Insgesamt 60 ProbandInnen (35 weiblich) erhielten im Zuge der Untersuchung ein Training gegen Smartphone-Sucht, 70 ProbandInnen (40 weiblich) wurden der Kontrollgruppe zugeteilt.`
+* `Der Datensatz enthält Daten von insgesamt 128 ProbandInnen, welche im Rohdatensatz anhand von 124 Variablen beschrieben werden. Insgesamt 75 ProbandInnen (41 weiblich) erhielten im Zuge der Untersuchung ein Training gegen Smartphone-Sucht, 53 ProbandInnen (30 weiblich) wurden der Kontrollgruppe zugeteilt.`
+* `Der Datensatz enthält Daten von insgesamt 100 ProbandInnen, welche im Rohdatensatz anhand von 100 Variablen beschrieben werden. Ein ausbalanciertes Verhältnis von 50 ProbandInnen (25 weiblich) erhielt im Zuge der Untersuchung ein Training gegen Smartphone-Sucht, 50 ProbandInnen (25 weiblich) wurden der Kontrollgruppe zugeteilt.`
+* `Der Datensatz enthält Daten von insgesamt 124 ProbandInnen, welche im Rohdatensatz anhand von 128 Variablen beschrieben werden. Insgesamt 53 ProbandInnen (30 weiblich) erhielten im Zuge der Untersuchung ein Training gegen Smartphone-Sucht, 75 ProbandInnen (41 weiblich) wurden der Kontrollgruppe zugeteilt.`
+
+
+Solution
+========
+
+Answerlist
+----------
+* Falsch.
+* Richtig. 
+* Falsch. 
+* Falsch. 
+
+
+Meta-information
+================
+exname: Einheit_2_MC_1
+extype: mchoice 
+exsolution: 10000
+exshuffle: TRUE
