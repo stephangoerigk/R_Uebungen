@@ -625,25 +625,33 @@ smartphone = read.csv("https://raw.githubusercontent.com/stephangoerigk/WAF_Foli
 smartphone = read.csv("https://raw.githubusercontent.com/stephangoerigk/WAF_Folien/master/Smartphone_addiction.csv")
 
 # Aufgabe 1
-dim(smartphone)
+dim(smartphone) # Datensatz mit 128 Zeilen (ProbandInnen) und 124 Spalten (Variablen)
 nrow(smartphone) # Alternative Funktion, falls Unsicherheiten darüber bestehen, welche Zahl des dim()-Ergebnisses sich auf die Anzahl der Zeilen (engl. rows) bezieht
 ncol(smartphone) # Alternative Funktion, falls Unsicherheiten darüber bestehen, welche Zahl des dim()-Ergebnisses sich auf die Anzahl der Spalten (engl. columns) bezieht
+table(smartphone$groups) # No Training: 53 ProbandInnen, Training: 75 ProbandInnen
+table(smartphone$Gender[smartphone$groups == "No Training"]) # No Training: 30 weibliche, 23 männliche ProbandInnen
+table(smartphone$Gender[smartphone$groups == "Training"]) # Training: 41 weibliche, 34 männliche ProbandInnen
 
-table(smartphone$groups)
+# Aufgabe 2
+range(smartphone$Age) # Altersrange: 18-73
+round((sum(smartphone$Age > 65) / length(smartphone$Age)) * 100, 2) # Prozentuale Anzahl der ProbandInnen über 65 Jahre: 3.91%
 
-table(smartphone$Gender[smartphone$groups == "No Training"])
-table(smartphone$Gender[smartphone$groups == "Training"])
+round(mean(smartphone$Age[smartphone$groups == "No Training"]), 2) # No Training (Age): M = 38.17
+round(sd(smartphone$Age[smartphone$groups == "No Training"]), 2) # Not Training (Age): SD = 13.35
+
+round(mean(smartphone$Age[smartphone$groups == "Training"]), 2) # Training (Age): M = 41.53
+round(sd(smartphone$Age[smartphone$groups == "Training"]), 2) # Training (Age): SD = 14.30
 
 ```
 
 <hr> <!-- Horizontale Trennlinie -->
 
 ```{r Einheit_2_MC_1, message = FALSE, warning=FALSE}
-exams2learnr("/Uebung_computergestuetzte_Datenanalyse/Questions/Einheit_2/Einheit_2_MC_1.Rmd", allow_retry = TRUE)
+exams2learnr("/Questions/Einheit_2/Einheit_2_MC_1.Rmd", allow_retry = TRUE)
 ```
 
 ```{r Einheit_2_MC_2, echo = FALSE}
-exams2learnr("/Uebung_computergestuetzte_Datenanalyse/Questions/Einheit_2_MC_2.Rmd", allow_retry = TRUE)
+exams2learnr("/Questions/Einheit_2/Einheit_2_MC_2.Rmd", allow_retry = TRUE)
 ```
 
 ## Einheit 3
