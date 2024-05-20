@@ -1,0 +1,34 @@
+Question
+========
+**Aufgabe 4:** Werten Sie mithilfe der Ihnen auf studynet zur Verfügung stehenden Unterlagen nun auch die *Smartphone Addiction Scale (SAS)* aus und wählen Sie erneut die Antwortalternativen aus, welche die grundlegenden Deskriptivstatistiken der Skala korrekt und vollständig darstellt.
+
+Answerlist
+----------
+* t0: No Training: *M* = 115.,20, *SD* = 5.55; Training: *M* = 114.70, *SD* = 4.91
+* t0: No Training: *M* = 105.0, *SD* = 10.29; Training: *M* = 89.71, *SD* = 6.90
+* t1: No Training: *M* = 115.,20, *SD* = 5.55; Training: *M* = 114.70, *SD* = 4.91
+* t1: No Training: *M* = 105.0, *SD* = 10.29; Training: *M* = 89.71, *SD* = 6.90
+* t0 - t1: No Training: *M* = 10.25, *SD* = 9.95; Training: *M* = 25.04, *SD* = 4.47
+* t0 - t1: No Training: *M* = 25.04, *SD* = 4.47; Training: *M* = 10.25, *SD* = 9.95
+
+
+
+Solution
+========
+
+Answerlist
+----------
+* Richtig.
+* Falsch. 
+* Falsch. 
+* Richtig.
+* Richtig.
+* Falsch.
+
+
+Meta-information
+================
+exname: Einheit_2_MC_1
+extype: mchoice 
+exsolution: 10000
+exshuffle: TRUE

@@ -1,0 +1,32 @@
+Question
+========
+**Aufgabe 3:** Werten Sie mithilfe der Ihnen auf studynet zur Verfügung stehenden Unterlagen die *General Procrastination Scale (GPS)* aus und wählen Sie im Folgenden die Antwortalternative aus, welche die grundlegenden Deskriptivstatistiken der Skala korrekt und vollständig darstellt.
+
+<font color='darkred'>Bitte beachten Sie dabei, dass die Testfragebögen in dem Ihnen vorliegenden Datensatz **zu zwei Messzeitpunkten - t0 und t1 - vorgelegt wurden**. Werten Sie die GPS daher für jeden Zeitpunkt separat aus und führen Sie anschließend eine Gesamtauswertung durch, indem Sie den Differenzwert zwischen den beiden Messzeitpunkten bilden.</font>
+
+Answerlist
+----------
+* ![image description1](images/Einheit_2_MC_3_a.png)
+* ![image description2](images/Einheit_2_MC_3_b.png)
+* ![image description3](images/Einheit_2_MC_3_c.png)
+* ![image description4](images/Einheit_2_MC_3_d.png)
+
+
+
+Solution
+========
+
+Answerlist
+----------
+* Richtig.
+* Falsch. 
+* Falsch. 
+* Falsch.
+
+
+Meta-information
+================
+exname: Einheit_2_MC_1
+extype: mchoice 
+exsolution: 10000
+exshuffle: TRUE

@@ -635,23 +635,113 @@ table(smartphone$Gender[smartphone$groups == "Training"]) # Training: 41 weiblic
 # Aufgabe 2
 range(smartphone$Age) # Altersrange: 18-73
 round((sum(smartphone$Age > 65) / length(smartphone$Age)) * 100, 2) # Prozentuale Anzahl der ProbandInnen über 65 Jahre: 3.91%
-
 round(mean(smartphone$Age[smartphone$groups == "No Training"]), 2) # No Training (Age): M = 38.17
 round(sd(smartphone$Age[smartphone$groups == "No Training"]), 2) # Not Training (Age): SD = 13.35
-
 round(mean(smartphone$Age[smartphone$groups == "Training"]), 2) # Training (Age): M = 41.53
 round(sd(smartphone$Age[smartphone$groups == "Training"]), 2) # Training (Age): SD = 14.30
+
+# Aufgabe 3 
+# Auswertung GPS 
+# Recodierung Messzeitpunkt t0
+smartphone$t0_GPS_5 = recode(smartphone$t0_GPS_5, "1" = 5, "2" = 4, "3" = 3, "4" = 2, "5" = 1)
+smartphone$t0_GPS_8 = recode(smartphone$t0_GPS_8, "1" = 5, "2" = 4, "3" = 3, "4" = 2, "5" = 1)
+smartphone$t0_GPS_12 = recode(smartphone$t0_GPS_12, "1" = 5, "2" = 4, "3" = 3, "4" = 2, "5" = 1)
+smartphone$t0_GPS_16 = recode(smartphone$t0_GPS_16, "1" = 5, "2" = 4, "3" = 3, "4" = 2, "5" = 1)
+smartphone$t0_GPS_18 = recode(smartphone$t0_GPS_18, "1" = 5, "2" = 4, "3" = 3, "4" = 2, "5" = 1)
+smartphone$t0_GPS_21 = recode(smartphone$t0_GPS_21, "1" = 5, "2" = 4, "3" = 3, "4" = 2, "5" = 1)
+smartphone$t0_GPS_23 = recode(smartphone$t0_GPS_23, "1" = 5, "2" = 4, "3" = 3, "4" = 2, "5" = 1)
+
+# Recodierung Messzeitpunkt t1
+smartphone$t1_GPS_5 = recode(smartphone$t1_GPS_5, "1" = 5, "2" = 4, "3" = 3, "4" = 2, "5" = 1)
+smartphone$t1_GPS_8 = recode(smartphone$t1_GPS_8, "1" = 5, "2" = 4, "3" = 3, "4" = 2, "5" = 1)
+smartphone$t1_GPS_12 = recode(smartphone$t1_GPS_12, "1" = 5, "2" = 4, "3" = 3, "4" = 2, "5" = 1)
+smartphone$t1_GPS_16 = recode(smartphone$t1_GPS_16, "1" = 5, "2" = 4, "3" = 3, "4" = 2, "5" = 1)
+smartphone$t1_GPS_18 = recode(smartphone$t1_GPS_18, "1" = 5, "2" = 4, "3" = 3, "4" = 2, "5" = 1)
+smartphone$t1_GPS_21 = recode(smartphone$t1_GPS_21, "1" = 5, "2" = 4, "3" = 3, "4" = 2, "5" = 1)
+smartphone$t1_GPS_23 = recode(smartphone$t1_GPS_23, "1" = 5, "2" = 4, "3" = 3, "4" = 2, "5" = 1)
+
+library(tidyverse) # Paket benötigt für select()-Funktion
+
+smartphone$t0_GPS_sum = rowSums(select(smartphone, starts_with("t0_GPS")))
+smartphone$t1_GPS_sum = rowSums(select(smartphone, starts_with("t1_GPS")))
+
+names(smartphone) 
+
+# Deskriptivstatistiken t0 (differenziert nach Gruppen)
+summary(smartphone$t0_GPS_sum[smartphone$groups == "No Training"])
+round(sd(smartphone$t0_GPS_sum[smartphone$groups == "No Training"]), 2)
+
+summary(smartphone$t0_GPS_sum[smartphone$groups == "Training"])
+round(sd(smartphone$t0_GPS_sum[smartphone$groups == "Training"]), 2)
+
+# Deskriptivstatistiken t1 (differenziert nach Gruppen)
+summary(smartphone$t1_GPS_sum[smartphone$groups == "No Training"])
+round(sd(smartphone$t1_GPS_sum[smartphone$groups == "No Training"]), 2)
+
+summary(smartphone$t1_GPS_sum[smartphone$groups == "Training"])
+round(sd(smartphone$t1_GPS_sum[smartphone$groups == "Training"]), 2)
+
+# Differenzwert GPS
+smartphone$GPS_diff = smartphone$t0_GPS_sum - smartphone$t1_GPS_sum
+names(smartphone)
+
+# Deskriptivstatistiken Differenzwert (differenziert nach Gruppen)
+summary(smartphone$GPS_diff[smartphone$groups == "No Training"])
+round(sd(smartphone$GPS_diff[smartphone$groups == "No Training"]), 2)
+
+summary(smartphone$GPS_diff[smartphone$groups == "Training"])
+round(sd(smartphone$GPS_diff[smartphone$groups == "Training"]), 2)
+
+# Aufgabe 4
+# Auswertung SAS
+smartphone$t0_SAS_sum = rowSums(select(smartphone, starts_with("t0_SAS")))
+smartphone$t1_SAS_sum = rowSums(select(smartphone, starts_with("t1_SAS")))
+
+names(smartphone) 
+
+# Deskriptivstatistiken t0 (differenziert nach Gruppen)
+summary(smartphone$t0_SAS_sum[smartphone$groups == "No Training"])
+round(sd(smartphone$t0_SAS_sum[smartphone$groups == "No Training"]), 2)
+
+summary(smartphone$t0_SAS_sum[smartphone$groups == "Training"])
+round(sd(smartphone$t0_SAS_sum[smartphone$groups == "Training"]), 2)
+
+# Deskriptivstatistiken t1 (differenziert nach Gruppen)
+summary(smartphone$t1_SAS_sum[smartphone$groups == "No Training"])
+round(sd(smartphone$t1_SAS_sum[smartphone$groups == "No Training"]), 2)
+
+summary(smartphone$t1_SAS_sum[smartphone$groups == "Training"])
+round(sd(smartphone$t1_SAS_sum[smartphone$groups == "Training"]), 2)
+
+# Differenzwert SAS
+smartphone$SAS_diff = smartphone$t0_SAS_sum - smartphone$t1_SAS_sum
+names(smartphone)
+
+# Deskriptivstatistiken Differenzwert (differenziert nach Gruppen)
+summary(smartphone$SAS_diff[smartphone$groups == "No Training"])
+round(sd(smartphone$SAS_diff[smartphone$groups == "No Training"]), 2)
+
+summary(smartphone$SAS_diff[smartphone$groups == "Training"])
+round(sd(smartphone$SAS_diff[smartphone$groups == "Training"]), 2)
 
 ```
 
 <hr> <!-- Horizontale Trennlinie -->
 
 ```{r Einheit_2_MC_1, message = FALSE, warning=FALSE}
-exams2learnr("/Questions/Einheit_2/Einheit_2_MC_1.Rmd", allow_retry = TRUE)
+exams2learnr("/Questions/Einheit_2_MC_1.Rmd", allow_retry = TRUE)
 ```
 
 ```{r Einheit_2_MC_2, echo = FALSE}
-exams2learnr("/Questions/Einheit_2/Einheit_2_MC_2.Rmd", allow_retry = TRUE)
+exams2learnr("/Questions/Einheit_2_MC_2.Rmd", allow_retry = TRUE)
+```
+
+```{r Einheit_2_MC_3, echo = FALSE}
+exams2learnr("/Questions/Einheit_2_MC_3.Rmd", allow_retry = TRUE)
+```
+
+```{r Einheit_2_MC_4, echo = FALSE}
+exams2learnr("/Questions/Einheit_2_MC_4.Rmd", allow_retry = TRUE)
 ```
 
 ## Einheit 3
