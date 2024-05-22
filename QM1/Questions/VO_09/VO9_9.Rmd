@@ -1,17 +1,16 @@
 Question 
 ======== 
 
-
+Ein Zusammenhang zwischen zwei Variablen ist signifikant, wenn...
 
 Answerlist
 ----------
 
-* 
-*
-* 
-*
-*
-
+* ...der p-Wert kleiner als das Signifikanzniveau ist.
+* ...der Korrelationskoeffizient größer als 0.5 ist.
+* ...das Konfidenzintervall den Nullwert nicht einschließt.
+* ...der t-Wert größer als der kritische Wert ist.
+* ...die Stichprobe groß genug ist.
 
 Solution
 ========
@@ -19,15 +18,15 @@ Solution
 Answerlist
 ----------
 
-* Falsch. 
-* Richtig. 
-* Falsch. 
-*
-*
+* Richtig. Ein Zusammenhang ist signifikant, wenn der p-Wert kleiner als das festgelegte Signifikanzniveau (z.B. 0.05) ist.
+* Falsch. Ein Korrelationskoeffizient größer als 0.5 ist kein ausreichendes Kriterium für Signifikanz.
+* Richtig. Ein Zusammenhang ist signifikant, wenn das Konfidenzintervall den Nullwert nicht einschließt.
+* Richtig. Ein Zusammenhang ist signifikant, wenn der t-Wert größer als der kritische Wert ist.
+* Falsch. Die Stichprobengröße allein bestimmt nicht die Signifikanz.
 
 Meta-information
 ================
-exname: laplace_probability_explanation
+exname: ZusammenhangSignifikant
 extype: mchoice 
-exsolution: 010
-exshuffle: FALSE
+exsolution: 10110
+exshuffle: TRUE

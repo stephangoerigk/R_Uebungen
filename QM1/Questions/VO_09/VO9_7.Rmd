@@ -1,30 +1,16 @@
 Question 
 ======== 
 
-Welche Hypothese würde am besten zu der Fragestellung passen: "Unterscheiden sich Menschen mit höherem Bildungsabschluss signifikant in ihrer Lebenszufriedenheit im Vergleich zu Menschen mit niedrigerem Bildungsabschluss?"
+Was stimmt bezogen auf den Korrelationskoeffizienten?
 
 Answerlist
 ----------
 
-* <br>
-H0:  <br>
-H1: 
-
-* <br>
-H0:  <br>
-H1: 
-
-* <br>
-H0:  <br>
-H1: 
-
-* <br>
-H0:  <br>
-H1: 
-
-* <br>
-H0:  <br>
-H1: 
+* 0.8 ist doppelt so hoch wie 0.4
+* Er ist nicht intervallskaliert
+* Es lassen sich ohne weiteres Korrelationskoeffizienten aus verschiedenen Studien miteinander vergleichen
+* Er ist kein perfektes Maß, wenn Zusammenhänge aus mehreren Studien miteinander verglichen werden sollen
+* Er misst die Stärke und Richtung eines linearen Zusammenhangs zwischen zwei Variablen
 
 Solution
 ========
@@ -32,16 +18,15 @@ Solution
 Answerlist
 ----------
 
-* Richtig: 
-* Falsch: 
-* Falsch: 
-* Falsch: 
-* Falsch: 
-
+* Falsch. Ein Korrelationskoeffizient von 0.8 ist nicht unbedingt doppelt so stark wie 0.4, da die Korrelation nicht linear skaliert ist.
+* Richtig. Der Korrelationskoeffizient ist nicht intervallskaliert.
+* Falsch. Korrelationskoeffizienten aus verschiedenen Studien lassen sich nicht ohne weiteres vergleichen, da sie von den spezifischen Stichproben und Bedingungen abhängen.
+* Richtig. Der Korrelationskoeffizient ist kein perfektes Maß, wenn Zusammenhänge aus mehreren Studien miteinander verglichen werden sollen.
+* Richtig. Er misst die Stärke und Richtung eines linearen Zusammenhangs zwischen zwei Variablen.
 
 Meta-information
 ================
-exname: Hypothese_1
+exname: Korrelationskoeffizient
 extype: mchoice 
-exsolution: 10000
+exsolution: 01011
 exshuffle: TRUE

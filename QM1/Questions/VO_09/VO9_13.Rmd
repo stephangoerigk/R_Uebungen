@@ -1,17 +1,16 @@
 Question 
 ======== 
 
-
+Welche der folgenden Aussagen zur Interpretation des Korrelationskoeffizienten sind richtig?
 
 Answerlist
 ----------
 
-* 
-*
-* 
-*
-*
-
+* Ein Korrelationskoeffizient von 0.7 zeigt einen starken positiven Zusammenhang an.
+* Ein Korrelationskoeffizient von 0 bedeutet, dass es keinen linearen Zusammenhang gibt.
+* Ein negativer Korrelationskoeffizient bedeutet, dass hohe Werte einer Variable mit niedrigen Werten der anderen Variable einhergehen.
+* Der Korrelationskoeffizient kann Werte außerhalb des Bereichs von -1 bis 1 annehmen.
+* Ein Korrelationskoeffizient von -0.35 zeigt einen starken negativen Zusammenhang an.
 
 Solution
 ========
@@ -19,15 +18,15 @@ Solution
 Answerlist
 ----------
 
-* Falsch. 
-* Richtig. 
-* Falsch. 
-*
-*
+* Richtig. Ein Korrelationskoeffizient von 0.7 zeigt einen starken positiven Zusammenhang an.
+* Richtig. Ein Korrelationskoeffizient von 0 bedeutet, dass es keinen linearen Zusammenhang gibt.
+* Richtig. Ein negativer Korrelationskoeffizient bedeutet, dass hohe Werte einer Variable mit niedrigen Werten der anderen Variable einhergehen.
+* Falsch. Der Korrelationskoeffizient kann nur Werte im Bereich von -1 bis 1 annehmen.
+* Falsch. Ein Korrelationskoeffizient von -0.35 zeigt einen mittleren negativen Zusammenhang an.
 
 Meta-information
 ================
-exname: laplace_probability_explanation
+exname: KorrelationskoeffizientInterpretation
 extype: mchoice 
-exsolution: 010
-exshuffle: FALSE
+exsolution: 11100
+exshuffle: TRUE

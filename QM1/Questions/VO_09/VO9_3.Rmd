@@ -1,30 +1,16 @@
 Question 
 ======== 
 
-Welche Hypothese würde am besten zu der Fragestellung passen: "Unterscheiden sich Menschen mit höherem Bildungsabschluss signifikant in ihrer Lebenszufriedenheit im Vergleich zu Menschen mit niedrigerem Bildungsabschluss?"
+Was ist korrekt?
 
 Answerlist
 ----------
 
-* <br>
-H0:  <br>
-H1: 
-
-* <br>
-H0:  <br>
-H1: 
-
-* <br>
-H0:  <br>
-H1: 
-
-* <br>
-H0:  <br>
-H1: 
-
-* <br>
-H0:  <br>
-H1: 
+* Eine positive Kovarianz zeigt an, dass beide Variablen tendenziell zusammen steigen.
+* Eine Kovarianz von null bedeutet, dass keine lineare Beziehung zwischen den Variablen besteht.
+* Eine negative Kovarianz zeigt an, dass eine Variable steigt, während die andere fällt.
+* Die Kovarianz ist ein normiertes Maß für die Stärke des Zusammenhangs.
+* Die Kovarianz ist abhängig von den Einheiten der Variablen.
 
 Solution
 ========
@@ -32,16 +18,15 @@ Solution
 Answerlist
 ----------
 
-* Richtig: 
-* Falsch: 
-* Falsch: 
-* Falsch: 
-* Falsch: 
-
+* Richtig. Eine positive Kovarianz zeigt an, dass beide Variablen tendenziell zusammen steigen.
+* Richtig. Eine Kovarianz von null bedeutet, dass keine lineare Beziehung zwischen den Variablen besteht.
+* Richtig. Eine negative Kovarianz zeigt an, dass eine Variable steigt, während die andere fällt.
+* Falsch. Die Kovarianz ist nicht normiert und kann nicht direkt die Stärke des Zusammenhangs messen.
+* Richtig. Die Kovarianz ist abhängig von den Einheiten der Variablen.
 
 Meta-information
 ================
-exname: Hypothese_1
+exname: KovarianzKorrekt
 extype: mchoice 
-exsolution: 10000
+exsolution: 11101
 exshuffle: TRUE

@@ -227,30 +227,10 @@ exams2learnr("Questions/VO_03/VO3_Num_rechnen1_.Rmd", allow_retry = TRUE)
 exams2learnr("Questions/VO_03/VO3_Num_Rechnen2.Rmd", allow_retry = TRUE)
 ```
 
-**Sie analysieren und visualisieren Daten und erhalten folgende Verteilung:**
-
-```{r graph2, echo=FALSE}
-set.seed(123)
-shape <- 2 
-scale <- 1
-n <- 100000
-data <- rgamma(n, shape = shape, scale = scale)
-df = data.frame(x = data)
-
-ggplot(data = df, aes(x = x)) +
-  stat_function(fun = dgamma, n = 10000, args = list(shape = shape, scale = scale)) +
-  geom_density(fill = "darkgreen", color = "black") + 
-  labs(x = "Variable X", y = "Häufigkeit")
-
-```
-
 ```{r VO3_Graph, message = FALSE, warning=FALSE}
 exams2learnr("Questions/VO_03/VO3_Graph.Rmd", allow_retry = TRUE)
 ```
 
-```{r VO3_test, message = FALSE, warning=FALSE}
-exams2learnr("Questions/VO_03/VO3_Test.Rmd", allow_retry = TRUE)
-```
 
 ## Einheit 4 - Visualisierung
 
@@ -294,19 +274,6 @@ exams2learnr("Questions/VO_04/VO4_Graphen.Rmd", allow_retry = TRUE)
 exams2learnr("Questions/VO_04/VO4_Aussagen.Rmd", allow_retry = TRUE)
 ```
 
-**Welche Aussagen, bezogen auf die nachfolgende Grafik können Sie treffen?** 
-```{r box, echo=FALSE}
-set.seed(123)
-N = 20
-df8 = data.frame(ID = c(1:N),
-                Gruppe = c(rep("A", N/2), rep("B", N/2)),
-                Tremor = round(c(rnorm(N/2, 6, 5), rnorm(N/2, 12, 8))))
-
-#box = boxplot(Tremor ~ Entzug, data = df, cex.lab = 2.5, cex.axis = 2.5)
-
-ggplot2::ggplot(data = df8, aes(x = Gruppe, y = Tremor)) + 
-                  geom_boxplot()
-```
 ```{r VO4_11, message = FALSE, warning=FALSE}
 exams2learnr("Questions/VO_04/VO4_Boxplot4.Rmd", allow_retry = TRUE)
 ```
@@ -544,11 +511,42 @@ exams2learnr("Questions/VO_08/VO8_5.Rmd", allow_retry = TRUE)
 exams2learnr("Questions/VO_08/VO8_6.Rmd", allow_retry = TRUE)
 ```
 
+```{r VO8_07, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_08/VO8_7.Rmd", allow_retry = TRUE)
+```
+
+```{r VO8_08, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_08/VO8_8.Rmd", allow_retry = TRUE)
+```
+
+```{r VO8_09, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_08/VO8_9.Rmd", allow_retry = TRUE)
+```
+
+```{r VO8_10, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_08/VO8_10.Rmd", allow_retry = TRUE)
+```
+
+```{r VO8_11, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_08/VO8_11.Rmd", allow_retry = TRUE)
+```
+
+```{r VO8_12, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_08/VO8_12.Rmd", allow_retry = TRUE)
+```
+
+```{r VO8_13, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_08/VO8_13.Rmd", allow_retry = TRUE)
+```
 
 
 
 #### Weitere Übungsaufgaben Hypothesentests
 
+
+```{r VO8_Output1, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_08/VO8_Output1.Rmd", allow_retry = TRUE)
+```
 
 ```{r VO8_Output2, message = FALSE, warning=FALSE}
 exams2learnr("Questions/VO_08/VO8_Output2.Rmd", allow_retry = TRUE)
@@ -562,13 +560,66 @@ exams2learnr("Questions/VO_08/VO8_Output3.Rmd", allow_retry = TRUE)
 exams2learnr("Questions/VO_08/VO8_Output4.Rmd", allow_retry = TRUE)
 ```
 
-```{r VO8_Output5, message = FALSE, warning=FALSE}
-exams2learnr("Questions/VO_08/VO8_Output5.Rmd", allow_retry = TRUE)
+
+## Einheit 9 - Korrelation
+
+```{r VO9_01, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_09/VO9_1.Rmd", allow_retry = TRUE)
+```
+
+```{r VO9_02, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_09/VO9_2.Rmd", allow_retry = TRUE)
+```
+
+```{r VO9_03, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_09/VO9_3.Rmd", allow_retry = TRUE)
+```
+
+```{r VO9_04, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_09/VO9_4.Rmd", allow_retry = TRUE)
+```
+
+```{r VO9_05, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_09/VO9_5.Rmd", allow_retry = TRUE)
+```
+
+```{r VO9_06, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_09/VO9_6.Rmd", allow_retry = TRUE)
+```
+
+```{r VO9_07, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_09/VO9_7.Rmd", allow_retry = TRUE)
+```
+
+```{r VO9_08, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_09/VO9_8.Rmd", allow_retry = TRUE)
+```
+
+```{r VO9_09, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_09/VO9_9.Rmd", allow_retry = TRUE)
+```
+
+```{r VO9_10, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_09/VO9_10.Rmd", allow_retry = TRUE)
+```
+
+```{r VO9_11, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_09/VO9_11.Rmd", allow_retry = TRUE)
+```
+
+```{r VO9_12, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_09/VO9_12.Rmd", allow_retry = TRUE)
+```
+
+```{r VO9_13, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_09/VO9_13.Rmd", allow_retry = TRUE)
+```
+
+```{r VO9_14, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_09/VO9_14.Rmd", allow_retry = TRUE)
 ```
 
 
-
-## Einheit 9 - Korrelation
 
 ## Einheit 10 - Verfahren für Nominaldaten - χ2 Test
 

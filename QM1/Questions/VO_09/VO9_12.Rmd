@@ -1,17 +1,16 @@
 Question 
 ======== 
 
-
+Welche Aussagen zur Korrelation sind korrekt?
 
 Answerlist
 ----------
 
-* 
-*
-* 
-*
-*
-
+* Eine positive Korrelation bedeutet, dass hohe Werte einer Variable mit hohen Werten der anderen Variable einhergehen.
+* Eine Korrelation von -0.8 ist schwächer als eine Korrelation von 0.8.
+* Eine Korrelation von 0.2 deutet auf einen schwachen Zusammenhang hin.
+* Wenn zwei Variablen eine hohe Korrelation aufweisen, muss eine der Variablen die Ursache der anderen sein.
+* Eine Korrelation misst die Stärke und Richtung des linearen Zusammenhangs zwischen zwei Variablen.
 
 Solution
 ========
@@ -19,15 +18,15 @@ Solution
 Answerlist
 ----------
 
-* Falsch. 
-* Richtig. 
-* Falsch. 
-*
-*
+* Richtig. Eine positive Korrelation bedeutet, dass hohe Werte einer Variable mit hohen Werten der anderen Variable einhergehen.
+* Falsch. Eine Korrelation von -0.8 ist genauso stark wie eine Korrelation von 0.8, nur in die entgegengesetzte Richtung.
+* Richtig. Eine Korrelation von 0.2 deutet auf einen schwachen Zusammenhang hin.
+* Falsch. Eine hohe Korrelation bedeutet nicht zwangsläufig eine kausale Beziehung.
+* Richtig. Eine Korrelation misst die Stärke und Richtung des linearen Zusammenhangs zwischen zwei Variablen.
 
 Meta-information
 ================
-exname: laplace_probability_explanation
+exname: KorrelationAussagen
 extype: mchoice 
-exsolution: 010
-exshuffle: FALSE
+exsolution: 10101
+exshuffle: TRUE

@@ -1,11 +1,30 @@
 ```{r Summe2_data, include=FALSE}
 x = sample(1:10, 10, replace = T)
 sol = sum(x[3:8]-1)
+
+
+df = data.frame(
+                 X = x)
+                  
+
+df2 = df
+df = as.data.frame(t(df))
+colnames(df) = NULL
+#kable(df[,], col.names = NULL)
+table = df %>%
+  kbl() %>%
+  kable_styling()
+
 ```
 
 Question
 ========
-Es ist eine Variable $X$ = `r paste0("[", paste(x, collapse = ", "), "]")` gegeben.
+Es ist eine Variable $X$ gegeben.
+
+```{r echo=FALSE}
+table
+```
+
 
 Bitte berechnen Sie: 
 

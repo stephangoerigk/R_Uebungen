@@ -1,30 +1,17 @@
 Question 
 ======== 
 
-Welche Hypothese würde am besten zu der Fragestellung passen: "Unterscheiden sich Menschen mit höherem Bildungsabschluss signifikant in ihrer Lebenszufriedenheit im Vergleich zu Menschen mit niedrigerem Bildungsabschluss?"
+Die Produkt-Moment-Korrelation...
 
 Answerlist
 ----------
 
-* <br>
-H0:  <br>
-H1: 
-
-* <br>
-H0:  <br>
-H1: 
-
-* <br>
-H0:  <br>
-H1: 
-
-* <br>
-H0:  <br>
-H1: 
-
-* <br>
-H0:  <br>
-H1: 
+* ...wird auch Pearson-Korrelation genannt.
+* ...misst die Stärke und Richtung eines linearen Zusammenhangs zwischen zwei Variablen.
+* ...kann Werte zwischen -1 und +1 annehmen.
+* ...ist robust gegenüber Ausreißern.
+* ...setzt voraus, dass die Variablen intervall- oder verhältnisskaliert sind.
+* ...ist ein standardisiertes Maß.
 
 Solution
 ========
@@ -32,16 +19,16 @@ Solution
 Answerlist
 ----------
 
-* Richtig: 
-* Falsch: 
-* Falsch: 
-* Falsch: 
-* Falsch: 
-
+* Richtig. Die Produkt-Moment-Korrelation wird auch Pearson-Korrelation genannt.
+* Richtig. Sie misst die Stärke und Richtung eines linearen Zusammenhangs zwischen zwei Variablen.
+* Richtig. Sie kann Werte zwischen -1 und +1 annehmen.
+* Falsch. Sie ist nicht robust gegenüber Ausreißern, da Ausreißer die Korrelation stark beeinflussen können.
+* Richtig. Sie setzt voraus, dass die Variablen intervall- oder verhältnisskaliert sind.
+* Richtig. Sie ist ein standardisiertes Maß.
 
 Meta-information
 ================
-exname: Hypothese_1
+exname: ProduktMomentKorrelation
 extype: mchoice 
-exsolution: 10000
+exsolution: 111011
 exshuffle: TRUE

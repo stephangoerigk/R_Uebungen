@@ -4,6 +4,7 @@ Question
 
 Sie analysieren und visualisieren Daten und erhalten folgende Verteilung:
 
+![](images/linkssteile_Verteilung.jpeg){width=600px}
 
 ```{r graph, echo=FALSE, message=FALSE, warning=FALSE, fig.height=2, fig.width=2}
 set.seed(123)

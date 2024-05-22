@@ -1,17 +1,17 @@
 Question 
 ======== 
 
-
+Die Rangkorrelation...
 
 Answerlist
 ----------
 
-* 
-*
-* 
-*
-*
-
+* ...misst die Beziehung zwischen den Rängen zweier Variablen.
+* ...wird durch den Pearson-Korrelationskoeffizienten berechnet.
+* ...ist robust gegenüber Ausreißern.
+* ...setzt keine Normalverteilung der Daten voraus.
+* ...wird häufig durch den Spearman-Korrelationskoeffizienten berechnet.
+* ...muss gerechnet werden, wenn zumindest eine der beiden Variablen ordinalskaliert ist.
 
 Solution
 ========
@@ -19,15 +19,16 @@ Solution
 Answerlist
 ----------
 
-* Falsch. 
-* Richtig. 
-* Falsch. 
-*
-*
+* Richtig. Die Rangkorrelation misst die Beziehung zwischen den Rängen zweier Variablen.
+* Falsch. Die Rangkorrelation wird nicht durch den Pearson-Korrelationskoeffizienten berechnet.
+* Richtig. Die Rangkorrelation ist robust gegenüber Ausreißern.
+* Richtig. Die Rangkorrelation setzt keine Normalverteilung der Daten voraus.
+* Richtig. Die Rangkorrelation wird häufig durch den Spearman-Korrelationskoeffizienten berechnet.
+* Richtig. Die Rangkorrelation muss gerechnet werden, wenn zumindest eine der beiden Variablen ordinalskaliert ist.
 
 Meta-information
 ================
-exname: laplace_probability_explanation
+exname: Rangkorrelation
 extype: mchoice 
-exsolution: 010
-exshuffle: FALSE
+exsolution: 101111
+exshuffle: TRUE

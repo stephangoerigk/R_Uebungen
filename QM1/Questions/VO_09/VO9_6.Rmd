@@ -1,30 +1,16 @@
 Question 
 ======== 
 
-Welche Hypothese würde am besten zu der Fragestellung passen: "Unterscheiden sich Menschen mit höherem Bildungsabschluss signifikant in ihrer Lebenszufriedenheit im Vergleich zu Menschen mit niedrigerem Bildungsabschluss?"
+Ein Korrelationskoeffizient von -0.42 ist nach Cohen ein...
 
 Answerlist
 ----------
 
-* <br>
-H0:  <br>
-H1: 
-
-* <br>
-H0:  <br>
-H1: 
-
-* <br>
-H0:  <br>
-H1: 
-
-* <br>
-H0:  <br>
-H1: 
-
-* <br>
-H0:  <br>
-H1: 
+* ...starker Effekt.
+* ...moderater/mittlerer Effekt.
+* ...schwacher Effekt.
+* ...keine Korrelation.
+* ...positiver Zusammenhang.
 
 Solution
 ========
@@ -32,16 +18,15 @@ Solution
 Answerlist
 ----------
 
-* Richtig: 
-* Falsch: 
-* Falsch: 
-* Falsch: 
-* Falsch: 
-
+* Falsch. Ein Korrelationskoeffizient von -0.42 wird nicht als starker Zusammenhang betrachtet.
+* Richtig. Ein Korrelationskoeffizient von -0.42 wird nach Cohen als moderater/mittlerer Effekt eingestuft.
+* Falsch. Ein Korrelationskoeffizient von -0.42 wird als moderater und nicht als schwacher Zusammenhang betrachtet.
+* Falsch. Ein Korrelationskoeffizient von -0.42 zeigt einen negativen Zusammenhang, keine fehlende Korrelation.
+* Falsch. Ein Korrelationskoeffizient von -0.42 zeigt einen negativen, nicht positiven Zusammenhang.
 
 Meta-information
 ================
-exname: Hypothese_1
+exname: CohenKorrelation
 extype: mchoice 
-exsolution: 10000
+exsolution: 01000
 exshuffle: TRUE
