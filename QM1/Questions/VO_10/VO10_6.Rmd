@@ -1,0 +1,34 @@
+Question
+========
+
+Welche Aussage trifft auf den Vierfelder Chi-Quadrat-Test zu?
+
+Answerlist
+----------
+
+* Er wird verwendet, wenn beide Merkmale genau 2 Merkmalsstufen haben.
+* Er erfordert die Berechnung von Randhäufigkeiten.
+* Die Effektstärke kann über φ berechnet werden.
+* Er kann nur für ordinalskalierte Daten verwendet werden.
+* Er basiert auf der Chi-Quadrat-Verteilung.
+
+Solution
+========
+
+Answerlist
+----------
+
+* Richtig. Der Vierfelder Chi-Quadrat-Test wird verwendet, wenn beide Merkmale genau 2 Merkmalsstufen haben.
+* Falsch. Beim Vierfelder Chi-Quadrat-Test ist die Berechnung von Randhäufigkeiten nicht notwendig.
+* Richtig. Die Effektstärke des Vierfelder Chi-Quadrat-Test kann über φ berechnet werden: 
+$$\phi = \frac{ a \cdot d -  b \cdot c}{\sqrt{(a + b) \cdot (c + d) \cdot ( a + c) \cdot (b + d)}}$$
+
+* Falsch. Der Test kann für nominalskalierte Daten verwendet werden.
+* Richtig. Der Test basiert auf der Chi-Quadrat-Verteilung.
+
+Meta-information
+================
+exname: FourfoldChiSquare
+extype: mchoice
+exsolution: 10101
+exshuffle: TRUE

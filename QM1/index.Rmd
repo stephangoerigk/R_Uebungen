@@ -619,8 +619,67 @@ exams2learnr("Questions/VO_09/VO9_13.Rmd", allow_retry = TRUE)
 exams2learnr("Questions/VO_09/VO9_14.Rmd", allow_retry = TRUE)
 ```
 
+## Einheit 10 - Verfahren für Nominaldaten - Chi-Quadrat-Test
+
+```{r V10_1, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_10/VO10_1.Rmd", allow_retry = TRUE)
+```
+
+```{r V10_2, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_10/VO10_2.Rmd", allow_retry = TRUE)
+```
+
+```{r V10_3, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_10/VO10_3.Rmd", allow_retry = TRUE)
+```
+
+```{r V10_4, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_10/VO10_4.Rmd", allow_retry = TRUE)
+```
+
+```{r V10_5, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_10/VO10_5.Rmd", allow_retry = TRUE)
+```
+
+```{r V10_6, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_10/VO10_6.Rmd", allow_retry = TRUE)
+```
+
+```{r V10_7, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_10/VO10_7.Rmd", allow_retry = TRUE)
+```
+
+```{r V10_8, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_10/VO10_8.Rmd", allow_retry = TRUE)
+```
+
+```{r V10_9, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_10/VO10_9.Rmd", allow_retry = TRUE)
+```
+
+```{r V10_10, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_10/VO10_10.Rmd", allow_retry = TRUE)
+```
+
+```{r V10_11, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_10/VO10_11.Rmd", allow_retry = TRUE)
+```
+
+```{r V10_12, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_10/VO10_12.Rmd", allow_retry = TRUE)
+```
+
+```{r V10_13, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_10/VO10_13.Rmd", allow_retry = TRUE)
+```
+
+```{r V10_14, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_10/VO10_14.Rmd", allow_retry = TRUE)
+```
 
 
-## Einheit 10 - Verfahren für Nominaldaten - χ2 Test
+
+
+
 
 ## Einheit 11 - Effektstärke und Power

@@ -1,0 +1,32 @@
+Question 
+======== 
+
+Welche Schlussfolgerungen können aus einem signifikanten Chi-Quadrat-Test gezogen werden?
+
+Answerlist
+----------
+
+* Die beobachteten Häufigkeiten unterscheiden sich signifikant von den erwarteten Häufigkeiten.
+* Es besteht ein Zusammenhang zwischen den beiden untersuchten kategorialen Variablen.
+* Die Nullhypothese der Unabhängigkeit wird verworfen.
+* Es gibt keine Unterschiede zwischen den beobachteten und erwarteten Häufigkeiten.
+* Die beiden Variablen sind stochastisch unabhängig.
+
+Solution
+========
+
+Answerlist
+----------
+
+* Richtig. Die beobachteten Häufigkeiten unterscheiden sich signifikant von den erwarteten Häufigkeiten.
+* Richtig. Es besteht ein Zusammenhang zwischen den beiden untersuchten kategorialen Variablen.
+* Richtig. Die Nullhypothese der Unabhängigkeit wird verworfen.
+* Falsch. Ein signifikanter Test bedeutet, dass es Unterschiede gibt.
+* Falsch. Ein signifikanter Test bedeutet, dass die Variablen nicht stochastisch unabhängig sind.
+
+Meta-information
+================
+exname: ChiSquareConclusion
+extype: mchoice 
+exsolution: 11100
+exshuffle: TRUE

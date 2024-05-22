@@ -1,0 +1,32 @@
+Question
+========
+
+Wie wird die Effektstärke beim Chi-Quadrat-Test gemessen?
+
+Answerlist
+----------
+
+* Durch den Cramer's Phi-Koeffizienten.
+* Durch ω²
+* Durch den p-Wert.
+* Durch die Quadrierung der Differenzen.
+* Durch R²
+
+Solution
+========
+
+Answerlist
+----------
+
+* Richtig. Die Effektstärke kann über den Cramer's Phi-Koeffizienten angegeben werden.
+* Richtig. Die Effektstärke kann über ω² angegeben werden.
+* Falsch. Der p-Wert gibt die Signifikanz an, nicht die Effektstärke.
+* Falsch. Die Quadrierung der Differenzen ist Teil der Chi-Quadrat-Berechnung, nicht der Effektstärke.
+* Falsch. R², auch Bestimmtheitsmaß gibt an, wie viel Varianz in der abhängigen Variable durch die unabhängige(n) Variable(n) erklärt wird.
+
+Meta-information
+================
+exname: ChiSquareEffectSize
+extype: mchoice
+exsolution: 11000
+exshuffle: TRUE

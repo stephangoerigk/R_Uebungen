@@ -1,0 +1,32 @@
+Question 
+======== 
+
+Wie berechnet man die Freiheitsgrade (df) für einen zweidimensionalen Chi-Quadrat-Test?
+
+Answerlist
+----------
+
+* df = Anzahl der Zeilen minus 1 multipliziert mit der Anzahl der Spalten minus 1.
+* df = Anzahl der Kategorien minus 1.
+* df = Anzahl der Beobachtungen minus 1.
+* df = (Anzahl der Zeilen plus Anzahl der Spalten) minus 2.
+* df = Anzahl der erwarteten Häufigkeiten minus Anzahl der beobachteten Häufigkeiten.
+
+Solution
+========
+
+Answerlist
+----------
+
+* Richtig. df = Anzahl der Zeilen minus 1 multipliziert mit der Anzahl der Spalten minus 1.
+* Falsch. df = Anzahl der Kategorien minus 1 gilt für den eindimensionalen Test.
+* Falsch. df = Anzahl der Beobachtungen minus 1 ist nicht korrekt.
+* Falsch. df = (Anzahl der Zeilen plus Anzahl der Spalten) minus 2 ist nicht korrekt.
+* Falsch. df = Anzahl der erwarteten Häufigkeiten minus Anzahl der beobachteten Häufigkeiten ist nicht korrekt.
+
+Meta-information
+================
+exname: ChiSquareDF2D
+extype: mchoice 
+exsolution: 10000
+exshuffle: TRUE
