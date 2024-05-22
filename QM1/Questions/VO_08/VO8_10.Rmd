@@ -1,16 +1,16 @@
 Question 
 ======== 
 
-Was sind Beispiele für abhängige Stichproben
+Warum werden für t-Verteilung Freiheitsgrade benötigt?
 
 Answerlist
 ----------
 
-* 
-*
-*
-*
-*
+* Empirische Mittelwertsdifferenz und Standardfehler der Mittelwertsdifferenz müssen geschätzt werden
+* In t-Verteilung müssen zwei Schätzer eingehen
+* t-Verteilung ist unabhängig vom Stichprobenumfang
+* Freiheitsgrade bestimmen den kritischen t-Wert
+* Freiheitsgrade sind nur bei sehr kleinen Stichproben relevant
 
 Solution
 ========
@@ -18,15 +18,15 @@ Solution
 Answerlist
 ----------
 
-*
-*
-*
-*
-*
+* Richtig. Empirische Mittelwertsdifferenz und Standardfehler der Mittelwertsdifferenz müssen geschätzt werden.
+* Richtig. In t-Verteilung müssen zwei Schätzer eingehen.
+* Falsch. t-Verteilung ist abhängig vom Stichprobenumfang.
+* Richtig. Freiheitsgrade bestimmen den kritischen t-Wert.
+* Falsch. Freiheitsgrade sind bei allen Stichprobengrößen relevant.
 
 Meta-information
 ================
-exname: 
+exname: FreiheitsgradeTVerteilung
 extype: mchoice 
-exsolution: 
+exsolution: 11010
 exshuffle: TRUE

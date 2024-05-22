@@ -1,0 +1,32 @@
+Question 
+======== 
+
+Was versteht man unter stochastischer Unabhängigkeit bei einem zweidimensionalen Chi-Quadrat-Test?
+
+Answerlist
+----------
+
+* Die Merkmale beeinflussen einander nicht.
+* Randhäufigkeiten müssen sich in jeder einzelnen Stufe des Merkmals widerspiegeln.
+* Sie entspricht häufig der Nullhypothese (H0).
+* Die erwarteten Häufigkeiten sind gleichmäßig verteilt.
+* Es gibt keine systematische Beziehung zwischen den Merkmalen.
+
+Solution
+========
+
+Answerlist
+----------
+
+* Richtig. Die Merkmale beeinflussen einander nicht.
+* Richtig. Randhäufigkeiten müssen sich  in jeder einzelnen Stufe des Merkmals widerspiegeln.
+* Richtig. Sie entspricht häufig der Nullhypothese (H0).
+* Falsch. Die erwarteten Häufigkeiten müssen nicht gleichmäßig verteilt sein.
+* Richtig. Es gibt keine systematische Beziehung zwischen den Merkmalen.
+
+Meta-information
+================
+exname: StochastischeUnabhängigkeit
+extype: mchoice 
+exsolution: 11101
+exshuffle: TRUE

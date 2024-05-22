@@ -1,5 +1,5 @@
 ```{r num1, include=FALSE}
-set.seed(123)
+
 N = 6
 df = data.frame(ID = paste0(rep(1:N)),
                  Geschlecht = c("männlich", "männlich", "weiblich", "weiblich", "männlich", "weiblich"),

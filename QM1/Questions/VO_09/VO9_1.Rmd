@@ -1,32 +1,16 @@
 Question 
 ======== 
 
-Welche Hypothese würde am besten zu der Fragestellung passen: 
-
-Unterscheiden sich Menschen mit höherem Bildungsabschluss signifikant in ihrer Lebenszufriedenheit im Vergleich zu Menschen mit niedrigerem Bildungsabschluss?
+Was bedeutet es, wenn zwei Variablen miteinander zusammenhängen?
 
 Answerlist
 ----------
 
-* <br>
-H0: μhoch <br>
-H1: μ
-
-* <br>
-H0:  <br>
-H1: 
-
-* <br>
-H0:  <br>
-H1: 
-
-* <br>
-H0:  <br>
-H1: 
-
-* <br>
-H0:  <br>
-H1: 
+* Die Ausprägung, die eine Person auf der einen Variable aufweist, gibt keine Auskunft darüber, welche Ausprägung diese Person auf der anderen Variable erreicht.
+* Kovariieren der beiden Variablen
+* Änderung der einen Variable führt nicht zu Veränderung der anderen Variable.
+* Ausprägung auf einer Variablen geben Auskunft über Ausprägung auf der zweiten Variablen.
+* Eine Variable verursacht Veränderungen in der anderen.
 
 Solution
 ========
@@ -34,16 +18,15 @@ Solution
 Answerlist
 ----------
 
-* Richtig: 
-* Falsch: 
-* Falsch: 
-* Falsch: 
-* Falsch: 
-
+* Falsch. Wenn zwei Variablen miteinander zusammenhängen, gibt es eine systematische Beziehung zwischen ihren Ausprägungen.
+* Richtig. Kovariieren der beiden Variablen bedeutet, dass sie zusammenhängen.
+* Falsch. Wenn zwei Variablen zusammenhängen, bedeutet dies, dass Änderungen in der einen Variable oft mit Änderungen in der anderen Variable einhergehen.
+* Richtig. Die Ausprägung auf einer Variablen kann Aufschluss über die Ausprägung auf der anderen Variablen geben.
+* Falsch. Eine Korrelation bedeutet nicht zwangsläufig Kausalität.
 
 Meta-information
 ================
-exname: Hypothese_1
+exname: KorrelationZusammenhang
 extype: mchoice 
-exsolution: 10000
+exsolution: 01010
 exshuffle: TRUE

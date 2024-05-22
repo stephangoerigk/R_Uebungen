@@ -1,11 +1,30 @@
 ```{r RelativeHaeufigkeit_data, include=FALSE}
 x = sample(c("A", "B", "C"), 10, replace = T)
 sol = prop.table(table(x))["C"] * 100
+
+
+df = data.frame(
+                 X = x)
+                  
+
+df2 = df
+df = as.data.frame(t(df))
+colnames(df) = NULL
+#kable(df[,], col.names = NULL)
+table = df %>%
+  kbl() %>%
+  kable_styling()
+
 ```
 
 Question
 ========
-Es ist eine nominalskalierte Variable $X$ = `r paste0("[", paste(x, collapse = ", "), "]")` gegeben.
+Es ist eine nominalskalierte Variable $X$ gegeben.
+
+```{r echo=FALSE}
+table
+```
+
 
 Bitte berechnen Sie die relative Häufigkeit von C: 
 

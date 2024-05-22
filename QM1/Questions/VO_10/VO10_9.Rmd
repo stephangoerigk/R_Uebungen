@@ -1,0 +1,32 @@
+Question
+========
+
+Welche Arten von Chi-Quadrat-Tests gibt es?
+
+Answerlist
+----------
+
+* Eindimensionaler Chi-Quadrat-Test.
+* Zweidimensionaler Chi-Quadrat-Test.
+* Gerichteter Eindimensionaler Chi-Quadrat-Test.
+* Gerichteter Zweidimensionaler Chi-Quadrat-Test.
+* Vier-Felder Chi-Quadrat-Test.
+
+Solution
+========
+
+Answerlist
+----------
+
+* Richtig. Der eindimensionale Chi-Quadrat-Test prüft eine einzelne kategoriale Variable.
+* Richtig. Der zweidimensionale Chi-Quadrat-Test prüft zwei kategoriale Variablen.
+* Richtig. Der gerichtete eindimensionale Chi-Quadrat-Test prüft spezifische Hypothesen bezüglich einer einzelnen kategorialen Variable.
+* Falsch. Zweidimensionale Chi-Quadrat-Tests sind immer ungerichtet.
+* Richtig. Der Vier-Felder Chi-Quadrat-Test prüft zwei kategoriale Variablen in einer 2x2-Kontingenztabelle.
+
+Meta-information
+================
+exname: ChiSquareTypes
+extype: mchoice 
+exsolution: 11101
+exshuffle: TRUE

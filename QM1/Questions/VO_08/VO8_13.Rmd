@@ -1,16 +1,16 @@
 Question 
 ======== 
 
-Was sind Beispiele für abhängige Stichproben
+Es soll untersucht werden, ob Musik einen Einfluss auf die Leistungen in einem Test hat. Dazu werden zwei Gruppen (A+B) gebildet, wobei beide Gruppen den gleichen Test schreiben. Gruppe A bekommt während des Tests Musik vorgespielt, Gruppe B nicht. Mit welcher Formel kann ich meine Hypothese überprüfen?
 
 Answerlist
 ----------
 
-* 
-*
-*
-*
-*
+* Einseitiger t-Test für unabhängige Stichproben
+* Zweiseitiger t-Test für unabhängige Stichproben
+* Einseitiger t-Test für abhängige Stichproben
+* Zweiseitiger t-Test für abhängige Stichproben
+* ANOVA
 
 Solution
 ========
@@ -18,15 +18,15 @@ Solution
 Answerlist
 ----------
 
-*
-*
-*
-*
-*
+* Falsch. Ein einseitiger t-Test für unabhängige Stichproben ist nur geeignet, wenn eine spezifische Richtung des Effekts erwartet wird.
+* Richtig. Ein zweiseitiger t-Test für unabhängige Stichproben prüft, ob es einen Unterschied in den Leistungen der beiden Gruppen gibt, ohne eine spezifische Richtung vorzugeben.
+* Falsch. Ein einseitiger t-Test für abhängige Stichproben ist nicht geeignet, da die Stichproben unabhängig sind.
+* Falsch. Ein zweiseitiger t-Test für abhängige Stichproben ist nicht geeignet, da die Stichproben unabhängig sind.
+* Falsch. Eine ANOVA wäre geeignet, wenn es mehr als zwei Gruppen gäbe oder wenn mehrere Faktoren berücksichtigt werden müssten.
 
 Meta-information
 ================
-exname: 
+exname: MusikEinflussHypothese
 extype: mchoice 
-exsolution: 
+exsolution: 01000
 exshuffle: TRUE

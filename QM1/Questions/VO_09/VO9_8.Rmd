@@ -1,30 +1,16 @@
 Question 
 ======== 
 
-Welche Hypothese würde am besten zu der Fragestellung passen: "Unterscheiden sich Menschen mit höherem Bildungsabschluss signifikant in ihrer Lebenszufriedenheit im Vergleich zu Menschen mit niedrigerem Bildungsabschluss?"
+Die Signifikanz einer Zusammenhangshypothese mit der Pearson Korrelation zu prüfen...
 
 Answerlist
 ----------
 
-* <br>
-H0:  <br>
-H1: 
-
-* <br>
-H0:  <br>
-H1: 
-
-* <br>
-H0:  <br>
-H1: 
-
-* <br>
-H0:  <br>
-H1: 
-
-* <br>
-H0:  <br>
-H1: 
+* ...ist über die t-Verteilung möglich.
+* ...ist über die Normalverteilung möglich.
+* ...ist über die Chi-Quadrat-Verteilung möglich.
+* ...ist ohne Verwendung einer spezifischen Verteilung möglich.
+* ...ist über die F-Verteilung möglich.
 
 Solution
 ========
@@ -32,16 +18,15 @@ Solution
 Answerlist
 ----------
 
-* Richtig: 
-* Falsch: 
-* Falsch: 
-* Falsch: 
-* Falsch: 
-
+* Richtig. Die Signifikanz einer Pearson-Korrelation wird über die t-Verteilung geprüft.
+* Falsch. Die Signifikanz einer Pearson-Korrelation wird nicht über die Normalverteilung geprüft.
+* Falsch. Die Signifikanz einer Pearson-Korrelation wird nicht über die Chi-Quadrat-Verteilung geprüft.
+* Falsch. Die Bestimmung der Signifikanz erfordert die Verwendung einer spezifischen Verteilung.
+* Falsch. Die Signifikanz einer Pearson-Korrelation wird nicht über die F-Verteilung geprüft.
 
 Meta-information
 ================
-exname: Hypothese_1
+exname: PearsonSignifikanz
 extype: mchoice 
 exsolution: 10000
 exshuffle: TRUE

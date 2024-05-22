@@ -6,12 +6,11 @@ Question
 Answerlist
 ----------
 
-* 
+*
+*
+*
 *
 * 
-*
-*
-
 
 Solution
 ========
@@ -19,15 +18,15 @@ Solution
 Answerlist
 ----------
 
-* Falsch. 
-* Richtig. 
-* Falsch. 
+*
+*
+*
 *
 *
 
 Meta-information
 ================
-exname: laplace_probability_explanation
+exname: 
 extype: mchoice 
-exsolution: 010
-exshuffle: FALSE
+exsolution: 
+exshuffle: TRUE

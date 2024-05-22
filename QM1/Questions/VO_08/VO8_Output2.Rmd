@@ -1,50 +1,39 @@
-```{r simulation, include=FALSE}
-set.seed(1234)
+```{r simulation}
+set.seed(123)
 
-N = 62
-df = data.frame(IQ = c(round(rnorm(N/2, 104, 15),0), round(rnorm(N/2, 95, 15))),Klasse = c(rep("A", N/2), rep("B", N/2)))    
-
-t = t.test(IQ ~ Klasse, data = df, var.equal = T)
-
+N = 100
+df = data.frame(Testergebnis = c(round(rnorm(N/2, 100, 10)), round(rnorm(N/2, 96, 10))),Semester = c(rep("1. Semester", N/2), rep("2. Semester", N/2)))    
 
 ```
-
-
 
 
 Question 
 ======== 
 
-Welche Aussagen zu folgendem Output stimmen? 
+Im Rahmen einer Studie haben die Studierenden des 1. und 2. Semesters einer Universität an einem Test zur Merkfähigkeit teilgenommen. 
 
-![](images/Output1.png){width=400px}
+Sie haben in R überprüft, ob sich die Mittelwerte der beiden Semester signifikant voneinander unterscheiden und erhalten folgenden Output: 
 
+```{r output, echo=FALSE}
+t.test(Testergebnis ~ Semester, data = df, var.equal = T) 
+```
 
-Answerlist
-----------
-
-* Es wurde eine einseitige Hypothese überprüft 
-* Der Test zeigt ein signifikantes Ergebnis 
-* Ohne den p-Wert können wir keine Aussage darüber geben, ob der Test signifikant ist
-* Der Test wurde nicht signifikant
-* Wir sehen den Output eines abhängigen t-Tests
-
-
-Solution
-========
+Welche Aussagen sind zutreffend? 
 
 Answerlist
 ----------
 
-* Falsch. Es wurde eine zweiseitige Hypothese überprüft. Wir erkennen dies an "true difference in means between group A and group B is not equal to 0." Bei einer einseitigen Hypothese zeigt uns der Output entweder "...is greater than 0" oder "...is less than 0" 
-* Richtig. Anhand des Konfidenzintervalls können wir auch ohne den p-Wert erkennen, dass der Test signifikant ist. Bei einem nicht signifikanten Ergebnis würde das KI die 0 enthalten.
-* Falsch. Anhand des Konfidenzintervalls können wir auch ohne den p-Wert erkennen, dass der Test signifikant ist. Bei einem nicht signifikanten Ergebnis würde das KI die 0 enthalten.
-* Falsch.
-* Falsch. Wir sehen den Output eines unabhängigen t-Tests (Two sample t-test), keinen abhängigen t-Test (Paired t-test) 
+* N = 98
+* Der deskriptive Mittelwertsunterschied zwischen beiden Semestern lag bei 2.86
+* Es konnte ein signifikanter Mittelwertsunterschied festgestellt werden
+* Die H1 lautet: μ1 ≠ μ2 oder μ1 - μ2 ≠ 0
+* N = 100
+
+
 
 Meta-information
 ================
-exname: laplace_probability_explanation
+exname: Output t-Test
 extype: mchoice 
-exsolution: 01000
+exsolution: 01011
 exshuffle: TRUE

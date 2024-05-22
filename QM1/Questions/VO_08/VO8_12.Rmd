@@ -1,16 +1,16 @@
 Question 
 ======== 
 
-Was sind Beispiele für abhängige Stichproben
+Welche Schritte sind bei einem abhängigen t-Test zu berechnen?
 
 Answerlist
 ----------
 
-* 
-*
-*
-*
-*
+* Berechnung des Standardfehlers der Differenzen
+* Schätzung der Streuung der Differenzen
+* Varianzschätzung innerhalb der Stichproben
+* Berechnung der Freiheitsgrade
+* Berechnung der Teststatistik
 
 Solution
 ========
@@ -18,15 +18,15 @@ Solution
 Answerlist
 ----------
 
-*
-*
-*
-*
-*
+* Richtig. Der Standardfehler der Differenzen ist notwendig, um die Teststatistik zu berechnen.
+* Richtig. Die Streuung der Differenzen ist ein wichtiger Schritt zur Berechnung der Teststatistik.
+* Falsch. Die Varianzen innerhalb der Stichprobe müssen nicht geschätzt werden. 
+* Richtig. Die Berechnung der Freiheitsgrade ist notwendig für die Bestimmung des kritischen Werts.
+* Richtig. Die Berechnung der Teststatistik ist der zentrale Schritt zur Durchführung des t-Tests.
 
 Meta-information
 ================
-exname: 
+exname: AbhaengigerTTestSchritte
 extype: mchoice 
-exsolution: 
+exsolution: 11011
 exshuffle: TRUE

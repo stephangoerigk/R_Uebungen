@@ -1,16 +1,16 @@
 Question 
 ======== 
 
-Was sind Beispiele für abhängige Stichproben
+Was trifft auf den Levene's Test zu?
 
 Answerlist
 ----------
 
-* 
-*
-*
-*
-*
+* Er prüft Mittelwertsunterschiede.
+* Er ist F-verteilt (ein F-Test).
+* Er prüft die Gleichheit zweier Varianzen.
+* Er hat 2 Freiheitsgrade (df1 und df2).
+
 
 Solution
 ========
@@ -18,15 +18,15 @@ Solution
 Answerlist
 ----------
 
-*
-*
-*
-*
-*
+* Falsch. Der Levene's Test prüft nicht Mittelwertsunterschiede, sondern Varianzgleichheit.
+* Richtig. Der Levene's Test ist F-verteilt (ein F-Test).
+* Richtig. Der Levene's Test prüft die Gleichheit zweier Varianzen.
+* Richtig. Der Levene's Test hat 2 Freiheitsgrade (df1 und df2).
+
 
 Meta-information
 ================
-exname: 
+exname: LevenesTest
 extype: mchoice 
-exsolution: 
+exsolution: 0111
 exshuffle: TRUE

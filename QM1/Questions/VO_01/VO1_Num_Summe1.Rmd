@@ -1,10 +1,28 @@
 ```{r Summe1_data, include=FALSE}
 x = sample(1:10, 10, replace = T)
+
+df = data.frame(
+                 X = x)
+                  
+
+df2 = df
+df = as.data.frame(t(df))
+colnames(df) = NULL
+#kable(df[,], col.names = NULL)
+table = df %>%
+  kbl() %>%
+  kable_styling()
+
 ```
 
 Question
 ========
-Es ist eine Variable $X$ = `r paste0("[", paste(x, collapse = ", "), "]")` gegeben.
+Es ist eine Variable $X$ ist gegeben.
+
+```{r echo=FALSE}
+table
+```
+
 
 Bitte berechnen Sie: 
 

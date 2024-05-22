@@ -1,0 +1,32 @@
+Question 
+======== 
+
+Die Kovarianz...
+
+Answerlist
+----------
+
+* ...zeigt die Richtung des Zusammenhangs zwischen zwei Variablen an.
+* ...zeigt die Stärke des Zusammenhangs zwischen zwei Variablen an.
+* ...ist immer positiv.
+* ...kann positiv oder negativ sein.
+* ...ist unabhängig von den Einheiten der Variablen.
+
+Solution
+========
+
+Answerlist
+----------
+
+* Richtig. Die Kovarianz zeigt, ob der Zusammenhang positiv oder negativ ist.
+* Falsch. Die Kovarianz allein gibt keine klare Auskunft über die Stärke des Zusammenhangs, da sie abhängig von den Einheiten der Variablen ist.
+* Falsch. Die Kovarianz kann sowohl positiv als auch negativ sein.
+* Richtig. Die Kovarianz kann positiv oder negativ sein.
+* Falsch. Die Kovarianz hängt von den Einheiten der gemessenen Variablen ab.
+
+Meta-information
+================
+exname: KovarianzEigenschaften
+extype: mchoice 
+exsolution: 10010
+exshuffle: TRUE

@@ -1,30 +1,16 @@
 Question 
 ======== 
 
-Welche Hypothese würde am besten zu der Fragestellung passen: "Unterscheiden sich Menschen mit höherem Bildungsabschluss signifikant in ihrer Lebenszufriedenheit im Vergleich zu Menschen mit niedrigerem Bildungsabschluss?"
+Zwei Kunstexpertinnen bewerten 10 Kunstwerke und vergeben Plätze von 1 - 10. Wir wollen herausfinden, ob die beiden Bewertungen einen Zusammenhang aufweisen. Was berechnen wir?
 
 Answerlist
 ----------
 
-* <br>
-H0:  <br>
-H1: 
-
-* <br>
-H0:  <br>
-H1: 
-
-* <br>
-H0:  <br>
-H1: 
-
-* <br>
-H0:  <br>
-H1: 
-
-* <br>
-H0:  <br>
-H1: 
+* Pearson-Korrelation
+* Spearman-Korrelation
+* Produkt-Moment-Korrelation
+* Rangkorrelation
+* Signifikanztest
 
 Solution
 ========
@@ -32,16 +18,15 @@ Solution
 Answerlist
 ----------
 
-* Richtig: 
-* Falsch: 
-* Falsch: 
-* Falsch: 
-* Falsch: 
-
+* Falsch. Die Pearson-Korrelation ist nicht geeignet für Rangdaten.
+* Richtig. Die Spearman-Korrelation misst den Zusammenhang zwischen zwei Rangreihen.
+* Falsch. Die Produkt-Moment-Korrelation ist ein anderes Wort für die Pearson-Korrelation und nicht geeignet für Rangdaten.
+* Richtig. Die Rangkorrelation ist ein allgemeiner Begriff für Korrelationen, die Rangdaten analysieren, wie z.B. die Spearman-Korrelation.
+* Richtig. Ein Signifikanztest ist wichtig, um festzustellen, ob der beobachtete Zusammenhang statistisch signifikant ist.
 
 Meta-information
 ================
-exname: Hypothese_1
+exname: KunstwerkBewertungenZusammenhang
 extype: mchoice 
-exsolution: 10000
+exsolution: 01011
 exshuffle: TRUE

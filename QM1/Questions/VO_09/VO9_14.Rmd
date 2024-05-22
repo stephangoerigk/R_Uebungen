@@ -1,17 +1,15 @@
 Question 
 ======== 
 
-
+Was ist die maximale Kovarianz $$\text{cov}_{\text{max}}$$?
 
 Answerlist
 ----------
 
-* 
-*
-* 
-*
-*
-
+* Die maximale Kovarianz errechnet sich aus dem Produkt der beiden Merkmalsstreuungen.
+* Die maximale Kovarianz ist unabhängig von der Streuung der Variablen.
+* Sie ist für positive und negative Zusammenhänge identisch.
+* Sie liegt im Wertebereich -1 und 1.
 
 Solution
 ========
@@ -19,15 +17,14 @@ Solution
 Answerlist
 ----------
 
-* Falsch. 
-* Richtig. 
-* Falsch. 
-*
-*
+* Richtig. Die maximale Kovarianz errechnet sich aus dem Produkt der beiden Merkmalsstreuungen.
+* Falsch. Die maximale Kovarianz hängt von der Streuung der Variablen ab.
+* Richtig. Sie ist für positive und negative Zusammenhänge identisch.
+* Falsch. Die Kovarianz selbst kann Werte außerhalb des Bereichs -1 und 1 annehmen, dieser Bereich gilt für den Korrelationskoeffizienten.
 
 Meta-information
 ================
-exname: laplace_probability_explanation
+exname: KovarianzMax
 extype: mchoice 
-exsolution: 010
-exshuffle: FALSE
+exsolution: 1010
+exshuffle: TRUE

@@ -1,0 +1,32 @@
+Question
+========
+
+Was prüft der Chi-Quadrat-Test?
+
+Answerlist
+----------
+
+* Ob die beobachteten Häufigkeiten den erwarteten Häufigkeiten entsprechen.
+* Ob Mittelwerte zweier Gruppen gleich sind.
+* Ob die Varianzen zweier Gruppen gleich sind.
+* Ob es Unterschiede in der Verteilung von Kategorien gibt.
+* Ob es eine lineare Beziehung zwischen zwei Variablen gibt.
+
+Solution
+========
+
+Answerlist
+----------
+
+* Richtig. Der Chi-Quadrat-Test prüft, ob die beobachteten Häufigkeiten den erwarteten Häufigkeiten entsprechen.
+* Falsch. Der t-Test prüft Mittelwerte.
+* Falsch. Der F-Test prüft Varianzen.
+* Richtig. Der Chi-Quadrat-Test prüft Unterschiede in der Verteilung von Kategorien.
+* Falsch. Die Pearson-Korrelation prüft lineare Beziehungen.
+
+Meta-information
+================
+exname: ChiSquareTest
+extype: mchoice
+exsolution: 10010
+exshuffle: TRUE

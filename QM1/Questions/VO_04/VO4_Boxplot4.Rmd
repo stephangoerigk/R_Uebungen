@@ -1,6 +1,10 @@
 Question 
 ======== 
 
+Welche Aussagen, bezogen auf die nachfolgende Grafik können Sie treffen?
+
+![](images/boxplot.jpeg){width=600px}
+
 Answerlist
 ----------
 

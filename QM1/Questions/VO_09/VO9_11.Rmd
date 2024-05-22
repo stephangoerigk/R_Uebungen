@@ -1,17 +1,16 @@
 Question 
 ======== 
 
-
+Was trifft zu?
 
 Answerlist
 ----------
 
-* 
-*
-* 
-*
-*
-
+* Ursache-Wirkungs-Beziehungen sind durch das lediglich gemeinsame Auftreten zweier Variablen nicht bewiesen.
+* Eine in einem Hypothesentest gefundene Korrelation deutet auf eine Kausalitätsbeziehung hin.
+* Ein bestehender Zusammenhang gibt keine Auskunft über Kausalitätsbeziehungen zwischen den untersuchten Variablen.
+* Korrelationen können durch Drittvariablen beeinflusst sein.
+* Eine starke Korrelation bedeutet immer, dass eine Variable die andere beeinflusst.
 
 Solution
 ========
@@ -19,15 +18,15 @@ Solution
 Answerlist
 ----------
 
-* Falsch. 
-* Richtig. 
-* Falsch. 
-*
-*
+* Richtig. Ursache-Wirkungs-Beziehungen sind durch das lediglich gemeinsame Auftreten zweier Variablen nicht bewiesen.
+* Falsch. Eine Korrelation deutet nicht zwangsläufig auf eine Kausalitätsbeziehung hin.
+* Richtig. Ein bestehender Zusammenhang gibt keine Auskunft über Kausalitätsbeziehungen zwischen den untersuchten Variablen.
+* Richtig. Korrelationen können durch Drittvariablen beeinflusst sein.
+* Falsch. Eine starke Korrelation bedeutet nicht zwangsläufig, dass eine Variable die andere beeinflusst.
 
 Meta-information
 ================
-exname: laplace_probability_explanation
+exname: KorrelationKausalität
 extype: mchoice 
-exsolution: 010
-exshuffle: FALSE
+exsolution: 10110
+exshuffle: TRUE
