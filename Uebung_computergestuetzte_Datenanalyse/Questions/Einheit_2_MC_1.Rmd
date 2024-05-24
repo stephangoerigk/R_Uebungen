@@ -25,5 +25,5 @@ Meta-information
 ================
 exname: Einheit_2_MC_1
 extype: mchoice 
-exsolution: 10000
+exsolution: 0100
 exshuffle: TRUE
