@@ -729,20 +729,22 @@ round(sd(smartphone$SAS_diff[smartphone$groups == "Training"]), 2)
 <hr> <!-- Horizontale Trennlinie -->
 
 ```{r Einheit_2_MC_1, message = FALSE, warning=FALSE}
-exams2learnr("/Questions/Einheit_2_MC_1.Rmd", allow_retry = TRUE)
+exams2learnr("Questions/Einheit_2_MC_1.Rmd", allow_retry = TRUE)
 ```
 
+
 ```{r Einheit_2_MC_2, echo = FALSE}
-exams2learnr("/Questions/Einheit_2_MC_2.Rmd", allow_retry = TRUE)
+exams2learnr("Questions/Einheit_2_MC_2.Rmd", allow_retry = TRUE)
 ```
 
 ```{r Einheit_2_MC_3, echo = FALSE}
-exams2learnr("/Questions/Einheit_2_MC_3.Rmd", allow_retry = TRUE)
+exams2learnr("Questions/Einheit_2_MC_3.Rmd", allow_retry = TRUE)
 ```
 
 ```{r Einheit_2_MC_4, echo = FALSE}
-exams2learnr("/Questions/Einheit_2_MC_4.Rmd", allow_retry = TRUE)
+exams2learnr("Questions/Einheit_2_MC_4.Rmd", allow_retry = TRUE)
 ```
+
 
 ## Einheit 3
 
