@@ -8,6 +8,40 @@ output:
 runtime: shiny_prerendered
 ---
 
+<style>
+/* Beispiel CSS-Stil */
+body {
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  color: #333333;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+/* Stil für Tabellen */
+table {
+  width: 50%; /* Ändere die Breite nach Bedarf */
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid #dddddd;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+</style>
+
 ```{r setup, include=FALSE}
 library(learnr)
 library(psych)
@@ -31,7 +65,7 @@ Auf dieser Plattform finden Sie eine Vielzahl von Beispielen und Übungen, die d
 
 Beginnen Sie nun, indem Sie eine der verfügbaren Übungen auswählen. Die interaktive Oberfläche ermöglicht es Ihnen, sofort Feedback zu Ihren Lösungen zu erhalten und bei Bedarf Änderungen vorzunehmen. Nutzen Sie diese Gelegenheit, um in Ihrem eigenen Tempo zu üben und zu lernen.
 
-**Bitte beachten Sie, dass die learnR Oberfläche kontinuierlich erweitert wird, sodass Ihnen immer neue Lerninhalte zur Verfügung stehen. Entsprechende Änderungen werden Ihnen im Seminar angekündigt.**
+**Bitte beachten Sie, dass die learnR Oberfläche kontinuierlich erweitert wird, sodass Ihnen immer neue Lerninhalte zur Verfügung stehen.**
 
 Viel Erfolg und Spaß beim Entdecken der Möglichkeiten mit R! 
 
@@ -728,7 +762,7 @@ round(sd(smartphone$SAS_diff[smartphone$groups == "Training"]), 2)
 
 <hr> <!-- Horizontale Trennlinie -->
 
-```{r Einheit_2_MC_1, message = FALSE, warning=FALSE}
+```{r Einheit_2_MC_1, echo = FALSE}
 exams2learnr("Questions/Einheit_2_MC_1.Rmd", allow_retry = TRUE)
 ```
 

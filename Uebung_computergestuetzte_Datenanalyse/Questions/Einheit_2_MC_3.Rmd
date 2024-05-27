@@ -6,10 +6,10 @@ Question
 
 Answerlist
 ----------
-* ![image description1](images/Einheit_2_MC_3_a.png)
-* ![image description2](images/Einheit_2_MC_3_b.png)
-* ![image description3](images/Einheit_2_MC_3_c.png)
-* ![image description4](images/Einheit_2_MC_3_d.png)
+* ![](images/Einheit_2_MC_3_a.png)
+* ![](images/Einheit_2_MC_3_b.png)
+* ![](images/Einheit_2_MC_3_c.png)
+* ![](images/Einheit_2_MC_3_d.png)
 
 
 

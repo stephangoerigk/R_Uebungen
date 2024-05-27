@@ -11,8 +11,9 @@ df
 
 df_flextable = flextable(df)
 df_flextable = italic(df_flextable, j = ~ M + SD, part = "header")
-df_flextable = width(df_flextable, j = "Gruppe", width = 1.5)
-df_flextable = set_table_properties(df_flextable, width = 1.0, layout = "autofit")
+df_flextable = width(df_flextable, j = "Gruppe", width = 1.0)
+df_flextable = fontsize(df_flextable, size = 6, part = "all") 
+df_flextable = set_table_properties(df_flextable, width = 0.5, layout = "autofit")
 save_as_image(df_flextable, "Einheit_2_MC_3_a.png")
   
 # Alternative 1
@@ -24,8 +25,9 @@ df_alt1 <- data.frame(Zeitpunkt = c("t0", "t0", "t1", "t1", "Differenz", "Differ
 
 df_alt1_flextable = flextable(df_alt1)
 df_alt1_flextable = italic(df_alt1_flextable, j = ~ Mittelwert + Standardabweichung, part = "header")
-df_alt1_flextable = width(df_alt1_flextable, j = "Bedingung", width = 1.5)
-df_alt1_flextable = set_table_properties(df_alt1_flextable, width = 1.0, layout = "autofit")
+df_alt1_flextable = width(df_alt1_flextable, j = "Bedingung", width = 1.0)
+df_alt1_flextable = fontsize(df_alt1_flextable, size = 6, part = "all") 
+df_alt1_flextable = set_table_properties(df_alt1_flextable, width = 0.5, layout = "autofit")
 save_as_image(df_alt1_flextable, "Einheit_2_MC_3_b.png")
 
 # Alternative 2
@@ -35,9 +37,12 @@ df_alt2 <- data.frame(Zeitpunkt = c("t0", "t0", "t1", "t1", "Differenz", "Differ
                       SD = c(17.00, 18.00, 11.00, 14.00, 8.00, 14.00)
 )
 
-df_alt2_flextable = flextable(df_alt2)
-df_alt2_flextable = width(df_alt2_flextable, j = "Gruppe", width = 1.5)
-df_alt2_flextable = set_table_properties(df_alt2_flextable, width = 1.0, layout = "autofit")
+df_alt2_flextable <- flextable(df_alt2)
+df_alt2_flextable <- width(df_alt2_flextable, j = "Gruppe", width = 1.0)
+df_alt2_flextable = fontsize(df_alt2_flextable, size = 6, part = "all") 
+df_alt2_flextable <- set_table_properties(df_alt2_flextable, width = 0.5, layout = "autofit")
+
+set_flextable_defaults(border.color = "black", border.width = 0.05)
 save_as_image(df_alt2_flextable, "Einheit_2_MC_3_c.png")
 
 # Alternative 3
@@ -49,6 +54,9 @@ df_alt3 <- data.frame(Zeit = c("t0", "t0", "t1", "t1", "Diff", "Diff"),
 
 df_alt3_flextable = flextable(df_alt3)
 df_alt3_flextable = italic(df_alt3_flextable, j = ~ Avg + StdDev, part = "header")
-df_alt3_flextable = width(df_alt3_flextable, j = "Kategorie", width = 1.5)
-df_alt3_flextable = set_table_properties(df_alt3_flextable, width = 1.0, layout = "autofit")
+df_alt3_flextable = fontsize(df_alt3_flextable, size = 6, part = "all")  
+df_alt3_flextable = width(df_alt3_flextable, j = "Kategorie", width = 1.0)
+df_alt3_flextable = set_table_properties(df_alt3_flextable, width = 0.5, layout = "autofit")
+
+set_flextable_defaults(border.color = "black", border.width = 0.05)
 save_as_image(df_alt3_flextable, "Einheit_2_MC_3_d.png")
