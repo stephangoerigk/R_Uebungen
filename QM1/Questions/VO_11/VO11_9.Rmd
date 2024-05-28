@@ -1,0 +1,32 @@
+Question 
+======== 
+
+Welche Formel wird zur Berechnung von Cohen’s d aus der t-Statistik verwendet?
+
+Answerlist
+----------
+
+* d = 2t / √df
+* d = t² / n
+* d = t / (n - 1)
+* d = t * df
+* d = t / √n
+
+Solution
+========
+
+Answerlist
+----------
+
+* Richtig. Die Formel zur Berechnung von Cohen’s d aus der t-Statistik ist d = 2t / √df.
+* Falsch. Das ist nicht die korrekte Formel.
+* Falsch. Das ist nicht die korrekte Formel.
+* Falsch. Das ist nicht die korrekte Formel.
+* Falsch. Das ist nicht die korrekte Formel.
+
+Meta-information
+================
+exname: CohensDFromT
+extype: mchoice
+exsolution: 10000
+exshuffle: TRUE

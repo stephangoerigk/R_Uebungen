@@ -1,0 +1,32 @@
+Question 
+======== 
+
+Welche Maße der Effektstärke gehören zur d-Familie?
+
+Answerlist
+----------
+
+* Cohen’s d
+* Hedge’s g
+* Glass’s Delta
+* Pearson’s r
+* Cramer’s V
+
+Solution
+========
+
+Answerlist
+----------
+
+* Richtig. Cohen’s d gehört zur d-Familie.
+* Richtig. Hedge’s g gehört zur d-Familie.
+* Richtig. Glass’s Delta gehört zur d-Familie.
+* Falsch. 
+* Falsch. 
+
+Meta-information
+================
+exname: DEffectSizeFamily
+extype: mchoice
+exsolution: 11100
+exshuffle: TRUE

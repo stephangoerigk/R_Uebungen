@@ -1,0 +1,34 @@
+Question 
+======== 
+
+Was trifft auf Hedge's g zu?
+
+Answerlist
+----------
+
+* Eine Variation von Cohen's d.
+* Verwendet die Bessel-Korrektur (n-1).
+* Misst die Varianzaufklärung.
+* Verwendet die Bessel-Korrektur (n+1).
+* Ein Maß für die Korrelation zwischen zwei Variablen.
+* Reduziert insbesondere bei kleinen Stichproben den Fehler der Schätzung.
+
+Solution
+========
+
+Answerlist
+----------
+
+* Richtig. Es ist eine Variation von Cohen's d.
+* Richtig. Es verwendet die Bessel-Korrektur (n-1).
+* Falsch. Es misst nicht direkt die Varianzaufklärung.
+* Falsch. Hedge's g verwendet die Bessel-Korrektur (n-1), nicht (n+1).
+* Falsch. Es ist kein Maß für die Korrelation zwischen zwei Variablen.
+* Richtig. Hedge's g reduziert insbesondere bei kleinen Stichproben den Fehler der Schätzung.
+
+Meta-information
+================
+exname: HedgesG
+extype: mchoice
+exsolution: 110001
+exshuffle: TRUE

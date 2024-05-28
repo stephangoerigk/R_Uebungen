@@ -1,0 +1,32 @@
+Question 
+======== 
+
+Welche Kategorien von Effektstärken gibt es?
+
+Answerlist
+----------
+
+* d-Familie
+* r-Familie
+* t-Familie
+* z-Familie
+* F-Familie
+
+Solution
+========
+
+Answerlist
+----------
+
+* Richtig. Die d-Familie betrachtet Unterschiede zwischen Gruppen.
+* Richtig. Die r-Familie misst den Zusammenhang zwischen Daten.
+* Falsch. Es gibt keine t-Familie für Effektstärken.
+* Falsch. Es gibt keine z-Familie für Effektstärken.
+* Falsch. Es gibt keine F-Familie für Effektstärken.
+
+Meta-information
+================
+exname: EffectSizeCategories
+extype: mchoice
+exsolution: 11000
+exshuffle: TRUE

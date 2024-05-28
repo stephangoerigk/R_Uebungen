@@ -1,0 +1,32 @@
+Question 
+======== 
+
+Was versteht man unter der aufgeklärten Varianz?
+
+Answerlist
+----------
+
+* Den Anteil der Gesamtvarianz, der durch die Beziehung zwischen den Variablen erklärt wird.
+* Die Differenz zwischen den Varianzen der Gruppen.
+* Die Summe der Varianzen der unabhängigen Variablen.
+* Die Quadrierung der Mittelwerte der Gruppen.
+* Die Streuung der Residuen.
+
+Solution
+========
+
+Answerlist
+----------
+
+* Richtig. Die aufgeklärte Varianz ist der Anteil der Gesamtvarianz, der durch die Beziehung zwischen den Variablen erklärt wird.
+* Falsch. Die Differenz zwischen den Varianzen der Gruppen ist nicht die aufgeklärte Varianz.
+* Falsch. Die Summe der Varianzen der unabhängigen Variablen ist nicht korrekt.
+* Falsch. Die Quadrierung der Mittelwerte der Gruppen ist nicht korrekt.
+* Falsch. Die Streuung der Residuen ist nicht die aufgeklärte Varianz.
+
+Meta-information
+================
+exname: ExplainedVariance
+extype: mchoice
+exsolution: 10000
+exshuffle: TRUE

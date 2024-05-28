@@ -1,0 +1,32 @@
+Question 
+======== 
+
+Was beschreibt Cohen’s d?
+
+Answerlist
+----------
+
+* Die Mittelwertsdifferenz zwischen zwei Gruppen relativ zur Streuung.
+* Die Wahrscheinlichkeit eines beobachteten Wertes.
+* Die Beziehung zwischen zwei nominalen Variablen.
+* Die Homogenität der Varianzen zwischen Gruppen.
+* Die Korrelation zwischen zwei kontinuierlichen Variablen.
+
+Solution
+========
+
+Answerlist
+----------
+
+* Richtig. Cohen’s d beschreibt die Mittelwertsdifferenz zwischen zwei Gruppen relativ zur Streuung.
+* Falsch. Cohen’s d ist kein Maß für die Wahrscheinlichkeit eines beobachteten Wertes.
+* Falsch. Cohen’s d misst nicht die Beziehung zwischen nominalen Variablen.
+* Falsch. Cohen’s d misst nicht die Homogenität der Varianzen.
+* Falsch. Cohen’s d ist kein Korrelationsmaß.
+
+Meta-information
+================
+exname: CohensD
+extype: mchoice
+exsolution: 10000
+exshuffle: TRUE

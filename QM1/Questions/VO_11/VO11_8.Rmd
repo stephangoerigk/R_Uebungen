@@ -1,0 +1,32 @@
+Question 
+======== 
+
+Wie wird Glass’s Delta berechnet?
+
+Answerlist
+----------
+
+* Durch die Differenz der Mittelwerte geteilt durch die Standardabweichung der Kontrollgruppe.
+* Durch die Differenz der Mittelwerte geteilt durch die gepoolte Standardabweichung.
+* Durch die Quadrierung der Mittelwerte.
+* Durch die Addition der Varianzen der Gruppen.
+* Durch die Multiplikation der Mittelwerte.
+
+Solution
+========
+
+Answerlist
+----------
+
+* Richtig. Glass’s Delta wird durch die Differenz der Mittelwerte geteilt durch die Standardabweichung der Kontrollgruppe berechnet.
+* Falsch. Das ist die Berechnung für Cohen’s d.
+* Falsch. Die Quadrierung der Mittelwerte wird nicht verwendet.
+* Falsch. Die Addition der Varianzen der Gruppen ist nicht korrekt.
+* Falsch. Die Multiplikation der Mittelwerte ist nicht korrekt.
+
+Meta-information
+================
+exname: GlassDelta
+extype: mchoice
+exsolution: 10000
+exshuffle: TRUE

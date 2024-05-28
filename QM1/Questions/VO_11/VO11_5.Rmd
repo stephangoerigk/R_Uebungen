@@ -1,0 +1,32 @@
+Question 
+======== 
+
+Was ist ein typisches Problem bei der Berechnung von Cohen’s d?
+
+Answerlist
+----------
+
+* Unklare Definition der Standardabweichung.
+* Unzureichende Stichprobengröße.
+* Nicht-normalverteilte Daten.
+* Ungleiche Gruppengrößen.
+* Multikollinearität der Prädiktoren.
+
+Solution
+========
+
+Answerlist
+----------
+
+* Richtig. Ein typisches Problem ist die unklare Definition der Standardabweichung.
+* Falsch. Unzureichende Stichprobengröße ist allgemein ein Problem, aber nicht spezifisch für Cohen’s d.
+* Falsch. Nicht-normalverteilte Daten betreffen viele Tests, aber nicht spezifisch Cohen’s d.
+* Falsch. Ungleiche Gruppengrößen betreffen viele Tests, aber nicht spezifisch Cohen’s d.
+* Falsch. Multikollinearität der Prädiktoren betrifft Regressionsmodelle, aber nicht spezifisch Cohen’s d.
+
+Meta-information
+================
+exname: CohensDProblem
+extype: mchoice
+exsolution: 10000
+exshuffle: TRUE

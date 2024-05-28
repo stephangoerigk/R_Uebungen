@@ -1,0 +1,32 @@
+Question 
+======== 
+
+Welche Aussage beschreibt die Poweranalyse?
+
+Answerlist
+----------
+
+* Eine Methode zur Schätzung der Stichprobengröße zur Gewährleistung ausreichender statistischer Power.
+* Ein Test zur Bestimmung der Effektstärke.
+* Eine Analyse zur Reduktion der Varianz.
+* Ein Verfahren zur Bestimmung der Homoskedastizität.
+* Eine Methode zur Berechnung des p-Werts.
+
+Solution
+========
+
+Answerlist
+----------
+
+* Richtig. Die Poweranalyse ist eine Methode zur Schätzung der Stichprobengröße zur Gewährleistung ausreichender statistischer Power.
+* Falsch. Die Poweranalyse ist kein Test zur Bestimmung der Effektstärke.
+* Falsch. Die Poweranalyse reduziert nicht direkt die Varianz.
+* Falsch. Die Poweranalyse bestimmt nicht die Homoskedastizität.
+* Falsch. Die Poweranalyse berechnet nicht direkt den p-Wert.
+
+Meta-information
+================
+exname: PowerAnalysis
+extype: mchoice
+exsolution: 10000
+exshuffle: TRUE

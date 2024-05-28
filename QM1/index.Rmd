@@ -678,8 +678,69 @@ exams2learnr("Questions/VO_10/VO10_14.Rmd", allow_retry = TRUE)
 ```
 
 
-
-
-
-
 ## Einheit 11 - Effektstärke und Power
+
+```{r V11_1, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_11/VO11_1.Rmd", allow_retry = TRUE)
+```
+
+```{r V11_2, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_11/VO11_2.Rmd", allow_retry = TRUE)
+```
+
+```{r V11_3, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_11/VO11_3.Rmd", allow_retry = TRUE)
+```
+
+```{r V11_4, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_11/VO11_4.Rmd", allow_retry = TRUE)
+```
+
+```{r V11_5, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_11/VO11_5.Rmd", allow_retry = TRUE)
+```
+
+```{r V11_6, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_11/VO11_6.Rmd", allow_retry = TRUE)
+```
+
+```{r V11_7, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_11/VO11_7.Rmd", allow_retry = TRUE)
+```
+
+```{r V11_8, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_11/VO11_8.Rmd", allow_retry = TRUE)
+```
+
+```{r V11_9, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_11/VO11_9.Rmd", allow_retry = TRUE)
+```
+
+```{r V11_10, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_11/VO11_10.Rmd", allow_retry = TRUE)
+```
+
+```{r V11_11, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_11/VO11_11.Rmd", allow_retry = TRUE)
+```
+
+```{r V11_12, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_11/VO11_12.Rmd", allow_retry = TRUE)
+```
+
+```{r V11_13, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_11/VO11_13.Rmd", allow_retry = TRUE)
+```
+
+```{r V11_14, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_11/VO11_14.Rmd", allow_retry = TRUE)
+```
+
+```{r V11_15, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_11/VO11_15.Rmd", allow_retry = TRUE)
+```
+
+
+
+
+
