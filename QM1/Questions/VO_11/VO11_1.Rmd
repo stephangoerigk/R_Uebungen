@@ -1,0 +1,32 @@
+Question 
+======== 
+
+Was ist eine Effektstärke?
+
+Answerlist
+----------
+
+* Ein Indikator für die Stärke eines Treatments oder Phänomens.
+* Ein Maß für die Wahrscheinlichkeit eines beobachteten Wertes.
+* Ein Maß, das verwendet werden kann, um Stichprobengrößen künftiger Studien zu bestimmen.
+* Ein standardisiertes Maß, unabhängig von der Einheit der Variablen.
+* Ein Indikator für die statistische Signifikanz eines Tests.
+
+Solution
+========
+
+Answerlist
+----------
+
+* Richtig. Ein Indikator für die Stärke eines Treatments oder Phänomens.
+* Falsch. Der p-Wert ist ein Maß für die Wahrscheinlichkeit eines beobachteten Wertes.
+* Richtig. Effektstärken können verwendet werden, um die Stichprobengröße zu bestimmen.
+* Richtig. Effektstärken sind standardisierte Maße, unabhängig von der Einheit der Variablen.
+* Falsch. Effektstärken sind kein direkter Indikator für die statistische Signifikanz eines Tests.
+
+Meta-information
+================
+exname: EffectSizeDefinition
+extype: mchoice
+exsolution: 10110
+exshuffle: TRUE

@@ -1,0 +1,34 @@
+Question 
+======== 
+
+Welche Faktoren können für eine Poweranalyse relevant sein? 
+
+Answerlist
+----------
+
+* Signifikanzniveau
+* Effektstärke
+* Stichprobengröße
+* Statistisches Verfahren
+* Gewünschte Power
+* Richtung des Tests (Einseitig vs. Zweiseitig)
+
+Solution
+========
+
+Answerlist
+----------
+
+* Richtig. Das Signifikanzniveau wird bei einer Poweranalyse berücksichtigt.
+* Richtig. Die Effektstärke wird bei einer Poweranalyse berücksichtigt.
+* Richtig. Die Stichprobengröße wird bei einer Poweranalyse berücksichtigt.
+* Richtig. Das statistische Verfahren wird bei einer Poweranalyse berücksichtigt.
+* Richtig. Die gewünschte Power wird bei einer Poweranalyse berücksichtigt.
+* Richtig. Die Richtung des Tests (Einseitig vs. Zweiseitig) ist relevant.
+
+Meta-information
+================
+exname: PowerAnalysisFactors
+extype: mchoice
+exsolution: 111111
+exshuffle: TRUE

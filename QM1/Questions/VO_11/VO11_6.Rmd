@@ -1,0 +1,30 @@
+Question 
+======== 
+
+In welchem Wertebereich kann Cohen’s d liegen? 
+
+Answerlist
+----------
+
+* Von -∞ bis +∞
+* Von 0 bis 1
+* Von -1 bis 1
+* Von -10 bis +10
+
+Solution
+========
+
+Answerlist
+----------
+
+* Richtig. Cohen’s d kann von -∞ bis +∞ liegen.
+* Falsch. Cohen’s d ist nicht auf den Bereich von 0 bis 1 beschränkt.
+* Falsch. Cohen’s d kann Werte außerhalb von -1 bis 1 annehmen.
+* Falsch. Cohen’s d ist nicht auf den Bereich von -10 bis +10 beschränkt.
+
+Meta-information
+================
+exname: CohensDRange
+extype: mchoice 
+exsolution: 1000
+exshuffle: TRUE

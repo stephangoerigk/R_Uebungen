@@ -1,0 +1,32 @@
+Question 
+======== 
+
+Was ist die Beziehung zwischen Effektstärke und Power?
+
+Answerlist
+----------
+
+* Je größer die Effektstärke, desto größer die Power.
+* Je kleiner die Effektstärke, desto größer die Power.
+* Effektstärke und Power sind unabhängig voneinander.
+* Effektstärke bestimmt die Signifikanzniveau.
+* Power ist das Quadrat der Effektstärke.
+
+Solution
+========
+
+Answerlist
+----------
+
+* Richtig. Je größer die Effektstärke, desto größer die Power.
+* Falsch. Je kleiner die Effektstärke, desto kleiner die Power.
+* Falsch. Effektstärke und Power sind nicht unabhängig voneinander.
+* Falsch. Das Signifikanzniveau wird nicht durch die Effektstärke bestimmt.
+* Falsch. Power ist nicht das Quadrat der Effektstärke.
+
+Meta-information
+================
+exname: EffectSizePower
+extype: mchoice
+exsolution: 10000
+exshuffle: TRUE

@@ -678,7 +678,7 @@ exams2learnr("Questions/VO_10/VO10_14.Rmd", allow_retry = TRUE)
 ```
 
 
-## Einheit 11 - Verfahren für Nominaldaten - Logistische Regression
+## Einheit 11 - Effektstärke und Power
 
 ```{r V11_1, message = FALSE, warning=FALSE}
 exams2learnr("Questions/VO_11/VO11_1.Rmd", allow_retry = TRUE)

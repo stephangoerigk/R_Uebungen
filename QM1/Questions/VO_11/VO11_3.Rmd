@@ -1,0 +1,32 @@
+Question 
+======== 
+
+Was versteht man unter statistischer Power?
+
+Answerlist
+----------
+
+* Die Wahrscheinlichkeit, dass die Nullhypothese abgelehnt wird, wenn sie falsch ist.
+* Die Wahrscheinlichkeit, einen Effekt zu übersehen, wenn er existiert.
+* Die Wahrscheinlichkeit, die Nullhypothese anzunehmen, wenn sie wahr ist.
+* Die Wahrscheinlichkeit, einen Fehler 1. Art zu begehen.
+* Power = 1-β (β = die Wahrscheinlichkeit, einen Fehler 2. Art zu begehen)
+
+Solution
+========
+
+Answerlist
+----------
+
+* Richtig. Statistische Power ist die Wahrscheinlichkeit, dass die Nullhypothese abgelehnt wird, wenn sie falsch ist.
+* Falsch. Statistische Power bezieht sich auf das Erkennen eines Effekts, nicht auf das Übersehen.
+* Falsch. Die Wahrscheinlichkeit, die Nullhypothese anzunehmen, wenn sie wahr ist, ist nicht statistische Power.
+* Falsch. Die Wahrscheinlichkeit, einen Fehler 1. Art zu begehen, ist das Signifikanzniveau (α).
+* Richtig. Power = 1-β (β = die Wahrscheinlichkeit, einen Fehler 2. Art zu begehen)
+
+Meta-information
+================
+exname: StatisticalPower
+extype: mchoice
+exsolution: 10001
+exshuffle: TRUE
