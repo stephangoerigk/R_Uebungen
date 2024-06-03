@@ -677,6 +677,17 @@ exams2learnr("Questions/VO_10/VO10_13.Rmd", allow_retry = TRUE)
 exams2learnr("Questions/VO_10/VO10_14.Rmd", allow_retry = TRUE)
 ```
 
+### Interpretieren von R Outputs 
+
+```{r V10_Outputs_1, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_10/VO10_Outputs_1.Rmd", allow_retry = TRUE)
+```
+
+```{r V10_Outputs_2, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_10/VO10_Outputs_2.Rmd", allow_retry = TRUE)
+```
+
+
 
 ## Einheit 11 - Effektstärke und Power
 
