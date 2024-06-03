@@ -657,6 +657,8 @@ smartphone = read.csv("https://raw.githubusercontent.com/stephangoerigk/WAF_Foli
 ```{r Projekt1-solution}
 smartphone = read.csv("https://raw.githubusercontent.com/stephangoerigk/WAF_Folien/master/Smartphone_addiction.csv")
 
+library(dplyr)
+
 # Aufgabe 1
 dim(smartphone) # Datensatz mit 128 Zeilen (ProbandInnen) und 124 Spalten (Variablen)
 nrow(smartphone) # Alternative Funktion, falls Unsicherheiten darüber bestehen, welche Zahl des dim()-Ergebnisses sich auf die Anzahl der Zeilen (engl. rows) bezieht
@@ -757,7 +759,6 @@ round(sd(smartphone$SAS_diff[smartphone$groups == "No Training"]), 2)
 summary(smartphone$SAS_diff[smartphone$groups == "Training"])
 round(sd(smartphone$SAS_diff[smartphone$groups == "Training"]), 2)
 
-
 ```
 
 <hr> <!-- Horizontale Trennlinie -->
@@ -805,6 +806,19 @@ Versuchen Sie bitte, die Grafik nachzucoden.
 
 ```{r Datenvisualisierung1, exercise=TRUE}
 smartphone = read.csv("https://raw.githubusercontent.com/janikasaretzki/CFH_Dat/main/smartphone_evaluated.csv")
+
+summary(smartphone$SAS_diff[smartphone$groups == "No Training"])
+round(sd(smartphone$SAS_diff[smartphone$groups == "No Training"]), 2)
+
+summary(smartphone$SAS_diff[smartphone$groups == "Training"])
+round(sd(smartphone$SAS_diff[smartphone$groups == "Training"]), 2)
+
+summary(smartphone$GPS_diff[smartphone$groups == "No Training"])
+round(sd(smartphone$GPS_diff[smartphone$groups == "No Training"]), 2)
+
+summary(smartphone$GPS_diff[smartphone$groups == "Training"])
+round(sd(smartphone$GPS_diff[smartphone$groups == "Training"]), 2)
+
 ```
 
 ```{r Datenvisualisierung1-solution}
@@ -814,9 +828,8 @@ library(ggplot2)
 
 ggplot(data = smartphone, aes(x = GPS_diff, y = SAS_diff, color = groups)) +
   geom_point(size = 1) +
-  geom_smooth(method = "lm", se = FALSE, aes(group = groups), linetype = "solid") + 
+  geom_smooth(method = "lm", aes(group = groups)) + 
   labs(x = "Improvement Procrastination", y = "Improvement Addiction", color = "") +
-  scale_color_manual(values = c("No Training" = "#d01c8b", "Training" = "#4dac26")) +
   theme_bw() +
   theme(
     legend.position = "bottom", 
