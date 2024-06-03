@@ -807,18 +807,6 @@ Versuchen Sie bitte, die Grafik nachzucoden.
 ```{r Datenvisualisierung1, exercise=TRUE}
 smartphone = read.csv("https://raw.githubusercontent.com/janikasaretzki/CFH_Dat/main/smartphone_evaluated.csv")
 
-summary(smartphone$SAS_diff[smartphone$groups == "No Training"])
-round(sd(smartphone$SAS_diff[smartphone$groups == "No Training"]), 2)
-
-summary(smartphone$SAS_diff[smartphone$groups == "Training"])
-round(sd(smartphone$SAS_diff[smartphone$groups == "Training"]), 2)
-
-summary(smartphone$GPS_diff[smartphone$groups == "No Training"])
-round(sd(smartphone$GPS_diff[smartphone$groups == "No Training"]), 2)
-
-summary(smartphone$GPS_diff[smartphone$groups == "Training"])
-round(sd(smartphone$GPS_diff[smartphone$groups == "Training"]), 2)
-
 ```
 
 ```{r Datenvisualisierung1-solution}

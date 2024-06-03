@@ -5,9 +5,8 @@ jpeg(file = "Einheit_3_1.png", width = 5, height = 5, units = "in", res = 300)
 
 ggplot(data = smartphone, aes(x = GPS_diff, y = SAS_diff, color = groups)) +
   geom_point(size = 1) +
-  geom_smooth(method = "lm", se = FALSE, aes(group = groups), linetype = "solid") + 
+  geom_smooth(method = "lm", aes(group = groups)) + 
   labs(x = "Improvement Procrastination", y = "Improvement Addiction", color = "") +
-  scale_color_manual(values = c("No Training" = "#d01c8b", "Training" = "#4dac26")) +
   theme_bw() +
   theme(
     legend.position = "bottom", 
