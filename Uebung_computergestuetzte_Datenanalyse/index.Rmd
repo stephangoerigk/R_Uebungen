@@ -829,7 +829,6 @@ ggplot(data = smartphone, aes(x = GPS_diff, y = SAS_diff, color = groups)) +
     axis.line = element_line() 
   )
 
-
 ```
 
 ## Einheit 4
