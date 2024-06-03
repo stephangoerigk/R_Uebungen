@@ -655,9 +655,8 @@ smartphone = read.csv("https://raw.githubusercontent.com/stephangoerigk/WAF_Foli
 ```
 
 ```{r Projekt1-solution}
-smartphone = read.csv("https://raw.githubusercontent.com/stephangoerigk/WAF_Folien/master/Smartphone_addiction.csv")
 
-library(dplyr)
+smartphone = read.csv("https://raw.githubusercontent.com/stephangoerigk/WAF_Folien/master/Smartphone_addiction.csv")
 
 # Aufgabe 1
 dim(smartphone) # Datensatz mit 128 Zeilen (ProbandInnen) und 124 Spalten (Variablen)
@@ -677,6 +676,9 @@ round(sd(smartphone$Age[smartphone$groups == "Training"]), 2) # Training (Age): 
 
 # Aufgabe 3 
 # Auswertung GPS 
+
+library(dplyr) # Paket benötigt für recode()-Funktion
+
 # Recodierung Messzeitpunkt t0
 smartphone$t0_GPS_5 = recode(smartphone$t0_GPS_5, "1" = 5, "2" = 4, "3" = 3, "4" = 2, "5" = 1)
 smartphone$t0_GPS_8 = recode(smartphone$t0_GPS_8, "1" = 5, "2" = 4, "3" = 3, "4" = 2, "5" = 1)
@@ -806,7 +808,6 @@ Versuchen Sie bitte, die Grafik nachzucoden.
 
 ```{r Datenvisualisierung1, exercise=TRUE}
 smartphone = read.csv("https://raw.githubusercontent.com/janikasaretzki/CFH_Dat/main/smartphone_evaluated.csv")
-
 ```
 
 ```{r Datenvisualisierung1-solution}
@@ -816,7 +817,7 @@ library(ggplot2)
 
 ggplot(data = smartphone, aes(x = GPS_diff, y = SAS_diff, color = groups)) +
   geom_point(size = 1) +
-  geom_smooth(method = "lm", aes(group = groups)) + 
+  geom_smooth(method = "lm") + 
   labs(x = "Improvement Procrastination", y = "Improvement Addiction", color = "") +
   theme_bw() +
   theme(
@@ -827,6 +828,7 @@ ggplot(data = smartphone, aes(x = GPS_diff, y = SAS_diff, color = groups)) +
     panel.border = element_blank(), 
     axis.line = element_line() 
   )
+
 
 ```
 
