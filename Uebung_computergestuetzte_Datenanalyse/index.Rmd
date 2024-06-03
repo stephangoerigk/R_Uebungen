@@ -9,7 +9,7 @@ runtime: shiny_prerendered
 ---
 
 <style>
-/* Beispiel CSS-Stil */
+/* CSS-Stil */
 body {
   background-color: #f0f0f0;
   font-family: Arial, sans-serif;
@@ -25,9 +25,9 @@ p {
   margin-bottom: 20px;
 }
 
-/* Stil für Tabellen */
+/* Tables */
 table {
-  width: 50%; /* Ändere die Breite nach Bedarf */
+  width: 50%; 
   border-collapse: collapse;
 }
 
@@ -54,7 +54,6 @@ library(moments)
 library(magrittr)
 library(kableExtra)
 library(ggplot2)
-
 ```
 
 ## Herzlich Willkommen!
@@ -633,7 +632,7 @@ Aktiv manipuliert: Training (nein vs. ja)
 
 Die Smartphone Addiction Scale (SAS) ist ein Messinstrument, das entwickelt wurde, um den Grad der Smartphone-Sucht bei Individuen zu erfassen. Die Skala basiert auf einem Fragebogen, der aus verschiedenen Items besteht, die das Verhalten und die Einstellungen der Betroffenen in Bezug auf ihre Smartphone-Nutzung bewerten. Die SAS misst auf 33 Items verschiedene Aspekte der Sucht, darunter die Auswirkungen der Smartphone-Nutzung auf das tägliche Leben, Entzugserscheinungen, Toleranzentwicklung und Kontrollverlust. Die Bewertung erfolgt anhand einer Likert-Skala, bei der die Teilnehmer ihre Zustimmung zu den Aussagen angeben. Die Smartphone Addiction Scale hat sich als zuverlässiges Instrument erwiesen, um das Ausmaß der Smartphone-Sucht zu messen und ermöglicht es Forschern und Klinikern, das Phänomen genauer zu erforschen und geeignete Interventionen zu entwickeln.
 
-**Hinweis: Auch die SAS finden Sie auf studynet im Ordner "Fragebögen".*</font>**
+**Hinweis: Auch die SAS finden Sie auf studynet im Ordner "Fragebögen".**
 
 <hr> <!-- Horizontale Trennlinie -->
 
@@ -758,6 +757,11 @@ round(sd(smartphone$SAS_diff[smartphone$groups == "No Training"]), 2)
 summary(smartphone$SAS_diff[smartphone$groups == "Training"])
 round(sd(smartphone$SAS_diff[smartphone$groups == "Training"]), 2)
 
+# Den veränderten Datensatz als CSV-Datei speichern
+write.csv(smartphone, file = "smartphone_veraendert.csv", row.names = FALSE)
+
+getwd()
+
 ```
 
 <hr> <!-- Horizontale Trennlinie -->
@@ -780,6 +784,44 @@ exams2learnr("Questions/Einheit_2_MC_4.Rmd", allow_retry = TRUE)
 
 
 ## Einheit 3
+
+#### Datenvisualisierung in RStudio
+
+Willkommen im Abschnitt **Datenvisualisierung in RStudio**! 
+
+In diesem Abschnitt wird das in Kapitel zwei begonnene Projekt fortgesetzt. Ziel ist es, die z.T. bereits in Kapitel zwei ermittelten Werte grafisch darzustellen. Der zur Verfügung gestellte smartphone-Datensatz bleibt derselbe, enthält in der nun erneut über Github zu ladenden Version jedoch bereits die wichtigsten Werte:
+
+- Summenwert der General Procrastination Scale (GPS) zu den Zeitpunkten t0 und t1 (t0_GPS_sum, t1_GPS_sum)
+- Summenwert der Smartphone Addiction Scale (SAS) zu den Zeitpunkten t0 und t1 (t0_SAS_sum, t1_SAS_sum)
+- Differenzwerte (t1 - t0) der beiden Skalen (GPS_diff, SAS_diff)
+
+**Bitte beachten Sie: Es ist möglich, dass Sie einzelne Berechnungen, die Sie bereits im zweiten Abschnitt durchgeführt haben, erneut durchführen müssen. Betrachten Sie dies als wertvolle Übung zur Festigung Ihrer Kenntnisse.**
+
+<hr> <!-- Horizontale Trennlinie -->
+
+**Aufgabe 1:** Im folgenden Diagramm sind die Mittelwerte der Summenwerte der GPS und der SAS in Abhängigkeit des erhaltenen Trainings und der Zeitpunkte t0 und t1 grafisch dargestellt. 
+
+Versuchen Sie, die Grafik nachzucoden.
+
+[](images/Einheit_3_1.png)
+
+```{r Datenvisualisierung1, exercise=TRUE}
+
+smartphone = read.csv("https://raw.githubusercontent.com/janikasaretzki/CFH_Dat/main/smartphone_evaluated.csv")
+names(smartphone) 
+
+
+
+```
+
+```{r Datenvisualisierung1-solution}
+
+smartphone = read.csv("https://raw.githubusercontent.com/janikasaretzki/CFH_Dat/main/smartphone_evaluated.csv")
+names(smartphone) 
+
+
+
+```
 
 ## Einheit 4
 
