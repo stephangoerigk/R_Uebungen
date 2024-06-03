@@ -757,10 +757,6 @@ round(sd(smartphone$SAS_diff[smartphone$groups == "No Training"]), 2)
 summary(smartphone$SAS_diff[smartphone$groups == "Training"])
 round(sd(smartphone$SAS_diff[smartphone$groups == "Training"]), 2)
 
-# Den veränderten Datensatz als CSV-Datei speichern
-write.csv(smartphone, file = "smartphone_veraendert.csv", row.names = FALSE)
-
-getwd()
 
 ```
 
@@ -793,33 +789,43 @@ In diesem Abschnitt wird das in Kapitel zwei begonnene Projekt fortgesetzt. Ziel
 
 - Summenwert der General Procrastination Scale (GPS) zu den Zeitpunkten t0 und t1 (t0_GPS_sum, t1_GPS_sum)
 - Summenwert der Smartphone Addiction Scale (SAS) zu den Zeitpunkten t0 und t1 (t0_SAS_sum, t1_SAS_sum)
-- Differenzwerte (t1 - t0) der beiden Skalen (GPS_diff, SAS_diff)
+- Differenzwerte (t0 - t1) der beiden Skalen (GPS_diff, SAS_diff)
 
 **Bitte beachten Sie: Es ist möglich, dass Sie einzelne Berechnungen, die Sie bereits im zweiten Abschnitt durchgeführt haben, erneut durchführen müssen. Betrachten Sie dies als wertvolle Übung zur Festigung Ihrer Kenntnisse.**
 
 <hr> <!-- Horizontale Trennlinie -->
 
-**Aufgabe 1:** Im folgenden Diagramm sind die Mittelwerte der Summenwerte der GPS und der SAS in Abhängigkeit des erhaltenen Trainings und der Zeitpunkte t0 und t1 grafisch dargestellt. 
+**Aufgabe 1:** Im Folgenden finden Sie ein Beispiel, wie Sie die aus Ihren Berechnungen gewonnenen Erkenntnisse visualisieren könnten.
 
-Versuchen Sie, die Grafik nachzucoden.
+Versuchen Sie bitte, die Grafik nachzucoden.
 
-[](images/Einheit_3_1.png)
+![](images/Einheit_3_1.png){width=80% height=80%}
+
+<hr> <!-- Horizontale Trennlinie -->
 
 ```{r Datenvisualisierung1, exercise=TRUE}
-
 smartphone = read.csv("https://raw.githubusercontent.com/janikasaretzki/CFH_Dat/main/smartphone_evaluated.csv")
-names(smartphone) 
-
-
-
 ```
 
 ```{r Datenvisualisierung1-solution}
-
 smartphone = read.csv("https://raw.githubusercontent.com/janikasaretzki/CFH_Dat/main/smartphone_evaluated.csv")
-names(smartphone) 
 
+library(ggplot2)
 
+ggplot(data = smartphone, aes(x = GPS_diff, y = SAS_diff, color = groups)) +
+  geom_point(size = 1) +
+  geom_smooth(method = "lm", se = FALSE, aes(group = groups), linetype = "solid") + 
+  labs(x = "Improvement Procrastination", y = "Improvement Addiction", color = "") +
+  scale_color_manual(values = c("No Training" = "#d01c8b", "Training" = "#4dac26")) +
+  theme_bw() +
+  theme(
+    legend.position = "bottom", 
+    legend.box = "horizontal",
+    panel.grid.major = element_blank(), 
+    panel.grid.minor = element_blank(), 
+    panel.border = element_blank(), 
+    axis.line = element_line() 
+  )
 
 ```
 
