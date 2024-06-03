@@ -560,6 +560,18 @@ exams2learnr("Questions/VO_08/VO8_Output3.Rmd", allow_retry = TRUE)
 exams2learnr("Questions/VO_08/VO8_Output4.Rmd", allow_retry = TRUE)
 ```
 
+```{r VO8_Output5, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_08/VO8_Output5.Rmd", allow_retry = TRUE)
+```
+
+```{r VO8_Output6, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_08/VO8_Output6.Rmd", allow_retry = TRUE)
+```
+
+```{r VO8_Output7, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_08/VO8_Output7.Rmd", allow_retry = TRUE)
+```
+
 
 ## Einheit 9 - Korrelation
 

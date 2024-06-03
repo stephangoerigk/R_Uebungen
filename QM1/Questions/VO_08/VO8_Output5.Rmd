@@ -1,0 +1,67 @@
+```{r data generation, echo = FALSE, results = "hide"}
+## DATENERZEUGUNG
+n <- sample(120:250, 1)
+mu <- sample(c(125, 200, 250, 500, 1000), 1)
+y <- rnorm(n, mean = mu * runif(1, min = 0.9, max = 1.1), 
+           sd = mu * runif(1, min = 0.02, max = 0.06))
+
+## FRAGE/ANTWORT GENERIERUNG
+Mean <- round(mean(y), digits = 1)
+Var <- round(var(y), digits = 2)
+tstat <- round((Mean - mu)/sqrt(Var/n), digits = 3)
+
+## IN EINE SINGLE-CHOICE-FRAGE UMWANDELN
+questions <- tstat
+while(length(unique(questions)) < 5) {
+  fuzz <- c(0, runif(4, 0.02, 2 * sqrt(Var)))
+  sign <- c(sign(tstat), sample(c(-1, 1), 4, replace = TRUE))
+  fact <- sample(c(-1, 1), 5, replace = TRUE)
+  questions <- round(sign * abs(tstat + fact * fuzz), digits = 3)
+}
+questions <- paste("$", gsub("^ +", "", fmt(questions, 3)), "$", sep = "")
+solutions <- c(TRUE, rep(FALSE, 4))
+
+o <- sample(1:5)
+questions <- questions[o]
+solutions <- solutions[o]
+```
+
+Question
+=====
+Eine Maschine füllt Milch in $`r mu`$ml Packungen. Es wird vermutet, dass die 
+Maschine nicht korrekt arbeitet und dass die abgefüllte Milchmenge vom Sollwert 
+$\mu_0 = `r mu`$ abweicht. Eine Stichprobe von $`r n`$ Packungen, 
+die von der Maschine abgefüllt wurden, wird gesammelt. Der Stichprobenmittelwert $\bar{y}$ beträgt 
+$`r Mean`$ und die Stichprobenvarianz $s^2_{n-1}$ beträgt 
+$`r Var`$.
+
+Testen Sie die Hypothese, dass die abgefüllte Menge im Durchschnitt dem 
+Sollwert entspricht. Wie lautet der Wert der t-Test-Statistik?
+
+```{r questionlist, echo = FALSE, results = "asis"}
+answerlist(questions, markup = "markdown")
+```
+
+Solution
+======
+Die t-Test-Statistik wird berechnet durch:
+$$
+\begin{aligned}
+  t & = & \frac{\bar y - \mu_0}{\sqrt{\frac{s^2_{n-1}}{n}}}
+  = \frac{`r Mean` - `r mu`}{\sqrt{\frac{`r Var`}{`r n`}}}
+  = `r tstat`.
+\end{aligned}
+$$
+Die t-Test-Statistik beträgt somit
+$`r fmt(tstat, 3)`$.
+
+```{r solutionlist, echo = FALSE, results = "asis"}
+answerlist(ifelse(solutions, "True", "False"), markup = "markdown")
+```
+
+Meta-Informationen
+==================
+extype: schoice
+exsolution: `r mchoice2string(solutions, single = TRUE)`
+exname: t statistic
+```

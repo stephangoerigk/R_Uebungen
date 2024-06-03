@@ -1,0 +1,80 @@
+```{r data generation, echo = FALSE, results = "hide"}
+## Daten
+n <- 40 + sample(1:12, 2) * 3
+Scores <- rnorm(sum(n), sd = sample(30:40, 1)/10) + rep(sample(50:100, 2)/10, n)
+Scores[Scores < 0] <- 0
+dat <- data.frame(
+  Scores = Scores,
+  Therapy = factor(rep(1:2, c(n[1], n[2])), levels = 1:2, labels = c("Therapie A", "Therapie B"))
+)
+
+## Fragen/Antworten
+questions <- character(5)
+solutions <- logical(5)
+explanations <- character(5)
+
+tt <- t.test(Scores ~ Therapy, data = dat, var.equal = TRUE,
+  alternative = sample(c("less", "greater", "two.sided"), 1))
+
+questions[1] <- "Der absolute Wert der Teststatistik ist größer als 1,96."
+solutions[1] <- abs(tt$statistic) > 1.96
+explanations[1] <- paste("Der absolute Wert der Teststatistik beträgt ", 
+  round(abs(tt$statistic), digits = 3), ".", sep = "")
+
+questions[2] <- "Eine einseitige Alternative wurde getestet."
+solutions[2] <- tt$alternative != "two.sided"
+explanations[2] <- paste("Der Test zielt darauf ab zu zeigen, dass der Mittelwertunterschied ",
+  switch(tt$alternative, "two.sided" = "ungleich", "less" = "kleiner als", 
+  "greater" = "größer als"), " 0 ist.")
+
+questions[3] <- "Der p-Wert ist größer als 0,05."
+solutions[3] <- tt$p.value > 0.05
+explanations[3] <- paste("Der p-Wert beträgt ", format.pval(tt$p.value, digits = 3),
+  ".", sep = "")
+
+questions[4] <- "Der Test zeigt, dass die Scores bei Therapie A höher sind als bei Therapie B."
+solutions[4] <- tt$p.value < 0.05 & tt$alternative != "less" & diff(tt$estimate) < 0
+explanations[4] <- if (solutions[4]) paste("Das Testergebnis ist signifikant ($p < 0.05$)",
+  "und daher wird die Alternative gezeigt, dass der Mittelwertunterschied",
+  ifelse(tt$alternative == "two.sided", "ungleich", "größer als"), "0 ist.") else 
+  paste(ifelse(tt$alternative != "less", "", paste("Der Test zielt darauf ab zu zeigen,",
+  "dass die Alternative, dass die Scores bei Therapie A kleiner sind als bei Therapie B,")),
+  ifelse(tt$p.value < 0.05, "", "Das Testergebnis ist nicht signifikant ($p \\ge 0.05$)."))
+
+questions[5] <- "Der Test zeigt, dass die Scores bei Therapie A niedriger sind als bei Therapie B."
+solutions[5] <- tt$p.value < 0.05 & tt$alternative != "greater" & diff(tt$estimate) > 0
+explanations[5] <- if (solutions[5]) paste("Das Testergebnis ist signifikant ($p < 0.05$)",
+  "und daher wird die Alternative gezeigt, dass der Mittelwertunterschied",
+  ifelse(tt$alternative == "two.sided", "ungleich", "kleiner als"), "0 ist.") else 
+  paste(ifelse(tt$alternative != "greater", "", 
+  paste("Der Test zielt darauf ab zu zeigen, dass die Scores bei Therapie A größer sind als bei Therapie B.")),
+  ifelse(tt$p.value < 0.05, "", "Das Testergebnis ist nicht signifikant ($p \\ge 0.05$)."))
+```
+
+Question
+=====
+In einer klinischen Studie werden die Therapieergebnisse von zwei verschiedenen Therapien zur Behandlung einer psychischen Störung verglichen. Der folgende statistische Test wurde durchgeführt:
+
+```{r test output, echo = FALSE, comment = NA}
+print(tt)
+```
+
+Welche der folgenden Aussagen sind korrekt? (Signifikanzniveau 5%)
+
+```{r questionlist, echo = FALSE, results = "asis"}
+answerlist(questions, markup = "markdown")
+```
+
+Solution
+======
+
+```{r solutionlist, echo = FALSE, results = "asis"}
+answerlist(ifelse(solutions, "True", "False"), explanations, markup = "markdown")
+```
+
+Meta-information
+================
+extype: mchoice
+exsolution: `r mchoice2string(solutions)`
+exname: 2-sample t-test
+```
