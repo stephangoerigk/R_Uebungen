@@ -1,0 +1,38 @@
+```{r data generation, echo = FALSE, results = "hide"}
+n <- sample(120:250, 1)
+mu <- sample(c(125, 200, 250, 500, 1000), 1)
+y <- rnorm(n,
+  mean = mu * runif(1, min = 0.9, max = 1.1), 
+  sd = mu * runif(1, min = 0.02, max = 0.06)
+)
+Mean <- round(mean(y), digits = 1)
+Var <- round(var(y), digits = 2)
+tstat <- round((Mean - mu)/sqrt(Var/n), digits = 3)
+```
+
+Question
+========
+In einer klinischen Studie wird untersucht, ob eine neue Therapie die Symptome einer bestimmten psychischen Erkrankung verbessert. Der Zielwert für die Symptomreduktion liegt bei $\mu_0 = `r mu`$ Punkten auf einer Skala. Es besteht der Verdacht, dass die Therapie nicht die erwartete Verbesserung bringt und die tatsächliche Symptomreduktion vom Zielwert abweicht. Eine Stichprobe von $`r n`$ Patienten, die die Therapie erhalten haben, wird gesammelt. Der Stichprobenmittelwert $\bar{y}$ der Symptomreduktion beträgt $`r Mean`$ Punkte und die Stichprobenvarianz $s^2_{n-1}$ beträgt $`r Var`$ Punkte.
+
+Testen Sie die Hypothese, dass die durchschnittliche Symptomreduktion dem Zielwert entspricht. Wie lautet der absolute Wert (Betrag) der t-Test-Statistik? (Auf drei Nachkommastellen gerundet)
+
+Solution
+=========
+Die t-Test-Statistik wird berechnet durch:
+$$
+\begin{aligned}
+  t = \frac{\bar y - \mu_0}{\sqrt{\frac{s^2_{n-1}}{n}}}
+    = \frac{`r Mean` - `r mu`}{\sqrt{\frac{`r Var`}{`r n`}}}
+    = `r tstat`.
+\end{aligned}
+$$
+Der absolute Wert der t-Test-Statistik beträgt somit
+`r fmt(abs(tstat), 3)`.
+
+Meta-information
+================
+extype: num
+exsolution: `r fmt(abs(tstat), 3)`
+exname: t statistic
+extol: 0.01
+```
