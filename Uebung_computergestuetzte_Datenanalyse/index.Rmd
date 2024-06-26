@@ -761,10 +761,12 @@ round(sd(smartphone$SAS_diff[smartphone$groups == "No Training"]), 2)
 summary(smartphone$SAS_diff[smartphone$groups == "Training"])
 round(sd(smartphone$SAS_diff[smartphone$groups == "Training"]), 2)
 
+smartphone$change
+smartphone$SAS_diff
+
 ```
 
 <hr> <!-- Horizontale Trennlinie -->
-
 ```{r Einheit_2_MC_1, echo = FALSE}
 exams2learnr("Questions/Einheit_2_MC_1.Rmd", allow_retry = TRUE)
 ```
@@ -811,11 +813,10 @@ smartphone = read.csv("https://raw.githubusercontent.com/janikasaretzki/CFH_Dat/
 ```
 
 ```{r Datenvisualisierung1-solution}
-smartphone = read.csv("https://raw.githubusercontent.com/janikasaretzki/CFH_Dat/main/smartphone_evaluated.csv")
 
 library(ggplot2)
 
-ggplot(data = smartphone, aes(x = GPS_diff, y = SAS_diff, color = groups)) +
+ggplot(data = smartphone, aes(y = change, x = t0_GPS_sum - t1_GPS_sum, color = groups)) +
   geom_point(size = 1) +
   geom_smooth(method = "lm") + 
   labs(x = "Improvement Procrastination", y = "Improvement Addiction", color = "") +
