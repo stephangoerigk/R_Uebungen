@@ -1,7 +1,7 @@
 Question 
 ======== 
 
-Was ist ein naheliegender Schätzwert für π (Auftretenswahrscheinlichkeit in der Population)?
+Was ist ein angemessener Schätzwert für π (Auftretenswahrscheinlichkeit in der Population)?
 
 Answerlist
 ----------

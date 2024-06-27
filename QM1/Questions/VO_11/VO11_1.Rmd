@@ -6,9 +6,9 @@ Was ist eine Effektstärke?
 Answerlist
 ----------
 
-* Ein Indikator für die Stärke eines Treatments oder Phänomens.
+* Ein Indikator für die Stärke des Effekts eines Treatments oder Phänomens.
 * Ein Maß für die Wahrscheinlichkeit eines beobachteten Wertes.
-* Ein Maß, das verwendet werden kann, um Stichprobengrößen künftiger Studien zu bestimmen.
+* Ein Maß, das verwendet werden kann, um benötigte Stichprobengrößen künftiger Studien zu bestimmen.
 * Ein standardisiertes Maß, unabhängig von der Einheit der Variablen.
 * Ein Indikator für die statistische Signifikanz eines Tests.
 

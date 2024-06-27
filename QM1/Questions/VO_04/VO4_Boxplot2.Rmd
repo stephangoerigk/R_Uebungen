@@ -8,7 +8,7 @@ Answerlist
 
 * Einfache Darstellung von Durchschnittswerten
 * Zeigt die Standardabweichung
-* Lässt sich auf bei Nominalskalenniveau verwenden
+* Lässt sich auch bei Nominalskalenniveau verwenden
 * Gute Visualisierung von Ausreißern in den Daten 
 * Zeigt ein Maß der zentralen Tendenz
 

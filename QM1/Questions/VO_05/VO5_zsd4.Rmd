@@ -11,7 +11,7 @@ res = (z * 15) + 100
 Question 
 ======== 
 
-Wie hoch muss der IQ einer Person sein, um zu den 10 schlausten % der Bevölkerung zu gehören? Runden Sie auf ganze IQ
+Wie hoch muss der IQ einer Person sein, um zu den intelligentesten 10% der Bevölkerung zu gehören? Runden Sie auf ganze IQ-Punkte
 
 
 Solution

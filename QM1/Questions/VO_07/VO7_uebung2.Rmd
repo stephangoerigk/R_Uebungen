@@ -9,7 +9,7 @@ res = 1 - (1 - 0.05)^(1/5)
 Question 
 ======== 
 
-In einem weiteren Schritt möchten wir nun für die Kumulierung der α-Fehler korrigieren. Dafür verwenden wir die Adjustierung nach Boferroni. Wie lautet das auf drei Nachkommastellen gerundete adjustierte α-Fehler Niveau, welches wir den einzelnen Tests zugrunde legen müssten? 
+In einem weiteren Schritt möchten wir nun für die Kumulierung der α-Fehler korrigieren. Dafür verwenden wir die Adjustierung nach Bonferroni. Wie lautet das auf drei Nachkommastellen gerundete adjustierte α-Fehler Niveau, welches wir den einzelnen Tests zugrunde legen müssten? 
 
 
 Solution

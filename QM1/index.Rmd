@@ -297,7 +297,7 @@ exams2learnr("Questions/VO_05/VO5_1.Rmd", allow_retry = TRUE)
 exams2learnr("Questions/VO_05/VO5_2.Rmd", allow_retry = TRUE)
 ```
 
-```{r VO5_3, message = FALSE, warning=FALSE}
+```{r VO5_3, eval=FALSE, message=FALSE, warning=FALSE, include=FALSE}
 exams2learnr("Questions/VO_05/VO5_3.Rmd", allow_retry = TRUE)
 ```
 
@@ -443,7 +443,7 @@ exams2learnr("Questions/VO_07/VO7_4.Rmd", allow_retry = TRUE)
 exams2learnr("Questions/VO_07/VO7_5.Rmd", allow_retry = TRUE)
 ```
 
-```{r VO7_6, message = FALSE, warning=FALSE}
+```{r VO7_6, eval=FALSE, message=FALSE, warning=FALSE, include=FALSE}
 exams2learnr("Questions/VO_07/VO7_6.Rmd", allow_retry = TRUE)
 ```
 

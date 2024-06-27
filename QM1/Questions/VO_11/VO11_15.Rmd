@@ -9,7 +9,7 @@ Answerlist
 * Je größer die Effektstärke, desto größer die Power.
 * Je kleiner die Effektstärke, desto größer die Power.
 * Effektstärke und Power sind unabhängig voneinander.
-* Effektstärke bestimmt die Signifikanzniveau.
+* Effektstärke bestimmt das Signifikanzniveau.
 * Power ist das Quadrat der Effektstärke.
 
 Solution

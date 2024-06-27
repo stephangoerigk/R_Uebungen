@@ -6,11 +6,11 @@ Der kritische Wert...
 Answerlist
 ----------
 
-* muss für ein signifikantes Ergebnis überschritten werden
-* muss für ein signifikantes Ergebnis unterschritten werden
-* ist unabhängig vom Signifikanzniveau
-* ist bei t-Verteilung und z-Verteilung identisch
-* kann abhängig vom Signifikanzniveau variieren
+* muss für ein signifikantes Ergebnis überschritten werden (Betrag).
+* muss für ein signifikantes Ergebnis unterschritten werden (Betrag).
+* ist unabhängig vom Signifikanzniveau.
+* ist bei t-Verteilung und z-Verteilung identisch.
+* kann abhängig vom Signifikanzniveau variieren.
 
 Solution
 ========

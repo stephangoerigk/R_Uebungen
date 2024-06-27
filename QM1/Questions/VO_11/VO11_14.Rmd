@@ -11,7 +11,7 @@ Answerlist
 * Stichprobengröße
 * Statistisches Verfahren
 * Gewünschte Power
-* Richtung des Tests (Einseitig vs. Zweiseitig)
+* Richtung des Tests (einseitig vs. zweiseitig)
 
 Solution
 ========

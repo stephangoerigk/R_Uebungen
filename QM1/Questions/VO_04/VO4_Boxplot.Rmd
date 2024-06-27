@@ -10,7 +10,7 @@ Answerlist
 * Ist die IQR mal 1.5
 * Umfasst 50% aller Werte
 * entspricht der Spannweite
-* liegt um den Median herum, welcher wiederum genau in der Mitte der Box ist.
+* umschließt den Median, welcher wiederum genau in der Mitte der Box ist.
 
 Solution
 ========

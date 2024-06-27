@@ -9,8 +9,8 @@ Answerlist
 * Es zeigt die Verteilung einer einzelnen Variablen.
 * Es visualisiert die Beziehung zwischen zwei Variablen.
 * Es ist besonders gut zur Darstellung von kategorialen Daten geeignet.
-* Jeder Punkt entspricht einem Fall
-* Wir können bis zu 3 Variablen in unserem Streudiagramm abbilden 
+* Jeder Punkt entspricht einem Fall.
+
 
 Solution
 ========
@@ -22,11 +22,11 @@ Answerlist
 * Richtig. Ein Streudiagramm visualisiert die Beziehung zwischen zwei Variablen.
 * Falsch. Streudiagramme sind nicht speziell zur Darstellung von kategorialen Daten geeignet.
 * Richtig. In unserem Streudiagramm entspricht jeder Punkt einem Fall (z.B. einer Person)
-* Richtig. Wir können bis zu 3 Variablen in unserem Streudiagramm abbilden. 2 Numerische Variablen über die beiden Achsen (x-Achse und y-Achse), sowie eine kategoriale Variable über sog. Aesthetics (z.B. unterschiedliche Farben oder Facetten)
+
 
 Meta-information
 ================
 exname: scatterplot_properties
 extype: mchoice 
-exsolution: 01011
+exsolution: 0101
 exshuffle: TRUE

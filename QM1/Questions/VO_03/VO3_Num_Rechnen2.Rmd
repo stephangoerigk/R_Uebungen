@@ -20,7 +20,7 @@ table = df %>%
 Question
 ======== 
 
-In der folgenden Tabelle sehen Sie, die wöchentliche Fernsehzeit in Stunden von 12 Schülern.
+In der folgenden Tabelle sehen Sie die wöchentliche Fernsehzeit in Stunden von 12 Schülern.
 
 ```{r num4}
 table

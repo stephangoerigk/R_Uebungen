@@ -16,7 +16,7 @@ explanations <- character(5)
 tt <- t.test(Scores ~ Therapy, data = dat, var.equal = TRUE,
   alternative = sample(c("less", "greater", "two.sided"), 1))
 
-questions[1] <- "Der absolute Wert der Teststatistik ist größer als 1,96."
+questions[1] <- "Der absolute Wert der Teststatistik ist größer als 1.96."
 solutions[1] <- abs(tt$statistic) > 1.96
 explanations[1] <- paste("Der absolute Wert der Teststatistik beträgt ", 
   round(abs(tt$statistic), digits = 3), ".", sep = "")
@@ -27,7 +27,7 @@ explanations[2] <- paste("Der Test zielt darauf ab zu zeigen, dass der Mittelwer
   switch(tt$alternative, "two.sided" = "ungleich", "less" = "kleiner als", 
   "greater" = "größer als"), " 0 ist.")
 
-questions[3] <- "Der p-Wert ist größer als 0,05."
+questions[3] <- "Der p-Wert ist größer als .05."
 solutions[3] <- tt$p.value > 0.05
 explanations[3] <- paste("Der p-Wert beträgt ", format.pval(tt$p.value, digits = 3),
   ".", sep = "")

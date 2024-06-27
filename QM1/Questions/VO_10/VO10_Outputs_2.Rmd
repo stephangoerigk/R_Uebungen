@@ -17,6 +17,7 @@ table(data)
 Auf Grundlage der Daten rechnen Sie folgenden Test:
 
 ```{r calc, echo=FALSE}
+options(scipen = 999)
 chisq.test(table(data$Therapie, data$Behandlungserfolg))
 ```
 

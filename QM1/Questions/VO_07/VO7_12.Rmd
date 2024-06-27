@@ -11,7 +11,7 @@ Answerlist
 * Wir erlauben uns eine 5%ige Wahrscheinlichkeit, einen α-Fehler zu begehen
 * Wir erlauben uns eine 5%ige Wahrscheinlichkeit, unsere Hypothese fälschlicherweise abzulehnen
 * Ein Signifikanzniveau von α = .05 ist in der Wissenschaft eher unüblich
-* Es bedeutet, dass der p-Wert unter 0,05 liegen muss, um die Nullhypothese abzulehnen
+* Es bedeutet, dass der p-Wert unter α = .05 liegen muss, um die Nullhypothese abzulehnen
 
 Solution
 ========

@@ -19,7 +19,7 @@ Answerlist
 ----------
 
 * Richtig. Empirische Mittelwertsdifferenz und Standardfehler der Mittelwertsdifferenz müssen geschätzt werden.
-* Richtig. In t-Verteilung müssen zwei Schätzer eingehen.
+* Richtig. In die t-Verteilung müssen zwei Schätzer eingehen.
 * Falsch. t-Verteilung ist abhängig vom Stichprobenumfang.
 * Richtig. Freiheitsgrade bestimmen den kritischen t-Wert.
 * Falsch. Freiheitsgrade sind bei allen Stichprobengrößen relevant.

@@ -8,10 +8,10 @@ Answerlist
 
 * z-Wert 
 * t-Wert
-* q-Wert
+* o-Wert
 * F-Wert
 * r-Wert
-* Chi^2-Wert
+* Chi-Quadrat-Wert
 
 
 
@@ -22,17 +22,17 @@ Answerlist
 ----------
 
 
-*Richtig. Mittelwertsvergleiche Z.B. z-Test bei bekannter Populationsstreuung, oder großen Stichproben. -> Bei großen Stichproben nähert sich die t-Verteilung an die z-Verteilung an. 
+* Richtig. Mittelwertsvergleiche Z.B. z-Test bei bekannter Populationsstreuung, oder großen Stichproben. -> Bei großen Stichproben nähert sich die t-Verteilung an die z-Verteilung an. 
 
-*Richtig. Mittelwertsvergleiche z.B. Einstichproben t-Test (Unbekannte Populationsstreuung), Abhängiger t-Test und Unabhängiger t-Test.
+* Richtig. Mittelwertsvergleiche z.B. Einstichproben t-Test (Unbekannte Populationsstreuung), Abhängiger t-Test und Unabhängiger t-Test.
 
-*Falsch. Es gibt keine Teststatistik namens q-Wert.
+* Falsch. Es gibt keine Teststatistik namens o-Wert.
 
-*Richtig. Varianzanalytische Verfahren. z.B. ANOVA oder MANOVA; Oder aber auch Levene Test zur Varianzhomogenität
+* Richtig. Varianzanalytische Verfahren. z.B. ANOVA oder MANOVA; Oder aber auch Levene Test zur Varianzhomogenität
 
-*Falsch. Es gibt keine Teststatistik namens r-Wert.
+* Falsch. Es gibt keine Teststatistik namens r-Wert.
 
-*Richtig. Bei kategorialen AV's
+* Richtig. Bei kategorialen AV's
 
 Meta-information
 ================

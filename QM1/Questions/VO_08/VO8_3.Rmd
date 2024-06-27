@@ -6,11 +6,11 @@ Wann ist ein t-Test signifikant?
 Answerlist
 ----------
 
-* Wenn der p-Wert kleiner als 0.05 ist
-* Wenn der p-Wert größer als 0.05 ist
+* Wenn der p-Wert kleiner als α = .05 ist
+* Wenn der p-Wert größer als α = .05 ist
 * Wenn die Teststatistik größer als der kritische Wert ist
 * Wenn die Teststatistik kleiner als der kritische Wert ist
-* Wenn der Konfidenzintervall den Nullwert einschließt
+* Wenn das Konfidenzintervall die Null einschließt
 
 Solution
 ========

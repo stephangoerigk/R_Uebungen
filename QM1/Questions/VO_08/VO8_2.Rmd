@@ -1,7 +1,7 @@
 Question 
 ======== 
 
-"Manager haben vor einer Stressschulung schlechtere Stressverarbeitungsstrategien als danach" sollte mit folgendem Test ausgewertet werden:
+Die Hypothese: "Manager haben vor einer Stressschulung schlechtere Stressverarbeitungsstrategien als danach". sollte mit folgendem Test geprüft werden:
 
 Answerlist
 ----------
@@ -10,7 +10,7 @@ Answerlist
 * zweiseitiger unabhängiger t-Test
 * einseitiger abhängiger t-Test
 * Ein-Stichproben t-Test
-* Gauß-Test
+* Binomial-Test
 
 Solution
 ========
@@ -22,7 +22,7 @@ Answerlist
 * Falsch. Ein zweiseitiger unabhängiger t-Test wird verwendet, um Unterschiede zwischen zwei unabhängigen Gruppen zu vergleichen.
 * Richtig. Ein einseitiger abhängiger t-Test wird verwendet, um Mittelwerte derselben Gruppe vor und nach einer Intervention zu vergleichen.
 * Falsch. Ein Ein-Stichproben t-Test wird verwendet, um den Mittelwert einer Stichprobe mit einem bekannten Wert zu vergleichen. (Unbekannte Populationsvarianz)
-* Falsch. Der Gauß-Test wird verwendet, um den Mittelwert einer Stichprobe mit einem bekannten Wert zu vergleichen. (Bekannte Populationsvarianz)
+* Falsch. 
 
 Meta-information
 ================

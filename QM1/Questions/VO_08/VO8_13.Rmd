@@ -1,7 +1,7 @@
 Question 
 ======== 
 
-Es soll untersucht werden, ob Musik einen Einfluss auf die Leistungen in einem Test hat. Dazu werden zwei Gruppen (A+B) gebildet, wobei beide Gruppen den gleichen Test schreiben. Gruppe A bekommt während des Tests Musik vorgespielt, Gruppe B nicht. Mit welcher Formel kann ich meine Hypothese überprüfen?
+Es soll untersucht werden, ob Musik einen Einfluss auf die Leistungen in einem Test hat. Dazu werden zwei Gruppen (A und B) gebildet, wobei beide Gruppen den gleichen Test schreiben. Gruppe A bekommt während des Tests Musik vorgespielt, Gruppe B nicht. Mit welchem Test kann ich diese Hypothese überprüfen?
 
 Answerlist
 ----------

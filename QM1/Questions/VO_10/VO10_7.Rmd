@@ -1,7 +1,7 @@
 Question
 ========
 
-Was sind die Freiheitsgrade $$df$$ beim Chi-Quadrat-Test?
+Was sind die Freiheitsgrade beim Chi-Quadrat-Test?
 
 Answerlist
 ----------
