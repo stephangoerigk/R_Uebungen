@@ -162,7 +162,7 @@ round(1/7, digits = 2)
 
 3^3
 
-Alternative: 3**3
+# Alternative: 3**3
 
 ```
 
@@ -264,7 +264,7 @@ In diesem Bereich werden Ihnen Übungen zu den grundlegenden Datenstrukturen beg
 
 a = 150
 
-Alternative: a <- 150
+# Alternative: a <- 150
 
 ```
 
@@ -376,11 +376,11 @@ Freunde
 j = c(1, 2, 3, 4, 5, 6, 7)
 j
 
-(Alternative: j = c(1:7))
+# Alternative: j = c(1:7)
 
-k <- matrix(j, nrow = 3, ncol = 6)
+k = matrix(j, nrow = 3, ncol = 6)
 
-l = m[3, ]
+l = k[3, ]
 
 ```
 
@@ -767,30 +767,30 @@ smartphone$SAS_diff
 ```
 
 <hr> <!-- Horizontale Trennlinie -->
-```{r Einheit_2_MC_1, echo = FALSE}
+```{r Einheit_2_MC_1, echo = FALSE, warning = FALSE}
 exams2learnr("Questions/Einheit_2_MC_1.Rmd", allow_retry = TRUE)
 ```
 
-```{r Einheit_2_MC_2, echo = FALSE}
+```{r Einheit_2_MC_2, echo = FALSE, warning = FALSE}
 exams2learnr("Questions/Einheit_2_MC_2.Rmd", allow_retry = TRUE)
 ```
 
-```{r Einheit_2_MC_3, echo = FALSE}
+```{r Einheit_2_MC_3, echo = FALSE, warning = FALSE}
 exams2learnr("Questions/Einheit_2_MC_3.Rmd", allow_retry = TRUE)
 ```
 
-```{r Einheit_2_MC_4, echo = FALSE}
+```{r Einheit_2_MC_4, echo = FALSE, warning = FALSE}
 exams2learnr("Questions/Einheit_2_MC_4.Rmd", allow_retry = TRUE)
 ```
 
 
-## Einheit 3
+## Einheiten 3 und 4
 
-#### Datenvisualisierung in RStudio
+#### Datenvisualisierung und Hypothesentests in RStudio
 
-Willkommen im Abschnitt **Datenvisualisierung in RStudio**! 
+Willkommen im Abschnitt **Datenvisualisierung und Hypothesentests in RStudio**! 
 
-In diesem Abschnitt wird das in Kapitel zwei begonnene Projekt fortgesetzt. Ziel ist es, die z.T. bereits in Kapitel zwei ermittelten Werte grafisch darzustellen. Der zur Verfügung gestellte smartphone-Datensatz bleibt derselbe, enthält in der nun erneut über Github zu ladenden Version jedoch bereits die wichtigsten Werte:
+In diesem Abschnitt wird das in Kapitel zwei begonnene Projekt fortgesetzt. Ziel ist es, die z.T. bereits in Kapitel zwei ermittelten Werte grafisch darzustellen sowie Hypothesen mithilfe der Ihnen bekannten Methoden zu testen. Der zur Verfügung gestellte smartphone-Datensatz bleibt derselbe, enthält in der nun erneut über Github zu ladenden Version jedoch bereits die wichtigsten Werte:
 
 - Summenwert der General Procrastination Scale (GPS) zu den Zeitpunkten t0 und t1 (t0_GPS_sum, t1_GPS_sum)
 - Summenwert der Smartphone Addiction Scale (SAS) zu den Zeitpunkten t0 und t1 (t0_SAS_sum, t1_SAS_sum)
@@ -800,7 +800,18 @@ In diesem Abschnitt wird das in Kapitel zwei begonnene Projekt fortgesetzt. Ziel
 
 <hr> <!-- Horizontale Trennlinie -->
 
-**Aufgabe 1:** Im Folgenden finden Sie ein Beispiel, wie Sie die aus Ihren Berechnungen gewonnenen Erkenntnisse visualisieren könnten.
+Im Kontext des Ihnen vorliegenden smartphone-Datensatzes sind eine Vielzahl statistischer Hypothesen und Fragestellungen möglicht. 
+
+Beantworten sie folgende Fragestellungen anhand des Datensatzes. Dokumentieren Sie alle Auswertungsschritte und formulieren Sie zudem eine inhaltliche Interpretation der Ergebnisse.
+
+**Fragestellung 1**: 
+
+Eine mögliche Fragestellung im Kontext des Ihnen vorliegenden smartphone-Datensatzes ist, ob Smartphone-Sucht oder auch Prokrastination durch das Training verbessert werden kann.
+
+Bitte testen Sie entsprechende Fragestellungen und geben Sie zudem
+
+
+**Aufgabe ##:** Im Folgenden finden Sie ein Beispiel, wie Sie die aus Ihren Berechnungen gewonnenen Erkenntnisse visualisieren könnten.
 
 Versuchen Sie bitte, die Grafik nachzucoden.
 
@@ -832,7 +843,7 @@ ggplot(data = smartphone, aes(y = change, x = t0_GPS_sum - t1_GPS_sum, color = g
 
 ```
 
-## Einheit 4
+<hr> <!-- Horizontale Trennlinie -->
 
 ## Einheit 5
 
