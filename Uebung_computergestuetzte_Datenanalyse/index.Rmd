@@ -648,9 +648,128 @@ Die Smartphone Addiction Scale (SAS) ist ein Messinstrument, das entwickelt wurd
 
 <hr> <!-- Horizontale Trennlinie -->
 
+```{r Sim, include=FALSE}
+
+library(truncnorm)
+library(faux)
+library(sjPlot)
+
+set.seed(444)
+
+N = 128
+
+df = data.frame(ID = as.character(1:N),
+                groups = sample(0:1, N, replace=TRUE, prob=c(.5, .5))
+)
+
+df$groups = factor(df$groups, levels = 0:1, labels = c("No Training", "Training"))
+
+df$Gender <- sample(0:1, N, replace=TRUE, prob=c(.46, .54))
+df$Gender = factor(df$Gender, levels = 0:1, labels = c("male", "female"))
+
+df$Relationship_status = sample(0:1, N, replace=TRUE, prob=c(.39, .61))
+df$Relationship_status = factor(df$Relationship_status, levels = 0:1, labels = c("single", "relationship"))
+
+Age <- rnorm(N, 39, 15)
+Age[Age < 18] = Age[Age < 18] + 5
+Age[Age < 18] = 18
+Age <- round(Age)
+df$Age = Age
+
+df$Employed <- sample(0:1, N, replace=TRUE, prob=c(.4, .6))
+df$Employed = factor(df$Employed, levels = 0:1, labels = c("no", "yes"))
+
+df$Comorbidities = sample(0:2, N, replace=TRUE, prob=c(.8, .3, 0.1))
+df$Comorbidities = factor(df$Comorbidities, levels = 0:2, labels = c("none", "F32", "F60"))
+
+df$Conc_med <- sample(0:1, N, replace=TRUE, prob=c(.1, .9))
+df$Conc_med = factor(df$Conc_med, levels = 0:1, labels = c("no", "yes"))
+
+t0_GPS_items = paste0("t0_GPS_", 1:23)
+t1_GPS_items = paste0("t1_GPS_", 1:23)
+t0_SAS_items = paste0("t0_SAS_", 1:33)
+t1_SAS_items = paste0("t1_SAS_", 1:33)
+
+for(ch in t0_GPS_items){df[[ch]] = NA}
+for(ch in t1_GPS_items){df[[ch]] = NA}
+for(ch in t0_SAS_items){df[[ch]] = NA}
+for(ch in t1_SAS_items){df[[ch]] = NA}
+
+for(ch in t0_SAS_items){
+  df[[ch]]= round(rtruncnorm(n=N, a=1, b=6, mean=3.5, sd=1))
+}
+
+for(ch in t1_SAS_items){
+  df[[ch]][df$groups == "Training"] = df[[gsub("t1", "t0", ch)]][df$groups == "Training"] - round(rnorm(length(df[[gsub("t1", "t0", ch)]][df$groups == "Training"]), mean = 0.75, sd = 1))
+  df[[ch]][df$groups == "Training" & df[[ch]] < 0] = 0
+  
+  df[[ch]][df$groups == "No Training"] = df[[gsub("t1", "t0", ch)]][df$groups == "No Training"] - round(rnorm(length(df[[gsub("t1", "t0", ch)]][df$groups == "No Training"]), mean = 0.4, sd = 1.5))
+  df[[ch]][df$groups == "No Training" & df[[ch]] < 0] = 0
+}
+
+df$t0_SAS_sum = rowSums(df[, grep("t0_SAS", names(df))])
+df$t1_SAS_sum = rowSums(df[, grep("t1_SAS", names(df))])
+df$change = df$t0_SAS_sum - df$t1_SAS_sum
+
+rev = c(5, 8, 12, 16, 18, 21, 23)
+
+for(ch in paste0("t0_GPS_", 1:23)){
+  df[[ch]] = round(rnorm_pre(x = df$t0_SAS_sum, mu = sample(rnorm(10, 3, 1), size = 1), sd = 1.5, r = 0.65, empirical = T))
+  df[[ch]][df[[ch]] > 5] = 5
+  df[[ch]][df[[ch]] < 1] = 1
+}
+
+for(ch in paste0("t0_GPS_", c(5, 8, 12, 16, 18, 21, 23))){
+   df[[ch]] = round(rnorm_pre(x = df$t0_SAS_sum, mu = sample(rnorm(10, 1.5, 1), size = 1), sd = 1.5, r = -0.65, empirical = T))
+   df[[ch]][df[[ch]] > 5] = 5
+   df[[ch]][df[[ch]] < 1] = 1
+ }
+
+for(ch in paste0("t1_GPS_", 1:23)){
+  df[[ch]][df$groups == "Training"] = df[[gsub("t1", "t0", ch)]][df$groups == "Training"] - round(rnorm_pre(x = df$change[df$groups == "Training"], mu =1.2, sd = 1.3, r = 0.6, empirical = T))
+  df[[ch]][df$groups == "No Training"] = df[[gsub("t1", "t0", ch)]][df$groups == "No Training"]  - round(rnorm_pre(x = df$change[df$groups == "No Training"], mu = 0.3, sd = 2, r = 0, empirical = T))
+  df[[ch]][df[[ch]] > 5] = 5
+  df[[ch]][df[[ch]] < 1] = 1
+}
+
+for(ch in paste0("t0_GPS_", c(5, 8, 12, 16, 18, 21, 23))){
+  df[[ch]] = dplyr::recode(df[[ch]], "5" = 1, "4" = 2, "3" = 3, "2" = 4, "1" = 5)
+}
+for(ch in paste0("t1_GPS_", c(5, 8, 12, 16, 18, 21, 23))){
+  df[[ch]] = dplyr::recode(df[[ch]], "5" = 1, "4" = 2, "3" = 3, "2" = 4, "1" = 5)
+}
+
+df$t0_GPS_sum = rowSums(df[, grep("t0_GPS", names(df))])
+df$t1_GPS_sum = rowSums(df[, grep("t1_GPS", names(df))])
+
+df$Previous_Ep = round(rnorm_pre(x = df$change, mu = 3.5, sd = 1, r = -0.2, empirical = T))
+df$Education_years = round(rnorm_pre(x = df$change, mu = 12, sd = 2, r = -0.5, empirical = T))
+df$Onset_age = round(rnorm_pre(x = df$change, mu = 20, sd = 5, r = -0.4, empirical = T))
+df$Onset_age[df$Onset_age > df$Age] = df$Age[df$Onset_age > df$Age] - 5
+
+png(file="/Users/jani/Desktop/CFH/Sommersemester 2024 Einführung in R/Rep/Uebung_computergestuetzte_Datenanalyse/smartphone.png", width = 8, height =4, units = "in", res = 300)
+cowplot::plot_grid(ggplot(df, aes(y = change, x = groups)) +
+                     geom_boxplot() +
+                     labs(x = "", y = "Improvement Addiction") +
+                     theme_bw(),
+                   ggplot(df, aes(y = change, x = t0_GPS_sum - t1_GPS_sum, colour = groups)) +
+                     geom_point() +
+                     geom_smooth(method = "lm") +
+                     labs(x = "Improvement Procrastination", y = "Improvement Addiction", colour = "") +
+                     theme_bw() +
+                     theme(legend.position = "top"))
+dev.off()
+
+df = BBmisc::dropNamed(df, drop = c("t0_GPS_sum", "t1_GPS_sum", "change", "t0_SAS_sum", "t1_SAS_sum"))
+
+
+write.csv(df, "/Users/jani/Desktop/CFH/Sommersemester 2024 Einführung in R/Rep/Uebung_computergestuetzte_Datenanalyse/smartphone.csv")
+
+```
+
 
 ```{r Projekt1, exercise=TRUE}
-smartphone = read.csv("https://raw.githubusercontent.com/stephangoerigk/WAF_Folien/master/Smartphone_addiction.csv")
+smartphone = read.csv("https://raw.githubusercontent.com/janikasaretzki/CFH_Dat/main/Smartphone_addiction.csv")
 
 ```
 
