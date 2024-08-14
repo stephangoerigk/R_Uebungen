@@ -768,134 +768,87 @@ Die Smartphone Addiction Scale (SAS) ist ein Messinstrument, das entwickelt wurd
 ```
 
 ```{r Simulation JS, include = FALSE}
-# 
-# library(truncnorm)
-# library(faux)
-# library(ggplot2)
-# library(cowplot)
-# 
-# set.seed(444)
-# 
-# N <- 128
-# 
-# df <- data.frame(ID = as.character(1:N),
-#                  groups = sample(0:1, N, replace=TRUE, prob=c(.5, .5))
-# )
-# 
-# df$groups <- factor(df$groups, levels = 0:1, labels = c("No Training", "Training"))
-# 
-# df$t0_SAS_sum <- round(rtruncnorm(n=N, a=10, b=50, mean=30, sd=10))
-# 
-# df$t1_SAS_sum <- df$t0_SAS_sum - ifelse(df$groups == "Training",
-#                                         round(rnorm(N, mean=5, sd=4)),  
-#                                         round(rnorm(N, mean=2, sd=4)))   
-# 
-# df$change <- df$t0_SAS_sum - df$t1_SAS_sum
-# 
-# df$GPS_diff <- ifelse(df$groups == "Training",
-#                       round(rnorm_pre(x = df$change, mu = 20, sd = 12, r = 0.8, empirical = TRUE)),  
-#                       round(rnorm_pre(x = df$change, mu = 10, sd = 12, r = -0.4, empirical = TRUE)))  
-# 
-# df$GPS_diff <- scales::rescale(df$GPS_diff, to = c(-20, 40))
-# df$change <- scales::rescale(df$change, to = c(-10, 30))
-# 
-# png(file="/Users/jani/Desktop/CFH/Sommersemester 2024 Einführung in R/Rep/Uebung_computergestuetzte_Datenanalyse/smartphone.png", width = 8, height =4, units = "in", res = 300)
-# 
-# cowplot::plot_grid(
-#   ggplot(df, aes(y = change, x = groups)) +
-#     geom_boxplot() +
-#     labs(x = "", y = "Improvement Addiction") +
-#     theme_bw(),
-#   
-#   ggplot(df, aes(y = change, x = GPS_diff, colour = groups)) +
-#     geom_point(alpha = 0.7) +
-#     geom_smooth(method = "lm") +
-#     scale_x_continuous(limits = c(-20, 40)) +
-#     scale_y_continuous(limits = c(-10, 30)) +
-#     labs(x = "Improvement Procrastination", y = "Improvement Addiction", colour = "") +
-#     theme_bw() +
-#     theme(legend.position = "top")
-# )
-# 
-# dev.off()
-# 
-# df = BBmisc::dropNamed(df, drop = c("t0_GPS_sum", "t1_GPS_sum", "change", "t0_SAS_sum", "t1_SAS_sum"))
-# 
-# write.csv(df, "/Users/jani/Desktop/CFH/Sommersemester 2024 Einführung in R/Rep/Uebung_computergestuetzte_Datenanalyse/smartphone.csv")
-
-```
-
-```{r Simulation JS ohne Ausreißer, include = FALSE}
-
-library(truncnorm)
-library(faux)
-library(ggplot2)
-library(cowplot)
 
 set.seed(444)
 
-N <- 128
+N = 128
 
-df <- data.frame(ID = as.character(1:N),
-                 groups = sample(0:1, N, replace=TRUE, prob=c(.5, .5))
+df = data.frame(
+  ID = 1:N,
+  groups = sample(c("No Training", "Training"), N, replace = TRUE, prob = c(0.5, 0.5)),
+  Gender = sample(c("male", "female"), N, replace = TRUE, prob = c(0.46, 0.54)),
+  Relationship_status = sample(c("single", "relationship"), N, replace = TRUE, prob = c(0.39, 0.61)),
+  Age = pmax(round(rnorm(N, 39, 15)), 18),
+  Employed = sample(c("no", "yes"), N, replace = TRUE, prob = c(0.4, 0.6)),
+  Comorbidities = sample(c("none", "F32", "F60"), N, replace = TRUE, prob = c(0.8, 0.15, 0.05)),
+  Conc_med = sample(c("no", "yes"), N, replace = TRUE, prob = c(0.1, 0.9))
 )
 
-df$groups <- factor(df$groups, levels = 0:1, labels = c("No Training", "Training"))
+gps_items = paste0("GPS_", 1:23)
+sas_items = paste0("SAS_", 1:33)
+df[paste0("t0_", gps_items)] = round(rnorm(N * 23, 3, 1.5), 0)
+df[paste0("t1_", gps_items)] = round(rnorm(N * 23, 3, 1.5), 0)
+df[paste0("t0_", sas_items)] = round(rnorm(N * 33, 3, 1.5), 0)
+df[paste0("t1_", sas_items)] = round(rnorm(N * 33, 3, 1.5), 0)
+
+recode_items = c(5, 8, 12, 16, 18, 21, 23)
+for(ch in paste0("t0_GPS_", recode_items)){
+  df[[ch]] = dplyr::recode(df[[ch]], `5` = 1, `4` = 2, `3` = 3, `2` = 4, `1` = 5)
+}
+for(ch in paste0("t1_GPS_", recode_items)){
+  df[[ch]] = dplyr::recode(df[[ch]], `5` = 1, `4` = 2, `3` = 3, `2` = 4, `1` = 5)
+}
+
+df$t0_GPS_sum = rowSums(df[paste0("t0_", gps_items)])
+df$t1_GPS_sum = rowSums(df[paste0("t1_", gps_items)])
+df$t0_SAS_sum = rowSums(df[paste0("t0_", sas_items)])
+df$t1_SAS_sum = rowSums(df[paste0("t1_", sas_items)])
+
+training_effect_mean = 15
+training_effect_sd = 5
+
+no_training_effect_mean = 10
+no_training_effect_sd = 7
+
+df$t1_SAS_sum[df$groups == "No Training"] <- df$t0_SAS_sum[df$groups == "No Training"] + rnorm(sum(df$groups == "No Training"), training_effect_mean, training_effect_sd)
+df$t1_SAS_sum[df$groups == "Training"] <- df$t0_SAS_sum[df$groups == "Training"] + rnorm(sum(df$groups == "Training"), no_training_effect_mean, no_training_effect_sd)
+
+df$t1_GPS_sum[df$groups == "No Training"] <- df$t0_GPS_sum[df$groups == "No Training"] + rnorm(sum(df$groups == "No Training"), training_effect_mean, training_effect_sd)
+df$t1_GPS_sum[df$groups == "Training"] <- df$t0_GPS_sum[df$groups == "Training"] + rnorm(sum(df$groups == "Training"), no_training_effect_mean, no_training_effect_sd)
+
+library(ggplot2)
+p1 <- ggplot(df, aes(x = groups, y = t1_SAS_sum - t0_SAS_sum)) +
+  geom_boxplot() +
+  ylab("Improvement Addiction") +
+  theme_minimal()
+
+p2 <- ggplot(df, aes(x = t1_GPS_sum - t0_GPS_sum, y = t1_SAS_sum - t0_SAS_sum, color = groups)) +
+  geom_point() +
+  geom_smooth(method = "lm", se = TRUE) +
+  xlab("Improvement Procrastination") +
+  ylab("Improvement Addiction") +
+  theme_minimal()
+
+library(gridExtra)
+grid.arrange(p1, p2, ncol = 2)
+
+write.csv(df, "/Users/jani/Desktop/CFH/Sommersemester 2024 Einführung in R/Rep/Uebung_computergestuetzte_Datenanalyse/laste.csv")
 
 
-df$t0_SAS_sum <- round(rtruncnorm(n=N, a=10, b=50, mean=30, sd=10))
-
-df$t1_SAS_sum <- df$t0_SAS_sum - ifelse(df$groups == "Training",
-                                        round(rnorm(N, mean=5, sd=4)),  
-                                        round(rnorm(N, mean=2, sd=4)))  
-df$change <- df$t0_SAS_sum - df$t1_SAS_sum
-
-df$GPS_diff <- ifelse(df$groups == "Training",
-                      round(rnorm_pre(x = df$change, mu = 20, sd = 12, r = 0.8, empirical = TRUE)),  
-                      round(rnorm_pre(x = df$change, mu = 10, sd = 12, r = -0.4, empirical = TRUE)))  
-
-df$GPS_diff <- scales::rescale(df$GPS_diff, to = c(-20, 40))
-df$change <- scales::rescale(df$change, to = c(-10, 30))
-
-df <- df[!(df$change < -8 & df$groups == "Training"), ]
-
-png(file="/Users/jani/Desktop/CFH/Sommersemester 2024 Einführung in R/Rep/Uebung_computergestuetzte_Datenanalyse/smartphone.png", width = 8, height =4, units = "in", res = 300)
-
-cowplot::plot_grid(
-  ggplot(df, aes(y = change, x = groups)) +
-    geom_boxplot() +
-    labs(x = "", y = "Improvement Addiction") +
-    theme_bw(),
-  
-  ggplot(df, aes(y = change, x = GPS_diff, colour = groups)) +
-    geom_point(alpha = 0.7) +
-    geom_smooth(method = "lm") +
-    scale_x_continuous(limits = c(-20, 40)) +
-    scale_y_continuous(limits = c(-10, 30)) +
-    labs(x = "Improvement Procrastination", y = "Improvement Addiction", colour = "") +
-    theme_bw() +
-    theme(legend.position = "top")
-)
-
-dev.off()
-
-df = BBmisc::dropNamed(df, drop = c("t0_GPS_sum", "t1_GPS_sum", "change", "t0_SAS_sum", "t1_SAS_sum"))
-
-write.csv(df, "/Users/jani/Desktop/CFH/Sommersemester 2024 Einführung in R/Rep/Uebung_computergestuetzte_Datenanalyse/smartphone.csv")
 
 ```
 
 ```{r Projekt1, exercise=TRUE}
-smartphone = read.csv("https://raw.githubusercontent.com/janikasaretzki/CFH_Dat/main/Smartphone_addiction.csv")
+smartphone = read.csv("https://raw.githubusercontent.com/janikasaretzki/CFH_Dat/main/laste.csv")
 
 ```
 
 ```{r Projekt1-solution}
 
-smartphone = read.csv("https://raw.githubusercontent.com/stephangoerigk/WAF_Folien/master/Smartphone_addiction.csv")
+smartphone = read.csv("https://raw.githubusercontent.com/janikasaretzki/CFH_Dat/main/laste.csv")
 
 # Aufgabe 1
-dim(smartphone) # Datensatz mit 128 Zeilen (ProbandInnen) und 124 Spalten (Variablen)
+dim(smartphone) # Datensatz mit 128 Zeilen (ProbandInnen) und 125 Spalten (Variablen)
 nrow(smartphone) # Alternative Funktion, falls Unsicherheiten darüber bestehen, welche Zahl des dim()-Ergebnisses sich auf die Anzahl der Zeilen (engl. rows) bezieht
 ncol(smartphone) # Alternative Funktion, falls Unsicherheiten darüber bestehen, welche Zahl des dim()-Ergebnisses sich auf die Anzahl der Spalten (engl. columns) bezieht
 table(smartphone$groups) # No Training: 53 ProbandInnen, Training: 75 ProbandInnen
@@ -997,8 +950,24 @@ round(sd(smartphone$SAS_diff[smartphone$groups == "No Training"]), 2)
 summary(smartphone$SAS_diff[smartphone$groups == "Training"])
 round(sd(smartphone$SAS_diff[smartphone$groups == "Training"]), 2)
 
-smartphone$change
-smartphone$SAS_diff
+##
+
+# Berechnung der Summenwerte für GPS und SAS, falls noch nicht vorhanden
+smartphone$t0_GPS_sum <- rowSums(select(smartphone, starts_with("t0_GPS")), na.rm = TRUE)
+smartphone$t1_GPS_sum <- rowSums(select(smartphone, starts_with("t1_GPS")), na.rm = TRUE)
+smartphone$GPS_diff <- smartphone$t0_GPS_sum - smartphone$t1_GPS_sum
+
+smartphone$t0_SAS_sum <- rowSums(select(smartphone, starts_with("t0_SAS")), na.rm = TRUE)
+smartphone$t1_SAS_sum <- rowSums(select(smartphone, starts_with("t1_SAS")), na.rm = TRUE)
+smartphone$SAS_diff <- smartphone$t0_SAS_sum - smartphone$t1_SAS_sum
+
+# Überprüfen, ob die neuen Spalten tatsächlich im Datensatz sind
+names(smartphone)
+
+# Speichern des gesamten Datensatzes mit allen Spalten
+write.csv(smartphone, "simulated_smartphone_evaluated.csv", row.names = FALSE)
+
+
 
 ```
 
@@ -1036,15 +1005,12 @@ In diesem Abschnitt wird das in Kapitel zwei begonnene Projekt fortgesetzt. Ziel
 
 <hr> <!-- Horizontale Trennlinie -->
 
-Im Kontext des Ihnen vorliegenden smartphone-Datensatzes sind eine Vielzahl statistischer Hypothesen und Fragestellungen möglicht. 
+Im Kontext des Ihnen vorliegenden smartphone-Datensatzes sind eine Vielzahl an (statistischer) Fragestellungen möglicht. 
 
 Beantworten sie folgende Fragestellungen anhand des Datensatzes. Dokumentieren Sie alle Auswertungsschritte und formulieren Sie zudem eine inhaltliche Interpretation der Ergebnisse.
 
 **Fragestellung 1**: 
 
-Eine mögliche Fragestellung im Kontext des Ihnen vorliegenden smartphone-Datensatzes ist, ob Smartphone-Sucht oder auch Prokrastination durch das Training verbessert werden kann.
-
-Bitte testen Sie entsprechende Fragestellungen und geben Sie zudem
 
 
 **Aufgabe ##:** Im Folgenden finden Sie ein Beispiel, wie Sie die aus Ihren Berechnungen gewonnenen Erkenntnisse visualisieren könnten.
@@ -1056,14 +1022,15 @@ Versuchen Sie bitte, die Grafik nachzucoden.
 <hr> <!-- Horizontale Trennlinie -->
 
 ```{r Datenvisualisierung1, exercise=TRUE}
-smartphone = read.csv("https://raw.githubusercontent.com/janikasaretzki/CFH_Dat/main/smartphone_evaluated.csv")
+smartphone = read.csv("https://raw.githubusercontent.com/janikasaretzki/CFH_Dat/main/simulated_smartphone_evaluated.csv")
+
 ```
 
 ```{r Datenvisualisierung1-solution}
 
 library(ggplot2)
 
-ggplot(data = smartphone, aes(y = change, x = t0_GPS_sum - t1_GPS_sum, color = groups)) +
+ggplot(data = smartphone, aes(y = t0_SAS_sum - t1_SAS_sum, x = t0_GPS_sum - t1_GPS_sum, color = groups)) +
   geom_point(size = 1) +
   geom_smooth(method = "lm") + 
   labs(x = "Improvement Procrastination", y = "Improvement Addiction", color = "") +
@@ -1076,6 +1043,13 @@ ggplot(data = smartphone, aes(y = change, x = t0_GPS_sum - t1_GPS_sum, color = g
     panel.border = element_blank(), 
     axis.line = element_line() 
   )
+
+ggplot(smartphone, aes(y = change, x = GPS_diff, colour = groups)) +
+  geom_point(alpha = 0.7) +
+  geom_smooth(method = "lm") +
+  labs(x = "Improvement Procrastination", y = "Improvement Addiction", colour = "") +
+  theme_bw() +
+  theme(legend.position = "top")
 
 ```
 
