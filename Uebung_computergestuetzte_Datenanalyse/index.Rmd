@@ -1044,12 +1044,6 @@ ggplot(data = smartphone, aes(y = t0_SAS_sum - t1_SAS_sum, x = t0_GPS_sum - t1_G
     axis.line = element_line() 
   )
 
-ggplot(smartphone, aes(y = change, x = GPS_diff, colour = groups)) +
-  geom_point(alpha = 0.7) +
-  geom_smooth(method = "lm") +
-  labs(x = "Improvement Procrastination", y = "Improvement Addiction", colour = "") +
-  theme_bw() +
-  theme(legend.position = "top")
 
 ```
 
