@@ -7,11 +7,11 @@ Welche Aussagen sind korrekt?
 Answerlist
 ----------
 
-* 99,7% aller Daten liegen innerhalb 3 Standardabweichungen vom Mittelwert
-* 68% aller Daten liegen innerhalb 1 Standardabweichung vom Mittelwert
-* 95% aller Daten liegen innerhalb 2 Standardabweichungen vom Mittelwert
-* 58% aller Daten liegen innerhalb 1 Standardabweichung vom Mittelwert
-* 68% aller Daten liegen innerhalb 2 Standardabweichung vom Mittelwert
+* 99.7% aller Daten liegen innerhalb 3 Standardabweichungen vom Mittelwert.
+* 68% aller Daten liegen innerhalb 1 Standardabweichung vom Mittelwert.
+* 95% aller Daten liegen innerhalb 2 Standardabweichungen vom Mittelwert.
+* 58% aller Daten liegen innerhalb 1 Standardabweichung vom Mittelwert.
+* 68% aller Daten liegen innerhalb 2 Standardabweichung vom Mittelwert.
 
 Solution
 ========

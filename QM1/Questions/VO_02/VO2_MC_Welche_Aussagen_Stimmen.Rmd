@@ -7,10 +7,10 @@ Welche Aussagen stimmen?
 Answerlist
 ----------
 
-* Häufigkeiten stellen wir in einem Histogramm dar
-* Kategorien stellen wir in einem Balkendiagramm dar
-* In einem Histogramm können auf der Y-Achse die absoluten Häufigkeiten der Ausprägungen dargestellt
-* Gesamtfläche eines Histogramms = 1 (relative Häufigkeit) bzw. N (Absolute Häufigkeit)
+* Häufigkeiten stellen wir in einem Histogramm dar.
+* Kategorien stellen wir in einem Balkendiagramm dar.
+* In einem Histogramm können auf der Y-Achse die absoluten Häufigkeiten der Ausprägungen dargestellt.
+* Gesamtfläche eines Histogramms = 1 (relative Häufigkeit) bzw. N (Absolute Häufigkeit).
 
 Solution
 ========

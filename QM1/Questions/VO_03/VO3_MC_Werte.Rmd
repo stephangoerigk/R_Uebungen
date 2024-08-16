@@ -31,9 +31,9 @@ Answerlist
 ----------
 
 * Das untere Quartil ist 3
-* Das untere Quartil ist 3,5
+* Das untere Quartil ist 3.5
 * IQR = 9
-* IQR = 9,5
+* IQR = 9.5
 
 Solution
 ========

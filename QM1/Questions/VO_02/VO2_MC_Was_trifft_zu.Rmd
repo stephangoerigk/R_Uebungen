@@ -7,10 +7,10 @@ Was trifft zu?
 Answerlist
 ----------
 
-* Bei einer linkssteilen Verteilung gilt: Modus < Median < Mittelwert
-* Bei einer linkssteilen Verteilung gilt: Modus = Median = Mittelwert
-* Bei einer linkssteilen Verteilung gilt: Mittelwert < Modus < Median
-* Keine dieser Aussagen ist richtig
+* Bei einer linkssteilen Verteilung gilt: Modus < Median < Mittelwert.
+* Bei einer linkssteilen Verteilung gilt: Modus = Median = Mittelwert.
+* Bei einer linkssteilen Verteilung gilt: Mittelwert < Modus < Median.
+* Keine dieser Aussagen ist richtig.
 
 Solution
 ========

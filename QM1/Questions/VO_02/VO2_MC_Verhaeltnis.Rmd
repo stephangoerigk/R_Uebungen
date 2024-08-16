@@ -7,10 +7,10 @@ Was trifft auf das Verhältnisskalenniveau zu?
 Answerlist
 ----------
 
-* Hat absoluten Nullpunkt
-* Länge wäre ein Beispiel
-* Aussage über das Verhältnis zwischen zwei Werten ist möglich
-* Selten in den Sozialwissenschaften
+* Hat absoluten Nullpunkt.
+* Länge wäre ein Beispiel.
+* Aussage über das Verhältnis zwischen zwei Werten ist möglich.
+* Selten in den Sozialwissenschaften.
 
 Solution
 ========
