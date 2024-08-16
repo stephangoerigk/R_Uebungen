@@ -7,11 +7,11 @@ Welche sind korrekte Schritte beim Durchführen von Hypothesentests
 Answerlist
 ----------
 
-* Aufstellen des Hypothesenpaars
-* Entscheidung: Test ist signifikant, nicht-signifikant oder leicht-signifikant
-* Festlegung des Signifikanzniveaus
-* Berechnen des Signifikanzniveaus
-* Vergleich kritischer Wert und empirischer (errechneter) Wert
+* Aufstellen des Hypothesenpaars.
+* Entscheidung: Test ist signifikant, nicht-signifikant oder leicht-signifikant.
+* Festlegung des Signifikanzniveaus.
+* Berechnen des Signifikanzniveaus.
+* Vergleich kritischer Wert und empirischer (errechneter) Wert.
 
 
 

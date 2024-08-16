@@ -6,11 +6,11 @@ Was trifft auf das Ziehen einer einfachen Zufallsstichprobe zu?
 Answerlist
 ----------
 
-* Der Vorgang ist ein Zufallsexperiment
-* Ein Teil der Population hat eine größere Wahrscheinlichkeit in die Stichprobe gezogen zu werden
-* Wenn die Ziehung einer Person die Wahrscheinlichkeit der Ziehung einer anderen Person beeinflusst, können wir nicht mehr von einer einfachen Zufallsstichprobe sprechen
-* Ziehen einer Zufallsstichprobe = Zufällige Zuteilung der Personen einer Gruppe zu Eigenschaften
-* Jedes Element der Population hat die gleiche Wahrscheinlichkeit, in die Stichprobe aufgenommen zu werden
+* Der Vorgang ist ein Zufallsexperiment.
+* Ein Teil der Population hat eine größere Wahrscheinlichkeit in die Stichprobe gezogen zu werden.
+* Wenn die Ziehung einer Person die Wahrscheinlichkeit der Ziehung einer anderen Person beeinflusst, können wir nicht mehr von einer einfachen Zufallsstichprobe sprechen.
+* Ziehen einer Zufallsstichprobe = Zufällige Zuteilung der Personen einer Gruppe zu Eigenschaften.
+* Jedes Element der Population hat die gleiche Wahrscheinlichkeit, in die Stichprobe aufgenommen zu werden.
 
 Solution
 ========

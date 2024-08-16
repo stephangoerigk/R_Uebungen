@@ -34,11 +34,11 @@ Unterscheidet sich dieser Gruppenmittelwert bei α = .05 signifikant vom Populat
 Answerlist
 ----------
 
-* Es besteht kein signifikanter Unterschied mit t(emp) = `r round(result$statistic,3)` und t(krit) = `r round(qt(0.975, 9),3) `
-* Es besteht ein signifikanter Unterschied mit t(emp) = `r round(result$statistic,3)` und t(krit) = `r round(qt(0.95, 9),3) `
-* Es besteht kein signifikanter Unterschied mit t(emp) = `r round(result$statistic,3)` und t(krit) = `r round(qt(0.975, 10),3) `
-* Es besteht kein signifikanter Unterschied mit t(emp) = `r round(result$statistic,3)` und t(krit) = `r round(qt(0.975, 8),3) `
-* Es besteht ein signifikanter Unterschied mit t(emp) = `r round(result$statistic,3)` und t(krit) = `r round(qt(0.95, 8),3) `
+* Es besteht kein signifikanter Unterschied mit t(emp) = `r round(result$statistic,3)` und t(krit) = `r round(qt(0.975, 9),3) `.
+* Es besteht ein signifikanter Unterschied mit t(emp) = `r round(result$statistic,3) +1` und t(krit) = `r round(qt(0.95, 9),3) `.
+* Es besteht kein signifikanter Unterschied mit t(emp) = `r round(result$statistic,3) -1` und t(krit) = `r round(qt(0.975, 10),3) `.
+* Es besteht kein signifikanter Unterschied mit t(emp) = `r round(result$statistic,3)` und t(krit) = `r round(qt(0.975, 8),3) `.
+* Es besteht ein signifikanter Unterschied mit t(emp) = `r round(result$statistic,3)` und t(krit) = `r round(qt(0.95, 8),3) `.
 
 Solution
 ========

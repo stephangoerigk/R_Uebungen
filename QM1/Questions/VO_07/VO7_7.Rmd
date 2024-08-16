@@ -8,8 +8,8 @@ Answerlist
 
 * macht zusätzliche Prüfung erforderlich, wenn einseitige Hypothesen geprüft werden.
 * gibt die Wahrscheinlichkeit für den Fehler erster Art an.
-* muss durch 2 dividiert werden, wenn einseitiger p-Wert angegeben ist.
-* hat den Vorteil, dass bei der Entscheidung keine Tabelle der Verteilung der Teststatistik benötigt wird
+* muss durch 2 dividiert werden, wenn ein einseitiger p-Wert angegeben ist.
+* hat den Vorteil, dass bei der Entscheidung keine Tabelle der Verteilung der Teststatistik benötigt wird.
 
 
 

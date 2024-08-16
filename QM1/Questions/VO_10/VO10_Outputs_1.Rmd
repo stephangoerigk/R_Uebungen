@@ -19,8 +19,8 @@ Answerlist
 * Es wurde überprüft, ob ein gewisses Merkmal in München drei mal häufiger auftritt als in Hamburg.
 * Der Test ist signifikant. Wir können die H0 verwerfen -> Das untersuchte Merkmal scheint nicht der Aufretenswahrscheinlichkeit 1:3 zu folgen.
 * Der Test ist nicht signifiknat. Wir können die H1 verwerfen -> Das untersuchte Merkmal scheint der erwarteteten Auftretenswahrscheinlichkeit von 1:3 zu folgen.
-* Es wurde ein mehrdimensionaler Chi-Quadrat-Test gerechnet
-* Es wurde ein eindimensionaler Chi-Quadrat-Test gerechnet 
+* Es wurde ein mehrdimensionaler Chi-Quadrat-Test gerechnet.
+* Es wurde ein eindimensionaler Chi-Quadrat-Test gerechnet.
 
 Solution
 ========

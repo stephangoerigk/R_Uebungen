@@ -23,11 +23,11 @@ Welche Aussagen sind zutreffend?
 Answerlist
 ----------
 
-* N = 98
-* Der deskriptive Mittelwertsunterschied zwischen beiden Semestern lag bei 2.86
-* Es konnte ein signifikanter Mittelwertsunterschied festgestellt werden
-* Die H1 lautet: μ1 ≠ μ2 oder μ1 - μ2 ≠ 0
-* N = 100
+* N = 98.
+* Der deskriptive Mittelwertsunterschied zwischen beiden Semestern lag bei 2.86.
+* Es konnte ein signifikanter Mittelwertsunterschied festgestellt werden.
+* Die H1 lautet: μ1 ≠ μ2 oder μ1 - μ2 ≠ 0.
+* N = 100.
 
 
 

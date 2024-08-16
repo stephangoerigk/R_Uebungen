@@ -128,11 +128,11 @@ Welche der folgenden Aussagen sind korrekt?
 Answerlist
 ----------
 
-* Das 95% Konfidenzintervall für den Mittelwert von Test2 ist [`r lower_bound`; `r upper_bound`]
-* Das 95% Konfidenzintervall für den Mittelwert von Test1 ist [`r lower_bound_z`; `r upper_bound_z`]
-* Das 95% Konfidenzintervall für den Mittelwert von Test2 ist [`r lower_bound_w`; `r upper_bound_w`]
-* Das 95% Konfidenzintervall für den Mittelwert von Test1 ist [`r lower_bound_w2`; `r upper_bound_w2`] 
-* Das 95% Konfidenzintervall für den Mittelwert von Test1 ist [`r lower_bound_w3`; `r upper_bound_w3`] 
+* Das 95% Konfidenzintervall für den Mittelwert von Test2 ist [`r lower_bound`; `r upper_bound`].
+* Das 95% Konfidenzintervall für den Mittelwert von Test1 ist [`r lower_bound_z`; `r upper_bound_z`].
+* Das 95% Konfidenzintervall für den Mittelwert von Test2 ist [`r lower_bound_w`; `r upper_bound_w`].
+* Das 95% Konfidenzintervall für den Mittelwert von Test1 ist [`r lower_bound_w2`; `r upper_bound_w2`]. 
+* Das 95% Konfidenzintervall für den Mittelwert von Test1 ist [`r lower_bound_w3`; `r upper_bound_w3`].
 
 Solution
 ========

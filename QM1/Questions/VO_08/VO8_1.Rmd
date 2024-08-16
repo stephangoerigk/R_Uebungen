@@ -6,11 +6,11 @@ Beim t-Test werden
 Answerlist
 ----------
 
-* Standardabweichungen verglichen 
-* Mittelwerte verglichen 
-* Mediane verglichen 
-* Varianzen verglichen 
-* Personen verglichen 
+* Standardabweichungen verglichen. 
+* Mittelwerte verglichen. 
+* Mediane verglichen. 
+* Varianzen verglichen. 
+* Personen verglichen. 
 
 Solution
 ========

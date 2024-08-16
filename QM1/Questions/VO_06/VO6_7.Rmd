@@ -8,7 +8,7 @@ Answerlist
 
 * Das ein möglichst großes Intervall bei der Schätzung herauskommt.
 * Dass sie zu möglichst „präzisen“ oder „genauen“ Schätzungen führen sollte.
-* Dass die Schätzwerte bei unendlicher Wiederholung des Zufallsexperiments im Mittel dem wahren Parameterwert entsprechen sollten
+* Dass die Schätzwerte bei unendlicher Wiederholung des Zufallsexperiments im Mittel dem wahren Parameterwert entsprechen sollten.
 * Dass der Standardfehler bei wachsendem Stichprobenumfang immer kleiner wird.
 
 

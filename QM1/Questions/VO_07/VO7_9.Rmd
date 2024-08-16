@@ -6,10 +6,10 @@ Wovon hängt die Teststärke (Power) ab?
 Answerlist
 ----------
 
-* Signifikanzniveau
-* Größe des Effekts
-* Stichprobenumfang
-* Ein- oder zweiseitige Alternativhypothese
+* Signifikanzniveau.
+* Größe des Effekts.
+* Stichprobenumfang.
+* Ein- oder zweiseitige Alternativhypothese.
 
 
 

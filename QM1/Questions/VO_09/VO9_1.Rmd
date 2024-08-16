@@ -7,7 +7,7 @@ Answerlist
 ----------
 
 * Die Ausprägung, die eine Person auf der einen Variable aufweist, gibt keine Auskunft darüber, welche Ausprägung diese Person auf der anderen Variable erreicht.
-* Kovariieren der beiden Variablen
+* Kovariieren der beiden Variablen.
 * Änderung der einen Variable führt nicht zu Veränderung der anderen Variable.
 * Ausprägung auf einer Variablen geben Auskunft über Ausprägung auf der zweiten Variablen.
 * Eine Variable verursacht Veränderungen in der anderen.

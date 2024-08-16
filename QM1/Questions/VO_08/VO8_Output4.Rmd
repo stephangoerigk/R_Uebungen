@@ -25,11 +25,11 @@ Welche Aussagen stimmen?
 Answerlist
 ----------
 
-* Überprüft wurde die Normalverteilungsannahme in beiden Populationen sowie die Varianzhomogenität
-* Die Voraussetzungen für einen unabhängigen t-Tests für gleiche Varianzen sind erfüllt
-* Die Voraussetzungen für einen unabhängigen t-Tests für gleiche Varianzen sind nicht erfüllt
-* Normalverteilung in beiden Populationen ist gegeben 
-* Die Annahme der Varianzhomogenität ist gegeben 
+* Überprüft wurde die Normalverteilungsannahme in beiden Populationen sowie die Varianzhomogenität.
+* Die Voraussetzungen für einen unabhängigen t-Tests für gleiche Varianzen sind erfüllt.
+* Die Voraussetzungen für einen unabhängigen t-Tests für gleiche Varianzen sind nicht erfüllt.
+* Normalverteilung in beiden Populationen ist gegeben. 
+* Die Annahme der Varianzhomogenität ist gegeben. 
 
 
 Solution

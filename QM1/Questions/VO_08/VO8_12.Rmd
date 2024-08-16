@@ -6,11 +6,11 @@ Welche Schritte sind bei einem abhängigen t-Test zu berechnen?
 Answerlist
 ----------
 
-* Berechnung des Standardfehlers der Differenzen
-* Schätzung der Streuung der Differenzen
-* Varianzschätzung innerhalb der Stichproben
-* Berechnung der Freiheitsgrade
-* Berechnung der Teststatistik
+* Berechnung des Standardfehlers der Differenzen.
+* Schätzung der Streuung der Differenzen.
+* Varianzschätzung innerhalb der Stichproben.
+* Berechnung der Freiheitsgrade.
+* Berechnung der Teststatistik.
 
 Solution
 ========

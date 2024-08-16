@@ -24,11 +24,11 @@ Welche Aussagen zu folgendem Output stimmen?
 Answerlist
 ----------
 
-* Es wurde eine einseitige Hypothese überprüft 
-* Der Test zeigt ein signifikantes Ergebnis 
-* Ohne den p-Wert können wir keine Aussage darüber geben, ob der Test signifikant ist
-* Der Test wurde nicht signifikant
-* Wir sehen den Output eines abhängigen t-Tests
+* Es wurde eine einseitige Hypothese überprüft. 
+* Der Test zeigt ein signifikantes Ergebnis.
+* Ohne den p-Wert können wir keine Aussage darüber geben, ob der Test signifikant ist.
+* Der Test wurde nicht signifikant.
+* Wir sehen den Output eines abhängigen t-Tests.
 
 
 Solution

@@ -10,7 +10,7 @@ Answerlist
 * Die Form der t-Verteilung ist mitbestimmt durch Freiheitsgrade.
 * t-Werte sind Quotienten aus zwei Varianzen.
 * Sie approximiert die NV mit zunehmender Stichprobengröße.
-* Die t-Verteilung ist wie die NV eingipfelig und symmetrisch
+* Die t-Verteilung ist wie die NV eingipfelig und symmetrisch.
 
 Solution
 ========

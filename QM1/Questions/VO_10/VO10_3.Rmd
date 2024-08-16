@@ -7,10 +7,10 @@ Answerlist
 ----------
 
 * Durch den Cramer's Phi-Koeffizienten.
-* Durch ω²
+* Durch ω².
 * Durch den p-Wert.
 * Durch die Quadrierung der Differenzen.
-* Durch R²
+* Durch R².
 
 Solution
 ========

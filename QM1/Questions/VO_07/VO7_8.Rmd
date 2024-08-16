@@ -6,11 +6,11 @@ Was ist mit Bezug auf Fehler beim Hypothesentest korrekt?
 Answerlist
 ----------
 
-* Fehler 1. Art ist, wenn die Nullhypothese fälschlicherweise beibehalten wird, obwohl die Alternativhypothese wahr ist
-* Fehler 2. Art ist, wenn die Nullhypothese fälschlicherweise beibehalten wird, obwohl die Alternativhypothese wahr ist
-* Alpha-Fehler ist, wenn die Nullhypothese fälschlicherweise verworfen wird und die Alternativhypothese angenommen wird
-* Die statistische Power errechnet sich als 1-beta Fehlerwahrscheinlichkeit.
-* Beta-Fehler ist, wenn die Nullhypothese fälschlicherweise beibehalten wird, obwohl die Alternativhypothese wahr ist
+* Fehler 1. Art ist, wenn die Nullhypothese fälschlicherweise beibehalten wird, obwohl die Alternativhypothese wahr ist.
+* Fehler 2. Art ist, wenn die Nullhypothese fälschlicherweise beibehalten wird, obwohl die Alternativhypothese wahr ist.
+* Alpha-Fehler ist, wenn die Nullhypothese fälschlicherweise verworfen wird und die Alternativhypothese angenommen wird.
+* Die statistische Power errechnet sich als 1-β Fehlerwahrscheinlichkeit.
+* Beta-Fehler ist, wenn die Nullhypothese fälschlicherweise beibehalten wird, obwohl die Alternativhypothese wahr ist.
 
 Solution
 ========

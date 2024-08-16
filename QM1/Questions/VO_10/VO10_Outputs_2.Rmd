@@ -30,7 +30,7 @@ Answerlist
 * Es wurde ein Zweidimensionaler (3 x 2) - Chi-Quadrat-Test gerechnet. 
 * Es besteht irgendeine Art Zusammenhang zwischen den unterschiedlichen Therapieansetzen und dem Behandlungserfolg.
 * Die Merkmale sind stochastisch unaabhängig.
-* Es wurde ein Vierfelder Chi-Quadrat-Test gerechnet
+* Es wurde ein Vierfelder Chi-Quadrat-Test gerechnet.
 
 
 Solution

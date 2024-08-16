@@ -6,10 +6,10 @@ In welchem Wertebereich kann Cohen’s d liegen?
 Answerlist
 ----------
 
-* Von -∞ bis +∞
-* Von 0 bis 1
-* Von -1 bis 1
-* Von -10 bis +10
+* Von -∞ bis +∞.
+* Von 0 bis 1.
+* Von -1 bis 1.
+* Von -10 bis +10.
 
 Solution
 ========

@@ -6,11 +6,11 @@ Warum werden für t-Verteilung Freiheitsgrade benötigt?
 Answerlist
 ----------
 
-* Empirische Mittelwertsdifferenz und Standardfehler der Mittelwertsdifferenz müssen geschätzt werden
-* In t-Verteilung müssen zwei Schätzer eingehen
-* t-Verteilung ist unabhängig vom Stichprobenumfang
-* Freiheitsgrade bestimmen den kritischen t-Wert
-* Freiheitsgrade sind nur bei sehr kleinen Stichproben relevant
+* Empirische Mittelwertsdifferenz und Standardfehler der Mittelwertsdifferenz müssen geschätzt werden.
+* In t-Verteilung müssen zwei Schätzer eingehen.
+* t-Verteilung ist unabhängig vom Stichprobenumfang.
+* Freiheitsgrade bestimmen den kritischen t-Wert.
+* Freiheitsgrade sind nur bei sehr kleinen Stichproben relevant.
 
 Solution
 ========
