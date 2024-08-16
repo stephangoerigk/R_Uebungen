@@ -6,10 +6,10 @@ Die Laplace-Wahrscheinlichkeit...?
 Answerlist
 ----------
 
-* Gilt bei Zufallsexperimenten, bei denen nur endlich viele, gleichwahrscheinliche Ergebnisse möglich sind
-* Wird mit dem Bayes Theorem berechnet
-* Ergibt sich durch das Verhältnis aus möglichen Ereignissen zu günstigen Ereignissen
-* Ergibt sich durch das Verhältnis aus günstigen Ereignissen zu möglichen Ereignissen
+* Gilt bei Zufallsexperimenten, bei denen nur endlich viele, gleichwahrscheinliche Ergebnisse möglich sind.
+* Wird mit dem Bayes Theorem berechnet.
+* Ergibt sich durch das Verhältnis aus möglichen Ereignissen zu günstigen Ereignissen.
+* Ergibt sich durch das Verhältnis aus günstigen Ereignissen zu möglichen Ereignissen.
 
 Solution
 ========

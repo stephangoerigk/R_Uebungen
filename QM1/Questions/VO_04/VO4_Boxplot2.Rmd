@@ -6,11 +6,11 @@ Welche sind die Vorteile des Boxplots?
 Answerlist
 ----------
 
-* Einfache Darstellung von Durchschnittswerten
-* Zeigt die Standardabweichung
-* Lässt sich auch bei Nominalskalenniveau verwenden
-* Gute Visualisierung von Ausreißern in den Daten 
-* Zeigt ein Maß der zentralen Tendenz
+* Einfache Darstellung von Durchschnittswerten.
+* Zeigt die Standardabweichung.
+* Lässt sich auch bei Nominalskalenniveau verwenden.
+* Gute Visualisierung von Ausreißern in den Daten.
+* Zeigt ein Maß der zentralen Tendenz.
 
 Solution
 ========

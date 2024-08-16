@@ -23,7 +23,7 @@ table = df %>%
 Question
 ======== 
 
-Welche Aussagen zu nachfolgender Tabelle sind zutreffend? 
+Welche Aussagen zu nachfolgender Tabelle sind zutreffend? (BDI = Beck Depressions Inventar: Messinstrument zur Erfassung der Symptomschwere einer depressiven Episode)  
 
 ```{r num2}
 table

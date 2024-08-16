@@ -6,10 +6,10 @@ Im Streudiagramm...
 Answerlist
 ----------
 
-* Lassen sich keine standardisierten Variablen darstellen
-* Kann die Regressionsgerade visualisiert werden
-* Kann man ggf. positive/negative Trends zwischen Variablen erkennen
-* Lassen sich Mittelwertsunterschiede besonders gut erkennen
+* lassen sich keine standardisierten Variablen darstellen.
+* kann die Regressionsgerade visualisiert werden.
+* kann man ggf. positive/negative Trends zwischen Variablen erkennen.
+* lassen sich Mittelwertsunterschiede besonders gut erkennen.
 
 
 Solution
