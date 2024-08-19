@@ -155,6 +155,21 @@ exams2learnr("Questions/VO_02/VO2_MC_Tukey1.Rmd", allow_retry = TRUE)
 exams2learnr("Questions/VO_02/VO2_MC_Tukey2.Rmd", allow_retry = TRUE)
 ```
 
+### Übungsaufgaben zur Interpretation von R - Outputs
+
+
+```{r VO2_MC_Output1, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_02/VO2_MC_Output1.Rmd", allow_retry = TRUE)
+```
+
+
+```{r VO2_MC_Output2, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_02/VO2_MC_Output2.Rmd", allow_retry = TRUE)
+```
+
+
+
+
 ## Einheit 3 - Einfache lineare Regression (1)
 
 ```{r VO3_MC_KorrelationvsRegeression, message = FALSE, warning=FALSE}

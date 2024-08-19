@@ -1,0 +1,84 @@
+```{r simulation, include=FALSE}
+
+set.seed(123)
+data <- data.frame(
+  Therapie = factor(rep(c("A", "B", "C", "D"), each = 10)),
+  Reduktion = c(
+    rnorm(10, mean = -20, sd = 5),
+    rnorm(10, mean = -13, sd = 5),
+    rnorm(10, mean = -22, sd = 5),
+    rnorm(10, mean = -8, sd = 5)
+  )
+)
+
+
+library(dplyr)
+library(knitr)
+library(kableExtra)
+
+# Berechnung der durchschnittlichen Angstwerte pro Therapie
+mean_values <- data %>%
+  group_by(Therapie) %>%
+  summarise(Durchschnittliche_Angstreduktion = round(mean(Reduktion),2))
+
+
+
+
+# Erstellen und Anzeigen der Tabelle mit knitr::kable
+table = mean_values %>%
+  kbl() %>%
+  kable_styling()
+
+
+```
+
+Question 
+======== 
+
+Forschende möchten die Wirkung von vier verschiedenen Therapiemethoden (A, B, C und D) auf die Angstlevel der Patienten untersuchen. Patienten wurden randomisiert einer der vier Therapiemethoden zugeteilt, sodass in jeder Gruppe gleichviele Probanden sind Zu Beginn und nach einer sechswöchigen Behandlung wurden die Angstlevel der Patienten gemessen. In dieser Tabelle sehen Sie die Reduktion der Angstlevel über den Verlauf der Therapie sortiert nach Therapiemethode:
+
+```{r table}
+table
+```
+
+Die ANOVA-Analyse wurde durchgeführt, um festzustellen, ob es signifikante Unterschiede in der Reduktion von Angstwerten zwischen den vier Therapiemethoden gab.
+
+```{r ANOVA, echo=FALSE}
+model = lm(Reduktion ~ Therapie, data = data)
+print(anova(model))
+
+```
+
+Welche Aussagen zu diesem Output treffen zu?
+
+Answerlist
+----------
+
+-   Es wurde eine einseitige Alternativhypothese getestet.
+-   Die Teststatistik ist größer als 20.
+-   In jeder Gruppe befanden sich 10 Probanden.
+-   Insgesamt wurden die Daten von 36 Probanden erhoben.
+-   Es konnte gezeigt werden, dass die Auswahl der Therapiemethode einen signifikanten Einfluss auf die Reduktion der Angstsymptomatik hatte.
+
+Solution
+========
+
+Answerlist
+----------
+
+-   Falsch. Die ANOVA prüft immer ungerichtete Hypothesen.
+-   Richtig. Die Teststatistik (F-Wert) liegt bei 31.834 und ist somit größer als 20
+-   Richtig. $$ df_{Nenner} = p * (n-1) $$ 
+$$ 36 = 4 * (n-1) $$ 
+$$ n = 10 $$ 
+
+-   Falsch. Bei n = 10 und 4 Gruppen erhalten wir N = 40.
+-   Richtig. Wir haben ein signifikantes Ergebnis.
+
+Meta-information
+================
+
+exname: ANOVA Output 1
+extype: mchoice 
+exsolution: 01101 
+exshuffle: TRUE
