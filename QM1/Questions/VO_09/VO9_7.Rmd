@@ -6,11 +6,11 @@ Was stimmt bezogen auf den Korrelationskoeffizienten?
 Answerlist
 ----------
 
-* 0.8 ist doppelt so hoch wie 0.4
-* Er ist nicht intervallskaliert
-* Es lassen sich ohne weiteres Korrelationskoeffizienten aus verschiedenen Studien miteinander vergleichen
-* Er ist kein perfektes Maß, wenn Zusammenhänge aus mehreren Studien miteinander verglichen werden sollen
-* Er misst die Stärke und Richtung eines linearen Zusammenhangs zwischen zwei Variablen
+* 0.8 ist doppelt so hoch wie 0.4.
+* Er ist nicht intervallskaliert.
+* Es lassen sich ohne weiteres Korrelationskoeffizienten aus verschiedenen Studien miteinander vergleichen.
+* Er ist kein perfektes Maß, wenn Zusammenhänge aus mehreren Studien miteinander verglichen werden sollen.
+* Er misst die Stärke und Richtung eines linearen Zusammenhangs zwischen zwei Variablen.
 
 Solution
 ========
