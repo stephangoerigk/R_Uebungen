@@ -1,0 +1,30 @@
+```{r data generation, echo = FALSE, results = "hide"}
+
+sol = 13.073
+```
+
+Question
+========
+
+Eine klinische Studie untersucht den Zusammenhang zwischen der Dauer einer Schlaftherapie und der Verbesserung der Schlafqualität bei Patienten mit Schlafstörungen. Die Daten wurden von einer Stichprobe von Patienten (N = 10) erhoben, die eine spezialisierte Schlaftherapie über einen Zeitraum von 12 Wochen erhielten. 
+
+Nach Abschluss der Analyse erhalten Sie folgenden R Output: 
+
+![](images/Output_t-value.png){width=600px}
+ Berechnen Sie den empirischen t-Wert und geben das Ergebnis auf 3 Nachkommastellen gerundet an. 
+
+
+Solution
+========
+
+Berechnung des empirischen t-Werts erfolgt über: 
+
+$$ t = \frac{b}{s_b} $$
+
+
+Meta-information
+================
+extype: num
+exsolution: `r fmt(sol, 3)`
+exname: t-Value
+extol: 0.001

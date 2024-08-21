@@ -258,6 +258,45 @@ exams2learnr("Questions/VO_04/VO4_MC_StandardisierteReg2.Rmd", allow_retry = TRU
 exams2learnr("Questions/VO_04/VO4_MC_tWertSteigung.Rmd", allow_retry = TRUE)
 ```
 
+```{r VO4_MC_Vorraussetzungen, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_04/VO4_MC_Vorraussetzungen.Rmd", allow_retry = TRUE)
+```
+
+```{r VO4_MC_Homoskedastizitaet, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_04/VO4_MC_Homoskedastizitaet.Rmd", allow_retry = TRUE)
+```
+
+### Übungsaufgaben zur Interpretation von R - Outputs
+
+```{r VO4_Output1, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_04/VO4_Output1.Rmd", allow_retry = TRUE)
+```
+
+```{r VO4_Output2, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_04/VO4_Output2.Rmd", allow_retry = TRUE)
+```
+
+```{r VO4_Output3, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_04/VO4_Output3.Rmd", allow_retry = TRUE)
+```
+
+```{r VO4_Output4, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_04/VO4_Output4.Rmd", allow_retry = TRUE)
+```
+
+```{r VO4_Output5, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_04/VO4_Output5.Rmd", allow_retry = TRUE)
+```
+
+```{r VO4_Output6, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_04/VO4_Output6.Rmd", allow_retry = TRUE)
+```
+
+```{r VO4_Output7, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_04/VO4_Output7.Rmd", allow_retry = TRUE)
+```
+
+
 ## Einheit 5 - Mehrfaktorielle ANOVA
 
 ## Einheit 6 - Multiple Regression

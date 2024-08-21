@@ -54,11 +54,11 @@ Welche Aussagen zu diesem Output treffen zu?
 Answerlist
 ----------
 
--   Es wurde eine einseitige Alternativhypothese getestet.
--   Die Teststatistik ist größer als 20.
--   In jeder Gruppe befanden sich 10 Probanden.
--   Insgesamt wurden die Daten von 36 Probanden erhoben.
--   Es konnte gezeigt werden, dass die Auswahl der Therapiemethode einen signifikanten Einfluss auf die Reduktion der Angstsymptomatik hatte.
+*   Es wurde eine einseitige Alternativhypothese getestet.
+*   Die Teststatistik ist größer als 20.
+*   In jeder Gruppe befanden sich 10 Probanden.
+*   Insgesamt wurden die Daten von 36 Probanden erhoben.
+*   Es konnte gezeigt werden, dass die Auswahl der Therapiemethode einen signifikanten Einfluss auf die Reduktion der Angstsymptomatik hatte.
 
 Solution
 ========
@@ -66,14 +66,14 @@ Solution
 Answerlist
 ----------
 
--   Falsch. Die ANOVA prüft immer ungerichtete Hypothesen.
--   Richtig. Die Teststatistik (F-Wert) liegt bei 31.834 und ist somit größer als 20
--   Richtig. $$ df_{Nenner} = p * (n-1) $$ 
+*   Falsch. Die ANOVA prüft immer ungerichtete Hypothesen.
+*   Richtig. Die Teststatistik (F-Wert) liegt bei 31.834 und ist somit größer als 20
+*   Richtig. $$ df_{Nenner} = p * (n-1) $$ 
 $$ 36 = 4 * (n-1) $$ 
 $$ n = 10 $$ 
 
--   Falsch. Bei n = 10 und 4 Gruppen erhalten wir N = 40.
--   Richtig. Wir haben ein signifikantes Ergebnis.
+*   Falsch. Bei n = 10 und 4 Gruppen erhalten wir N = 40.
+*   Richtig. Wir haben ein signifikantes Ergebnis.
 
 Meta-information
 ================
