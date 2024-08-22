@@ -6,11 +6,11 @@ Es soll untersucht werden, ob Musik einen Einfluss auf die Leistungen in einem T
 Answerlist
 ----------
 
-* Einseitiger t-Test für unabhängige Stichproben
-* Zweiseitiger t-Test für unabhängige Stichproben
-* Einseitiger t-Test für abhängige Stichproben
-* Zweiseitiger t-Test für abhängige Stichproben
-* ANOVA
+* Einseitiger t-Test für unabhängige Stichproben.
+* Zweiseitiger t-Test für unabhängige Stichproben.
+* Einseitiger t-Test für abhängige Stichproben.
+* Zweiseitiger t-Test für abhängige Stichproben.
+* ANOVA.
 
 Solution
 ========

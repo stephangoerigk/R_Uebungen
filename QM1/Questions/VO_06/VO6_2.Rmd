@@ -7,10 +7,10 @@ Answerlist
 ----------
 
 * Unterschiedliche Skalenniveaus.
-* Fehlende Repräsentativität
+* Fehlende Repräsentativität.
 * Eine bestimmte Teilgruppe von Personen in der Population hat eine höhere Wahrscheinlichkeit, in die Stichprobe gezogen zu werden, als andere Personen.
-* Unabhängigkeit der Ziehungen
-* Nichtzufällige Auswahlverfahren
+* Unabhängigkeit der Ziehungen.
+* Nichtzufällige Auswahlverfahren.
 
 Solution
 ========

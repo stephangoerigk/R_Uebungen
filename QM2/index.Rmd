@@ -155,6 +155,21 @@ exams2learnr("Questions/VO_02/VO2_MC_Tukey1.Rmd", allow_retry = TRUE)
 exams2learnr("Questions/VO_02/VO2_MC_Tukey2.Rmd", allow_retry = TRUE)
 ```
 
+### Übungsaufgaben zur Interpretation von R - Outputs
+
+
+```{r VO2_MC_Output1, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_02/VO2_MC_Output1.Rmd", allow_retry = TRUE)
+```
+
+
+```{r VO2_MC_Output2, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_02/VO2_MC_Output2.Rmd", allow_retry = TRUE)
+```
+
+
+
+
 ## Einheit 3 - Einfache lineare Regression (1)
 
 ```{r VO3_MC_KorrelationvsRegeression, message = FALSE, warning=FALSE}
@@ -243,7 +258,116 @@ exams2learnr("Questions/VO_04/VO4_MC_StandardisierteReg2.Rmd", allow_retry = TRU
 exams2learnr("Questions/VO_04/VO4_MC_tWertSteigung.Rmd", allow_retry = TRUE)
 ```
 
+```{r VO4_MC_Vorraussetzungen, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_04/VO4_MC_Vorraussetzungen.Rmd", allow_retry = TRUE)
+```
+
+```{r VO4_MC_Homoskedastizitaet, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_04/VO4_MC_Homoskedastizitaet.Rmd", allow_retry = TRUE)
+```
+
+### Übungsaufgaben zur Interpretation von R - Outputs
+
+```{r VO4_Output1, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_04/VO4_Output1.Rmd", allow_retry = TRUE)
+```
+
+```{r VO4_Output2, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_04/VO4_Output2.Rmd", allow_retry = TRUE)
+```
+
+```{r VO4_Output3, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_04/VO4_Output3.Rmd", allow_retry = TRUE)
+```
+
+```{r VO4_Output4, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_04/VO4_Output4.Rmd", allow_retry = TRUE)
+```
+
+```{r VO4_Output5, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_04/VO4_Output5.Rmd", allow_retry = TRUE)
+```
+
+```{r VO4_Output6, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_04/VO4_Output6.Rmd", allow_retry = TRUE)
+```
+
+```{r VO4_Output7, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_04/VO4_Output7.Rmd", allow_retry = TRUE)
+```
+
+
 ## Einheit 5 - Mehrfaktorielle ANOVA
+
+```{r VO5_MC_1, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_05/VO5_MC_1.Rmd", allow_retry = TRUE)
+```
+
+```{r VO5_MC_2, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_05/VO5_MC_1.Rmd", allow_retry = TRUE)
+```
+
+```{r VO5_MC_3, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_05/VO5_MC_1.Rmd", allow_retry = TRUE)
+```
+
+```{r VO5_MC_4, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_05/VO5_MC_1.Rmd", allow_retry = TRUE)
+```
+
+```{r VO5_MC_5, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_05/VO5_MC_1.Rmd", allow_retry = TRUE)
+```
+
+```{r VO5_MC_6, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_05/VO5_MC_1.Rmd", allow_retry = TRUE)
+```
+
+```{r VO5_MC_7, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_05/VO5_MC_1.Rmd", allow_retry = TRUE)
+```
+
+```{r VO5_MC_8, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_05/VO5_MC_1.Rmd", allow_retry = TRUE)
+```
+
+```{r VO5_MC_9, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_05/VO5_MC_1.Rmd", allow_retry = TRUE)
+```
+
+```{r VO5_MC_10, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_05/VO5_MC_1.Rmd", allow_retry = TRUE)
+```
+
+```{r VO5_MC_11, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_05/VO5_MC_1.Rmd", allow_retry = TRUE)
+```
+
+
+### Übungsaufgaben zur Interpretation von R - Outputs
+
+```{r VO5_Output1, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_05/VO5_Output1.Rmd", allow_retry = TRUE)
+```
+
+```{r VO5_Output2, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_05/VO5_Output2.Rmd", allow_retry = TRUE)
+```
+
+```{r VO5_Output3, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_05/VO5_Output3.Rmd", allow_retry = TRUE)
+```
+
+```{r VO5_Output4, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_05/VO5_Output4.Rmd", allow_retry = TRUE)
+```
+
+```{r VO5_Output5, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_05/VO5_Output5.Rmd", allow_retry = TRUE)
+```
+
+
+
 
 ## Einheit 6 - Multiple Regression
 

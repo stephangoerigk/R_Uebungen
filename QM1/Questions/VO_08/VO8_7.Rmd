@@ -21,12 +21,12 @@ Answerlist
 * Richtig. Der Shapiro-Wilk-Test ist ein gängiger Test zur Überprüfung der Normalverteilung.
 * Richtig. Ein QQ-Plot ist ein grafisches Mittel zur Überprüfung der Normalverteilung.
 * Falsch. Der Levene-Test prüft die Homogenität der Varianzen, nicht die Normalverteilung.
-* Falsch. Ein Histogramm kann nicht verwendet werden, um die NV Annahme visuell zu überprüfen.
+* Richtig. Ein Histogramm kann verwendet werden, um die NV Annahme visuell zu überprüfen.
 * Falsch. Ein Boxplot gibt Informationen über die Verteilung und Ausreißer, aber nicht spezifisch über die Normalverteilung.
 
 Meta-information
 ================
 exname: NormalverteilungsannahmePruefen
 extype: mchoice 
-exsolution: 11000
+exsolution: 11010
 exshuffle: TRUE

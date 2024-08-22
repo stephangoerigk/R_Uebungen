@@ -9,7 +9,7 @@ Answerlist
 * Vorher-Nachher-Messungen der Symptomschwere bei Patienten nach einer Therapie.
 * Vergleich der Herzfrequenz bei Patienten in zwei verschiedenen Altersgruppen.
 * Vergleich der Zuneigungswerte von Geschwistern innerhalb von Zwillingspaaren.
-* Vergleich der Blutdruckwerte von Patienten in unterschiedlichen Behandlungsgruppen
+* Vergleich der Blutdruckwerte von Patienten in unterschiedlichen Behandlungsgruppen.
 * Vergleich der Depressionswerte von Patienten verschiedener Kliniken.
 
 Solution

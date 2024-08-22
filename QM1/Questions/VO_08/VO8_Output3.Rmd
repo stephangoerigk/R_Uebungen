@@ -27,29 +27,29 @@ explanations[2] <- paste("Der Test soll zeigen, dass die Differenz der Mittelwer
   switch(tt$alternative, "two.sided" = "ungleich", "less" = "kleiner als", 
   "greater" = "größer als"), "0 ist.")
 
-questions[3] <- "Der p-Wert ist größer als 0.05"
+questions[3] <- "Der p-Wert ist größer als 0.05."
 solutions[3] <- tt$p.value > 0.05
-explanations[3] <- paste("Der p-Wert isr", format.pval(tt$p.value, digits = 3),
+explanations[3] <- paste("Der p-Wert ist", format.pval(tt$p.value, digits = 3),
   ".", sep = "")
 
 questions[4] <- paste("Der Test zeigt, dass die Wartezeit bei REWE länger ist ",
-  "als bei LIDL")
+  "als bei LIDL.")
 solutions[4] <- tt$p.value < 0.05 & tt$alternative != "less" & diff(tt$estimate) < 0
 explanations[4] <- if (solutions[4]) paste("Der Test ist signifikant ($p < 0.05$)",
   "und somit wird gezeigt, dass die Differenz der Mittelwerte",
   ifelse(tt$alternative == "two.sided", "unequal to ", "larger than"), "0.") else 
   paste(ifelse(tt$alternative != "less", "", paste("Der Test soll zeigen, dass",
-  "die Wartezeit bei REWE kürzer ist als bei LIDL")),
+  "die Wartezeit bei REWE kürzer ist als bei LIDL.")),
   ifelse(tt$p.value < 0.05, "", "Der Test ist nicht signifikant ($p \\ge 0.05$)."))
 
 questions[5] <- paste("Der Test zeigt, dass die Wartezeit bei LIDL länger ist ",
-  "als bei REWE")
+  "als bei REWE.")
 solutions[5] <- tt$p.value < 0.05 & tt$alternative != "greater" & diff(tt$estimate) > 0
 explanations[5] <- if (solutions[5]) paste("Der Test ist nicht signifikant ($p < 0.05$)",
   "und somit wird gezeigt, dass die Differenz der Mittelwerte",
   ifelse(tt$alternative == "two.sided", "unequal to", "smaller than"),
   "0.") else paste(ifelse(tt$alternative != "greater", "", 
-  paste("Der Test soll zeigen, dass die Wartezeit bei REWE länger ist als bei LIDL")),
+  paste("Der Test soll zeigen, dass die Wartezeit bei REWE länger ist als bei LIDL.")),
   ifelse(tt$p.value < 0.05, "", "Das Testergebnis ist nicht signifikant ($p \\ge 0.05$)."))
 ```
 

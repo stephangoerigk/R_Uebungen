@@ -22,7 +22,7 @@ Answerlist
 * Falsch. Statistische Power bezieht sich auf das Erkennen eines Effekts, nicht auf das Übersehen.
 * Falsch. Die Wahrscheinlichkeit, die Nullhypothese anzunehmen, wenn sie wahr ist, ist nicht statistische Power.
 * Falsch. Die Wahrscheinlichkeit, einen Fehler 1. Art zu begehen, ist das Signifikanzniveau (α).
-* Richtig. Power = 1-β (β = die Wahrscheinlichkeit, einen Fehler 2. Art zu begehen)
+* Richtig. Power = 1-β (β = die Wahrscheinlichkeit, einen Fehler 2. Art zu begehen).
 
 Meta-information
 ================

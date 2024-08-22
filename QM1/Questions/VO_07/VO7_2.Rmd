@@ -6,11 +6,11 @@ Question
 Answerlist
 ----------
 
-* einseitige H0
-* ungerichtete H1
-* gerichtete H1
-* zweiseitige H0
-* einseitige H1
+* einseitige H0.
+* ungerichtete H1.
+* gerichtete H1.
+* zweiseitige H0.
+* einseitige H1.
 
 
 Solution

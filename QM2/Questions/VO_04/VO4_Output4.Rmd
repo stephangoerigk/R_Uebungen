@@ -1,0 +1,55 @@
+```{r simulation, include=FALSE}
+
+set.seed(123)  # Reproduzierbarkeit sicherstellen
+n <- 100  # Anzahl der Personen
+workload <- rnorm(n, mean = 70, sd = 10)  # Arbeitsbelastung (Mittelwert 70, Standardabweichung 10)
+stress <- 20 + 0.7 * workload + rnorm(n, mean = 0, sd = 5)  # Stresserleben, abhängig von der Arbeitsbelastung
+
+# Schritt 2: Modellerstellung
+model <- lm(stress ~ workload)  # lineares Modell erstellen
+
+
+```
+
+
+Question
+========
+
+In einer psychologischen Studie wird untersucht, wie stark die Arbeitsbelastung einer Person ihr Stresserleben beeinflusst. Dazu wurden Daten von 100 berufstätigen Personen erhoben. Die Arbeitsbelastung wurde anhand eines validierten Fragebogens gemessen, wobei höhere Werte eine höhere Belastung anzeigen. Das Stresserleben wurde ebenfalls mit einem Fragebogen erfasst, der höhere Werte bei stärkerem Stresserleben liefert.
+
+Ziel ist es, zu untersuchen, wie stark die Arbeitsbelastung das Stresserleben vorhersagen kann. Nach Ende der Datenerhebung erhalten Sie folgendes Ergebnis:
+
+```{r output, echo=FALSE}
+summary(model)
+```
+
+Welche Aussagen bezogen auf diese Output sind korrekt? 
+
+
+Answerlist
+----------
+
+* Die Geradengleichung lautet: y = 21.32 + 0.05x
+* Bei einem Workload von 0 hat eine Person ein durchschnittliches Stresserleben von 21.32
+* Wenn das Stresserleben um eine Einheit steigt, steigt der durchschnittliche Workload um 0.67 Einheiten 
+* Wenn der Workload um eine Einheit steigt, steigt das durchschnittliche Stresserleben um 0.67 Einheiten 
+* Der Workload scheint einen signifikanten Einfluss auf das Stresserleben zu haben
+
+Solution
+========
+
+Answerlist
+----------
+
+* Falsch. Die Geradengleichung lautet: $y = 21.32 + 0.67x$
+* Richtig. Das ist richtig, da $a = 21.32$
+* Falsch. Das ist nicht richtig.
+* Richtig. Das ist die richtige Interpretation. 
+* Richtig. Der Steigungsparameter weicht signifikant von 0 ab. Diese Aussage ist also korrekt. 
+
+Meta-information
+================
+exname: Output4
+extype: mchoice
+exsolution: 01011
+exshuffle: TRUE

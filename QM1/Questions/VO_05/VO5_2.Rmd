@@ -9,7 +9,7 @@ Answerlist
 * Wahrscheinlichkeiten nehmen Werte zwischen 0 und 1 an.
 * Sichere Ereignisse haben eine Wahrscheinlichkeit von P=1.
 * Negative Wahrscheinlichkeiten beschreiben besonders seltene Ereignisse.
-* Gesamtwahrscheinlichkeit mehrere unabhängiger Ereignisse ist die Summe der Einzelwahrscheinlichkeiten
+* Gesamtwahrscheinlichkeit mehrere unabhängiger Ereignisse ist die Summe der Einzelwahrscheinlichkeiten.
 
 
 Solution

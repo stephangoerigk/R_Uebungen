@@ -1,0 +1,32 @@
+Question
+========
+
+Was versteht man unter Homoskedastizität in der linearen Regression?
+
+Answerlist
+----------
+
+* Homoskedastizität bedeutet, dass die Streuung der Residuen über den gesamten Wertebereich der unabhängigen Variable konstant ist.
+* Homoskedastizität bedeutet, dass die Residuen eine normale Verteilung aufweisen.
+* Homoskedastizität bedeutet, dass es keine Autokorrelation zwischen den Residuen gibt.
+* Homoskedastizität bedeutet, dass die unabhängigen Variablen unkorreliert sind.
+* Homoskedastizität bedeutet, dass die Residuen über den Wertebereich der abhängigen Variable hinweg zunehmen.
+
+Solution
+========
+
+Answerlist
+----------
+
+* Richtig. Homoskedastizität liegt vor, wenn die Varianz der Residuen über den gesamten Bereich der unabhängigen Variable konstant ist.
+* Falsch. Die Normalverteilung der Residuen ist eine separate Voraussetzung, die mit Homoskedastizität nicht direkt zusammenhängt.
+* Falsch. Autokorrelation ist ein separates Konzept, das die Beziehung zwischen Residuen betrifft, nicht die Homoskedastizität.
+* Falsch. Die Unkorreliertheit der unabhängigen Variablen betrifft Multikollinearität, nicht Homoskedastizität.
+* Falsch. Dies wäre das Gegenteil von Homoskedastizität, was als Heteroskedastizität bezeichnet wird.
+
+Meta-information
+================
+exname: Homoskedastizität
+extype: mchoice 
+exsolution: 10000
+exshuffle: TRUE

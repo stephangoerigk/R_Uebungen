@@ -1,0 +1,85 @@
+```{r}
+
+
+
+
+# Simuliere den Faktor 'Dünger' mit vier verschiedenen Typen
+n <- 80 # Gesamtanzahl der Beobachtungen (20 pro Düngerart)
+Gruppe <- factor(rep(c("Dünger A", "Dünger B", "Dünger C", "Dünger D"), each = n/4))
+
+# Simuliere die abhängige Variable (Pflanzenwachstum in cm)
+# Mittelwerte und Standardabweichungen für jede Gruppe
+mittelwerte <- c(30, 35, 25, 40)  # Unterschiedliche Mittelwerte für die Düngerarten
+sd <- 5  # Gleiche Standardabweichung für alle Gruppen
+
+# Erzeuge die Beobachtungen basierend auf den Mittelwerten
+wachstum <- c(
+  rnorm(n/4, mean = mittelwerte[1], sd = sd),
+  rnorm(n/4, mean = mittelwerte[2], sd = sd),
+  rnorm(n/4, mean = mittelwerte[3], sd = sd),
+  rnorm(n/4, mean = mittelwerte[4], sd = sd)
+)
+
+# Kombiniere die Daten in einem DataFrame
+daten <- data.frame(
+  Gruppe = Gruppe,
+  Wachstum = wachstum
+)
+
+# Zeige die ersten paar Zeilen der Daten an
+head(daten)
+
+model = lm(Wachstum ~ Gruppe, data = daten)
+ergebnis = anova(model)
+
+df_zaehler = ergebnis$Df[1]
+F_value = round(ergebnis$`F value`[1], 3)
+
+
+f_squared = ((F_value - 1) * df_zaehler) / n 
+small_omega_squared = f_squared / (1 + f_squared)
+
+res = round(small_omega_squared * 100)
+  
+```
+
+
+
+Question 
+======== 
+
+Gegeben sei folgender Output: 
+
+```{r Output, echo=FALSE}
+
+print(ergebnis)
+
+```
+Wie viel Prozent der Gesamtvarianz können durch den Faktor Gruppe aufgeklärt werden? Geben Sie das Ergebnis auf ganze Prozent gerundet an. Runden Sie nur das Ergebnis, nicht die Zwischenschritte. 
+
+Hinweis: Die Antwort auf diese Frage können Sie nicht aus dem Output ablesen - sie muss ausgerechnet werden. Gehen Sie hierbei analog zur Vorlesung vor.
+
+
+Solution
+========
+
+Im ersten Schritt müssen Sie $f^2$ ausrechnen: 
+
+$$f^2=\frac{(F_{df_{Zähler}; df_{Nenner}}-1)\cdot df_{Zähler}}{N}$$
+$f^2$ = `r f_squared`
+
+Im zweiten Schritt müssen Sie $\omega^2$ ausrechnen. 
+
+$$\omega^2=\frac{f^2}{1+f^2}$$
+$$\omega^2$$ = `r small_omega_squared`
+
+Wir können also `r res`% der Gesamtvarianz aufklären. 
+
+
+Meta-information
+================
+exname: effectsize
+extype: num
+exsolution: `r res`
+extol: 0.00
+

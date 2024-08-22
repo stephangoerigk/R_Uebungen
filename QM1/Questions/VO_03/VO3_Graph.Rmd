@@ -30,11 +30,11 @@ Welche der folgenden Aussagen treffen zu?
 Answerlist
 ----------
 
-* Wir sehen hier eine rechtssteile Verteilung
-* Wir sehen hier eine rechtsschiefe Verteilung
-* Die Verteilung ist unimodal 
-* Die Verteilung ist symmetrisch 
-* Mittelwert, Median und Modus verhalten sich: Modalwert < Median < Mittelwert
+* Wir sehen hier eine rechtssteile Verteilung.
+* Wir sehen hier eine rechtsschiefe Verteilung.
+* Die Verteilung ist unimodal.
+* Die Verteilung ist symmetrisch. 
+* Mittelwert, Median und Modus verhalten sich: Modalwert < Median < Mittelwert.
 
 Solution
 ========

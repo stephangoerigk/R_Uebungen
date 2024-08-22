@@ -6,10 +6,10 @@ Zur Prüfung der Hypothese "Es besteht ein Unterschied zwischen Frauen und Männ
 Answerlist
 ----------
 
-* einen linksseitigen Test
-* einen zweiseitigen Test
-* einen rechtsseitigen Test
-* einen einseitigen Test
+* einen linksseitigen Test.
+* einen zweiseitigen Test.
+* einen rechtsseitigen Test.
+* einen einseitigen Test.
 
 
 

@@ -1,0 +1,56 @@
+```{r simulation, include=FALSE}
+
+set.seed(123)  # Reproduzierbarkeit sicherstellen
+n <- 120  # Anzahl der Personen
+social_support <- rnorm(n, mean = 70, sd = 10)  # Soziale Unterstützung (Mittelwert 70, Standardabweichung 10)
+life_satisfaction <- 30 + 0.7 * social_support + rnorm(n, mean = 0, sd = 40)  # Lebenszufriedenheit, abhängig von der sozialen Unterstützung
+
+# Schritt 2: Modellerstellung
+model <- lm(life_satisfaction ~ social_support)
+
+
+```
+
+
+Question
+========
+
+In einer psychologischen Studie wird untersucht, wie stark die wahrgenommene soziale Unterstützung einer Person ihre Lebenszufriedenheit beeinflusst. Dazu wurden Daten von 120 Personen erhoben. Die soziale Unterstützung wurde mithilfe eines Fragebogens gemessen, bei dem höhere Werte eine stärkere wahrgenommene Unterstützung anzeigen. Die Lebenszufriedenheit wurde ebenfalls mit einem validierten Fragebogen erfasst, bei dem höhere Werte eine größere Zufriedenheit ausdrücken. Ziel der Studie ist es, zu untersuchen, wie gut die soziale Unterstützung die Lebenszufriedenheit vorhersagen kann.
+
+Nach Ende der Datenerhebung erhalten Sie folgendes Ergebnis:
+
+```{r output, echo=FALSE}
+summary(model)
+```
+
+Welche Aussagen bezogen auf diese Output sind korrekt? 
+
+
+Answerlist
+----------
+
+* Insgesamt können wir 0.784% der Varianz in der AV durch unser Modell erklären.
+* Es scheint ein negativer Zusammenhang zwischen sozialer Unterstützung und der Lebenszufriedenheit zu bestehen. 
+* Unser Modell wird auf einem α = .001 Niveau signifikant. 
+* Ingesamt können wir 7.84% der Varianz in der AV durch unser Modell erklären.
+* Der Intercept wird nicht signifikant: Die UV social_support scheint die AV life_satisfaction also nicht signifikant vorhersagen zu können.
+
+
+Solution
+========
+
+Answerlist
+----------
+
+* Falsch. Das ist nicht korrekt. 
+* Falsch. Der Zusammenhang ist positiv: $\beta$ nimmt einen positiven Wert an.  
+* Falsch. Das ist nicht richtig. Es wird lediglich auf einem α = .01 Niveau signifikant.
+* Richtig. Das ist korrekt. 
+* Falsch. Ob der y-Achsenabschnitt (Intercept) signifikant von 0 abweicht oder nicht, ist nicht relevant für die Entscheidung, ob unsere UV signifikant die AV vorhersagen kann. 
+
+Meta-information
+================
+exname: Output4
+extype: mchoice
+exsolution: 00010
+exshuffle: TRUE

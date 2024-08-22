@@ -10,7 +10,7 @@ Answerlist
 * Jede Person kann mehreren Kategorien zugeordnet werden.
 * Erwartete Häufigkeiten in den Zellen müssen größer als 5 sein.
 * Normalverteilung der Daten.
-* Erwartete Häufigkeiten in den Zellen größer als 10
+* Erwartete Häufigkeiten in den Zellen größer als 10.
 
 Solution
 ========

@@ -7,10 +7,10 @@ Answerlist
 ----------
 
 * Beinhaltet oft die neue Annahme, den "Effekt".
-* Ist das Gegenstück zur eigentlichen Untersuchungshypothese
-* Drückt eine "Unterschiedlichkeit" von einem Referenzwert aus
-* Stellt meistens den aktuellen Zustand oder anders ausgedrückt den „Standard“ dar, gegen den getestet wird
-* Beschreibt den Status quo oder die Annahme, dass es keinen Effekt gibt
+* Ist das Gegenstück zur eigentlichen Untersuchungshypothese.
+* Drückt eine "Unterschiedlichkeit" von einem Referenzwert aus.
+* Stellt meistens den aktuellen Zustand oder anders ausgedrückt den „Standard“ dar, gegen den getestet wird.
+* Beschreibt den Status quo oder die Annahme, dass es keinen Effekt gibt.
 
 Solution
 ========

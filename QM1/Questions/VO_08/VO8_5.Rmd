@@ -6,11 +6,11 @@ Was steht im Zähler der Formel des unabhängigen t-Tests?
 Answerlist
 ----------
 
-* Differenz der Mittelwerte der beiden Gruppen
-* Summe der Mittelwerte der beiden Gruppen
-* Differenz der Varianzen der beiden Gruppen
-* Summe der Standardabweichungen der beiden Gruppen
-* Produkt der Standardabweichungen der beiden Gruppen
+* Differenz der Mittelwerte der beiden Gruppen.
+* Summe der Mittelwerte der beiden Gruppen.
+* Differenz der Varianzen der beiden Gruppen.
+* Summe der Standardabweichungen der beiden Gruppen.
+* Produkt der Standardabweichungen der beiden Gruppen.
 
 Solution
 ========

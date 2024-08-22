@@ -30,8 +30,8 @@ Answerlist
 
 * Der Modus ist der Wert 4 bzw. 6
 * Median = 5
-* Median = 5,5
-* Arithmetisches Mittel = 5,5
+* Median = 5.5
+* Arithmetisches Mittel = 5.5
 
 Solution
 ========

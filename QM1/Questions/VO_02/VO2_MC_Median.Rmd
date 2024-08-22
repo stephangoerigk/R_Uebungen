@@ -7,10 +7,10 @@ Was trifft auf den Median zu?
 Answerlist
 ----------
 
-* Benötigt mindestens nominal skalierte Variablen
-* Ist der mittlere Wert der Verteilung
-* Ist robust gegenüber Ausreißern
-* Ist i.d.R. besser als der Mittelwert
+* Benötigt mindestens nominal skalierte Variablen.
+* Ist der mittlere Wert der Verteilung.
+* Ist robust gegenüber Ausreißern.
+* Ist i.d.R. besser als der Mittelwert.
 
 Solution
 ========

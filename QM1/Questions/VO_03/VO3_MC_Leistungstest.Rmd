@@ -8,11 +8,11 @@ Uns liegen metrische Daten vor, die sich in einer eingipfeligen Verteilung visua
 Answerlist
 ----------
 
-* Das arithmetische Mittel ist das Maß der zentralen Tendenz unserer Wahl
-* Um die Streuung der Daten auszudrücken, wählen wir die Varianz
-* Der Median ist das Maß der zentralen Tendenz unserer Wahl
-* Um die Streuung der Daten auszudrücken, wählen wir den Quartilabstand
-* Um die Streuung der Daten auszudrücken, wählen wir die Standardabweichung
+* Das arithmetische Mittel ist das Maß der zentralen Tendenz unserer Wahl.
+* Um die Streuung der Daten auszudrücken, wählen wir die Varianz.
+* Der Median ist das Maß der zentralen Tendenz unserer Wahl.
+* Um die Streuung der Daten auszudrücken, wählen wir den Quartilabstand.
+* Um die Streuung der Daten auszudrücken, wählen wir die Standardabweichung.
 
 Solution
 ========

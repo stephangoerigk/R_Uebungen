@@ -1,0 +1,28 @@
+Question
+========
+Welches der folgenden Beispiele beschreibt eine 2x2 ANOVA?
+
+Answerlist
+----------
+* Eine Studie, die den Einfluss von Geschlecht (männlich, weiblich) und Behandlung (Placebo, Medikament) auf den Blutdruck untersucht.
+* Eine Studie, die den Einfluss von Alter (jung, mittel, alt) und Ernährung (vegan, vegetarisch, omnivor) auf die Gesundheit untersucht.
+* Eine Studie, die den Einfluss von Lärmpegel (hoch, niedrig) auf die Konzentrationsfähigkeit untersucht.
+* Eine Studie, die den Einfluss von Geschlecht (männlich, weiblich) und Beruf (Büro, Handwerk, Dienstleistung) auf das Stressempfinden untersucht.
+* Eine Studie, die den Einfluss von Tageszeit (morgens, abends) und Schlafdauer (kurz, lang) auf die Leistungsfähigkeit untersucht.
+
+Solution
+========
+Answerlist
+----------
+* Richtig. Dies ist ein Beispiel für eine 2x2 ANOVA, da es zwei unabhängige Variablen mit jeweils zwei Stufen gibt.
+* Falsch. Dies wäre eine 3x3 ANOVA, da beide unabhängigen Variablen drei Stufen haben.
+* Falsch. Dies ist ein Beispiel für eine einfaktorielle ANOVA (oder t-Test, da nur zwei Stufen), da es nur eine unabhängige Variable gibt.
+* Falsch. Dies wäre eine 2x3 ANOVA, da eine unabhängige Variable zwei Stufen und die andere drei Stufen hat.
+* Richtig. Dies ist ein weiteres Beispiel für eine 2x2 ANOVA.
+
+Meta-information
+================
+exname: Beispiel_2x2_ANOVA
+extype: mchoice 
+exsolution: 10001
+exshuffle: TRUE

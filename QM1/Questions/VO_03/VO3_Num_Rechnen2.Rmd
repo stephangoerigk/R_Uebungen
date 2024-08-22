@@ -32,11 +32,11 @@ Welche Aussagen zu dieser Tabelle sind zutreffend?
 Answerlist
 ----------
 
-* Der Median beträgt `r median(df2$Stunden)`
-* Der Median beträgt `r median(df2$Stunden) + 0.5`
-* Das untere Quartil beträgt 8
-* Das obere Quartil beträgt 15
-* Der Interquartilabstand beträgt 5,5
+* Der Median beträgt `r median(df2$Stunden)`.
+* Der Median beträgt `r median(df2$Stunden) + 0.5`.
+* Das untere Quartil beträgt 8.
+* Das obere Quartil beträgt 15.
+* Der Interquartilabstand beträgt 5.5.
 
 Solution
 ========

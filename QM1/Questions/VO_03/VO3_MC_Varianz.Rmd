@@ -7,7 +7,7 @@ Was trifft auf die Varianz zu?
 Answerlist
 ----------
 
-* ... nur für metrische Daten sinnvoll
+* ... nur für metrische Daten sinnvoll.
 * ... ist ein Maß für die durchschnittliche Abweichung der Datenwerte vom Mittelwert.
 * ... ist dasselbe wie der Median.
 * ... wird in derselben Einheit wie die Daten gemessen.

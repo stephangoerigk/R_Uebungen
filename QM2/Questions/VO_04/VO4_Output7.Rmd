@@ -1,0 +1,61 @@
+```{r simulation, include=FALSE}
+
+set.seed(123)  # Reproduzierbarkeit sicherstellen
+n <- 300  # Anzahl der Personen
+sleep_quality <- rnorm(n, mean = 65, sd = 10)  # Schlafqualität (Mittelwert 65, Standardabweichung 10)
+depression_scores <- 40 - 0.6 * sleep_quality + rnorm(n, mean = 0, sd = 5)  # Depressionswerte, abhängig von der Schlafqualität
+
+# Schritt 2: Modellerstellung
+model <- lm(depression_scores ~ sleep_quality)  # lineares Modell erstellen
+
+# Ausgabe der Modellzusammenfassung
+summary(model)
+
+
+
+```
+
+
+Question
+========
+
+Im Rahmen einer Analyse überprüfen Sie, ob die Voraussetzungen einer einfachen linearen Regression gegeben sind. Sie erhalten folgende Ergebnisse 
+
+```{r output1, echo=FALSE}
+shapiro.test(rstandard(model))
+```
+
+![](images/qqplot.png){width=600px}
+![](images/homoskedastizitaet.png){width=600px}
+
+
+Bitte beurteilen Sie, welche der folgenden Aussagen zutreffen:
+
+
+Answerlist
+----------
+
+* Sowohl der Shapiro-Wilk Test, als auch der QQ Plot deuten darauf hin, dass die Voraussetzung der normalverteilten Risiduen gegeben ist.
+* Der QQ Plot deutet zwar auf eine Normalverteilung der Residuen hin, der Shapiro-Wilk Test hingegen lässt einen gegenteiligen Schluss zu. 
+* Die präsentierten Tests deuten darauf hin, dass die Voraussetzungen für eine einfache lineare Regression erfüllt sind.
+* Die präsentierten Tests deuten darauf hin, dass (mindestens) eine Voraussetzung der einfachen linearen Rgeression nicht erfüllt ist. 
+* Die Homoskedastizität lässt sich mit einem Plot der standardisierten Residuen gegen die standardisierten vorhergesagten Werte kontrollieren. Die rote Linie sollte jedoch möglichst in einem 45 Grad Winkel verlaufen. Die Homoskedastizitätsannahme ist also in diesem Fall nicht gegeben. 
+
+Solution
+========
+
+Answerlist
+----------
+
+* Richtig. QQ-Plot: Punkte sollten möglichst auf einer 45 Grad Diagonalen liegen, Shapiro-Wilk Test: p-Wert sollte > als α = .05 sein.
+* Falsch. 
+* Richtig. 
+* Falsch. 
+* Falsch. Homoskedastozität: Plot der standardisierten Residuen gegen die standardisierten vorhergesagten Werte. Ideal ist eine Punktewolke ohne Systematik (Pattern). Die Linie sollte relativ horizontal verlaufen. Die Homoskedastizität ist also gegeben. 
+
+Meta-information
+================
+exname: Voraussetzungen
+extype: mchoice
+exsolution: 10100
+exshuffle: TRUE

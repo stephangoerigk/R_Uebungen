@@ -1,0 +1,86 @@
+```{r simulation, include=FALSE}
+
+n <- 25  # Anzahl der Personen
+screen_time <- rnorm(n, mean = 5, sd = 1.5)  # Bildschirmzeit in Stunden (Mittelwert 5, Standardabweichung 1.5)
+sleep_quality <- 80 - 2.5 * screen_time + rnorm(n, mean = 0, sd = 5)  # Schlafqualität, abhängig von der Bildschirmzeit
+
+# Schritt 2: Modellerstellung
+model <- lm(sleep_quality ~ screen_time)  # lineares Modell erstellen
+
+# Ausgabe der Modellzusammenfassung
+summary = summary(model)
+
+# Tabelle erstellen
+mean_screen_time <- mean(screen_time)
+sd_screen_time <- sd(screen_time)
+var_screen_time <- var(screen_time)
+
+mean_sleep_quality <- mean(sleep_quality)
+sd_sleep_quality <- sd(sleep_quality)
+var_sleep_quality <- var(sleep_quality)
+
+# Erstellung der Tabelle
+table <- data.frame(
+  Variable = c("Bildschirmzeit", "Schlafqualität"),
+  Mittelwert = c(mean_screen_time, mean_sleep_quality),
+  Standardabweichung = c(sd_screen_time, sd_sleep_quality),
+  Varianz = c(var_screen_time, var_sleep_quality)
+)
+
+
+table[, -1] <- lapply(table[, -1], round, 3)
+
+
+y = summary$coefficients[1,1] + 10 * summary$coefficients[2,1]
+t = 1.714
+standardschaetzfehler = summary$coefficients[2,2] * sqrt(n) * sd(screen_time)
+wurzel = sqrt( (1/n) + ( (10 - mean(screen_time))^2 / (n * var(screen_time))  ) )    
+
+sol = y - t * standardschaetzfehler * wurzel
+
+```
+
+
+Question
+========
+
+In einer psychologischen Studie wird untersucht, wie die tägliche Bildschirmzeit (Zeit, die vor Bildschirmen verbracht wird, z.B. Computer, Smartphones) die Schlafqualität beeinflusst. Es wurden Daten von `r n` Personen gesammelt. Die tägliche Bildschirmzeit wurde in Stunden gemessen, und die Schlafqualität wurde mit einem validierten Fragebogen erfasst, wobei höhere Werte eine bessere Schlafqualität anzeigen.
+
+```{r output, echo=FALSE}
+summary(model)
+```
+
+Berechnen Sie, im welchen symmetrischen Bereich die Schlafqualität einer Person mit einer Screen Time von 10 Stunden mit 95%iger Wahrscheinlichkeit liegt. 
+
+Aus den Daten können Sie folgende statistische Kennzahlen entnehmen: 
+
+```{r table, echo=FALSE}
+print(table)
+```
+
+
+Geben Sie lediglich den unteren Wert dieses Intervalls auf 2 Nachkommastellen gerundet an: 
+
+
+
+
+Solution
+========
+
+Gefragt ist hier nach dem unteren Wert des Konfidenzintervalls für einzelne vorhergesagte Werte: 
+
+$$ \hat{y}_j = \pm t_{1-\frac{\alpha}{2}} \cdot \hat{\sigma}_{(y|x)} \cdot \sqrt{\frac{1}{n} + \frac{(x_j - \bar{x})^2}{n \cdot s_x^2}}$$
+Das 95% KI für den vorhergesagten Y-Wert für x = 10 lautet: 
+
+[`r round(y - t * standardschaetzfehler * wurzel,2) `,`r round(y + t * standardschaetzfehler * wurzel,2) `]
+
+Dieses Ergebnis kann bei Ihnen auf Grund unterschiedlicher Rundung oder abweichender Berechnung von $ \hat{\sigma}_{(y|x)}$ leicht anders ausfallen. 
+
+
+Meta-information
+================
+extype: num
+exsolution: `r round(sol, 2)`
+exname: Y KI
+extol: 0.1
+

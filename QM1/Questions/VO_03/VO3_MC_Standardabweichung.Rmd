@@ -7,9 +7,9 @@ Answerlist
 ----------
 
 * Lässt sich in der Einheit der Variable lesen.
-* Wurzel aus der Spannweite
-* Wird stark von Ausreißern beeinflusst
-* Eignet sich besser als der Quartilabstand für normalverteilte metrische Variablen ohne Ausreißer
+* Wurzel aus der Spannweite.
+* Wird stark von Ausreißern beeinflusst.
+* Eignet sich besser als der Quartilabstand für normalverteilte metrische Variablen ohne Ausreißer.
 * Streuung um den Mittelwert herum.
 
 Solution

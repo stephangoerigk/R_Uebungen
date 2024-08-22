@@ -6,11 +6,11 @@ Die maximale Länge der Whiskers berechnet sich aus
 Answerlist
 ----------
 
-* IQR multipliziert mit 1.5
-* Standardabweichung + 1.5
-* IQR + 1.5
-* IQR + Maximum der Verteilung
-* IQR * 2
+* IQR multipliziert mit 1.5.
+* Standardabweichung + 1.5.
+* IQR + 1.5.
+* IQR + Maximum der Verteilung.
+* IQR * 2.
 
 Solution
 ========

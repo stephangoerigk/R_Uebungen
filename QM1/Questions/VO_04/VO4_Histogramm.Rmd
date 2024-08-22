@@ -6,10 +6,10 @@ Das Histogramm...?
 Answerlist
 ----------
 
-* eignet sich zur Darstellung multivariater Zusammenhänge
-* stellt Verteilung einer Variable dar
-* Hat die Mittelwerte der Merkmalsausprägungen auf der Y-Achse
-* Hat Merkmalsausprägungen auf der X-Achse
+* eignet sich zur Darstellung multivariater Zusammenhänge.
+* stellt Verteilung einer Variable dar.
+* Hat die Mittelwerte der Merkmalsausprägungen auf der Y-Achse.
+* Hat Merkmalsausprägungen auf der X-Achse.
 
 Solution
 ========

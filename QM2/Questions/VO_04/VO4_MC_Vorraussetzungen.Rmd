@@ -1,0 +1,32 @@
+Question
+========
+
+Welche der folgenden Aussagen sind Voraussetzungen für die Anwendung einer einfachen linearen Regression? 
+
+Answerlist
+----------
+
+* Die abhängige Variable (AV) muss intervallskaliert sein.
+* Die unabhängigen Variablen (UVs) müssen ordinalskaliert sein.
+* Die Residuen sollten normalverteilt sein.
+* Es muss ein linearer Zusammenhang zwischen der unabhängigen und der abhängigen Variable bestehen.
+* Die Stichprobengröße muss mindestens 50 Beobachtungen umfassen.
+
+Solution
+========
+
+Answerlist
+----------
+
+* Richtig. Eine wichtige Voraussetzung für die Anwendung der linearen Regression ist, dass die abhängige Variable intervallskaliert ist.
+* Falsch. Die UVs können nominal, ordinal oder intervallskaliert sein.
+* Richtig. Die Normalverteilung der Residuen ist eine Voraussetzung für die Anwendung der linearen Regression.
+* Richtig. Ein linearer Zusammenhang zwischen UV und AV ist für die Anwendung einer einfachen linearen Regression erforderlich.
+* Falsch. Es gibt keine feste Mindeststichprobengröße für die Anwendung der linearen Regression, aber eine größere Stichprobe kann die Robustheit des Modells erhöhen.
+
+Meta-information
+================
+exname: Voraussetzungen_mehrere
+extype: mchoice 
+exsolution: 10110
+exshuffle: TRUE

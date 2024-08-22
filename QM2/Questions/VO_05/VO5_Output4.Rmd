@@ -1,0 +1,39 @@
+Question
+========
+
+Welche Aussagen zu folgendem Output sind korrekt? 
+
+
+![](images/MANOVA_Output_4.png){width=600px}
+
+
+Answerlist
+----------
+
+* Gerechnet wurde eine 2x2 ANOVA.
+* Der Effekt der Therapieform scheint von der Diagnose abhängig zu sein. 
+* In die Analyse sind die Daten von 50 Probanden eingeflossen. (N = 50).
+* In die Analyse sind die Daten von 294 Probanden eingeflossen. (N = 294).
+* In die Analyse sind die Daten von 300 Probanden eingeflossen. (N = 300).
+* Es wurden zwei unterschiedliche Therapieformen untersucht. 
+
+Solution
+========
+
+Answerlist
+----------
+
+* Falsch. Der Output zeigt, dass es sich um eine 2x3 ANOVA handelt, da der Faktor "Diagnose" drei Stufen hat (Df = 2) und der Faktor "Therapieform" zwei Stufen hat (Df = 1).
+* Richtig. Der Interaktionseffekt "Therapieform:Diagnose" ist signifikant (p = 0.024), was darauf hinweist, dass der Effekt der Therapieform von der Diagnose abhängig ist.
+* Falsch. Die Anzahl der Probanden kann durch die Summe der Freiheitsgrade von "Residuals" (294) und der Anzahl der Faktoren bestimmt werden. 
+* Falsch. Die Anzahl der Probanden kann durch die Summe der Freiheitsgrade von "Residuals" (294) und der Anzahl der Faktoren bestimmt werden. 
+* Richtig. Stellt man die Formel zur Berechnung der Freiheitsgrade der Residualvarianz um, so erhält man n = 50. 50 steht für 50 Personen pro "kleinste Gruppe". In diesem Beispiel haben wir 6 Gruppen im Interkationseffekt mit jeweils 50 Probanden. Also insgesamt 300 Probanden. 
+* Richtig. Die Freiheitsgrade des Faktors "Therapieform" betragen 1, was darauf hindeutet, dass zwei unterschiedliche Therapieformen untersucht wurden (Df = Stufen - 1).
+
+
+Meta-information
+================
+exname: Varianzberechnung
+extype: mchoice 
+exsolution: 010011
+exshuffle: TRUE

@@ -6,11 +6,11 @@ Die Hypothese: "Manager haben vor einer Stressschulung schlechtere Stressverarbe
 Answerlist
 ----------
 
-* einseitiger unabhängiger t-Test
-* zweiseitiger unabhängiger t-Test
-* einseitiger abhängiger t-Test
-* Ein-Stichproben t-Test
-* Binomial-Test
+* einseitiger unabhängiger t-Test.
+* zweiseitiger unabhängiger t-Test.
+* einseitiger abhängiger t-Test.
+* Ein-Stichproben t-Test.
+* Binomial-Test.
 
 Solution
 ========

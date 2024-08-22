@@ -1,0 +1,28 @@
+Question
+========
+Welche der folgenden Aussagen über die Interpretation von Interaktionseffekten sind korrekt?
+
+Answerlist
+----------
+* Interaktionseffekte zeigen, dass der Effekt einer unabhängigen Variablen von der Stufe einer anderen unabhängigen Variablen abhängt.
+* Wenn ein Interaktionseffekt signifikant ist, können die Haupteffekte ignoriert werden.
+* Ein signifikanter Interaktionseffekt bedeutet, dass die Wirkung einer unabhängigen Variablen nicht konstant ist.
+* Interaktionseffekte können nur auftreten, wenn beide unabhängigen Variablen zwei oder mehr Stufen haben.
+* Ein signifikanter Interaktionseffekt bedeutet, dass der Einfluss der unabhängigen Variablen stark ist.
+
+Solution
+========
+Answerlist
+----------
+* Richtig. Interaktionseffekte treten auf, wenn der Effekt einer Variable von der Stufe einer anderen abhängt.
+* Falsch. Auch wenn ein Interaktionseffekt signifikant ist, können die Haupteffekte immer noch interpretiert werden.
+* Richtig. Ein signifikanter Interaktionseffekt bedeutet, dass die Wirkung einer Variable von der anderen abhängt und somit nicht konstant ist.
+* Richtig. Interaktionseffekte erfordern mindestens zwei Stufen in jeder unabhängigen Variablen.
+* Falsch. Ein signifikanter Interaktionseffekt bedeutet nicht notwendigerweise, dass der Einfluss stark ist.
+
+Meta-information
+================
+exname: Interpretation_Interaktionseffekte
+extype: mchoice 
+exsolution: 10110
+exshuffle: TRUE

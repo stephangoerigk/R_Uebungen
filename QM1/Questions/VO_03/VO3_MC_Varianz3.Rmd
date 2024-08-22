@@ -6,11 +6,11 @@ Die Varianz ist ein sinnvolles Streuungsmaß für folgende Variablen:
 Answerlist
 ----------
 
-* Körpergröße in Zentimetern
-* Wohnort
-* Bildungsabschluss (z.B. Grundschule, Gymnasium, Universität)
-* Geschlecht (männlich/weiblich)
-* Anzahl erinnerter Items in Gedächtnistest
+* Körpergröße in Zentimetern.
+* Wohnort.
+* Bildungsabschluss (z.B. Grundschule, Gymnasium, Universität).
+* Geschlecht (männlich/weiblich).
+* Anzahl erinnerter Items in Gedächtnistest.
 
 Solution
 ========

@@ -1,0 +1,25 @@
+```{r data generation, echo = FALSE, results = "hide"}
+
+sol = 16.25
+```
+
+Question
+========
+
+Berechnen Sie die Residualvarianz.
+
+![](images/MANOVA_Output_1.png){width=600px}
+
+Geben Sie den Wert auf zwei Nachkommastellen gerundet an. 
+
+Solution
+========
+
+Sehr gut, das ist richtig. 
+
+Meta-information
+================
+extype: num
+exsolution: `r sol`
+exname: Output1
+extol: 0.00

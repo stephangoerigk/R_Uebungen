@@ -6,12 +6,12 @@ Welche Faktoren können für eine Poweranalyse relevant sein?
 Answerlist
 ----------
 
-* Signifikanzniveau
-* Effektstärke
-* Stichprobengröße
-* Statistisches Verfahren
-* Gewünschte Power
-* Richtung des Tests (einseitig vs. zweiseitig)
+* Signifikanzniveau.
+* Effektstärke.
+* Stichprobengröße.
+* Statistisches Verfahren.
+* Gewünschte Power.
+* Richtung des Tests (einseitig vs. zweiseitig).
 
 Solution
 ========

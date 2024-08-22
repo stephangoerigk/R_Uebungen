@@ -6,11 +6,11 @@ Was trifft auf die Entscheidungsregel beim t-Test zu?
 Answerlist
 ----------
 
-* Entscheidungen eines t-Tests sind nie zu 100% sicher
-* t-Wert schneidet gewissen Prozentsatz der Fläche einer t-Verteilung ab
-* Anhand ablesbarer Wahrscheinlichkeit des t-Werts kann entschieden werden, ob Nullhypothese zutrifft
-* Kritischer t-Wert ist durch das Signifikanzniveau und die Stichprobengröße determiniert
-* Der t-Test kann nur für abhängige Stichproben verwendet werden
+* Entscheidungen eines t-Tests sind nie zu 100% sicher.
+* t-Wert schneidet gewissen Prozentsatz der Fläche einer t-Verteilung ab.
+* Anhand ablesbarer Wahrscheinlichkeit des t-Werts kann entschieden werden, ob Nullhypothese zutrifft.
+* Kritischer t-Wert ist durch das Signifikanzniveau und die Stichprobengröße determiniert.
+* Der t-Test kann nur für abhängige Stichproben verwendet werden.
 
 Solution
 ========

@@ -6,11 +6,11 @@ Was ist ein angemessener Schätzwert für π (Auftretenswahrscheinlichkeit in de
 Answerlist
 ----------
 
-* relative Häufigkeit in der Stichprobe
-* Mittelwert in der Stichprobe
-* Varianz in der Stichprobe
-* Median in der Stichprobe
-* Modus in der Stichprobe
+* Relative Häufigkeit in der Stichprobe.
+* Mittelwert in der Stichprobe.
+* Varianz in der Stichprobe.
+* Median in der Stichprobe.
+* Modus in der Stichprobe.
 
 Solution
 ========

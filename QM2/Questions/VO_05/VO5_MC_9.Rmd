@@ -1,0 +1,28 @@
+Question
+========
+Welche Aussagen zum Haupteffekt treffen zu?
+
+Answerlist
+----------
+* Wenn UV1 2-stufig ist, entspricht das Ergebnis von Haupteffekt UV1 einem unabhängigen t-Test.
+* Wenn UV1 ≥3-stufig ist, entspricht das Ergebnis von Haupteffekt UV1 einer einfaktoriellen ANOVA.
+* Wenn UV1 2-stufig ist, kann der Haupteffekt ignoriert werden.
+* Wenn UV1 ≥3-stufig ist, bedeutet das, dass es keine Interaktionseffekte geben kann.
+* Ein signifikanter Haupteffekt sagt uns, dass es einen signifikanten Mittelwertsunterschied zwischen allem Stufen dieses Faktors gibt. 
+
+Solution
+========
+Answerlist
+----------
+* Richtig. Bei einer 2-stufigen UV entspricht der Haupteffekt einem t-Test.
+* Richtig. Bei einer ≥3-stufigen UV entspricht der Haupteffekt einer einfaktoriellen ANOVA.
+* Falsch. Haupteffekte sollten niemals ignoriert werden.
+* Falsch. Die Anzahl der Stufen hat keinen direkten Einfluss auf die Möglichkeit von Interaktionseffekten. Es muss nur mindestens 2 Stufen geben. 
+* Falsch. Ein signifikanter Haupteffekt sagt uns lediglich, dass es zwischen mindestens zwei der Stufen dieses Faktors einen signifikanten Mittelwertsunterschied gibt. Um herauszufinden, zwischen welchen Stufen dieser der Effekt besteht, müssen wir Post Hoc Tests, wie zum Beispiel den Tukey HSD, rechnen. 
+
+Meta-information
+================
+exname: Interpretation_Haupteffekte
+extype: mchoice 
+exsolution: 11000
+exshuffle: TRUE
