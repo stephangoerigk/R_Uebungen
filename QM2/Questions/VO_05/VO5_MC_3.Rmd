@@ -1,0 +1,26 @@
+Question
+========
+Was wird mit einem Interaktionseffekt in der mehrfaktoriellen ANOVA beschrieben?
+
+Answerlist
+----------
+* Der kombinierte Einfluss von zwei oder mehr unabhängigen Variablen auf eine abhängige Variable.
+* Der Einfluss einer unabhängigen Variablen auf eine abhängige Variable.
+* Die additive Wirkung mehrerer unabhängiger Variablen.
+* Eine Situation, in der der Effekt einer unabhängigen Variablen von der Ausprägung einer anderen unabhängigen Variablen abhängt.
+
+Solution
+========
+Answerlist
+----------
+* Richtig. Ein Interaktionseffekt beschreibt den kombinierten Einfluss von unabhängigen Variablen auf eine abhängige Variable.
+* Falsch. Dies beschreibt einen Haupteffekt.
+* Falsch. Interaktionseffekte sind nicht nur additiv, sie zeigen die Wechselwirkung zwischen Variablen.
+* Richtig. Ein Interaktionseffekt tritt auf, wenn der Effekt einer unabhängigen Variablen von der Stufe einer anderen abhängt.
+
+Meta-information
+================
+exname: Interaktionseffekte_Mehrfaktorielle_ANOVA
+extype: mchoice 
+exsolution: 1001
+exshuffle: TRUE

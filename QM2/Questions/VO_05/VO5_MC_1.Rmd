@@ -1,0 +1,26 @@
+Question
+========
+Was beschreibt eine mehrfaktorielle ANOVA?
+
+Answerlist
+----------
+* Den Einfluss einer unabhängigen Variablen auf eine abhängige Variable.
+* Den Einfluss mehrerer unabhängiger Variablen auf eine abhängige Variable.
+* Den Einfluss einer abhängigen Variable auf mehrere unabhängige Variablen.
+* Die Interaktion zwischen mehreren abhängigen Variablen.
+
+Solution
+========
+Answerlist
+----------
+* Falsch. Das beschreibt eine einfaktorielle ANOVA.
+* Richtig. Die mehrfaktorielle ANOVA untersucht den Einfluss mehrerer unabhängiger Variablen auf eine abhängige Variable.
+* Falsch. Dies ist keine Definition der ANOVA.
+* Falsch. Die Interaktion bezieht sich auf unabhängige Variablen und nicht auf abhängige Variablen.
+
+Meta-information
+================
+exname: Grundlagen_Mehrfaktorielle_ANOVA
+extype: mchoice 
+exsolution: 01000
+exshuffle: TRUE

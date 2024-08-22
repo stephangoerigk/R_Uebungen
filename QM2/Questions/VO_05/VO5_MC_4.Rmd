@@ -1,0 +1,28 @@
+Question
+========
+Wie viele Signifikanztests sind bei einer 2x3 ANOVA notwendig?
+
+Answerlist
+----------
+* Einer, für den Gesamteffekt.
+* Zwei, jeweils einer für jeden Haupteffekt.
+* Drei, zwei für die Haupteffekte und einer für den Interaktionseffekt.
+* Vier, jeweils einer für jeden Haupteffekt und zwei für die Interaktionen.
+* Fünf, drei für die Haupteffekte und zwei für die Interaktionen.
+
+Solution
+========
+Answerlist
+----------
+* Falsch. Es werden mehr Tests benötigt, um alle Effekte zu überprüfen.
+* Falsch. Neben den Haupteffekten muss auch der Interaktionseffekt getestet werden.
+* Richtig. Bei einer 2x3 ANOVA werden zwei Haupteffekte und ein Interaktionseffekt getestet.
+* Falsch. Es werden nur drei Signifikanztests benötigt.
+* Falsch. Es gibt bei einer 2x3 ANOVA keine zusätzlichen Tests für mehrere Interaktionen.
+
+Meta-information
+================
+exname: Anzahl_Signifikanztests_Mehrfaktorielle_ANOVA
+extype: mchoice 
+exsolution: 00100
+exshuffle: TRUE

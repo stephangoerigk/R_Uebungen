@@ -1,0 +1,28 @@
+Question
+========
+Welche Aussagen zur Zerlegung der Gesamtvarianz der mehrfaktoriellen ANOVA sind korrekt? 
+
+Answerlist
+----------
+* Die Gesamtvarianz wird in "systematische Varianz" und "Residualvarianz" zerlegt.
+* Die systematische Varianz besteht aus 2 Teilen.
+* Die Residualvarianz wird über die "Varianz zwischen" geschätzt.
+* Im Nenner des F-Bruchs aller drei Effekte steht die Residualvarianz.
+* Die Residualvarianz kann auch "Restvarianz" oder "unsystematische Varianz" bezeichnet werden. 
+
+Solution
+========
+Answerlist
+----------
+* Richtig. Die Gesamtvarianz in der Mehrfaktoriellen ANOVA wird in systematische Varianz (die durch die unabhängigen Variablen erklärt wird) und Residualvarianz (die nicht durch das Modell erklärt wird) zerlegt.
+* Falsch. Die systematische Varianz besteht aus drei Teilen: der Varianz, die durch den ersten Faktor (UV1) erklärt wird, der Varianz, die durch den zweiten Faktor (UV2) erklärt wird, und der Interaktionsvarianz (UV1xUV2).
+* Falsch. Die Residualvarianz wird durch die "Varianz innerhalb" (also innerhalb der Gruppen) geschätzt, nicht durch die "Varianz zwischen" den Gruppen.
+* Richtig. Im Nenner des F-Bruchs für jeden Effekt (Haupteffekte und Interaktionseffekte) steht die Residualvarianz, da diese als Maß für die nicht erklärte Varianz dient.
+* Richtig. Die Residualvarianz wird auch als "Restvarianz" oder "unsystematische Varianz" bezeichnet, da sie die Varianz beschreibt, die nicht durch die systematischen Effekte (Faktoren und deren Interaktionen) erklärt wird.
+
+Meta-information
+================
+exname: Zerlegung_Gesamtvarianz
+extype: mchoice 
+exsolution: 10011
+exshuffle: TRUE

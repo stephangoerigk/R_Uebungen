@@ -1,0 +1,28 @@
+Question
+========
+Was versteht man unter einem Faktor, einer Stufe und einem Kriterium in der Mehrfaktoriellen ANOVA?
+
+Answerlist
+----------
+* Ein Faktor ist eine abhängige Variable.
+* Eine Stufe ist eine Ausprägung eines Faktors.
+* Ein Kriterium ist eine unabhängige Variable.
+* Ein Faktor ist eine unabhängige Variable.
+* Das Kriterium ist die abhängige Variable, auf die der Einfluss der Faktoren untersucht wird.
+
+Solution
+========
+Answerlist
+----------
+* Falsch. Ein Faktor ist eine unabhängige Variable.
+* Richtig. Eine Stufe ist eine Ausprägung eines Faktors.
+* Falsch. Das Kriterium ist die abhängige Variable.
+* Richtig. Ein Faktor ist eine unabhängige Variable.
+* Richtig. Das Kriterium ist die abhängige Variable.
+
+Meta-information
+================
+exname: Begriffe_Mehrfaktorielle_ANOVA
+extype: mchoice 
+exsolution: 01011
+exshuffle: TRUE

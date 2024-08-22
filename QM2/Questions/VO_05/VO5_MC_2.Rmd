@@ -1,0 +1,26 @@
+Question
+========
+Welche der folgenden Aussagen über Haupteffekte in der mehrfaktoriellen ANOVA sind korrekt?
+
+Answerlist
+----------
+* Ein Haupteffekt beschreibt den Einfluss einer unabhängigen Variable, ohne die Wirkung anderer unabhängiger Variablen zu berücksichtigen.
+* Ein Haupteffekt tritt nur auf, wenn es keine Interaktionseffekte gibt.
+* Haupteffekte können auch bei vorhandenen Interaktionseffekten interpretiert werden.
+* Ein Haupteffekt beschreibt die Wechselwirkung zwischen zwei unabhängigen Variablen.
+
+Solution
+========
+Answerlist
+----------
+* Richtig. Ein Haupteffekt beschreibt den Einfluss einer unabhängigen Variablen unabhängig von anderen Variablen.
+* Falsch. Haupteffekte können auch auftreten, wenn Interaktionseffekte vorhanden sind.
+* Richtig. Haupteffekte können auch interpretiert werden, wenn Interaktionseffekte vorhanden sind, jedoch muss dies vorsichtig geschehen.
+* Falsch. Die Wechselwirkung zwischen zwei Variablen beschreibt einen Interaktionseffekt.
+
+Meta-information
+================
+exname: Haupteffekte_Mehrfaktorielle_ANOVA
+extype: mchoice 
+exsolution: 1010
+exshuffle: TRUE

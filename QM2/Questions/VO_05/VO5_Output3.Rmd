@@ -1,0 +1,25 @@
+```{r data generation, echo = FALSE, results = "hide"}
+
+sol = 2008.50
+```
+
+Question
+========
+
+Berechnen Sie die Effektvarianz des Interaktionseffekts.
+
+![](images/MANOVA_Output_3.png){width=600px}
+
+Geben Sie den Wert auf zwei Nachkommastellen gerundet an. 
+
+Solution
+========
+
+Sehr gut, das ist richtig. 
+
+Meta-information
+================
+extype: num
+exsolution: `r sol`
+exname: Output3
+extol: 0.00

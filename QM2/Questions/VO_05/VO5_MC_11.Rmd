@@ -1,0 +1,28 @@
+Question
+========
+Wie formuliert man Hypothesen für die Mehrfaktorielle ANOVA? 
+
+Answerlist
+----------
+* Die Nullhypothese eines Haupteffekts besagt, dass alle Populationsmittelwerte der Stufen eines Faktors gleich sind.
+* Die Alternativhypothese eines Haupteffekts besagt, dass mindestens einer der Populationsmittelwerte der Stufen eines Faktors unterschiedlich ist.
+* Bei der Interaktionseffekt-Hypothese wird angenommen, dass die Wirkung einer unabhängigen Variablen von der Stufe einer anderen abhängt.
+* Die Nullhypothese für Interaktionseffekte besagt, dass es keine Interaktionseffekte gibt.
+* Die Alternativhypothese besagt, dass alle Populationsmittelwerte der Stufen eines Faktors gleich sind.
+
+Solution
+========
+Answerlist
+----------
+* Richtig. Dies ist die Standardformulierung der Nullhypothese für Haupteffekte.
+* Richtig. Dies ist die Standardformulierung der Alternativhypothese für Haupteffekte.
+* Richtig. Dies ist die Annahme hinter der Interaktionseffekt-Hypothese.
+* Richtig. Die Nullhypothese für Interaktionseffekte besagt, dass es keine Interaktionen gibt.
+* Falsch. Die Alternativhypothese besagt, dass mindestens einer der Mittelwerte unterschiedlich ist.
+
+Meta-information
+================
+exname: Hypothesen_Mehrfaktorielle_ANOVA
+extype: mchoice 
+exsolution: 11110
+exshuffle: TRUE

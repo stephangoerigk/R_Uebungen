@@ -1,0 +1,28 @@
+Question
+========
+In welchem Fall wäre es am sinnvollsten, eine mehrfaktorielle ANOVA anstelle einer einfaktoriellen ANOVA zu verwenden?
+
+Answerlist
+----------
+* Wenn es mehr als eine unabhängige Variable gibt, die Einfluss auf die abhängige Variable hat.
+* Wenn die unabhängige Variable mehr als zwei Stufen hat.
+* Wenn die abhängige Variable mehr als zwei Kategorien hat.
+* Wenn man den Interaktionseffekt zwischen zwei oder mehr unabhängigen Variablen untersuchen möchte.
+* Wenn die abhängige Variable dichotom ist.
+
+Solution
+========
+Answerlist
+----------
+* Richtig. Eine mehrfaktorielle ANOVA wird verwendet, wenn mehr als eine unabhängige Variable untersucht wird.
+* Falsch. Auch eine einfaktorielle ANOVA kann mehr als zwei Stufen in der unabhängigen Variablen haben.
+* Falsch. Die Anzahl der Kategorien der abhängigen Variablen ist hier irrelevant.
+* Richtig. Eine mehrfaktorielle ANOVA ist notwendig, wenn Interaktionseffekte untersucht werden sollen.
+* Falsch. Eine dichotome abhängige Variable würde eine andere Analyseform wie die logistische Regression erfordern.
+
+Meta-information
+================
+exname: Wahl_der_ANOVA
+extype: mchoice 
+exsolution: 10010
+exshuffle: TRUE

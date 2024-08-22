@@ -343,26 +343,27 @@ exams2learnr("Questions/VO_05/VO5_MC_1.Rmd", allow_retry = TRUE)
 exams2learnr("Questions/VO_05/VO5_MC_1.Rmd", allow_retry = TRUE)
 ```
 
-```{r VO5_MC_12, message = FALSE, warning=FALSE}
-exams2learnr("Questions/VO_05/VO5_MC_1.Rmd", allow_retry = TRUE)
-```
-
-```{r VO5_MC_13, message = FALSE, warning=FALSE}
-exams2learnr("Questions/VO_05/VO5_MC_1.Rmd", allow_retry = TRUE)
-```
-
-```{r VO5_MC_14, message = FALSE, warning=FALSE}
-exams2learnr("Questions/VO_05/VO5_MC_1.Rmd", allow_retry = TRUE)
-```
-
-```{r VO5_MC_15, message = FALSE, warning=FALSE}
-exams2learnr("Questions/VO_05/VO5_MC_1.Rmd", allow_retry = TRUE)
-```
 
 ### Übungsaufgaben zur Interpretation von R - Outputs
 
 ```{r VO5_Output1, message = FALSE, warning=FALSE}
 exams2learnr("Questions/VO_05/VO5_Output1.Rmd", allow_retry = TRUE)
+```
+
+```{r VO5_Output2, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_05/VO5_Output2.Rmd", allow_retry = TRUE)
+```
+
+```{r VO5_Output3, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_05/VO5_Output3.Rmd", allow_retry = TRUE)
+```
+
+```{r VO5_Output4, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_05/VO5_Output4.Rmd", allow_retry = TRUE)
+```
+
+```{r VO5_Output5, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_05/VO5_Output5.Rmd", allow_retry = TRUE)
 ```
 
 

@@ -1,0 +1,25 @@
+```{r data generation, echo = FALSE, results = "hide"}
+
+sol = 256.00
+```
+
+Question
+========
+
+Berechnen Sie die Quadratsumme des Hauoteffekts "Therapieform"
+
+![](images/MANOVA_Output_2.png){width=600px}
+
+Geben Sie den Wert auf zwei Nachkommastellen gerundet an. 
+
+Solution
+========
+
+Sehr gut, das ist richtig. 
+
+Meta-information
+================
+extype: num
+exsolution: `r sol`
+exname: Output2
+extol: 0.00
