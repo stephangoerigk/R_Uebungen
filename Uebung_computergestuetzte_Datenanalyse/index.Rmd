@@ -54,30 +54,32 @@ library(moments)
 library(magrittr)
 library(kableExtra)
 library(ggplot2)
+library(truncnorm)
+library(faux)
+library(sjPlot)
 ```
 
 ## Herzlich Willkommen!
 
 Diese interaktive Plattform wurde speziell für den Kurs **R - Übung zur computergestützten Datenanalyse** entwickelt, um Ihnen eine praktische und anschauliche Lernumgebung zu bieten. Mit dieser Oberfläche haben Sie die Möglichkeit, die im Seminar erworbenen Fähigkeiten unmittelbar anzuwenden und zu vertiefen.
 
-Auf dieser Plattform finden Sie eine Vielzahl von Beispielen und Übungen, die darauf ausgelegt sind, Ihr Verständnis von R zu verbessern. Jede Übung ist darauf ausgerichtet, spezifische Konzepte und Techniken zu vermitteln, sodass Sie Ihr Wissen erweitern und festigen können.
+Auf dieser Plattform finden Sie eine Vielzahl von Beispielen und Übungen, die darauf ausgelegt sind, Ihr Verständnis von R und RStudio zu verbessern. Jede Übung ist darauf ausgerichtet, spezifische Konzepte und Techniken zu vermitteln, sodass Sie Ihr Wissen erweitern und festigen können.
 
 Beginnen Sie nun, indem Sie eine der verfügbaren Übungen auswählen. Die interaktive Oberfläche ermöglicht es Ihnen, sofort Feedback zu Ihren Lösungen zu erhalten und bei Bedarf Änderungen vorzunehmen. Nutzen Sie diese Gelegenheit, um in Ihrem eigenen Tempo zu üben und zu lernen.
 
-**Bitte beachten Sie, dass die learnR Oberfläche kontinuierlich erweitert wird, sodass Ihnen immer neue Lerninhalte zur Verfügung stehen.**
 
-Viel Erfolg und Spaß beim Entdecken der Möglichkeiten mit R! 
+Viel Erfolg und Spaß beim Entdecken der Möglichkeiten mit R und RStudio! 
 
-Stephan Goerigk und Team
+Stephan Goerigk und Janika Saretzki
 
 
-## Einheit 1
+## Grundlegende Arithmetik und Datenformate 
 
 ### Grundlegende Arithmetik
 
 Willkommen im Abschnitt **Grundlegende Arithmetik in R und RStudio**! 
 
-In diesem Tel der learnR Oberfläche haben Sie die Möglichkeit, grundlegende arithmetische Operationen wie Addition, Subtraktion, Multiplikation und Division in R praktisch anzuwenden. 
+In diesem Tel der learnR Oberfläche haben Sie die Möglichkeit, grundlegende arithmetische Operationen wie Addition, Subtraktion, Multiplikation und Division in RStudio praktisch anzuwenden. 
 
 Anmerkung: Falls Sie die Lösung der Befehle aufrufen wollen, können Sie auf `Solution` klicken. Sie finden dabei unter Umständen auch Anmerkungen zu den spezifischen Herausforderungen einzelner Aufgaben.
 
@@ -123,7 +125,7 @@ Anmerkung: Falls Sie die Lösung der Befehle aufrufen wollen, können Sie auf `S
 
 <hr> <!-- Horizontale Trennlinie -->
 
-**Aufgabe 4:** Berechnen Sie den Mittelwert der Messwerte 11, 18, 32, 10, 33, 18, 25, 69, 39, 12. Verwenden Sie dafür keine fertigen Funktionen, sondern nur Grundrechenarten. 
+**Aufgabe 4:** Berechnen Sie den Mittelwert der Messwerte 11, 18, 32, 10, 33, 18, 25, 69, 39 und 12. Verwenden Sie dafür keine fertigen Funktionen, sondern nur Grundrechenarten. 
 Führen Sie die Berechnung mit einem Befehl (ohne Zwischenergebnisse) durch.
 ```{r Arithmetik4, exercise=TRUE}
 
@@ -137,7 +139,7 @@ Führen Sie die Berechnung mit einem Befehl (ohne Zwischenergebnisse) durch.
 
 <hr> <!-- Horizontale Trennlinie -->
 
-**Aufgabe 5:** Berechnen Sie das Ergebnis der Division 1 $\div$ 7 und runden Sie das Ergebnis auf zwei Nachkommastellen.
+**Aufgabe 5:** Berechnen Sie das Ergebnis der Division $1 $\div$ 7$ und runden Sie das Ergebnis auf zwei Nachkommastellen.
 
 <font color='darkred'>Hinweis: Zum Runden von Zahlen (sowie Ergebnissen einfacher arithmetischer Operationen) können Sie die Funktion "round()" verwenden.</font>
 
@@ -148,6 +150,8 @@ Führen Sie die Berechnung mit einem Befehl (ohne Zwischenergebnisse) durch.
 ```{r Arithmetik5-solution}
   
 round(1/7, digits = 2)
+
+# Alternative: round(1/7, 2)
 
 ```
 
@@ -263,7 +267,6 @@ In diesem Bereich werden Ihnen Übungen zu den grundlegenden Datenstrukturen beg
 ```{r Datenformate1-solution}
 
 a = 150
-
 # Alternative: a <- 150
 
 ```
@@ -295,7 +298,7 @@ b
 
 c = 50
 d = 3
-e = (c+d) / d
+e = (c+d)/d
 e
 
 ```
@@ -366,21 +369,22 @@ Freunde
 
 <hr> <!-- Horizontale Trennlinie -->
 
-**Aufgabe 8:** Erstellen Sie einen Vektor `j`, der die Werte der ganzen Zahlen von 1 bis 7 enthält. Erstellen Sie anschließend eine Matrix `k`, welche die Werte des Vektors `j` in 3 Zeilen und 6 Spalten enthält. Wählen Sie zuletzt die dritte Zeile der Matrix aus und weisen Sie diese dem Vektor `l` zu.
+**Aufgabe 8:** Erstellen Sie einen Vektor `j`, der die Werte der ganzen Zahlen von 1 bis 12 enthält. Erstellen Sie anschließend eine Matrix `k`, welche die Werte des Vektors `j` in 2 Zeilen und 6 Spalten enthält und lassen sich diesen ausgeben. Wählen Sie zuletzt die dritte Spalte der Matrix aus und weisen Sie diese dem Vektor `l` zu.
 ```{r Datenformate8, exercise=TRUE}
 
 ```
 
 ```{r Datenformate8-solution}
 
-j = c(1, 2, 3, 4, 5, 6, 7)
-j
+j = c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12)
+# Alternative: j = c(1:12)
 
-# Alternative: j = c(1:7)
+k = matrix(j, nrow = 2, ncol = 6)
+k
+# Alternative: k = matrix(j, 2, 6)
 
-k = matrix(j, nrow = 3, ncol = 6)
-
-l = k[3, ]
+k[,3]
+l = k[,3]
 
 ```
 
@@ -388,7 +392,7 @@ l = k[3, ]
 
 **Aufgabe 9:** Bitte erstellen Sie den Vektor `m`, der die Werte 15, 30, NA, 40 und 80 enthält. Anschließend berechnen Sie den Mittelwert von m mithilfe der Funktion `mean`. 
 
-<font color='darkred'>Hinweis: Bitte sehen Sie in der Hilfe zum Befehl nach, wie Sie fehlende Werte bei der Berechnung ignorieren können, und führen Sie die Berechnung mit dem entsprechenden optionalen Argument durch.</font>
+<font color='darkred'>Hinweis: Bitte überprüfen Sie in der Hilfe der Funktion, wie Sie fehlende Werte bei der Berechnung ignorieren können, und führen Sie die Berechnung unter Berücksichtigung des entsprechenden Arguments durch.</font>
 ```{r Datenformate9, exercise=TRUE}
 
 ```
@@ -397,6 +401,10 @@ l = k[3, ]
 
 m = c(15, 30, NA, 40, 80)
 mean(m) # Ergebnis ist NA
+
+?mean
+# na.rm-Argument:"a logical evaluating to TRUE or FALSE indicating whether NA values should be stripped before the computation proceeds."
+
 mean(m, na.rm=TRUE) # Fehlende Werte (NAs) werden ignoriert
 
 ```
@@ -485,11 +493,11 @@ mean(sales_data$Verkaufszahlen[sales_data$Produkt == "Produkt A" & sales_data$Re
 ```
 
 
-## Einheit 2
+## Grundlagen der Datenanalyse
 
-#### Grundlagen der Datenanalyse in RStudio
+#### Grundlagen der Datenanalyse 
 
-Willkommen im Abschnitt **Grundlagen der Datenanalyse in RStudio**! 
+Willkommen im Abschnitt **Grundlagen der Datenanalyse in R und RStudio**! 
 
 In diesem Kapitel der learnR Oberfläche werden Sie durch praktische Übungen in die Methoden der deskriptiven Statistik und der Analyse von Fragebogendaten in RStudio eingeführt. 
 
@@ -533,7 +541,6 @@ str(iris)
 **Aufgabe 2:** Berechnen Sie die deskriptiven Statistiken der Sepal-Länge (Variable "Sepal.Length") der drei verschiedenen Arten von Irisblumen: `setosa`, `versicolor` und `virginica`.
 
 <font color='darkred'>Hinweis: Verwenden Sie die Funktion **summary()**, um die deskriptiven Statistiken zu berechnen. Nutzen Sie die Indizierung, um die Daten nach der Faktorvariablen "Species" zu gruppieren.</font>
-
 ```{r Datenanalyse2, exercise=TRUE}
 
 ```
@@ -548,8 +555,7 @@ summary(iris$Sepal.Length[iris$Species == "virginica"])
 
 <hr> <!-- Horizontale Trennlinie -->
 
-**Aufgabe 3:** Berechnen Sie die Anzahl der Pflanzen jeder Spezies im Datensatz. Verwenden Sie dafür eine Funktion, welche die Häufigkeiten der verschiedenen Werte einer Faktorvariable ermittelt.
-
+**Aufgabe 3:** Ermitteln Sie die Anzahl der Pflanzen jeder Spezies im Datensatz. Verwenden Sie dafür eine Funktion, welche die Häufigkeiten der verschiedenen Werte einer Faktorvariable ermittelt.
 ```{r Datenanalyse3, exercise=TRUE}
 
 ```
@@ -562,15 +568,14 @@ table(iris$Species)
 
 <hr> <!-- Horizontale Trennlinie -->
 
-**Aufgabe 4:** Erstellen Sie eine neue Variable `Sepal.Ratio` im Iris-Datensatz, die das Verhältnis von Sepal-Länge zu Sepal-Breife darstellt. Berechnen Sie anschließend den Mittelwert und die Standardabweichung (auf zwei Nachkommastellen gerundet) dieser neuen Variable für den gesamten Datensatz.
-
+**Aufgabe 4:** Erstellen Sie eine neue Variable `Sepal.Ratio` im Iris-Datensatz, die das Verhältnis von Sepal-Länge zu -Breite darstellt. Berechnen Sie anschließend den Mittelwert und die Standardabweichung (auf zwei Nachkommastellen gerundet) dieser neuen Variable für den gesamten Datensatz.
 ```{r Datenanalyse4, exercise=TRUE}
 
 ```
 
 ```{r Datenanalyse4-solution}
 
-iris$Sepal.Ratio = iris$Sepal.Length / iris$Sepal.Width
+iris$Sepal.Ratio = iris$Sepal.Length/iris$Sepal.Width
 
 round(mean(iris$Sepal.Ratio), 2)
 round(sd(iris$Sepal.Ratio), 2)
@@ -581,7 +586,7 @@ round(sd(iris$Sepal.Ratio), 2)
 
 **Aufgabe 5:** Berechnen Sie die Spannweite (engl. Range) der Petal-Länge für jede der drei Iris-Arten. 
 
-<font color='darkred'>Hinweis: Die range()-Funktion in R ist darauf ausgelegt, die beiden Extremwerte (Minimum und Maximum) eines numerischen Vektors zurückzugeben. Um die **tatsächliche Spannweite zu berechnen, welche als Differenz zwischen Maximum und Minimum** definiert ist, können Sie die Funktion **diff()** mit der range()-Funktion kombinieren.</font>
+<font color='darkred'>Hinweis: Die "range()"-Funktion in RStudio ist darauf ausgelegt, die beiden Extremwerte (Minimum und Maximum) eines numerischen Vektors zurückzugeben. Um die **tatsächliche Spannweite zu berechnen, welche als Differenz zwischen Maximum und Minimum** definiert ist, können Sie die Funktion **diff()** mit der "range()"-Funktion kombinieren.</font>
 
 ```{r Datenanalyse5, exercise=TRUE}
 
@@ -597,27 +602,26 @@ diff(range(iris$Petal.Length[iris$Species == "virginica"]))
 
 <hr> <!-- Horizontale Trennlinie -->
 
-#### Teil 2: Projektarbeit mit einem externen Datensatz
+#### Teil 2: Projektarbeit externem Datensatz
 
-Der zweite Teil des Kapitels führt Sie in ein umfangreicheres Projekt ein, bei dem Sie mit einem speziell für diesen Zweck bereitgestellten, simulierten Datensatz arbeiten. Wie bereits in den Seminareinheiten, wird dieser Teil der learnR-Oberfläche darauf abzielen, den typischen Forschungsprozess nachzubilden, den Forschende durchlaufen, wenn sie zum ersten Mal neue Daten analysieren.
+Im zweiten Teil des Kapitels werden Sie in ein umfangreicheres Projekt eingeführt, bei dem Sie mit einem speziell dafür erstellten, simulierten Datensatz arbeiten. Ähnlich wie in den Seminareinheiten zielt dieser Abschnitt der learnR-Oberfläche darauf ab, den typischen Forschungsprozess nachzubilden, den Forschende durchlaufen, wenn sie erstmals auf neue Daten stoßen.
 
 **Die Aufgaben zur Projektarbeit werden als Multiple-Choice-Fragen gestellt. Unter der ausführlichen Beschreibung des Projekts steht Ihnen ein R-Source-Feld zur Verfügung, in dem sämtliche Aufgaben berechnet werden können, sodass Sie die darunterstehenden MC-Aufgaben beantworten können. Die im Source-Feld bereits vorhandene Code-Zeile ermöglicht es Ihnen, den Datensatz zu laden. Behalten Sie diese bitte bei und beginnen Sie mit Ihren Berechnungen in der Zeile darunter. Das Source-Feld kann beliebig erweitert werden. Drücken Sie dazu einfach die Eingabetaste, um die Source-Box zu vergrößern.**
 
 <hr> <!-- Horizontale Trennlinie -->
 
-#### Smartphone und Prokrastination
+#### Bipolare Störungen und Monitoring von Frühwarnzeichen
 
 ##### Hintergrund
 
-**Prokrastination** ist ein verbreitetes Phänomen, das sich durch das Aufschieben von Aufgaben und das Hinauszögern von Handlungen auszeichnet. Menschen, die unter Prokrastination leiden, verschieben regelmäßig wichtige oder unangenehme Aufgaben auf später, obwohl sie sich bewusst sind, dass dies negative Auswirkungen haben kann. Die Gründe für Prokrastination können vielfältig sein, einschließlich Angst vor Versagen, Perfektionismus oder mangelnder Motivation. Die Bewältigung von Prokrastination erfordert oft eine bewusste Auseinandersetzung mit den zugrunde liegenden Ursachen, das Setzen von klaren Zielen und das Entwickeln effektiver Zeitmanagement-Strategien. **Smartphone-Sucht** und Prokrastination können eng miteinander verbunden sein. Die ständige Verfügbarkeit von Smartphones und die Fülle an Ablenkungen, wie soziale Medien, Spiele und Internetzugang, können dazu führen, dass Menschen ihre Zeit unproduktiv verbringen und wichtige Aufgaben aufschieben. Der ständige Reiz des Smartphones kann zu einer Sucht führen, bei der die Betroffenen immer wieder zum Handy greifen, um kurzfristige Befriedigung zu erlangen, anstatt sich den eigentlichen Aufgaben zu widmen. Die ständige Ablenkung durch das Smartphone kann die Konzentration beeinträchtigen und die Prokrastination verstärken, da die Betroffenen Schwierigkeiten haben, sich auf eine Sache zu fokussieren und ihre Zeit effektiv zu nutzen.
+**Bipolare Störungen**, auch als manisch-depressive Störungen bekannt, sind eine komplexe und schwerwiegende psychische Erkrankung, die das Leben der Betroffenen erheblich beeinflusst. Diese Störung zeichnet sich durch extreme Stimmungsschwankungen aus, die zwischen manischen Episoden mit übersteigertem Energielevel, impulsivem Verhalten und intensivem Glücksgefühl und depressiven Episoden mit tiefer Traurigkeit, Antriebslosigkeit und Hoffnungslosigkeit wechseln können. Die Identifikation von Frühwarnzeichen spielt eine entscheidende Rolle in der Behandlung von bipolaren Störungen. Frühwarnzeichen sind subtile Veränderungen im Verhalten, in der Stimmung oder in den Denkmustern, die auf eine bevorstehende Episode hinweisen können. Durch das frühzeitige Erkennen solcher Anzeichen können Behandlungsstrategien rechtzeitig angepasst und Eskalationen verhindert werden. Dies ermöglicht eine bessere Stabilisierung der Stimmung, eine Reduzierung der Symptome und eine verbesserte Lebensqualität für die Betroffenen.
+In einer neuen Studie wird die Wirksamkeit eines Trainings zur Identifikation von Frühwarnzeichen zur Behandlung von bipolaren Störungen untersucht. Das Ziel der Studie ist es, herauszufinden, ob ein spezifisches Training, das darauf abzielt, Patienten mit bipolarer Störung die Fähigkeit zur Früherkennung von Symptomen zu vermitteln, positive Auswirkungen auf den Verlauf der Erkrankung hat. Dabei sollen insbesondere auch die Angehörigen der Patient:innen in das Monitoring miteinbezogen werden. Teilnehmer:innen werden in zwei Gruppen aufgeteilt: Eine Gruppe, die das spezielle Frühwarnzeichen-Training erhält, und eine Kontrollgruppe, die lediglich an einer offenen Gesprächsgruppe teilnimmt. Die Ergebnisse dieser Studie sollen Erkenntnisse darüber liefern, wie die gezielte Schulung von Patient:innen zur Identifikation von Frühwarnzeichen den Krankheitsverlauf verbessern und mögliche Rückfälle verhindern kann. Dies könnte einen bedeutenden Fortschritt in der Behandlung von bipolaren Störungen darstellen und die individuelle Selbstmanagement-Fähigkeit der Betroffenen stärken.
 
-In einer neuen Studie soll die Wirksamkeit eines speziellen Trainings gegen Smartphone-Sucht untersucht werden, mit dem zusätzlichen Ziel, den Einfluss auf die Prokrastination zu untersuchen. Teilnehmer werden zufällig in zwei Gruppen eingeteilt: eine Gruppe, die das Training gegen Smartphone-Sucht erhält, und eine Kontrollgruppe, die keine spezifische Intervention erhält. Das Training umfasst verschiedene Module, die darauf abzielen, ein bewusstes und kontrolliertes Smartphone-Nutzungsverhalten zu entwickeln, Strategien zur Reduzierung der Nutzung zu erlernen und alternative Aktivitäten zu fördern. Die Ergebnisse dieser Studie sollen Erkenntnisse darüber liefern, ob ein gezieltes Training gegen Smartphone-Sucht nicht nur die Abhängigkeit reduzieren, sondern auch positive Auswirkungen auf die Prokrastination der Teilnehmer haben kann.
 
 <hr> <!-- Horizontale Trennlinie -->
 
 ##### Abhängige Variable (AV)
-
-General Procrastination Scale (GPS). Die General Procrastination Scale wurde von Lodha et al. (2016) entwickelt. Mit insgesamt 23 Items misst die Skala Prokrastination in vier Bereichen: akademische, berufliche, medizinische und bürgerschaftliche Pflichten. Alle Items müssen auf einer 5-Punkte-Likert-Skala gerated werden, die von 1 bis 5 reicht. Eine Umkodierung ist teilweise erforderlich.
+Young Mania Rating Scale (YMRS); Für jedes Item ist der Summenwert von täglich erfolgten Messungen über den Zeitraum von einem Monat (anschließend an das Training) enthalten.
 
 **Hinweis: Den vollständigen Fragebogen inkl. Auswertungsanleitung finden Sie auf studynet im Ordner "Fragebögen".**
 
@@ -628,345 +632,182 @@ Aktiv manipuliert: Training (nein vs. ja)
 
 <hr> <!-- Horizontale Trennlinie -->
 
-##### Zusatzkonstrukt: Smartphone Addiction Scale (SAS)
+##### Zusatzkonstrukt: Interpersonal Support Evaluation List (ISEL; Kurzversion, 12 Items)
+Eine 12-Item Skala zur Wahrnehmung sozialer Unterstützung. Diese Maßnahme ist eine verkürzte Version des ursprünglichen ISEL (40 Items; Cohen & Hoberman, 1983). Dieser Fragebogen enthält drei verschiedene Subskalen, die drei Dimensionen der wahrgenommenen sozialen Unterstützung messen sollen. 
 
-Die Smartphone Addiction Scale (SAS) ist ein Messinstrument, das entwickelt wurde, um den Grad der Smartphone-Sucht bei Individuen zu erfassen. Die Skala basiert auf einem Fragebogen, der aus verschiedenen Items besteht, die das Verhalten und die Einstellungen der Betroffenen in Bezug auf ihre Smartphone-Nutzung bewerten. Die SAS misst auf 33 Items verschiedene Aspekte der Sucht, darunter die Auswirkungen der Smartphone-Nutzung auf das tägliche Leben, Entzugserscheinungen, Toleranzentwicklung und Kontrollverlust. Die Bewertung erfolgt anhand einer Likert-Skala, bei der die Teilnehmer ihre Zustimmung zu den Aussagen angeben. Die Smartphone Addiction Scale hat sich als zuverlässiges Instrument erwiesen, um das Ausmaß der Smartphone-Sucht zu messen und ermöglicht es Forschern und Klinikern, das Phänomen genauer zu erforschen und geeignete Interventionen zu entwickeln.
+Diese Dimensionen sind: 
+1.) Appraisal Support (*Bewertungsunterstützung*; Unterstützung bei der Einschätzung von Situationen)
+2.) Belonging Support (*Zugehörigkeitsunterstützung*; Gefühl der Zugehörigkeit in einer Gemeinschaft)
+3.) Tangible Support (*Konkrete Unterstützung*; Greifbare, praktische Hilfe)
 
-**Hinweis: Auch die SAS finden Sie auf studynet im Ordner "Fragebögen".**
+Jede Dimension wird anhand von 4 Items auf einer 4-Punkte-Skala gemessen, die von "Definitiv falsch" bis "Definitiv wahr" reicht. Eine Umkodierung ist teilweise erforderlich.
 
-<hr> <!-- Horizontale Trennlinie -->
-
-##### Variablen zur Charakterisierung der Stichprobe: 
-
-- Alter (in Jahren)
-- Geschlecht (weiblich vs. männlich)
-- Bildung (in Jahren)
-- Beziehungsstatus
-- Psych. Vorerkrankungen (ICD-10 Diagnosen)
-- Anzahl von Krankheitsepisoden
-- Ersterkrankungsalter
+**Hinweis: Auch die ISEL finden Sie auf studynet im Ordner "Fragebögen".**
 
 <hr> <!-- Horizontale Trennlinie -->
 
-```{r Simulation SG, include=FALSE}
-# 
-# library(truncnorm)
-# library(faux)
-# library(sjPlot)
-# 
-# set.seed(444)
-# 
-# N = 128
-# 
-# df = data.frame(ID = as.character(1:N),
-#                 groups = sample(0:1, N, replace=TRUE, prob=c(.5, .5))
-# )
-# 
-# df$groups = factor(df$groups, levels = 0:1, labels = c("No Training", "Training"))
-# 
-# df$Gender <- sample(0:1, N, replace=TRUE, prob=c(.46, .54))
-# df$Gender = factor(df$Gender, levels = 0:1, labels = c("male", "female"))
-# 
-# df$Relationship_status = sample(0:1, N, replace=TRUE, prob=c(.39, .61))
-# df$Relationship_status = factor(df$Relationship_status, levels = 0:1, labels = c("single", "relationship"))
-# 
-# Age <- rnorm(N, 39, 15)
-# Age[Age < 18] = Age[Age < 18] + 5
-# Age[Age < 18] = 18
-# Age <- round(Age)
-# df$Age = Age
-# 
-# df$Employed <- sample(0:1, N, replace=TRUE, prob=c(.4, .6))
-# df$Employed = factor(df$Employed, levels = 0:1, labels = c("no", "yes"))
-# 
-# df$Comorbidities = sample(0:2, N, replace=TRUE, prob=c(.8, .3, 0.1))
-# df$Comorbidities = factor(df$Comorbidities, levels = 0:2, labels = c("none", "F32", "F60"))
-# 
-# df$Conc_med <- sample(0:1, N, replace=TRUE, prob=c(.1, .9))
-# df$Conc_med = factor(df$Conc_med, levels = 0:1, labels = c("no", "yes"))
-# 
-# t0_GPS_items = paste0("t0_GPS_", 1:23)
-# t1_GPS_items = paste0("t1_GPS_", 1:23)
-# t0_SAS_items = paste0("t0_SAS_", 1:33)
-# t1_SAS_items = paste0("t1_SAS_", 1:33)
-# 
-# for(ch in t0_GPS_items){df[[ch]] = NA}
-# for(ch in t1_GPS_items){df[[ch]] = NA}
-# for(ch in t0_SAS_items){df[[ch]] = NA}
-# for(ch in t1_SAS_items){df[[ch]] = NA}
-# 
-# for(ch in t0_SAS_items){
-#   df[[ch]]= round(rtruncnorm(n=N, a=1, b=6, mean=3.5, sd=1))
-# }
-# 
-# for(ch in t1_SAS_items){
-#   df[[ch]][df$groups == "Training"] = df[[gsub("t1", "t0", ch)]][df$groups == "Training"] - round(rnorm(length(df[[gsub("t1", "t0", ch)]][df$groups == "Training"]), mean = 0.75, sd = 1))
-#   df[[ch]][df$groups == "Training" & df[[ch]] < 0] = 0
-#   
-#   df[[ch]][df$groups == "No Training"] = df[[gsub("t1", "t0", ch)]][df$groups == "No Training"] - round(rnorm(length(df[[gsub("t1", "t0", ch)]][df$groups == "No Training"]), mean = 0.4, sd = 1.5))
-#   df[[ch]][df$groups == "No Training" & df[[ch]] < 0] = 0
-# }
-# 
-# df$t0_SAS_sum = rowSums(df[, grep("t0_SAS", names(df))])
-# df$t1_SAS_sum = rowSums(df[, grep("t1_SAS", names(df))])
-# df$change = df$t0_SAS_sum - df$t1_SAS_sum
-# 
-# rev = c(5, 8, 12, 16, 18, 21, 23)
-# 
-# for(ch in paste0("t0_GPS_", 1:23)){
-#   df[[ch]] = round(rnorm_pre(x = df$t0_SAS_sum, mu = sample(rnorm(10, 3, 1), size = 1), sd = 1.5, r = 0.65, empirical = T))
-#   df[[ch]][df[[ch]] > 5] = 5
-#   df[[ch]][df[[ch]] < 1] = 1
-# }
-# 
-# for(ch in paste0("t0_GPS_", c(5, 8, 12, 16, 18, 21, 23))){
-#    df[[ch]] = round(rnorm_pre(x = df$t0_SAS_sum, mu = sample(rnorm(10, 1.5, 1), size = 1), sd = 1.5, r = -0.65, empirical = T))
-#    df[[ch]][df[[ch]] > 5] = 5
-#    df[[ch]][df[[ch]] < 1] = 1
-#  }
-# 
-# for(ch in paste0("t1_GPS_", 1:23)){
-#   df[[ch]][df$groups == "Training"] = df[[gsub("t1", "t0", ch)]][df$groups == "Training"] - round(rnorm_pre(x = df$change[df$groups == "Training"], mu =1.2, sd = 1.3, r = 0.6, empirical = T))
-#   df[[ch]][df$groups == "No Training"] = df[[gsub("t1", "t0", ch)]][df$groups == "No Training"]  - round(rnorm_pre(x = df$change[df$groups == "No Training"], mu = 0.3, sd = 2, r = 0, empirical = T))
-#   df[[ch]][df[[ch]] > 5] = 5
-#   df[[ch]][df[[ch]] < 1] = 1
-# }
-# 
-# for(ch in paste0("t0_GPS_", c(5, 8, 12, 16, 18, 21, 23))){
-#   df[[ch]] = dplyr::recode(df[[ch]], "5" = 1, "4" = 2, "3" = 3, "2" = 4, "1" = 5)
-# }
-# for(ch in paste0("t1_GPS_", c(5, 8, 12, 16, 18, 21, 23))){
-#   df[[ch]] = dplyr::recode(df[[ch]], "5" = 1, "4" = 2, "3" = 3, "2" = 4, "1" = 5)
-# }
-# 
-# df$t0_GPS_sum = rowSums(df[, grep("t0_GPS", names(df))])
-# df$t1_GPS_sum = rowSums(df[, grep("t1_GPS", names(df))])
-# 
-# df$Previous_Ep = round(rnorm_pre(x = df$change, mu = 3.5, sd = 1, r = -0.2, empirical = T))
-# df$Education_years = round(rnorm_pre(x = df$change, mu = 12, sd = 2, r = -0.5, empirical = T))
-# df$Onset_age = round(rnorm_pre(x = df$change, mu = 20, sd = 5, r = -0.4, empirical = T))
-# df$Onset_age[df$Onset_age > df$Age] = df$Age[df$Onset_age > df$Age] - 5
-# 
-# png(file="/Users/jani/Desktop/CFH/Sommersemester 2024 Einführung in R/Rep/Uebung_computergestuetzte_Datenanalyse/smartphone.png", width = 8, height =4, units = "in", res = 300)
-# 
-# cowplot::plot_grid(ggplot(df, aes(y = change, x = groups)) +
-#                      geom_boxplot() +
-#                      labs(x = "", y = "Improvement Addiction") +
-#                      theme_bw(),
-#                    ggplot(df, aes(y = change, x = t0_GPS_sum - t1_GPS_sum, colour = groups)) +
-#                      geom_point() +
-#                      geom_smooth(method = "lm") +
-#                      labs(x = "Improvement Procrastination", y = "Improvement Addiction", colour = "") +
-#                      theme_bw() +
-#                      theme(legend.position = "top"))
-# dev.off()
-# 
-# df = BBmisc::dropNamed(df, drop = c("t0_GPS_sum", "t1_GPS_sum", "change", "t0_SAS_sum", "t1_SAS_sum"))
-# 
-# write.csv(df, "/Users/jani/Desktop/CFH/Sommersemester 2024 Einführung in R/Rep/Uebung_computergestuetzte_Datenanalyse/smartphone.csv")
+##### Variablen zur Charakterisierung der Stichprobe 
+*	Alter (in Jahren)
+*	Geschlecht (weiblich vs. männlich)
+*	Bildung (in Jahren)
+*	Beziehungsstatus
+*	Psych. Vorerkrankungen (ICD-10 Diagnosen)
+*	Anzahl von Krankheitsepisoden
+*	Ersterkrankungsalter
 
-```
+##### Kalkulation der Stichprobengröße (Rekrutierungsplanung)
+Eine Poweranalyse für den Gruppenunterschied zwischen den beiden Trainings ergab unter Annahme eines Signifikanzniveaus von $\alpha$=.05, einer mittleren Effekstärke von Cohen’s *d*=0.5 und einer Power (1-$\beta$) von 0.80 eine Stichprobengröße von *N* = 128 Proband:innen.
 
-```{r Simulation JS, include = FALSE}
+##### Randomisierung
+Proband:innen wurden unter Verwendung eines Randomisierungsalgorithmus mittels für Alter und Geschlecht stratifizierter Blockrandomisierung mit zufälligen Blockgrößen zufällig den 2 Bedingungen Training vs. kein Traning zugeteilt.
 
-set.seed(444)
+<hr> <!-- Horizontale Trennlinie -->
+
+```{r Simulation, include=FALSE}
+
+set.seed(123)
 
 N = 128
 
-df = data.frame(
-  ID = 1:N,
-  groups = sample(c("No Training", "Training"), N, replace = TRUE, prob = c(0.5, 0.5)),
-  Gender = sample(c("male", "female"), N, replace = TRUE, prob = c(0.46, 0.54)),
-  Relationship_status = sample(c("single", "relationship"), N, replace = TRUE, prob = c(0.39, 0.61)),
-  Age = pmax(round(rnorm(N, 39, 15)), 18),
-  Employed = sample(c("no", "yes"), N, replace = TRUE, prob = c(0.4, 0.6)),
-  Comorbidities = sample(c("none", "F32", "F60"), N, replace = TRUE, prob = c(0.8, 0.15, 0.05)),
-  Conc_med = sample(c("no", "yes"), N, replace = TRUE, prob = c(0.1, 0.9))
+df = data.frame(ID = as.character(1:N),
+                Groups = sample(0:1, N, replace=TRUE, prob=c(.5, .5))
 )
 
-gps_items = paste0("GPS_", 1:23)
-sas_items = paste0("SAS_", 1:33)
-df[paste0("t0_", gps_items)] = round(rnorm(N * 23, 3, 1.5), 0)
-df[paste0("t1_", gps_items)] = round(rnorm(N * 23, 3, 1.5), 0)
-df[paste0("t0_", sas_items)] = round(rnorm(N * 33, 3, 1.5), 0)
-df[paste0("t1_", sas_items)] = round(rnorm(N * 33, 3, 1.5), 0)
+df$Groups = factor(df$Groups, levels = 0:1, labels = c("noEW", "EW"))
 
-recode_items = c(5, 8, 12, 16, 18, 21, 23)
-for(ch in paste0("t0_GPS_", recode_items)){
-  df[[ch]] = dplyr::recode(df[[ch]], `5` = 1, `4` = 2, `3` = 3, `2` = 4, `1` = 5)
+df$Gender <- sample(0:1, N, replace=TRUE, prob=c(.46, .54))
+df$Gender = factor(df$Gender, levels = 0:1, labels = c("male", "female"))
+
+df$Relationship_status = sample(0:1, N, replace=TRUE, prob=c(.39, .61))
+df$Relationship_status = factor(df$Relationship_status, levels = 0:1, labels = c("single", "relationship"))
+
+Age <- rnorm(N, 39, 15)
+Age[Age < 18] = Age[Age < 18] + 5
+Age[Age < 18] = 18
+Age <- round(Age)
+df$Age = Age
+
+df$Employed <- sample(0:1, N, replace=TRUE, prob=c(.4, .6))
+df$Employed = factor(df$Employed, levels = 0:1, labels = c("no", "yes"))
+
+df$Comorbidities = sample(0:4, N, replace=TRUE, prob=c(.8, .1, 0.06, 0.03, 0.01))
+df$Comorbidities = factor(df$Comorbidities, levels = 0:4, labels = c("none", "F32", "F40", "F45", "F60"))
+
+df$Conc_med <- sample(0:1, N, replace=TRUE, prob=c(.2, .8))
+df$Conc_med = factor(df$Conc_med, levels = 0:1, labels = c("no", "yes"))
+
+df$Family_history_mood_disorders <- sample(0:1, N, replace=TRUE, prob=c(.5, .5))
+df$Family_history_mood_disorders <- factor(df$Family_history_mood_disorders, levels = 0:1, labels = c("no", "yes"))
+
+df$Previous_suicide_attempt <- sample(0:1, N, replace=TRUE, prob=c(.95, .05))
+df$Previous_suicide_attempt <- factor(df$Previous_suicide_attempt, levels = 0:1, labels = c("no", "yes"))
+
+YMRS_items = paste0("YMRS_", 1:11)
+
+for(ch in YMRS_items){df[[ch]] = NA}
+
+for(ch in paste0("YMRS_", c(1:4, 7, 10:11))){
+  df[[ch]][df$Groups == "EW"] = round(rtruncnorm(n=sum(df$Groups == "EW"), a=0, b=4, mean=2.1, sd=1))
+  df[[ch]][df$Groups == "noEW"] = round(rtruncnorm(n=sum(df$Groups == "noEW"), a=0, b=4, mean=2.5, sd=1))
 }
-for(ch in paste0("t1_GPS_", recode_items)){
-  df[[ch]] = dplyr::recode(df[[ch]], `5` = 1, `4` = 2, `3` = 3, `2` = 4, `1` = 5)
+for(ch in paste0("YMRS_", c(5:6, 8:9))){
+  df[[ch]][df$Groups == "EW"] = round(rtruncnorm(n=sum(df$Groups == "EW"), a=0, b=9, mean=3.3, sd=2))
+  df[[ch]][df$Groups == "noEW"] = round(rtruncnorm(n=sum(df$Groups == "noEW"), a=0, b=9, mean=4, sd=2))
+  df[[ch]][df[[ch]] == 1] = 0
+  df[[ch]][df[[ch]] == 3] = 2
+  df[[ch]][df[[ch]] == 5] = 4
+  df[[ch]][df[[ch]] == 7] = 6
+  df[[ch]][df[[ch]] == 9] = 8
 }
 
-df$t0_GPS_sum = rowSums(df[paste0("t0_", gps_items)])
-df$t1_GPS_sum = rowSums(df[paste0("t1_", gps_items)])
-df$t0_SAS_sum = rowSums(df[paste0("t0_", sas_items)])
-df$t1_SAS_sum = rowSums(df[paste0("t1_", sas_items)])
+df$YMRS_sum = rowSums(df[, grep("YM", names(df))])
 
-training_effect_mean = 15
-training_effect_sd = 5
+df$Previous_Ep = round(rnorm_pre(x = df$YMRS_sum, mu = 3.5, sd = 1, r = 0.4, empirical = T))
+df$Education_years = round(rnorm_pre(x = df$YMRS_sum, mu = 12, sd = 2, r = 0.4, empirical = T))
+df$Onset_age = round(rnorm_pre(x = df$YMRS_sum, mu = 20, sd = 5, r = -0.4, empirical = T))
+df$Onset_age[df$Onset_age > df$Age] = df$Age[df$Onset_age > df$Age] - 5
 
-no_training_effect_mean = 10
-no_training_effect_sd = 7
+ISEL_items = paste0("ISEL_", 1:12)
 
-df$t1_SAS_sum[df$groups == "No Training"] <- df$t0_SAS_sum[df$groups == "No Training"] + rnorm(sum(df$groups == "No Training"), training_effect_mean, training_effect_sd)
-df$t1_SAS_sum[df$groups == "Training"] <- df$t0_SAS_sum[df$groups == "Training"] + rnorm(sum(df$groups == "Training"), no_training_effect_mean, no_training_effect_sd)
+df$ISEL_3[df$Groups == "EW"]  = round(rnorm_pre(x = df$YMRS_sum[df$Groups == "EW"], mu = 2.5, sd = 1, r = -0.95, empirical = T))
+df$ISEL_3[df$Groups == "noEW"]  = round(rnorm_pre(x = df$YMRS_sum[df$Groups == "noEW"], mu = 2.5, sd = 1, r = -0.2, empirical = T))
 
-df$t1_GPS_sum[df$groups == "No Training"] <- df$t0_GPS_sum[df$groups == "No Training"] + rnorm(sum(df$groups == "No Training"), training_effect_mean, training_effect_sd)
-df$t1_GPS_sum[df$groups == "Training"] <- df$t0_GPS_sum[df$groups == "Training"] + rnorm(sum(df$groups == "Training"), no_training_effect_mean, no_training_effect_sd)
+rev = c(1, 2, 7, 8, 11, 12)
 
-library(ggplot2)
-p1 <- ggplot(df, aes(x = groups, y = t1_SAS_sum - t0_SAS_sum)) +
-  geom_boxplot() +
-  ylab("Improvement Addiction") +
-  theme_minimal()
+for(ch in paste0("ISEL_", c(4:6, 9:10))){
+  df[[ch]][df$Groups == "EW"] = round(rnorm_pre(x = df$ISEL_3[df$Groups == "EW"], mu = 2.5, sd = 1, r = 0.6, empirical = T))
+  df[[ch]][df$Groups == "noEW"] = round(rnorm_pre(x = df$ISEL_3[df$Groups == "noEW"], mu = 2.5, sd = 1, r = 0.6, empirical = T))
+}
+for(ch in paste0("ISEL_", c(1, 2, 7, 8, 11, 12))){
+  df[[ch]][df$Groups == "EW"] = round(rnorm_pre(x = df$ISEL_3[df$Groups == "EW"], mu = 1.5, sd = 1, r = -0.6, empirical = T))
+  df[[ch]][df$Groups == "noEW"] = round(rnorm_pre(x = df$ISEL_3[df$Groups == "noEW"], mu = 1.5, sd = 1, r = -0.6, empirical = T))
+}
 
-p2 <- ggplot(df, aes(x = t1_GPS_sum - t0_GPS_sum, y = t1_SAS_sum - t0_SAS_sum, color = groups)) +
-  geom_point() +
-  geom_smooth(method = "lm", se = TRUE) +
-  xlab("Improvement Procrastination") +
-  ylab("Improvement Addiction") +
-  theme_minimal()
+df[,grep("ISE", names(df))][df[,grep("ISE", names(df))] <= 0] = 1
 
-library(gridExtra)
-grid.arrange(p1, p2, ncol = 2)
+df = BBmisc::dropNamed(df, drop = "YMRS_sum")
 
-write.csv(df, "/Users/jani/Desktop/CFH/Sommersemester 2024 Einführung in R/Rep/Uebung_computergestuetzte_Datenanalyse/laste.csv")
+df$ISEL_1[df$ISEL_1 > 4] = 4
+df$ISEL_2[df$ISEL_2 > 4] = 4
+df$ISEL_3[df$ISEL_3 > 4] = 4
+df$ISEL_4[df$ISEL_4 > 4] = 4
+df$ISEL_5[df$ISEL_5 > 4] = 4
+df$ISEL_6[df$ISEL_6 > 4] = 4
+df$ISEL_7[df$ISEL_7 > 4] = 4
+df$ISEL_8[df$ISEL_8 > 4] = 4
+df$ISEL_9[df$ISEL_9 > 4] = 4
+df$ISEL_10[df$ISEL_10 > 4] = 4
+df$ISEL_11[df$ISEL_11 > 4] = 4
+df$ISEL_12[df$ISEL_12 > 4] = 4
 
+# for(ch in paste0("ISEL_", c(1, 2, 7, 8, 11, 12))){
+#   df[[ch]] = dplyr::recode(df[[ch]], "4" = 0, "3" = 2, "2" = 1, "1" = 4)
+# }
 
+# df$ISEL_sum = rowSums(df[, grep("ISE", names(df))])
+
+# summary(lm(YMRS_sum ~ Groups * ISEL_sum, data = df))
+# 
+# png(file="/Users/jani/Desktop/CFH/Sommersemester 2024 Einführung in R/Rep/Uebung_computergestuetzte_Datenanalyse/bipolar/bipolar2.png", width = 8, height =4, units = "in", res = 300)
+# cowplot::plot_grid(ggplot(df, aes(y = YMRS_sum, x = Groups, fill = Groups)) +
+#                      stat_summary(geom = "bar", position = position_dodge2(.95)) +
+#                      labs(fill = "", y = "YMRS", x = "") +
+#                      theme_bw(),
+#                    ggplot(df, aes(x = ISEL_sum, y = YMRS_sum, colour = Groups)) +
+#                      geom_point() +
+#                      geom_smooth(method = "lm") +
+#                      labs(x = "Soz. Support", y= "YMRS", colour = "") +
+#                      theme_bw())
+# dev.off()
+# 
+# df = BBmisc::dropNamed(df, drop = c("YMRS_sum", "ISEL_sum"))
+
+write.csv(df, "/Users/jani/Desktop/CFH/Sommersemester 2024 Einführung in R/Rep/Uebung_computergestuetzte_Datenanalyse/bipolar/bipolar.csv")
 
 ```
 
 ```{r Projekt1, exercise=TRUE}
-smartphone = read.csv("https://raw.githubusercontent.com/janikasaretzki/CFH_Dat/main/laste.csv")
+
+bipolar = read.csv("https://raw.githubusercontent.com/janikasaretzki/CFH_Dat/main/bipolar.csv")
+
 
 ```
 
 ```{r Projekt1-solution}
 
-smartphone = read.csv("https://raw.githubusercontent.com/janikasaretzki/CFH_Dat/main/laste.csv")
+bipolar = read.csv("https://raw.githubusercontent.com/janikasaretzki/CFH_Dat/main/bipolar.csv")
 
 # Aufgabe 1
-dim(smartphone) # Datensatz mit 128 Zeilen (ProbandInnen) und 125 Spalten (Variablen)
-nrow(smartphone) # Alternative Funktion, falls Unsicherheiten darüber bestehen, welche Zahl des dim()-Ergebnisses sich auf die Anzahl der Zeilen (engl. rows) bezieht
-ncol(smartphone) # Alternative Funktion, falls Unsicherheiten darüber bestehen, welche Zahl des dim()-Ergebnisses sich auf die Anzahl der Spalten (engl. columns) bezieht
-table(smartphone$groups) # No Training: 53 ProbandInnen, Training: 75 ProbandInnen
-table(smartphone$Gender[smartphone$groups == "No Training"]) # No Training: 30 weibliche, 23 männliche ProbandInnen
-table(smartphone$Gender[smartphone$groups == "Training"]) # Training: 41 weibliche, 34 männliche ProbandInnen
+dim(bipolar) # Datensatz mit 128 Zeilen (ProbandInnen) und 37 Spalten (Variablen)
+nrow(bipolar) # Alternative Funktion, falls Unsicherheiten darüber bestehen, welche Zahl des "dim()"-Ergebnisses sich auf die Anzahl der Zeilen (engl. rows) bezieht
+ncol(bipolar) # Alternative Funktion, falls Unsicherheiten darüber bestehen, welche Zahl des "dim()"-Ergebnisses sich auf die Anzahl der Spalten (engl. columns) bezieht
 
-# Aufgabe 2
-range(smartphone$Age) # Altersrange: 18-73
-round((sum(smartphone$Age > 65) / length(smartphone$Age)) * 100, 2) # Prozentuale Anzahl der ProbandInnen über 65 Jahre: 3.91%
-round(mean(smartphone$Age[smartphone$groups == "No Training"]), 2) # No Training (Age): M = 38.17
-round(sd(smartphone$Age[smartphone$groups == "No Training"]), 2) # Not Training (Age): SD = 13.35
-round(mean(smartphone$Age[smartphone$groups == "Training"]), 2) # Training (Age): M = 41.53
-round(sd(smartphone$Age[smartphone$groups == "Training"]), 2) # Training (Age): SD = 14.30
+names(bipolar) # Übersicht der Variablen-Namen, die im bipolar Datensatz enthalten sind
 
-# Aufgabe 3 
-# Auswertung GPS 
+table(bipolar$Groups) # Training: 68 Proband:innen, No Training: 60 Proband:innen
 
-library(dplyr) # Paket benötigt für recode()-Funktion
-
-# Recodierung Messzeitpunkt t0
-smartphone$t0_GPS_5 = recode(smartphone$t0_GPS_5, "1" = 5, "2" = 4, "3" = 3, "4" = 2, "5" = 1)
-smartphone$t0_GPS_8 = recode(smartphone$t0_GPS_8, "1" = 5, "2" = 4, "3" = 3, "4" = 2, "5" = 1)
-smartphone$t0_GPS_12 = recode(smartphone$t0_GPS_12, "1" = 5, "2" = 4, "3" = 3, "4" = 2, "5" = 1)
-smartphone$t0_GPS_16 = recode(smartphone$t0_GPS_16, "1" = 5, "2" = 4, "3" = 3, "4" = 2, "5" = 1)
-smartphone$t0_GPS_18 = recode(smartphone$t0_GPS_18, "1" = 5, "2" = 4, "3" = 3, "4" = 2, "5" = 1)
-smartphone$t0_GPS_21 = recode(smartphone$t0_GPS_21, "1" = 5, "2" = 4, "3" = 3, "4" = 2, "5" = 1)
-smartphone$t0_GPS_23 = recode(smartphone$t0_GPS_23, "1" = 5, "2" = 4, "3" = 3, "4" = 2, "5" = 1)
-
-# Recodierung Messzeitpunkt t1
-smartphone$t1_GPS_5 = recode(smartphone$t1_GPS_5, "1" = 5, "2" = 4, "3" = 3, "4" = 2, "5" = 1)
-smartphone$t1_GPS_8 = recode(smartphone$t1_GPS_8, "1" = 5, "2" = 4, "3" = 3, "4" = 2, "5" = 1)
-smartphone$t1_GPS_12 = recode(smartphone$t1_GPS_12, "1" = 5, "2" = 4, "3" = 3, "4" = 2, "5" = 1)
-smartphone$t1_GPS_16 = recode(smartphone$t1_GPS_16, "1" = 5, "2" = 4, "3" = 3, "4" = 2, "5" = 1)
-smartphone$t1_GPS_18 = recode(smartphone$t1_GPS_18, "1" = 5, "2" = 4, "3" = 3, "4" = 2, "5" = 1)
-smartphone$t1_GPS_21 = recode(smartphone$t1_GPS_21, "1" = 5, "2" = 4, "3" = 3, "4" = 2, "5" = 1)
-smartphone$t1_GPS_23 = recode(smartphone$t1_GPS_23, "1" = 5, "2" = 4, "3" = 3, "4" = 2, "5" = 1)
-
-library(tidyverse) # Paket benötigt für select()-Funktion
-
-smartphone$t0_GPS_sum = rowSums(select(smartphone, starts_with("t0_GPS")))
-smartphone$t1_GPS_sum = rowSums(select(smartphone, starts_with("t1_GPS")))
-
-names(smartphone) 
-
-# Deskriptivstatistiken t0 (differenziert nach Gruppen)
-summary(smartphone$t0_GPS_sum[smartphone$groups == "No Training"])
-round(sd(smartphone$t0_GPS_sum[smartphone$groups == "No Training"]), 2)
-
-summary(smartphone$t0_GPS_sum[smartphone$groups == "Training"])
-round(sd(smartphone$t0_GPS_sum[smartphone$groups == "Training"]), 2)
-
-# Deskriptivstatistiken t1 (differenziert nach Gruppen)
-summary(smartphone$t1_GPS_sum[smartphone$groups == "No Training"])
-round(sd(smartphone$t1_GPS_sum[smartphone$groups == "No Training"]), 2)
-
-summary(smartphone$t1_GPS_sum[smartphone$groups == "Training"])
-round(sd(smartphone$t1_GPS_sum[smartphone$groups == "Training"]), 2)
-
-# Differenzwert GPS
-smartphone$GPS_diff = smartphone$t0_GPS_sum - smartphone$t1_GPS_sum
-names(smartphone)
-
-# Deskriptivstatistiken Differenzwert (differenziert nach Gruppen)
-summary(smartphone$GPS_diff[smartphone$groups == "No Training"])
-round(sd(smartphone$GPS_diff[smartphone$groups == "No Training"]), 2)
-
-summary(smartphone$GPS_diff[smartphone$groups == "Training"])
-round(sd(smartphone$GPS_diff[smartphone$groups == "Training"]), 2)
-
-# Aufgabe 4
-# Auswertung SAS
-smartphone$t0_SAS_sum = rowSums(select(smartphone, starts_with("t0_SAS")))
-smartphone$t1_SAS_sum = rowSums(select(smartphone, starts_with("t1_SAS")))
-
-names(smartphone) 
-
-# Deskriptivstatistiken t0 (differenziert nach Gruppen)
-summary(smartphone$t0_SAS_sum[smartphone$groups == "No Training"])
-round(sd(smartphone$t0_SAS_sum[smartphone$groups == "No Training"]), 2)
-
-summary(smartphone$t0_SAS_sum[smartphone$groups == "Training"])
-round(sd(smartphone$t0_SAS_sum[smartphone$groups == "Training"]), 2)
-
-# Deskriptivstatistiken t1 (differenziert nach Gruppen)
-summary(smartphone$t1_SAS_sum[smartphone$groups == "No Training"])
-round(sd(smartphone$t1_SAS_sum[smartphone$groups == "No Training"]), 2)
-
-summary(smartphone$t1_SAS_sum[smartphone$groups == "Training"])
-round(sd(smartphone$t1_SAS_sum[smartphone$groups == "Training"]), 2)
-
-# Differenzwert SAS
-smartphone$SAS_diff = smartphone$t0_SAS_sum - smartphone$t1_SAS_sum
-names(smartphone)
-
-# Deskriptivstatistiken Differenzwert (differenziert nach Gruppen)
-summary(smartphone$SAS_diff[smartphone$groups == "No Training"])
-round(sd(smartphone$SAS_diff[smartphone$groups == "No Training"]), 2)
-
-summary(smartphone$SAS_diff[smartphone$groups == "Training"])
-round(sd(smartphone$SAS_diff[smartphone$groups == "Training"]), 2)
-
-##
-
-# Berechnung der Summenwerte für GPS und SAS, falls noch nicht vorhanden
-smartphone$t0_GPS_sum <- rowSums(select(smartphone, starts_with("t0_GPS")), na.rm = TRUE)
-smartphone$t1_GPS_sum <- rowSums(select(smartphone, starts_with("t1_GPS")), na.rm = TRUE)
-smartphone$GPS_diff <- smartphone$t0_GPS_sum - smartphone$t1_GPS_sum
-
-smartphone$t0_SAS_sum <- rowSums(select(smartphone, starts_with("t0_SAS")), na.rm = TRUE)
-smartphone$t1_SAS_sum <- rowSums(select(smartphone, starts_with("t1_SAS")), na.rm = TRUE)
-smartphone$SAS_diff <- smartphone$t0_SAS_sum - smartphone$t1_SAS_sum
-
-# Überprüfen, ob die neuen Spalten tatsächlich im Datensatz sind
-names(smartphone)
-
-# Speichern des gesamten Datensatzes mit allen Spalten
-write.csv(smartphone, "simulated_smartphone_evaluated.csv", row.names = FALSE)
-
+table(bipolar$Gender[bipolar$Groups == "EW"]) # Training: 32 weibliche, 36 männliche Proband:innen
+table(bipolar$Gender[bipolar$Groups == "noEW"]) # No Training: 37 weibliche, 23 männliche Proband:innen
 
 
 ```
@@ -1030,7 +871,7 @@ smartphone = read.csv("https://raw.githubusercontent.com/janikasaretzki/CFH_Dat/
 
 library(ggplot2)
 
-ggplot(data = smartphone, aes(y = t0_SAS_sum - t1_SAS_sum, x = t0_GPS_sum - t1_GPS_sum, color = groups)) +
+ggplot(data = smartphone, aes(y = t0_SAS_sum - t1_SAS_sum, x = t0_GPS_sum - t1_GPS_sum, color = Groups)) +
   geom_point(size = 1) +
   geom_smooth(method = "lm") + 
   labs(x = "Improvement Procrastination", y = "Improvement Addiction", color = "") +
