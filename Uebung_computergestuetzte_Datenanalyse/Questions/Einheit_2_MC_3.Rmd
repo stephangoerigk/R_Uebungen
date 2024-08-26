@@ -19,14 +19,14 @@ Solution
 Answerlist
 ----------
 * Richtig.
-* Falsch. 
-* Falsch. 
-* Falsch.
+* Falsch. Abkürzungen (YMRS, ISEL) müssen entweder in den Anmerkungen erklärt oder direkt in der Tabelle ausgeschrieben werden. Außerdem muss neben dem Mittelwert immer die Standardabweichung angegeben werden.
+* Falsch. Mittelwerte werden durch die Abkürzung *M*, Standardabweichungen durch *SD* abgekürzt. Nach der APA enthalten Tabellen zudem nie vertikale Linien. Die Werte wurden zudem falsch zugeordnet.
+* Falsch. Nach den APA-Richtlinien werden Mittelwerte und Standardabweichungen auf zwei Dezimalstellen gerundet.
 
 
 Meta-information
 ================
-exname: Einheit_2_MC_1
+exname: Einheit_2_MC_3
 extype: mchoice 
 exsolution: 1000
 exshuffle: TRUE

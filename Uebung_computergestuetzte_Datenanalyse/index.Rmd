@@ -495,8 +495,6 @@ mean(sales_data$Verkaufszahlen[sales_data$Produkt == "Produkt A" & sales_data$Re
 
 ## Grundlagen der Datenanalyse
 
-#### Grundlagen der Datenanalyse 
-
 Willkommen im Abschnitt **Grundlagen der Datenanalyse in R und RStudio**! 
 
 In diesem Kapitel der learnR Oberfläche werden Sie durch praktische Übungen in die Methoden der deskriptiven Statistik und der Analyse von Fragebogendaten in RStudio eingeführt. 
@@ -615,7 +613,7 @@ Im zweiten Teil des Kapitels werden Sie in ein umfangreicheres Projekt eingefüh
 ##### Hintergrund
 
 **Bipolare Störungen**, auch als manisch-depressive Störungen bekannt, sind eine komplexe und schwerwiegende psychische Erkrankung, die das Leben der Betroffenen erheblich beeinflusst. Diese Störung zeichnet sich durch extreme Stimmungsschwankungen aus, die zwischen manischen Episoden mit übersteigertem Energielevel, impulsivem Verhalten und intensivem Glücksgefühl und depressiven Episoden mit tiefer Traurigkeit, Antriebslosigkeit und Hoffnungslosigkeit wechseln können. Die Identifikation von Frühwarnzeichen spielt eine entscheidende Rolle in der Behandlung von bipolaren Störungen. Frühwarnzeichen sind subtile Veränderungen im Verhalten, in der Stimmung oder in den Denkmustern, die auf eine bevorstehende Episode hinweisen können. Durch das frühzeitige Erkennen solcher Anzeichen können Behandlungsstrategien rechtzeitig angepasst und Eskalationen verhindert werden. Dies ermöglicht eine bessere Stabilisierung der Stimmung, eine Reduzierung der Symptome und eine verbesserte Lebensqualität für die Betroffenen.
-In einer neuen Studie wird die Wirksamkeit eines Trainings zur Identifikation von Frühwarnzeichen zur Behandlung von bipolaren Störungen untersucht. Das Ziel der Studie ist es, herauszufinden, ob ein spezifisches Training, das darauf abzielt, Patienten mit bipolarer Störung die Fähigkeit zur Früherkennung von Symptomen zu vermitteln, positive Auswirkungen auf den Verlauf der Erkrankung hat. Dabei sollen insbesondere auch die Angehörigen der Patient:innen in das Monitoring miteinbezogen werden. Teilnehmer:innen werden in zwei Gruppen aufgeteilt: Eine Gruppe, die das spezielle Frühwarnzeichen-Training erhält, und eine Kontrollgruppe, die lediglich an einer offenen Gesprächsgruppe teilnimmt. Die Ergebnisse dieser Studie sollen Erkenntnisse darüber liefern, wie die gezielte Schulung von Patient:innen zur Identifikation von Frühwarnzeichen den Krankheitsverlauf verbessern und mögliche Rückfälle verhindern kann. Dies könnte einen bedeutenden Fortschritt in der Behandlung von bipolaren Störungen darstellen und die individuelle Selbstmanagement-Fähigkeit der Betroffenen stärken.
+In einer neuen Studie wird die Wirksamkeit eines **Trainings zur Identifikation von Frühwarnzeichen zur Behandlung von bipolaren Störungen** untersucht. Das Ziel der Studie ist es, herauszufinden, ob ein spezifisches Training, das darauf abzielt, Patienten mit bipolarer Störung die Fähigkeit zur Früherkennung von Symptomen zu vermitteln, positive Auswirkungen auf den Verlauf der Erkrankung hat. Dabei sollen insbesondere auch die Angehörigen der Patient:innen in das Monitoring miteinbezogen werden. Teilnehmer:innen werden in zwei Gruppen aufgeteilt: Eine Gruppe, die das spezielle Frühwarnzeichen-Training erhält, und eine Kontrollgruppe, die lediglich an einer offenen Gesprächsgruppe teilnimmt. Die Ergebnisse dieser Studie sollen Erkenntnisse darüber liefern, wie die gezielte Schulung von Patient:innen zur Identifikation von Frühwarnzeichen den Krankheitsverlauf verbessern und mögliche Rückfälle verhindern kann. Dies könnte einen bedeutenden Fortschritt in der Behandlung von bipolaren Störungen darstellen und die individuelle Selbstmanagement-Fähigkeit der Betroffenen stärken.
 
 
 <hr> <!-- Horizontale Trennlinie -->
@@ -809,6 +807,79 @@ table(bipolar$Groups) # Training: 68 Proband:innen, No Training: 60 Proband:inne
 table(bipolar$Gender[bipolar$Groups == "EW"]) # Training: 32 weibliche, 36 männliche Proband:innen
 table(bipolar$Gender[bipolar$Groups == "noEW"]) # No Training: 37 weibliche, 23 männliche Proband:innen
 
+# Aufgabe 2
+range(bipolar$Age) # Altersrange: 18-73
+round((sum(bipolar$Age > 65) / length(bipolar$Age)) * 100, 2) # Prozentuale Anzahl der Proband:innen über 65 Jahre: 6.25%
+round(mean(bipolar$Age[bipolar$Groups == "noEW"]), 2) # No Training (Age): M = 39.40
+round(sd(bipolar$Age[bipolar$Groups == "noEW"]), 2) # Not Training (Age): SD = 15.08
+round(mean(bipolar$Age[bipolar$Groups == "EW"]), 2) # Training (Age): M = 40.94
+round(sd(bipolar$Age[bipolar$Groups == "EW"]), 2) # Training (Age): SD = 14.11
+
+# Aufgabe 3 
+# Auswertung YMRS (keine Umkodierung notwendig)
+
+library(tidyverse) # Paket benötigt für select()-Funktion
+
+bipolar$YMRS_sum = rowSums(select(bipolar, starts_with("YMRS"))) 
+names(bipolar) # YMRS_sum erscheint nun als neue Variable
+
+summary(bipolar$YMRS_sum[bipolar$Groups == "noEW"])
+round(sd(bipolar$YMRS_sum[bipolar$Groups == "noEW"]), 2)
+
+summary(bipolar$YMRS_sum[bipolar$Groups == "EW"])
+round(sd(bipolar$YMRS_sum[bipolar$Groups == "EW"]), 2)
+
+
+# Auswertung ISEL (Umkodierung teilweise erforderlich)
+
+library(dplyr) # Paket benötigt für recode()-Funktion
+# library(tidyverse) # Paket benötigt für select()-Funktion (bereits geladen für YMRS)
+
+bipolar$ISEL_1 = recode(bipolar$ISEL_1, "1" = 4, "2" = 3, "3" = 2, "4" = 1)
+bipolar$ISEL_2 = recode(bipolar$ISEL_2, "1" = 4, "2" = 3, "3" = 2, "4" = 1)
+bipolar$ISEL_7 = recode(bipolar$ISEL_7, "1" = 4, "2" = 3, "3" = 2, "4" = 1)
+bipolar$ISEL_8 = recode(bipolar$ISEL_8, "1" = 4, "2" = 3, "3" = 2, "4" = 1)
+bipolar$ISEL_11 = recode(bipolar$ISEL_11, "1" = 4, "2" = 3, "3" = 2, "4" = 1)
+bipolar$ISEL_12 = recode(bipolar$ISEL_12, "1" = 4, "2" = 3, "3" = 2, "4" = 1)
+
+bipolar$ISEL_sum = rowSums(select(bipolar, starts_with("ISEL")))
+names(bipolar)
+
+summary(bipolar$ISEL_sum[bipolar$Groups == "noEW"])
+round(sd(bipolar$ISEL_sum[bipolar$Groups == "noEW"]), 2)
+
+summary(bipolar$ISEL_sum[bipolar$Groups == "EW"])
+round(sd(bipolar$ISEL_sum[bipolar$Groups == "EW"]), 2)
+
+# Appraisal Support Subscale
+bipolar$ISEL_appraisal = rowSums(select(bipolar, ISEL_2, ISEL_4, ISEL_6, ISEL_11))
+names(bipolar)
+
+summary(bipolar$ISEL_appraisal[bipolar$Groups == "noEW"])
+round(sd(bipolar$ISEL_appraisal[bipolar$Groups == "noEW"]), 2)
+
+summary(bipolar$ISEL_appraisal[bipolar$Groups == "EW"])
+round(sd(bipolar$ISEL_appraisal[bipolar$Groups == "EW"]), 2)
+
+# Belonging Support Subscale
+bipolar$ISEL_belonging = rowSums(select(bipolar, ISEL_1, ISEL_5, ISEL_7, ISEL_9))
+names(bipolar)
+
+summary(bipolar$ISEL_belonging[bipolar$Groups == "noEW"])
+round(sd(bipolar$ISEL_belonging[bipolar$Groups == "noEW"]), 2)
+
+summary(bipolar$ISEL_belonging[bipolar$Groups == "EW"])
+round(sd(bipolar$ISEL_belonging[bipolar$Groups == "EW"]), 2)
+
+# Tangible Support Subscale
+bipolar$ISEL_tangible = rowSums(select(bipolar, ISEL_3, ISEL_8, ISEL_10, ISEL_12))
+names(bipolar)
+
+summary(bipolar$ISEL_tangible[bipolar$Groups == "noEW"])
+round(sd(bipolar$ISEL_tangible[bipolar$Groups == "noEW"]), 2)
+
+summary(bipolar$ISEL_tangible[bipolar$Groups == "EW"])
+round(sd(bipolar$ISEL_tangible[bipolar$Groups == "EW"]), 2)
 
 ```
 
@@ -825,18 +896,12 @@ exams2learnr("Questions/Einheit_2_MC_2.Rmd", allow_retry = TRUE)
 exams2learnr("Questions/Einheit_2_MC_3.Rmd", allow_retry = TRUE)
 ```
 
-```{r Einheit_2_MC_4, echo = FALSE, warning = FALSE}
-exams2learnr("Questions/Einheit_2_MC_4.Rmd", allow_retry = TRUE)
-```
 
+## Datenvisualisierung und Hypothesentests 
 
-## Einheiten 3 und 4
+Willkommen im Abschnitt **Datenvisualisierung und Hypothesentests in R und RStudio**! 
 
-#### Datenvisualisierung und Hypothesentests in RStudio
-
-Willkommen im Abschnitt **Datenvisualisierung und Hypothesentests in RStudio**! 
-
-In diesem Abschnitt wird das in Kapitel zwei begonnene Projekt fortgesetzt. Ziel ist es, die z.T. bereits in Kapitel zwei ermittelten Werte grafisch darzustellen sowie Hypothesen mithilfe der Ihnen bekannten Methoden zu testen. Der zur Verfügung gestellte smartphone-Datensatz bleibt derselbe, enthält in der nun erneut über Github zu ladenden Version jedoch bereits die wichtigsten Werte:
+In diesem Abschnitt wird das in Kapitel zwei begonnene Projekt fortgesetzt. Ziel ist es, die z.T. bereits in Kapitel zwei ermittelten Werte grafisch darzustellen sowie Hypothesen mithilfe der Ihnen bekannten Methoden zu testen. Der zur Verfügung gestellte "bipolar"-Datensatz bleibt derselbe, enthält in der nun erneut über Github zu ladenden Version jedoch bereits die wichtigsten Werte:
 
 - Summenwert der General Procrastination Scale (GPS) zu den Zeitpunkten t0 und t1 (t0_GPS_sum, t1_GPS_sum)
 - Summenwert der Smartphone Addiction Scale (SAS) zu den Zeitpunkten t0 und t1 (t0_SAS_sum, t1_SAS_sum)

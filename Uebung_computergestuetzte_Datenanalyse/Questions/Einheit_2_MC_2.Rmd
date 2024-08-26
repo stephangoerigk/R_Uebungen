@@ -1,13 +1,13 @@
 Question
 ========
-**Aufgabe 2:** Bestimmen Sie - differenziert nach den jeweiligen Gruppen *Training* und *No Training* - das durchschnittliche Alter der ProbandInnen. Wählen Sie im Folgenden die Antwortalternative aus, die diesen Wert im wissenschaftlichen Kontext korrekt und vollständig darstellt.
+**Aufgabe 2:** Bestimmen Sie - differenziert nach den jeweiligen Gruppen *Training (EW)* und *No Training (noEW)* - das durchschnittliche Alter der ProbandInnen. Wählen Sie im Folgenden die Antwortalternative aus, die diesen Wert im wissenschaftlichen Kontext korrekt und vollständig darstellt.
 
 Answerlist
 ----------
-* Participants were required to be over the age of 18 to participate, but the minimum actual participant age was 18 with a maximum age of 73. In total, 3.91% of participants were over the age of 65. The mean age of participants in the training group was 38.17 years (*SD* = 14.30). In the group without training, the mean age was 51.53 years (*SD* = 13.35).
-* Participants were required to be over the age of 18 to participate, but the minimum actual participant age was 18 with a maximum age of 73. In total, 3.91% of participants were over the age of 65. The mean age of participants in the training group was 41.53 years. In the group without training, the mean age was 38.17 years.
-* Participants were required to be over the age of 18 to participate, but the minimum actual participant age was 18 with a maximum age of 73. In total, 3.91% of participants were over the age of 65. The mean age of participants in the training group was 38.17 years. In the group without training, the mean age was 51.53 years.
-* Participants were required to be over the age of 18 to participate, but the minimum actual participant age was 18 with a maximum age of 73. In total, 3.91% of participants were over the age of 65. The mean age of participants in the training group was 41.53 years (*SD* = 14.30). In the group without training, the mean age was 38.17 years (*SD* = 13.35).
+* Participants were required to be over the age of 18 to participate, but the minimum actual participant age was 18 with a maximum age of 73. In total, 6.25% of participants were over the age of 65. The mean age of participants in the training group was 39.40 years (*SD* = 15.08). In the group without training, the mean age was 40.94 years (*SD* = 14.11).
+* Participants were required to be over the age of 18 to participate, but the minimum actual participant age was 18 with a maximum age of 73. In total, 6.25% of participants were over the age of 65. The mean age of participants in the training group was 40.94118 years. In the group without training, the mean age was 39.4 years.
+* Participants were required to be over the age of 18 to participate, but the minimum actual participant age was 18 with a maximum age of 73. In total, 6.25% of participants were over the age of 65. The mean age of participants in the training group was 40.94118 years. In the group without training, the mean age was 14.11349 years.
+* Participants were required to be over the age of 18 to participate, but the minimum actual participant age was 18 with a maximum age of 73. In total, 6.25% of participants were over the age of 65. The mean age of participants in the training group was 40.94 years (*SD* = 14.11). In the group without training, the mean age was 39.40 years (*SD* = 15.08).
 
 
 Solution
@@ -18,7 +18,7 @@ Answerlist
 * Falsch.
 * Falsch. 
 * Falsch. 
-* Richtig. 
+* Richtig. Mittelwerte und Standardabweichungen werden in wissenschaftlichen Texten immer zusammen angegeben und auf zwei Dezimalstellen gerundet.
 
 
 Meta-information
