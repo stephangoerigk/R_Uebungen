@@ -410,7 +410,7 @@ exams2learnr("Questions/VO_06/VO6_Output1.Rmd", allow_retry = TRUE)
 ```
 
 ```{r VO6_Output2, message = FALSE, warning=FALSE}
-#exams2learnr("Questions/VO_05/VO5_Output2.Rmd", allow_retry = TRUE)
+exams2learnr("Questions/VO_06/VO6_Output2.Rmd", allow_retry = TRUE)
 ```
 
 ```{r VO6_Output3, message = FALSE, warning=FALSE}
@@ -428,6 +428,36 @@ exams2learnr("Questions/VO_06/VO6_Output1.Rmd", allow_retry = TRUE)
 
 
 ## Einheit 7 - Regressionsmodelle mit Interaktion
+
+```{r VO7_MC_1, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_07/VO7_MC_1.Rmd", allow_retry = TRUE)
+```
+
+```{r VO7_MC_2, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_07/VO7_MC_2.Rmd", allow_retry = TRUE)
+```
+
+```{r VO7_MC_3, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_07/VO7_MC_3.Rmd", allow_retry = TRUE)
+```
+
+```{r VO7_MC_4, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_07/VO7_MC_4.Rmd", allow_retry = TRUE)
+```
+
+```{r VO7_MC_5, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_07/VO7_MC_5.Rmd", allow_retry = TRUE)
+```
+
+```{r VO7_MC_6, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_07/VO7_MC_6.Rmd", allow_retry = TRUE)
+```
+
+```{r VO7_MC_7, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_07/VO7_MC_7.Rmd", allow_retry = TRUE)
+```
+
+
 
 ## Einheit 8 - ANOVA mit Messwiederholung
 

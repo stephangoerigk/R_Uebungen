@@ -5,7 +5,7 @@ n <- 120  # Anzahl der Teilnehmer
 
 # Generierung der Prädiktoren
 koerperliche_aktivitaet <- runif(n, min = 0, max = 10)  # Stunden körperlicher Aktivität pro Woche
-schlafqualitaet <- runif(n, min = 1, max = 5)  # Schlafqualität (1 = sehr schlecht, 5 = sehr gut)
+schlafqualitaet <- runif(n, min = 0, max = 5)  # Schlafqualität (1 = sehr schlecht, 5 = sehr gut)
 
 # Generierung der abhängigen Variable (Stressniveau)
 # Annahme: Mehr körperliche Aktivität und bessere Schlafqualität führen zu einem geringeren Stressniveau
@@ -18,19 +18,20 @@ model <- lm(stressniveau ~ koerperliche_aktivitaet + schlafqualitaet)
 summary = summary(model)
 
 
+sol = round(summary$coefficients[1,1] + 6 * summary$coefficients[2,1] + 5 * summary$coefficients[3,1], 1)
 
 ```    
 
 Question
 ========
 
-In einer psychologischen Studie wird untersucht, wie die Anzahl der Stunden, die eine Person pro Woche körperlich aktiv ist (Prädiktor 1), und das Ausmaß der Schlafqualität (Prädiktor 2) das empfundene Stressniveau (abhängige Variable) beeinflussen. Ziel ist es, zu prüfen, ob es einen signifikanten Zusammenhang zwischen diesen Prädiktoren und dem Stressniveau gibt. Sie erhalten folgenden Output:
+In einer psychologischen Studie wird untersucht, wie die Anzahl der Stunden, die eine Person pro Woche körperlich aktiv ist (Prädiktor 1), und die Schlafqualität, gemessen auf einer Skala von 0 = sehr schlecht bis 5 = sehr gut (Prädiktor 2) das empfundene Stressniveau (abhängige Variable) beeinflussen. Ziel ist es, zu prüfen, ob es einen signifikanten Zusammenhang zwischen diesen Prädiktoren und dem Stressniveau gibt. Sie erhalten folgenden Output:
 
-```{r}
-print(summary)
+```{r echo=FALSE}
+summary
 ```
 
-
+Wie hoch ist das erwartete Stresniveau bei einer Person, die pro Woche 6 Stunden aktiv ist und eine Schlafqualität von 5 erreicht? Geben Sie das Ergebnis auf eine Nachkommastelle gerundet an. 
 
 
 Solution
@@ -43,4 +44,4 @@ Meta-information
 extype: num
 exsolution: `r sol`
 exname: Output1
-extol: 0.00
+extol: 0.1
