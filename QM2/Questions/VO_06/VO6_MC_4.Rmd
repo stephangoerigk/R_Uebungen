@@ -1,0 +1,28 @@
+Question
+========
+Welche der folgenden Voraussetzungen müssen für eine Multiple Regression erfüllt sein? (Wähle alle zutreffenden Antworten.)
+
+Answerlist
+----------
+* Die abhängige Variable darf nominalskaliert sein.
+* Die Prädiktoren dürfen nicht stark miteinander korrelieren (Multikollinearität vermeiden).
+* Die Residuen müssen homoskedastisch sein, das heißt, sie sollten über den gesamten Wertebereich der Prädiktoren eine konstante Varianz aufweisen.
+* Die Prädiktoren, bzw. Residuen der Prädiktoren müssen normalverteilt sein.
+* Es muss ein linearer Zusammenhang zwischen den Prädiktoren und der abhängigen Variable bestehen.
+
+Solution
+========
+Answerlist
+----------
+* Falsch. Die abhängige Variable sollte mindestens intervallskaliert oder verhältnisskaliert sein, damit die Annahmen der linearen Regression erfüllt sind.
+* Richtig. Multikollinearität sollte vermieden werden, um stabile und interpretierbare Schätzungen zu erhalten.
+* Richtig. Homoskedastizität ist eine wichtige Voraussetzung für die Anwendung der Multiplen Regression, da sie sicherstellt, dass die Varianz der Residuen über den gesamten Wertebereich der Prädiktoren konstant bleibt.
+* Richtig. Die Residuen sollten idealerweise normalverteilt sein, insbesondere für die Durchführung von Signifikanztests. Die Normalverteilung der Prädiktoren ist jedoch keine Voraussetzung.
+* Richtig. Die Multiple Regression setzt einen linearen Zusammenhang zwischen Prädiktoren und abhängiger Variable voraus. Ist dieser nicht gegeben, könnten die Ergebnisse verfälscht werden.
+
+Meta-information
+================
+exname: Voraussetzungen_Multiple_Regression
+extype: mchoice 
+exsolution: 01111
+exshuffle: TRUE

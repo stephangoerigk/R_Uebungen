@@ -1,0 +1,28 @@
+Question
+========
+Welche der folgenden Aussagen zur Multiplen Regression sind korrekt? (Wähle alle zutreffenden Antworten.)
+
+Answerlist
+----------
+* Die Multiple Regression kann nur mit kategorialen Prädiktoren durchgeführt werden.
+* Die Multiple Regression ermöglicht die Verwendung mehrerer Prädiktoren zur Vorhersage einer abhängigen Variablen.
+* In der Multiplen Regression dürfen sowohl kategoriale als auch stetige Prädiktoren verwendet werden.
+* Das Ziel der Multiplen Regression ist es, den Einfluss einer einzigen unabhängigen Variablen auf die abhängige Variable zu untersuchen.
+* Die Multiple Regression ist eine Erweiterung der einfachen linearen Regression.
+
+Solution
+========
+Answerlist
+----------
+* Falsch. Es können sowohl kategoriale als auch stetige Prädiktoren verwendet werden.
+* Richtig. Ein Hauptziel der Multiplen Regression ist es, mehrere Prädiktoren zu verwenden, um eine abhängige Variable vorherzusagen.
+* Richtig. Die Multiple Regression erlaubt die Kombination von kategorialen und stetigen Prädiktoren.
+* Falsch. Das Ziel der Multiplen Regression ist es, den Einfluss mehrerer unabhängiger Variablen auf die abhängige Variable zu untersuchen.
+* Richtig. Die Multiple Regression erweitert die einfache lineare Regression, indem sie mehr als einen Prädiktor einbezieht.
+
+Meta-information
+================
+exname: Grundlagen_Multiple_Regression
+extype: mchoice 
+exsolution: 01101
+exshuffle: TRUE

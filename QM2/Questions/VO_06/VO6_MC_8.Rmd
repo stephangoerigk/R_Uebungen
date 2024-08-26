@@ -1,0 +1,28 @@
+Question
+========
+Wie werden die Regressionskoeffizienten in der Multiplen Regression interpretiert? (Wähle alle zutreffenden Antworten.)
+
+Answerlist
+----------
+* Ein Regressionskoeffizient gibt an, wie stark sich die abhängige Variable ändert, wenn der entsprechende Prädiktor um eine Einheit zunimmt.
+* Wenn ein Regressionskoeffizient positiv ist, bedeutet das, dass die abhängige Variable bei einer Zunahme des Prädiktors ebenfalls zunimmt.
+* Ein Regressionskoeffizient von Null bedeutet, dass der Prädiktor keinen Einfluss auf die abhängige Variable hat.
+* Alle Prädiktoren müssen standardisiert sein, damit die Regressionskoeffizienten interpretiert werden können.
+* Die Größe des Regressionskoeffizienten gibt den Einfluss des Prädiktors auf die abhängige Variable an, unter der Annahme, dass alle anderen Prädiktoren konstant gehalten werden.
+
+Solution
+========
+Answerlist
+----------
+* Richtig. Der Regressionskoeffizient gibt die Änderung der abhängigen Variable pro Einheit des Prädiktors an.
+* Richtig. Ein positiver Koeffizient bedeutet einen positiven Zusammenhang zwischen Prädiktor und abhängiger Variable.
+* Richtig. Ein Koeffizient von Null bedeutet keinen Einfluss des Prädiktors auf die abhängige Variable.
+* Falsch. Die Prädiktoren müssen nicht standardisiert sein, um die Koeffizienten zu interpretieren.
+* Richtig. Der Regressionskoeffizient gibt den Einfluss des Prädiktors an, während andere Prädiktoren konstant gehalten werden.
+
+Meta-information
+================
+exname: Regressionskoeffizienten_Interpretation
+extype: mchoice 
+exsolution: 11101
+exshuffle: TRUE

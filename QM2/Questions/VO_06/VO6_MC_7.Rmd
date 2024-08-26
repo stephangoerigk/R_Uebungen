@@ -1,0 +1,28 @@
+Question
+========
+Welche der folgenden Aussagen zur Multikollinearität in der Multiplen Regression sind korrekt? (Wähle alle zutreffenden Antworten.)
+
+Answerlist
+----------
+* Multikollinearität bedeutet, dass die Prädiktoren stark miteinander korrelieren.
+* Ein hoher Variance Inflation Factor (VIF) deutet auf ein mögliches Multikollinearitätsproblem hin.
+* Multikollinearität beeinflusst die Schätzungen der Regressionskoeffizienten und kann diese instabil machen.
+* Multikollinearität ist unproblematisch, wenn das R-Quadrat hoch ist.
+* Multikollinearität kann durch die Entfernung eines Prädiktors oder durch die Kombination von Prädiktoren reduziert werden.
+
+Solution
+========
+Answerlist
+----------
+* Richtig. Multikollinearität tritt auf, wenn die Prädiktoren stark miteinander korrelieren.
+* Richtig. Ein hoher VIF ist ein Indikator für Multikollinearität.
+* Richtig. Multikollinearität kann zu instabilen Schätzungen der Regressionskoeffizienten führen.
+* Falsch. Ein hohes R-Quadrat bedeutet nicht, dass Multikollinearität unproblematisch ist.
+* Richtig. Multikollinearität kann durch das Entfernen oder Kombinieren von Prädiktoren reduziert werden.
+
+Meta-information
+================
+exname: Multikollinearität
+extype: mchoice 
+exsolution: 11101
+exshuffle: TRUE

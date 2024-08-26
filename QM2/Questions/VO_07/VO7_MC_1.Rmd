@@ -1,0 +1,28 @@
+Question
+========
+Welche Aussagen zu Haupteffekten und Interaktionen in Regressionsmodellen sind korrekt?
+
+Answerlist
+----------
+* Haupteffekte beschreiben den Einfluss einer UV auf die AV unabhängig von anderen UVs.
+* Interaktionseffekte treten auf, wenn der Effekt einer UV auf die AV von einer anderen UV beeinflusst wird.
+* In der Regressionsanalyse sind Interaktionen nur zwischen kategorialen Variablen möglich.
+* Ein signifikanter Haupteffekt garantiert, dass auch die Interaktionseffekte signifikant sind.
+* Interaktionen müssen immer im Modell enthalten sein, um korrekte Ergebnisse zu erzielen.
+
+Solution
+========
+Answerlist
+----------
+* Richtig. Haupteffekte beschreiben den isolierten Einfluss einer UV.
+* Richtig. Interaktionen bedeuten, dass der Effekt einer UV auf die AV von einer anderen UV abhängt.
+* Falsch. Interaktionen können sowohl zwischen kategorialen als auch stetigen Variablen auftreten.
+* Falsch. Ein signifikanter Haupteffekt garantiert nicht, dass Interaktionen signifikant sind.
+* Falsch. Interaktionen sollten nur dann aufgenommen werden, wenn sie theoretisch und empirisch begründet sind.
+
+Meta-information
+================
+exname: Haupteffekte_Interaktionen
+extype: mchoice 
+exsolution: 11000
+exshuffle: TRUE

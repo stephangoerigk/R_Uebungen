@@ -1,0 +1,28 @@
+Question
+========
+Welche Aussagen zum Vergleich von Regressionsmodellen mit und ohne Interaktion sind korrekt?
+
+Answerlist
+----------
+* Modelle mit Interaktion haben immer eine höhere erklärende Varianz als Modelle ohne Interaktion.
+* Der F-Test kann verwendet werden, um zu testen, ob das Modell mit Interaktion signifikant mehr Varianz erklärt.
+* Bei Modellen mit Interaktion ist die Anzahl der Freiheitsgrade geringer als bei Modellen ohne Interaktion.
+* Die Adjusted R-squared-Werte sollten verwendet werden, um Modelle unterschiedlicher Komplexität zu vergleichen.
+* Ein signifikantes Interaktionsmodell deutet darauf hin, dass die Prädiktoren unabhängig voneinander auf die AV wirken.
+
+Solution
+========
+Answerlist
+----------
+* Falsch. Modelle mit Interaktion haben nicht immer eine höhere erklärende Varianz.
+* Richtig. Der F-Test prüft, ob das Interaktionsmodell signifikant mehr Varianz erklärt.
+* Richtig. Modelle mit Interaktionen haben weniger Freiheitsgrade.
+* Richtig. Adjusted R-squared berücksichtigt die Anzahl der Prädiktoren und ist daher besser für den Vergleich geeignet.
+* Falsch. Ein signifikantes Interaktionsmodell deutet darauf hin, dass die Prädiktoren in Kombination auf die AV wirken, nicht unabhängig voneinander.
+
+Meta-information
+================
+exname: Modellvergleich_Interaktionen
+extype: mchoice 
+exsolution: 01110
+exshuffle: TRUE

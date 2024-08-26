@@ -1,0 +1,28 @@
+Question
+========
+Welche Aussagen zur Interpretation von Interaktionseffekten sind korrekt?
+
+Answerlist
+----------
+* Ein signifikanter Interaktionseffekt bedeutet, dass der Effekt eines Prädiktors auf die AV von einem anderen Prädiktor abhängt.
+* Interaktionseffekte zwischen zwei kontinuierlichen Prädiktoren werden immer als positiv interpretiert.
+* Die Interpretation von Haupteffekten ist bei signifikanten Interaktionseffekten einfacher.
+* Interaktionseffekte können grafisch dargestellt werden, um ihre Richtung besser zu verstehen.
+* Wenn eine Interaktion nicht signifikant ist, kann der Haupteffekt nicht signifikant sein.
+
+Solution
+========
+Answerlist
+----------
+* Richtig. Ein signifikanter Interaktionseffekt deutet auf eine Wechselwirkung zwischen Prädiktoren hin.
+* Falsch. Interaktionen können sowohl positiv als auch negativ sein.
+* Falsch. Signifikante Interaktionen erschweren oft die Interpretation von Haupteffekten.
+* Richtig. Grafische Darstellungen helfen, die Richtung und Stärke von Interaktionen zu verstehen.
+* Falsch. Haupteffekte können auch bei nicht signifikanten Interaktionen signifikant sein.
+
+Meta-information
+================
+exname: Interaktionseffekte_Interpretation
+extype: mchoice 
+exsolution: 10010
+exshuffle: TRUE

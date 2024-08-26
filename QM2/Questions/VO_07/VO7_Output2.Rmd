@@ -1,0 +1,66 @@
+```{r data generation, include=FALSE}
+
+
+n <- sample(50:150, 1)
+
+therapiestunden <- rnorm(n, mean = 20, sd = 5)  # Anzahl der Therapiestunden
+soziale_unterstützung <- rnorm(n, mean = 50, sd = 20)  # Ausmaß der sozialen Unterstützung
+
+# Generierung der abhängigen Variable (Depressionssymptome)
+depressionssymptome <- 50 - 0.6 * therapiestunden - 0.5 * soziale_unterstützung + rnorm(n, mean = 0, sd = 10)
+
+# Schritt 2: Modellerstellung
+model <- lm(depressionssymptome ~ therapiestunden + soziale_unterstützung)
+
+# Ausgabe der Modellzusammenfassung
+summary = summary(model)
+
+```    
+
+Question
+========
+
+In einer klinisch-psychologischen Studie wird untersucht, wie stark die Anzahl der Therapiestunden (Prädiktor 1) und das Ausmaß der sozialen Unterstützung (Prädiktor 2) das Ausmaß der Depressionssymptome (abhängige Variable) bei Patienten beeinflussen. Welche Aussagen zu zu diesem Output stimmen?
+
+```{r echo=FALSE}
+summary
+```
+
+
+Answerlist
+----------
+* Bei 0 Therapiestunden und keiner sozialen Unterstützung liegt die erwartete Depressivität einer Person der untersuchten Population bei `r round(summary$coefficients[1,1],2)`.
+* Wenn die Depressivität um eine Einheit steigt (Unter Konstanthaltung der anderen Prädiktoren), steigt die Anzahl der Therapiestunden um `r round(summary$coefficients[2,1],2)` Einheiten. 
+* Bei einer zusätzlichen Einheit sozialer Unterstützung sinkt die Depressivität im Schnitt um `r round(summary$coefficients[3,1],2)` Einheiten. 
+* Bei einer zusätzlichen Therapiestunde sinkt der Intercept um durchschnittlich `r round(summary$coefficients[2,1],2)`.
+* Insgesamt kann unser Modell `r round(summary$r.squared *100,2)` % der Varianz in der Abhängigen Variable erklären. 
+* Die Stichprobengröße lag bei `r n`
+
+Solution
+========
+
+Answerlist
+----------
+
+* Richtig. Dies ist die korrekte Interpretation des y-Achsenabschnittes.
+* Falsch. Hier wurde die AV und die UV vertauscht.
+* Richtig. Das ist die korrekte Interpretation eines Steigungsparameters. 
+* Falsch. Der Intercept verändert sich nicht. Es verändert sich die abhängige Variable Y, in diesem Fall die Depressivität.
+* Richtig. Das ist die korrekte Interpretation von $R^2$
+* Richtig. Die Stichprobengröße in dieser Untersuchung lässt sich aus dem Output ableiten. Der Residual-Freiheitsgrad (Degrees of Freedom, DF) beträgt `r summary$df[2]`, wie im Abschnitt "Residual standard error: `r round(summary$sigma,3)` on `r summary$df[2]` degrees of freedom" angegeben. Da bei einer linearen Regression die Freiheitsgrade durch die Formel DF = N − $k$ − 1 berechnet werden, wobei N die Stichprobengröße und $k$ die Anzahl der Prädiktoren ist, können wir die Stichprobengröße wie folgt berechnen:
+
+
+`r summary$df[2]` = N - 2 - 1 -> 
+
+N = `r summary$df[2]` + 3 =  `r summary$df[2] + 3`
+
+
+
+
+
+Meta-information
+================
+exname: Output1
+extype: mchoice 
+exsolution: 101011
+exshuffle: TRUE

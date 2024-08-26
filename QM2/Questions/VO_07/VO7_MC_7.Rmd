@@ -1,0 +1,28 @@
+Question
+========
+Welche der folgenden Aussagen zu Signifikanztests in Regressionsmodellen mit Interaktionen sind korrekt?
+
+Answerlist
+----------
+* Ein signifikanter Interaktionseffekt weist darauf hin, dass die Prädiktoren nicht unabhängig voneinander auf die AV wirken.
+* Der Signifikanztest eines Interaktionseffekts kann durch das Wechseln der Referenzkategorie beeinflusst werden.
+* Bei einem nicht signifikanten Haupteffekt ist der Interaktionseffekt auch nicht signifikant.
+* Signifikanztests in Interaktionsmodellen sollten immer mit Omnibustests ergänzt werden.
+* Ein Interaktionseffekt kann auch bei nicht signifikanten Haupteffekten auftreten.
+
+Solution
+========
+Answerlist
+----------
+* Richtig. Signifikante Interaktionen bedeuten, dass Prädiktoren zusammenwirken.
+* Richtig. Das Wechseln der Referenzkategorie kann die Signifikanztests beeinflussen.
+* Falsch. Nicht signifikante Haupteffekte schließen signifikante Interaktionen nicht aus.
+* Richtig. Omnibustests helfen, die Gesamtsignifikanz des Modells zu beurteilen.
+* Richtig. Interaktionen können unabhängig von den Haupteffekten signifikant sein.
+
+Meta-information
+================
+exname: Signifikanztests_Interaktionen
+extype: mchoice 
+exsolution: 10111
+exshuffle: TRUE
