@@ -9,23 +9,24 @@ runtime: shiny_prerendered
 ---
 
 <style>
-/* CSS-Stil */
+
 body {
   background-color: #f0f0f0;
   font-family: Arial, sans-serif;
+  font-size: 14px; 
 }
 
 h1 {
   color: #333333;
+  font-size: 14px; 
 }
 
 p {
-  font-size: 16px;
+  font-size: 14px; 
   line-height: 1.5;
   margin-bottom: 20px;
 }
 
-/* Tables */
 table {
   width: 50%; 
   border-collapse: collapse;
@@ -35,12 +36,24 @@ th, td {
   border: 1px solid #dddddd;
   padding: 8px;
   text-align: left;
+  font-size: 14px; 
 }
 
 th {
   background-color: #f2f2f2;
 }
+
+img {
+  width: 100%; 
+  max-width: 500px; 
+  height: auto;
+  display: block;
+  margin: 20px 0; 
+  text-align: left; 
+}
 </style>
+
+
 
 ```{r setup, include=FALSE}
 library(learnr)
@@ -73,9 +86,7 @@ Viel Erfolg und Spaß beim Entdecken der Möglichkeiten mit R und RStudio!
 Stephan Goerigk und Janika Saretzki
 
 
-## Grundlegende Arithmetik und Datenformate 
-
-### Grundlegende Arithmetik
+## Grundlegende Arithmetik
 
 Willkommen im Abschnitt **Grundlegende Arithmetik in R und RStudio**! 
 
@@ -251,7 +262,7 @@ help(summary)
 
 ```
 
-### Datenformate
+## Datenformate
 
 Willkommen im Abschnitt **Datenformate in R und RStudio**! 
 
@@ -493,9 +504,9 @@ mean(sales_data$Verkaufszahlen[sales_data$Produkt == "Produkt A" & sales_data$Re
 ```
 
 
-## Grundlagen der Datenanalyse
+## Datenvorverarbeitung
 
-Willkommen im Abschnitt **Grundlagen der Datenanalyse in R und RStudio**! 
+Willkommen im Abschnitt **Datenvorverarbeitung in R und RStudio**! 
 
 In diesem Kapitel der learnR Oberfläche werden Sie durch praktische Übungen in die Methoden der deskriptiven Statistik und der Analyse von Fragebogendaten in RStudio eingeführt. 
 
@@ -503,7 +514,7 @@ Das Kapitel ist in zwei Hauptteile gegliedert, um Ihnen sowohl Einzelübungen al
 
 <hr> <!-- Horizontale Trennlinie -->
 
-#### Teil 1: Einzelübungen
+### Teil 1: Einzelübungen
 
 Im ersten Teil des Kapitels werden Sie durch eine Reihe von Einzelübungen geführt. Diese dienen dazu, Ihr Verständnis für die grundlegenden Prinzipien der deskriptiven Statistik zu festigen und Ihre Fähigkeiten in der Analyse von Forschungsdaten zu schärfen. Durch praktische Anwendungen lernen Sie, statistische Maße zu berechnen und zu interpretieren.
 
@@ -598,9 +609,8 @@ diff(range(iris$Petal.Length[iris$Species == "virginica"]))
 
 ```
 
-<hr> <!-- Horizontale Trennlinie -->
 
-#### Teil 2: Projektarbeit externem Datensatz
+### Teil 2: Projektarbeit externem Datensatz
 
 Im zweiten Teil des Kapitels werden Sie in ein umfangreicheres Projekt eingeführt, bei dem Sie mit einem speziell dafür erstellten, simulierten Datensatz arbeiten. Ähnlich wie in den Seminareinheiten zielt dieser Abschnitt der learnR-Oberfläche darauf ab, den typischen Forschungsprozess nachzubilden, den Forschende durchlaufen, wenn sie erstmals auf neue Daten stoßen.
 
@@ -780,14 +790,13 @@ df$ISEL_12[df$ISEL_12 > 4] = 4
 # 
 # df = BBmisc::dropNamed(df, drop = c("YMRS_sum", "ISEL_sum"))
 
-write.csv(df, "/Users/jani/Desktop/CFH/Sommersemester 2024 Einführung in R/Rep/Uebung_computergestuetzte_Datenanalyse/bipolar/bipolar.csv")
+# write.csv(df, "/Users/jani/Desktop/CFH/Sommersemester 2024 Einführung in R/Rep/Uebung_computergestuetzte_Datenanalyse/bipolar/bipolar.csv")
 
 ```
 
 ```{r Projekt1, exercise=TRUE}
 
 bipolar = read.csv("https://raw.githubusercontent.com/janikasaretzki/CFH_Dat/main/bipolar.csv")
-
 
 ```
 
@@ -884,6 +893,7 @@ round(sd(bipolar$ISEL_tangible[bipolar$Groups == "EW"]), 2)
 ```
 
 <hr> <!-- Horizontale Trennlinie -->
+
 ```{r Einheit_2_MC_1, echo = FALSE, warning = FALSE}
 exams2learnr("Questions/Einheit_2_MC_1.Rmd", allow_retry = TRUE)
 ```
@@ -897,49 +907,86 @@ exams2learnr("Questions/Einheit_2_MC_3.Rmd", allow_retry = TRUE)
 ```
 
 
-## Datenvisualisierung und Hypothesentests 
+## Hypothesentests und Datenvisualisierung
 
-Willkommen im Abschnitt **Datenvisualisierung und Hypothesentests in R und RStudio**! 
+Willkommen im Abschnitt **Hypothesentests und Datenvisualisierung in R und RStudio**! 
 
 In diesem Abschnitt wird das in Kapitel zwei begonnene Projekt fortgesetzt. Ziel ist es, die z.T. bereits in Kapitel zwei ermittelten Werte grafisch darzustellen sowie Hypothesen mithilfe der Ihnen bekannten Methoden zu testen. Der zur Verfügung gestellte "bipolar"-Datensatz bleibt derselbe, enthält in der nun erneut über Github zu ladenden Version jedoch bereits die wichtigsten Werte:
 
-- Summenwert der General Procrastination Scale (GPS) zu den Zeitpunkten t0 und t1 (t0_GPS_sum, t1_GPS_sum)
-- Summenwert der Smartphone Addiction Scale (SAS) zu den Zeitpunkten t0 und t1 (t0_SAS_sum, t1_SAS_sum)
-- Differenzwerte (t0 - t1) der beiden Skalen (GPS_diff, SAS_diff)
+- Summenwert der Young Mania Rating Scale (YMRS; YMRS_sum)
+- Summenwert der Interpersonal Evaluation List (ISEL; ISEL_sum)
+- Summenwert der Subskalen der ISEL (ISEL_appraisal, ISEL_belonging, ISEL_tangible)
 
 **Bitte beachten Sie: Es ist möglich, dass Sie einzelne Berechnungen, die Sie bereits im zweiten Abschnitt durchgeführt haben, erneut durchführen müssen. Betrachten Sie dies als wertvolle Übung zur Festigung Ihrer Kenntnisse.**
 
 <hr> <!-- Horizontale Trennlinie -->
 
-Im Kontext des Ihnen vorliegenden smartphone-Datensatzes sind eine Vielzahl an (statistischer) Fragestellungen möglicht. 
-
-Beantworten sie folgende Fragestellungen anhand des Datensatzes. Dokumentieren Sie alle Auswertungsschritte und formulieren Sie zudem eine inhaltliche Interpretation der Ergebnisse.
-
-**Fragestellung 1**: 
-
-
-
-**Aufgabe ##:** Im Folgenden finden Sie ein Beispiel, wie Sie die aus Ihren Berechnungen gewonnenen Erkenntnisse visualisieren könnten.
-
-Versuchen Sie bitte, die Grafik nachzucoden.
-
-![](images/Einheit_3_1.png){width=80% height=80%}
+**Aufgabe 1:**Im Kontext des Ihnen vorliegenden bipolar-Datensatzes sind eine Vielzahl (statistischer) Fragestellungen möglicht. Beantworten sie folgende Fragestellungen anhand des Datensatzes. Dokumentieren Sie alle Auswertungsschritte und formulieren Sie zudem eine inhaltliche Interpretation der Ergebnisse.
 
 <hr> <!-- Horizontale Trennlinie -->
 
-```{r Datenvisualisierung1, exercise=TRUE}
-smartphone = read.csv("https://raw.githubusercontent.com/janikasaretzki/CFH_Dat/main/simulated_smartphone_evaluated.csv")
+**Fragestellung 1:** Besteht ein Unterschied in der durchschnittlichen Symptomatik im Folgemonat zwischen den beiden Gruppen?
+
+**Fragestellung 2:** Hängen die Güte des sozialen Supportsystems und die Symptomatik zusammen?
+
+**Fragestellung 3:** Spielt die Güte des sozialen Supportsystems vor dem Hintergrund der Erkennung von Frühwarnzeichen eine gesonderte Rolle?
+
+```{r Hypothesentests1, exercise=TRUE}
+bipolar = read.csv("https://raw.githubusercontent.com/janikasaretzki/CFH_Dat/main/bipolar_scores.csv")
 
 ```
 
-```{r Datenvisualisierung1-solution}
+```{r Hypothesentests1-solution}
+  bipolar = read.csv("https://raw.githubusercontent.com/janikasaretzki/CFH_Dat/main/bipolar_scores.csv")
+
+```
+
+<hr> <!-- Horizontale Trennlinie -->
+
+**Aufgabe 2:** Im Folgenden finden Sie ein Beispiel, wie Sie die aus Ihren Berechnungen gewonnenen Erkenntnisse visualisieren könnten.
+
+Versuchen Sie bitte, die Grafik nachzucoden.
+
+![](bipolar/bipolar_plot.png){width=60% height=100%}
+
+
+```{r Datenvisualisierung1, exercise=TRUE}
+
+bipolar = read.csv("https://raw.githubusercontent.com/janikasaretzki/CFH_Dat/main/bipolar_scores.csv")
+
+```
+
+```{r Datenvisualisierung1-solution, echo = FALSE, warning = FALSE}
+
+bipolar = read.csv("https://raw.githubusercontent.com/janikasaretzki/CFH_Dat/main/bipolar_scores.csv")
 
 library(ggplot2)
+library(ggpubr)
 
-ggplot(data = smartphone, aes(y = t0_SAS_sum - t1_SAS_sum, x = t0_GPS_sum - t1_GPS_sum, color = Groups)) +
+barplot_bipolar <- ggplot(bipolar, aes(x = Groups, y = YMRS_sum, fill = Groups)) +
+  stat_summary(geom = "bar", fun = "mean", position = position_dodge2(.95)) +
+  scale_x_discrete(labels = c("noEW" = "Control", "EW" = "Training")) +  # Labels ändern
+  labs(fill = "", y = "Manic Symptoms", x = "") +
+  theme_bw() +
+  theme(
+    legend.position = "none", 
+    panel.grid.major = element_blank(), 
+    panel.grid.minor = element_blank(), 
+    panel.border = element_blank(), 
+    axis.line = element_line(),
+    axis.title.x = element_text(face = "bold"),  
+    axis.title.y = element_text(face = "bold")
+  )
+
+bipolar$Groups = factor(bipolar$Groups, 
+                         levels = c("noEW", "EW"), 
+                         labels = c("Control", "Training"))
+
+scatterplot_bipolar <- ggplot(data = bipolar, aes(x = ISEL_sum, y = YMRS_sum, color = Groups)) +
   geom_point(size = 1) +
   geom_smooth(method = "lm") + 
-  labs(x = "Improvement Procrastination", y = "Improvement Addiction", color = "") +
+  scale_color_discrete(labels = c("noEW" = "Control", "EW" = "Training")) +  
+  labs(x = "Social Support", y = "Manic Symptoms", color = "Group") +  
   theme_bw() +
   theme(
     legend.position = "bottom", 
@@ -947,17 +994,20 @@ ggplot(data = smartphone, aes(y = t0_SAS_sum - t1_SAS_sum, x = t0_GPS_sum - t1_G
     panel.grid.major = element_blank(), 
     panel.grid.minor = element_blank(), 
     panel.border = element_blank(), 
-    axis.line = element_line() 
+    axis.line = element_line(),
+    axis.title.x = element_text(face = "bold"),  
+    axis.title.y = element_text(face = "bold") 
   )
 
+ggarrange(barplot_bipolar, scatter_bipolar, 
+          ncol = 2, nrow = 1, 
+          common.legend = TRUE, legend = "bottom")
 
 ```
 
 <hr> <!-- Horizontale Trennlinie -->
 
-## Einheit 5
-
-## Einheit 6
+## Stichprobenumfangsplanung
 
 
 

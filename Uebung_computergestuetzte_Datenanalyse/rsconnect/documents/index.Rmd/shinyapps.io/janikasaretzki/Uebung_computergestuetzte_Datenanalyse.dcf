@@ -5,7 +5,7 @@ account: janikasaretzki
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 12078746
-bundleId: 8695653
+bundleId: 9027034
 url: https://janikasaretzki.shinyapps.io/Uebung_computergestuetzte_Datenanalyse/
 version: 1
 asMultiple: FALSE
