@@ -1,0 +1,28 @@
+Question
+========
+Warum sollte man Prädiktoren ohne sinnvollen Nullpunkt zentrieren?
+
+Answerlist
+----------
+* Für eine bessere Interpretierbarkeit des y-Achsenabschnittes.
+* Durch die Zentrierung wird die Korrelation zwischen Prädiktoren reduziert.
+* Nach der Zentrierung erhält der Prädiktor einen neuen Nullpunkt, der den Mittelwert repräsentiert.
+* Zentrierung führt immer zu signifikanten Haupteffekten.
+* Zentrierung ist notwendig, um die Variabilität der Residuen zu verringern.
+
+Solution
+========
+Answerlist
+----------
+* Richtig. Zentrierung erleichtert die Interpretation des y-Achsenabschnittes.
+* Falsch. Die Korrelation zwischen Prädiktoren wird durch Zentrierung nicht notwendigerweise beeinflusst.
+* Richtig. Der neue Nullpunkt nach der Zentrierung entspricht dem Mittelwert des Prädiktors.
+* Falsch. Zentrierung garantiert keine signifikanten Haupteffekte.
+* Falsch. Zentrierung hat keinen direkten Einfluss auf die Variabilität der Residuen.
+
+Meta-information
+================
+exname: Zentrierung_Praediktoren
+extype: mchoice 
+exsolution: 10100
+exshuffle: TRUE

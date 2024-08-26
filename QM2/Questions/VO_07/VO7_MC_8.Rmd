@@ -1,0 +1,28 @@
+Question
+========
+Welche der folgenden Aussagen zur Interpretation von Dummy-Variablen in Interaktionsmodellen sind korrekt?
+
+Answerlist
+----------
+* Dummy-Variablen repräsentieren kategoriale Prädiktoren in Regressionsmodellen.
+* Ein Dummy-Interaktionseffekt deutet darauf hin, dass die Beziehung zwischen den Prädiktoren und der AV in einer spezifischen Kategorie unterschiedlich ist.
+* Der Intercept in einem Modell mit Dummy-Variablen repräsentiert den Mittelwert der AV in der Referenzkategorie.
+* Dummy-Variablen müssen zentriert werden, bevor sie in einem Interaktionsmodell verwendet werden.
+* Der Haupteffekt eines Dummy-Prädiktors ist die durchschnittliche Differenz in der AV zwischen den Gruppen der Dummy-Variable.
+
+Solution
+========
+Answerlist
+----------
+* Richtig. Dummy-Variablen kodieren kategoriale Prädiktoren.
+* Richtig. Ein signifikanter Dummy-Interaktionseffekt zeigt eine differenzierte Beziehung in einer Kategorie.
+* Richtig. Der Intercept bezieht sich auf den Mittelwert der Referenzkategorie.
+* Falsch. Dummy-Variablen müssen nicht zentriert werden.
+* Richtig. Der Haupteffekt zeigt die durchschnittliche Differenz zwischen den Gruppen.
+
+Meta-information
+================
+exname: Dummy_Variablen_Interpretation
+extype: mchoice 
+exsolution: 11101
+exshuffle: TRUE

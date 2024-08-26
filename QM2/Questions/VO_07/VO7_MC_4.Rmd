@@ -1,0 +1,28 @@
+Question
+========
+Welche der folgenden Aussagen beschreiben eine Moderation?
+
+Answerlist
+----------
+* Eine Moderation liegt vor, wenn der Effekt eines Prädiktors auf die AV von einem anderen Prädiktor abhängt.
+* Bei einer Moderation spricht man auch von einem Interaktionseffekt.
+* Die Moderation beschreibt den Effekt eines Prädiktors, wenn der andere Prädiktor konstant gehalten wird.
+* Ein signifikanter Moderationseffekt bedeutet immer, dass die Prädiktoren stark miteinander korrelieren.
+* Die Moderation kann nur zwischen zwei kontinuierlichen Prädiktoren untersucht werden.
+
+Solution
+========
+Answerlist
+----------
+* Richtig. Moderation bedeutet, dass der Effekt eines Prädiktors auf die AV von einem anderen abhängt.
+* Richtig. Moderation ist eine spezifische Form des Interaktionseffekts.
+* Falsch. Die Beschreibung eines Prädiktors bei konstantem anderen Prädiktor ist keine Moderation, sondern ein Haupteffekt.
+* Falsch. Ein signifikanter Moderationseffekt bedeutet nicht notwendigerweise, dass Prädiktoren stark korrelieren.
+* Falsch. Moderationseffekte können zwischen kontinuierlichen und/oder diskreten Prädiktoren untersucht werden.
+
+Meta-information
+================
+exname: Moderation_Interaktion
+extype: mchoice 
+exsolution: 11000
+exshuffle: TRUE

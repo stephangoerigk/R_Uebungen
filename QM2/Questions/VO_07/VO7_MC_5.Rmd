@@ -1,0 +1,28 @@
+Question
+========
+Welche der folgenden Aussagen zur Interpretation von Regressionskoeffizienten in einem Modell mit Interaktionen sind korrekt?
+
+Answerlist
+----------
+* Der Intercept ist der geschätzte Wert der AV, wenn alle Prädiktoren Null sind.
+* Ein positiver Koeffizient bei einer Interaktion bedeutet immer einen verstärkenden Effekt.
+* Die Interpretation von Haupteffekten bleibt auch bei vorhandenen Interaktionen unverändert.
+* Die Interpretation eines Prädiktors bei Interaktionen setzt voraus, dass die anderen Prädiktoren konstant gehalten werden.
+* Bei einem signifikanten Interaktionseffekt müssen Haupteffekte ignoriert werden.
+
+Solution
+========
+Answerlist
+----------
+* Richtig. Der Intercept repräsentiert den AV-Wert, wenn alle Prädiktoren Null sind.
+* Falsch. Ein positiver Koeffizient bei einer Interaktion kann sowohl verstärkend als auch abschwächend wirken, je nach den beteiligten Prädiktoren.
+* Falsch. Die Interpretation von Haupteffekten ändert sich, wenn Interaktionen im Modell sind.
+* Richtig. Die Interpretation von Interaktionen erfordert, dass andere Prädiktoren konstant gehalten werden.
+* Falsch. Haupteffekte dürfen auch bei signifikanten Interaktionen nicht ignoriert werden.
+
+Meta-information
+================
+exname: Regressionskoeffizienten_Interpretation
+extype: mchoice 
+exsolution: 10100
+exshuffle: TRUE
