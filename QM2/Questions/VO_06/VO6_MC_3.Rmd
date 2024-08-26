@@ -1,0 +1,28 @@
+Question
+========
+Was beschreibt das R-Quadrat $R^2$ in der Multiplen Regression?
+
+Answerlist
+----------
+* Das R-Quadrat gibt an, wie viel Prozent der Gesamtvarianz der abhängigen Variable durch die Prädiktoren erklärt werden.
+* Ein R-Quadrat von 0.5 bedeutet, dass 50% der Varianz der abhängigen Variable durch das Modell erklärt werden.
+* Ein R-Quadrat von 1 würde bedeuten, dass alle Messwerte genau auf unserer geraden liegen.
+* Das R-Quadrat kann nur Werte zwischen 0 und 1 annehmen.
+* Das R-Quadrat gibt an, wie gut das Modell auf neue Daten anwendbar ist. 
+
+Solution
+========
+Answerlist
+----------
+* Richtig. Das R-Quadrat beschreibt den Anteil der erklärten Varianz der abhängigen Variable durch das Modell.
+* Richtig. Ein R-Quadrat von 0.5 bedeutet, dass das Modell 50% der Gesamtvarianz der abhängigen Variable erklärt.
+* Richtig. Ein R-Quadrat von 1 würde bedeuten, dass alle Messwerte genau auf unserer geraden liegen.
+* Richtig. Das R-Quadrat liegt immer zwischen 0 und 1.
+* Falsch. Das R-Quadrat gibt nicht direkt an, wie gut das Modell auf neue Daten anwendbar ist; Es gibt uns lediglich Auskunft über die Modellpassung bezogen auf die vorliegenden Daten. 
+
+Meta-information
+================
+exname: R_Quadrat_Interpretation
+extype: mchoice 
+exsolution: 11110
+exshuffle: TRUE

@@ -1,0 +1,28 @@
+Question
+========
+Was bedeutet Homoskedastizität in der Multiplen Regression? (Wähle alle zutreffenden Antworten.)
+
+Answerlist
+----------
+* Homoskedastizität bedeutet, dass die Varianz der Residuen über alle Werte der Prädiktoren konstant ist.
+* Die Residuen sind normalverteilt.
+* Die Prädiktoren dürfen nicht stark miteinander korrelieren.
+* Homoskedastizität ist eine Voraussetzung für die Gültigkeit der Standardfehler und Konfidenzintervalle.
+* Homoskedastizität kann durch die Betrachtung der Residuenplots überprüft werden.
+
+Solution
+========
+Answerlist
+----------
+* Richtig. Homoskedastizität bedeutet, dass die Varianz der Residuen über alle Werte der Prädiktoren konstant ist.
+* Falsch. Die Normalverteilung der Residuen ist eine separate Voraussetzung.
+* Falsch. Diese Aussage bezieht sich auf Multikollinearität, nicht auf Homoskedastizität.
+* Richtig. Wenn Homoskedastizität nicht gegeben ist, sind die Standardfehler und Konfidenzintervalle möglicherweise nicht korrekt.
+* Richtig. Homoskedastizität kann durch Residuenplots überprüft werden, um sicherzustellen, dass keine Muster erkennbar sind.
+
+Meta-information
+================
+exname: Homoskedastizität
+extype: mchoice 
+exsolution: 10011
+exshuffle: TRUE

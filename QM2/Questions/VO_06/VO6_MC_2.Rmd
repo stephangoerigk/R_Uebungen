@@ -1,0 +1,28 @@
+Question
+========
+Wie interpretiert man den Y-Achsenabschnitt $a$ und die Steigungsparameter $\beta_1$ und $\beta_2$ in einem Multiplen Regressionsmodell?
+
+Answerlist
+----------
+* Der Y-Achsenabschnitt $a$ gibt den Wert der abhängigen Variablen an, wenn alle Prädiktoren gleich Null sind.
+* β1 gibt an, wie stark die abhängige Variable ansteigt, wenn der Wert des ersten Prädiktors um 1 Einheit zunimmt, während alle anderen Prädiktoren konstant gehalten werden.
+* β2 gibt an, wie stark die abhängige Variable abnimmt, wenn der Wert des zweiten Prädiktors um 1 Einheit abnimmt, unabhängig von den anderen Prädiktoren.
+* Der Y-Achsenabschnitt $a$ kann immer sinnvoll interpretiert werden, unabhängig von den Werten der Prädiktoren.
+* Die Steigungsparameter β1 und β2 beschreiben den Einfluss der jeweiligen Prädiktoren auf die abhängige Variable unter Kontrolle aller anderen Prädiktoren im Modell.
+
+Solution
+========
+Answerlist
+----------
+* Richtig. Der Y-Achsenabschnitt gibt den Wert der abhängigen Variablen an, wenn alle Prädiktoren gleich Null sind.
+* Richtig. $\beta_1$ zeigt den Einfluss des ersten Prädiktors auf die abhängige Variable an, wenn alle anderen Prädiktoren konstant gehalten werden.
+* Falsch. $\beta_2$ beschreibt den Einfluss des zweiten Prädiktors auf die abhängige Variable, aber die Richtung des Einflusses hängt vom Vorzeichen des Koeffizienten ab.
+* Falsch. Ob der Y-Achsenabschnitt sinnvoll interpretiert werden kann, hängt davon ab, ob die Werte der Prädiktoren inhaltlich sinnvoll sind.
+* Richtig. Die Steigungsparameter geben den Einfluss der jeweiligen Prädiktoren unter Kontrolle der anderen Prädiktoren an.
+
+Meta-information
+================
+exname: Interpretation_Regressionsparameter
+extype: mchoice 
+exsolution: 11001
+exshuffle: TRUE

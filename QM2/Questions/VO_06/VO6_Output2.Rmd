@@ -1,0 +1,46 @@
+```{r data generation, include=FALSE}
+
+
+n <- 120  # Anzahl der Teilnehmer
+
+# Generierung der Prädiktoren
+koerperliche_aktivitaet <- runif(n, min = 0, max = 10)  # Stunden körperlicher Aktivität pro Woche
+schlafqualitaet <- runif(n, min = 1, max = 5)  # Schlafqualität (1 = sehr schlecht, 5 = sehr gut)
+
+# Generierung der abhängigen Variable (Stressniveau)
+# Annahme: Mehr körperliche Aktivität und bessere Schlafqualität führen zu einem geringeren Stressniveau
+stressniveau <- 40 - 1.5 * koerperliche_aktivitaet - 4 * schlafqualitaet + rnorm(n, mean = 0, sd = 5)
+
+# Schritt 2: Modellerstellung
+model <- lm(stressniveau ~ koerperliche_aktivitaet + schlafqualitaet)
+
+# Ausgabe der Modellzusammenfassung
+summary = summary(model)
+
+
+
+```    
+
+Question
+========
+
+In einer psychologischen Studie wird untersucht, wie die Anzahl der Stunden, die eine Person pro Woche körperlich aktiv ist (Prädiktor 1), und das Ausmaß der Schlafqualität (Prädiktor 2) das empfundene Stressniveau (abhängige Variable) beeinflussen. Ziel ist es, zu prüfen, ob es einen signifikanten Zusammenhang zwischen diesen Prädiktoren und dem Stressniveau gibt. Sie erhalten folgenden Output:
+
+```{r}
+print(summary)
+```
+
+
+
+
+Solution
+========
+
+Sehr gut, das ist richtig. 
+
+Meta-information
+================
+extype: num
+exsolution: `r sol`
+exname: Output1
+extol: 0.00
