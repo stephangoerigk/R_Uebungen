@@ -911,17 +911,17 @@ exams2learnr("Questions/Einheit_2_MC_3.Rmd", allow_retry = TRUE)
 
 Willkommen im Abschnitt **Hypothesentests und Datenvisualisierung in R und RStudio**! 
 
-In diesem Abschnitt wird das in Kapitel zwei begonnene Projekt fortgesetzt. Ziel ist es, die z.T. bereits in Kapitel zwei ermittelten Werte grafisch darzustellen sowie Hypothesen mithilfe der Ihnen bekannten Methoden zu testen. Der zur Verfügung gestellte "bipolar"-Datensatz bleibt derselbe, enthält in der nun erneut über Github zu ladenden Version jedoch bereits die wichtigsten Werte:
+In diesem Abschnitt wird das in Kapitel zwei begonnene Projekt weitergeführt. Das Ziel ist es, die bereits teilweise in Kapitel zwei ermittelten Werte grafisch darzustellen und statistische Fragestellungen mit den Ihnen bekannten Methoden zu überprüfen. Der zur Verfügung gestellte Datensatz "bipolar" bleibt derselbe, enthält aber in der aktualisierten Version, die erneut über Github heruntergeladen werden muss, bereits die wichtigsten Werte:
 
-- Summenwert der Young Mania Rating Scale (YMRS; YMRS_sum)
-- Summenwert der Interpersonal Evaluation List (ISEL; ISEL_sum)
-- Summenwert der Subskalen der ISEL (ISEL_appraisal, ISEL_belonging, ISEL_tangible)
+* Gesamtwert der Young Mania Rating Scale (YMRS; YMRS_sum)
+* Gesamtwert der Interpersonal Evaluation List (ISEL; ISEL_sum)
+* Gesamtwerte der Subskalen der ISEL (ISEL_appraisal, ISEL_belonging, ISEL_tangible)
 
-**Bitte beachten Sie: Es ist möglich, dass Sie einzelne Berechnungen, die Sie bereits im zweiten Abschnitt durchgeführt haben, erneut durchführen müssen. Betrachten Sie dies als wertvolle Übung zur Festigung Ihrer Kenntnisse.**
+**Hinweis: Denken Sie bei der Anwendung statistischer Testverfahren auch daran, die eventuell notwendigen Voraussetzungen zu überprüfen.**
 
 <hr> <!-- Horizontale Trennlinie -->
 
-**Aufgabe 1:**Im Kontext des Ihnen vorliegenden bipolar-Datensatzes sind eine Vielzahl (statistischer) Fragestellungen möglicht. Beantworten sie folgende Fragestellungen anhand des Datensatzes. Dokumentieren Sie alle Auswertungsschritte und formulieren Sie zudem eine inhaltliche Interpretation der Ergebnisse.
+**Aufgabe 1:** Im Kontext des Ihnen vorliegenden bipolar-Datensatzes sind eine Vielzahl (statistischer) Fragestellungen möglicht. Beantworten sie folgende Fragestellungen anhand des Datensatzes. Dokumentieren Sie alle Auswertungsschritte und formulieren Sie zudem eine inhaltliche Interpretation der Ergebnisse.
 
 <hr> <!-- Horizontale Trennlinie -->
 
@@ -938,6 +938,8 @@ bipolar = read.csv("https://raw.githubusercontent.com/janikasaretzki/CFH_Dat/mai
 
 ```{r Hypothesentests1-solution}
   bipolar = read.csv("https://raw.githubusercontent.com/janikasaretzki/CFH_Dat/main/bipolar_scores.csv")
+
+# Fragestellung 1
 
 ```
 
