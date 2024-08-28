@@ -1,40 +1,48 @@
 ```{r data generation, include=FALSE}
 
+# Setze einen Seed für Reproduzierbarkeit
+set.seed(123)
 
-n <- sample(50:150, 1)
+# Anzahl der Beobachtungen
+n <- 200
 
-therapiestunden <- rnorm(n, mean = 20, sd = 5)  # Anzahl der Therapiestunden
-soziale_unterstützung <- rnorm(n, mean = 50, sd = 20)  # Ausmaß der sozialen Unterstützung
+# Simuliere unabhängige Variablen
+studierdauer <- runif(n, 1, 8)  # Studierdauer in Stunden, zwischen 1 und 8
+schlafqualitaet <- runif(n, 1, 10)  # Schlafqualität auf einer Skala von 1 bis 10
 
-# Generierung der abhängigen Variable (Depressionssymptome)
-depressionssymptome <- 50 - 0.6 * therapiestunden - 0.5 * soziale_unterstützung + rnorm(n, mean = 0, sd = 10)
+# Simuliere abhängige Variable mit Interaktionseffekt
+pruefungsleistung <- 50 + 5*studierdauer + 2*schlafqualitaet + 0.5*studierdauer*schlafqualitaet + rnorm(n, 0, 10)
 
-# Schritt 2: Modellerstellung
-model <- lm(depressionssymptome ~ therapiestunden + soziale_unterstützung)
+# Erstelle den Datensatz
+daten <- data.frame(studierdauer, schlafqualitaet, pruefungsleistung)
 
-# Ausgabe der Modellzusammenfassung
-summary = summary(model)
+# Führe die multiple Regression mit Interaktion durch
+modell <- lm(pruefungsleistung ~ studierdauer * schlafqualitaet, data = daten)
+
+# Zeige die Zusammenfassung des Modells
+summary = summary(modell)
+
 
 ```    
 
 Question
 ========
 
-In einer klinisch-psychologischen Studie wird untersucht, wie stark die Anzahl der Therapiestunden (Prädiktor 1) und das Ausmaß der sozialen Unterstützung (Prädiktor 2) das Ausmaß der Depressionssymptome (abhängige Variable) bei Patienten beeinflussen. Welche Aussagen zu zu diesem Output stimmen?
+In einer Studie soll der Einfluss von Studierdauer und Schlafqualität auf die Prüfungsleistung von Studierenden untersucht werden. Die Forscher haben Daten von 200 Studierenden gesammelt und eine multiple Regression mit Interaktionseffekt durchgeführt. Sie erhalten folgenden Output:
 
 ```{r echo=FALSE}
 summary
 ```
-
+Welche Aussagen zu diesem Output sind korrekt? 
 
 Answerlist
 ----------
-* Bei 0 Therapiestunden und keiner sozialen Unterstützung liegt die erwartete Depressivität einer Person der untersuchten Population bei `r round(summary$coefficients[1,1],2)`.
-* Wenn die Depressivität um eine Einheit steigt (Unter Konstanthaltung der anderen Prädiktoren), steigt die Anzahl der Therapiestunden um `r round(summary$coefficients[2,1],2)` Einheiten. 
-* Bei einer zusätzlichen Einheit sozialer Unterstützung sinkt die Depressivität im Schnitt um `r round(summary$coefficients[3,1],2)` Einheiten. 
-* Bei einer zusätzlichen Therapiestunde sinkt der Intercept um durchschnittlich `r round(summary$coefficients[2,1],2)`.
-* Insgesamt kann unser Modell `r round(summary$r.squared *100,2)` % der Varianz in der Abhängigen Variable erklären. 
-* Die Stichprobengröße lag bei `r n`
+* Die durchschnittliche Prüfungsleistung einer Person mit einer Schlafqualität von 0 und einer Studierdauer von 0 liegt bei 50.357.
+* Es liegt eine signifikante Moderation vor. Der Effekt der Studierdauer scheint von der Schlafqualität beeinflusst zu werden. 
+* Der positive Interaktionseffekt deutet darauf hin, dass der Einfluss der Studierdauer auf die Prüfungsleistung bei höherer Schlafqualität stärker ist. 
+* Unter Konstanthaltung der anderen Faktoren steigt die durchschnittliche Prüfungsleistung einer Person um 5.05, wenn die Schlafqualität um eine Einheit zunimmt.
+* Insgesamt kann unser Modell etwa 77,83 % der Varianz im Prädiktor Prüfungsleistung erklären. 
+* Der F-Test ist nicht signifiknat. 
 
 Solution
 ========
@@ -42,18 +50,12 @@ Solution
 Answerlist
 ----------
 
-* Richtig. Dies ist die korrekte Interpretation des y-Achsenabschnittes.
-* Falsch. Hier wurde die AV und die UV vertauscht.
-* Richtig. Das ist die korrekte Interpretation eines Steigungsparameters. 
-* Falsch. Der Intercept verändert sich nicht. Es verändert sich die abhängige Variable Y, in diesem Fall die Depressivität.
-* Richtig. Das ist die korrekte Interpretation von $R^2$
-* Richtig. Die Stichprobengröße in dieser Untersuchung lässt sich aus dem Output ableiten. Der Residual-Freiheitsgrad (Degrees of Freedom, DF) beträgt `r summary$df[2]`, wie im Abschnitt "Residual standard error: `r round(summary$sigma,3)` on `r summary$df[2]` degrees of freedom" angegeben. Da bei einer linearen Regression die Freiheitsgrade durch die Formel DF = N − $k$ − 1 berechnet werden, wobei N die Stichprobengröße und $k$ die Anzahl der Prädiktoren ist, können wir die Stichprobengröße wie folgt berechnen:
-
-
-`r summary$df[2]` = N - 2 - 1 -> 
-
-N = `r summary$df[2]` + 3 =  `r summary$df[2] + 3`
-
+* Richtig. Der Intercept von 50.3566 repräsentiert die erwartete Prüfungsleistung, wenn Studierdauer und Schlafqualität 0 sind.
+* Richtig. Es gibt einen signifikanten Interaktionseffekt (p = 0.000117), was auf eine Moderation hinweist.
+* Richtig. Der positive Koeffizient (0.5722) für die Interaktion bestätigt diese Interpretation.
+* Falsch. Der Koeffizient 5.0548 bezieht sich auf die Studierdauer, nicht auf die Schlafqualität.
+* Falsch. Das Multiple R-squared von 0.7783 bedeutet, dass etwa 77,83% der Varianz in der abhängigen Variable (Prüfungsleistung) erklärt wird, nicht im Prädiktor.
+* Falsch. Der F-Test ist signifikant (p-value: < 2.2e-16). 
 
 
 
@@ -62,5 +64,5 @@ Meta-information
 ================
 exname: Output1
 extype: mchoice 
-exsolution: 101011
+exsolution: 111000
 exshuffle: TRUE

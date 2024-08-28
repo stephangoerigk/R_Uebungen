@@ -1,58 +1,103 @@
 ```{r data generation, include=FALSE}
 
 
-n <- sample(50:150, 1)
+# Setze einen Seed für Reproduzierbarkeit
+set.seed(456)
 
-therapiestunden <- rnorm(n, mean = 20, sd = 5)  # Anzahl der Therapiestunden
-soziale_unterstützung <- rnorm(n, mean = 50, sd = 20)  # Ausmaß der sozialen Unterstützung
+# Anzahl der Beobachtungen
+n <- 300
 
-# Generierung der abhängigen Variable (Depressionssymptome)
-depressionssymptome <- 50 - 0.6 * therapiestunden - 0.5 * soziale_unterstützung + rnorm(n, mean = 0, sd = 10)
+# Simuliere unabhängige Variablen
+erfahrung <- runif(n, 1, 20)  # Berufserfahrung in Jahren, zwischen 1 und 20
+weiterbildung <- factor(rbinom(n, 1, 0.5), 
+                        levels = c(0, 1), 
+                        labels = c("Nein", "Ja"))
 
-# Schritt 2: Modellerstellung
-model <- lm(depressionssymptome ~ therapiestunden + soziale_unterstützung)
+# Simuliere abhängige Variable mit Interaktionseffekt
+gehalt <- 30000 + 1500*erfahrung + 
+          5000*(weiterbildung == "Ja") + 
+          500*erfahrung*(weiterbildung == "Ja") + 
+          rnorm(n, 0, 5000)
 
-# Ausgabe der Modellzusammenfassung
-summary = summary(model)
+# Erstelle den Datensatz
+daten <- data.frame(erfahrung, weiterbildung, gehalt)
+
+# Führe die multiple Regression mit Interaktion durch
+modell <- lm(gehalt ~ erfahrung * weiterbildung, data = daten)
+
+# Zeige die Zusammenfassung des Modells
+summary = summary(modell)
+
+
 
 ```    
 
 Question
 ========
 
-In einer klinisch-psychologischen Studie wird untersucht, wie stark die Anzahl der Therapiestunden (Prädiktor 1) und das Ausmaß der sozialen Unterstützung (Prädiktor 2) das Ausmaß der Depressionssymptome (abhängige Variable) bei Patienten beeinflussen. Welche Aussagen zu zu diesem Output stimmen?
+Ein Unternehmen möchte den Einfluss von Berufserfahrung (In Jahren) und Weiterbildung (Dichotom - Ja / Nein) auf das Jahresgehalt seiner Mitarbeitenden untersuchen. Es wurden Daten von 300 Mitarbeitenden erhoben und eine multiple Regression mit Interaktionseffekt durchgeführt. Sie erhalten folgenden Output:
+
 
 ```{r echo=FALSE}
 summary
 ```
-
+Welche Aussagen zu diesem Output stimmen? 
 
 Answerlist
 ----------
-* Bei 0 Therapiestunden und keiner sozialen Unterstützung liegt die erwartete Depressivität einer Person der untersuchten Population bei `r round(summary$coefficients[1,1],2)`.
-* Wenn die Depressivität um eine Einheit steigt (Unter Konstanthaltung der anderen Prädiktoren), steigt die Anzahl der Therapiestunden um `r round(summary$coefficients[2,1],2)` Einheiten. 
-* Bei einer zusätzlichen Einheit sozialer Unterstützung sinkt die Depressivität im Schnitt um `r round(summary$coefficients[3,1],2)` Einheiten. 
-* Bei einer zusätzlichen Therapiestunde sinkt der Intercept um durchschnittlich `r round(summary$coefficients[2,1],2)`.
-* Insgesamt kann unser Modell `r round(summary$r.squared *100,2)` % der Varianz in der Abhängigen Variable erklären. 
-* Die Stichprobengröße lag bei `r n`
+* Das erwartete Jahresgehalt eines Mitarbeiters ohne Berufserfahrung und ohne Weiterbildung beträgt 29714.44 €.
+* Für Mitarbeiter ohne Weiterbildung steigt das Gehalt im Durchschnitt um 1576.96 € pro Jahr Berufserfahrung.
+* Für Mitarbeiter mit Weiterbildung steigt das Gehalt im Durchschnitt um 1993.52 € pro Jahr Berufserfahrung.
+* Der Effekt der Berufserfahrung auf das Gehalt ist für Mitarbeiter mit Weiterbildung stärker als für Mitarbeiter ohne Weiterbildung.
+* Das Modell erklärt etwa 84.72% der Varianz im Jahresgehalt der Mitarbeiter.
+* Eine Mitarbeiterin mit 6 Jahren Berufserfahrung und vorhandener Weiterbildung könnte ein durchschnittliches Jahresgehalt von 41675.56 € erwarten
 
 Solution
 ========
-
 Answerlist
 ----------
+* Richtig. Der Intercept von 29714.44 € repräsentiert das erwartete Jahresgehalt eines Mitarbeiters ohne Berufserfahrung und ohne Weiterbildung.
+* Richtig. Dies entspricht dem Koeffizienten für "erfahrung", der das Gehalt um 1576.96 € pro Jahr Berufserfahrung ohne Weiterbildung erhöht.
+* Richtig. Für Mitarbeiter mit Weiterbildung steigt das Gehalt um 1576.96 € (Basis-Koeffizient für Erfahrung) + 416.56 € (Interaktionseffekt), was insgesamt 1993.52 € pro Jahr Berufserfahrung ergibt.
+* Richtig. Der positive Interaktionseffekt (416.56 €) zeigt, dass der Effekt der Berufserfahrung auf das Gehalt für Mitarbeiter mit Weiterbildung stärker ist als für Mitarbeiter ohne Weiterbildung.
+* Richtig. Das Multiple R-squared von 0.8472 entspricht 84.72% der erklärten Varianz im Jahresgehalt der Mitarbeiter.
+* Falsch. Eine Mitarbeiterin mit 6 Jahren Berufserfahrung und vorhandener Weiterbildung könnte ein durchschnittliches Jahresgehalt von 47897.01 € erwarten, nicht 41675.56 €. Um dies zu berechnen können wir einfach in unsere Regeressiongleichung einsetzen: 
 
-* Richtig. Dies ist die korrekte Interpretation des y-Achsenabschnittes.
-* Falsch. Hier wurde die AV und die UV vertauscht.
-* Richtig. Das ist die korrekte Interpretation eines Steigungsparameters. 
-* Falsch. Der Intercept verändert sich nicht. Es verändert sich die abhängige Variable Y, in diesem Fall die Depressivität.
-* Richtig. Das ist die korrekte Interpretation von $R^2$
-* Richtig. Die Stichprobengröße in dieser Untersuchung lässt sich aus dem Output ableiten. Der Residual-Freiheitsgrad (Degrees of Freedom, DF) beträgt `r summary$df[2]`, wie im Abschnitt "Residual standard error: `r round(summary$sigma,3)` on `r summary$df[2]` degrees of freedom" angegeben. Da bei einer linearen Regression die Freiheitsgrade durch die Formel DF = N − $k$ − 1 berechnet werden, wobei N die Stichprobengröße und $k$ die Anzahl der Prädiktoren ist, können wir die Stichprobengröße wie folgt berechnen:
+Die Regressionsgleichung für das Modell lautet:
 
+$$
+\text{Gehalt} = 29714.44 + 1576.96 \times \text{Erfahrung} + 6221.45 \times \text{Weiterbildung} + 416.56 \times (\text{Erfahrung} \times \text{Weiterbildung})
+$$
 
-`r summary$df[2]` = N - 2 - 1 -> 
+Für eine Mitarbeiterin mit 6 Jahren Berufserfahrung und vorhandener Weiterbildung (Weiterbildung = 1) berechnen wir das Gehalt wie folgt:
 
-N = `r summary$df[2]` + 3 =  `r summary$df[2] + 3`
+1. **Basiswert (Intercept)**: Der konstante Wert, wenn Erfahrung und Weiterbildung beide gleich Null sind, beträgt 29714.44 €.
+
+2. **Einfluss der Berufserfahrung (6 Jahre)**:
+   $$
+   1576.96 \times 6 = 9461.76
+   $$
+   Das ist der Anstieg des Gehalts durch 6 Jahre Berufserfahrung ohne Berücksichtigung der Weiterbildung.
+
+3. **Einfluss der Weiterbildung (Ja = 1)**:
+   $$
+   6221.45 \times 1 = 6221.45
+   $$
+   Das ist der zusätzliche Gehaltsanteil durch die Weiterbildung unabhängig von der Berufserfahrung.
+
+4. **Interaktion zwischen Berufserfahrung und Weiterbildung**:
+   $$
+   416.56 \times (6 \times 1) = 416.56 \times 6 = 2499.36
+   $$
+   Dies zeigt, dass die Weiterbildung den Effekt der Berufserfahrung verstärkt.
+
+**Zusammenfassung der Berechnung:**
+
+$$
+\text{Gehalt} = 29714.44 + 9461.76 + 6221.45 + 2499.36 = 47897.01
+$$
+
+Das tatsächliche Gehalt, das diese Mitarbeiterin erwarten kann, beträgt **47897.01 €**. Die falsche Zahl **41675.56 €** könnte aus einer fehlerhaften Berechnung stammen, bei der der Interaktionseffekt (2499.36 €) nicht berücksichtigt wurde.
 
 
 
@@ -60,7 +105,7 @@ N = `r summary$df[2]` + 3 =  `r summary$df[2] + 3`
 
 Meta-information
 ================
-exname: Output1
+exname: Output2
 extype: mchoice 
-exsolution: 101011
+exsolution: 111110
 exshuffle: TRUE
