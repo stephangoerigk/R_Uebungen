@@ -460,6 +460,9 @@ exams2learnr("Questions/VO_07/VO7_Output1.Rmd", allow_retry = TRUE)
 exams2learnr("Questions/VO_07/VO7_Output2.Rmd", allow_retry = TRUE)
 ```
 
+```{r VO7_Output3, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_07/VO7_Output3.Rmd", allow_retry = TRUE)
+```
 
 
 ## Einheit 8 - ANOVA mit Messwiederholung
