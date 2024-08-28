@@ -1,0 +1,28 @@
+Question
+========
+Welche der folgenden Aussagen zur ANOVA mit Messwiederholung trifft zu?
+
+Answerlist
+----------
+* Die ANOVA mit Messwiederholung wird verwendet, um Mittelwerte unabhängiger Gruppen zu vergleichen.
+* Die ANOVA mit Messwiederholung testet Veränderungen innerhalb derselben Gruppe über die Zeit.
+* Die ANOVA mit Messwiederholung vermeidet die α-Fehlerkumulierung.
+* Die ANOVA mit Messwiederholung führt zu einer Verringerung der Teststärke.
+* Die ANOVA mit Messwiederholung setzt voraus, dass alle Variablen nominal skaliert sind.
+
+Solution
+========
+Answerlist
+----------
+* Falsch. Die ANOVA mit Messwiederholung wird verwendet, um Mittelwerte innerhalb derselben Gruppe über verschiedene Zeitpunkte hinweg zu vergleichen, nicht zwischen unabhängigen Gruppen.
+* Richtig. Die ANOVA mit Messwiederholung prüft, ob sich die Ausprägung eines Merkmals zu verschiedenen Messzeitpunkten unterscheidet.
+* Richtig. Ein Vorteil der ANOVA mit Messwiederholung ist, dass sie die α-Fehlerkumulierung vermeidet.
+* Falsch. Die ANOVA mit Messwiederholung erhöht in der Regel die Teststärke, weil sie die Personenvarianz berücksichtigt.
+* Falsch. Die ANOVA mit Messwiederholung erfordert in der Regel eine intervallskalierte abhängige Variable.
+
+Meta-information
+================
+exname: ANOVA_Messwiederholung_Grundlagen
+extype: mchoice 
+exsolution: 01100
+exshuffle: TRUE

@@ -467,6 +467,54 @@ exams2learnr("Questions/VO_07/VO7_Output3.Rmd", allow_retry = TRUE)
 
 ## Einheit 8 - ANOVA mit Messwiederholung
 
+```{r VO8_MC_1, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_08/VO8_MC_1.Rmd", allow_retry = TRUE)
+```
+
+```{r VO8_MC_2, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_08/VO8_MC_2.Rmd", allow_retry = TRUE)
+```
+
+```{r VO8_MC_3, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_08/VO8_MC_3.Rmd", allow_retry = TRUE)
+```
+
+```{r VO8_MC_4, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_08/VO8_MC_4.Rmd", allow_retry = TRUE)
+```
+
+```{r VO8_MC_5, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_08/VO8_MC_5.Rmd", allow_retry = TRUE)
+```
+
+```{r VO8_MC_6, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_08/VO8_MC_6.Rmd", allow_retry = TRUE)
+```
+
+```{r VO8_MC_7, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_08/VO8_MC_7.Rmd", allow_retry = TRUE)
+```
+
+```{r VO8_MC_8, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_08/VO8_MC_8.Rmd", allow_retry = TRUE)
+```
+
+### Übungsaufgaben zur Interpretation von R - Outputs
+
+```{r VO7_Output1, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_08/VO8_Output1.Rmd", allow_retry = TRUE)
+```
+
+```{r VO7_Output2, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_08/VO8_Output2.Rmd", allow_retry = TRUE)
+```
+
+```{r VO7_Output3, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_08/VO8_Output3.Rmd", allow_retry = TRUE)
+```
+
+
+
 ## Einheit 9 - Mixed Designs
 
 ## Einheit 10 - Verfahren für Nominaldaten - χ<sup>2</sup>-Test

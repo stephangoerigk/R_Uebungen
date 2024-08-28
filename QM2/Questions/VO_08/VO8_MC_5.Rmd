@@ -1,0 +1,28 @@
+Question
+========
+Welche Bedeutung hat der Mauchly-Test in der ANOVA mit Messwiederholung?
+
+Answerlist
+----------
+* Er testet, ob die Varianz der abhängigen Variablen über die Zeitpunkte hinweg homogen ist.
+* Er prüft, ob die Annahme der Sphärizität verletzt wurde.
+* Ein signifikanter Mauchly-Test bedeutet, dass die Annahme der Sphärizität verletzt ist.
+* Der Mauchly-Test prüft die Homogenität der Varianzen zwischen den Gruppen.
+* Der Mauchly-Test wird durchgeführt, um die Normalverteilung der Residuen zu überprüfen.
+
+Solution
+========
+Answerlist
+----------
+* Falsch. Der Mauchly-Test prüft nicht direkt die Homogenität der Varianzen, sondern die Sphärizität.
+* Richtig. Der Mauchly-Test prüft, ob die Annahme der Sphärizität verletzt wurde.
+* Richtig. Ein signifikanter Mauchly-Test zeigt an, dass die Annahme der Sphärizität verletzt ist, und entsprechende Korrekturverfahren müssen angewendet werden.
+* Falsch. Der Mauchly-Test bezieht sich auf die Homogenität der Korrelationen (Sphärizität), nicht auf die Varianzen zwischen Gruppen.
+* Falsch. Der Mauchly-Test hat nichts mit der Überprüfung der Normalverteilung der Residuen zu tun.
+
+Meta-information
+================
+exname: ANOVA_Messwiederholung_MauchlyTest
+extype: mchoice 
+exsolution: 01100
+exshuffle: TRUE

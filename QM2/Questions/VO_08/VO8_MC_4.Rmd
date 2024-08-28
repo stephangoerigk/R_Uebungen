@@ -1,0 +1,28 @@
+Question
+========
+Wie wird die Gesamtvarianz bei der ANOVA mit Messwiederholung zerlegt?
+
+Answerlist
+----------
+* Die Gesamtvarianz wird in Varianz zwischen den Messzeitpunkten, Personenvarianz und Residualvarianz zerlegt.
+* Die Gesamtvarianz wird ausschließlich in systematische Varianz und Fehlerterm zerlegt.
+* Die Gesamtvarianz wird in die Varianz innerhalb und zwischen den Gruppen zerlegt.
+* Die Gesamtvarianz wird in Varianz zwischen den Gruppen und innerhalb der Gruppen zerlegt.
+* Die Gesamtvarianz wird in Varianz innerhalb der Personen und Residualvarianz zerlegt.
+
+Solution
+========
+Answerlist
+----------
+* Richtig. Die Gesamtvarianz wird in Varianz zwischen den Messzeitpunkten, Personenvarianz und Residualvarianz zerlegt.
+* Falsch. Diese Aufteilung ist zu allgemein und trifft nicht die spezielle Zerlegung der ANOVA mit Messwiederholung.
+* Falsch. Dies trifft auf die einfache ANOVA zu, nicht auf die ANOVA mit Messwiederholung.
+* Falsch. Diese Zerlegung trifft auf die einfache ANOVA zu, nicht auf die ANOVA mit Messwiederholung.
+* Falsch. Die Personenvarianz wird separat betrachtet und die Residualvarianz schließt nicht die gesamte Varianz ein.
+
+Meta-information
+================
+exname: ANOVA_Messwiederholung_Varianzzerlegung
+extype: mchoice 
+exsolution: 10000
+exshuffle: TRUE

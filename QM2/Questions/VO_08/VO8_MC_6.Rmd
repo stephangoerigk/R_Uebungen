@@ -1,0 +1,30 @@
+Question
+========
+Welche der folgenden Aussagen beschreibt die Bedeutung der Sphärizität in der ANOVA mit Messwiederholung?
+
+Answerlist
+----------
+* Sphärizität bedeutet, dass die Varianzen zwischen den Messzeitpunkten gleich sind.
+* Sphärizität bezieht sich auf die Homogenität der Korrelationen zwischen den Messzeitpunkten.
+* Verletzungen der Sphärizität führen zu einer Überschätzung des F-Werts.
+* Sphärizität muss nur getestet werden, wenn es mehr als zwei Messzeitpunkte gibt.
+* Eine Verletzung der Sphärizität kann durch Korrekturverfahren wie die Greenhouse-Geisser-Korrektur berücksichtigt werden.
+* Der Mauchly-Test wird verwendet, um die Sphärizität zu prüfen.
+
+Solution
+========
+Answerlist
+----------
+* Falsch. Sphärizität bezieht sich nicht direkt auf die Varianzen, sondern auf die Korrelationen.
+* Richtig. Sphärizität bedeutet, dass die Korrelationen zwischen den Messzeitpunkten homogen sind.
+* Richtig. Verletzungen der Sphärizität führen in der Regel zu einer Überschätzung des F-Werts, wenn keine Korrekturen angewendet werden.
+* Richtig. Die Sphärizität muss nur getestet werden, wenn es mehr als zwei Messzeitpunkte gibt, da bei zwei Zeitpunkten nur eine Korrelation existiert.
+* Richtig. Korrekturverfahren wie die Greenhouse-Geisser-Korrektur können angewendet werden, um die Verzerrung des F-Werts zu reduzieren, wenn die Sphärizität verletzt ist.
+* Richtig. Der Mauchly-Test ist das Standardverfahren, um die Annahme der Sphärizität zu prüfen.
+
+Meta-information
+================
+exname: ANOVA_Messwiederholung_Sphaerizitaet
+extype: mchoice 
+exsolution: 011111
+exshuffle: TRUE

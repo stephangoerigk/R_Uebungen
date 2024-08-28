@@ -1,0 +1,30 @@
+Question
+========
+Welche Aussagen zur rmANOVA sind korrekt?
+
+Answerlist
+----------
+* Bei einem signifikanten Ergebnis wissen wir, zwischen welchen Messzeitpunkten Unterschiede bestehen.
+* Die Signifikanzprüfung geschieht mit einem Omnibustest.
+* Die ANOVA mit Messwiederholung funktioniert nur bis ≤ 5 Messzeitpunkte.
+* Der exakte Wert der Personenvarianz ist für die Berechnung der rmANOVA irrelevant.
+* Ein Tukey-Test kann uns Informationen darüber geben, zwischen welchen Zeitpunkten die signifikanten Unterschiede vorliegen.
+* Die rmANOVA untersucht ein between-subject design.
+
+Solution
+========
+Answerlist
+----------
+* Falsch. Ein signifikantes Ergebnis bei der rmANOVA zeigt an, dass es Unterschiede gibt, aber nicht zwischen welchen spezifischen Messzeitpunkten. Dafür sind Post-Hoc-Tests wie der Tukey-Test erforderlich.
+* Richtig. Die Signifikanzprüfung bei der rmANOVA erfolgt in der Regel durch einen Omnibustest, der prüft, ob es Unterschiede zwischen den Messzeitpunkten gibt.
+* Falsch. Die ANOVA mit Messwiederholung ist nicht auf eine bestimmte Anzahl von Messzeitpunkten beschränkt und kann für beliebig viele Zeitpunkte angewendet werden.
+* Richtig. Die rmANOVA berücksichtigt die Personenvarianz, aber der exakte Wert ist nicht entscheidend für die Durchführung des Tests.
+* Richtig. Ein Tukey-Test kann durchgeführt werden, um festzustellen, zwischen welchen Messzeitpunkten die signifikanten Unterschiede bestehen.
+* Falsch. Die rmANOVA untersucht ein within-subject design, bei dem dieselben Personen über mehrere Zeitpunkte hinweg untersucht werden.
+
+Meta-information
+================
+exname: rmANOVA_Grundlagen
+extype: mchoice 
+exsolution: 010110
+exshuffle: TRUE
