@@ -1,0 +1,28 @@
+Question
+========
+Wie wird die Residualvarianz in der ANOVA mit Messwiederholung geschätzt?
+
+Answerlist
+----------
+* Über die Abweichungen der gemessenen Werte von den erwarteten Werten.
+* Durch die Varianz der Wechselwirkung zwischen Messwiederholungsfaktor und Personenfaktor.
+* Über die Varianz der Unterschiede zwischen den Personenmittelwerten.
+* Durch die Varianz der Mittelwerte zu jedem Messzeitpunkt.
+* Sie wird als Differenz zwischen systematischer und zufälliger Varianz berechnet.
+
+Solution
+========
+Answerlist
+----------
+* Richtig. Die Residualvarianz wird geschätzt, indem die Abweichungen der gemessenen Werte von den erwarteten Werten berechnet werden.
+* Richtig. Diese Varianz wird durch die Wechselwirkung zwischen Messwiederholungsfaktor und Personenfaktor bestimmt.
+* Falsch. Die Personenvarianz wird separat geschätzt, nicht als Residualvarianz.
+* Falsch. Die Varianz der Mittelwerte wird verwendet, um die systematische Varianz zu schätzen, nicht die Residualvarianz.
+* Falsch. Die Residualvarianz ist nicht einfach die Differenz zwischen systematischer und zufälliger Varianz, sondern basiert auf der Wechselwirkung zwischen den Faktoren.
+
+Meta-information
+================
+exname: ANOVA_Messwiederholung_Residualvarianz
+extype: mchoice 
+exsolution: 11000
+exshuffle: TRUE

@@ -1,0 +1,30 @@
+Question
+========
+Was sind Unterschiede zwischen dem Wide-Format und dem Long-Format in der Datenstruktur von Datensätzen? 
+
+Answerlist
+----------
+* Im Wide-Format hat jede Variable eine eigene Zeile.
+* Das Wide-Format ermöglicht uns eine übersichtliche Sicht auf die Daten. 
+* Im Long-Format hat jede Person eine Zeile (Alle Messwerte einer Person werden in einer Zeile dargestellt).
+* Beim Long-Format muss über eine ID Variable jede Messung eindeutig einer Person zugeordnet werden. 
+* Das Long-Format ist für Messwiederholungen besser geeignet, da es jede Messung in einer eigenen Zeile abbildet.
+
+Solution
+========
+Answerlist
+----------
+* Falsch. Im Wide-Format hat jede Variable eine eigene Spalte, nicht Zeile.
+* Richtig. Das Wide-Format ermöglicht uns eine übersichtliche Sicht auf die Daten, insbesondere wenn es viele Variablen gibt.
+* Falsch. im Wide-Format hat jede Person eine Zeile.
+* Richtig. Dadurch, dass nicht wie beim Wide-Format jede Person in einer Zeile dargestellt wird, müssen die einzelnen Messswerte einer Person über die ID Variable zugeordnet werden.  
+* Richtig. Das Long-Format ist besonders geeignet für Messwiederholungen.
+
+
+
+Meta-information
+================
+exname: Datenstruktur_Wide_vs_Long
+extype: mchoice 
+exsolution: 01011
+exshuffle: TRUE

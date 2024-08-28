@@ -1,0 +1,28 @@
+Question
+========
+Welche der folgenden Voraussetzungen muss für die ANOVA mit Messwiederholung erfüllt sein?
+
+Answerlist
+----------
+* Die abhängige Variable muss intervallskaliert sein.
+* Die Messwerte in allen Bedingungen müssen unabhängig voneinander sein.
+* Es muss eine Annahme homogener Korrelationen zwischen den Stufen des Messwiederholungsfaktors bestehen.
+* Die Varianz der abhängigen Variablen muss über alle Zeitpunkte hinweg gleich sein (Varianzhomogenität).
+* Es darf kein Multikollinearitätsproblem vorliegen. 
+
+Solution
+========
+Answerlist
+----------
+* Richtig. Die abhängige Variable sollte intervallskaliert sein, damit die ANOVA mit Messwiederholung sinnvoll angewendet werden kann.
+* Falsch. Bei der ANOVA mit Messwiederholung sind die Messwerte explizit nicht unabhängig voneinander.
+* Richtig. Die Annahme homogener Korrelationen (Sphärizität) ist eine wichtige Voraussetzung der ANOVA mit Messwiederholung.
+* Richtig. Varianzhomogenität ist eine weitere Voraussetzung für die ANOVA mit Messwiederholung.
+* Falsch. Multikollinearit ist bei der multiplen Regression zu prüfen. 
+
+Meta-information
+================
+exname: ANOVA_Messwiederholung_Voraussetzungen
+extype: mchoice 
+exsolution: 10110
+exshuffle: TRUE
