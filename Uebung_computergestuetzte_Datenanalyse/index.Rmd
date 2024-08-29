@@ -932,20 +932,116 @@ In diesem Abschnitt wird das in Kapitel zwei begonnene Projekt weitergeführt. D
 **Fragestellung 3:** Spielt die Güte des sozialen Supportsystems vor dem Hintergrund der Erkennung von Frühwarnzeichen eine gesonderte Rolle?
 
 ```{r Hypothesentests1, exercise=TRUE}
+
 bipolar = read.csv("https://raw.githubusercontent.com/janikasaretzki/CFH_Dat/main/bipolar_scores.csv")
 
 ```
 
 ```{r Hypothesentests1-solution}
-  bipolar = read.csv("https://raw.githubusercontent.com/janikasaretzki/CFH_Dat/main/bipolar_scores.csv")
+
+bipolar = read.csv("https://raw.githubusercontent.com/janikasaretzki/CFH_Dat/main/bipolar_scores.csv")
 
 # Fragestellung 1
+## T-test für unabhängige Stichproben
+
+## Voraussetzungen prüfen
+# 1. Normalverteilung (NV) der Variable "YMRS_sum" in beiden Gruppen prüfen
+shapiro.test(bipolar$YMRS_sum[bipolar$Groups == "noEW"]) # Annahme der NV ist nicht verletzt (Test n.s.)
+shapiro.test(bipolar$YMRS_sum[bipolar$Groups == "EW"]) # Annahme der NV ist nicht verletzt (Test n.s.)
+
+# 2. Varianzhomogenität prüfen
+library(car)
+leveneTest(YMRS_sum ~ Groups, data = bipolar) # Annahme der NV ist nicht verletzt (Test n.s.)
+
+## T-test für unabhängige Stichproben
+t.test(YMRS_sum ~ Groups, data = bipolar, var.equal = TRUE)
+
+library(effsize)
+cohen.d(YMRS_sum ~ Groups, data = bipolar)
+
+# M sollte immer mit SD berichtet werden (M aus "t.test()"-Funktion ersichtlich)
+round(sd(bipolar$YMRS_sum[bipolar$Groups == "EW"]), 2) 
+round(sd(bipolar$YMRS_sum[bipolar$Groups == "noEW"]), 2)
+
+# Das Ergebnis des unabhängigen t-Tests zeigt, dass die Symptomatik im Folgemonat, gemessen durch den YMRS-Summenwert, in der Trainingsgruppe (M = 26.85, SD = 4.53) signifikant niedriger ist als in der Gruppe ohne Training (M = 31.20, SD = 4.40; t(126) = -5.49, p < .001). Die berechnete Effektstärke (Cohen's d = -0.97, 95% CI [-1.34, -0.60]) weist nach den Kriterien von Cohen (1988) auf einen großen Effekt hin.
+
+
+# Fragestellung 2
+## Pearson-Korrelation
+
+## Voraussetzungen prüfen
+# 1. Normalverteilung (NV) der Variablen "YMRS_sum" und "ISEL_sum" prüfen
+shapiro.test(bipolar$YMRS_sum) # Annahme der NV ist nicht verletzt (Test n.s.)
+shapiro.test(bipolar$ISEL_sum) # Annahme der NV ist nicht verletzt (Test n.s.)
+
+## Pearson-Korrelation
+cor.test(bipolar$YMRS_sum, bipolar$ISEL_sum, method = "pearson") # Der Pearson-Korrelationskoeffizient zeigt, dass es einen signifikanten negativen Zusammenhang zwischen der Güte des sozialen Supportsystems (ISEL_sum) und der Symptomatik (YMRS_sum) gibt (r = -0.45, p < .001). Dies bedeutet, dass ein höherer sozialer Support mit einer geringeren Symptomatik verbunden ist. Nach Cohen (1988) handelt es sich hierbei um einen moderaten Effekt.
+
+# Grafische Darstellung
+library(ggplot2)
+ggplot(data = bipolar, aes(x = ISEL_sum, y = YMRS_sum)) + 
+  geom_point(size = 1.0) +
+  geom_smooth(method = "lm", color = "black", size = 0.5) + 
+  labs(x = "Sozialer Support", y = "Symptomschwere Manie") +
+  theme_bw() +
+  theme(
+    panel.grid.major = element_blank(), 
+    panel.grid.minor = element_blank(), 
+    panel.border = element_blank(),     
+    axis.line = element_line(),         
+    axis.title.x = element_text(face = "bold"), 
+    axis.title.y = element_text(face = "bold")
+  )
+
+
+# Fragestellung 3
+## Pearson-Korrelation (differenziert nach Gruppen)
+
+## Voraussetzungen prüfen
+# 1. Normalverteilung (NV) der Variablen in beiden Gruppen prüfen
+# YMRS_sum (siehe Fragestellung 1)
+shapiro.test(bipolar$YMRS_sum[bipolar$Groups == "noEW"]) # Annahme der NV ist nicht verletzt (Test n.s.)
+shapiro.test(bipolar$YMRS_sum[bipolar$Groups == "EW"]) # Annahme der NV ist nicht verletzt (Test n.s.)
+
+# ISEL_sum
+shapiro.test(bipolar$ISEL_sum[bipolar$Groups == "noEW"]) # Annahme der NV ist verletzt (p = 0.039)
+
+# Anzahl der Personen in Gruppe "no Training"
+length(bipolar$Groups == "kein Training") # n = 128, d.h. nach dem zentralen Grenzwerttheorem kann trotz Verletzung der NV parametrisch getestet werden (Annahme, dass Charakteristika der NV bei N ≥ 30 gegeben sind). Alternative: Nonparametrische Verfahren
+
+shapiro.test(bipolar$ISEL_sum[bipolar$Groups == "EW"]) # Annahme der NV ist nicht verletzt (Test n.s.)
+
+## Pearson-Korrelation
+cor.test(bipolar$ISEL_sum[bipolar$Groups == "EW"], bipolar$YMRS_sum[bipolar$Groups == "EW"], method = "pearson") # Der Pearson-Korrelationskoeffizient zeigt, dass es bei Personen, die ein Training zur Erkennung von Frühwarnzeichen erhalten haben, einen signifikanten negativen Zusammenhang zwischen der Güte des sozialen Supportsystems (ISEL_sum) und der Symptomatik (YMRS_sum) gibt (r = -0.80, p < .001). Dies bedeutet, dass ein höherer sozialer Support in dieser Gruppe mit einer geringeren Symptomatik verbunden ist. Nach Cohen (1988) handelt es sich hierbei um einen großen Effekt.
+
+cor.test(bipolar$ISEL_sum[bipolar$Groups == "noEW"], bipolar$YMRS_sum[bipolar$Groups == "noEW"], method = "pearson") # Der Pearson-Korrelationskoeffizient zeigt, dass es bei Personen, die kein Training zur Erkennung von Frühwarnzeichen erhalten haben, keinen signifikanten Zusammenhang zwischen der Güte des sozialen Supportsystems (ISEL_sum) und der Symptomatik (YMRS_sum) gibt (r = -0.18, p = 0.164).
+
+# Mögliche Diskussion dieser dritten Fragestellung: Zusammenfassend zeigen die Ergebnisse, dass bei Personen, die ein Training zur Erkennung von Frühwarnzeichen erhalten haben, ein starker und signifikanter negativer Zusammenhang zwischen sozialem Support und Symptomschwere besteht, während bei Personen ohne solches Training kein signifikanter Zusammenhang festgestellt wurde. Dies deutet darauf hin, dass das Training möglicherweise eine Schlüsselrolle dabei spielt, wie effektiv sozialer Support zur Reduktion der Symptomschwere beiträgt.
+
+# Grafische Darstellung
+ggplot(data = bipolar, aes(x = ISEL_sum, y = YMRS_sum)) + 
+  geom_point(size = 1.0, aes(shape = Groups)) +
+  geom_smooth(method = "lm", color = "black", size = 0.5) + 
+  labs(x = "Sozialer Support", y = "Symptomschwere Manie", shape = "Gruppen") +
+  scale_shape_manual(values = c(1, 2), labels = c("Training", "Kein Training")) +
+  theme_bw() +
+  theme(
+    legend.position = "bottom", 
+    legend.box = "horizontal",  
+    panel.grid.major = element_blank(), 
+    panel.grid.minor = element_blank(), 
+    panel.border = element_blank(),     
+    axis.line = element_line(),         
+    axis.title.x = element_text(face = "bold"), 
+    axis.title.y = element_text(face = "bold")  
+  ) + 
+  guides(shape = guide_legend(title.position = "top", title.hjust = 0.5)) 
 
 ```
 
 <hr> <!-- Horizontale Trennlinie -->
 
-**Aufgabe 2:** Im Folgenden finden Sie ein Beispiel, wie Sie die aus Ihren Berechnungen gewonnenen Erkenntnisse visualisieren könnten.
+**Aufgabe 2:** Im Folgenden finden Sie (neben den bereits in der Lösung zu Aufgabe 1 beschriebenen Beispielen) ein Beispiel, wie Sie die aus Ihren Berechnungen gewonnenen Erkenntnisse visualisieren könnten.
 
 Versuchen Sie bitte, die Grafik nachzucoden.
 
@@ -967,7 +1063,7 @@ library(ggpubr)
 
 barplot_bipolar <- ggplot(bipolar, aes(x = Groups, y = YMRS_sum, fill = Groups)) +
   stat_summary(geom = "bar", fun = "mean", position = position_dodge2(.95)) +
-  scale_x_discrete(labels = c("noEW" = "Control", "EW" = "Training")) +  # Labels ändern
+  scale_x_discrete(labels = c("noEW" = "Control", "EW" = "Training")) +  
   labs(fill = "", y = "Manic Symptoms", x = "") +
   theme_bw() +
   theme(
@@ -980,11 +1076,7 @@ barplot_bipolar <- ggplot(bipolar, aes(x = Groups, y = YMRS_sum, fill = Groups))
     axis.title.y = element_text(face = "bold")
   )
 
-bipolar$Groups = factor(bipolar$Groups, 
-                         levels = c("noEW", "EW"), 
-                         labels = c("Control", "Training"))
-
-scatterplot_bipolar <- ggplot(data = bipolar, aes(x = ISEL_sum, y = YMRS_sum, color = Groups)) +
+scatterplot_bipolar = ggplot(data = bipolar, aes(x = ISEL_sum, y = YMRS_sum, color = Groups)) +
   geom_point(size = 1) +
   geom_smooth(method = "lm") + 
   scale_color_discrete(labels = c("noEW" = "Control", "EW" = "Training")) +  
@@ -1001,7 +1093,54 @@ scatterplot_bipolar <- ggplot(data = bipolar, aes(x = ISEL_sum, y = YMRS_sum, co
     axis.title.y = element_text(face = "bold") 
   )
 
-ggarrange(barplot_bipolar, scatter_bipolar, 
+ggarrange(barplot_bipolar, scatterplot_bipolar, 
+          ncol = 2, nrow = 1, 
+          common.legend = TRUE, legend = "bottom")
+
+
+###
+
+# Definiere die Farben entsprechend der korrekten Zuordnung
+group_colors <- c("EW" = "red", "noEW" = "blue")
+
+# Barplot
+barplot_bipolar <- ggplot(bipolar, aes(x = Groups, y = YMRS_sum, fill = Groups)) +
+  stat_summary(geom = "bar", fun = "mean", position = position_dodge2(.95)) +
+  scale_x_discrete(labels = c("noEW" = "Control", "EW" = "Training")) +  
+  scale_fill_manual(values = group_colors) +  # Korrekte Farbanpassung basierend auf den Daten-Levels
+  labs(fill = "", y = "Manic Symptoms", x = "") +
+  theme_bw() +
+  theme(
+    legend.position = "none", 
+    panel.grid.major = element_blank(), 
+    panel.grid.minor = element_blank(), 
+    panel.border = element_blank(), 
+    axis.line = element_line(),
+    axis.title.x = element_text(face = "bold"),  
+    axis.title.y = element_text(face = "bold")
+  )
+
+# Scatterplot
+scatterplot_bipolar <- ggplot(data = bipolar, aes(x = ISEL_sum, y = YMRS_sum, color = Groups)) +
+  geom_point(size = 1) +
+  geom_smooth(method = "lm") + 
+  scale_color_manual(values = group_colors) +  # Korrekte Farbanpassung basierend auf den Daten-Levels
+  scale_x_discrete(labels = c("noEW" = "Control", "EW" = "Training")) +  
+  labs(x = "Social Support", y = "Manic Symptoms", color = "Group") +  
+  theme_bw() +
+  theme(
+    legend.position = "bottom", 
+    legend.box = "horizontal",
+    panel.grid.major = element_blank(), 
+    panel.grid.minor = element_blank(), 
+    panel.border = element_blank(), 
+    axis.line = element_line(),
+    axis.title.x = element_text(face = "bold"),  
+    axis.title.y = element_text(face = "bold") 
+  )
+
+# Gemeinsame Darstellung der Plots
+ggarrange(barplot_bipolar, scatterplot_bipolar, 
           ncol = 2, nrow = 1, 
           common.legend = TRUE, legend = "bottom")
 
