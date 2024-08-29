@@ -911,7 +911,7 @@ exams2learnr("Questions/Einheit_2_MC_3.Rmd", allow_retry = TRUE)
 
 Willkommen im Abschnitt **Hypothesentests und Datenvisualisierung in R und RStudio**! 
 
-In diesem Abschnitt wird das in Kapitel zwei begonnene Projekt weitergeführt. Das Ziel ist es, die bereits teilweise in Kapitel zwei ermittelten Werte grafisch darzustellen und statistische Fragestellungen mit den Ihnen bekannten Methoden zu überprüfen. Der zur Verfügung gestellte Datensatz "bipolar" bleibt derselbe, enthält aber in der aktualisierten Version, die erneut über Github heruntergeladen werden muss, bereits die wichtigsten Werte:
+In diesem Abschnitt wird das im Kapitel "Datenvorverarbeitung" (Teil 2) begonnene Projekt weitergeführt. Das Ziel ist es, die bereits teilweise in Kapitel zwei ermittelten Werte grafisch darzustellen und statistische Fragestellungen mit den Ihnen bekannten Methoden zu überprüfen. Der zur Verfügung gestellte Datensatz "bipolar" bleibt derselbe, enthält aber in der aktualisierten Version, die erneut über Github heruntergeladen werden muss, bereits die wichtigsten Werte:
 
 * Gesamtwert der Young Mania Rating Scale (YMRS; YMRS_sum)
 * Gesamtwert der Interpersonal Evaluation List (ISEL; ISEL_sum)
@@ -977,22 +977,6 @@ shapiro.test(bipolar$ISEL_sum) # Annahme der NV ist nicht verletzt (Test n.s.)
 ## Pearson-Korrelation
 cor.test(bipolar$YMRS_sum, bipolar$ISEL_sum, method = "pearson") # Der Pearson-Korrelationskoeffizient zeigt, dass es einen signifikanten negativen Zusammenhang zwischen der Güte des sozialen Supportsystems (ISEL_sum) und der Symptomatik (YMRS_sum) gibt (r = -0.45, p < .001). Dies bedeutet, dass ein höherer sozialer Support mit einer geringeren Symptomatik verbunden ist. Nach Cohen (1988) handelt es sich hierbei um einen moderaten Effekt.
 
-# Grafische Darstellung
-library(ggplot2)
-ggplot(data = bipolar, aes(x = ISEL_sum, y = YMRS_sum)) + 
-  geom_point(size = 1.0) +
-  geom_smooth(method = "lm", color = "black", size = 0.5) + 
-  labs(x = "Sozialer Support", y = "Symptomschwere Manie") +
-  theme_bw() +
-  theme(
-    panel.grid.major = element_blank(), 
-    panel.grid.minor = element_blank(), 
-    panel.border = element_blank(),     
-    axis.line = element_line(),         
-    axis.title.x = element_text(face = "bold"), 
-    axis.title.y = element_text(face = "bold")
-  )
-
 
 # Fragestellung 3
 ## Pearson-Korrelation (differenziert nach Gruppen)
@@ -1018,25 +1002,6 @@ cor.test(bipolar$ISEL_sum[bipolar$Groups == "noEW"], bipolar$YMRS_sum[bipolar$Gr
 
 # Mögliche Diskussion dieser dritten Fragestellung: Zusammenfassend zeigen die Ergebnisse, dass bei Personen, die ein Training zur Erkennung von Frühwarnzeichen erhalten haben, ein starker und signifikanter negativer Zusammenhang zwischen sozialem Support und Symptomschwere besteht, während bei Personen ohne solches Training kein signifikanter Zusammenhang festgestellt wurde. Dies deutet darauf hin, dass das Training möglicherweise eine Schlüsselrolle dabei spielt, wie effektiv sozialer Support zur Reduktion der Symptomschwere beiträgt.
 
-# Grafische Darstellung
-ggplot(data = bipolar, aes(x = ISEL_sum, y = YMRS_sum)) + 
-  geom_point(size = 1.0, aes(shape = Groups)) +
-  geom_smooth(method = "lm", color = "black", size = 0.5) + 
-  labs(x = "Sozialer Support", y = "Symptomschwere Manie", shape = "Gruppen") +
-  scale_shape_manual(values = c(1, 2), labels = c("Training", "Kein Training")) +
-  theme_bw() +
-  theme(
-    legend.position = "bottom", 
-    legend.box = "horizontal",  
-    panel.grid.major = element_blank(), 
-    panel.grid.minor = element_blank(), 
-    panel.border = element_blank(),     
-    axis.line = element_line(),         
-    axis.title.x = element_text(face = "bold"), 
-    axis.title.y = element_text(face = "bold")  
-  ) + 
-  guides(shape = guide_legend(title.position = "top", title.hjust = 0.5)) 
-
 ```
 
 <hr> <!-- Horizontale Trennlinie -->
@@ -1061,9 +1026,12 @@ bipolar = read.csv("https://raw.githubusercontent.com/janikasaretzki/CFH_Dat/mai
 library(ggplot2)
 library(ggpubr)
 
-barplot_bipolar <- ggplot(bipolar, aes(x = Groups, y = YMRS_sum, fill = Groups)) +
+group_colors = c("EW" = "#F8766D", "noEW" = "#00BFC4")
+
+barplot_bipolar = ggplot(bipolar, aes(x = Groups, y = YMRS_sum, fill = Groups)) +
   stat_summary(geom = "bar", fun = "mean", position = position_dodge2(.95)) +
   scale_x_discrete(labels = c("noEW" = "Control", "EW" = "Training")) +  
+  scale_fill_manual(values = group_colors, labels = c("Training", "Control")) +  
   labs(fill = "", y = "Manic Symptoms", x = "") +
   theme_bw() +
   theme(
@@ -1079,7 +1047,7 @@ barplot_bipolar <- ggplot(bipolar, aes(x = Groups, y = YMRS_sum, fill = Groups))
 scatterplot_bipolar = ggplot(data = bipolar, aes(x = ISEL_sum, y = YMRS_sum, color = Groups)) +
   geom_point(size = 1) +
   geom_smooth(method = "lm") + 
-  scale_color_discrete(labels = c("noEW" = "Control", "EW" = "Training")) +  
+  scale_color_manual(values = group_colors, labels = c("Training", "Control")) +  
   labs(x = "Social Support", y = "Manic Symptoms", color = "Group") +  
   theme_bw() +
   theme(
@@ -1093,53 +1061,6 @@ scatterplot_bipolar = ggplot(data = bipolar, aes(x = ISEL_sum, y = YMRS_sum, col
     axis.title.y = element_text(face = "bold") 
   )
 
-ggarrange(barplot_bipolar, scatterplot_bipolar, 
-          ncol = 2, nrow = 1, 
-          common.legend = TRUE, legend = "bottom")
-
-
-###
-
-# Definiere die Farben entsprechend der korrekten Zuordnung
-group_colors <- c("EW" = "red", "noEW" = "blue")
-
-# Barplot
-barplot_bipolar <- ggplot(bipolar, aes(x = Groups, y = YMRS_sum, fill = Groups)) +
-  stat_summary(geom = "bar", fun = "mean", position = position_dodge2(.95)) +
-  scale_x_discrete(labels = c("noEW" = "Control", "EW" = "Training")) +  
-  scale_fill_manual(values = group_colors) +  # Korrekte Farbanpassung basierend auf den Daten-Levels
-  labs(fill = "", y = "Manic Symptoms", x = "") +
-  theme_bw() +
-  theme(
-    legend.position = "none", 
-    panel.grid.major = element_blank(), 
-    panel.grid.minor = element_blank(), 
-    panel.border = element_blank(), 
-    axis.line = element_line(),
-    axis.title.x = element_text(face = "bold"),  
-    axis.title.y = element_text(face = "bold")
-  )
-
-# Scatterplot
-scatterplot_bipolar <- ggplot(data = bipolar, aes(x = ISEL_sum, y = YMRS_sum, color = Groups)) +
-  geom_point(size = 1) +
-  geom_smooth(method = "lm") + 
-  scale_color_manual(values = group_colors) +  # Korrekte Farbanpassung basierend auf den Daten-Levels
-  scale_x_discrete(labels = c("noEW" = "Control", "EW" = "Training")) +  
-  labs(x = "Social Support", y = "Manic Symptoms", color = "Group") +  
-  theme_bw() +
-  theme(
-    legend.position = "bottom", 
-    legend.box = "horizontal",
-    panel.grid.major = element_blank(), 
-    panel.grid.minor = element_blank(), 
-    panel.border = element_blank(), 
-    axis.line = element_line(),
-    axis.title.x = element_text(face = "bold"),  
-    axis.title.y = element_text(face = "bold") 
-  )
-
-# Gemeinsame Darstellung der Plots
 ggarrange(barplot_bipolar, scatterplot_bipolar, 
           ncol = 2, nrow = 1, 
           common.legend = TRUE, legend = "bottom")
@@ -1148,10 +1069,48 @@ ggarrange(barplot_bipolar, scatterplot_bipolar,
 
 <hr> <!-- Horizontale Trennlinie -->
 
-## Stichprobenumfangsplanung
+## Poweranalyse und Stichprobenumfangsplanung
+
+Willkommen im Abschnitt **Poweranalyse und Stichprobenumfangsplanung in R und RStudio**!
+
+In diesem Kapitel der learnR-Oberfläche werden Sie Ihre Kenntnisse in der Poweranalyse und der Stichprobenumfangsplanung festigen und praktisch anwenden.
+
+Die Poweranalyse ermöglicht es, die Wahrscheinlichkeit zu bestimmen, mit der ein statistischer Test einen tatsächlich vorhandenen Effekt entdeckt. Ein zentrales Grundkonzept dabei ist, dass die $\alpha$-Fehler-Wahrscheinlichkeit, die Teststärke (Power, 1-$\beta$), die Effektgröße und die Stichprobengröße funktional miteinander verknüpft sind, sodass bei der Vorgabe von drei dieser Größen die jeweils vierte eindeutig berechnet werden kann.
+
+Bei der Planung des Stichprobenumfangs gilt es, eine Balance zwischen zwei Prinzipien zu finden: **Präzisionssteigerung** und **Erhebungsökonomie**. Mit zunehmender Stichprobengröße können Effekte präziser geschätzt und zuverlässiger aufgedeckt werden (Präzisionssteigerung). Gleichzeitig soll die Stichprobe so bemessen sein, dass Effekte, die als praktisch bedeutsam erachtet werden, signifikant werden, während triviale Effekte nicht unnötig als signifikant erkannt werden (Erhebungsökonomie).
+
+In den kommenden Aufgaben werden Sie Ihr Wissen über die verschiedenen Ansätze zur Poweranalyse und zur Berechnung des optimalen Stichprobenumfangs anwenden und vertiefen. Sie werden praxisnahe Szenarien bearbeiten, sodass Sie die erlernten Prinzipien auch in Ihren eigenen Projekten anwenden können.
+
+<hr> <!-- Horizontale Trennlinie -->
+
+**Aufgabe 1:** In einer klinischen Studie zur Wirksamkeit eines neuen Medikaments wurde die Korrelation zwischen der Dosierung (*r* = .25) und der Verbesserung der Symptome bei einer Stichprobengröße von *N* = 40 untersucht. Das Ergebnis zeigte mit einem *p*-Wert von .120, dass die Korrelation nicht signifikant ist. Nun möchten Sie ermitteln, welche Stichprobengröße erforderlich ist, um eine signifikante Korrelation bei einem Signifikanzniveau von $\alpha$ = .05 zu erreichen.
+```{r Poweranalyse1, exercise=TRUE}
 
 
+```
 
+```{r Poweranalyse1-solution}
 
+library(pwr)
+pwr.r.test(r = .25, sig.level = .05, power = .80) 
 
+# Um eine signifikante Korrelation von r = .25 bei einem Signifikanzniveau von α = .05 mit einer Teststärke (Power) von .80 zu erreichen, wird eine Stichprobengröße N = 122 benötigt.
+
+```
+
+<hr> <!-- Horizontale Trennlinie -->
+
+**Aufgabe 2:** In einer klinischen Studie zur Bewertung der Wirksamkeit eines neuen Antidepressivums im Vergleich zu einem Placebo möchten die Forscher:innen sicherstellen, dass auch kleinere, aber klinisch relevante Effekte entdeckt werden. Aufgrund der strengen regulatorischen Anforderungen haben sie ein Signifikanzniveau von $\alpha$ = .01 festgelegt. Die Forscher:innen erwarten eine Effektgröße von *d* = .30. Um sicherzustellen, dass die Studie eine ausreichende Power von .80 erreicht, soll die erforderliche Stichprobengröße pro Gruppe berechnet werden.
+```{r Poweranalyse2, exercise=TRUE}
+
+```
+
+```{r Poweranalyse2-solution}
+
+library(pwr)
+pwr.t.test(d = 0.30, sig.level = 0.01, power = 0.80, type = "two.sample")
+
+# Um eine Effektgröße von d = .30 bei einem strengen Signifikanzniveau von α = .01 und einer Power von .85 zu entdecken, werden in jeder Gruppe etwa N = 261 Proband:innen benötigt. Diese größere Stichprobe ist notwendig, um auch kleine, aber klinisch relevante Unterschiede zwischen dem neuen Antidepressivum und dem Placebo zuverlässig feststellen zu können.
+
+```
 

@@ -1093,24 +1093,24 @@ class="section level2">
 <p>Willkommen im Abschnitt <strong>Hypothesentests und
 Datenvisualisierung in R und RStudio</strong>!</p>
 <p>In diesem Abschnitt wird das in Kapitel zwei begonnene Projekt
-fortgesetzt. Ziel ist es, die z.T. bereits in Kapitel zwei ermittelten
-Werte grafisch darzustellen sowie Hypothesen mithilfe der Ihnen
-bekannten Methoden zu testen. Der zur Verfügung gestellte
-“bipolar”-Datensatz bleibt derselbe, enthält in der nun erneut über
-Github zu ladenden Version jedoch bereits die wichtigsten Werte:</p>
+weitergeführt. Das Ziel ist es, die bereits teilweise in Kapitel zwei
+ermittelten Werte grafisch darzustellen und statistische Fragestellungen
+mit den Ihnen bekannten Methoden zu überprüfen. Der zur Verfügung
+gestellte Datensatz “bipolar” bleibt derselbe, enthält aber in der
+aktualisierten Version, die erneut über Github heruntergeladen werden
+muss, bereits die wichtigsten Werte:</p>
 <ul>
-<li>Summenwert der Young Mania Rating Scale (YMRS; YMRS_sum)</li>
-<li>Summenwert der Interpersonal Evaluation List (ISEL; ISEL_sum)</li>
-<li>Summenwert der Subskalen der ISEL (ISEL_appraisal, ISEL_belonging,
+<li>Gesamtwert der Young Mania Rating Scale (YMRS; YMRS_sum)</li>
+<li>Gesamtwert der Interpersonal Evaluation List (ISEL; ISEL_sum)</li>
+<li>Gesamtwerte der Subskalen der ISEL (ISEL_appraisal, ISEL_belonging,
 ISEL_tangible)</li>
 </ul>
-<p><strong>Bitte beachten Sie: Es ist möglich, dass Sie einzelne
-Berechnungen, die Sie bereits im zweiten Abschnitt durchgeführt haben,
-erneut durchführen müssen. Betrachten Sie dies als wertvolle Übung zur
-Festigung Ihrer Kenntnisse.</strong></p>
+<p><strong>Hinweis: Denken Sie bei der Anwendung statistischer
+Testverfahren auch daran, die eventuell notwendigen Voraussetzungen zu
+überprüfen.</strong></p>
 <hr>
 <!-- Horizontale Trennlinie -->
-<p><strong>Aufgabe 1:</strong>Im Kontext des Ihnen vorliegenden
+<p><strong>Aufgabe 1:</strong> Im Kontext des Ihnen vorliegenden
 bipolar-Datensatzes sind eine Vielzahl (statistischer) Fragestellungen
 möglicht. Beantworten sie folgende Fragestellungen anhand des
 Datensatzes. Dokumentieren Sie alle Auswertungsschritte und formulieren
@@ -1135,13 +1135,110 @@ data-lines="0" data-pipe="|&gt;">
 data-label="Hypothesentests1-solution" data-completion="1"
 data-diagnostics="1" data-startover="1" data-lines="0"
 data-pipe="|&gt;">
-<pre><code>  bipolar = read.csv(&quot;https://raw.githubusercontent.com/janikasaretzki/CFH_Dat/main/bipolar_scores.csv&quot;)</code></pre>
+<pre><code>bipolar = read.csv(&quot;https://raw.githubusercontent.com/janikasaretzki/CFH_Dat/main/bipolar_scores.csv&quot;)
+
+# Fragestellung 1
+## T-test für unabhängige Stichproben
+
+## Voraussetzungen prüfen
+# 1. Normalverteilung (NV) der Variable &quot;YMRS_sum&quot; in beiden Gruppen prüfen
+shapiro.test(bipolar$YMRS_sum[bipolar$Groups == &quot;noEW&quot;]) # Annahme der NV ist nicht verletzt (Test n.s.)
+shapiro.test(bipolar$YMRS_sum[bipolar$Groups == &quot;EW&quot;]) # Annahme der NV ist nicht verletzt (Test n.s.)
+
+# 2. Varianzhomogenität prüfen
+library(car)
+leveneTest(YMRS_sum ~ Groups, data = bipolar) # Annahme der NV ist nicht verletzt (Test n.s.)
+
+## T-test für unabhängige Stichproben
+t.test(YMRS_sum ~ Groups, data = bipolar, var.equal = TRUE)
+
+library(effsize)
+cohen.d(YMRS_sum ~ Groups, data = bipolar)
+
+# M sollte immer mit SD berichtet werden (M aus &quot;t.test()&quot;-Funktion ersichtlich)
+round(sd(bipolar$YMRS_sum[bipolar$Groups == &quot;EW&quot;]), 2) 
+round(sd(bipolar$YMRS_sum[bipolar$Groups == &quot;noEW&quot;]), 2)
+
+# Das Ergebnis des unabhängigen t-Tests zeigt, dass die Symptomatik im Folgemonat, gemessen durch den YMRS-Summenwert, in der Trainingsgruppe (M = 26.85, SD = 4.53) signifikant niedriger ist als in der Gruppe ohne Training (M = 31.20, SD = 4.40; t(126) = -5.49, p &lt; .001). Die berechnete Effektstärke (Cohen&#39;s d = -0.97, 95% CI [-1.34, -0.60]) weist nach den Kriterien von Cohen (1988) auf einen großen Effekt hin.
+
+
+# Fragestellung 2
+## Pearson-Korrelation
+
+## Voraussetzungen prüfen
+# 1. Normalverteilung (NV) der Variablen &quot;YMRS_sum&quot; und &quot;ISEL_sum&quot; prüfen
+shapiro.test(bipolar$YMRS_sum) # Annahme der NV ist nicht verletzt (Test n.s.)
+shapiro.test(bipolar$ISEL_sum) # Annahme der NV ist nicht verletzt (Test n.s.)
+
+## Pearson-Korrelation
+cor.test(bipolar$YMRS_sum, bipolar$ISEL_sum, method = &quot;pearson&quot;) # Der Pearson-Korrelationskoeffizient zeigt, dass es einen signifikanten negativen Zusammenhang zwischen der Güte des sozialen Supportsystems (ISEL_sum) und der Symptomatik (YMRS_sum) gibt (r = -0.45, p &lt; .001). Dies bedeutet, dass ein höherer sozialer Support mit einer geringeren Symptomatik verbunden ist. Nach Cohen (1988) handelt es sich hierbei um einen moderaten Effekt.
+
+# Grafische Darstellung
+library(ggplot2)
+ggplot(data = bipolar, aes(x = ISEL_sum, y = YMRS_sum)) + 
+  geom_point(size = 1.0) +
+  geom_smooth(method = &quot;lm&quot;, color = &quot;black&quot;, size = 0.5) + 
+  labs(x = &quot;Sozialer Support&quot;, y = &quot;Symptomschwere Manie&quot;) +
+  theme_bw() +
+  theme(
+    panel.grid.major = element_blank(), 
+    panel.grid.minor = element_blank(), 
+    panel.border = element_blank(),     
+    axis.line = element_line(),         
+    axis.title.x = element_text(face = &quot;bold&quot;), 
+    axis.title.y = element_text(face = &quot;bold&quot;)
+  )
+
+
+# Fragestellung 3
+## Pearson-Korrelation (differenziert nach Gruppen)
+
+## Voraussetzungen prüfen
+# 1. Normalverteilung (NV) der Variablen in beiden Gruppen prüfen
+# YMRS_sum (siehe Fragestellung 1)
+shapiro.test(bipolar$YMRS_sum[bipolar$Groups == &quot;noEW&quot;]) # Annahme der NV ist nicht verletzt (Test n.s.)
+shapiro.test(bipolar$YMRS_sum[bipolar$Groups == &quot;EW&quot;]) # Annahme der NV ist nicht verletzt (Test n.s.)
+
+# ISEL_sum
+shapiro.test(bipolar$ISEL_sum[bipolar$Groups == &quot;noEW&quot;]) # Annahme der NV ist verletzt (p = 0.039)
+
+# Anzahl der Personen in Gruppe &quot;no Training&quot;
+length(bipolar$Groups == &quot;kein Training&quot;) # n = 128, d.h. nach dem zentralen Grenzwerttheorem kann trotz Verletzung der NV parametrisch getestet werden (Annahme, dass Charakteristika der NV bei N ≥ 30 gegeben sind). Alternative: Nonparametrische Verfahren
+
+shapiro.test(bipolar$ISEL_sum[bipolar$Groups == &quot;EW&quot;]) # Annahme der NV ist nicht verletzt (Test n.s.)
+
+## Pearson-Korrelation
+cor.test(bipolar$ISEL_sum[bipolar$Groups == &quot;EW&quot;], bipolar$YMRS_sum[bipolar$Groups == &quot;EW&quot;], method = &quot;pearson&quot;) # Der Pearson-Korrelationskoeffizient zeigt, dass es bei Personen, die ein Training zur Erkennung von Frühwarnzeichen erhalten haben, einen signifikanten negativen Zusammenhang zwischen der Güte des sozialen Supportsystems (ISEL_sum) und der Symptomatik (YMRS_sum) gibt (r = -0.80, p &lt; .001). Dies bedeutet, dass ein höherer sozialer Support in dieser Gruppe mit einer geringeren Symptomatik verbunden ist. Nach Cohen (1988) handelt es sich hierbei um einen großen Effekt.
+
+cor.test(bipolar$ISEL_sum[bipolar$Groups == &quot;noEW&quot;], bipolar$YMRS_sum[bipolar$Groups == &quot;noEW&quot;], method = &quot;pearson&quot;) # Der Pearson-Korrelationskoeffizient zeigt, dass es bei Personen, die kein Training zur Erkennung von Frühwarnzeichen erhalten haben, keinen signifikanten Zusammenhang zwischen der Güte des sozialen Supportsystems (ISEL_sum) und der Symptomatik (YMRS_sum) gibt (r = -0.18, p = 0.164).
+
+# Mögliche Diskussion dieser dritten Fragestellung: Zusammenfassend zeigen die Ergebnisse, dass bei Personen, die ein Training zur Erkennung von Frühwarnzeichen erhalten haben, ein starker und signifikanter negativer Zusammenhang zwischen sozialem Support und Symptomschwere besteht, während bei Personen ohne solches Training kein signifikanter Zusammenhang festgestellt wurde. Dies deutet darauf hin, dass das Training möglicherweise eine Schlüsselrolle dabei spielt, wie effektiv sozialer Support zur Reduktion der Symptomschwere beiträgt.
+
+# Grafische Darstellung
+ggplot(data = bipolar, aes(x = ISEL_sum, y = YMRS_sum)) + 
+  geom_point(size = 1.0, aes(shape = Groups)) +
+  geom_smooth(method = &quot;lm&quot;, color = &quot;black&quot;, size = 0.5) + 
+  labs(x = &quot;Sozialer Support&quot;, y = &quot;Symptomschwere Manie&quot;, shape = &quot;Gruppen&quot;) +
+  scale_shape_manual(values = c(1, 2), labels = c(&quot;Training&quot;, &quot;Kein Training&quot;)) +
+  theme_bw() +
+  theme(
+    legend.position = &quot;bottom&quot;, 
+    legend.box = &quot;horizontal&quot;,  
+    panel.grid.major = element_blank(), 
+    panel.grid.minor = element_blank(), 
+    panel.border = element_blank(),     
+    axis.line = element_line(),         
+    axis.title.x = element_text(face = &quot;bold&quot;), 
+    axis.title.y = element_text(face = &quot;bold&quot;)  
+  ) + 
+  guides(shape = guide_legend(title.position = &quot;top&quot;, title.hjust = 0.5)) </code></pre>
 </div>
 <hr>
 <!-- Horizontale Trennlinie -->
-<p><strong>Aufgabe 2:</strong> Im Folgenden finden Sie ein Beispiel, wie
-Sie die aus Ihren Berechnungen gewonnenen Erkenntnisse visualisieren
-könnten.</p>
+<p><strong>Aufgabe 2:</strong> Im Folgenden finden Sie (neben den
+bereits in der Lösung zu Aufgabe 1 beschriebenen Beispielen) ein
+Beispiel, wie Sie die aus Ihren Berechnungen gewonnenen Erkenntnisse
+visualisieren könnten.</p>
 <p>Versuchen Sie bitte, die Grafik nachzucoden.</p>
 <p><img src="bipolar/bipolar_plot.png"
 style="width:60.0%;height:100.0%" /></p>
@@ -1160,9 +1257,12 @@ data-pipe="|&gt;">
 library(ggplot2)
 library(ggpubr)
 
-barplot_bipolar &lt;- ggplot(bipolar, aes(x = Groups, y = YMRS_sum, fill = Groups)) +
+group_colors = c(&quot;EW&quot; = &quot;#F8766D&quot;, &quot;noEW&quot; = &quot;#00BFC4&quot;)
+
+barplot_bipolar = ggplot(bipolar, aes(x = Groups, y = YMRS_sum, fill = Groups)) +
   stat_summary(geom = &quot;bar&quot;, fun = &quot;mean&quot;, position = position_dodge2(.95)) +
-  scale_x_discrete(labels = c(&quot;noEW&quot; = &quot;Control&quot;, &quot;EW&quot; = &quot;Training&quot;)) +  # Labels ändern
+  scale_x_discrete(labels = c(&quot;noEW&quot; = &quot;Control&quot;, &quot;EW&quot; = &quot;Training&quot;)) +  
+  scale_fill_manual(values = group_colors, labels = c(&quot;Training&quot;, &quot;Control&quot;)) +  
   labs(fill = &quot;&quot;, y = &quot;Manic Symptoms&quot;, x = &quot;&quot;) +
   theme_bw() +
   theme(
@@ -1175,14 +1275,10 @@ barplot_bipolar &lt;- ggplot(bipolar, aes(x = Groups, y = YMRS_sum, fill = Group
     axis.title.y = element_text(face = &quot;bold&quot;)
   )
 
-bipolar$Groups = factor(bipolar$Groups, 
-                         levels = c(&quot;noEW&quot;, &quot;EW&quot;), 
-                         labels = c(&quot;Control&quot;, &quot;Training&quot;))
-
-scatterplot_bipolar &lt;- ggplot(data = bipolar, aes(x = ISEL_sum, y = YMRS_sum, color = Groups)) +
+scatterplot_bipolar = ggplot(data = bipolar, aes(x = ISEL_sum, y = YMRS_sum, color = Groups)) +
   geom_point(size = 1) +
   geom_smooth(method = &quot;lm&quot;) + 
-  scale_color_discrete(labels = c(&quot;noEW&quot; = &quot;Control&quot;, &quot;EW&quot; = &quot;Training&quot;)) +  
+  scale_color_manual(values = group_colors, labels = c(&quot;Training&quot;, &quot;Control&quot;)) +  
   labs(x = &quot;Social Support&quot;, y = &quot;Manic Symptoms&quot;, color = &quot;Group&quot;) +  
   theme_bw() +
   theme(
@@ -1196,7 +1292,7 @@ scatterplot_bipolar &lt;- ggplot(data = bipolar, aes(x = ISEL_sum, y = YMRS_sum,
     axis.title.y = element_text(face = &quot;bold&quot;) 
   )
 
-ggarrange(barplot_bipolar, scatter_bipolar, 
+ggarrange(barplot_bipolar, scatterplot_bipolar, 
           ncol = 2, nrow = 1, 
           common.legend = TRUE, legend = &quot;bottom&quot;)</code></pre>
 </div>
@@ -2793,10 +2889,53 @@ learnr:::store_exercise_cache(structure(list(label = "Hypothesentests1", global_
 "library(magrittr)", "library(kableExtra)", "library(ggplot2)", 
 "library(truncnorm)", "library(faux)", "library(sjPlot)"), chunk_opts = list(
     label = "setup", include = FALSE)), setup = NULL, chunks = list(
-    list(label = "Hypothesentests1", code = "bipolar = read.csv(\"https://raw.githubusercontent.com/janikasaretzki/CFH_Dat/main/bipolar_scores.csv\")\n", 
+    list(label = "Hypothesentests1", code = "\nbipolar = read.csv(\"https://raw.githubusercontent.com/janikasaretzki/CFH_Dat/main/bipolar_scores.csv\")\n", 
         opts = list(label = "\"Hypothesentests1\"", exercise = "TRUE"), 
         engine = "r")), code_check = NULL, error_check = NULL, 
-    check = NULL, solution = structure(c("  bipolar = read.csv(\"https://raw.githubusercontent.com/janikasaretzki/CFH_Dat/main/bipolar_scores.csv\")", 
+    check = NULL, solution = structure(c("", "bipolar = read.csv(\"https://raw.githubusercontent.com/janikasaretzki/CFH_Dat/main/bipolar_scores.csv\")", 
+    "", "# Fragestellung 1", "## T-test für unabhängige Stichproben", 
+    "", "## Voraussetzungen prüfen", "# 1. Normalverteilung (NV) der Variable \"YMRS_sum\" in beiden Gruppen prüfen", 
+    "shapiro.test(bipolar$YMRS_sum[bipolar$Groups == \"noEW\"]) # Annahme der NV ist nicht verletzt (Test n.s.)", 
+    "shapiro.test(bipolar$YMRS_sum[bipolar$Groups == \"EW\"]) # Annahme der NV ist nicht verletzt (Test n.s.)", 
+    "", "# 2. Varianzhomogenität prüfen", "library(car)", "leveneTest(YMRS_sum ~ Groups, data = bipolar) # Annahme der NV ist nicht verletzt (Test n.s.)", 
+    "", "## T-test für unabhängige Stichproben", "t.test(YMRS_sum ~ Groups, data = bipolar, var.equal = TRUE)", 
+    "", "library(effsize)", "cohen.d(YMRS_sum ~ Groups, data = bipolar)", 
+    "", "# M sollte immer mit SD berichtet werden (M aus \"t.test()\"-Funktion ersichtlich)", 
+    "round(sd(bipolar$YMRS_sum[bipolar$Groups == \"EW\"]), 2) ", 
+    "round(sd(bipolar$YMRS_sum[bipolar$Groups == \"noEW\"]), 2)", 
+    "", "# Das Ergebnis des unabhängigen t-Tests zeigt, dass die Symptomatik im Folgemonat, gemessen durch den YMRS-Summenwert, in der Trainingsgruppe (M = 26.85, SD = 4.53) signifikant niedriger ist als in der Gruppe ohne Training (M = 31.20, SD = 4.40; t(126) = -5.49, p < .001). Die berechnete Effektstärke (Cohen's d = -0.97, 95% CI [-1.34, -0.60]) weist nach den Kriterien von Cohen (1988) auf einen großen Effekt hin.", 
+    "", "", "# Fragestellung 2", "## Pearson-Korrelation", "", 
+    "## Voraussetzungen prüfen", "# 1. Normalverteilung (NV) der Variablen \"YMRS_sum\" und \"ISEL_sum\" prüfen", 
+    "shapiro.test(bipolar$YMRS_sum) # Annahme der NV ist nicht verletzt (Test n.s.)", 
+    "shapiro.test(bipolar$ISEL_sum) # Annahme der NV ist nicht verletzt (Test n.s.)", 
+    "", "## Pearson-Korrelation", "cor.test(bipolar$YMRS_sum, bipolar$ISEL_sum, method = \"pearson\") # Der Pearson-Korrelationskoeffizient zeigt, dass es einen signifikanten negativen Zusammenhang zwischen der Güte des sozialen Supportsystems (ISEL_sum) und der Symptomatik (YMRS_sum) gibt (r = -0.45, p < .001). Dies bedeutet, dass ein höherer sozialer Support mit einer geringeren Symptomatik verbunden ist. Nach Cohen (1988) handelt es sich hierbei um einen moderaten Effekt.", 
+    "", "# Grafische Darstellung", "library(ggplot2)", "ggplot(data = bipolar, aes(x = ISEL_sum, y = YMRS_sum)) + ", 
+    "  geom_point(size = 1.0) +", "  geom_smooth(method = \"lm\", color = \"black\", size = 0.5) + ", 
+    "  labs(x = \"Sozialer Support\", y = \"Symptomschwere Manie\") +", 
+    "  theme_bw() +", "  theme(", "    panel.grid.major = element_blank(), ", 
+    "    panel.grid.minor = element_blank(), ", "    panel.border = element_blank(),     ", 
+    "    axis.line = element_line(),         ", "    axis.title.x = element_text(face = \"bold\"), ", 
+    "    axis.title.y = element_text(face = \"bold\")", "  )", 
+    "", "", "# Fragestellung 3", "## Pearson-Korrelation (differenziert nach Gruppen)", 
+    "", "## Voraussetzungen prüfen", "# 1. Normalverteilung (NV) der Variablen in beiden Gruppen prüfen", 
+    "# YMRS_sum (siehe Fragestellung 1)", "shapiro.test(bipolar$YMRS_sum[bipolar$Groups == \"noEW\"]) # Annahme der NV ist nicht verletzt (Test n.s.)", 
+    "shapiro.test(bipolar$YMRS_sum[bipolar$Groups == \"EW\"]) # Annahme der NV ist nicht verletzt (Test n.s.)", 
+    "", "# ISEL_sum", "shapiro.test(bipolar$ISEL_sum[bipolar$Groups == \"noEW\"]) # Annahme der NV ist verletzt (p = 0.039)", 
+    "", "# Anzahl der Personen in Gruppe \"no Training\"", "length(bipolar$Groups == \"kein Training\") # n = 128, d.h. nach dem zentralen Grenzwerttheorem kann trotz Verletzung der NV parametrisch getestet werden (Annahme, dass Charakteristika der NV bei N ≥ 30 gegeben sind). Alternative: Nonparametrische Verfahren", 
+    "", "shapiro.test(bipolar$ISEL_sum[bipolar$Groups == \"EW\"]) # Annahme der NV ist nicht verletzt (Test n.s.)", 
+    "", "## Pearson-Korrelation", "cor.test(bipolar$ISEL_sum[bipolar$Groups == \"EW\"], bipolar$YMRS_sum[bipolar$Groups == \"EW\"], method = \"pearson\") # Der Pearson-Korrelationskoeffizient zeigt, dass es bei Personen, die ein Training zur Erkennung von Frühwarnzeichen erhalten haben, einen signifikanten negativen Zusammenhang zwischen der Güte des sozialen Supportsystems (ISEL_sum) und der Symptomatik (YMRS_sum) gibt (r = -0.80, p < .001). Dies bedeutet, dass ein höherer sozialer Support in dieser Gruppe mit einer geringeren Symptomatik verbunden ist. Nach Cohen (1988) handelt es sich hierbei um einen großen Effekt.", 
+    "", "cor.test(bipolar$ISEL_sum[bipolar$Groups == \"noEW\"], bipolar$YMRS_sum[bipolar$Groups == \"noEW\"], method = \"pearson\") # Der Pearson-Korrelationskoeffizient zeigt, dass es bei Personen, die kein Training zur Erkennung von Frühwarnzeichen erhalten haben, keinen signifikanten Zusammenhang zwischen der Güte des sozialen Supportsystems (ISEL_sum) und der Symptomatik (YMRS_sum) gibt (r = -0.18, p = 0.164).", 
+    "", "# Mögliche Diskussion dieser dritten Fragestellung: Zusammenfassend zeigen die Ergebnisse, dass bei Personen, die ein Training zur Erkennung von Frühwarnzeichen erhalten haben, ein starker und signifikanter negativer Zusammenhang zwischen sozialem Support und Symptomschwere besteht, während bei Personen ohne solches Training kein signifikanter Zusammenhang festgestellt wurde. Dies deutet darauf hin, dass das Training möglicherweise eine Schlüsselrolle dabei spielt, wie effektiv sozialer Support zur Reduktion der Symptomschwere beiträgt.", 
+    "", "# Grafische Darstellung", "ggplot(data = bipolar, aes(x = ISEL_sum, y = YMRS_sum)) + ", 
+    "  geom_point(size = 1.0, aes(shape = Groups)) +", "  geom_smooth(method = \"lm\", color = \"black\", size = 0.5) + ", 
+    "  labs(x = \"Sozialer Support\", y = \"Symptomschwere Manie\", shape = \"Gruppen\") +", 
+    "  scale_shape_manual(values = c(1, 2), labels = c(\"Training\", \"Kein Training\")) +", 
+    "  theme_bw() +", "  theme(", "    legend.position = \"bottom\", ", 
+    "    legend.box = \"horizontal\",  ", "    panel.grid.major = element_blank(), ", 
+    "    panel.grid.minor = element_blank(), ", "    panel.border = element_blank(),     ", 
+    "    axis.line = element_line(),         ", "    axis.title.x = element_text(face = \"bold\"), ", 
+    "    axis.title.y = element_text(face = \"bold\")  ", "  ) + ", 
+    "  guides(shape = guide_legend(title.position = \"top\", title.hjust = 0.5)) ", 
     ""), chunk_opts = list(label = "Hypothesentests1-solution")), 
     tests = NULL, options = list(eval = FALSE, echo = TRUE, results = "markup", 
         tidy = FALSE, tidy.opts = NULL, collapse = FALSE, prompt = FALSE, 
@@ -2815,7 +2954,7 @@ learnr:::store_exercise_cache(structure(list(label = "Hypothesentests1", global_
         message = TRUE, render = NULL, ref.label = NULL, child = NULL, 
         engine = "r", split = FALSE, include = TRUE, purl = TRUE, 
         max.print = 1000, label = "Hypothesentests1", exercise = TRUE, 
-        code = c("bipolar = read.csv(\"https://raw.githubusercontent.com/janikasaretzki/CFH_Dat/main/bipolar_scores.csv\")", 
+        code = c("", "bipolar = read.csv(\"https://raw.githubusercontent.com/janikasaretzki/CFH_Dat/main/bipolar_scores.csv\")", 
         ""), lang = "", out.width.px = 624, out.height.px = 384, 
         params.src = "Hypothesentests1, exercise=TRUE", fig.num = 0, 
         exercise.df_print = "paged", exercise.checker = "NULL"), 
@@ -2842,26 +2981,26 @@ learnr:::store_exercise_cache(structure(list(label = "Datenvisualisierung1", glo
         opts = list(label = "\"Datenvisualisierung1\"", exercise = "TRUE"), 
         engine = "r")), code_check = NULL, error_check = NULL, 
     check = NULL, solution = structure(c("", "bipolar = read.csv(\"https://raw.githubusercontent.com/janikasaretzki/CFH_Dat/main/bipolar_scores.csv\")", 
-    "", "library(ggplot2)", "library(ggpubr)", "", "barplot_bipolar <- ggplot(bipolar, aes(x = Groups, y = YMRS_sum, fill = Groups)) +", 
+    "", "library(ggplot2)", "library(ggpubr)", "", "group_colors = c(\"EW\" = \"#F8766D\", \"noEW\" = \"#00BFC4\")", 
+    "", "barplot_bipolar = ggplot(bipolar, aes(x = Groups, y = YMRS_sum, fill = Groups)) +", 
     "  stat_summary(geom = \"bar\", fun = \"mean\", position = position_dodge2(.95)) +", 
-    "  scale_x_discrete(labels = c(\"noEW\" = \"Control\", \"EW\" = \"Training\")) +  # Labels ändern", 
+    "  scale_x_discrete(labels = c(\"noEW\" = \"Control\", \"EW\" = \"Training\")) +  ", 
+    "  scale_fill_manual(values = group_colors, labels = c(\"Training\", \"Control\")) +  ", 
     "  labs(fill = \"\", y = \"Manic Symptoms\", x = \"\") +", 
     "  theme_bw() +", "  theme(", "    legend.position = \"none\", ", 
     "    panel.grid.major = element_blank(), ", "    panel.grid.minor = element_blank(), ", 
     "    panel.border = element_blank(), ", "    axis.line = element_line(),", 
     "    axis.title.x = element_text(face = \"bold\"),  ", "    axis.title.y = element_text(face = \"bold\")", 
-    "  )", "", "bipolar$Groups = factor(bipolar$Groups, ", "                         levels = c(\"noEW\", \"EW\"), ", 
-    "                         labels = c(\"Control\", \"Training\"))", 
-    "", "scatterplot_bipolar <- ggplot(data = bipolar, aes(x = ISEL_sum, y = YMRS_sum, color = Groups)) +", 
+    "  )", "", "scatterplot_bipolar = ggplot(data = bipolar, aes(x = ISEL_sum, y = YMRS_sum, color = Groups)) +", 
     "  geom_point(size = 1) +", "  geom_smooth(method = \"lm\") + ", 
-    "  scale_color_discrete(labels = c(\"noEW\" = \"Control\", \"EW\" = \"Training\")) +  ", 
+    "  scale_color_manual(values = group_colors, labels = c(\"Training\", \"Control\")) +  ", 
     "  labs(x = \"Social Support\", y = \"Manic Symptoms\", color = \"Group\") +  ", 
     "  theme_bw() +", "  theme(", "    legend.position = \"bottom\", ", 
     "    legend.box = \"horizontal\",", "    panel.grid.major = element_blank(), ", 
     "    panel.grid.minor = element_blank(), ", "    panel.border = element_blank(), ", 
     "    axis.line = element_line(),", "    axis.title.x = element_text(face = \"bold\"),  ", 
     "    axis.title.y = element_text(face = \"bold\") ", "  )", 
-    "", "ggarrange(barplot_bipolar, scatter_bipolar, ", "          ncol = 2, nrow = 1, ", 
+    "", "ggarrange(barplot_bipolar, scatterplot_bipolar, ", "          ncol = 2, nrow = 1, ", 
     "          common.legend = TRUE, legend = \"bottom\")", ""
     ), chunk_opts = list(label = "Datenvisualisierung1-solution", 
         echo = FALSE, warning = FALSE)), tests = NULL, options = list(
@@ -2896,7 +3035,7 @@ learnr:::store_exercise_cache(structure(list(label = "Datenvisualisierung1", glo
 <!--/html_preserve-->
 <!--html_preserve-->
 <script type="application/shiny-prerendered" data-context="execution_dependencies">
-{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["packages"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["packages","version"]},"class":{"type":"character","attributes":{},"value":["data.frame"]},"row.names":{"type":"integer","attributes":{},"value":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98]}},"value":[{"type":"character","attributes":{},"value":["backports","base","base64enc","BBmisc","bslib","cachem","checkmate","cli","colorspace","commonmark","compiler","data.table","datasets","datawizard","digest","dplyr","ellipsis","evaluate","exams","exams2learnr","fansi","fastmap","faux","fontawesome","forcats","generics","ggeffects","ggplot2","glue","graphics","grDevices","grid","gtable","hms","htmltools","htmlwidgets","httpuv","insight","jquerylib","jsonlite","kableExtra","knitr","later","lattice","learnr","lifecycle","lubridate","magrittr","markdown","methods","mime","mnormt","moments","munsell","nlme","parallel","performance","pillar","pkgconfig","promises","psych","purrr","R6","Rcpp","readr","rlang","rmarkdown","rprojroot","rstudioapi","sass","scales","shiny","sjlabelled","sjmisc","sjPlot","sjstats","stats","stringi","stringr","svglite","systemfonts","tibble","tidyr","tidyselect","tidyverse","timechange","tools","truncnorm","tzdb","utf8","utils","vctrs","viridisLite","withr","xfun","xml2","xtable","yaml"]},{"type":"character","attributes":{},"value":["1.5.0","4.4.0","0.1-3","1.13","0.7.0","1.1.0","2.3.1","3.6.2","2.1-0","1.9.1","4.4.0","1.15.4","4.4.0","0.11.0","0.6.35","1.1.4","0.3.2","0.23","2.4-0","0.1-0","1.0.6","1.2.0","1.2.1","0.5.2","1.0.0","0.1.3","1.7.0","3.5.1","1.7.0","4.4.0","4.4.0","4.4.0","0.3.5","1.1.3","0.5.8.1","1.6.4","1.6.15","0.20.3","0.1.4","1.8.8","1.4.0","1.47","1.3.2","0.22-6","0.11.5","1.0.4","1.9.3","2.0.3","1.13","4.4.0","0.12","2.1.1","0.14.1","0.5.1","3.1-164","4.4.0","0.12.0","1.9.0","2.0.3","1.3.0","2.4.6.26","1.0.2","2.5.1","1.0.12","2.1.5","1.1.4","2.27","2.0.4","0.16.0","0.4.9","1.3.0","1.8.1.1","1.2.0","2.8.10","2.8.16","0.19.0","4.4.0","1.8.4","1.5.1","2.1.3","1.1.0","3.2.1","1.3.1","1.2.1","2.0.0","0.3.0","4.4.0","1.0-9","0.4.0","1.2.4","4.4.0","0.6.5","0.4.2","3.0.0","0.47","1.3.6","1.8-4","2.3.8"]}]}]}
+{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["packages"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["packages","version"]},"class":{"type":"character","attributes":{},"value":["data.frame"]},"row.names":{"type":"integer","attributes":{},"value":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112]}},"value":[{"type":"character","attributes":{},"value":["abind","backports","base","base64enc","BBmisc","broom","bslib","cachem","car","carData","checkmate","cli","colorspace","commonmark","compiler","cowplot","data.table","datasets","datawizard","digest","dplyr","ellipsis","evaluate","exams","exams2learnr","fansi","farver","fastmap","faux","fontawesome","forcats","generics","ggeffects","ggplot2","ggpubr","ggsignif","glue","graphics","grDevices","grid","gridExtra","gtable","hms","htmltools","htmlwidgets","httpuv","insight","jquerylib","jsonlite","kableExtra","knitr","labeling","later","lattice","learnr","lifecycle","lubridate","magrittr","markdown","Matrix","methods","mgcv","mime","mnormt","moments","munsell","nlme","parallel","performance","pillar","pkgconfig","promises","psych","purrr","R6","Rcpp","readr","rlang","rmarkdown","rprojroot","rstatix","rstudioapi","sass","scales","shiny","sjlabelled","sjmisc","sjPlot","sjstats","splines","stats","stringi","stringr","svglite","systemfonts","tibble","tidyr","tidyselect","tidyverse","timechange","tools","truncnorm","tzdb","utf8","utils","vctrs","viridisLite","withr","xfun","xml2","xtable","yaml"]},{"type":"character","attributes":{},"value":["1.4-5","1.5.0","4.4.0","0.1-3","1.13","1.0.6","0.7.0","1.1.0","3.1-2","3.0-5","2.3.1","3.6.2","2.1-0","1.9.1","4.4.0","1.1.3","1.15.4","4.4.0","0.11.0","0.6.35","1.1.4","0.3.2","0.23","2.4-0","0.1-0","1.0.6","2.1.2","1.2.0","1.2.1","0.5.2","1.0.0","0.1.3","1.7.0","3.5.1","0.6.0","0.6.4","1.7.0","4.4.0","4.4.0","4.4.0","2.3","0.3.5","1.1.3","0.5.8.1","1.6.4","1.6.15","0.20.3","0.1.4","1.8.8","1.4.0","1.47","0.4.3","1.3.2","0.22-6","0.11.5","1.0.4","1.9.3","2.0.3","1.13","1.7-0","4.4.0","1.9-1","0.12","2.1.1","0.14.1","0.5.1","3.1-164","4.4.0","0.12.0","1.9.0","2.0.3","1.3.0","2.4.6.26","1.0.2","2.5.1","1.0.12","2.1.5","1.1.4","2.27","2.0.4","0.7.2","0.16.0","0.4.9","1.3.0","1.8.1.1","1.2.0","2.8.10","2.8.16","0.19.0","4.4.0","4.4.0","1.8.4","1.5.1","2.1.3","1.1.0","3.2.1","1.3.1","1.2.1","2.0.0","0.3.0","4.4.0","1.0-9","0.4.0","1.2.4","4.4.0","0.6.5","0.4.2","3.0.0","0.47","1.3.6","1.8-4","2.3.8"]}]}]}
 </script>
 <!--/html_preserve-->
 </div>
