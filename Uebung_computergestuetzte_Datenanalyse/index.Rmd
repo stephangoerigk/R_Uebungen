@@ -811,18 +811,28 @@ ncol(bipolar) # Alternative Funktion, falls Unsicherheiten darüber bestehen, we
 
 names(bipolar) # Übersicht der Variablen-Namen, die im bipolar Datensatz enthalten sind
 
-table(bipolar$Groups) # Training: 68 Proband:innen, No Training: 60 Proband:innen
+table(bipolar$Groups) # Training: 68 Proband:innen, Control: 60 Proband:innen
 
 table(bipolar$Gender[bipolar$Groups == "EW"]) # Training: 32 weibliche, 36 männliche Proband:innen
-table(bipolar$Gender[bipolar$Groups == "noEW"]) # No Training: 37 weibliche, 23 männliche Proband:innen
+table(bipolar$Gender[bipolar$Groups == "noEW"]) # Control: 37 weibliche, 23 männliche Proband:innen
+
+table(bipolar$Gender) # Total: 69 weiblich, 59 männlich
 
 # Aufgabe 2
 range(bipolar$Age) # Altersrange: 18-73
 round((sum(bipolar$Age > 65) / length(bipolar$Age)) * 100, 2) # Prozentuale Anzahl der Proband:innen über 65 Jahre: 6.25%
-round(mean(bipolar$Age[bipolar$Groups == "noEW"]), 2) # No Training (Age): M = 39.40
-round(sd(bipolar$Age[bipolar$Groups == "noEW"]), 2) # Not Training (Age): SD = 15.08
+round(mean(bipolar$Age), 2) # Total (Age): M = 40.22
+round(sd(bipolar$Age), 2) # Total (Age): SD = 14.53
+
+round(mean(bipolar$Age[bipolar$Groups == "noEW"]), 2) # Control (Age): M = 39.40
+round(sd(bipolar$Age[bipolar$Groups == "noEW"]), 2) # Control (Age): SD = 15.08
+range(bipolar$Age[bipolar$Groups == "noEW"])
+round((sum(bipolar$Age[bipolar$Groups == "noEW"] > 65) / length(bipolar$Age[bipolar$Groups == "noEW"])) * 100, 2)
+
 round(mean(bipolar$Age[bipolar$Groups == "EW"]), 2) # Training (Age): M = 40.94
 round(sd(bipolar$Age[bipolar$Groups == "EW"]), 2) # Training (Age): SD = 14.11
+range(bipolar$Age[bipolar$Groups == "EW"])
+round((sum(bipolar$Age[bipolar$Groups == "EW"] > 65) / length(bipolar$Age[bipolar$Groups == "noEW"])) * 100, 2)
 
 # Aufgabe 3 
 # Auswertung YMRS (keine Umkodierung notwendig)
@@ -891,6 +901,7 @@ summary(bipolar$ISEL_tangible[bipolar$Groups == "EW"])
 round(sd(bipolar$ISEL_tangible[bipolar$Groups == "EW"]), 2)
 
 ```
+
 
 <hr> <!-- Horizontale Trennlinie -->
 
