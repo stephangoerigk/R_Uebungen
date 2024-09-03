@@ -501,16 +501,20 @@ exams2learnr("Questions/VO_08/VO8_MC_8.Rmd", allow_retry = TRUE)
 
 ### Übungsaufgaben zur Interpretation von R - Outputs
 
-```{r VO7_Output1, message = FALSE, warning=FALSE}
+```{r VO8_Output1, message = FALSE, warning=FALSE}
 exams2learnr("Questions/VO_08/VO8_Output1.Rmd", allow_retry = TRUE)
 ```
 
-```{r VO7_Output2, message = FALSE, warning=FALSE}
+```{r VO8_Output2, message = FALSE, warning=FALSE}
 exams2learnr("Questions/VO_08/VO8_Output2.Rmd", allow_retry = TRUE)
 ```
 
-```{r VO7_Output3, message = FALSE, warning=FALSE}
+```{r VO8_Output3, message = FALSE, warning=FALSE}
 exams2learnr("Questions/VO_08/VO8_Output3.Rmd", allow_retry = TRUE)
+```
+
+```{r VO8_Output4, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_08/VO8_Output4.Rmd", allow_retry = TRUE)
 ```
 
 

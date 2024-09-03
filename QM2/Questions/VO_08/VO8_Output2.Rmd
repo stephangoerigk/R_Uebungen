@@ -1,0 +1,72 @@
+
+```{r data generation, include=FALSE}
+
+library(afex)
+library(tidyverse)
+
+set.seed(123)
+# Simulierte Daten für drei Messzeitpunkte
+t0 = round(rnorm(30, 10, 2))  # Messzeitpunkt t0
+t1 = round(t0 + rnorm(30, 0, 2))  # Messzeitpunkt t1
+t2 = round(t1 + rnorm(30, 10, 2))  # Messzeitpunkt t2
+id = 1:30  # Identifikationsnummer für jede Person
+df = data.frame(id = id, t0 = t0, t1 = t1, t2 = t2)
+
+# Daten im Wide-Format
+df_wide = df
+
+# Umwandlung ins Long-Format
+df_long = as.data.frame(pivot_longer(data = df_wide, 
+                               cols = c("t0", "t1", "t2"), 
+                               names_to = "Time", 
+                               values_to = "Score"))
+
+# Durchführung der rmANOVA
+model = aov_ez(dv = "Score", within = c("Time"), id = "id", data = df_long)
+summary = summary(model)
+
+
+library(emmeans)
+
+emmeans = emmeans(model, pairwise ~ Time)
+
+
+```    
+
+Question
+========
+
+In einem weiteren Schritt betrachten Sie nun das Ergebnis eines PostHoc Tests zur vorherigen Forschungsfrage:
+
+```{r echo=FALSE}
+emmeans
+```
+Welche Aussagen zu diesem Output sind korrekt? 
+
+Answerlist
+----------
+* Es gibt einen signifikanten Unterschied zwischen t0 und t1.
+* Es gibt einen signifikanten Unterschied zwischen t0 und t2.
+* Es gibt einen signifikanten Unterschied zwischen t1 und t2.
+* Die größte Differenz in den Mittelwerten besteht zwischen t0 und t1.
+* Zwischen t1 und t2 haben sich die kognitiven Fähigkeiten nahezu verdopplet.
+* Die p-Werte wurden mit der Tukey-Methode angepasst, um den Vergleich mehrerer Schätzungen zu berücksichtigen.
+
+Solution
+========
+
+Answerlist
+----------
+* Falsch. Der p-Wert für den Unterschied zwischen t0 und t1 ist 0.4700, was nicht signifikant ist.
+* Richtig. Der p-Wert für den Unterschied zwischen t0 und t2 ist <.0001, was signifikant ist.
+* Richtig. Der p-Wert für den Unterschied zwischen t1 und t2 ist ebenfalls <.0001, was signifikant ist.
+* Falsch. Die größte Differenz in den Mittelwerten besteht zwischen t0 und t2, nicht zwischen t0 und t1.
+* Richtig. Zwischen t1 und t2 haben sich die kognitiven Fähigkeiten nahezu verdoppelt, was sich in der signifikanten Differenz von -10.067 im Kontrast zwischen t1 und t2 widerspiegelt.
+* Richtig. Die p-Werte wurden mit der Tukey-Methode angepasst, wie im Output angegeben.
+
+Meta-information
+================
+exname: Tukey_Test_Interpretation
+extype: mchoice 
+exsolution: 011011
+exshuffle: TRUE
