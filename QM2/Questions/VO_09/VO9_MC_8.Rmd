@@ -1,0 +1,28 @@
+Question
+========
+Welche Aussagen zur Stichprobenumfangsplanung in Mixed Designs sind korrekt?
+
+Answerlist
+----------
+* Die erwartete Effektstärke kann in Cohens f angegeben werden.
+* Das Signifikanzniveau α ist ein entscheidender Faktor.
+* Die durchschnittliche angenommene Korrelation zwischen Messzeitpunkten wird berücksichtigt.
+* Eine Sphärizitätskorrektur wird i.d.R. nicht a priori geplant und ist daher für die Stichprobenumfangsplanung eher zu vernachlässigen. 
+* Die Anzahl der Gruppen hat keinen Einfluss auf die Stichprobenumfangsplanung.
+
+Solution
+========
+Answerlist
+----------
+* Richtig. Die erwartete Effektstärke wird in Cohens f angegeben, was in die Planung einfließt.
+* Richtig. Das Signifikanzniveau $\alpha$ beeinflusst die Stichprobenplanung.
+* Richtig. Die durchschnittliche Korrelation zwischen den Messzeitpunkten ist relevant.
+* Richtig. Eine Sphärizitätskorrektur wird i.d.R. nicht a priori geplant und ist daher für die Stichprobenumfangsplanung eher zu vernachlässigen. 
+* Falsch. Die Anzahl der Gruppen beeinflusst die Stichprobenumfangsplanung.
+
+Meta-information
+================
+exname: MixedDesign_Stichprobenumfang
+extype: mchoice
+exsolution: 11100
+exshuffle: TRUE

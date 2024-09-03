@@ -1,0 +1,28 @@
+Question
+========
+Welche Aussage beschreibt ein Mixed Design korrekt?
+
+Answerlist
+----------
+* Ein Mixed Design kombiniert Messwiederholungen und Gruppenvergleiche.
+* Ein Mixed Design vergleicht nur zwei Gruppen zu einem Zeitpunkt.
+* Mixed Designs sind ausschließlich in klinischen Studien anwendbar.
+* In Mixed Designs gibt es keine Interaktionseffekte.
+* Ein Mixed Design misst jede Person nur einmal.
+
+Solution
+========
+Answerlist
+----------
+* Richtig. Ein Mixed Design kombiniert within-subjects (Messwiederholungen) und between-subjects (Gruppen) Faktoren.
+* Falsch. Mixed Designs umfassen sowohl Messwiederholungen als auch Gruppenvergleiche.
+* Falsch. Mixed Designs sind vielseitig und nicht nur auf klinische Studien beschränkt.
+* Falsch. Mixed Designs beinhalten oft Interaktionseffekte zwischen Zeit und Gruppe.
+* Falsch. Ein Mixed Design misst Personen zu mehreren Zeitpunkten.
+
+Meta-information
+================
+exname: MixedDesign_Definition
+extype: mchoice
+exsolution: 10000
+exshuffle: TRUE

@@ -1,0 +1,28 @@
+Question
+========
+Welche der folgenden Aussagen zu den Haupteffekten in Mixed Designs ist korrekt?
+
+Answerlist
+----------
+* Der Haupteffekt "Gruppe" zeigt den durchschnittlichen Unterschied zwischen den Gruppen über alle Zeitpunkte hinweg.
+* Der Haupteffekt "Zeit" zeigt den durchschnittlichen Unterschied über die Zeit hinweg unabhängig von den Gruppen.
+* Ein signifikanter Haupteffekt "Zeit" zeigt, dass sich die Mittelwerte zwischen den Zeitpunkten signifikant unterscheiden.
+* Der Haupteffekt "Gruppe" zeigt, dass es keine Interaktion zwischen Zeit und Gruppe gibt.
+* Der Haupteffekt "Zeit" zeigt, dass alle Gruppen sich gleich über die Zeit verändern.
+
+Solution
+========
+Answerlist
+----------
+* Richtig. Der Haupteffekt "Gruppe" gibt den durchschnittlichen Unterschied zwischen den Gruppen an, unabhängig von der Zeit.
+* Richtig. Der Haupteffekt "Zeit" zeigt die durchschnittliche Veränderung über die Zeit hinweg, unabhängig von den Gruppen.
+* Richtig. Ein signifikanter Haupteffekt "Zeit" bedeutet, dass es signifikante Unterschiede zwischen den Mittelwerten der Zeitpunkte gibt.
+* Falsch. Der Haupteffekt "Gruppe" gibt keinen Hinweis auf die Interaktion zwischen Zeit und Gruppe.
+* Falsch. Der Haupteffekt "Zeit" gibt keinen Hinweis darauf, ob die Gruppen sich gleich oder unterschiedlich über die Zeit verändern.
+
+Meta-information
+================
+exname: MixedDesign_Haupteffekte
+extype: mchoice
+exsolution: 11100
+exshuffle: TRUE

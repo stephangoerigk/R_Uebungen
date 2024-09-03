@@ -1,0 +1,28 @@
+Question
+========
+In der angewandten Statistik sind welche 2 Arten von Modellen zur Auswertung von Mixed Designs gängig?
+
+Answerlist
+----------
+* Mixed ANOVA
+* Generalized Linear Model (GLM)
+* T-Test für unabhängige Stichproben
+* Multiple Regression
+* Linear Mixed Model (Multilevel-Modell)
+
+Solution
+========
+Answerlist
+----------
+* Richtig. Die Mixed ANOVA basiert auf dem Prinzip der mehrfaktoriellen ANOVA und wird für Mixed Designs verwendet.
+* Falsch. GLM ist nicht spezifisch für Mixed Designs.
+* Falsch. Ein T-Test für unabhängige Stichproben ist kein Modell zur Auswertung von Mixed Designs.
+* Falsch. Multiple Regression wird zwar in der Statistik verwendet, aber nicht spezifisch für Mixed Designs.
+* Richtig. Das Linear Mixed Model (auch Multilevel-Modell genannt) basiert auf dem Prinzip der Regression und ist eine gängige Methode zur Auswertung von Mixed Designs.
+
+Meta-information
+================
+exname: Modelle_Mixed_Designs
+extype: mchoice 
+exsolution: 10001
+exshuffle: TRUE

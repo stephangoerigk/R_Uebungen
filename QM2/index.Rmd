@@ -518,8 +518,52 @@ exams2learnr("Questions/VO_08/VO8_Output4.Rmd", allow_retry = TRUE)
 ```
 
 
-
 ## Einheit 9 - Mixed Designs
+
+```{r VO9_MC_1, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_09/VO9_MC_1.Rmd", allow_retry = TRUE)
+```
+
+```{r VO9_MC_2, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_09/VO9_MC_2.Rmd", allow_retry = TRUE)
+```
+
+```{r VO9_MC_3, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_09/VO9_MC_3.Rmd", allow_retry = TRUE)
+```
+
+```{r VO9_MC_4, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_09/VO9_MC_4.Rmd", allow_retry = TRUE)
+```
+
+```{r VO9_MC_5, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_09/VO9_MC_5.Rmd", allow_retry = TRUE)
+```
+
+```{r VO9_MC_6, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_09/VO9_MC_6.Rmd", allow_retry = TRUE)
+```
+
+```{r VO9_MC_7, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_09/VO9_MC_7.Rmd", allow_retry = TRUE)
+```
+
+```{r VO9_MC_8, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_09/VO9_MC_8.Rmd", allow_retry = TRUE)
+```
+
+```{r VO9_MC_9, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_09/VO9_MC_9.Rmd", allow_retry = TRUE)
+```
+
+```{r VO9_MC_10, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_09/VO9_MC_10.Rmd", allow_retry = TRUE)
+```
+
+```{r VO9_MC_11, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_09/VO9_MC_11.Rmd", allow_retry = TRUE)
+```
+
 
 ## Einheit 10 - Verfahren für Nominaldaten - χ<sup>2</sup>-Test
 
