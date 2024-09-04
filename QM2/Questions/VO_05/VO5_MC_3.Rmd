@@ -7,7 +7,7 @@ Answerlist
 * Der kombinierte Einfluss von zwei oder mehr unabhängigen Variablen auf eine abhängige Variable.
 * Der Einfluss einer unabhängigen Variablen auf eine abhängige Variable.
 * Die additive Wirkung mehrerer unabhängiger Variablen.
-* Eine Situation, in der der Effekt einer unabhängigen Variablen von der Ausprägung einer anderen unabhängigen Variablen abhängt.
+* Eine Konstellation, in der der Effekt einer unabhängigen Variablen von der Ausprägung einer anderen unabhängigen Variablen abhängt.
 
 Solution
 ========

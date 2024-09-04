@@ -15,21 +15,21 @@ model <- lm(stress ~ workload)  # lineares Modell erstellen
 Question
 ========
 
-In einer psychologischen Studie wird untersucht, wie stark die Arbeitsbelastung einer Person ihr Stresserleben beeinflusst. Dazu wurden Daten von 100 berufstätigen Personen erhoben. Die Arbeitsbelastung wurde anhand eines validierten Fragebogens gemessen, wobei höhere Werte eine höhere Belastung anzeigen. Das Stresserleben wurde ebenfalls mit einem Fragebogen erfasst, der höhere Werte bei stärkerem Stresserleben liefert.
+In einer psychologischen Studie wird untersucht, wie stark die Arbeitsbelastung von Personen ihr Stresserleben beeinflusst. Dazu wurden Daten von 100 berufstätigen Personen erhoben. Die Arbeitsbelastung wurde anhand eines validierten Fragebogens gemessen, wobei höhere Werte einer höheren Belastung entsprechen. Das Stresserleben wurde ebenfalls mit einem Fragebogen erfasst. Auch hier entsprechen höhere Werte einem höeren Stresserleben. 
 
-Ziel ist es, zu untersuchen, wie stark die Arbeitsbelastung das Stresserleben vorhersagen kann. Nach Ende der Datenerhebung erhalten Sie folgendes Ergebnis:
+Ziel ist es zu untersuchen, inwiefern die Arbeitsbelastung das Stresserleben vorhersagen kann. Nach Berechnung eines linearen Regressionsmodells erhalten Sie folgendes Ergebnis: 
 
 ```{r output, echo=FALSE}
 summary(model)
 ```
 
-Welche Aussagen bezogen auf diese Output sind korrekt? 
+Welche Aussagen bezogen auf diesen Output sind korrekt? 
 
 
 Answerlist
 ----------
 
-* Die Geradengleichung lautet: y = 21.32 + 0.05x
+* Die Geradengleichung lautet: y = 21.32 + 0.053x
 * Bei einem Workload von 0 hat eine Person ein durchschnittliches Stresserleben von 21.32
 * Wenn das Stresserleben um eine Einheit steigt, steigt der durchschnittliche Workload um 0.67 Einheiten 
 * Wenn der Workload um eine Einheit steigt, steigt das durchschnittliche Stresserleben um 0.67 Einheiten 
@@ -43,7 +43,7 @@ Answerlist
 
 * Falsch. Die Geradengleichung lautet: $y = 21.32 + 0.67x$
 * Richtig. Das ist richtig, da $a = 21.32$
-* Falsch. Das ist nicht richtig.
+* Falsch. Das ist nicht richtig. Hier wurden die AV und die UV vertauscht. 
 * Richtig. Das ist die richtige Interpretation. 
 * Richtig. Der Steigungsparameter weicht signifikant von 0 ab. Diese Aussage ist also korrekt. 
 

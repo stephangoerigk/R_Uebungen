@@ -15,7 +15,7 @@ model <- lm(life_satisfaction ~ social_support)
 Question
 ========
 
-In einer psychologischen Studie wird untersucht, wie stark die wahrgenommene soziale Unterstützung einer Person ihre Lebenszufriedenheit beeinflusst. Dazu wurden Daten von 120 Personen erhoben. Die soziale Unterstützung wurde mithilfe eines Fragebogens gemessen, bei dem höhere Werte eine stärkere wahrgenommene Unterstützung anzeigen. Die Lebenszufriedenheit wurde ebenfalls mit einem validierten Fragebogen erfasst, bei dem höhere Werte eine größere Zufriedenheit ausdrücken. Ziel der Studie ist es, zu untersuchen, wie gut die soziale Unterstützung die Lebenszufriedenheit vorhersagen kann.
+In einer psychologischen Studie wird untersucht, wie stark die wahrgenommene soziale Unterstützung einer Person ihre Lebenszufriedenheit beeinflusst. Dazu wurden Daten von 120 Personen erhoben. Die soziale Unterstützung wurde mithilfe eines Fragebogens gemessen, bei dem höhere Werte einer stärkeren wahrgenommene Unterstützung entsprechen. Die Lebenszufriedenheit wurde ebenfalls mit einem validierten Fragebogen erfasst, bei dem höhere Werte eine größere Zufriedenheit ausdrücken. Ziel der Studie ist es, zu untersuchen, wie gut die soziale Unterstützung die Lebenszufriedenheit vorhersagen kann.
 
 Nach Ende der Datenerhebung erhalten Sie folgendes Ergebnis:
 
@@ -31,7 +31,7 @@ Answerlist
 
 * Insgesamt können wir 0.784% der Varianz in der AV durch unser Modell erklären.
 * Es scheint ein negativer Zusammenhang zwischen sozialer Unterstützung und der Lebenszufriedenheit zu bestehen. 
-* Unser Modell wird auf einem α = .001 Niveau signifikant. 
+* Unser Gesamtmodell wird auf einem α = .001 Niveau signifikant. 
 * Ingesamt können wir 7.84% der Varianz in der AV durch unser Modell erklären.
 * Der Intercept wird nicht signifikant: Die UV social_support scheint die AV life_satisfaction also nicht signifikant vorhersagen zu können.
 

@@ -6,12 +6,13 @@ sol = 13.073
 Question
 ========
 
-Eine klinische Studie untersucht den Zusammenhang zwischen der Dauer einer Schlaftherapie und der Verbesserung der Schlafqualität bei Patienten mit Schlafstörungen. Die Daten wurden von einer Stichprobe von Patienten (N = 10) erhoben, die eine spezialisierte Schlaftherapie über einen Zeitraum von 12 Wochen erhielten. 
+Eine klinische Studie untersucht den Zusammenhang zwischen der Dauer einer Schlaftherapie und der Verbesserung der Schlafqualität bei Patienten mit Schlafstörungen. Die Daten wurden in einer Stichprobe von N = 10 Patienten erhoben, die eine spezialisierte Schlaftherapie erhielten. Die Dauer der Therapie konnte von Patient zu Patient variieren. 
 
 Nach Abschluss der Analyse erhalten Sie folgenden R Output: 
 
 ![](images/Output_t-value.png){width=600px}
- Berechnen Sie den empirischen t-Wert und geben das Ergebnis auf 3 Nachkommastellen gerundet an. 
+<br>
+Berechnen Sie den empirischen t-Wert und geben das Ergebnis auf 3 Nachkommastellen gerundet an. 
 
 
 Solution

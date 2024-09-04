@@ -1,12 +1,12 @@
 Question
 ========
-Was beschreibt eine mehrfaktorielle ANOVA?
+Was kann man mit einer mehrfaktoriellen ANOVA untersuchen?
 
 Answerlist
 ----------
-* Den Einfluss einer unabhängigen Variablen auf eine abhängige Variable.
-* Den Einfluss mehrerer unabhängiger Variablen auf eine abhängige Variable.
-* Den Einfluss einer abhängigen Variable auf mehrere unabhängige Variablen.
+* Den Effekt einer unabhängigen Variablen auf eine abhängige Variable.
+* Den Effekt mehrerer unabhängiger Variablen auf eine abhängige Variable.
+* Den Effekt einer abhängigen Variable auf mehrere unabhängige Variablen.
 * Die Interaktion zwischen mehreren abhängigen Variablen.
 
 Solution
@@ -22,5 +22,5 @@ Meta-information
 ================
 exname: Grundlagen_Mehrfaktorielle_ANOVA
 extype: mchoice 
-exsolution: 01000
+exsolution: 0100
 exshuffle: TRUE

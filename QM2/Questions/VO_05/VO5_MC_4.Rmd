@@ -1,6 +1,6 @@
 Question
 ========
-Wie viele Signifikanztests sind bei einer 2x3 ANOVA notwendig?
+Wie viele F-Tests werden bei einer 2x3 ANOVA berechnet?
 
 Answerlist
 ----------
@@ -16,7 +16,7 @@ Answerlist
 ----------
 * Falsch. Es werden mehr Tests benötigt, um alle Effekte zu überprüfen.
 * Falsch. Neben den Haupteffekten muss auch der Interaktionseffekt getestet werden.
-* Richtig. Bei einer 2x3 ANOVA werden zwei Haupteffekte und ein Interaktionseffekt getestet.
+* Richtig. Bei einer 2x3 ANOVA (UV1 mit 2 Stufen und UV2 mit 3 Stufen) werden zwei Haupteffekte und ein Interaktionseffekt getestet.
 * Falsch. Es werden nur drei Signifikanztests benötigt.
 * Falsch. Es gibt bei einer 2x3 ANOVA keine zusätzlichen Tests für mehrere Interaktionen.
 

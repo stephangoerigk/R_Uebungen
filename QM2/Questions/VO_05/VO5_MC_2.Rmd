@@ -15,7 +15,7 @@ Answerlist
 ----------
 * Richtig. Ein Haupteffekt beschreibt den Einfluss einer unabhängigen Variablen unabhängig von anderen Variablen.
 * Falsch. Haupteffekte können auch auftreten, wenn Interaktionseffekte vorhanden sind.
-* Richtig. Haupteffekte können auch interpretiert werden, wenn Interaktionseffekte vorhanden sind, jedoch muss dies vorsichtig geschehen.
+* Richtig. Haupteffekte können auch interpretiert werden, wenn Interaktionseffekte vorhanden sind, jedoch muss dies vorsichtig geschehen. (Disordinale Interaktion)
 * Falsch. Die Wechselwirkung zwischen zwei Variablen beschreibt einen Interaktionseffekt.
 
 Meta-information

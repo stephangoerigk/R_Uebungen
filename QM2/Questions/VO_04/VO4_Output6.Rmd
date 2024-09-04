@@ -44,7 +44,7 @@ sol = y - t * standardschaetzfehler * wurzel
 Question
 ========
 
-In einer psychologischen Studie wird untersucht, wie die tägliche Bildschirmzeit (Zeit, die vor Bildschirmen verbracht wird, z.B. Computer, Smartphones) die Schlafqualität beeinflusst. Es wurden Daten von `r n` Personen gesammelt. Die tägliche Bildschirmzeit wurde in Stunden gemessen, und die Schlafqualität wurde mit einem validierten Fragebogen erfasst, wobei höhere Werte eine bessere Schlafqualität anzeigen.
+In einer psychologischen Studie wird untersucht, wie die tägliche Bildschirmzeit (d.h., die Zeit, die vor Bildschirmen verbracht wird, z.B. Computer, Smartphones) die Schlafqualität beeinflusst. Es wurden Daten von `r n` Personen erhoben. Die tägliche Bildschirmzeit wurde in Stunden gemessen. Die Schlafqualität wurde mit einem validierten Fragebogen erfasst, wobei höhere Werte für eine bessere Schlafqualität stehen.
 
 ```{r output, echo=FALSE}
 summary(model)

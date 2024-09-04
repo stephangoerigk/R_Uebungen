@@ -19,7 +19,7 @@ summary = summary(model)
 Question
 ========
 
-Im Rahmen eines Projekts versuchen Sie die Körpergröße von Personen anhand ihrer Schuhgröße vorherzusagen. Sie erheben beide Variablen von `r n` Personen und erhlaten folgenden Output: 
+Im Rahmen eines Projekts versuchen Sie die Körpergröße von Personen anhand ihrer Schuhgröße vorherzusagen. Sie erheben beide Variablen von `r n` Personen und erhalten folgenden Output: 
 
 ```{r output, echo=FALSE}
 summary(model)
@@ -45,9 +45,13 @@ Answerlist
 
 * Richtig. Um das Konfidenzintervall des Steigungsparameters zu berechnen benötigen wir folgende Formel: 
 
-$$ b \pm t_{1-\frac{\alpha}{2}} \cdot \frac{\hat{\sigma}_{(y|x)}}{s_x \cdot \sqrt{n}}  $$ 
+$$ b \pm t_{1-\frac{\alpha}{2}} \cdot \frac{\hat{\sigma}_{(y|x)}}{s_x \cdot \sqrt{n}}   $$ 
 
 Der hintere Teil der Formel entspricht dem Standardfehler der Steigung $s_b$ und kann aus dem Output abgelesen werden: `r round(summary$coefficients[2,2],3)` 
+
+
+$$ b \pm t_{1-\frac{\alpha}{2}} \cdot s_b   $$ 
+
 
 der $t$-Wert für $df = 60$ und $\alpha = .05$ kann aus der t-Tabelle abgelesen werden und lautet 2.000
 

@@ -27,12 +27,14 @@ sol <- round(a + b * X, 2)
 Question
 ========
 
-Für `r n` Firmen wurden die Anzahl der Mitarbeiter $X$ und der Betrag der Ausgaben für die Weiterbildung $Y$ (in EUR) erfasst. Die statistische Zusammenfassung des Datensatzes lautet:
+Für `r n` Firmen wurden die Anzahl der Mitarbeiter $X$ und der Betrag der Ausgaben für die Weiterbildung $Y$ (in EUR) erfasst. Die relevanten Deskriptivstatistiken für die beiden Variablen lauten:
 
 |          | Variable $X$ | Variable $Y$ |
 |:--------:|:------------:|:------------:|
 | Mean     | `r mx`       | `r my`       |
 | Variance | `r varx`     | `r vary`     |
+
+<br>
 
 Die Korrelation zwischen $X$ und $Y$ beträgt `r r`.
 
