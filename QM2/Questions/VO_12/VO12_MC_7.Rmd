@@ -1,0 +1,28 @@
+Question
+========
+Wie wird die mittlere Rangsumme einer Gruppe im Mann-Whitney U-Test berechnet?
+
+Answerlist
+----------
+* Durch Summierung der Ränge aller Personen in der Gruppe und Division durch die Anzahl der Personen in der Gruppe.
+* Durch Vergleich der Rohdaten der Personen in der Gruppe.
+* Durch Berechnung der Varianzen der Personen in der Gruppe.
+* Durch Summierung der Rohdaten und Division durch die Anzahl der Personen in der Gruppe.
+* Durch den Vergleich der Mittelwerte der Personen in der Gruppe.
+
+Solution
+========
+Answerlist
+----------
+* Richtig. Die mittlere Rangsumme wird berechnet, indem die Ränge summiert und durch die Anzahl der Personen dividiert werden.
+* Falsch. Nonparametrische Tests arbeiten mit Rängen, nicht mit Rohdaten.
+* Falsch. Varianzen werden nicht berechnet.
+* Falsch. Nonparametrische Tests arbeiten mit Rängen, nicht mit Rohdaten.
+* Falsch. Nonparametrische Tests arbeiten nicht mit Mittelwerten.
+
+Meta-information
+================
+exname: Mittlere_Rangsumme_Mann_Whitney
+extype: mchoice 
+exsolution: 10000
+exshuffle: TRUE

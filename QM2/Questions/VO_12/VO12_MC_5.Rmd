@@ -1,0 +1,28 @@
+Question
+========
+Wie wird die Teststatistik des Mann-Whitney U-Tests bestimmt?
+
+Answerlist
+----------
+* Durch den Vergleich der Rohdaten.
+* Durch den Vergleich der Rangplätze der Personen innerhalb der Gruppen.
+* Durch den Vergleich der Varianzen zwischen den Gruppen.
+* Durch die Berechnung der Korrelation zwischen den Gruppen.
+* Durch den Vergleich der Mittelwerte zwischen den Gruppen.
+
+Solution
+========
+Answerlist
+----------
+* Falsch. Nonparametrische Tests arbeiten nicht mit Rohdaten.
+* Richtig. Die Teststatistik basiert auf den Rangplätzen der Personen in den Gruppen.
+* Falsch. Varianzen werden bei diesem Test nicht verglichen.
+* Falsch. Der Mann-Whitney U-Test untersucht keine Korrelationen.
+* Falsch. Der Test basiert auf Rängen, nicht auf Mittelwerten.
+
+Meta-information
+================
+exname: Teststatistik_Mann_Whitney
+extype: mchoice 
+exsolution: 01000
+exshuffle: TRUE

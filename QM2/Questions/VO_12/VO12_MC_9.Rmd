@@ -1,0 +1,28 @@
+Question
+========
+Welcher nonparametrische Test wird für mehr als zwei abhängige Gruppen verwendet?
+
+Answerlist
+----------
+* Friedman-Test
+* Kruskal-Wallis-Test
+* Mann-Whitney U-Test
+* Wilcoxon-Test
+* Chi-Quadrat-Test
+
+Solution
+========
+Answerlist
+----------
+* Richtig. Der Friedman-Test ist ein nonparametrischer Test für mehr als zwei abhängige Gruppen.
+* Falsch. Der Kruskal-Wallis-Test ist für unabhängige Gruppen geeignet.
+* Falsch. Der Mann-Whitney U-Test vergleicht nur zwei unabhängige Gruppen.
+* Falsch. Der Wilcoxon-Test vergleicht nur zwei abhängige Gruppen.
+* Falsch. Der Chi-Quadrat-Test prüft Häufigkeiten in unabhängigen Stichproben.
+
+Meta-information
+================
+exname: Nonparametrische_Mehr_Als_Zwei
+extype: mchoice 
+exsolution: 10000
+exshuffle: TRUE

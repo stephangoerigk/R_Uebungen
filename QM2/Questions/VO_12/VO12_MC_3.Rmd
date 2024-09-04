@@ -1,0 +1,28 @@
+Question
+========
+Welches nonparametrische Verfahren ist das Äquivalent zum unabhängigen t-Test?
+
+Answerlist
+----------
+* Kruskal-Wallis H-Test
+* Mann-Whitney U-Test
+* Wilcoxon Test
+* Friedman Test
+* Chi-Quadrat-Test
+
+Solution
+========
+Answerlist
+----------
+* Falsch. Der Kruskal-Wallis H-Test ist das Äquivalent zur ANOVA ohne Messwiederholung.
+* Richtig. Der Mann-Whitney U-Test ist das Äquivalent zum unabhängigen t-Test.
+* Falsch. Der Wilcoxon Test ist das Äquivalent zum abhängigen t-Test.
+* Falsch. Der Friedman Test ist das Äquivalent zur ANOVA mit Messwiederholung.
+* Falsch. Der Chi-Quadrat-Test ist kein direktes Äquivalent.
+
+Meta-information
+================
+exname: Aequivalent_Unabhaengig_tTest
+extype: mchoice 
+exsolution: 01000
+exshuffle: TRUE

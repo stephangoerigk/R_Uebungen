@@ -1,0 +1,28 @@
+Question
+========
+Was prüft der Kruskal-Wallis-Test?
+
+Answerlist
+----------
+* Unterschiede zwischen mehr als zwei unabhängigen Gruppen.
+* Unterschiede zwischen zwei abhängigen Gruppen.
+* Unterschiede zwischen den Mittelwerten der Gruppen.
+* Unterschiede in den Rängen zwischen den Gruppen.
+* Unterschiede in den Varianzen der Gruppen.
+
+Solution
+========
+Answerlist
+----------
+* Richtig. Der Kruskal-Wallis-Test prüft Unterschiede zwischen mehr als zwei unabhängigen Gruppen.
+* Falsch. Der Test ist für unabhängige Gruppen gedacht, nicht für abhängige.
+* Falsch. Der Kruskal-Wallis-Test basiert auf Rängen, nicht auf Mittelwerten.
+* Richtig. Der Test prüft die Unterschiede in den Rängen zwischen den Gruppen.
+* Falsch. Der Test vergleicht keine Varianzen.
+
+Meta-information
+================
+exname: Kruskal_Wallis
+extype: mchoice 
+exsolution: 10010
+exshuffle: TRUE

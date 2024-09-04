@@ -1,0 +1,28 @@
+Question
+========
+Welche Art von Hypothese wird beim Mann-Whitney U-Test getestet?
+
+Answerlist
+----------
+* Es gibt keinen Unterschied zwischen den Mittelwerten der Gruppen.
+* Es gibt einen Unterschied in der Verteilung der Rangplätze zwischen den Gruppen.
+* Die abhängige Variable ist normalverteilt.
+* Es gibt einen Unterschied in der Varianz zwischen den Gruppen.
+* Es gibt keinen Unterschied zwischen den Varianzen der Gruppen.
+
+Solution
+========
+Answerlist
+----------
+* Falsch. Nonparametrische Tests vergleichen keine Mittelwerte.
+* Richtig. Der Mann-Whitney U-Test prüft Unterschiede in der Verteilung der Rangplätze.
+* Falsch. Nonparametrische Tests erfordern keine Normalverteilung.
+* Falsch. Der Test vergleicht keine Varianzen.
+* Falsch. Varianzen sind für den Test nicht relevant.
+
+Meta-information
+================
+exname: Hypothese_Mann_Whitney
+extype: mchoice 
+exsolution: 01000
+exshuffle: TRUE

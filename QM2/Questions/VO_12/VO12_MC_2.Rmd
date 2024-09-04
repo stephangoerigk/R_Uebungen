@@ -1,0 +1,28 @@
+Question
+========
+Was ist die Logik nonparametrischer Tests?
+
+Answerlist
+----------
+* Nonparametrische Tests setzen Intervallskalenniveau voraus.
+* Nonparametrische Tests arbeiten mit Rangplätzen statt den Rohwerten.
+* Nonparametrische Tests erfordern eine Normalverteilung.
+* Nonparametrische Tests arbeiten mit der Rangverteilung, nicht mit der Populationsverteilung.
+* Nonparametrische Tests setzen Varianzhomogenität voraus.
+
+Solution
+========
+Answerlist
+----------
+* Falsch. Nonparametrische Tests setzen nur Ordinalskalenniveau voraus.
+* Richtig. Nonparametrische Tests basieren auf der Rangordnung der Werte.
+* Falsch. Nonparametrische Tests erfordern keine Normalverteilung.
+* Richtig. Nonparametrische Tests arbeiten mit einer eigenen Verteilung, basierend auf den Rängen.
+* Falsch. Varianzhomogenität ist keine Voraussetzung.
+
+Meta-information
+================
+exname: Logik_Nonparametrisch
+extype: mchoice 
+exsolution: 01010
+exshuffle: TRUE

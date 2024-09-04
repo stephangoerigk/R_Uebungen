@@ -679,7 +679,50 @@ exams2learnr("Questions/VO_11/VO11_MC_9.Rmd", allow_retry = TRUE)
 exams2learnr("Questions/VO_11/VO11_MC_10.Rmd", allow_retry = TRUE)
 ```
 
+### Interpretieren von R Outputs 
+
 
 
 ## Einheit 12 - Robuste Tests
+
+
+```{r V12_MC_1, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_12/VO12_MC_1.Rmd", allow_retry = TRUE)
+```
+
+```{r V12_MC_2, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_12/VO12_MC_2.Rmd", allow_retry = TRUE)
+```
+
+```{r V12_MC_3, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_12/VO12_MC_3.Rmd", allow_retry = TRUE)
+```
+
+```{r V12_MC_4, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_12/VO12_MC_4.Rmd", allow_retry = TRUE)
+```
+
+```{r V12_MC_5, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_12/VO12_MC_5.Rmd", allow_retry = TRUE)
+```
+
+```{r V12_MC_6, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_12/VO12_MC_6.Rmd", allow_retry = TRUE)
+```
+
+```{r V12_MC_7, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_12/VO12_MC_7.Rmd", allow_retry = TRUE)
+```
+
+```{r V12_MC_8, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_12/VO12_MC_8.Rmd", allow_retry = TRUE)
+```
+
+```{r V12_MC_9, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_12/VO12_MC_9.Rmd", allow_retry = TRUE)
+```
+
+```{r V12_MC_10, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_12/VO12_MC_10.Rmd", allow_retry = TRUE)
+```
 

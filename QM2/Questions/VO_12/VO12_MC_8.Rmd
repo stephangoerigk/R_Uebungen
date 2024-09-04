@@ -1,0 +1,28 @@
+Question
+========
+Welche Annahmen müssen für den Wilcoxon-Test erfüllt sein?
+
+Answerlist
+----------
+* Es müssen mindestens intervallskalierte Daten vorliegen.
+* Es muss Varianzhomogenität gegeben sein.
+* Die abhängige Variable muss normalverteilt sein.
+* Die Rangreihen der Differenzen zwischen Messwertpaaren müssen gebildet werden.
+* Die Messwerte müssen abhängige Paare bilden.
+
+Solution
+========
+Answerlist
+----------
+* Falsch. Der Wilcoxon-Test erfordert nur Ordinalskalenniveau.
+* Falsch. Varianzhomogenität ist keine Voraussetzung.
+* Falsch. Nonparametrische Tests benötigen keine Normalverteilung.
+* Richtig. Die Rangreihen der Differenzen zwischen den Messwertpaaren müssen gebildet werden.
+* Richtig. Die Messwerte müssen von abhängigen Paaren stammen, da der Wilcoxon-Test auf gepaarten Daten basiert.
+
+Meta-information
+================
+exname: Wilcoxon_Annahmen
+extype: mchoice 
+exsolution: 00110
+exshuffle: TRUE
