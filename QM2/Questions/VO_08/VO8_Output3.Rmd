@@ -1,0 +1,72 @@
+```{r data generation, include=FALSE}
+
+library(afex)
+library(tidyverse)
+
+set.seed(123)
+# Simulierte Daten für drei Messzeitpunkte
+t0 = round(rnorm(30, 10, 2))  # Messzeitpunkt t0
+t1 = round(t0 + rnorm(30, 0, 2))  # Messzeitpunkt t1
+t2 = round(t1 + rnorm(30, 10, 2))  # Messzeitpunkt t2
+id = 1:30  # Identifikationsnummer für jede Person
+df = data.frame(id = id, t0 = t0, t1 = t1, t2 = t2)
+
+# Daten im Wide-Format
+df_wide = df
+
+# Umwandlung ins Long-Format
+df_long = as.data.frame(pivot_longer(data = df_wide, 
+                               cols = c("t0", "t1", "t2"), 
+                               names_to = "Time", 
+                               values_to = "Score"))
+
+# Durchführung der rmANOVA
+model = aov_ez(dv = "Score", within = c("Time"), id = "id", data = df_long)
+summary = summary(model)
+
+
+sol = 0.96
+
+```    
+
+Question
+========
+
+Berechnen Sie im nächsten Schritt die Effektstärke $\eta_p^2$
+
+```{r echo=FALSE}
+summary
+```
+Geben Sie die Effektstärke auf zwei Nachkommastellen gerundet an.
+
+Solution
+========
+
+Sie könen die Effektsärke entweder über die Quadratsummen oder über $f_s^2$ ausrechnen: 
+
+$$f^2_{s(abhängig)}=\frac{F\cdot df_{A}}{df_{A\text{ x }Vpn}}$$
+
+
+
+
+$$
+\eta_p^2 = \frac{QS_A}{QS_A + QS_{A \times Vpn}} = \frac{f_s^2}{1 + f_s^2}
+$$
+Beide Methoden kommen zu demselben Ergebnis. 
+
+$$
+\eta_p^2 = \frac{QS_A}{QS_A + QS_{A \times Vpn}} = \frac{2103.3}{2103.3 + 98.07} = 0.96
+$$
+$$f^2_{s(abhängig)}=\frac{F\cdot df_{A}}{df_{A\text{ x }Vpn}} = \frac{621.97 \cdot 2}{58} = 21.447$$
+$$
+\eta_p^2 =  \frac{f_s^2}{1 + f_s^2} =  \frac{21.447}{1 + 21.447} = 0.96
+$$
+
+
+
+Meta-information
+================
+extype: num
+exsolution: `r sol`
+exname: Output1
+extol: 0.01

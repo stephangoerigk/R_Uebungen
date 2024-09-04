@@ -1,0 +1,32 @@
+Question
+========
+
+Welche Voraussetzungen müssen für den Chi-Quadrat-Test erfüllt sein?
+
+Answerlist
+----------
+
+* Unabhängigkeit der Beobachtungen.
+* Jede Person kann mehreren Kategorien zugeordnet werden.
+* Erwartete Häufigkeiten in den Zellen müssen größer als 5 sein.
+* Normalverteilung der Daten.
+* Erwartete Häufigkeiten in den Zellen größer als 10.
+
+Solution
+========
+
+Answerlist
+----------
+
+* Richtig. Die Beobachtungen müssen unabhängig voneinander sein.
+* Falsch. Jede Person kann nur einer Kategorie (oder Kombinationen von Kategorien) zugeordnet werden.
+* Richtig. Erwartete Häufigkeiten sollten größer als 5 sein.
+* Falsch. Der Chi-Quadrat-Test setzt keine Normalverteilung der Daten voraus.
+* Falsch. Die Erwartete Häufigkeit in den Zellen sollte größer als 5 sein.
+
+Meta-information
+================
+exname: ChiSquareAssumptions
+extype: mchoice
+exsolution: 10100
+exshuffle: TRUE

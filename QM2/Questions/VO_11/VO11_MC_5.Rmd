@@ -1,0 +1,28 @@
+Question
+========
+Welche der folgenden Aussagen zu Log-Odds oder Logits sind korrekt?
+
+Answerlist
+----------
+* Log-Odds oder Logits werden berechnet, indem man den natürlichen Logarithmus der Odds nimmt.
+* Log-Odds oder Logits sagen direkte Wahrscheinlichkeiten für ein Ereignis vorher.
+* Log-Odds oder Logits werden nur für binäre abhängige Variablen verwendet.
+* α entspricht den Log-Odds von Personen, die auf allen UVs den Wert 0 haben.
+* Die logistische Regression ist eine lineare Regression der Log-Odds.
+
+Solution
+========
+Answerlist
+----------
+* Richtig. Log-Odds werden durch den natürlichen Logarithmus der Odds berechnet.
+* Falsch. Log-Odds sagen keine direkten Wahrscheinlichkeiten vorher, sondern die Logarithmen der Odds.
+* Richtig. Log-Odds werden bei binären abhängigen Variablen verwendet, da diese Art von Regression für solche Datenmodelle geeignet ist.
+* Richtig. Der Intercept (α) gibt die Log-Odds an, wenn alle Prädiktoren den Wert 0 haben.
+* Richtig. Die logistische Regression modelliert die Log-Odds als lineare Funktion der Prädiktoren.
+
+Meta-information
+================
+exname: Logit_Modell
+extype: mchoice 
+exsolution: 10111
+exshuffle: TRUE

@@ -1,0 +1,28 @@
+Question
+========
+Was sind wesentliche Vorteile nonparametrischer Verfahren?
+
+Answerlist
+----------
+* Sie setzen in der Regel keine Normalverteilung voraus.
+* Sie können nur bei Intervallskalenniveau angewendet werden.
+* Sie setzen Varianzhomogenität voraus.
+* Sie benötigen nur Ordinalskalenniveau.
+* Sie arbeiten mit Rangplätzen statt mit Rohwerten.
+
+Solution
+========
+Answerlist
+----------
+* Richtig. Nonparametrische Verfahren benötigen (meistens) keine Normalverteilung in der Population.
+* Falsch. Nonparametrische Verfahren benötigen nur Ordinalskalenniveau.
+* Falsch. Nonparametrische Verfahren benötigen keine Varianzhomogenität.
+* Richtig. Nonparametrische Verfahren arbeiten auch mit Ordinalskalenniveau.
+* Richtig. Nonparametrische Tests basieren auf Rangplätzen.
+
+Meta-information
+================
+exname: Nonparametrische_Vorteile
+extype: mchoice 
+exsolution: 10011
+exshuffle: TRUE

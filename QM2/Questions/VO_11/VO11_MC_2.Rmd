@@ -1,0 +1,28 @@
+Question
+========
+Was bedeutet der Parameter β in der logistischen Regression?
+
+Answerlist
+----------
+* β = 0 bedeutet, dass die Wahrscheinlichkeit für Y = 1 immer 0 ist.
+* Ein positiver Wert von β bedeutet, dass ein Anstieg des Prädiktors die Wahrscheinlichkeit für Y = 1 erhöht.
+* Ein negativer Wert von β bedeutet, dass ein Anstieg des Prädiktors die Wahrscheinlichkeit für Y = 1 erhöht.
+* β ist der Y-Achsenabschnitt der logistischen Funktion.
+* Der Wert von β bestimmt, ob es einen Zusammenhang zwischen dem Prädiktor und dem Ergebnis gibt.
+
+Solution
+========
+Answerlist
+----------
+* Falsch. β = 0 bedeutet, dass es keinen Zusammenhang gibt.
+* Richtig. Ein positiver β-Wert zeigt an, dass der Prädiktor die Wahrscheinlichkeit für Y = 1 erhöht.
+* Falsch. Ein negativer Wert verringert die Wahrscheinlichkeit für Y = 1.
+* Falsch. β ist der Steigungsparameter, nicht der Achsenabschnitt.
+* Richtig. β gibt an, ob der Prädiktor einen Einfluss auf die abhängige Variable hat.
+
+Meta-information
+================
+exname: Logistische_Regression_Parameter
+extype: mchoice 
+exsolution: 01010
+exshuffle: TRUE

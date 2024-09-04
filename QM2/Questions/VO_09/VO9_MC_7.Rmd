@@ -1,0 +1,28 @@
+Question
+========
+Welche der folgenden Aussagen zur Interpretation des Partial-Eta-Quadrats $\eta_p^2$ ist korrekt?
+
+Answerlist
+----------
+* Das Partial-Eta-Quadrat gibt den Anteil der Varianz an, der durch einen bestimmten Effekt in einem Mixed Design erklärt wird.
+* Ein Partial-Eta-Quadrat von 0.40 wird als "gering" interpretiert.
+* Ein Partial-Eta-Quadrat von 0.78 zeigt einen großen Effekt.
+* Das Partial-Eta-Quadrat wird nur für Between-Subject Faktoren berechnet.
+* Das Partial-Eta-Quadrat ist unabhängig von der Stichprobengröße.
+
+Solution
+========
+Answerlist
+----------
+* Richtig. Das Partial-Eta-Quadrat gibt an, wie viel Varianz durch einen bestimmten Effekt erklärt wird.
+* Falsch. Ein $\eta_p^2$ von 0.40 wird als "groß" interpretiert.
+* Richtig. Ein $\eta_p^2$ von 0.78 zeigt einen großen Effekt.
+* Falsch. Das Partial-Eta-Quadrat kann sowohl für Between-Subject als auch für Within-Subject Faktoren berechnet werden.
+* Falsch. Das Partial-Eta-Quadrat kann durch die Stichprobengröße beeinflusst werden.
+
+Meta-information
+================
+exname: MixedDesign_EtaSquared
+extype: mchoice
+exsolution: 10100
+exshuffle: TRUE

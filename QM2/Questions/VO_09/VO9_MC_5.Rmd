@@ -1,0 +1,28 @@
+Question
+========
+Was beschreibt der Interaktionseffekt Zeit x Gruppe in einem Mixed Design?
+
+Answerlist
+----------
+* Unterschiedliche Veränderungen über die Zeit zwischen Gruppen
+* Konstante Unterschiede zwischen Gruppen über die Zeit
+* Veränderungen innerhalb einer Gruppe über die Zeit
+* Unterschiede zwischen Personen innerhalb einer Gruppe
+* Unabhängige Entwicklung der Gruppen über die Zeit
+
+Solution
+========
+Answerlist
+----------
+* Richtig. Der Interaktionseffekt zeigt, wie sich die Veränderungen über die Zeit zwischen den Gruppen unterscheiden.
+* Falsch. Ein konstanter Unterschied wäre ein Haupteffekt, keine Interaktion.
+* Falsch. Veränderungen innerhalb einer Gruppe über die Zeit sind nicht die Interaktion zwischen Gruppe und Zeit.
+* Falsch. Unterschiede zwischen Personen innerhalb einer Gruppe sind Teil der Personenvarianz, nicht des Interaktionseffekts.
+* Falsch. Die Entwicklung ist nicht unabhängig, sondern interagiert mit der Gruppenvariable.
+
+Meta-information
+================
+exname: MixedDesign_Interaktionseffekt
+extype: mchoice
+exsolution: 10000
+exshuffle: TRUE

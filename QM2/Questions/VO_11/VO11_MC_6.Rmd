@@ -1,0 +1,28 @@
+Question
+========
+Wie wird der p-Wert in der logistischen Regression interpretiert?
+
+Answerlist
+----------
+* Der p-Wert gibt an, ob die Prädiktoren signifikant mit der abhängigen Variable zusammenhängen.
+* Ein p-Wert von 0.05 zeigt an, dass der Effekt sicher existiert.
+* Der p-Wert zeigt die Wahrscheinlichkeit, dass die Nullhypothese wahr ist.
+* Ein p-Wert kleiner als 0.05 zeigt an, dass der Effekt signifikant ist.
+* Der p-Wert zeigt die Stärke des Effekts eines Prädiktors.
+
+Solution
+========
+Answerlist
+----------
+* Richtig. Ein niedriger p-Wert zeigt einen signifikanten Zusammenhang zwischen Prädiktoren und der abhängigen Variable.
+* Falsch. Der p-Wert gibt keine Sicherheit an, sondern die Wahrscheinlichkeit.
+* Falsch. Der p-Wert zeigt die Wahrscheinlichkeit der beobachteten Daten unter der Nullhypothese.
+* Richtig. Ein p-Wert kleiner als 0.05 zeigt Signifikanz an.
+* Falsch. Der p-Wert sagt nichts über die Stärke des Effekts aus.
+
+Meta-information
+================
+exname: Logistische_Regression_pWert
+extype: mchoice 
+exsolution: 10010
+exshuffle: TRUE

@@ -1,0 +1,32 @@
+Question 
+======== 
+
+Welche der folgenden Aussagen trifft auf den Chi-Quadrat-Test zu?
+
+Answerlist
+----------
+
+* Er prüft, ob zwei kategoriale Variablen unabhängig voneinander sind.
+* Er kann nur für ordinalskalierte Variablen angewendet werden.
+* Er setzt voraus, dass die beobachteten Häufigkeiten größer als die erwarteten Häufigkeiten sind.
+* Er verwendet die Chi-Quadrat-Verteilung zur Bestimmung der Signifikanz.
+* Er setzt voraus, dass die erwarteten Häufigkeiten in jeder Zelle mindestens 5 betragen.
+
+Solution
+========
+
+Answerlist
+----------
+
+* Richtig. Er prüft, ob zwei kategoriale Variablen unabhängig voneinander sind.
+* Falsch. Er kann auch für nominalskalierte Variablen angewendet werden.
+* Falsch. Die beobachteten Häufigkeiten müssen nicht größer sein als die erwarteten Häufigkeiten.
+* Richtig. Er verwendet die Chi-Quadrat-Verteilung zur Bestimmung der Signifikanz.
+* Richtig. Er setzt voraus, dass die erwarteten Häufigkeiten in jeder Zelle mindestens 5 betragen.
+
+Meta-information
+================
+exname: ChiSquareIndependence
+extype: mchoice 
+exsolution: 10011
+exshuffle: TRUE

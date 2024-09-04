@@ -1,0 +1,28 @@
+Question
+========
+Was prüft der Omnibustest der logistischen Regression?
+
+Answerlist
+----------
+* Ob die einzelnen Prädiktoren signifikant sind.
+* Ob das Modell insgesamt signifikant besser ist als ein Modell ohne Prädiktoren.
+* Ob die abhängige Variable normalverteilt ist.
+* Ob die Prädiktoren untereinander korrelieren.
+* Ob es einen Unterschied zwischen den Vorhersagewahrscheinlichkeiten und den tatsächlichen Ergebnissen gibt.
+
+Solution
+========
+Answerlist
+----------
+* Falsch. Der Omnibustest prüft nicht die Signifikanz der einzelnen Prädiktoren.
+* Richtig. Der Omnibustest prüft, ob das Modell mit Prädiktoren signifikant besser ist als ein Modell ohne Prädiktoren (Nullmodell).
+* Falsch. Die Normalverteilung der abhängigen Variablen ist keine Voraussetzung für die logistische Regression.
+* Falsch. Der Omnibustest prüft keine Multikollinearität.
+* Falsch. Der Omnibustest prüft nicht direkt die Diskrepanz zwischen Vorhersage und Ergebnis, sondern die Gesamtgüte des Modells.
+
+Meta-information
+================
+exname: Omnibustest_LogReg
+extype: mchoice 
+exsolution: 01000
+exshuffle: TRUE

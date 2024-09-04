@@ -1,0 +1,32 @@
+Question
+========
+Welcher Effekt wird in dieser Abbildung dargestellt?
+
+![](images/mixed.jpeg){width=500px}
+
+
+Answerlist
+----------
+* Haupteffekt der Gruppe
+* Haupteffekt der Zeit
+* Interaktionseffekt Zeit x Gruppe
+* Residualeffekt
+* Haupteffekt der Personenvarianz
+
+Solution
+========
+
+Answerlist
+----------
+* Falsch. Der Haupteffekt der Gruppe beschreibt die durchschnittlichen Unterschiede zwischen den Gruppen, unabhängig von der Zeit.
+* Falsch. Der Haupteffekt der Zeit beschreibt die durchschnittlichen Unterschiede über die Zeit hinweg, unabhängig von den Gruppen.
+* Richtig. Der Interaktionseffekt Zeit x Gruppe zeigt, wie sich die Veränderungen über die Zeit zwischen den Gruppen unterscheiden.
+* Falsch. Der Residualeffekt beschreibt nicht die systematischen Effekte, sondern die Restvarianz, die durch die Modelle nicht erklärt wird.
+* Falsch. Die Personenvarianz ist nicht in dieser Darstellung enthalten.
+
+Meta-information
+================
+exname: Interaktion_Zeit_Gruppe
+extype: mchoice 
+exsolution: 00100
+exshuffle: TRUE

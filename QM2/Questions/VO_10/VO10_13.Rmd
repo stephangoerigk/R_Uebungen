@@ -1,0 +1,32 @@
+Question 
+======== 
+
+Was sind typische Anwendungen des Chi-Quadrat-Tests?
+
+Answerlist
+----------
+
+* Untersuchung der Verteilung von Geschlechtern in verschiedenen Berufsgruppen.
+* Vergleich der Mittelwerte von zwei unabhängigen Gruppen.
+* Analyse der Korrelation zwischen zwei kontinuierlichen Variablen.
+* Untersuchung von Behandlungsergebnissen in medizinischen Studien.
+* Analyse von Umfragedaten, um die Präferenzverteilungen zu untersuchen.
+
+Solution
+========
+
+Answerlist
+----------
+
+* Richtig. Untersuchung der Verteilung von Geschlechtern in verschiedenen Berufsgruppen.
+* Falsch. Vergleich der Mittelwerte wird mit t-Tests durchgeführt.
+* Falsch. Analyse der Korrelation zwischen kontinuierlichen Variablen wird mit Pearson's r durchgeführt.
+* Richtig. Untersuchung von Behandlungsergebnissen in medizinischen Studien.
+* Richtig. Analyse von Umfragedaten, um die Präferenzverteilungen zu untersuchen.
+
+Meta-information
+================
+exname: ChiSquareApplications
+extype: mchoice 
+exsolution: 10011
+exshuffle: TRUE

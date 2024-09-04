@@ -1,0 +1,28 @@
+Question
+========
+Welche Varianzkomponenten werden in einem Mixed Design geschätzt?
+
+Answerlist
+----------
+* Personenvarianz
+* Zeitvarianz
+* Gruppenvarianz
+* Interaktionseffekt Zeit x Gruppe
+* Residualvarianz
+
+Solution
+========
+Answerlist
+----------
+* Richtig. Die Personenvarianz wird geschätzt, um individuelle Unterschiede zu modellieren.
+* Richtig. Die Zeitvarianz ist Teil der Varianzkomponenten.
+* Richtig. Die Gruppenvarianz wird ebenfalls geschätzt.
+* Richtig. Der Interaktionseffekt Zeit x Gruppe ist eine wichtige Varianzkomponente.
+* Richtig. Die Residualvarianz repräsentiert nicht erklärte Varianz und wird ebenfalls geschätzt.
+
+Meta-information
+================
+exname: MixedDesign_Varianzkomponenten
+extype: mchoice
+exsolution: 11111
+exshuffle: TRUE

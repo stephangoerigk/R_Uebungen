@@ -1,0 +1,28 @@
+Question
+========
+Wie wird die Prüfvarianz in einem Mixed Design für Faktoren ohne Messwiederholung berechnet?
+
+Answerlist
+----------
+* Über die Residualvarianz
+* Durch Mittelung über alle Messzeitpunkte
+* Durch Addition der Varianzen aller Gruppen
+* Durch Subtraktion der Zeitvarianz von der Gesamtvarianz
+* Durch Abzug des Gruppenmittelwerts von den gemittelten Messwerten pro Person
+
+Solution
+========
+Answerlist
+----------
+* Falsch. Die Residualvarianz ist für andere Faktoren relevant.
+* Falsch. Das ist nicht das richtige Verfahren.
+* Falsch. Addition der Varianzen ist nicht die richtige Methode.
+* Falsch. Die Zeitvarianz wird nicht abgezogen.
+* Richtig. Die Prüfvarianz für Faktoren ohne Messwiederholung wird berechnet, indem der Gesamtmittelwert der Einzelgruppen von den gemittelten Messwerten pro Person über alle Messzeitpunkte abgezogen wird.
+
+Meta-information
+================
+exname: MixedDesign_Pruefvarianz
+extype: mchoice
+exsolution: 00001
+exshuffle: TRUE

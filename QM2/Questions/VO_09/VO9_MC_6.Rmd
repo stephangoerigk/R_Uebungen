@@ -1,0 +1,28 @@
+Question
+========
+Wie wird die systematische Varianz für den Faktor "Gruppe" in einem Mixed Design berechnet?
+
+Answerlist
+----------
+* Durch die quadrierte Abweichung der Gruppenmittelwerte vom Gesamtmittelwert multipliziert mit der Zellgröße und der Anzahl der Messzeitpunkte
+* Durch die Addition aller Messwerte innerhalb einer Gruppe
+* Durch die Berechnung der Varianz zwischen den Messzeitpunkten innerhalb einer Gruppe
+* Durch den Vergleich der Mittelwerte aller Messzeitpunkte
+* Durch die Subtraktion der Personenvarianz von der Gesamtvarianz
+
+Solution
+========
+Answerlist
+----------
+* Richtig. Die Berechnung erfolgt durch die quadrierte Abweichung der Gruppenmittelwerte vom Gesamtmittelwert, multipliziert mit der Zellgröße und der Anzahl der Messzeitpunkte.
+* Falsch. Addition der Messwerte ist nicht korrekt.
+* Falsch. Die Berechnung bezieht sich nicht nur auf die Varianz zwischen Messzeitpunkten.
+* Falsch. Der Vergleich der Mittelwerte aller Messzeitpunkte bezieht sich eher auf den Haupteffekt Zeit.
+* Falsch. Die Subtraktion der Personenvarianz von der Gesamtvarianz ist nicht die Methode zur Berechnung der Gruppenvarianz.
+
+Meta-information
+================
+exname: MixedDesign_SystematischeVarianz_Gruppe
+extype: mchoice
+exsolution: 10000
+exshuffle: TRUE

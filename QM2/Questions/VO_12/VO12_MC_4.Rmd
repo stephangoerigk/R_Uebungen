@@ -1,0 +1,28 @@
+Question
+========
+In welchem Szenario wird der Mann-Whitney U-Test gegenüber dem unabhängigen t-Test bevorzugt?
+
+Answerlist
+----------
+* Kein Intervallskalenniveau der AV.
+* Wenn die Varianzhomogenität nicht gegeben ist.
+* Merkmal in Population nicht normalverteilt.
+* Bei gleichen Stichprobengrößen.
+* Kein Intervallskalenniveau der UV.
+
+Solution
+========
+Answerlist
+----------
+* Richtig. Der Mann-Whitney U-Test benötigt nur Ordinalskalenniveau, daher ist Intervallskalenniveau nicht erforderlich.
+* Richtig. Der Test wird angewendet, wenn Varianzhomogenität nicht gegeben ist.
+* Richtig. Der Test wird verwendet, wenn das Merkmal in der Population nicht normalverteilt ist.
+* Falsch. Der Test ist nicht auf gleiche Stichprobengrößen angewiesen.
+* Falsch. Die unabhängige Variable (UV) muss kategorial sein, aber die Skalierung ist nicht der relevante Faktor.
+
+Meta-information
+================
+exname: Szenario_Mann_Whitney_U_Test
+extype: mchoice 
+exsolution: 11100
+exshuffle: TRUE

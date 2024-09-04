@@ -1,0 +1,72 @@
+
+```{r data generation, include=FALSE}
+
+# Notwendige Pakete laden
+library(afex)
+library(tidyverse)
+
+# Seed setzen für Reproduzierbarkeit
+set.seed(123)
+
+# Anzahl der Probanden
+n <- 30
+
+# Simulierte Daten mit verschiedenen Varianzen für die Messzeitpunkte (Sphärizitätsverletzung)
+t0 <- rnorm(n, mean = 50, sd = 5)
+t1 <- rnorm(n, mean = 55, sd = 10)  # größere Varianz
+t2 <- rnorm(n, mean = 60, sd = 15)  # noch größere Varianz
+
+# Dataframe erstellen
+df <- data.frame(id = 1:n, t0 = t0, t1 = t1, t2 = t2)
+
+# Daten ins Long-Format umwandeln
+df_long <- pivot_longer(df, cols = starts_with("t"), names_to = "Time", values_to = "Score")
+
+# Die rmANOVA durchführen
+model <- aov_ez(id = "id", dv = "Score", within = "Time", data = df_long)
+
+# Ergebnisse zusammenfassen
+summary = summary(model)
+
+
+
+
+```    
+
+Question
+========
+
+Hier sehen Sie einen weiteren rmANOVA Output. Dieser stammt von einer anderen Untersuchung.
+
+```{r echo=FALSE}
+summary
+```
+Welche Aussagen zu diesem Output sind korrekt? 
+
+Answerlist
+----------
+* Der Mauchly Test ist signifikant -> die Sphärizitätsannahme ist verletzt.
+* Der Mauchly Test ist signifikant -> Sphärizität ist gegeben. 
+* Der Mauchly Test ist nicht signifikant -> Sphärizität ist gegeben. 
+* In diesem Fall würden wir mit der Greenhouse-Geisser-Korrektur korrigieren. 
+* In diesem Fall würden wir mit der Huynh-Feldt-Korrektur korrigieren. 
+* Der korrigierte p-Wert läge bei 0.001393
+
+Solution
+========
+
+Answerlist
+----------
+* Richtig. Der Mauchly-Test ist signifikant (p = 0.0033705), was darauf hinweist, dass die Sphärizitätsannahme verletzt ist.
+* Falsch. Ein signifikanter Mauchly-Test bedeutet, dass die Sphärizitätsannahme **nicht** gegeben ist.
+* Falsch. Der Mauchly-Test ist signifikant, daher ist die Sphärizitätsannahme verletzt, nicht gegeben.
+* Richtig. Da die Sphärizitätsannahme verletzt ist, und $\epsilon$ < 0.75 ist, verwenden wir die Greenhouse-Geisser-Korrektur. Dies wird durch den `GG eps`-Wert und den korrigierten p-Wert angezeigt.
+* Falsch. Da $\epsilon$ < 0.75 ist, verwenden wir die Greenhouse-Geisser-Korrektur.
+* Richtig. Der korrigierte p-Wert für den Greenhouse-Geisser-Test ist 0.001393, wie im Output angegeben.
+
+Meta-information
+================
+exname: Output4
+extype: mchoice 
+exsolution: 100101
+exshuffle: TRUE

@@ -1,0 +1,32 @@
+Question
+========
+
+Welche Verteilung wird beim Chi-Quadrat-Test verwendet?
+
+Answerlist
+----------
+
+* t-Verteilung.
+* Normalverteilung.
+* Chi-Quadrat-Verteilung.
+* F-Verteilung.
+* Binomialverteilung.
+
+Solution
+========
+
+Answerlist
+----------
+
+* Falsch. Die t-Verteilung wird beim t-Test verwendet.
+* Falsch. Die Normalverteilung wird bei vielen Tests vorausgesetzt, aber nicht beim Chi-Quadrat-Test.
+* Richtig. Die Chi-Quadrat-Verteilung wird beim Chi-Quadrat-Test verwendet.
+* Falsch. Die F-Verteilung wird beim F-Test verwendet.
+* Falsch. Die Binomialverteilung ist eine diskrete Verteilung, nicht die Grundlage für den Chi-Quadrat-Test.
+
+Meta-information
+================
+exname: ChiSquareDistribution
+extype: mchoice
+exsolution: 00100
+exshuffle: TRUE

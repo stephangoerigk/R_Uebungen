@@ -1,0 +1,28 @@
+Question
+========
+Welcher Effekt ist in einem Mixed Design besonders interessant?
+
+Answerlist
+----------
+* Haupteffekt Zeit
+* Haupteffekt Gruppe
+* Interaktionseffekt Zeit x Gruppe
+* Residuumseffekt
+* Haupteffekt der Personenvarianz
+
+Solution
+========
+Answerlist
+----------
+* Falsch. Der Haupteffekt Zeit ist relevant, aber der Interaktionseffekt ist meist von größerem Interesse.
+* Falsch. Der Haupteffekt Gruppe ist ebenfalls relevant, aber weniger als der Interaktionseffekt.
+* Richtig. Der Interaktionseffekt Zeit x Gruppe ist oft der zentrale Fokus in Mixed Designs.
+* Falsch. Der Residuumseffekt ist nicht der primäre Fokus.
+* Falsch. Die Personenvarianz ist Teil der Gesamtvarianz, aber nicht der primäre Effekt von Interesse.
+
+Meta-information
+================
+exname: MixedDesign_Interaktion
+extype: mchoice
+exsolution: 00100
+exshuffle: TRUE

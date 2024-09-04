@@ -1,0 +1,72 @@
+
+```{r data generation, include=FALSE}
+
+library(afex)
+library(tidyverse)
+
+set.seed(123)
+# Simulierte Daten für drei Messzeitpunkte
+t0 = round(rnorm(30, 10, 2))  # Messzeitpunkt t0
+t1 = round(t0 + rnorm(30, 0, 2))  # Messzeitpunkt t1
+t2 = round(t1 + rnorm(30, 10, 2))  # Messzeitpunkt t2
+id = 1:30  # Identifikationsnummer für jede Person
+df = data.frame(id = id, t0 = t0, t1 = t1, t2 = t2)
+
+# Daten im Wide-Format
+df_wide = df
+
+# Umwandlung ins Long-Format
+df_long = as.data.frame(pivot_longer(data = df_wide, 
+                               cols = c("t0", "t1", "t2"), 
+                               names_to = "Time", 
+                               values_to = "Score"))
+
+# Durchführung der rmANOVA
+model = aov_ez(dv = "Score", within = c("Time"), id = "id", data = df_long)
+summary = summary(model)
+
+
+
+
+
+```    
+
+Question
+========
+
+In einer Studie wurde untersucht, ob ein strukturiertes kognitives Training, das über drei Wochen hinweg durchgeführt wird, signifikante Verbesserungen in den kognitiven Fähigkeiten von Studierenden bewirkt. Die kognitiven Fähigkeiten der Teilnehmer wurden zu mehreren Zeitpunkten gemessen. 
+
+Sie erhalten folgenden Output:
+
+```{r echo=FALSE}
+summary
+```
+Welche Aussagen zu diesem Output sind korrekt? 
+
+Answerlist
+----------
+* Es wurden 30 Probanden über 3 Messzeitpunkte hinweg untersucht. 
+* Es wurden 60 Probanden über 3 Messzeitpunkte hinweg untersucht. 
+* Es wurden 58 Probanden über 2 Messzeitpunkte hinweg untersucht. 
+* Das Training hatte einen signifiknaten Effekt in die erwartete Richtung. 
+* Das Training hatte einen signifikanten Effekt, jeodch wissen wir noch nicht, ob auch in die erwartete Richtung. 
+* Die geschätzte systematische Varianz für den Messwiederholungsfaktor (A) ist 1051.65.
+
+Solution
+========
+
+Answerlist
+----------
+* Richtig. Es wurden 30 Probanden (n = 30) über 3 Messzeitpunkte hinweg untersucht, da die Residualvarianz-Df (den Df) für den Faktor "Time" 58 beträgt, was auf n-1 für 3 Messzeitpunkte hinweist. Die Formel der Residualvarianz Freiheitsgerade lautet: $d{f_{A \times Vpn}}$ = (p-1) * (n-1)
+* Falsch. Es wurden 30 Probanden über 3 Messzeitpunkte hinweg untersucht, nicht 60.
+* Falsch. Es wurden 30 Probanden über 3 Messzeitpunkte hinweg untersucht, nicht 58 Probanden über 2 Messzeitpunkte.
+* Falsch. Der Output zeigt einen signifikanten Effekt, aber die Richtung des Effekts wird in diesem Output nicht direkt angezeigt.
+* Richtig. Der Output zeigt einen signifikanten Effekt (p < 2.2e-16), aber die Richtung des Effekts ist noch nicht bekannt und müsste anhand weiterer Informationen, wie Post-Hoc-Tests oder spezifischer Mittelwertvergleiche, bestimmt werden.
+* Richtig. Die systematische Varianz für den Messwiederholungsfaktor "Time" kann aus dem Output berechnet werden. Sie beträgt 1051.65, was aus der Division der Summe der Quadrate (2103.3) durch die Freiheitsgrade (2) resultiert.
+
+Meta-information
+================
+exname: Output1
+extype: mchoice 
+exsolution: 100011
+exshuffle: TRUE
