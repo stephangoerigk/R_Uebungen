@@ -1,0 +1,32 @@
+Question 
+======== 
+
+Welche der folgenden Aussagen zur Interpretation des Chi-Quadrat-Wertes sind korrekt?
+
+Answerlist
+----------
+
+* Ein höherer Chi-Quadrat-Wert bedeutet größere Abweichungen zwischen beobachteten und erwarteten Häufigkeiten.
+* Ein niedriger Chi-Quadrat-Wert deutet auf eine gute Übereinstimmung zwischen den beobachteten und erwarteten Häufigkeiten hin.
+* Ein Chi-Quadrat-Wert von 0 bedeutet, dass die beobachteten Häufigkeiten den erwarteten Häufigkeiten genau entsprechen.
+* Der Chi-Quadrat-Wert kann negativ sein.
+* Wenn der empirische Chi-Quadrat-Wert kleiner ist als der kritische Chi-Quadrat-Wert, kann die H0 verworfen werden.
+
+Solution
+========
+
+Answerlist
+----------
+
+* Richtig. Ein höherer Chi-Quadrat-Wert bedeutet größere Abweichungen zwischen beobachteten und erwarteten Häufigkeiten.
+* Richtig. Ein niedriger Chi-Quadrat-Wert deutet auf eine gute Übereinstimmung hin.
+* Richtig. Ein Chi-Quadrat-Wert von 0 bedeutet genaue Übereinstimmung.
+* Falsch. Der Chi-Quadrat-Wert kann nicht negativ sein.
+* Falsch. Wenn der empirische Chi-Quadrat-Wert kleiner ist als der kritische Chi-Quadrat-Wert, kann die H0 nicht verworfen werden.
+
+Meta-information
+================
+exname: ChiSquareInterpretation
+extype: mchoice 
+exsolution: 11100
+exshuffle: TRUE

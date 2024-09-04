@@ -1,0 +1,28 @@
+Question
+========
+Welche der folgenden Aussagen zur Interpretation der Modellparameter in der logistischen Regression ist korrekt?
+
+Answerlist
+----------
+* Der Intercept gibt die Wahrscheinlichkeit an, dass das Ereignis eintritt, wenn der Prädiktorwert 0 ist.
+* Der Intercept gibt die Log-Odds an, wenn der Prädiktorwert 0 ist.
+* Ein positiver Steigungsparameter erhöht die Wahrscheinlichkeit für das Ereignis.
+* Ein negativer Steigungsparameter hat keinen Einfluss auf die Wahrscheinlichkeit.
+* Der Intercept ist immer 0, wenn der Prädiktorwert 0 ist.
+
+Solution
+========
+Answerlist
+----------
+* Falsch. Der Intercept gibt die Log-Odds, nicht die Wahrscheinlichkeit an.
+* Richtig. Der Intercept gibt die Log-Odds für Personen mit einem Prädiktorwert von 0 an.
+* Richtig. Ein positiver Steigungsparameter erhöht die Wahrscheinlichkeit für das Ereignis.
+* Falsch. Ein negativer Steigungsparameter verringert die Wahrscheinlichkeit.
+* Falsch. Der Intercept ist nicht notwendigerweise 0.
+
+Meta-information
+================
+exname: Interpretation_Parameter
+extype: mchoice 
+exsolution: 01010
+exshuffle: TRUE

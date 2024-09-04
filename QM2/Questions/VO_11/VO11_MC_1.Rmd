@@ -1,0 +1,29 @@
+Question
+========
+Welche der folgenden Aussagen zur logistischen Regression ist korrekt?
+
+Answerlist
+----------
+* Die abhängige Variable in der logistischen Regression ist kontinuierlich.
+* Die logistische Regression verwendet eine logistische Funktion, um Wahrscheinlichkeiten zwischen 0 und 1 zu modellieren.
+* Logistische Regression kann nur mit binären Prädiktoren verwendet werden.
+* Logistische Regression ist ein Spezialfall der linearen Regression.
+* Die logistische Regression ist nicht für die Vorhersage diskreter Ergebnisse geeignet.
+
+Solution
+========
+
+Answerlist
+----------
+* Falsch. Die abhängige Variable ist nominal (diskret), nicht kontinuierlich.
+* Richtig. Die logistische Funktion (auch sigmoide Funktion genannt) wird verwendet, um Wahrscheinlichkeiten zwischen 0 und 1 zu modellieren.
+* Falsch. Die logistische Regression kann mit kontinuierlichen und binären Prädiktoren verwendet werden.
+* Falsch. Die logistische Regression ist kein Spezialfall der linearen Regression, sondern ein eigenständiges Modell zur Vorhersage von Wahrscheinlichkeiten.
+* Falsch. Sie ist genau für die Vorhersage diskreter Ergebnisse geeignet.
+
+Meta-information
+================
+exname: Logistische_Regression_Grundlagen
+extype: mchoice 
+exsolution: 01000
+exshuffle: TRUE

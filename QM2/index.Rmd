@@ -639,6 +639,45 @@ exams2learnr("Questions/VO_10/VO10_Outputs_2.Rmd", allow_retry = TRUE)
 
 ## Einheit 11 - Verfahren für Nominaldaten (2)
 
+```{r V11_MC_1, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_11/VO11_MC_1.Rmd", allow_retry = TRUE)
+```
+
+```{r V11_MC_2, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_11/VO11_MC_2.Rmd", allow_retry = TRUE)
+```
+
+```{r V11_MC_3, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_11/VO11_MC_3.Rmd", allow_retry = TRUE)
+```
+
+```{r V11_MC_4, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_11/VO11_MC_4.Rmd", allow_retry = TRUE)
+```
+
+```{r V11_MC_5, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_11/VO11_MC_5.Rmd", allow_retry = TRUE)
+```
+
+```{r V11_MC_6, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_11/VO11_MC_6.Rmd", allow_retry = TRUE)
+```
+
+```{r V11_MC_7, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_11/VO11_MC_7.Rmd", allow_retry = TRUE)
+```
+
+```{r V11_MC_8, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_11/VO11_MC_8.Rmd", allow_retry = TRUE)
+```
+
+```{r V11_MC_9, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_11/VO11_MC_9.Rmd", allow_retry = TRUE)
+```
+
+```{r V11_MC_10, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_11/VO11_MC_10.Rmd", allow_retry = TRUE)
+```
 
 
 

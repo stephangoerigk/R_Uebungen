@@ -1,0 +1,28 @@
+Question
+========
+Was beschreibt der Odds-Ratio (OR) in der logistischen Regression?
+
+Answerlist
+----------
+* Der OR beschreibt das Verhältnis der Wahrscheinlichkeit eines Ereignisses zu dessen Gegenwahrscheinlichkeit.
+* Der OR gibt an, um wie viel sich die Wahrscheinlichkeit für ein Ereignis verändert, wenn der Prädiktor um 1 Einheit steigt.
+* Der OR ist immer größer als 1.
+* Wenn der OR kleiner als 1 ist, verringert sich die Wahrscheinlichkeit für das Ereignis.
+* Der OR ist nur für kontinuierliche Prädiktoren anwendbar.
+
+Solution
+========
+Answerlist
+----------
+* Richtig. Der OR ist das Verhältnis der Wahrscheinlichkeit eines Ereignisses zu dessen Gegenwahrscheinlichkeit.
+* Richtig. Ein OR gibt an, wie stark ein Prädiktor die Wahrscheinlichkeit eines Ereignisses beeinflusst.
+* Falsch. Der OR kann auch kleiner als 1 sein.
+* Richtig. Ein OR kleiner als 1 zeigt an, dass der Prädiktor die Wahrscheinlichkeit verringert.
+* Falsch. Der OR kann sowohl für kontinuierliche als auch für kategoriale Prädiktoren verwendet werden.
+
+Meta-information
+================
+exname: Odds_Ratio
+extype: mchoice 
+exsolution: 11010
+exshuffle: TRUE

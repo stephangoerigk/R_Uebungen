@@ -1,0 +1,53 @@
+Question 
+======== 
+
+Im Rahmen einer psychotherapeutischen Wirksamkeitsstudie untersuchen Sie, wie gut unterschiedliche Therapieverfahren bei Patient:innen mit einer spezifischen Phobie wirken. Die nachfolgenden Tabelle können Sie entnehmen, wie häufig die jeweilige Therapie erfolgreich bzw. nicht erfolgreich war.
+
+```{r data, echo=FALSE}
+set.seed(123)
+data = data.frame(
+  Therapie = rep(c("Expositionstherapie", "Psychoanalyse", "Gesprächspsychotherapie"), each = 50)
+)
+data$Behandlungserfolg[data$Therapie == "Expositionstherapie"] = sample(c("nein", "ja"), size = 50, prob = c(0.20, 0.80), replace = T)
+data$Behandlungserfolg[data$Therapie == "Psychoanalyse"] = sample(c("nein", "ja"), size = 50, prob = c(0.65, 0.35), replace = T)
+data$Behandlungserfolg[data$Therapie == "Gesprächspsychotherapie"] = sample(c("nein", "ja"), size = 50, prob = c(0.60, 0.40), replace = T)
+
+table(data)
+```
+Auf Grundlage der Daten rechnen Sie folgenden Test:
+
+```{r calc, echo=FALSE}
+options(scipen = 999)
+chisq.test(table(data$Therapie, data$Behandlungserfolg))
+```
+
+Welchen Aussagen können Sie zustimmen? 
+
+Answerlist
+----------
+
+* Im vorliegenden Test hat R automatisch die sogenannte Yates-Kontinuitätskorrektur durchgeführt.
+* Es wurde ein Zweidimensionaler (3 x 2) - Chi-Quadrat-Test gerechnet. 
+* Es besteht irgendeine Art Zusammenhang zwischen den unterschiedlichen Therapieansetzen und dem Behandlungserfolg.
+* Die Merkmale sind stochastisch unaabhängig.
+* Es wurde ein Vierfelder Chi-Quadrat-Test gerechnet.
+
+
+Solution
+========
+
+Answerlist
+----------
+
+* Falsch. Die Yates-Kontinuitätskorrektur rechnet R standardmäßig bei 2x2 Kreuztabellen, nicht bei 3x2 Kreuztabellen
+* Richtig. Wir haben Merkmal 1 ("Therapie") mit 3 Stufen und Merkmal 2 ("Behandlungserfolg") mit 2 Stufen 
+* Richtig. Der Test wird signifikant. Die H0 kann also verworfen werden -> Es besteht irgendeine Art Zusammenhang zwischen den Stufen des einen Merkmals und den Stufen des anderen Merkmals.
+* Falsch. Der Test wird signifikant. Die H0 kann also verworfen werden -> Es besteht irgendeine Art Zusammenhang zwischen den Stufen des einen Merkmals und den Stufen des anderen Merkmals.
+* Falsch. Es wurde ein 3x2 Chi-Quadrat-Test gerechnet.
+
+Meta-information
+================
+exname: ChiSquareInterpretation2
+extype: mchoice 
+exsolution: 01100
+exshuffle: TRUE

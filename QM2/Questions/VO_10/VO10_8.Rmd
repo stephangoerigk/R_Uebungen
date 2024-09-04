@@ -1,0 +1,32 @@
+Question
+========
+
+Welche Schritte sind bei der Berechnung des Chi-Quadrat-Werts erforderlich?
+
+Answerlist
+----------
+
+* Berechnung der erwarteten Häufigkeiten.
+* Vergleich der beobachteten und erwarteten Häufigkeiten.
+* Quadrierung der Differenzen zwischen beobachteten und erwarteten Häufigkeiten.
+* Division der quadrierten Differenzen durch die erwarteten Häufigkeiten.
+* Bestimmung der Effektstärke.
+
+Solution
+========
+
+Answerlist
+----------
+
+* Richtig. Die Berechnung der erwarteten Häufigkeiten ist erforderlich.
+* Richtig. Der Vergleich der beobachteten und erwarteten Häufigkeiten ist erforderlich.
+* Richtig. Die Quadrierung der Differenzen ist Teil der Chi-Quadrat-Berechnung.
+* Richtig. Die Division der quadrierten Differenzen durch die erwarteten Häufigkeiten ist erforderlich.
+* Falsch. Die Bestimmung der Effektstärke ist optional und nicht Teil der eigentlichen Berechnung des Chi-Quadrat-Werts.
+
+Meta-information
+================
+exname: ChiSquareCalculation
+extype: mchoice
+exsolution: 11110
+exshuffle: TRUE

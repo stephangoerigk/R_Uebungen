@@ -1,0 +1,28 @@
+Question
+========
+Was ist der Vorteil der logistischen Regression im Vergleich zum Chi-Quadrat-Test?
+
+Answerlist
+----------
+* Die logistische Regression kann mehrere Prädiktoren gleichzeitig testen.
+* Die logistische Regression erfordert weniger Daten als der Chi-Quadrat-Test.
+* Die logistische Regression ist einfacher zu interpretieren als der Chi-Quadrat-Test.
+* Der Chi-Quadrat-Test testet nur kategoriale Daten, während die logistische Regression kontinuierliche und kategoriale Prädiktoren erlaubt.
+* Die logistische Regression kann die Interaktion zwischen zwei Prädiktoren testen. 
+
+Solution
+========
+Answerlist
+----------
+* Richtig. Die logistische Regression kann mehrere Prädiktoren in einem Modell gleichzeitig testen.
+* Falsch. Die Datenanforderungen sind ähnlich.
+* Falsch. Beide Methoden haben ihre spezifischen Vor- und Nachteile in der Interpretation.
+* Richtig. Die logistische Regression erlaubt kontinuierliche und kategoriale Prädiktoren.
+* Richtig. Die multiple logistische Regression kann die Interaktion zwischen uwei Prädiktoren testen. 
+
+Meta-information
+================
+exname: Logistische_Regression_vs_ChiQuadrat
+extype: mchoice 
+exsolution: 10011
+exshuffle: TRUE

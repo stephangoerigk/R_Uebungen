@@ -1,0 +1,28 @@
+Question
+========
+Welches Modell verwendet man, um eine binäre abhängige Variable vorherzusagen?
+
+Answerlist
+----------
+* Lineare Regression
+* Logistische Regression
+* ANOVA
+* Chi-Quadrat-Test
+* Multiple Regression
+
+Solution
+========
+Answerlist
+----------
+* Falsch. Die lineare Regression ist nicht geeignet für binäre abhängige Variablen.
+* Richtig. Die logistische Regression wird verwendet, um binäre abhängige Variablen vorherzusagen.
+* Falsch. ANOVA ist für Mittelwertsunterschiede zwischen Gruppen geeignet.
+* Falsch. Der Chi-Quadrat-Test ist für die Untersuchung von Häufigkeiten und nicht für Vorhersagen geeignet.
+* Falsch. Die multiple Regression ist für kontinuierliche abhängige Variablen geeignet.
+
+Meta-information
+================
+exname: Modellwahl_binäre_Variable
+extype: mchoice 
+exsolution: 01000
+exshuffle: TRUE

@@ -1,0 +1,32 @@
+Question
+========
+
+Was sind die Freiheitsgrade beim Chi-Quadrat-Test?
+
+Answerlist
+----------
+
+* Die Anzahl der Summanden, die unabhängig voneinander variieren können.
+* Beim Eindimensionalen Chi-Quadrat-Test werden sie durch die Anzahl der Kategorien minus eins bestimmt.
+* Sie sind immer gleich der Anzahl der beobachteten Häufigkeiten.
+* Sie bestimmen die Form der Chi-Quadrat-Verteilung.
+* Sie sind nur bei sehr großen Stichproben relevant.
+
+Solution
+========
+
+Answerlist
+----------
+
+* Richtig. Die Freiheitsgrade sind die Anzahl der Summanden, die unabhängig voneinander variieren können.
+* Richtig. Die Freiheitsgrade werden durch die Anzahl der Kategorien minus eins bestimmt.
+* Falsch. Die Anzahl der beobachteten Häufigkeiten entspricht nicht immer den Freiheitsgraden.
+* Richtig. Die Freiheitsgrade bestimmen die Form der Chi-Quadrat-Verteilung.
+* Falsch. Die Freiheitsgrade sind bei allen Stichprobengrößen relevant.
+
+Meta-information
+================
+exname: ChiSquareDF
+extype: mchoice
+exsolution: 11010
+exshuffle: TRUE

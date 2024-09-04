@@ -1,0 +1,42 @@
+Question 
+======== 
+
+Sie rechnen folgenden Chi-Quadrat-Test in R. Welche Aussagen zu den Outputs stimmen? 
+
+```{r data, echo=FALSE}
+x = c(rep("München", 322), rep("Hamburg", 101))
+table(x)
+```
+
+```{r calc, echo=TRUE}
+chisq.test(table(x), p = c(0.25, 0.75))
+```
+
+
+Answerlist
+----------
+
+* Es wurde überprüft, ob ein gewisses Merkmal in München drei mal häufiger auftritt als in Hamburg.
+* Der Test ist signifikant. Wir können die H0 verwerfen -> Das untersuchte Merkmal scheint nicht der Aufretenswahrscheinlichkeit 1:3 zu folgen.
+* Der Test ist nicht signifiknat. Wir können die H1 verwerfen -> Das untersuchte Merkmal scheint der erwarteteten Auftretenswahrscheinlichkeit von 1:3 zu folgen.
+* Es wurde ein mehrdimensionaler Chi-Quadrat-Test gerechnet.
+* Es wurde ein eindimensionaler Chi-Quadrat-Test gerechnet.
+
+Solution
+========
+
+Answerlist
+----------
+
+* Richtig. 
+* Falsch. Der Test ist nicht signifikant. Die H1 kann verworfen werden 
+* Richtig. er Test ist nicht signifikant. Die H1 kann verworfen werden 
+* Falsch. Es wurde ein eindimensionaler Test gerechnet.
+* Richtig. Es wurde ein eindimensionaler Test gerechnet.
+
+Meta-information
+================
+exname: ChiSquareInterpretation
+extype: mchoice 
+exsolution: 10101
+exshuffle: TRUE

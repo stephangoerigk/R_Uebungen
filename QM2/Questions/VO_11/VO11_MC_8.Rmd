@@ -1,0 +1,28 @@
+Question
+========
+Welche der folgenden Aussagen beschreibt die Odds in der logistischen Regression korrekt?
+
+Answerlist
+----------
+* Die Odds beschreiben die Wahrscheinlichkeit, dass ein Ereignis eintritt.
+* Die Odds geben an, wie oft ein Ereignis eintritt im Verhältnis zu wie oft es nicht eintritt.
+* Die Odds werden immer zwischen 0 und 1 angegeben.
+* Die Odds können niemals größer als 1 sein.
+* Die Odds werden in Prozent angegeben.
+
+Solution
+========
+Answerlist
+----------
+* Falsch. Die Odds beschreiben das Verhältnis zwischen der Wahrscheinlichkeit eines Ereignisses und dessen Gegenwahrscheinlichkeit.
+* Richtig. Die Odds zeigen das Verhältnis zwischen den beiden Wahrscheinlichkeiten.
+* Falsch. Odds können beliebige Werte annehmen, nicht nur zwischen 0 und 1.
+* Falsch. Odds können auch größer als 1 sein.
+* Falsch. Odds werden nicht in Prozent angegeben, sondern als Verhältnis.
+
+Meta-information
+================
+exname: Beschreibung_Odds
+extype: mchoice 
+exsolution: 01000
+exshuffle: TRUE
