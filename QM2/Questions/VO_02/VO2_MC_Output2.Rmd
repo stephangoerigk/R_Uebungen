@@ -55,7 +55,7 @@ Gegeben sei folgender Output:
 print(ergebnis)
 
 ```
-Wie viel Prozent der Gesamtvarianz können durch den Faktor Gruppe aufgeklärt werden? Geben Sie das Ergebnis auf ganze Prozent gerundet an. Runden Sie nur das Ergebnis, nicht die Zwischenschritte. 
+Wie viel Prozent der Gesamtvarianz können durch den Faktor Gruppe auf Populationsebene aufgeklärt werden? Geben Sie das Ergebnis auf ganze Prozent gerundet an. Runden Sie nur das Ergebnis, nicht die Zwischenschritte. 
 
 Hinweis: Die Antwort auf diese Frage können Sie nicht aus dem Output ablesen - sie muss ausgerechnet werden. Gehen Sie hierbei analog zur Vorlesung vor.
 
