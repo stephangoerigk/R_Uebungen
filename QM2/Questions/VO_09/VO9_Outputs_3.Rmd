@@ -1,0 +1,85 @@
+
+```{r data generation, include=FALSE}
+
+set.seed(123)
+
+# Simulationsparameter
+n <- 15  # 15 Proband*innen pro Gruppe
+
+# Daten für Gruppe 1 (Gruppentherapie)
+t0 = round(rnorm(n, 30, 5))  # Höhere Depressionswerte zu t0
+t1 = round(rnorm(n, 28, 5))  # Langsame Verbesserung zu t1
+t2 = round(rnorm(n, 24, 5))  # Leichte weitere Verbesserung zu t2
+id = 1:n
+df = data.frame(id, t0, t1, t2)
+
+Time = rep(c("t0", "t1", "t2"), each = n)
+df_long1 = data.frame(id = rep(id, 3), Time, Score = c(t0, t1, t2))
+df_long1$Gruppe = "Gruppentherapie"
+
+# Daten für Gruppe 2 (Einzeltherapie)
+t0 = round(rnorm(n, 24, 5))  # Niedrigere Ausgangswerte zu t0
+t1 = round(rnorm(n, 19, 5))  # Stärkere Verbesserung zu t1
+t2 = round(rnorm(n, 15, 5))  # Deutliche Verbesserung zu t2
+id = (n+1):(2*n)
+df = data.frame(id, t0, t1, t2)
+
+Time = rep(c("t0", "t1", "t2"), each = n)
+df_long2 = data.frame(id = rep(id, 3), Time, Score = c(t0, t1, t2))
+df_long2$Gruppe = "Einzeltherapie"
+
+# Daten zusammenführen
+df_long = rbind(df_long1, df_long2)
+
+# Faktorvariable für die Zeitpunkte
+df_long$Time = factor(df_long$Time, levels = c("t0", "t1", "t2"))
+
+# Mixed ANOVA durchführen
+library(afex)
+model = aov_ez(id = "id", dv = "Score", within = "Time", between = "Gruppe", data = df_long)
+summary = summary(model)
+
+
+```    
+
+Question
+========
+
+Welche Aussagen zu folgendem Output stimmen? Das Studiendesign hinter diesem Output...
+
+```{r echo=FALSE}
+summary
+```
+
+
+
+
+Answerlist
+----------
+* ...hatte zwei Messzeitpunkte. 
+* ...teile die Probanden in zwei Gruppen auf. 
+* ...hatte in jeder Gruppe n = 30 Proband:innen. 
+* ...hatte in jeder Gruppe n = 15 Proband:innen.
+* ...hate drei Messzeitpunkte.
+
+Solution
+========
+Answerlist
+----------
+* Falsch. Der Output zeigt drei Messzeitpunkte (t0, t1, t2). Dies ergibt sich aus der Anzahl der Freiheitsgrade für die Variable "Time" (Df = 2), was auf drei Messzeitpunkte hinweist. Freiheitsgrade werden mit `n - 1` für die Anzahl der Bedingungen berechnet (hier `3 - 1 = 2`).
+
+* Richtig. Es gab zwei Gruppen im Studiendesign. Dies sieht man am Haupteffekt der Variable "Gruppe" im Output, der Freiheitsgrad (num Df = 1) zeigt, dass zwei Gruppen verglichen wurden (`2 - 1 = 1`).
+
+* Falsch. Der Output zeigt, dass es nur 15 Proband:innen pro Gruppe gab (insgesamt 30 Proband:innen). Der Freiheitsgrad für die Prüfvarianz der Gruppe (den Df) wird nach der Formel `p * (n - 1)` berechnet, wobei `p` die Anzahl der Gruppen (hier 2) und `n` die Anzahl der Proband:innen pro Gruppe ist. In diesem Fall lautet die Berechnung: `2 * (15 - 1) = 28`. Das bedeutet, es gibt 15 Proband:innen pro Gruppe, insgesamt also 30.
+
+* Richtig. Der Output zeigt 15 Proband:innen pro Gruppe. Dies ergibt sich ebenfalls aus der Berechnung des Freiheitsgrads für die Prüfvarianz der Gruppe, der `2 * (n - 1)` ist, also `2 * (15 - 1) = 28`.
+
+* Richtig. Der Output zeigt drei Messzeitpunkte, die unter "Time" zusammengefasst sind. Die Freiheitsgrade (Df = 2) für den Haupteffekt "Time" zeigen dies an, da die Berechnung der Freiheitsgrade mit `Anzahl der Zeitpunkte - 1 = 3 - 1 = 2` erfolgt.
+
+
+Meta-information
+================
+exname: Output3
+extype: mchoice 
+exsolution: 01011
+exshuffle: TRUE

@@ -566,6 +566,18 @@ exams2learnr("Questions/VO_09/VO9_MC_11.Rmd", allow_retry = TRUE)
 
 ### Übungsaufgaben zur Interpretation von R - Outputs
 
+```{r VO9_Output1, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_09/VO9_Outputs_1.Rmd", allow_retry = TRUE)
+```
+
+```{r VO9_Output2, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_09/VO9_Outputs_2.Rmd", allow_retry = TRUE)
+```
+
+```{r VO9_Output3, message = FALSE, warning=FALSE}
+exams2learnr("Questions/VO_09/VO9_Outputs_3.Rmd", allow_retry = TRUE)
+```
+
 
 
 ## Einheit 10 - Verfahren für Nominaldaten - χ<sup>2</sup>-Test
@@ -681,6 +693,10 @@ exams2learnr("Questions/VO_11/VO11_MC_10.Rmd", allow_retry = TRUE)
 ```
 
 ### Interpretieren von R Outputs 
+
+```{r V11_Outputs_1, message = FALSE, warning=FALSE}
+#exams2learnr("Questions/VO_11/VO11_Outputs_1.Rmd", allow_retry = TRUE)
+```
 
 
 
