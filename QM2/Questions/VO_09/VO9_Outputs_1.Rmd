@@ -1,0 +1,86 @@
+
+```{r data generation, include=FALSE}
+
+set.seed(123)
+
+# Simulationsparameter
+n <- 22  # 22 Proband*innen pro Gruppe
+
+# Daten für Gruppe 1 (z.B. kognitive Verhaltenstherapie)
+t0 = round(rnorm(n, 27, 6))  # Depressionswerte zu t0 ca. 29
+t1 = round(rnorm(n, 21, 6))  # Depressionswerte zu t1 ca. 22
+t2 = round(rnorm(n, 14, 6))  # Depressionswerte zu t2 ca. 14
+id = 1:n
+df = data.frame(id, t0, t1, t2)
+
+Time = rep(c("t0", "t1", "t2"), each = n)
+df_long1 = data.frame(id = rep(id, 3), Time, Score = c(t0, t1, t2))
+df_long1$Gruppe = "KVT"
+
+# Daten für Gruppe 2 (z.B. medikamentöse Therapie, gleiche Entwicklung wie Gruppe 1)
+t0 = round(rnorm(n, 29, 6))  # Gleiche Ausgangswerte wie Gruppe 1
+t1 = round(rnorm(n, 25, 6))  # Gleiche Verbesserung zu t1
+t2 = round(rnorm(n, 13, 6))  # Gleiche Verbesserung zu t2
+id = (n+1):(2*n)
+df = data.frame(id, t0, t1, t2)
+
+Time = rep(c("t0", "t1", "t2"), each = n)
+df_long2 = data.frame(id = rep(id, 3), Time, Score = c(t0, t1, t2))
+df_long2$Gruppe = "SSRIs"
+
+# Daten zusammenführen
+df_long = rbind(df_long1, df_long2)
+
+# Faktorvariable für die Zeitpunkte
+df_long$Time = factor(df_long$Time, levels = c("t0", "t1", "t2"))
+
+# Mixed ANOVA durchführen
+library(afex)
+model = aov_ez(id = "id", dv = "Score", within = "Time", between = "Gruppe", data = df_long)
+summary = summary(model)
+
+
+
+
+
+
+```    
+
+Question
+========
+
+In einer klinischen Studie soll untersucht werden, wie sich zwei verschiedene Therapieformen (kognitive Verhaltenstherapie vs. SSRIs) über die Zeit auf den Depressionsverlauf auswirken. Die Messungen der Depressionsschwere werden zu drei Zeitpunkten mit dem BDI-II (Beck Depressions Inventar) durchgeführt: zu Beginn der Therapie (t0), nach 4 Wochen (t1) und nach 8 Wochen (t2). Die Probanden werden randomisiert einer der beiden Bedinungen zugeteilt. 
+
+Sie erhalten folgenden Output:
+
+```{r echo=FALSE}
+summary
+```
+
+Welche Aussagen zu diesem Output sind korrekt? 
+
+
+Answerlist
+----------
+* Es gibt einen signifikanten Haupteffekt der Gruppe.
+* Der Haupteffekt der Zeit ist signifikant.
+* Es gibt eine signifikante Interaktion zwischen Gruppe und Zeit.
+* Die Annahme der Sphärizität ist verletzt.
+* Die beiden Interventionsgruppen haben sich über die Zeit hinweg gleich entwickelt. 
+
+Solution
+========
+Answerlist
+----------
+* Falsch. Der Haupteffekt der Gruppe ist nicht signifikant (p = 0.12448).
+* Richtig. Der Haupteffekt der Zeit ist signifikant (p < 2e-16).
+* Richtig. Es gibt eine signifikante Interaktion zwischen Gruppe und Zeit (p = 0.02725).
+* Falsch. Der Mauchly-Test zeigt, dass die Annahme der Sphärizität nicht verletzt ist (p = 0.99543).
+* Falsch. Aufgrund der signifikanten Interaktion haben sich die beiden Gruppen über die Zeit unterschiedlich entwickelt. Eine der beiden Behandlungen scheint also wirksamer als die andere gewesen zu sein. 
+
+Meta-information
+================
+exname: RM_ANOVA_Interpretation
+extype: mchoice 
+exsolution: 01100
+exshuffle: TRUE
