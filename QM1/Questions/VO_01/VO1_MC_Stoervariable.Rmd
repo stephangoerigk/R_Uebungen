@@ -27,5 +27,5 @@ Meta-information
 ================
 exname: Stoervariable
 extype: mchoice 
-exsolution: 0101
+exsolution: 1110
 exshuffle: TRUE
