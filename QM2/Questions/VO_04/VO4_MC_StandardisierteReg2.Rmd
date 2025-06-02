@@ -18,15 +18,15 @@ Solution
 Answerlist
 ----------
 
-* Richtig. Der standardisierte Regressionskoeffizient (Beta) berechnet sich als 2 * 3 / 4 = 1.5.
+* Falsch. Dieser Wert ergibt sich nicht aus der gegebenen Berechnung.
 * Falsch. Dieser Wert ergibt sich nicht aus der gegebenen Berechnung.
 * Falsch. Dies ist der unstandardisierte Regressionskoeffizient, nicht der standardisierte.
-* Falsch. Dieser Wert ergibt sich nicht aus der gegebenen Berechnung.
+* Richtig. Der standardisierte Regressionskoeffizient (Beta) berechnet sich als 2 * 4 / 3 = 2.67.
 * Falsch. Dieser Wert ist zu hoch und entspricht nicht dem standardisierten Regressionskoeffizienten.
 
 Meta-information
 ================
 exname: StandardisierungRegressionskoeffizient
 extype: mchoice 
-exsolution: 10000
+exsolution: 00010
 exshuffle: TRUE
