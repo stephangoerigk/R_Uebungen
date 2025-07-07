@@ -17,12 +17,12 @@ Answerlist
 * Richtig. Signifikante Interaktionen bedeuten, dass Prädiktoren zusammenwirken.
 * Richtig. Das Wechseln der Referenzkategorie kann die Signifikanztests beeinflussen.
 * Falsch. Nicht signifikante Haupteffekte schließen signifikante Interaktionen nicht aus.
-* Richtig. Omnibustests helfen, die Gesamtsignifikanz des Modells zu beurteilen.
+* Falsch. Es ist nicht zwingend erforderlich, Omnibustests (z.B. Gesamt-F-Test) durchzuführen. Die Einzeltests der Regressionskoeffizienten sind i.d.R. ausreichend, außer man verfolgt spezifische Modellvergleiche.
 * Richtig. Interaktionen können unabhängig von den Haupteffekten signifikant sein.
 
 Meta-information
 ================
 exname: Signifikanztests_Interaktionen
 extype: mchoice 
-exsolution: 10111
+exsolution: 11001
 exshuffle: TRUE

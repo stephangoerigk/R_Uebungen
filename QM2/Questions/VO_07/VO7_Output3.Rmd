@@ -46,7 +46,7 @@ Answerlist
 ----------
 * Die durchschnittliche Produktivität eines großen Teams mit unflexiblen Arbeitszeiten liegt bei 70.117.
 * Die durchschnittliche Produktivität eines kleinen Teams mit flexiblen Arbeitszeiten liegt bei 60.831.
-* Die durchschnittliche Produktivität eines großen Teams mit flexiblen Arbeitszeiten liegt bei 79.77. 
+* Die durchschnittliche Produktivität eines großen Teams mit flexiblen Arbeitszeiten liegt bei 83.53. 
 * Das signifikante Interaktionsergebnis bedeutet, dass die Wirkung von Arbeitszeiten auf die Produktivität gleich ist, unabhängig von der Teamgröße.
 * Der Haupteffekt von "teamgroesse" zeigt, dass große Teams bei unflexiblen Arbeitszeiten um durchschnittlich 9.286 Einheiten produktiver sind als kleine Teams bei unflexiblen Arbeitszeiten.
 * Der Intercept zeigt, dass die durchschnittliche Produktivität bei einem kleinen Team mit unflexiblen Arbeitszeiten 60.831 Einheiten beträgt.
@@ -60,7 +60,7 @@ Answerlist
 * Richtig. Die durchschnittliche Produktivität eines großen Teams mit flexiblen Arbeitszeiten beträgt: 60.831 (Intercept) + 9.286 (teamgroessegroß) + 3.764 (arbeitszeitenflexibel) + 9.653 (Interaktionseffekt) = 83.534.
 * Falsch. Das signifikante Interaktionsergebnis bedeutet, dass die Wirkung von Arbeitszeiten auf die Produktivität abhängig von der Teamgröße ist, nicht unabhängig.
 * Richtig. Der Haupteffekt von "teamgroesse" zeigt, dass große Teams bei unflexiblen Arbeitszeiten um durchschnittlich 9.286 Einheiten produktiver sind als kleine Teams bei unflexiblen Arbeitszeiten.
-* Richtig. Der Intercept zeigt die durchschnittliche Produktivität bei kleinen Teams mit starren Arbeitszeiten.
+* Richtig. Der Intercept zeigt die durchschnittliche Produktivität bei kleinen Teams mit unflexiblen Arbeitszeiten.
 
 
 Meta-information
