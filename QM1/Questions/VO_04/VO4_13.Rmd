@@ -28,5 +28,5 @@ Meta-information
 ================
 exname: age_satisfaction_relationship_updated
 extype: mchoice 
-exsolution: 00100
+exsolution: 00010
 exshuffle: TRUE
